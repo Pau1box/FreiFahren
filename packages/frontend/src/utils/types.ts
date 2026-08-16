@@ -30,6 +30,8 @@ export interface StationGeoJSON {
         properties: {
             name: string
             lines: string[]
+            mode: string
+            lineCount: number
         }
         geometry: {
             type: string
@@ -42,6 +44,49 @@ export interface SegmentRisk {
     color: string
     risk: number
 }
+
+export interface Coordinates {
+    latitude: number
+    longitude: number
+}
+
+export interface NetworkBounds {
+    southWest: Coordinates
+    northEast: Coordinates
+}
+
+export type NetworkStatus = 'active' | 'beta'
+
+/** One self contained transit system, as returned by `GET /v0/networks`. */
+export interface Network {
+    id: string
+    name: string
+    countryCode: string
+    timezone: string
+    center: Coordinates
+    bounds: NetworkBounds
+    status: NetworkStatus
+    /**
+     * The other cities this network reaches, for example Dortmund and Essen for the Rhine-Ruhr
+     * network that is filed under Düsseldorf. Always present, possibly empty.
+     */
+    serves: string[]
+}
+
+/**
+ * `unknown` means OpenStreetMap has no route relation for the line, so it is rendered neutrally
+ * instead of being guessed from its name.
+ */
+export type LineMode = 'subway' | 'light_rail' | 'tram' | 'train' | 'unknown'
+
+export interface LineMetadata {
+    color: string
+    mode: LineMode
+    /** Always present: `false` means "not a ring", never "unknown". */
+    isCircular: boolean
+}
+
+export type LineMetadataList = Record<string, LineMetadata>
 
 export interface StationProperty {
     name: string

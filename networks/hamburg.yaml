@@ -1,0 +1,53 @@
+# Hamburg. This is what a newly added city looks like.
+#
+# Note how little is city specific: the OSM area, which modes to take, and where the map starts.
+# Everything else is either discovered from OpenStreetMap or shared with every other network.
+
+id: hamburg
+name: Hamburg
+countryCode: DE
+timezone: Europe/Berlin
+# A new network starts in beta. It shows only reports people actually made, never predicted ones,
+# because there is no history worth reasoning from yet. Promote it to `active` once coverage is real.
+status: beta
+
+center:
+    latitude: 53.5511
+    longitude: 9.9937
+# A network is a transit area rather than a city. These bounds reach well beyond Hamburg because the
+# S5 runs to Stade and the S2 to Aumühle, both of which are in Lower Saxony and Schleswig-Holstein.
+# The validator rejects any station outside them, which is how the first build of this file was
+# caught declaring the city limits instead.
+bounds:
+    southWest:
+        latitude: 53.4
+        longitude: 9.4
+    northEast:
+        latitude: 53.78
+        longitude: 10.4
+
+source:
+    osmArea: Hamburg
+    adminLevel: '^[4-6]$'
+    # S-Bahn is tagged `light_rail` here and U-Bahn is `subway`, which is all Hamburg has.
+    # Deliberately no `train`: it would pull in every ICE and regional service passing through.
+    modes: [subway, light_rail]
+    # Discover the lines from OpenStreetMap instead of listing them. With the two modes above this
+    # yields exactly S1, S2, S3, S5, S7 and U1 to U4.
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # Deliberately without a plain `ref` fallback. `ref` is only unique within an operator, so
+    # trusting it risks a collision with another network's station id. DS100 codes are unique across
+    # Germany, and the OSM node id fallback is unique by construction.
+    idSources: [ref:ds100, railway:ref]
+    # The one part of this file a new city should not copy. Hamburg was the first network added and
+    # took Berlin's habit of putting a letter per served mode in front of the id, which Berlin needs
+    # because those ids are already in its database. Nothing here needs it: the two sources above are
+    # unique across Germany on their own. Of the 42 networks, 39 have no prefix. See networks/README.md.
+    modePrefixes:
+        - match: '^S'
+          letter: S
+        - match: '^U'
+          letter: U

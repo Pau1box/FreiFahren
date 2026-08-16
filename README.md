@@ -2,7 +2,11 @@
 
 ## Overview
 
-Freifahren is an innovative project designed to map the presence of ticket inspectors across the Berlin public transport network. By offering a live map that tracks inspectors in real-time, the initiative seeks to inform and empower users to navigate the city with added confidence. The project leverages community-driven data from the [Freifahren Telegram group](https://t.me/freifahren_BE), where users report sightings of ticket inspectors.
+Freifahren is an innovative project designed to map the presence of ticket inspectors in public transport. By offering a live map that tracks inspectors in real-time, the initiative seeks to inform and empower users to navigate their city with added confidence. The project leverages community-driven data from Telegram groups such as the [Freifahren Berlin group](https://t.me/freifahren_BE), where users report sightings of ticket inspectors.
+
+FreiFahren started in Berlin and is not limited to it: a city is described in one file under
+[`networks/`](networks/README.md) and its data is generated from OpenStreetMap. See
+[docs/MultiNetwork.md](docs/MultiNetwork.md) for how a network works and how to add one.
 
 If you have any questions, or feedback, feel free to reach out to us at johan@trieloff.net or dbrandesx@gmail.com.
 
@@ -11,9 +15,9 @@ If you have any questions, or feedback, feel free to reach out to us at johan@tr
 
 ## How it works
 
-FreiFahren operates by leveraging real-time, community-driven data to track the presence of ticket inspectors across the Berlin public transport network. Here's a step-by-step breakdown of how it works:
+FreiFahren operates by leveraging real-time, community-driven data to track the presence of ticket inspectors in public transport. Here's a step-by-step breakdown of how it works:
 
-1. **Data Collection:** Our primary data source is the [FreiFahren Telegram group](https://t.me/freifahren_BE) and our own form. Here, community members report sightings of ticket inspectors. Each report includes the station and time of the sighting.
+1. **Data Collection:** Our primary data source is one Telegram group per network, such as the [FreiFahren Berlin group](https://t.me/freifahren_BE), and our own form. Here, community members report sightings of ticket inspectors. Each report includes the station and time of the sighting.
 
 2. **Data Processing:** Once a report is submitted, our backend system processes the data. It verifies the report, extracts the necessary information, and updates our database.
 
@@ -23,7 +27,7 @@ FreiFahren operates by leveraging real-time, community-driven data to track the 
 
 5. **Community Engagement:** Users are encouraged to contribute to the community by reporting their own sightings of ticket inspectors. This helps keep the map accurate and up-to-date.
 
-By harnessing the power of community reporting and real-time data processing, FreiFahren provides a valuable tool for navigating the Berlin public transport network with confidence.
+By harnessing the power of community reporting and real-time data processing, FreiFahren provides a valuable tool for navigating public transport with confidence.
 
 # Getting Started / Hosting your own FreiFahren  
 Do you want to host your own FreiFahren? Take a look at the [detailed setup instructions](packages/SETTING_UP.md).

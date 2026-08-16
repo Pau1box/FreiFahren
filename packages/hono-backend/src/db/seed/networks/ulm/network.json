@@ -1,0 +1,22 @@
+{
+    "id": "ulm",
+    "name": "Ulm",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 48.3985,
+        "longitude": 9.9912
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 48.33892,
+            "longitude": 9.868312
+        },
+        "northEast": {
+            "latitude": 48.479391,
+            "longitude": 10.09814
+        }
+    }
+}

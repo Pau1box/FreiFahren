@@ -1,0 +1,22 @@
+{
+    "id": "gotha",
+    "name": "Gotha",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.945,
+        "longitude": 10.7
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.814161,
+            "longitude": 10.448239
+        },
+        "northEast": {
+            "latitude": 51.005296,
+            "longitude": 10.791121
+        }
+    }
+}

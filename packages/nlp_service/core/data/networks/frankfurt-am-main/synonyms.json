@@ -1,0 +1,774 @@
+{
+    "Adalbert-/Schloßstraße": [
+        "Adalbert-/Schloß",
+        "Adalbert-/Schloßstr.",
+        "Adalbert-/Schloßstrasse"
+    ],
+    "Alkmenestraße": [
+        "Alkmene",
+        "Alkmenestr.",
+        "Alkmenestrasse"
+    ],
+    "Allerheiligentor": [],
+    "Alt-Fechenheim": [],
+    "Alte Oper": [
+        "Alte"
+    ],
+    "Am Hinkelstein": [
+        "Hinkelstein"
+    ],
+    "An der Dammheide": [],
+    "Arthur-von-Weinberg-Steg": [],
+    "Balduinstraße": [
+        "Balduin",
+        "Balduinstr.",
+        "Balduinstrasse"
+    ],
+    "Baseler Platz": [
+        "Baseler",
+        "Baselerplz"
+    ],
+    "Berliner Allee": [
+        "Berliner"
+    ],
+    "Bessunger Straße": [
+        "Bessunger",
+        "Bessunger Str.",
+        "Bessunger Strasse"
+    ],
+    "Beuneweg": [],
+    "Beuthener Straße": [
+        "Beuthener",
+        "Beuthener Str.",
+        "Beuthener Strasse"
+    ],
+    "Bickenbacher Straße": [
+        "Bickenbacher",
+        "Bickenbacher Str.",
+        "Bickenbacher Strasse"
+    ],
+    "Birminghamstraße": [
+        "Birmingham",
+        "Birminghamstr.",
+        "Birminghamstrasse"
+    ],
+    "Bleiweißstraße": [
+        "Bleiweiß",
+        "Bleiweißstr.",
+        "Bleiweißstrasse"
+    ],
+    "Bockenheimer Warte": [
+        "Bockenheimer"
+    ],
+    "Bodenweg": [],
+    "Bommersheim": [],
+    "Bonames Mitte": [
+        "Bonames"
+    ],
+    "Bornheim Mitte": [
+        "Bornheim"
+    ],
+    "Borsdorffstraße/Kreisverwaltung": [],
+    "Breslauer Straße": [
+        "Breslauer",
+        "Breslauer Str.",
+        "Breslauer Strasse"
+    ],
+    "Brücken-/Textorstraße": [
+        "Brücken-/Textor",
+        "Brücken-/Textorstr.",
+        "Brücken-/Textorstrasse"
+    ],
+    "Buchrainplatz": [
+        "Buchrain",
+        "Buchrainplz"
+    ],
+    "Burgstraße": [
+        "Burg",
+        "Burgstr.",
+        "Burgstrasse"
+    ],
+    "Böllenfalltor": [],
+    "Börneplatz": [
+        "Börne",
+        "Börneplz"
+    ],
+    "Bürostadt Niederrad": [
+        "Bürostadt"
+    ],
+    "Carl-Ulrich-Straße": [
+        "Carl-Ulrich-",
+        "Carl-Ulrich-str.",
+        "Carl-Ulrich-strasse"
+    ],
+    "Cassellastraße": [
+        "Cassella",
+        "Cassellastr.",
+        "Cassellastrasse"
+    ],
+    "DFB-Campus": [],
+    "Daimlerstraße": [
+        "Daimler",
+        "Daimlerstr.",
+        "Daimlerstrasse"
+    ],
+    "Deutsche Nationalbibliothek": [
+        "Deutsche"
+    ],
+    "Dieselstraße": [
+        "Diesel",
+        "Dieselstr.",
+        "Dieselstrasse"
+    ],
+    "Dornbusch": [],
+    "Dreieichweg": [],
+    "Eberstadt Frankenstein": [
+        "Eberstadt"
+    ],
+    "Eberstadt Friedhof": [
+        "Eberstadt"
+    ],
+    "Eberstadt Kirche": [
+        "Eberstadt"
+    ],
+    "Eissporthalle": [],
+    "Eissporthalle/Festplatz": [
+        "Eissporthalle/Fest",
+        "Eissporthalle/Festplz"
+    ],
+    "Enkheim": [],
+    "Ernst-May-Platz": [
+        "Ernst-May-",
+        "Ernst-May-plz"
+    ],
+    "Eschenheimer Tor": [
+        "Eschenheimer"
+    ],
+    "Eschollbrücker Straße": [
+        "Eschollbrücker",
+        "Eschollbrücker Str.",
+        "Eschollbrücker Strasse"
+    ],
+    "Esselbornstraße/Ökumenisches Gemeindezentrum": [
+        "Esselbornstraße/Ökumenisches"
+    ],
+    "Ferdinand-Dirichs-Weg": [],
+    "Festhalle/Messe": [],
+    "Feuerwehrstraße": [
+        "Feuerwehr",
+        "Feuerwehrstr.",
+        "Feuerwehrstrasse"
+    ],
+    "Fischstein": [],
+    "Flaschenburgstraße": [
+        "Flaschenburg",
+        "Flaschenburgstr.",
+        "Flaschenburgstrasse"
+    ],
+    "Flughafenstraße": [
+        "Flughafen",
+        "Flughafenstr.",
+        "Flughafenstrasse"
+    ],
+    "Frankensteiner Platz": [
+        "Frankensteiner",
+        "Frankensteinerplz"
+    ],
+    "Frauenfriedenskirche": [],
+    "Freiligrathstraße": [
+        "Freiligrath",
+        "Freiligrathstr.",
+        "Freiligrathstrasse"
+    ],
+    "Friedberger Platz": [
+        "Friedberger",
+        "Friedbergerplz"
+    ],
+    "Friedberger Warte": [
+        "Friedberger"
+    ],
+    "Friedensbrücke": [],
+    "Friedhof Westhausen": [
+        "Friedhof"
+    ],
+    "Friedrich-Ebert-Straße": [
+        "Friedrich-Ebert-",
+        "Friedrich-Ebert-str.",
+        "Friedrich-Ebert-strasse"
+    ],
+    "Fritz-Tarnow-Straße": [
+        "Fritz-Tarnow-",
+        "Fritz-Tarnow-str.",
+        "Fritz-Tarnow-strasse"
+    ],
+    "Fuchsstraße": [
+        "Fuchs",
+        "Fuchsstr.",
+        "Fuchsstrasse"
+    ],
+    "Galluspark": [],
+    "Galluswarte": [],
+    "Gerauer Straße": [
+        "Gerauer",
+        "Gerauer Str.",
+        "Gerauer Strasse"
+    ],
+    "Ginnheim Mitte": [
+        "Ginnheim"
+    ],
+    "Ginnheim/Niddapark": [],
+    "Glauburgstraße": [
+        "Glauburg",
+        "Glauburgstr.",
+        "Glauburgstrasse"
+    ],
+    "Glöcknerwiese": [],
+    "Goethestraße": [
+        "Goethe",
+        "Goethestr.",
+        "Goethestrasse"
+    ],
+    "Gonzenheim": [],
+    "Gravensteiner-Platz": [
+        "Gravensteiner-",
+        "Gravensteiner-plz"
+    ],
+    "Große Nelkenstraße": [
+        "Große Nelken",
+        "Große Nelkenstr.",
+        "Große Nelkenstrasse"
+    ],
+    "Grüneburgweg": [],
+    "Gwinnerstraße": [
+        "Gwinner",
+        "Gwinnerstr.",
+        "Gwinnerstrasse"
+    ],
+    "Günthersburgpark (Jina-Mahsa-Amini-Platz)": [
+        "Günthersburgpark"
+    ],
+    "Güterplatz": [
+        "Güter",
+        "Güterplz"
+    ],
+    "Haardtwaldplatz": [
+        "Haardtwald",
+        "Haardtwaldplz"
+    ],
+    "Habsburger-/Wittelsbacherallee": [
+        "Habsburger-/Wittelsbacher"
+    ],
+    "Habsburgerallee": [
+        "Habsburger"
+    ],
+    "Hans-Karl-Platz/Am Markt": [
+        "Hans-Karl-Platz/Am"
+    ],
+    "Harthweg": [],
+    "Hauptbahnhof": [],
+    "Hauptfriedhof": [],
+    "Hauptwache": [],
+    "Hausen": [],
+    "Hausener Weg": [
+        "Hausener"
+    ],
+    "Heddernheim": [],
+    "Heddernheimer Landstraße": [
+        "Heddernheimer Land",
+        "Heddernheimer Landstr.",
+        "Heddernheimer Landstrasse"
+    ],
+    "Heerstraße": [
+        "Heer",
+        "Heerstr.",
+        "Heerstrasse"
+    ],
+    "Heinrich-Hoffmann-Straße/Blutspendedienst": [],
+    "Heinrichstraße": [
+        "Heinrich",
+        "Heinrichstr.",
+        "Heinrichstrasse"
+    ],
+    "Heister-/Seehofstraße": [
+        "Heister-/Seehof",
+        "Heister-/Seehofstr.",
+        "Heister-/Seehofstrasse"
+    ],
+    "Herdweg": [],
+    "Hessen-Center": [],
+    "Hessendenkmal": [],
+    "Hochschulstadion": [],
+    "Hohemark": [],
+    "Holzhausenstraße": [
+        "Holzhausen",
+        "Holzhausenstr.",
+        "Holzhausenstrasse"
+    ],
+    "Hospital zum Heiligen Geist": [],
+    "Hugo-Junkers-Straße": [
+        "Hugo-Junkers-",
+        "Hugo-Junkers-str.",
+        "Hugo-Junkers-strasse"
+    ],
+    "Höhenstraße": [
+        "Höhen",
+        "Höhenstr.",
+        "Höhenstrasse"
+    ],
+    "Hügelstraße": [
+        "Hügel",
+        "Hügelstr.",
+        "Hügelstrasse"
+    ],
+    "Im Fiedlersee": [],
+    "Im Güldenen Wingert": [],
+    "Industriehof": [],
+    "Institutszentrum": [],
+    "Jahnstraße": [
+        "Jahn",
+        "Jahnstr.",
+        "Jahnstrasse"
+    ],
+    "Johanna-Tesch-Platz": [
+        "Johanna-Tesch-",
+        "Johanna-Tesch-plz"
+    ],
+    "Juliusstraße": [
+        "Julius",
+        "Juliusstr.",
+        "Juliusstrasse"
+    ],
+    "Jägerallee": [
+        "Jäger"
+    ],
+    "Kalbach": [],
+    "Kantstraße": [
+        "Kant",
+        "Kantstr.",
+        "Kantstrasse"
+    ],
+    "Kasinostraße": [
+        "Kasino",
+        "Kasinostr.",
+        "Kasinostrasse"
+    ],
+    "Katharinenstraße": [
+        "Katharinen",
+        "Katharinenstr.",
+        "Katharinenstrasse"
+    ],
+    "Kiesschneise": [],
+    "Kirchplatz": [
+        "Kirch",
+        "Kirchplz"
+    ],
+    "Kirschenallee": [
+        "Kirschen"
+    ],
+    "Knabenschule": [],
+    "Kolpingweg": [],
+    "Konstablerwache": [],
+    "Kranichstein Bahnhof": [
+        "Kranichstein"
+    ],
+    "Kriegkstraße": [
+        "Kriegk",
+        "Kriegkstr.",
+        "Kriegkstrasse"
+    ],
+    "Kruppstraße": [
+        "Krupp",
+        "Kruppstr.",
+        "Kruppstrasse"
+    ],
+    "Kupferhammer": [],
+    "Lahnstraße": [
+        "Lahn",
+        "Lahnstr.",
+        "Lahnstrasse"
+    ],
+    "Landskronstraße": [
+        "Landskron",
+        "Landskronstr.",
+        "Landskronstrasse"
+    ],
+    "Leipziger Straße": [
+        "Leipziger",
+        "Leipziger Str.",
+        "Leipziger Strasse"
+    ],
+    "Leonardo-da-Vinci-Allee": [
+        "Leonardo-da-Vinci-"
+    ],
+    "Lettigkautweg": [],
+    "Lichtenbergschule": [],
+    "Lincoln-Siedlung": [],
+    "Lindenbaum": [],
+    "Linnegraben": [],
+    "Lokalbahnhof": [],
+    "Louisa Bahnhof": [
+        "Louisa"
+    ],
+    "Ludwig-Erhard-Anlage": [],
+    "Ludwigshöhstraße (Bushalt Nordseite)": [],
+    "Ludwigstraße": [
+        "Ludwig",
+        "Ludwigstr.",
+        "Ludwigstrasse"
+    ],
+    "Luisenplatz": [
+        "Luisen",
+        "Luisenplz"
+    ],
+    "Luthmerstraße": [
+        "Luthmer",
+        "Luthmerstr.",
+        "Luthmerstrasse"
+    ],
+    "Löwenplatz": [
+        "Löwen",
+        "Löwenplz"
+    ],
+    "Mainkur Bahnhof": [
+        "Mainkur"
+    ],
+    "Malchen": [],
+    "Marbachweg/Sozialzentrum": [],
+    "Maria-Goeppert-Straße": [
+        "Maria-Goeppert-",
+        "Maria-Goeppert-str.",
+        "Maria-Goeppert-strasse"
+    ],
+    "Marienhöhe": [],
+    "Markus-Krankenhaus": [],
+    "Matthias-Beltz-Platz": [
+        "Matthias-Beltz-",
+        "Matthias-Beltz-plz"
+    ],
+    "Maulbeerallee": [
+        "Maulbeer"
+    ],
+    "Melibocusstraße": [
+        "Melibocus",
+        "Melibocusstr.",
+        "Melibocusstrasse"
+    ],
+    "Merck": [],
+    "Merck-Stadion": [],
+    "Merianplatz": [
+        "Merian",
+        "Merianplz"
+    ],
+    "Messeler Straße": [
+        "Messeler",
+        "Messeler Str.",
+        "Messeler Strasse"
+    ],
+    "Miquel-/Adickesallee": [
+        "Miquel-/Adickes"
+    ],
+    "Mittelschneise": [],
+    "Modaubrücke": [],
+    "Musterschule": [],
+    "Mönchhofstraße": [
+        "Mönchhof",
+        "Mönchhofstr.",
+        "Mönchhofstrasse"
+    ],
+    "Mühlberg": [],
+    "Münzenberger Straße": [
+        "Münzenberger",
+        "Münzenberger Str.",
+        "Münzenberger Strasse"
+    ],
+    "Nauheimer Straße": [
+        "Nauheimer",
+        "Nauheimer Str.",
+        "Nauheimer Strasse"
+    ],
+    "Neu-Isenburg Stadtgrenze": [
+        "Neu-Isenburg"
+    ],
+    "Neues Rathaus": [
+        "Neues"
+    ],
+    "Nibelungenplatz (UAS)": [
+        "Nibelungenplatz"
+    ],
+    "Nied Kirche": [
+        "Nied"
+    ],
+    "Nieder-Eschbach": [],
+    "Niederrad Bahnhof": [
+        "Niederrad"
+    ],
+    "Niederräder Landstraße": [
+        "Niederräder Land",
+        "Niederräder Landstr.",
+        "Niederräder Landstrasse"
+    ],
+    "Niederursel": [],
+    "Nordbad": [],
+    "Nordbahnhof": [],
+    "Nordwestzentrum": [],
+    "Ober-Eschbach": [],
+    "Oberforsthaus": [],
+    "Oberschweinstiege": [],
+    "Oberursel Altstadt": [
+        "Oberursel"
+    ],
+    "Oberursel Bahnhof": [
+        "Oberursel"
+    ],
+    "Oberursel Stadtmitte": [
+        "Oberursel"
+    ],
+    "Odenwaldstraße": [
+        "Odenwald",
+        "Odenwaldstr.",
+        "Odenwaldstrasse"
+    ],
+    "Offenbach Stadtgrenze": [
+        "Offenbach"
+    ],
+    "Orangerie": [],
+    "Ordnungsamt": [],
+    "Ostbahnhof": [],
+    "Osthafenplatz": [
+        "Osthafen",
+        "Osthafenplz"
+    ],
+    "Otto-Hahn-Platz": [
+        "Otto-Hahn-",
+        "Otto-Hahn-plz"
+    ],
+    "Otto-Hesse-Straße": [
+        "Otto-Hesse-",
+        "Otto-Hesse-str.",
+        "Otto-Hesse-strasse"
+    ],
+    "Pallaswiesenstraße": [
+        "Pallaswiesen",
+        "Pallaswiesenstr.",
+        "Pallaswiesenstrasse"
+    ],
+    "Parlamentsplatz": [
+        "Parlaments",
+        "Parlamentsplz"
+    ],
+    "Platz Bar-le-Duc": [
+        "Platz"
+    ],
+    "Platz der Republik": [],
+    "Preungesheim": [],
+    "Prinz-Emil-Garten": [],
+    "Rebstockbad": [],
+    "Rebstöcker Straße": [
+        "Rebstöcker",
+        "Rebstöcker Str.",
+        "Rebstöcker Strasse"
+    ],
+    "Rhein-/Neckarstraße": [
+        "Rhein-/Neckar",
+        "Rhein-/Neckarstr.",
+        "Rhein-/Neckarstrasse"
+    ],
+    "Rheinlandstraße": [
+        "Rheinland",
+        "Rheinlandstr.",
+        "Rheinlandstrasse"
+    ],
+    "Rhönring": [],
+    "Riedberg": [],
+    "Riederhöfe": [],
+    "Riedwiese/Mertonviertel": [],
+    "Ronneburgstraße": [
+        "Ronneburg",
+        "Ronneburgstr.",
+        "Ronneburgstrasse"
+    ],
+    "Rosengärtchen": [],
+    "Rothschildallee": [
+        "Rothschild"
+    ],
+    "Roßdörfer Platz": [
+        "Roßdörfer",
+        "Roßdörferplz"
+    ],
+    "Römer/Paulskirche": [],
+    "Römerstadt": [],
+    "Saalburg-/Wittelsbacherallee": [
+        "Saalburg-/Wittelsbacher"
+    ],
+    "Sankt Stephan": [
+        "Sankt"
+    ],
+    "Schießhüttenstraße": [
+        "Schießhütten",
+        "Schießhüttenstr.",
+        "Schießhüttenstrasse"
+    ],
+    "Schloss": [],
+    "Schulstraße": [
+        "Schul",
+        "Schulstr.",
+        "Schulstrasse"
+    ],
+    "Schwalbacher Straße": [
+        "Schwalbacher",
+        "Schwalbacher Str.",
+        "Schwalbacher Strasse"
+    ],
+    "Schwarzwaldstraße": [
+        "Schwarzwald",
+        "Schwarzwaldstr.",
+        "Schwarzwaldstrasse"
+    ],
+    "Schwedlerstraße": [
+        "Schwedler",
+        "Schwedlerstr.",
+        "Schwedlerstrasse"
+    ],
+    "Schweizer Platz": [
+        "Schweizer",
+        "Schweizerplz"
+    ],
+    "Schäfflestraße": [
+        "Schäffle",
+        "Schäfflestr.",
+        "Schäfflestrasse"
+    ],
+    "Seckbacher Landstraße": [
+        "Seckbacher Land",
+        "Seckbacher Landstr.",
+        "Seckbacher Landstrasse"
+    ],
+    "Siemensstraße": [
+        "Siemens",
+        "Siemensstr.",
+        "Siemensstrasse"
+    ],
+    "Sigmund-Freud-Straße": [
+        "Sigmund-Freud-",
+        "Sigmund-Freud-str.",
+        "Sigmund-Freud-strasse"
+    ],
+    "Speyerer Straße": [
+        "Speyerer",
+        "Speyerer Str.",
+        "Speyerer Strasse"
+    ],
+    "Stadion Straßenbahn": [
+        "Stadion"
+    ],
+    "Stephan-Heise-Straße": [
+        "Stephan-Heise-",
+        "Stephan-Heise-str.",
+        "Stephan-Heise-strasse"
+    ],
+    "Stresemannallee Bahnhof": [
+        "Stresemannallee"
+    ],
+    "Stresemannallee/Mörfelder Landstraße": [
+        "Stresemannallee/Mörfelder Land",
+        "Stresemannallee/Mörfelder Landstr.",
+        "Stresemannallee/Mörfelder Landstrasse"
+    ],
+    "Südbahnhof": [],
+    "TU-Lichtwiese/Campus": [],
+    "TZ Rhein Main": [],
+    "Tannenbergstraße": [
+        "Tannenberg",
+        "Tannenbergstr.",
+        "Tannenbergstrasse"
+    ],
+    "Theobald-Ziegler-Straße": [
+        "Theobald-Ziegler-",
+        "Theobald-Ziegler-str.",
+        "Theobald-Ziegler-strasse"
+    ],
+    "Tillystraße": [
+        "Tilly",
+        "Tillystr.",
+        "Tillystrasse"
+    ],
+    "Uni-Campus Riedberg": [
+        "Uni-Campus"
+    ],
+    "Universitätsklinikum": [],
+    "Varrentrappstraße": [
+        "Varrentrapp",
+        "Varrentrappstr.",
+        "Varrentrappstrasse"
+    ],
+    "Vogelweidstraße": [
+        "Vogelweid",
+        "Vogelweidstr.",
+        "Vogelweidstrasse"
+    ],
+    "Von-Ketteler-Straße": [
+        "Von-Ketteler-",
+        "Von-Ketteler-str.",
+        "Von-Ketteler-strasse"
+    ],
+    "Wagenhalle": [],
+    "Waldau": [],
+    "Waldfriedhof": [],
+    "Waldfriedhof Goldstein": [
+        "Waldfriedhof"
+    ],
+    "Waldlust": [],
+    "Waldschmidtstraße": [
+        "Waldschmidt",
+        "Waldschmidtstr.",
+        "Waldschmidtstrasse"
+    ],
+    "Waldschulstraße": [
+        "Waldschul",
+        "Waldschulstr.",
+        "Waldschulstrasse"
+    ],
+    "Waldspirale": [],
+    "Walter-Kolb-Siedlung": [],
+    "Wartehalle": [],
+    "Wasserpark": [],
+    "Weißer Stein": [
+        "Weißer"
+    ],
+    "Weißkirchen Ost": [
+        "Weißkirchen"
+    ],
+    "Weserstraße/Münchener Straße": [
+        "Weserstraße/Münchener",
+        "Weserstraße/Münchener Str.",
+        "Weserstraße/Münchener Strasse"
+    ],
+    "Westend": [],
+    "Wickerer Straße": [
+        "Wickerer",
+        "Wickerer Str.",
+        "Wickerer Strasse"
+    ],
+    "Wiener Straße": [
+        "Wiener",
+        "Wiener Str.",
+        "Wiener Strasse"
+    ],
+    "Wiesenau": [],
+    "Willy-Brandt-Platz": [
+        "Willy-Brandt-",
+        "Willy-Brandt-plz"
+    ],
+    "Zeilweg": [],
+    "Zobelstraße": [
+        "Zobel",
+        "Zobelstr.",
+        "Zobelstrasse"
+    ],
+    "Zoo": [],
+    "Zuckschwerdtstraße": [
+        "Zuckschwerdt",
+        "Zuckschwerdtstr.",
+        "Zuckschwerdtstrasse"
+    ]
+}

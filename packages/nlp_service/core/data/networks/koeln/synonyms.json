@@ -1,0 +1,838 @@
+{
+    "Aachener Straße/Gürtel": [
+        "Aachener"
+    ],
+    "Adelheidisstraße": [
+        "Adelheidis",
+        "Adelheidisstr.",
+        "Adelheidisstrasse"
+    ],
+    "Akazienweg": [],
+    "Alfter / Alanus Hochschule": [],
+    "Alter Flughafen Butzweilerhof": [],
+    "Alter Militärring": [
+        "Alter"
+    ],
+    "Altonaer Platz": [
+        "Altonaer",
+        "Altonaerplz"
+    ],
+    "Am Emberg": [
+        "Emberg"
+    ],
+    "Am Spitzenbach": [
+        "Spitzenbach"
+    ],
+    "Amsterdamer Straße/Gürtel": [
+        "Amsterdamer"
+    ],
+    "An der Josefshöhe": [],
+    "Appellhofplatz": [
+        "Appellhof",
+        "Appellhofplz"
+    ],
+    "Arnulfstraße": [
+        "Arnulf",
+        "Arnulfstr.",
+        "Arnulfstrasse"
+    ],
+    "Auerberger Mitte": [
+        "Auerberger"
+    ],
+    "Autobahn (Stadtbahn)": [
+        "Autobahn"
+    ],
+    "Bad Godesberg Bahnhof": [],
+    "Bad Honnef Stadtbahn": [],
+    "Badorf": [],
+    "Bahnhof Deutz / LANXESS arena": [],
+    "Bahnhof Mülheim": [
+        "Bahnhof"
+    ],
+    "Bahnstraße": [
+        "Bahn",
+        "Bahnstr.",
+        "Bahnstrasse"
+    ],
+    "Barbarossaplatz": [
+        "Barbarossa",
+        "Barbarossaplz"
+    ],
+    "Baumschulenweg": [],
+    "Bayenthalgürtel": [],
+    "Bensberg U": [
+        "Bensberg"
+    ],
+    "Bergstraße": [
+        "Berg",
+        "Bergstr.",
+        "Bergstrasse"
+    ],
+    "Berrenrather Straße/Gürtel": [
+        "Berrenrather"
+    ],
+    "Bertha-von-Suttner-Platz / Beethovenhaus": [],
+    "Bocklemünd": [],
+    "Boltensternstraße": [
+        "Boltenstern",
+        "Boltensternstr.",
+        "Boltensternstrasse"
+    ],
+    "Bonn Hauptbahnhof": [
+        "Bonn"
+    ],
+    "Bonn West": [
+        "Bonn"
+    ],
+    "Bonn-Beuel": [],
+    "Bonner Wall": [
+        "Bonner"
+    ],
+    "Bornheim": [],
+    "Bornheim Rathaus": [
+        "Bornheim"
+    ],
+    "Brahmsstraße": [
+        "Brahms",
+        "Brahmsstr.",
+        "Brahmsstrasse"
+    ],
+    "Breslauer Platz/Hbf": [
+        "Breslauer"
+    ],
+    "Brück Mauspfad": [
+        "Brück"
+    ],
+    "Brühl Mitte": [
+        "Brühl"
+    ],
+    "Brühl Nord": [
+        "Brühl"
+    ],
+    "Brühl Süd": [
+        "Brühl"
+    ],
+    "Brühl-Vochem": [],
+    "Brühler Straße": [
+        "Brühler",
+        "Brühler Str.",
+        "Brühler Strasse"
+    ],
+    "Buchheim Frankfurter Straße": [
+        "Buchheim Frankfurter",
+        "Buchheim Frankfurter Str.",
+        "Buchheim Frankfurter Strasse"
+    ],
+    "Buchheim Herler Straße": [
+        "Buchheim Herler",
+        "Buchheim Herler Str.",
+        "Buchheim Herler Strasse"
+    ],
+    "Bundesrechnungshof/Auswärtiges Amt": [
+        "Bundesrechnungshof/Auswärtiges"
+    ],
+    "Buschdorf": [],
+    "Chlodwigplatz": [
+        "Chlodwig",
+        "Chlodwigplz"
+    ],
+    "Chorweiler": [],
+    "Christophstraße/Mediapark": [],
+    "Clarenbachstift": [],
+    "Dasselstraße/Bf Süd": [
+        "Dasselstraße/Bf"
+    ],
+    "Dellbrück Hauptstraße": [
+        "Dellbrück Haupt",
+        "Dellbrück Hauptstr.",
+        "Dellbrück Hauptstrasse"
+    ],
+    "Dellbrück Mauspfad": [
+        "Dellbrück"
+    ],
+    "Dersdorf": [],
+    "Deutz Technische Hochschule": [],
+    "Deutzer Freiheit": [
+        "Deutzer"
+    ],
+    "Dom/Hbf": [],
+    "Dransdorf": [],
+    "Drehbrücke": [],
+    "Dürener Straße/Gürtel": [
+        "Dürener"
+    ],
+    "Ebertplatz": [
+        "Ebert",
+        "Ebertplz"
+    ],
+    "Eduard-Otto-Straße": [
+        "Eduard-Otto-",
+        "Eduard-Otto-str.",
+        "Eduard-Otto-strasse"
+    ],
+    "Efferen": [],
+    "Eifelplatz": [
+        "Eifel",
+        "Eifelplz"
+    ],
+    "Eifelstraße": [
+        "Eifel",
+        "Eifelstr.",
+        "Eifelstrasse"
+    ],
+    "Eifelwall/Stadtarchiv": [],
+    "Ensen Kloster": [
+        "Ensen"
+    ],
+    "Escher Straße": [
+        "Escher",
+        "Escher Str.",
+        "Escher Strasse"
+    ],
+    "Eupener Straße": [
+        "Eupener",
+        "Eupener Str.",
+        "Eupener Strasse"
+    ],
+    "Euskirchener Straße": [
+        "Euskirchener",
+        "Euskirchener Str.",
+        "Euskirchener Strasse"
+    ],
+    "Fischenich": [],
+    "Flehbachstraße": [
+        "Flehbach",
+        "Flehbachstr.",
+        "Flehbachstrasse"
+    ],
+    "Florastraße": [
+        "Flora",
+        "Florastr.",
+        "Florastrasse"
+    ],
+    "Fordwerke Mitte": [
+        "Fordwerke"
+    ],
+    "Fordwerke Nord": [
+        "Fordwerke"
+    ],
+    "Fordwerke Süd": [
+        "Fordwerke"
+    ],
+    "Frankenforst": [],
+    "Frechen Bahnhof": [
+        "Frechen"
+    ],
+    "Frechen Kirche": [
+        "Frechen"
+    ],
+    "Frechen Mühlengasse": [
+        "Frechen"
+    ],
+    "Frechen Rathaus": [
+        "Frechen"
+    ],
+    "Frechen-Benzelrath": [],
+    "Friesenplatz": [
+        "Friesen",
+        "Friesenplz"
+    ],
+    "Fuldaer Straße": [
+        "Fuldaer",
+        "Fuldaer Str.",
+        "Fuldaer Strasse"
+    ],
+    "Geestemünder Straße": [
+        "Geestemünder",
+        "Geestemünder Str.",
+        "Geestemünder Strasse"
+    ],
+    "Geldernstraße/Parkgürtel": [],
+    "Gilgaustraße": [
+        "Gilgau",
+        "Gilgaustr.",
+        "Gilgaustrasse"
+    ],
+    "Gleueler Straße/Gürtel": [
+        "Gleueler"
+    ],
+    "Godorf": [],
+    "Gottesweg": [],
+    "Grünstraße": [
+        "Grün",
+        "Grünstr.",
+        "Grünstrasse"
+    ],
+    "Gutenbergstraße": [
+        "Gutenberg",
+        "Gutenbergstr.",
+        "Gutenbergstrasse"
+    ],
+    "Görlinger-Zentrum": [],
+    "Hangelar Mitte": [
+        "Hangelar"
+    ],
+    "Hangelar Ost": [
+        "Hangelar"
+    ],
+    "Hangelar West": [
+        "Hangelar"
+    ],
+    "Hansaring": [],
+    "Haus Vorst": [
+        "Haus"
+    ],
+    "Haus der Jugend": [],
+    "Heimersdorf": [],
+    "Heinrich-Hertz-Europakolleg": [],
+    "Heinrich-Lübke-Ufer": [],
+    "Herforder Straße": [
+        "Herforder",
+        "Herforder Str.",
+        "Herforder Strasse"
+    ],
+    "Hersel": [],
+    "Herthastraße": [
+        "Hertha",
+        "Herthastr.",
+        "Herthastrasse"
+    ],
+    "Heumarkt": [],
+    "Heussallee/Museumsmeile": [],
+    "Hochkreuz / Deutsches Museum Bonn": [],
+    "Husarenstraße": [
+        "Husaren",
+        "Husarenstr.",
+        "Husarenstrasse"
+    ],
+    "Hürth-Hermülheim": [],
+    "IKEA Am Butzweilerhof": [],
+    "Iltisstraße": [
+        "Iltis",
+        "Iltisstr.",
+        "Iltisstrasse"
+    ],
+    "Im Hoppenkamp": [],
+    "Im Weidenbruch": [],
+    "Innenministerium": [],
+    "Junkersdorf": [],
+    "Juridicum": [],
+    "Kalk Kapelle": [
+        "Kalk"
+    ],
+    "Kalk Post": [
+        "Kalk"
+    ],
+    "Kalker Friedhof": [
+        "Kalker"
+    ],
+    "Kartäuserhof": [],
+    "Keupstraße": [
+        "Keup",
+        "Keupstr.",
+        "Keupstrasse"
+    ],
+    "Kiebitzweg": [],
+    "Kinderkrankenhaus": [],
+    "Kippekausen": [],
+    "Klettenbergpark": [],
+    "Koelnmesse": [],
+    "Konrad-Adenauer-Platz": [
+        "Konrad-Adenauer-",
+        "Konrad-Adenauer-plz"
+    ],
+    "Kopenhagener Straße": [
+        "Kopenhagener",
+        "Kopenhagener Str.",
+        "Kopenhagener Strasse"
+    ],
+    "Köln West": [
+        "Köln"
+    ],
+    "Kölner Straße": [
+        "Kölner",
+        "Kölner Str.",
+        "Kölner Strasse"
+    ],
+    "Königsforst": [],
+    "Königstraße": [
+        "König",
+        "Königstr.",
+        "Königstrasse"
+    ],
+    "Königswinter Clemens-August-Straße": [
+        "Königswinter Clemens-August-",
+        "Königswinter Clemens-August-str.",
+        "Königswinter Clemens-August-strasse"
+    ],
+    "Königswinter Denkmal": [
+        "Königswinter"
+    ],
+    "Königswinter Fähre": [
+        "Königswinter"
+    ],
+    "Körnerstraße": [
+        "Körner",
+        "Körnerstr.",
+        "Körnerstrasse"
+    ],
+    "Küdinghoven": [],
+    "LVR-Klinik": [],
+    "Lenauplatz": [
+        "Lenau",
+        "Lenauplz"
+    ],
+    "Leuchterstraße": [
+        "Leuchter",
+        "Leuchterstr.",
+        "Leuchterstrasse"
+    ],
+    "Leyendeckerstraße": [
+        "Leyendecker",
+        "Leyendeckerstr.",
+        "Leyendeckerstrasse"
+    ],
+    "Liebigstraße": [
+        "Liebig",
+        "Liebigstr.",
+        "Liebigstrasse"
+    ],
+    "Limperich": [],
+    "Limperich Nord": [
+        "Limperich"
+    ],
+    "Lohsestraße": [
+        "Lohse",
+        "Lohsestr.",
+        "Lohsestrasse"
+    ],
+    "Loki-Schmidt-Platz": [
+        "Loki-Schmidt-",
+        "Loki-Schmidt-plz"
+    ],
+    "Longenburg / CJD Königswinter": [],
+    "Longerich Friedhof": [
+        "Longerich"
+    ],
+    "Lustheide": [],
+    "Maarweg": [],
+    "Margaretastraße": [
+        "Margareta",
+        "Margaretastr.",
+        "Margaretastrasse"
+    ],
+    "Maria-Himmelfahrt-Straße": [
+        "Maria-Himmelfahrt-",
+        "Maria-Himmelfahrt-str.",
+        "Maria-Himmelfahrt-strasse"
+    ],
+    "Marsdorf": [],
+    "Mauritiuskirche": [],
+    "Max-Löbner-Straße": [
+        "Max-Löbner-",
+        "Max-Löbner-str.",
+        "Max-Löbner-strasse"
+    ],
+    "Meerfeldstraße": [
+        "Meerfeld",
+        "Meerfeldstr.",
+        "Meerfeldstrasse"
+    ],
+    "Melaten": [],
+    "Melatengürtel": [],
+    "Merheim": [],
+    "Merkenich": [],
+    "Merkenich Mitte": [
+        "Merkenich"
+    ],
+    "Merten": [],
+    "Michaelshoven": [],
+    "Mohnweg": [],
+    "Mollwitzstraße": [
+        "Mollwitz",
+        "Mollwitzstr.",
+        "Mollwitzstrasse"
+    ],
+    "Moltkestraße": [
+        "Moltke",
+        "Moltkestr.",
+        "Moltkestrasse"
+    ],
+    "Mommsenstraße": [
+        "Mommsen",
+        "Mommsenstr.",
+        "Mommsenstrasse"
+    ],
+    "Museum Koenig": [
+        "Museum"
+    ],
+    "Mülheim Berliner Straße": [
+        "Mülheim Berliner",
+        "Mülheim Berliner Str.",
+        "Mülheim Berliner Strasse"
+    ],
+    "Mülheim Wiener Platz": [
+        "Mülheim Wiener",
+        "Mülheim Wienerplz"
+    ],
+    "Nesselrodestraße": [
+        "Nesselrode",
+        "Nesselrodestr.",
+        "Nesselrodestrasse"
+    ],
+    "Neuenweg": [],
+    "Neufelder Straße/Krankenhaus Holweide": [],
+    "Neumarkt": [],
+    "Neusser Straße/Gürtel": [
+        "Neusser"
+    ],
+    "Niehl Nord": [
+        "Niehl"
+    ],
+    "Niehl Sebastianstraße": [
+        "Niehl Sebastian",
+        "Niehl Sebastianstr.",
+        "Niehl Sebastianstrasse"
+    ],
+    "Nußbaumerstraße": [
+        "Nußbaumer",
+        "Nußbaumerstr.",
+        "Nußbaumerstrasse"
+    ],
+    "Oberdollendorf": [],
+    "Oberdollendorf Nord": [
+        "Oberdollendorf"
+    ],
+    "Obere Wilhelmstraße": [
+        "Obere Wilhelm",
+        "Obere Wilhelmstr.",
+        "Obere Wilhelmstrasse"
+    ],
+    "Oberkassel Mitte": [
+        "Oberkassel"
+    ],
+    "Oberkassel Nord": [
+        "Oberkassel"
+    ],
+    "Oberkassel Süd / Römlinghoven": [],
+    "Odenthaler Straße": [
+        "Odenthaler",
+        "Odenthaler Str.",
+        "Odenthaler Strasse"
+    ],
+    "Ollenhauerring": [],
+    "Ollenhauerstraße": [
+        "Ollenhauer",
+        "Ollenhauerstr.",
+        "Ollenhauerstrasse"
+    ],
+    "Olof-Palme-Allee": [
+        "Olof-Palme-"
+    ],
+    "Ostheim": [],
+    "Piusstraße": [
+        "Pius",
+        "Piusstr.",
+        "Piusstrasse"
+    ],
+    "Plittersdorfer Straße": [
+        "Plittersdorfer",
+        "Plittersdorfer Str.",
+        "Plittersdorfer Strasse"
+    ],
+    "Pohligstraße": [
+        "Pohlig",
+        "Pohligstr.",
+        "Pohligstrasse"
+    ],
+    "Poll Salmstraße": [
+        "Poll Salm",
+        "Poll Salmstr.",
+        "Poll Salmstrasse"
+    ],
+    "Poller Kirchweg": [
+        "Poller"
+    ],
+    "Poppelsdorfer Allee": [
+        "Poppelsdorfer"
+    ],
+    "Porz Markt": [
+        "Porz"
+    ],
+    "Porzer Straße": [
+        "Porzer",
+        "Porzer Str.",
+        "Porzer Strasse"
+    ],
+    "Poststraße": [
+        "Post",
+        "Poststr.",
+        "Poststrasse"
+    ],
+    "Propsthof Nord": [
+        "Propsthof"
+    ],
+    "Pützstraße": [
+        "Pütz",
+        "Pützstr.",
+        "Pützstrasse"
+    ],
+    "Quirinusplatz": [
+        "Quirinus",
+        "Quirinusplz"
+    ],
+    "Raiffeisenstraße": [
+        "Raiffeisen",
+        "Raiffeisenstr.",
+        "Raiffeisenstrasse"
+    ],
+    "Ramersdorf": [],
+    "Rath/Heumar": [],
+    "Rathaus": [],
+    "Refrath": [],
+    "Reichenspergerplatz": [
+        "Reichensperger",
+        "Reichenspergerplz"
+    ],
+    "Rektor-Klein-Straße": [
+        "Rektor-Klein-",
+        "Rektor-Klein-str.",
+        "Rektor-Klein-strasse"
+    ],
+    "Rheinaue": [],
+    "Rheinenergie-Stadion": [],
+    "Rhöndorf": [],
+    "Rittershausstraße": [
+        "Rittershaus",
+        "Rittershausstr.",
+        "Rittershausstrasse"
+    ],
+    "Robert-Kirchhoff-Straße": [
+        "Robert-Kirchhoff-",
+        "Robert-Kirchhoff-str.",
+        "Robert-Kirchhoff-strasse"
+    ],
+    "Robert-Schuman-Platz": [
+        "Robert-Schuman-",
+        "Robert-Schuman-plz"
+    ],
+    "Rochusplatz": [
+        "Rochus",
+        "Rochusplz"
+    ],
+    "Rodenkirchen Bahnhof": [
+        "Rodenkirchen"
+    ],
+    "Roisdorf West": [
+        "Roisdorf"
+    ],
+    "Rosenhügel": [],
+    "Rosental": [],
+    "Rudolfplatz": [
+        "Rudolf",
+        "Rudolfplz"
+    ],
+    "Röttgensweg": [],
+    "Sankt Augustin Kloster": [],
+    "Sankt Augustin Ort": [],
+    "Sankt Augustin Zentrum/Hochschule Bonn-Rhein-Sieg": [],
+    "Sankt Augustin-Mülldorf": [
+        "Sankt"
+    ],
+    "Schaffrathsgasse": [],
+    "Scheibenstraße": [
+        "Scheiben",
+        "Scheibenstr.",
+        "Scheibenstrasse"
+    ],
+    "Schießbergweg": [],
+    "Schlebusch": [],
+    "Schwadorf": [],
+    "Schönhauser Straße": [
+        "Schönhauser",
+        "Schönhauser Str.",
+        "Schönhauser Strasse"
+    ],
+    "Severinsbrücke": [],
+    "Severinstraße": [
+        "Severin",
+        "Severinstr.",
+        "Severinstrasse"
+    ],
+    "Siegburg Bahnhof": [
+        "Siegburg"
+    ],
+    "Siegstraße": [
+        "Sieg",
+        "Siegstr.",
+        "Siegstrasse"
+    ],
+    "Slabystraße": [
+        "Slaby",
+        "Slabystr.",
+        "Slabystrasse"
+    ],
+    "Sparkasse Am Butzweilerhof": [],
+    "Sportpark Höhenberg": [
+        "Sportpark"
+    ],
+    "Stadthalle": [],
+    "Stadthaus": [],
+    "Stegerwaldsiedlung": [],
+    "Steinstraße": [
+        "Stein",
+        "Steinstr.",
+        "Steinstrasse"
+    ],
+    "Steinweg": [],
+    "Stüttgenhof": [],
+    "Subbelrather Straße/Gürtel": [
+        "Subbelrather"
+    ],
+    "Suevenstraße": [
+        "Sueven",
+        "Suevenstr.",
+        "Suevenstrasse"
+    ],
+    "Sülz Hermeskeiler Platz": [
+        "Sülz Hermeskeiler",
+        "Sülz Hermeskeilerplz"
+    ],
+    "Sülzburgstraße": [
+        "Sülzburg",
+        "Sülzburgstr.",
+        "Sülzburgstrasse"
+    ],
+    "Sülzgürtel": [],
+    "Sürth Bahnhof": [
+        "Sürth"
+    ],
+    "Tannenbusch Mitte": [
+        "Tannenbusch"
+    ],
+    "Tannenbusch Süd": [
+        "Tannenbusch"
+    ],
+    "Thielenbruch": [],
+    "Ubierring": [],
+    "Uedorf": [],
+    "Ulrepforte": [],
+    "Uniklinik Köln": [
+        "Uniklinik"
+    ],
+    "Universität": [],
+    "Universität / Markt": [],
+    "Universitätsstraße": [
+        "Universitäts",
+        "Universitätsstr.",
+        "Universitätsstrasse"
+    ],
+    "Urfeld (Stadtbahn)": [
+        "Urfeld"
+    ],
+    "Venloer Straße/Gürtel": [
+        "Venloer"
+    ],
+    "Vilich": [],
+    "Vilich-Müldorf": [],
+    "Vingst": [],
+    "Vischeringstraße": [
+        "Vischering",
+        "Vischeringstr.",
+        "Vischeringstrasse"
+    ],
+    "Von-Sparr-Straße": [
+        "Von-Sparr-",
+        "Von-Sparr-str.",
+        "Von-Sparr-strasse"
+    ],
+    "Walberberg": [],
+    "Waldecker Straße": [
+        "Waldecker",
+        "Waldecker Str.",
+        "Waldecker Strasse"
+    ],
+    "Waldorf": [],
+    "Weberstraße": [
+        "Weber",
+        "Weberstr.",
+        "Weberstrasse"
+    ],
+    "Weiden Römergrab": [
+        "Weiden"
+    ],
+    "Weiden West": [
+        "Weiden"
+    ],
+    "Weiden Zentrum": [
+        "Weiden"
+    ],
+    "Weinsbergstraße/Gürtel": [],
+    "Weißhausstraße": [
+        "Weißhaus",
+        "Weißhausstr.",
+        "Weißhausstrasse"
+    ],
+    "Wesseling": [],
+    "Wesseling Nord": [
+        "Wesseling"
+    ],
+    "Wesseling Süd": [
+        "Wesseling"
+    ],
+    "Westfriedhof": [],
+    "Westhoven Berliner Straße": [
+        "Westhoven Berliner",
+        "Westhoven Berliner Str.",
+        "Westhoven Berliner Strasse"
+    ],
+    "Westhoven, Kölner Straße": [
+        "Westhoven, Kölner",
+        "Westhoven, Kölner Str.",
+        "Westhoven, Kölner Strasse"
+    ],
+    "Weyertal": [],
+    "Wichheimer Straße": [
+        "Wichheimer",
+        "Wichheimer Str.",
+        "Wichheimer Strasse"
+    ],
+    "Widdig": [],
+    "Wilhelm-Sollmann-Straße": [
+        "Wilhelm-Sollmann-",
+        "Wilhelm-Sollmann-str.",
+        "Wilhelm-Sollmann-strasse"
+    ],
+    "Wilhelmsplatz": [
+        "Wilhelms",
+        "Wilhelmsplz"
+    ],
+    "Wolffsohnstraße": [
+        "Wolffsohn",
+        "Wolffsohnstr.",
+        "Wolffsohnstrasse"
+    ],
+    "Wurzerstraße": [
+        "Wurzer",
+        "Wurzerstr.",
+        "Wurzerstrasse"
+    ],
+    "Wüllnerstraße": [
+        "Wüllner",
+        "Wüllnerstr.",
+        "Wüllnerstrasse"
+    ],
+    "Zollstock Südfriedhof": [
+        "Zollstock"
+    ],
+    "Zollstockgürtel": [],
+    "Zoo/Flora": [],
+    "Zülpicher Platz": [
+        "Zülpicher",
+        "Zülpicherplz"
+    ],
+    "Zülpicher Straße/Gürtel": [
+        "Zülpicher"
+    ],
+    "Zündorf": []
+}

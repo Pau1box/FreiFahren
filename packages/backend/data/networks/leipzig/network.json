@@ -1,0 +1,22 @@
+{
+    "id": "leipzig",
+    "name": "Leipzig",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.3406,
+        "longitude": 12.3747
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.230929,
+            "longitude": 12.189481
+        },
+        "northEast": {
+            "latitude": 51.442241,
+            "longitude": 12.563171
+        }
+    }
+}

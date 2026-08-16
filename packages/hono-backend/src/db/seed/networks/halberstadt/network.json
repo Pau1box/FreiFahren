@@ -1,0 +1,22 @@
+{
+    "id": "halberstadt",
+    "name": "Halberstadt",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.8954,
+        "longitude": 11.0521
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.825474,
+            "longitude": 10.964545
+        },
+        "northEast": {
+            "latitude": 51.94849,
+            "longitude": 11.14313
+        }
+    }
+}

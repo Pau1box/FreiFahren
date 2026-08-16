@@ -1,0 +1,392 @@
+{
+    "AMO/Steubenallee": [
+        "AMO/Steuben"
+    ],
+    "AOK": [],
+    "Agnetenstraße": [
+        "Agneten",
+        "Agnetenstr.",
+        "Agnetenstrasse"
+    ],
+    "Albert-Vater-Straße": [
+        "Albert-Vater-",
+        "Albert-Vater-str.",
+        "Albert-Vater-strasse"
+    ],
+    "Alexander-Puschkin-Straße": [
+        "Alexander-Puschkin-",
+        "Alexander-Puschkin-str.",
+        "Alexander-Puschkin-strasse"
+    ],
+    "Allee-Center": [],
+    "Am Fuchsberg": [
+        "Fuchsberg"
+    ],
+    "Am Hopfengarten": [
+        "Hopfengarten"
+    ],
+    "Am Katharinenturm": [
+        "Katharinenturm"
+    ],
+    "Am Nordpark": [
+        "Nordpark"
+    ],
+    "Am Stern": [
+        "Stern"
+    ],
+    "Ambrosiusplatz": [
+        "Ambrosius",
+        "Ambrosiusplz"
+    ],
+    "Arenen": [],
+    "Arndtstraße": [
+        "Arndt",
+        "Arndtstr.",
+        "Arndtstrasse"
+    ],
+    "Bahnhof Herrenkrug": [
+        "Bahnhof"
+    ],
+    "Barleber See": [
+        "Barleber"
+    ],
+    "Bebertaler Straße": [
+        "Bebertaler",
+        "Bebertaler Str.",
+        "Bebertaler Strasse"
+    ],
+    "Benediktinerstraße/Gesellschaftshaus": [],
+    "Betriebshof Nord": [
+        "Betriebshof"
+    ],
+    "Blumenberger Straße": [
+        "Blumenberger",
+        "Blumenberger Str.",
+        "Blumenberger Strasse"
+    ],
+    "Braunlager Straße": [
+        "Braunlager",
+        "Braunlager Str.",
+        "Braunlager Strasse"
+    ],
+    "Brenneckestraße": [
+        "Brennecke",
+        "Brenneckestr.",
+        "Brenneckestrasse"
+    ],
+    "Brunnenstieg": [],
+    "Buckau (Wasserwerk)": [
+        "Buckau"
+    ],
+    "Budenbergstraße": [
+        "Budenberg",
+        "Budenbergstr.",
+        "Budenbergstrasse"
+    ],
+    "Bördepark Ost": [
+        "Bördepark"
+    ],
+    "City Carré": [
+        "City"
+    ],
+    "Diesdorf": [],
+    "Dodendorfer Straße": [
+        "Dodendorfer",
+        "Dodendorfer Str.",
+        "Dodendorfer Strasse"
+    ],
+    "Domplatz": [
+        "Dom",
+        "Domplz"
+    ],
+    "Drosselsteig": [],
+    "Eiskellerplatz": [
+        "Eiskeller",
+        "Eiskellerplz"
+    ],
+    "Eisnerstraße": [
+        "Eisner",
+        "Eisnerstr.",
+        "Eisnerstrasse"
+    ],
+    "Eisvogelstraße": [
+        "Eisvogel",
+        "Eisvogelstr.",
+        "Eisvogelstrasse"
+    ],
+    "Enercon": [],
+    "Fachhochschule": [],
+    "Fermersleber Weg": [
+        "Fermersleber"
+    ],
+    "Flechtinger Straße": [
+        "Flechtinger",
+        "Flechtinger Str.",
+        "Flechtinger Strasse"
+    ],
+    "Flugplatz/Technisches Hilfswerk": [
+        "Flugplatz/Technisches"
+    ],
+    "Freibad Süd": [
+        "Freibad"
+    ],
+    "Friedrich-List-Straße": [
+        "Friedrich-List-",
+        "Friedrich-List-str.",
+        "Friedrich-List-strasse"
+    ],
+    "Friesenstraße": [
+        "Friesen",
+        "Friesenstr.",
+        "Friesenstrasse"
+    ],
+    "Gerhart-Hauptmann-Straße": [
+        "Gerhart-Hauptmann-",
+        "Gerhart-Hauptmann-str.",
+        "Gerhart-Hauptmann-strasse"
+    ],
+    "Goethestraße": [
+        "Goethe",
+        "Goethestr.",
+        "Goethestrasse"
+    ],
+    "Haeckelstraße/Museum": [],
+    "Halberstädter Straße/Leipziger Straße": [
+        "Halberstädter Straße/Leipziger",
+        "Halberstädter Straße/Leipziger Str.",
+        "Halberstädter Straße/Leipziger Strasse"
+    ],
+    "Hannoversche Straße": [
+        "Hannoversche",
+        "Hannoversche Str.",
+        "Hannoversche Strasse"
+    ],
+    "Hanns-Eisler-Platz": [
+        "Hanns-Eisler-",
+        "Hanns-Eisler-plz"
+    ],
+    "Harsdorfer Straße": [
+        "Harsdorfer",
+        "Harsdorfer Str.",
+        "Harsdorfer Strasse"
+    ],
+    "Hasselbachplatz": [
+        "Hasselbach",
+        "Hasselbachplz"
+    ],
+    "Hauptbahnhof/Willy-Brandt-Platz": [
+        "Hauptbahnhof/Willy-Brandt-",
+        "Hauptbahnhof/Willy-Brandt-plz"
+    ],
+    "Havelstraße": [
+        "Havel",
+        "Havelstr.",
+        "Havelstrasse"
+    ],
+    "Herrenkrug": [],
+    "Hertzstraße": [
+        "Hertz",
+        "Hertzstr.",
+        "Hertzstrasse"
+    ],
+    "Heumarkt": [],
+    "Hohenwarther Straße": [
+        "Hohenwarther",
+        "Hohenwarther Str.",
+        "Hohenwarther Strasse"
+    ],
+    "Husumer Straße": [
+        "Husumer",
+        "Husumer Str.",
+        "Husumer Strasse"
+    ],
+    "Industrie- und Logistik-Centrum": [],
+    "Jordanstraße": [
+        "Jordan",
+        "Jordanstr.",
+        "Jordanstrasse"
+    ],
+    "Kannenstieg": [],
+    "Kastanienstraße": [
+        "Kastanien",
+        "Kastanienstr.",
+        "Kastanienstrasse"
+    ],
+    "Klinikum Olvenstedt": [
+        "Klinikum"
+    ],
+    "Klosterwuhne": [],
+    "Krähenstieg": [],
+    "Leipziger Chaussee": [
+        "Leipziger"
+    ],
+    "Leiterstraße": [
+        "Leiter",
+        "Leiterstr.",
+        "Leiterstrasse"
+    ],
+    "Liebknechtstraße": [
+        "Liebknecht",
+        "Liebknechtstr.",
+        "Liebknechtstrasse"
+    ],
+    "Listemannstraße": [
+        "Listemann",
+        "Listemannstr.",
+        "Listemannstrasse"
+    ],
+    "Lostauer Straße": [
+        "Lostauer",
+        "Lostauer Str.",
+        "Lostauer Strasse"
+    ],
+    "Mariannenstraße": [
+        "Mariannen",
+        "Mariannenstr.",
+        "Mariannenstrasse"
+    ],
+    "Mehringstraße": [
+        "Mehring",
+        "Mehringstr.",
+        "Mehringstrasse"
+    ],
+    "Merkurweg": [],
+    "Messegelände/Elbauenpark": [],
+    "Milchweg": [],
+    "Mittagstraße": [
+        "Mittag",
+        "Mittagstr.",
+        "Mittagstrasse"
+    ],
+    "Neue Straße/Zirkusmuseum": [
+        "Neue"
+    ],
+    "Neustädter Friedhof": [
+        "Neustädter"
+    ],
+    "Neustädter Platz": [
+        "Neustädter",
+        "Neustädterplz"
+    ],
+    "Neustädter See": [
+        "Neustädter"
+    ],
+    "Nicolaiplatz": [
+        "Nicolai",
+        "Nicolaiplz"
+    ],
+    "Pablo-Picasso-Straße": [
+        "Pablo-Picasso-",
+        "Pablo-Picasso-str.",
+        "Pablo-Picasso-strasse"
+    ],
+    "Pallasweg": [],
+    "Pechauer Platz": [
+        "Pechauer",
+        "Pechauerplz"
+    ],
+    "Pettenkoferstraße": [
+        "Pettenkofer",
+        "Pettenkoferstr.",
+        "Pettenkoferstrasse"
+    ],
+    "Pfeiffersche Stiftungen": [
+        "Pfeiffersche"
+    ],
+    "Planckstraße": [
+        "Planck",
+        "Planckstr.",
+        "Planckstrasse"
+    ],
+    "Raiffeisenstraße": [
+        "Raiffeisen",
+        "Raiffeisenstr.",
+        "Raiffeisenstrasse"
+    ],
+    "Reform": [],
+    "Rennetal": [],
+    "Rostocker Straße": [
+        "Rostocker",
+        "Rostocker Str.",
+        "Rostocker Strasse"
+    ],
+    "Rothensee": [],
+    "S-Bahnhof Eichenweiler": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Neustadt": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Südost": [
+        "S-Bahnhof"
+    ],
+    "S-Bf. Buckau / Puppentheater": [],
+    "SKL": [],
+    "Salbker Platz": [
+        "Salbker",
+        "Salbkerplz"
+    ],
+    "Schleswiger Straße": [
+        "Schleswiger",
+        "Schleswiger Str.",
+        "Schleswiger Strasse"
+    ],
+    "Schmeilstraße": [
+        "Schmeil",
+        "Schmeilstr.",
+        "Schmeilstrasse"
+    ],
+    "Schule Rothensee": [
+        "Schule"
+    ],
+    "Sieverstorstraße": [
+        "Sieverstor",
+        "Sieverstorstr.",
+        "Sieverstorstrasse"
+    ],
+    "Simonstraße": [
+        "Simon",
+        "Simonstr.",
+        "Simonstrasse"
+    ],
+    "Sohlener Straße": [
+        "Sohlener",
+        "Sohlener Str.",
+        "Sohlener Strasse"
+    ],
+    "Spielhagenstraße": [
+        "Spielhagen",
+        "Spielhagenstr.",
+        "Spielhagenstrasse"
+    ],
+    "Sternbogen/Bürgerbüro": [],
+    "Südfriedhof": [],
+    "Südring": [],
+    "Thiemstraße": [
+        "Thiem",
+        "Thiemstr.",
+        "Thiemstrasse"
+    ],
+    "Turmpark": [],
+    "Universität": [],
+    "Universitätsbibliothek": [],
+    "Universitätsklinikum": [],
+    "Verkehrsbetriebe": [],
+    "Weinbrennerallee": [
+        "Weinbrenner"
+    ],
+    "Westerhüsen (Betriebshof)": [
+        "Westerhüsen"
+    ],
+    "Westfriedhof": [],
+    "Westring": [],
+    "Westringbrücke": [],
+    "ZOB/Adelheidring": [],
+    "Zinckestraße": [
+        "Zincke",
+        "Zinckestr.",
+        "Zinckestrasse"
+    ],
+    "Zollbrücke": [],
+    "Zoo": []
+}

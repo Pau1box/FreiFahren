@@ -1,0 +1,385 @@
+{
+    "n27471054": {
+        "coordinates": {
+            "latitude": 48.41963966,
+            "longitude": 9.9425278
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Manfred-Börner-Straße"
+    },
+    "n27657825": {
+        "coordinates": {
+            "latitude": 48.394698042857144,
+            "longitude": 9.96772292857143
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Theodor-Heuss-Platz (Steig A)"
+    },
+    "n29370195": {
+        "coordinates": {
+            "latitude": 48.40255706,
+            "longitude": 10.001026759999998
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Willy-Brandt-Platz"
+    },
+    "n273186515": {
+        "coordinates": {
+            "latitude": 48.42493903333334,
+            "longitude": 9.956735783333334
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Botanischer Garten (Steig A)"
+    },
+    "n279927510": {
+        "coordinates": {
+            "latitude": 48.3946967,
+            "longitude": 9.956369
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Söflingen"
+    },
+    "n279927525": {
+        "coordinates": {
+            "latitude": 48.393840299999994,
+            "longitude": 9.9733238
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Blücherstraße"
+    },
+    "n287821281": {
+        "coordinates": {
+            "latitude": 48.39454743333334,
+            "longitude": 9.960192133333335
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Sonnenstraße (Steig C)"
+    },
+    "n288668949": {
+        "coordinates": {
+            "latitude": 48.3944196,
+            "longitude": 9.963935
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Magirusstraße"
+    },
+    "n288670842": {
+        "coordinates": {
+            "latitude": 48.394496591666666,
+            "longitude": 9.980878291666667
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Ehinger Tor (Steig F)"
+    },
+    "n297880182": {
+        "coordinates": {
+            "latitude": 48.424155266666666,
+            "longitude": 10.012822633333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Alfred-Delp-Weg"
+    },
+    "n297880201": {
+        "coordinates": {
+            "latitude": 48.43017535,
+            "longitude": 10.01386565
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Haslacher Weg"
+    },
+    "n316119300": {
+        "coordinates": {
+            "latitude": 48.424327600000005,
+            "longitude": 9.9522534
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kliniken Wissenschaftsstadt (Steig D)"
+    },
+    "n429588352": {
+        "coordinates": {
+            "latitude": 48.433330649999995,
+            "longitude": 10.020085433333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Thüringenweg"
+    },
+    "n429595342": {
+        "coordinates": {
+            "latitude": 48.4343171,
+            "longitude": 10.0304759
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Böfingen (Ostpreußenweg)"
+    },
+    "n429595343": {
+        "coordinates": {
+            "latitude": 48.43447501666666,
+            "longitude": 10.024292683333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Mecklenburgweg"
+    },
+    "n435591577": {
+        "coordinates": {
+            "latitude": 48.425860542857144,
+            "longitude": 10.012186285714288
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Egertweg (Steig E)"
+    },
+    "n435591580": {
+        "coordinates": {
+            "latitude": 48.420145149999996,
+            "longitude": 10.0175056
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Eugen-Bolz-Straße"
+    },
+    "n435591594": {
+        "coordinates": {
+            "latitude": 48.4019477,
+            "longitude": 9.992892300000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Justizgebäude"
+    },
+    "n954804781": {
+        "coordinates": {
+            "latitude": 48.39032831666666,
+            "longitude": 9.9746474
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Römerplatz (Steig D)"
+    },
+    "n972661361": {
+        "coordinates": {
+            "latitude": 48.4121305,
+            "longitude": 10.011184100000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Donauhalle"
+    },
+    "n1139782467": {
+        "coordinates": {
+            "latitude": 48.4084397,
+            "longitude": 10.0089948
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Wohnpark Friedrichsau"
+    },
+    "n1144029904": {
+        "coordinates": {
+            "latitude": 48.40499275,
+            "longitude": 10.007593400000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Donaustadion"
+    },
+    "n1144030200": {
+        "coordinates": {
+            "latitude": 48.403543975,
+            "longitude": 10.0044037
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Staufenring"
+    },
+    "n1522118244": {
+        "coordinates": {
+            "latitude": 48.38464876,
+            "longitude": 9.96016998
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Gewerbeschulen Königstraße (Steig D)"
+    },
+    "n3964525727": {
+        "coordinates": {
+            "latitude": 48.422018800000004,
+            "longitude": 9.9565952875
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Universität Süd (Steig A)"
+    },
+    "n4156429935": {
+        "coordinates": {
+            "latitude": 48.38383568333333,
+            "longitude": 9.95554
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kuhberg Schulzentrum"
+    },
+    "n4156429943": {
+        "coordinates": {
+            "latitude": 48.387958,
+            "longitude": 9.970541449999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Saarlandstraße (Steig B)"
+    },
+    "n4156430260": {
+        "coordinates": {
+            "latitude": 48.3924778,
+            "longitude": 9.9785423
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Martin-Luther-Kirche"
+    },
+    "n4156470403": {
+        "coordinates": {
+            "latitude": 48.41416325,
+            "longitude": 9.96319735
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Eselsberg Hasenkopf (Steig E)"
+    },
+    "n4156470550": {
+        "coordinates": {
+            "latitude": 48.421426624999995,
+            "longitude": 9.93597535
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Science Park II (Steig A)"
+    },
+    "n4156517257": {
+        "coordinates": {
+            "latitude": 48.4187295,
+            "longitude": 9.93831115
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Technische Hochschule (Steig A)"
+    },
+    "n4156517259": {
+        "coordinates": {
+            "latitude": 48.40349225,
+            "longitude": 9.985886225
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Stadtwerke (Steig B)"
+    },
+    "n4156517262": {
+        "coordinates": {
+            "latitude": 48.406510733333334,
+            "longitude": 9.976014766666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Lehrer Tal"
+    },
+    "n4156517265": {
+        "coordinates": {
+            "latitude": 48.40851775,
+            "longitude": 9.96797385
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Multscherschule"
+    },
+    "n5993438887": {
+        "coordinates": {
+            "latitude": 48.4219395,
+            "longitude": 9.947133725
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kliniken Wissenschaftsstadt"
+    },
+    "n6100796926": {
+        "coordinates": {
+            "latitude": 48.385579475,
+            "longitude": 9.965411525
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Grimmelfinger Weg (Steig A)"
+    },
+    "n6126857761": {
+        "coordinates": {
+            "latitude": 48.400801349999995,
+            "longitude": 9.98648195
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Theater (Steig B)"
+    },
+    "n6276485302": {
+        "coordinates": {
+            "latitude": 48.399061,
+            "longitude": 9.9841943
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Hauptbahnhof (Steig B)"
+    }
+}

@@ -2,6 +2,7 @@ import './StatsPopUp.css'
 
 import React, { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNetwork } from 'src/contexts/NetworkContext'
 
 interface StatsPopUpProps {
     className: string
@@ -12,9 +13,22 @@ interface StatsPopUpProps {
 
 const StatsPopUp: React.FC<StatsPopUpProps> = ({ className, numberOfReports, openListModal, numberOfUsers }) => {
     const { t } = useTranslation()
-    const [message, setMessage] = useState(
-        `<p class="text-center"><strong>${numberOfReports} ${t('StatsPopUp.reports')}</strong><br /> ${t('StatsPopUp.todayInBerlin')}</p>`
-    )
+    const { network } = useNetwork()
+    /*
+     The message is rendered as raw HTML below and i18next escaping is off globally, so the one
+     value that comes from the API is escaped explicitly here.
+    */
+    const networkName = network?.name ?? ''
+    const escaping = { interpolation: { escapeValue: true } }
+    /*
+     Which of the two messages is showing, rather than the rendered message itself. Holding the
+     finished HTML in state froze the network name at mount, so switching the city while the popup
+     was still up left the previous city's name standing.
+    */
+    const [showsReporters, setShowsReporters] = useState(false)
+    const message = showsReporters
+        ? `<p class="text-center">${t('StatsPopUp.over')} <strong> ${numberOfUsers} ${t('StatsPopUp.reporters')}</strong><br /> ${t('StatsPopUp.inNetwork', { network: networkName, ...escaping })}</p>`
+        : `<p class="text-center"><strong>${numberOfReports} ${t('StatsPopUp.reports')}</strong><br /> ${t('StatsPopUp.todayInNetwork', { network: networkName, ...escaping })}</p>`
     const [popOut, setPopOut] = useState(false)
     const [isVisible, setIsVisible] = useState(true)
 
@@ -29,27 +43,14 @@ const StatsPopUp: React.FC<StatsPopUpProps> = ({ className, numberOfReports, ope
     }, [timeForOneMessage, timeForPopOutAnimation])
 
     useEffect(() => {
-        const updateMessageAndShowPopup = async () => {
-            setMessage(
-                `<p class="text-center">${t('StatsPopUp.over')} <strong> ${numberOfUsers} ${t('StatsPopUp.reporters')}</strong><br /> ${t(
-                    'StatsPopUp.inBerlin'
-                )}</p>`
-            )
-            setPopOut(true)
-        }
-
         const timer = setTimeout(() => {
-            updateMessageAndShowPopup()
-                .then(hidePopupAfterAnimation)
-                .catch((error) => {
-                    // fix later with sentry
-                    // eslint-disable-next-line no-console
-                    console.error('Error updating message and showing popup:', error)
-                })
+            setShowsReporters(true)
+            setPopOut(true)
+            hidePopupAfterAnimation()
         }, timeForOneMessage)
 
         return () => clearTimeout(timer)
-    }, [hidePopupAfterAnimation, timeForOneMessage, numberOfUsers, t])
+    }, [hidePopupAfterAnimation, timeForOneMessage])
 
     // eslint-disable-next-line consistent-return
     useEffect(() => {

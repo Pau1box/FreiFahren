@@ -1,0 +1,22 @@
+{
+    "id": "halle",
+    "name": "Halle (Saale)",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.4818,
+        "longitude": 11.9698
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.251359,
+            "longitude": 11.8212
+        },
+        "northEast": {
+            "latitude": 51.564137,
+            "longitude": 12.142474
+        }
+    }
+}

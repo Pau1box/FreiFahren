@@ -5,10 +5,12 @@ import { persist } from 'zustand/middleware'
 
 import { type Report } from './api'
 
-const PERSISTED_KEYS = ['layer', 'dismissedDisclaimerAt', 'privacyPolicyVersion', 'language'] as const
+const PERSISTED_KEYS = ['layer', 'dismissedDisclaimerAt', 'privacyPolicyVersion', 'language', 'networkId'] as const
 
 type AppState = {
     layer: 'risk' | 'lines'
+    /** The network the user picked explicitly. Null means "decide for me", not "Berlin". */
+    networkId: string | null
     reportToShow: Report | null
     dismissedDisclaimerAt: string | null
     privacyPolicyVersion: number | null
@@ -22,6 +24,7 @@ export const useAppStore = create<AppState>()(
     persist(
         (set) => ({
             layer: 'lines',
+            networkId: null,
             reportToShow: null,
             dismissedDisclaimerAt: null,
             privacyPolicyVersion: null,

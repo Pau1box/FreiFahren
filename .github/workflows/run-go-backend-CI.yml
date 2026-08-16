@@ -1,0 +1,66 @@
+name: Go Backend CI
+
+# The Go backend had no workflow at all, so its 17 test files never ran anywhere. That mattered less
+# while it served one city from hand written data. It now embeds the generated data of every network
+# and answers every request against one of them, and its tests are what check that a station of one
+# network cannot be used under another.
+on:
+    pull_request:
+        branches: [main]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+
+        # The tests open a real connection and create their tables, so a stub would only move the
+        # question. The service container is the same Postgres major version the backend runs on.
+        services:
+            postgres:
+                image: postgres:15
+                env:
+                    POSTGRES_USER: postgres
+                    POSTGRES_PASSWORD: postgres
+                    POSTGRES_DB: freifahren_test
+                ports:
+                    - 5432:5432
+                options: >-
+                    --health-cmd pg_isready
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+
+        env:
+            DB_USER: postgres
+            DB_PASSWORD: postgres
+            DB_HOST: localhost
+            DB_PORT: 5432
+            DB_NAME: freifahren_test
+
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v4
+
+            - name: Set up Go
+              uses: actions/setup-go@v5
+              with:
+                  # Matches the go directive in packages/backend/go.mod.
+                  go-version: '1.22'
+                  cache-dependency-path: packages/backend/go.sum
+
+            - name: Check formatting
+              run: |
+                  cd packages/backend
+                  unformatted=$(gofmt -l .)
+                  if [ -n "$unformatted" ]; then
+                    echo "These files are not gofmt clean:"
+                    echo "$unformatted"
+                    exit 1
+                  fi
+
+            - name: Vet
+              run: cd packages/backend && go vet ./...
+
+            - name: Test
+              run: cd packages/backend && go test ./...

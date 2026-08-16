@@ -16,6 +16,17 @@ export interface Station {
     lines: string[]
 }
 
+// `GET /v0/lines/metadata`, keyed by line. Only the colour is used here, the rest is what the
+// endpoint carries for every client.
+export type LineColors = Record<string, { color: string; mode: string; isCircular: boolean }>
+
+// `GET /v0/networks`. Only the id and the timezone are used here, the rest is the geography a map
+// client needs.
+export interface Network {
+    id: string
+    timezone: string
+}
+
 export interface TokenResponse {
     access_token: string
 }

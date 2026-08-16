@@ -1,0 +1,25 @@
+{
+    "id": "mannheim",
+    "name": "Mannheim",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Heidelberg",
+        "Ludwigshafen am Rhein"
+    ],
+    "center": {
+        "latitude": 49.4893,
+        "longitude": 8.4673
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.29952,
+            "longitude": 8.101451
+        },
+        "northEast": {
+            "latitude": 49.596495,
+            "longitude": 8.762107
+        }
+    }
+}

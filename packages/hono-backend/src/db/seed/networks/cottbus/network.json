@@ -1,0 +1,22 @@
+{
+    "id": "cottbus",
+    "name": "Cottbus",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.7567,
+        "longitude": 14.3357
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.676273,
+            "longitude": 14.232411
+        },
+        "northEast": {
+            "latitude": 51.833767,
+            "longitude": 14.425923
+        }
+    }
+}

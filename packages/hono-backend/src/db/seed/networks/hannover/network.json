@@ -1,0 +1,25 @@
+{
+    "id": "hannover",
+    "name": "Hannover",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Garbsen",
+        "Langenhagen"
+    ],
+    "center": {
+        "latitude": 52.3745,
+        "longitude": 9.7386
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.191218,
+            "longitude": 9.522881
+        },
+        "northEast": {
+            "latitude": 52.483008,
+            "longitude": 9.932255
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "id": "nordhausen",
+    "name": "Nordhausen",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.5052,
+        "longitude": 10.7925
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.449655,
+            "longitude": 10.696422
+        },
+        "northEast": {
+            "latitude": 51.629576,
+            "longitude": 10.891979
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "id": "duesseldorf",
+    "name": "Düsseldorf",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Bochum",
+        "Dinslaken",
+        "Dortmund",
+        "Duisburg",
+        "Essen",
+        "Gelsenkirchen",
+        "Hattingen",
+        "Herne",
+        "Krefeld",
+        "Lünen",
+        "Meerbusch",
+        "Mülheim an der Ruhr",
+        "Neuss",
+        "Oberhausen",
+        "Ratingen",
+        "Witten"
+    ],
+    "center": {
+        "latitude": 51.2254,
+        "longitude": 6.7763
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.116078,
+            "longitude": 6.425421
+        },
+        "northEast": {
+            "latitude": 51.639911,
+            "longitude": 7.696484
+        }
+    }
+}

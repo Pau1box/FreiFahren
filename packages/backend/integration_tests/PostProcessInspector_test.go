@@ -21,6 +21,9 @@ type TestCase struct {
 	expectedLine      string
 	expectedStation   string
 	expectedDirection string
+	// The expected station is guessed from the reports already in the database, so the case only
+	// means something against one that carries history. See needsHistory below.
+	needsHistory bool
 }
 
 // createTestCase is a factory function for creating test cases
@@ -36,8 +39,34 @@ func createTestCase(name, stationId, directionId, line, expectedLine, expectedSt
 	}
 }
 
+// createHistoryTestCase is createTestCase for a case whose expectation comes out of the report
+// history rather than out of the network data.
+func createHistoryTestCase(name, stationId, directionId, line, expectedLine, expectedStation, expectedDirection string) TestCase {
+	tc := createTestCase(name, stationId, directionId, line, expectedLine, expectedStation, expectedDirection)
+	tc.needsHistory = true
+	return tc
+}
+
+// hasReportsOnLine reports whether the database holds reports on the given line, which is exactly
+// what guessStation guesses the station from. A developer's local database has no reports, or a
+// handful of unrelated ones, and the case would then fail for a reason that has nothing to do with
+// the code under test.
+func hasReportsOnLine(networkId, line string) bool {
+	lines, ok := data.GetLinesList(networkId)
+	if !ok {
+		return false
+	}
+
+	stationId, err := database.GetMostCommonStationId(networkId, lines[line])
+	return err == nil && stationId != ""
+}
+
 // runPostProcessTest executes a single test case
 func runPostProcessTest(t *testing.T, tc TestCase) {
+	if tc.needsHistory && !hasReportsOnLine("berlin", tc.expectedLine) {
+		t.Skipf("no reports on line %s in this database, the expected station cannot be guessed", tc.expectedLine)
+	}
+
 	dataToInsert := &structs.ResponseData{
 		Timestamp: time.Now(),
 		Station:   structs.Station{Id: tc.stationId},
@@ -50,7 +79,7 @@ func runPostProcessTest(t *testing.T, tc TestCase) {
 		LinePtr:        &dataToInsert.Line,
 	}
 
-	err := inspectors.PostProcessInspectorData(dataToInsert, pointers)
+	err := inspectors.PostProcessInspectorData("berlin", dataToInsert, pointers)
 
 	assert.NoError(t, err)
 	assert.Equal(t, tc.expectedLine, dataToInsert.Line, "Line should be %s", tc.expectedLine)
@@ -71,7 +100,7 @@ func TestPostProcessInspectorData(t *testing.T) {
 	// Define test cases
 	testCases := []TestCase{
 		// Tests for AssignLineIfSingleOption
-		createTestCase("Imply line from direction", "", "U-n27586255", "", "U2", "SUM-n30731497", "U-n27586255"),
+		createHistoryTestCase("Imply line from direction", "", "U-n27586255", "", "U2", "SUM-n30731497", "U-n27586255"),
 		createTestCase("Imply line from station", "U-n29190890", "", "", "U8", "U-n29190890", ""),
 		createTestCase("Imply line from station and direction", "U-n29190890", "SU-BWIN", "", "U8", "U-n29190890", "SU-BWIN"),
 		createTestCase("Don't imply line if station and direction are missing", "", "", "", "", "", ""),
@@ -90,7 +119,7 @@ func TestPostProcessInspectorData(t *testing.T) {
 		// Tests for correctDirection
 		createTestCase("Set the last station as direction", "SUM-n30731497", "S-BOKS", "S7", "S7", "SUM-n30731497", "S-n1117011810"),
 		createTestCase("Set first station as direction", "S-BOKS", "SUM-n30731497", "S7", "S7", "S-BOKS", "S-BPDH"),
-		createTestCase("Cross test with guessing station", "", "UM-n2866993676", "U6", "U6", "SU-n29058343", "U-n29690313"),
+		createHistoryTestCase("Cross test with guessing station", "", "UM-n2866993676", "U6", "U6", "SU-n29058343", "U-n29690313"),
 	}
 
 	// Run test cases

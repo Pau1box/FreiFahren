@@ -1,0 +1,22 @@
+{
+    "id": "mainz",
+    "name": "Mainz",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 49.9929,
+        "longitude": 8.2473
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.912032,
+            "longitude": 8.105838
+        },
+        "northEast": {
+            "latitude": 50.063693,
+            "longitude": 8.349674
+        }
+    }
+}

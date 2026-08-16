@@ -1,0 +1,26 @@
+{
+    "id": "karlsruhe",
+    "name": "Karlsruhe",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Baden-Baden",
+        "Heilbronn",
+        "Pforzheim"
+    ],
+    "center": {
+        "latitude": 49.0069,
+        "longitude": 8.4034
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 48.399479,
+            "longitude": 7.997142
+        },
+        "northEast": {
+            "latitude": 49.270797,
+            "longitude": 9.595335
+        }
+    }
+}

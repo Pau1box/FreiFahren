@@ -1,0 +1,1 @@
+ALTER TABLE "networks" ADD COLUMN "serves" varchar(255)[] DEFAULT '{}' NOT NULL;

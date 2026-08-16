@@ -1,4 +1,10 @@
-from nlp_service.config.config import SENTRY_DSN
+from nlp_service.config.config import (
+    CHAT_NETWORKS,
+    CHAT_NETWORKS_FORMAT,
+    CHAT_NETWORKS_VARIABLE,
+    SENTRY_DSN,
+)
+from nlp_service.core.dataloader import get_network_data
 from nlp_service.utils.logger import setup_logger
 
 # Import the services. The services initialize themselves in their respective files
@@ -29,8 +35,21 @@ else:
 
 
 def create_service():
+    logger = setup_logger()
+
+    if not CHAT_NETWORKS:
+        logger.error(
+            "No Telegram chat is mapped to a network. Set %s to %s",
+            CHAT_NETWORKS_VARIABLE,
+            CHAT_NETWORKS_FORMAT,
+        )
+        sys.exit(1)
+
     try:
-        logger = setup_logger()
+        # Loaded up front rather than on the first message: a backend that cannot serve one of the
+        # configured networks should stop the deployment, not a report hours later.
+        for network_id in sorted(set(CHAT_NETWORKS.values())):
+            get_network_data(network_id)
 
         # Start telegram thread in a different thread
         logger.info("Starting the natural language processing bot...")

@@ -1,0 +1,12 @@
+{
+    "1": {
+        "color": "#1f77b4",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#d62728",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

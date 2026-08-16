@@ -1,0 +1,2120 @@
+{
+    "n25975092": {
+        "coordinates": {
+            "latitude": 52.286064675,
+            "longitude": 9.819886125
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Rethen (Leine)"
+    },
+    "n26212864": {
+        "coordinates": {
+            "latitude": 52.23613335,
+            "longitude": 9.85812375
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Sarstedt"
+    },
+    "n26264810": {
+        "coordinates": {
+            "latitude": 52.2739584,
+            "longitude": 9.8392681
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Gleidingen/Thorstraße"
+    },
+    "n26879632": {
+        "coordinates": {
+            "latitude": 52.24361845,
+            "longitude": 9.85672145
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Sarstedt/Röntgenstraße"
+    },
+    "n26879634": {
+        "coordinates": {
+            "latitude": 52.248413850000006,
+            "longitude": 9.856794950000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Sarstedt/Am Boksberg"
+    },
+    "n28419228": {
+        "coordinates": {
+            "latitude": 52.361640699999995,
+            "longitude": 9.82734275
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Großer Hillen"
+    },
+    "n29364195": {
+        "coordinates": {
+            "latitude": 52.25795145,
+            "longitude": 9.85582595
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Heisede/Langer Kamp"
+    },
+    "n29364202": {
+        "coordinates": {
+            "latitude": 52.259945650000006,
+            "longitude": 9.85039605
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Heisede/Marienburger Straße"
+    },
+    "n29364212": {
+        "coordinates": {
+            "latitude": 52.270139650000004,
+            "longitude": 9.840824999999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Gleidingen/Am Leinkamp"
+    },
+    "n29364435": {
+        "coordinates": {
+            "latitude": 52.37522945,
+            "longitude": 9.69514435
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Wunstorfer Straße"
+    },
+    "n29364467": {
+        "coordinates": {
+            "latitude": 52.37574148,
+            "longitude": 9.732269239999999
+        },
+        "lines": [
+            "10",
+            "11",
+            "16",
+            "17",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Steintor"
+    },
+    "n29366399": {
+        "coordinates": {
+            "latitude": 52.4337461,
+            "longitude": 9.73141405
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Langenhagen/Angerstraße"
+    },
+    "n29366402": {
+        "coordinates": {
+            "latitude": 52.43029905,
+            "longitude": 9.7317202
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Berliner Platz"
+    },
+    "n29366409": {
+        "coordinates": {
+            "latitude": 52.4230354,
+            "longitude": 9.7328111
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Wiesenau"
+    },
+    "n29366414": {
+        "coordinates": {
+            "latitude": 52.41649805,
+            "longitude": 9.733767799999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Alter Flughafen"
+    },
+    "n29366417": {
+        "coordinates": {
+            "latitude": 52.4118413,
+            "longitude": 9.73429965
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kabelkamp"
+    },
+    "n29366420": {
+        "coordinates": {
+            "latitude": 52.407768950000005,
+            "longitude": 9.73489245
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Windausstraße"
+    },
+    "n29366425": {
+        "coordinates": {
+            "latitude": 52.40262055,
+            "longitude": 9.735500850000001
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Büttnerstraße"
+    },
+    "n29366426": {
+        "coordinates": {
+            "latitude": 52.398629799999995,
+            "longitude": 9.73606985
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Niedersachsenring"
+    },
+    "n29366428": {
+        "coordinates": {
+            "latitude": 52.39402785,
+            "longitude": 9.73529315
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Dragonerstraße"
+    },
+    "n29366432": {
+        "coordinates": {
+            "latitude": 52.39026321666666,
+            "longitude": 9.8193381
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Roderbruch"
+    },
+    "n29366433": {
+        "coordinates": {
+            "latitude": 52.3886926,
+            "longitude": 9.81339405
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Roderbruchmarkt"
+    },
+    "n29366440": {
+        "coordinates": {
+            "latitude": 52.3841307,
+            "longitude": 9.808562250000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Medizinische Hochschule"
+    },
+    "n29366447": {
+        "coordinates": {
+            "latitude": 52.37908361666666,
+            "longitude": 9.8086708
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Misburger Straße"
+    },
+    "n29366454": {
+        "coordinates": {
+            "latitude": 52.3751052,
+            "longitude": 9.80789935
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Bahnhof Karl-Wiechert-Allee"
+    },
+    "n29366475": {
+        "coordinates": {
+            "latitude": 52.37152075,
+            "longitude": 9.793429549999999
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Uhlhornstraße"
+    },
+    "n29366477": {
+        "coordinates": {
+            "latitude": 52.3722116,
+            "longitude": 9.786464
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Kantplatz"
+    },
+    "n29366873": {
+        "coordinates": {
+            "latitude": 52.30637055,
+            "longitude": 9.810257966666667
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Laatzen/Zentrum"
+    },
+    "n29366967": {
+        "coordinates": {
+            "latitude": 52.311032366666666,
+            "longitude": 9.8027175
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Laatzen/Park der Sinne"
+    },
+    "n29366979": {
+        "coordinates": {
+            "latitude": 52.314379925,
+            "longitude": 9.79251715
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Laatzen/Eichstraße"
+    },
+    "n29367399": {
+        "coordinates": {
+            "latitude": 52.3192164,
+            "longitude": 9.78692395
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Laatzen/Birkenstraße"
+    },
+    "n29367411": {
+        "coordinates": {
+            "latitude": 52.32349285,
+            "longitude": 9.78322015
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Am Brabrinke"
+    },
+    "n29367425": {
+        "coordinates": {
+            "latitude": 52.337906857142855,
+            "longitude": 9.769260957142858
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Peiner Straße"
+    },
+    "n29367426": {
+        "coordinates": {
+            "latitude": 52.3411505,
+            "longitude": 9.76601125
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Fiedelerstraße"
+    },
+    "n29367427": {
+        "coordinates": {
+            "latitude": 52.345297349999996,
+            "longitude": 9.76221185
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Döhrener Turm"
+    },
+    "n32637867": {
+        "coordinates": {
+            "latitude": 52.41367328333333,
+            "longitude": 9.647898533333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Auf der Klappenburg"
+    },
+    "n32689836": {
+        "coordinates": {
+            "latitude": 52.3921985,
+            "longitude": 9.69414815
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Schaumburgstraße"
+    },
+    "n32689838": {
+        "coordinates": {
+            "latitude": 52.3914679,
+            "longitude": 9.70003505
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Herrenhäuser Gärten"
+    },
+    "n32689845": {
+        "coordinates": {
+            "latitude": 52.38515305,
+            "longitude": 9.7122128
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Schneiderberg / Wilhelm-Busch-Museum"
+    },
+    "n32689849": {
+        "coordinates": {
+            "latitude": 52.3812895,
+            "longitude": 9.717831799999999
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Leibniz Universität"
+    },
+    "n32893592": {
+        "coordinates": {
+            "latitude": 52.4156893,
+            "longitude": 9.6428878
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Jädekamp"
+    },
+    "n32893602": {
+        "coordinates": {
+            "latitude": 52.400313350000005,
+            "longitude": 9.669015349999999
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Stadtfriedhof Stöcken"
+    },
+    "n59952787": {
+        "coordinates": {
+            "latitude": 52.37365997142857,
+            "longitude": 9.739007914285716
+        },
+        "lines": [
+            "1",
+            "11",
+            "12",
+            "13",
+            "16",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "name": "Kröpcke"
+    },
+    "n59952788": {
+        "coordinates": {
+            "latitude": 52.3699355,
+            "longitude": 9.7531741
+        },
+        "lines": [
+            "11",
+            "16",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Marienstraße"
+    },
+    "n59952792": {
+        "coordinates": {
+            "latitude": 52.370460900000005,
+            "longitude": 9.762039199999998
+        },
+        "lines": [
+            "11",
+            "16",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Braunschweiger Platz"
+    },
+    "n59952793": {
+        "coordinates": {
+            "latitude": 52.37820416666667,
+            "longitude": 9.722870333333333
+        },
+        "lines": [
+            "16",
+            "4",
+            "5"
+        ],
+        "name": "Königsworther Platz"
+    },
+    "n60406297": {
+        "coordinates": {
+            "latitude": 52.41176205,
+            "longitude": 9.7061611
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Friedenauer Straße"
+    },
+    "n61093964": {
+        "coordinates": {
+            "latitude": 52.39299305,
+            "longitude": 9.713585025
+        },
+        "lines": [
+            "11"
+        ],
+        "name": "Haltenhoffstraße"
+    },
+    "n61093971": {
+        "coordinates": {
+            "latitude": 52.38657293333333,
+            "longitude": 9.723788466666667
+        },
+        "lines": [
+            "11",
+            "6"
+        ],
+        "name": "Kopernikusstraße"
+    },
+    "n61093979": {
+        "coordinates": {
+            "latitude": 52.38184356666667,
+            "longitude": 9.725671499999999
+        },
+        "lines": [
+            "11",
+            "6"
+        ],
+        "name": "Christuskirche"
+    },
+    "n78565933": {
+        "coordinates": {
+            "latitude": 52.390215049999995,
+            "longitude": 9.7061527
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Appelstraße"
+    },
+    "n82473067": {
+        "coordinates": {
+            "latitude": 52.37836333333334,
+            "longitude": 9.74238368888889
+        },
+        "lines": [
+            "1",
+            "10",
+            "12",
+            "13",
+            "17",
+            "2",
+            "3",
+            "7",
+            "8",
+            "9"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n82473919": {
+        "coordinates": {
+            "latitude": 52.36429223333334,
+            "longitude": 9.7473096
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Schlägerstraße"
+    },
+    "n96716127": {
+        "coordinates": {
+            "latitude": 52.354966600000004,
+            "longitude": 9.7544953
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Altenbekener Damm"
+    },
+    "n96718949": {
+        "coordinates": {
+            "latitude": 52.35998226666666,
+            "longitude": 9.750604133333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Geibelstraße"
+    },
+    "n100173825": {
+        "coordinates": {
+            "latitude": 52.357676549999994,
+            "longitude": 9.72276665
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Stadionbrücke"
+    },
+    "n102068193": {
+        "coordinates": {
+            "latitude": 52.3441788,
+            "longitude": 9.66702645
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Empelde"
+    },
+    "n102068215": {
+        "coordinates": {
+            "latitude": 52.35128725,
+            "longitude": 9.6693269
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Safariweg"
+    },
+    "n102068218": {
+        "coordinates": {
+            "latitude": 52.3576358,
+            "longitude": 9.67705495
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Am Soltekampe"
+    },
+    "n102068232": {
+        "coordinates": {
+            "latitude": 52.36506475,
+            "longitude": 9.693560600000001
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Am Lindener Hafen"
+    },
+    "n102068237": {
+        "coordinates": {
+            "latitude": 52.36627935,
+            "longitude": 9.7002277
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Bernhard-Caspar-Straße"
+    },
+    "n102068244": {
+        "coordinates": {
+            "latitude": 52.367210625,
+            "longitude": 9.70928885
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Nieschlagstraße"
+    },
+    "n105475161": {
+        "coordinates": {
+            "latitude": 52.369980275,
+            "longitude": 9.723198525
+        },
+        "lines": [
+            "12",
+            "17"
+        ],
+        "name": "Humboldtstraße"
+    },
+    "n130553985": {
+        "coordinates": {
+            "latitude": 52.4028196,
+            "longitude": 9.7909331
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Klingerstraße"
+    },
+    "n130554048": {
+        "coordinates": {
+            "latitude": 52.408855849999995,
+            "longitude": 9.8083594
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "In den Sieben Stücken"
+    },
+    "n130554129": {
+        "coordinates": {
+            "latitude": 52.41398015,
+            "longitude": 9.8244462
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Stadtfriedhof Lahe"
+    },
+    "n130554148": {
+        "coordinates": {
+            "latitude": 52.4059223,
+            "longitude": 9.7994249
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Noltemeyerbrücke"
+    },
+    "n130554165": {
+        "coordinates": {
+            "latitude": 52.400331550000004,
+            "longitude": 9.7819784
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Spannhagengarten"
+    },
+    "n130554168": {
+        "coordinates": {
+            "latitude": 52.40919045,
+            "longitude": 9.81674825
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Paracelsusweg"
+    },
+    "n131992780": {
+        "coordinates": {
+            "latitude": 52.3977479,
+            "longitude": 9.7723093
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Pelikanstraße"
+    },
+    "n131992798": {
+        "coordinates": {
+            "latitude": 52.3954636,
+            "longitude": 9.7637469
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Vier Grenzen"
+    },
+    "n131999658": {
+        "coordinates": {
+            "latitude": 52.3928005,
+            "longitude": 9.7580666
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Lortzingstraße"
+    },
+    "n132026193": {
+        "coordinates": {
+            "latitude": 52.38908883333334,
+            "longitude": 9.751227166666666
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Lister Platz"
+    },
+    "n132121375": {
+        "coordinates": {
+            "latitude": 52.4152253,
+            "longitude": 9.79584655
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Bothfeld"
+    },
+    "n132679970": {
+        "coordinates": {
+            "latitude": 52.3839075,
+            "longitude": 9.746385933333334
+        },
+        "lines": [
+            "13",
+            "3",
+            "7"
+        ],
+        "name": "Sedanstraße/Lister Meile"
+    },
+    "n132693642": {
+        "coordinates": {
+            "latitude": 52.370804266666674,
+            "longitude": 9.7361887
+        },
+        "lines": [
+            "12",
+            "13",
+            "3",
+            "7",
+            "9"
+        ],
+        "name": "Markthalle/Landtag (U)"
+    },
+    "n132699818": {
+        "coordinates": {
+            "latitude": 52.368063740000004,
+            "longitude": 9.7296766
+        },
+        "lines": [
+            "12",
+            "13",
+            "3",
+            "7",
+            "9"
+        ],
+        "name": "Waterloo"
+    },
+    "n135600425": {
+        "coordinates": {
+            "latitude": 52.370261625,
+            "longitude": 9.7726362
+        },
+        "lines": [
+            "11",
+            "16",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Freundallee"
+    },
+    "n137703451": {
+        "coordinates": {
+            "latitude": 52.38118235,
+            "longitude": 9.76675325
+        },
+        "lines": [
+            "11"
+        ],
+        "name": "Zoo"
+    },
+    "n137951752": {
+        "coordinates": {
+            "latitude": 52.387839033333336,
+            "longitude": 9.734159466666666
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Werderstraße"
+    },
+    "n140379513": {
+        "coordinates": {
+            "latitude": 52.37727431999999,
+            "longitude": 9.768793579999999
+        },
+        "lines": [
+            "11"
+        ],
+        "name": "Hannover Congress Centrum"
+    },
+    "n140398222": {
+        "coordinates": {
+            "latitude": 52.43109775,
+            "longitude": 9.846319900000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altwarmbüchen / Zentrum"
+    },
+    "n140398246": {
+        "coordinates": {
+            "latitude": 52.4377779,
+            "longitude": 9.8474271
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altwarmbüchen"
+    },
+    "n140400651": {
+        "coordinates": {
+            "latitude": 52.4264397,
+            "longitude": 9.846316250000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altwarmbüchen/Ernst-Grote-Straße"
+    },
+    "n142400255": {
+        "coordinates": {
+            "latitude": 52.41705425,
+            "longitude": 9.829808199999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Oldenburger Allee"
+    },
+    "n142455005": {
+        "coordinates": {
+            "latitude": 52.4170658,
+            "longitude": 9.77265135
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Bahnstrift"
+    },
+    "n142455032": {
+        "coordinates": {
+            "latitude": 52.418514599999995,
+            "longitude": 9.7648522
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Tempelhofweg"
+    },
+    "n142455093": {
+        "coordinates": {
+            "latitude": 52.41111985,
+            "longitude": 9.7432502
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Reiterstadion"
+    },
+    "n197916553": {
+        "coordinates": {
+            "latitude": 52.27734835,
+            "longitude": 9.83662735
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Gleidingen"
+    },
+    "n243056167": {
+        "coordinates": {
+            "latitude": 52.3644862,
+            "longitude": 9.7730763
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Kerstingstraße"
+    },
+    "n243056169": {
+        "coordinates": {
+            "latitude": 52.3626347,
+            "longitude": 9.777505900000001
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Kinderkrankenhaus auf der Bult"
+    },
+    "n243056543": {
+        "coordinates": {
+            "latitude": 52.3568085,
+            "longitude": 9.792572100000001
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Zuschlagstraße"
+    },
+    "n243058062": {
+        "coordinates": {
+            "latitude": 52.3541114,
+            "longitude": 9.796771150000001
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Bünteweg/Tierärztliche Hochschule"
+    },
+    "n243058065": {
+        "coordinates": {
+            "latitude": 52.35058465,
+            "longitude": 9.80478295
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "August-Madsack-Straße"
+    },
+    "n247080322": {
+        "coordinates": {
+            "latitude": 52.4144914,
+            "longitude": 9.70241085
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Beneckeallee"
+    },
+    "n247080937": {
+        "coordinates": {
+            "latitude": 52.419749949999996,
+            "longitude": 9.69414715
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Mecklenheidestraße"
+    },
+    "n247081101": {
+        "coordinates": {
+            "latitude": 52.4223875,
+            "longitude": 9.690029249999998
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Nordhafen"
+    },
+    "n248004234": {
+        "coordinates": {
+            "latitude": 52.419567650000005,
+            "longitude": 9.7591854
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Zehlendorfweg"
+    },
+    "n251113071": {
+        "coordinates": {
+            "latitude": 52.33643485,
+            "longitude": 9.6905633
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Tresckowstraße"
+    },
+    "n251113082": {
+        "coordinates": {
+            "latitude": 52.34117094285715,
+            "longitude": 9.693419028571428
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Mühlenberger Markt"
+    },
+    "n251113084": {
+        "coordinates": {
+            "latitude": 52.3420096,
+            "longitude": 9.71838895
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Wallensteinstraße"
+    },
+    "n251113101": {
+        "coordinates": {
+            "latitude": 52.41492535,
+            "longitude": 9.7519992
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Papenwinkel"
+    },
+    "n252850676": {
+        "coordinates": {
+            "latitude": 52.3770643,
+            "longitude": 9.689713099999999
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Harenberger Straße"
+    },
+    "n252973791": {
+        "coordinates": {
+            "latitude": 52.36092895,
+            "longitude": 9.6928395
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Bauweg"
+    },
+    "n252973802": {
+        "coordinates": {
+            "latitude": 52.3601941,
+            "longitude": 9.6860465
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Körtingsdorfer Weg"
+    },
+    "n253336329": {
+        "coordinates": {
+            "latitude": 52.3695151,
+            "longitude": 9.8079882
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Annastift"
+    },
+    "n253338049": {
+        "coordinates": {
+            "latitude": 52.3656191,
+            "longitude": 9.81323235
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Bleekstraße"
+    },
+    "n253339004": {
+        "coordinates": {
+            "latitude": 52.3605186,
+            "longitude": 9.8443684
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Ostfeldstraße"
+    },
+    "n253339391": {
+        "coordinates": {
+            "latitude": 52.359432999999996,
+            "longitude": 9.8515349
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Königsberger Ring"
+    },
+    "n253346195": {
+        "coordinates": {
+            "latitude": 52.39436582,
+            "longitude": 9.71829794
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Bahnhof Nordstadt"
+    },
+    "n253348397": {
+        "coordinates": {
+            "latitude": 52.3476654,
+            "longitude": 9.81231755
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Seelhorster Allee"
+    },
+    "n253348400": {
+        "coordinates": {
+            "latitude": 52.34560865,
+            "longitude": 9.82018115
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Emslandstraße"
+    },
+    "n253348552": {
+        "coordinates": {
+            "latitude": 52.344556499999996,
+            "longitude": 9.82791995
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Brabeckstraße"
+    },
+    "n253348634": {
+        "coordinates": {
+            "latitude": 52.3421637,
+            "longitude": 9.83622685
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Feldbuschwende"
+    },
+    "n253349368": {
+        "coordinates": {
+            "latitude": 52.33869565,
+            "longitude": 9.8334314
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Kronsberg"
+    },
+    "n253349369": {
+        "coordinates": {
+            "latitude": 52.334249,
+            "longitude": 9.8299813
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Krügerskamp"
+    },
+    "n253349373": {
+        "coordinates": {
+            "latitude": 52.326907500000004,
+            "longitude": 9.8247183
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Stockholmer Allee"
+    },
+    "n253349377": {
+        "coordinates": {
+            "latitude": 52.32217278,
+            "longitude": 9.82195634
+        },
+        "lines": [
+            "16",
+            "6"
+        ],
+        "name": "Messe/Ost (EXPO-Plaza)"
+    },
+    "n255320650": {
+        "coordinates": {
+            "latitude": 52.3420447,
+            "longitude": 9.7100628
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Bartold-Knaust-Straße"
+    },
+    "n255541134": {
+        "coordinates": {
+            "latitude": 52.347106,
+            "longitude": 9.66973015
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Hermann-Ehlers-Allee"
+    },
+    "n256838758": {
+        "coordinates": {
+            "latitude": 52.352287849999996,
+            "longitude": 9.72227865
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Bahnhof Linden/Fischerhof"
+    },
+    "n256872003": {
+        "coordinates": {
+            "latitude": 52.36661465,
+            "longitude": 9.71477755
+        },
+        "lines": [
+            "9"
+        ],
+        "name": "Lindener Marktplatz"
+    },
+    "n258646609": {
+        "coordinates": {
+            "latitude": 52.3277889,
+            "longitude": 9.8045
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Messe / Nord"
+    },
+    "n258646697": {
+        "coordinates": {
+            "latitude": 52.33517,
+            "longitude": 9.7915216
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Stadtfriedhof Seelhorst"
+    },
+    "n258646701": {
+        "coordinates": {
+            "latitude": 52.3348589,
+            "longitude": 9.7974339
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Am Mittelfelde"
+    },
+    "n259032026": {
+        "coordinates": {
+            "latitude": 52.31108705,
+            "longitude": 9.79655685
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Laatzen/aquaLaatzium"
+    },
+    "n259032028": {
+        "coordinates": {
+            "latitude": 52.30693495,
+            "longitude": 9.79982365
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Laatzen/Krankenhaus"
+    },
+    "n259032300": {
+        "coordinates": {
+            "latitude": 52.2997277,
+            "longitude": 9.808123250000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Laatzen/Ginsterweg"
+    },
+    "n259168434": {
+        "coordinates": {
+            "latitude": 52.290718025,
+            "longitude": 9.8172177
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Rethen/Pattenser Straße"
+    },
+    "n259585190": {
+        "coordinates": {
+            "latitude": 52.30314009999999,
+            "longitude": 9.81571118
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Laatzen"
+    },
+    "n259585221": {
+        "coordinates": {
+            "latitude": 52.297163600000005,
+            "longitude": 9.81766665
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Laatzen/Rethener Winkel"
+    },
+    "n287015667": {
+        "coordinates": {
+            "latitude": 52.416190900000004,
+            "longitude": 9.63370875
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Wissenschaftspark Marienwerder"
+    },
+    "n297578913": {
+        "coordinates": {
+            "latitude": 52.41401985,
+            "longitude": 9.62491455
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Pascalstraße"
+    },
+    "n297600769": {
+        "coordinates": {
+            "latitude": 52.4143356,
+            "longitude": 9.667313374999999
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Stöcken"
+    },
+    "n301284924": {
+        "coordinates": {
+            "latitude": 52.32233733333334,
+            "longitude": 9.726110499999999
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Hemmingen/Berliner Straße"
+    },
+    "n334736164": {
+        "coordinates": {
+            "latitude": 52.41254175,
+            "longitude": 9.79830855
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Bothfelder Kirchweg"
+    },
+    "n335758509": {
+        "coordinates": {
+            "latitude": 52.329444225,
+            "longitude": 9.720427125
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Hemmingen/Saarstraße"
+    },
+    "n340320819": {
+        "coordinates": {
+            "latitude": 52.437908475,
+            "longitude": 9.7409354
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Langenhagen/Zentrum"
+    },
+    "n359509442": {
+        "coordinates": {
+            "latitude": 52.373769275,
+            "longitude": 9.719085450000001
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Glocksee"
+    },
+    "n370139534": {
+        "coordinates": {
+            "latitude": 52.40992585,
+            "longitude": 9.6525611
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Lauckerthof"
+    },
+    "n370790720": {
+        "coordinates": {
+            "latitude": 52.41802920000001,
+            "longitude": 9.61511245
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Schönebecker Allee"
+    },
+    "n370790721": {
+        "coordinates": {
+            "latitude": 52.41669775,
+            "longitude": 9.6032885
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Auf der Horst/Marshof"
+    },
+    "n370790722": {
+        "coordinates": {
+            "latitude": 52.41757330000001,
+            "longitude": 9.596390699999999
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Garbsen"
+    },
+    "n372970386": {
+        "coordinates": {
+            "latitude": 52.392775900000004,
+            "longitude": 9.8485867
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Am Forstkamp"
+    },
+    "n373362282": {
+        "coordinates": {
+            "latitude": 52.41207775,
+            "longitude": 9.74953845
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Vahrenheider Markt"
+    },
+    "n391083820": {
+        "coordinates": {
+            "latitude": 52.34741635,
+            "longitude": 9.72387455
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Schünemannplatz"
+    },
+    "n546972114": {
+        "coordinates": {
+            "latitude": 52.43732671666667,
+            "longitude": 9.746698499999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Langenhagen/Kurt-Schumacher-Allee"
+    },
+    "n583231207": {
+        "coordinates": {
+            "latitude": 52.39953745,
+            "longitude": 9.830549399999999
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Schierholzstraße"
+    },
+    "n585212987": {
+        "coordinates": {
+            "latitude": 52.32870885,
+            "longitude": 9.7766384
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Wiehbergstraße"
+    },
+    "n656341500": {
+        "coordinates": {
+            "latitude": 52.4229227,
+            "longitude": 9.8403517
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altwarmbüchen/Opelstraße"
+    },
+    "n665663249": {
+        "coordinates": {
+            "latitude": 52.405029049999996,
+            "longitude": 9.6603902
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Freudenthalstraße"
+    },
+    "n675664589": {
+        "coordinates": {
+            "latitude": 52.30212975,
+            "longitude": 9.804704925
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Laatzen/Neuer Schlag"
+    },
+    "n920384818": {
+        "coordinates": {
+            "latitude": 52.39498355,
+            "longitude": 9.842480049999999
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Kafkastraße"
+    },
+    "n920384841": {
+        "coordinates": {
+            "latitude": 52.39158055,
+            "longitude": 9.8532173
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Misburg"
+    },
+    "n945055360": {
+        "coordinates": {
+            "latitude": 52.36127345,
+            "longitude": 9.834378999999998
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Tiergarten"
+    },
+    "n1041185061": {
+        "coordinates": {
+            "latitude": 52.282522150000005,
+            "longitude": 9.8290612
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Rethen/Galgenbergweg"
+    },
+    "n1161699391": {
+        "coordinates": {
+            "latitude": 52.34355225,
+            "longitude": 9.725124000000001
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Beekestraße"
+    },
+    "n1343306077": {
+        "coordinates": {
+            "latitude": 52.4155134,
+            "longitude": 9.780802699999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Alte Heide"
+    },
+    "n1390113073": {
+        "coordinates": {
+            "latitude": 52.430218100000005,
+            "longitude": 9.8011619
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Fasanenkrug"
+    },
+    "n1501169264": {
+        "coordinates": {
+            "latitude": 52.397348699999995,
+            "longitude": 9.6747512
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Bahnhof Leinhausen"
+    },
+    "n1562735268": {
+        "coordinates": {
+            "latitude": 52.4038597,
+            "longitude": 9.825198149999999
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Pappelwiese"
+    },
+    "n1614249114": {
+        "coordinates": {
+            "latitude": 52.43809225,
+            "longitude": 9.733912
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Langenhagen/Langenforther Platz"
+    },
+    "n1635598534": {
+        "coordinates": {
+            "latitude": 52.39099825,
+            "longitude": 9.734688949999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Vahrenwalder Platz"
+    },
+    "n1635648466": {
+        "coordinates": {
+            "latitude": 52.37313855,
+            "longitude": 9.72494265
+        },
+        "lines": [
+            "10",
+            "17"
+        ],
+        "name": "Goetheplatz"
+    },
+    "n1635653139": {
+        "coordinates": {
+            "latitude": 52.37719767777778,
+            "longitude": 9.6646728
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Ahlem"
+    },
+    "n1635712745": {
+        "coordinates": {
+            "latitude": 52.37729325,
+            "longitude": 9.68417505
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Brunnenstraße"
+    },
+    "n1635712806": {
+        "coordinates": {
+            "latitude": 52.377396000000005,
+            "longitude": 9.6735729
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Gedenkstätte Ahlem"
+    },
+    "n1760435070": {
+        "coordinates": {
+            "latitude": 52.39359185,
+            "longitude": 9.683954450000002
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Herrenhäuser Markt"
+    },
+    "n1805284646": {
+        "coordinates": {
+            "latitude": 52.341398749999996,
+            "longitude": 9.702056200000001
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Am Sauerwinkel"
+    },
+    "n1829047829": {
+        "coordinates": {
+            "latitude": 52.416171,
+            "longitude": 9.6102235
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Auf der Horst/Skorpiongasse"
+    },
+    "n1998274440": {
+        "coordinates": {
+            "latitude": 52.333098899999996,
+            "longitude": 9.773013800000001
+        },
+        "lines": [
+            "1",
+            "2",
+            "8"
+        ],
+        "name": "Bothmerstraße"
+    },
+    "n2054245387": {
+        "coordinates": {
+            "latitude": 52.4014272,
+            "longitude": 9.712759349999999
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Hainhölzer Markt"
+    },
+    "n2168619748": {
+        "coordinates": {
+            "latitude": 52.4062778,
+            "longitude": 9.73844035
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Großer Kolonnenweg"
+    },
+    "n2173280223": {
+        "coordinates": {
+            "latitude": 52.333086679999994,
+            "longitude": 9.69092874
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Wettbergen"
+    },
+    "n2183600208": {
+        "coordinates": {
+            "latitude": 52.3705997,
+            "longitude": 9.8030921
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Nackenberg"
+    },
+    "n2275512167": {
+        "coordinates": {
+            "latitude": 52.42099125,
+            "longitude": 9.797631299999999
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Kurze-Kamp-Straße"
+    },
+    "n2275512204": {
+        "coordinates": {
+            "latitude": 52.42603975,
+            "longitude": 9.79984805
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Stadtfriedhof Bothfeld"
+    },
+    "n2289250829": {
+        "coordinates": {
+            "latitude": 52.43694655,
+            "longitude": 9.753942599999998
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Langenhagen"
+    },
+    "n2435658744": {
+        "coordinates": {
+            "latitude": 52.37154945,
+            "longitude": 9.71296055
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Am Küchengarten"
+    },
+    "n2487165183": {
+        "coordinates": {
+            "latitude": 52.3681376,
+            "longitude": 9.7210891
+        },
+        "lines": [
+            "17",
+            "9"
+        ],
+        "name": "Schwarzer Bär"
+    },
+    "n2579920950": {
+        "coordinates": {
+            "latitude": 52.4095008,
+            "longitude": 9.66290055
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Stöckener Markt"
+    },
+    "n2904887518": {
+        "coordinates": {
+            "latitude": 52.4076434,
+            "longitude": 9.709713050000001
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Krepenstraße"
+    },
+    "n2974202832": {
+        "coordinates": {
+            "latitude": 52.39657685,
+            "longitude": 9.717080450000001
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Fenskestraße"
+    },
+    "n3117171644": {
+        "coordinates": {
+            "latitude": 52.362156850000005,
+            "longitude": 9.7218976
+        },
+        "lines": [
+            "13",
+            "17",
+            "3",
+            "7"
+        ],
+        "name": "Allerweg"
+    },
+    "n3165577767": {
+        "coordinates": {
+            "latitude": 52.3583713,
+            "longitude": 9.8587448
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Anderten"
+    },
+    "n3280626465": {
+        "coordinates": {
+            "latitude": 52.3251513,
+            "longitude": 9.72345095
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Hemmingen/Zentrum"
+    },
+    "n3700716413": {
+        "coordinates": {
+            "latitude": 52.36892336,
+            "longitude": 9.74330324
+        },
+        "lines": [
+            "1",
+            "11",
+            "16",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8"
+        ],
+        "name": "Aegidientorplatz"
+    },
+    "n3953915173": {
+        "coordinates": {
+            "latitude": 52.36262071666667,
+            "longitude": 9.819172033333333
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Saarbrückener Straße"
+    },
+    "n5617373920": {
+        "coordinates": {
+            "latitude": 52.376973050000004,
+            "longitude": 9.73809165
+        },
+        "lines": [
+            "10",
+            "17"
+        ],
+        "name": "Hauptbahnhof/Rosenstraße"
+    },
+    "n5851385400": {
+        "coordinates": {
+            "latitude": 52.3737696,
+            "longitude": 9.7065333
+        },
+        "lines": [
+            "10",
+            "12"
+        ],
+        "name": "Leinaustraße"
+    },
+    "n5901806269": {
+        "coordinates": {
+            "latitude": 52.4031699,
+            "longitude": 9.6737118
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Betriebshof Fuhsestraße"
+    },
+    "n7855587723": {
+        "coordinates": {
+            "latitude": 52.316357933333336,
+            "longitude": 9.729714000000001
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Hemmingen"
+    },
+    "n7920168321": {
+        "coordinates": {
+            "latitude": 52.3378667,
+            "longitude": 9.7169819
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Unter den Birken"
+    },
+    "n8336191579": {
+        "coordinates": {
+            "latitude": 52.333974350000005,
+            "longitude": 9.71680885
+        },
+        "lines": [
+            "13"
+        ],
+        "name": "Stadtfriedhof Ricklingen"
+    },
+    "n10844101599": {
+        "coordinates": {
+            "latitude": 52.3908613,
+            "longitude": 9.7208268
+        },
+        "lines": [
+            "11",
+            "6"
+        ],
+        "name": "An der Strangriede"
+    }
+}

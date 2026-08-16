@@ -1,0 +1,22 @@
+{
+    "id": "kassel",
+    "name": "Kassel",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.3158,
+        "longitude": 9.4978
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.081195,
+            "longitude": 9.107129
+        },
+        "northEast": {
+            "latitude": 51.587963,
+            "longitude": 9.792777
+        }
+    }
+}

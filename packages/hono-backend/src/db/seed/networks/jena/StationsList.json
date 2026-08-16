@@ -1,0 +1,455 @@
+{
+    "n49314773": {
+        "coordinates": {
+            "latitude": 50.95062203333333,
+            "longitude": 11.606499399999999
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Jena, Stifterstraße"
+    },
+    "n84524102": {
+        "coordinates": {
+            "latitude": 50.933011933333326,
+            "longitude": 11.590852233333335
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Jena, Spittelplatz"
+    },
+    "n257707968": {
+        "coordinates": {
+            "latitude": 50.8795442,
+            "longitude": 11.6348246
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Lobeda-Ost"
+    },
+    "n257707976": {
+        "coordinates": {
+            "latitude": 50.88114245,
+            "longitude": 11.630592875
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Schlegelstraße"
+    },
+    "n257708047": {
+        "coordinates": {
+            "latitude": 50.89901426666666,
+            "longitude": 11.587452966666666
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "Sparkassen-Arena"
+    },
+    "n257708105": {
+        "coordinates": {
+            "latitude": 50.92584022222222,
+            "longitude": 11.587217599999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "name": "Paradiesbahnhof"
+    },
+    "n259786489": {
+        "coordinates": {
+            "latitude": 50.92088005,
+            "longitude": 11.5813192
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Felsenkeller"
+    },
+    "n262490333": {
+        "coordinates": {
+            "latitude": 50.91997754285715,
+            "longitude": 11.589626242857141
+        },
+        "lines": [
+            "1",
+            "4",
+            "5"
+        ],
+        "name": "Jena, Jenertal"
+    },
+    "n262490334": {
+        "coordinates": {
+            "latitude": 50.914923,
+            "longitude": 11.5871074
+        },
+        "lines": [
+            "1",
+            "4",
+            "5"
+        ],
+        "name": "Sportforum"
+    },
+    "n262490610": {
+        "coordinates": {
+            "latitude": 50.8984136,
+            "longitude": 11.5847732
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Freizeitbad"
+    },
+    "n262490611": {
+        "coordinates": {
+            "latitude": 50.89479594285714,
+            "longitude": 11.583260757142856
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Winzerla"
+    },
+    "n262551053": {
+        "coordinates": {
+            "latitude": 50.8828763,
+            "longitude": 11.6033355
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Lobeda-West"
+    },
+    "n262551054": {
+        "coordinates": {
+            "latitude": 50.892534,
+            "longitude": 11.6021365
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Lobeda"
+    },
+    "UGW": {
+        "coordinates": {
+            "latitude": 50.88376923333333,
+            "longitude": 11.5942923
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Jena-Göschwitz"
+    },
+    "n269714530": {
+        "coordinates": {
+            "latitude": 50.92906821818181,
+            "longitude": 11.59112829090909
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Universität"
+    },
+    "n270501610": {
+        "coordinates": {
+            "latitude": 50.94285253333334,
+            "longitude": 11.593340166666666
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Kieshügel"
+    },
+    "n270501655": {
+        "coordinates": {
+            "latitude": 50.94603805,
+            "longitude": 11.59747145
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "An der Eule"
+    },
+    "n270501681": {
+        "coordinates": {
+            "latitude": 50.9487679,
+            "longitude": 11.601549
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Altenburger Straße"
+    },
+    "n271142348": {
+        "coordinates": {
+            "latitude": 50.933663275,
+            "longitude": 11.60796275
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Jenzigweg"
+    },
+    "n279231327": {
+        "coordinates": {
+            "latitude": 50.9590497,
+            "longitude": 11.6177709
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Zwätzen Schleife"
+    },
+    "n279785405": {
+        "coordinates": {
+            "latitude": 50.88219895,
+            "longitude": 11.6233982
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Richard-Sorge-Straße"
+    },
+    "n288404913": {
+        "coordinates": {
+            "latitude": 50.886900833333335,
+            "longitude": 11.616117683333334
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Platanenstraße"
+    },
+    "n288404915": {
+        "coordinates": {
+            "latitude": 50.883854775,
+            "longitude": 11.619871025
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Universitätsklinikum"
+    },
+    "n344852622": {
+        "coordinates": {
+            "latitude": 50.9314221,
+            "longitude": 11.6046021
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Schlippenstraße"
+    },
+    "n369739828": {
+        "coordinates": {
+            "latitude": 50.9568063,
+            "longitude": 11.6167882
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Zwätzen"
+    },
+    "n409626403": {
+        "coordinates": {
+            "latitude": 50.89525845,
+            "longitude": 11.59717745
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Alte Burgauer Brücke"
+    },
+    "n409626415": {
+        "coordinates": {
+            "latitude": 50.88676945,
+            "longitude": 11.5943241
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Jenoptik"
+    },
+    "n411281596": {
+        "coordinates": {
+            "latitude": 50.92739272,
+            "longitude": 11.584708879999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "4",
+            "5"
+        ],
+        "name": "Teichgraben"
+    },
+    "n411302070": {
+        "coordinates": {
+            "latitude": 50.941070350000004,
+            "longitude": 11.59164915
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Scharnhorststraße"
+    },
+    "n593569015": {
+        "coordinates": {
+            "latitude": 50.89187455,
+            "longitude": 11.5943826
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Felsbachstraße"
+    },
+    "n676352665": {
+        "coordinates": {
+            "latitude": 50.91544305,
+            "longitude": 11.576988400000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Mühlenstraße"
+    },
+    "n1272033548": {
+        "coordinates": {
+            "latitude": 50.8849442,
+            "longitude": 11.60786825
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Emil-Wölk-Straße"
+    },
+    "n1720353263": {
+        "coordinates": {
+            "latitude": 50.9335196,
+            "longitude": 11.6137884
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Löbichauer Straße"
+    },
+    "n1830644875": {
+        "coordinates": {
+            "latitude": 50.90669405,
+            "longitude": 11.576647
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Ringwiese"
+    },
+    "n1831582473": {
+        "coordinates": {
+            "latitude": 50.89849632,
+            "longitude": 11.59271062
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "Burgaupark"
+    },
+    "n1839997637": {
+        "coordinates": {
+            "latitude": 50.89995544,
+            "longitude": 11.57885386
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Enver-Şimşek-Platz"
+    },
+    "n2026739636": {
+        "coordinates": {
+            "latitude": 50.93746805000001,
+            "longitude": 11.588573799999999
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Nordschule"
+    },
+    "n2045933394": {
+        "coordinates": {
+            "latitude": 50.929288533333334,
+            "longitude": 11.600254300000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Geschwister-Scholl-Straße"
+    },
+    "n2621259936": {
+        "coordinates": {
+            "latitude": 50.9336601,
+            "longitude": 11.6199051
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Jena Ost"
+    },
+    "n7881800758": {
+        "coordinates": {
+            "latitude": 50.9506833,
+            "longitude": 11.61141234
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Jena, Löbstedt"
+    },
+    "n7881800760": {
+        "coordinates": {
+            "latitude": 50.953950500000005,
+            "longitude": 11.614960499999999
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Flurweg"
+    }
+}

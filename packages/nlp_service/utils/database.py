@@ -10,12 +10,15 @@ def insert_ticket_info(
     line: str,
     station_id: str,
     direction_id: str,
+    network_id: str,
 ):
 
     logger.info("Inserting ticket info into the database")
 
-    # Prepare the JSON data payload
-    url = BACKEND_URL + "/basics/inspectors"
+    # Prepare the JSON data payload. The network scopes the report: the backend rejects a station or
+    # line that belongs to a different one, see docs/MultiNetworkContract.md.
+    url = BACKEND_URL + "/v0/basics/inspectors"
+    params = {"network": network_id}
     data = {
         "timestamp": timestamp.isoformat(),
         "line": line,
@@ -29,7 +32,9 @@ def insert_ticket_info(
         "X-Password": REPORT_PASSWORD,  # avoid rate limiting
     }
 
-    response = requests.post(url, json=data, headers=headers)
+    # Timeout because this runs on the Telegram polling thread: a backend that never answers
+    # would otherwise stop the bot from reading any further message.
+    response = requests.post(url, json=data, headers=headers, params=params, timeout=30)
 
     if response.status_code != 200:
         logger.error(
@@ -39,19 +44,23 @@ def insert_ticket_info(
             response.text,
         )
         logger.debug("Failed request data: %s", data)
-        logger.debug("Failed request headers: %s", headers)
+        # The headers are deliberately not logged: they carry REPORT_PASSWORD, and the logger
+        # writes DEBUG to app.log.
     else:
         logger.info("Data sent to the backend successfully")
 
 
-def fetch_id(name, entity_type):
+def fetch_id(name, entity_type, network_id):
     if not name:
         return None
 
-    url = f"{BACKEND_URL}/v0/stations/search?name={name}"
+    url = f"{BACKEND_URL}/v0/stations/search"
+    # Passed as params rather than interpolated: station names carry spaces and umlauts, and the
+    # name comes from a Telegram message.
+    params = {"name": name, "network": network_id}
 
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, params=params, timeout=10)
         response.raise_for_status()  # Raises an HTTPError for bad responses (4xx or 5xx)
 
         data = response.json()

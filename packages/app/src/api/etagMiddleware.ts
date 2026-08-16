@@ -22,8 +22,12 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
         })
     }
 
-    const getStorageKeys = (url: string) => {
-        const safeUrl = url.replace(/[^a-zA-Z0-9]/g, '')
+    /**
+     * The same path serves a different city per `?network=`, and axios keeps query parameters out of
+     * `config.url`. Without the network in the key, Hamburg would be answered from Berlin's cached body.
+     */
+    const getStorageKeys = (url: string, network: string = '') => {
+        const safeUrl = `${url}_network_${network}`.replace(/[^a-zA-Z0-9]/g, '')
 
         return {
             etagKey: `${storageKeyPrefix}etag_${safeUrl}`,
@@ -31,8 +35,14 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
         }
     }
 
-    const clearCache = async (url: string): Promise<void> => {
-        const { etagKey, dataKey } = getStorageKeys(url)
+    const getRequestNetwork = (config: InternalAxiosRequestConfig): string => {
+        const network: unknown = config.params?.network
+
+        return typeof network === 'string' ? network : ''
+    }
+
+    const clearCache = async (url: string, network?: string): Promise<void> => {
+        const { etagKey, dataKey } = getStorageKeys(url, network)
 
         await Promise.all([AsyncStorage.removeItem(etagKey), AsyncStorage.removeItem(dataKey)])
     }
@@ -60,13 +70,17 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
         }
 
         try {
-            const { etagKey } = getStorageKeys(url)
-            const etag = await AsyncStorage.getItem(etagKey)
+            const { etagKey, dataKey } = getStorageKeys(url, getRequestNetwork(config))
+            const [etag, cachedData] = await Promise.all([AsyncStorage.getItem(etagKey), AsyncStorage.getItem(dataKey)])
 
-            if (etag !== null && etag !== '') {
+            /*
+             An ETag is only worth sending while the body it stands for is still there. A 304 has no
+             body, so claiming a copy we no longer hold would answer nothing and leave the parse with
+             an empty response.
+            */
+            if (etag !== null && etag !== '' && cachedData !== null) {
                 // eslint-disable-next-line no-param-reassign
                 config.headers['If-None-Match'] = etag
-            } else {
             }
         } catch (error) {
             // eslint-disable-next-line no-console
@@ -83,7 +97,7 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
             return response
         }
 
-        const { etagKey, dataKey } = getStorageKeys(url)
+        const { etagKey, dataKey } = getStorageKeys(url, getRequestNetwork(response.config))
 
         if (response.status === 304) {
             try {
@@ -93,6 +107,10 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
                     // eslint-disable-next-line no-param-reassign
                     response.data = JSON.parse(cachedData)
                     onCacheHit?.(url)
+                } else {
+                    // The body the ETag stood for is gone, so the ETag would keep earning empty 304s
+                    // forever. Dropping it lets the next request come back with data.
+                    await AsyncStorage.removeItem(etagKey)
                 }
             } catch (error) {
                 // eslint-disable-next-line no-console
@@ -109,12 +127,15 @@ export const createETagMiddleware = (params: ETagCacheConfig) => {
             response.headers.etag !== undefined
         ) {
             try {
-                await AsyncStorage.setItem(etagKey, response.headers.etag)
+                // The body is written before the ETag so that an ETag never outlives the body it
+                // stands for. A failed write leaves neither behind, so the next request asks in full.
                 await AsyncStorage.setItem(dataKey, JSON.stringify(response.data))
+                await AsyncStorage.setItem(etagKey, response.headers.etag)
                 onCacheUpdate?.(url)
             } catch (error) {
                 // eslint-disable-next-line no-console
                 console.error('Error caching response data:', error)
+                await clearCache(url, getRequestNetwork(response.config)).catch(() => {})
             }
         }
 

@@ -1,13 +1,13 @@
-import { afterEach, beforeAll, beforeEach, describe, expect, it } from 'bun:test'
-import { eq } from 'drizzle-orm'
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'bun:test'
 import { DateTime, Settings } from 'luxon'
 
-import { db, lineStations, lines, reports, stations } from '../src/db'
+import { db, reports } from '../src/db'
 import { seedBaseData } from '../src/db/seed/seed'
 import { app } from '../src/index'
 
 import { getDefaultReportsRange, MAX_REPORTS_TIMEFRAME } from '../src/modules/reports/constants'
-import { sendReportRequest } from './test-utils'
+import { DEFAULT_NETWORK_ID } from '../src/modules/networks/constants'
+import { pickLineId, pickStationIds, pickStationIdsOnLine, sendReportRequest } from './test-utils'
 
 let testStationId: string
 let testLineId: string
@@ -21,6 +21,7 @@ const createReportWithTimestamp = async (
     lineId: string = testLineId
 ) => {
     await db.insert(reports).values({
+        networkId: DEFAULT_NETWORK_ID,
         stationId,
         lineId,
         directionId: stationId,
@@ -33,11 +34,8 @@ describe('Timeframe filtering', () => {
     beforeAll(async () => {
         await seedBaseData(db)
 
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
-        const [line] = await db.select({ id: lines.id }).from(lines).limit(1)
-
-        testStationId = station.id
-        testLineId = line.id
+        testStationId = (await pickStationIds(1))[0]!
+        testLineId = await pickLineId()
     })
 
     beforeEach(async () => {
@@ -130,21 +128,30 @@ describe('Timeframe filtering', () => {
 
 describe('Predicted reports', () => {
     let allStationIds: string[]
+    let previousReportPassword: string | undefined
 
     beforeAll(async () => {
+        /* These cases post through the API, which runs the anti spam check first. The password
+           short circuits it; without one the posts fail and the assertions below would be made
+           against an empty database. Restored afterwards because the environment is shared with
+           every other test file. */
+        previousReportPassword = process.env.REPORT_PASSWORD
+        process.env.REPORT_PASSWORD = 'test-password'
+
         await seedBaseData(db)
 
-        const [line] = await db.select({ id: lines.id }).from(lines).limit(1)
-        testLineId = line.id
+        testLineId = await pickLineId()
 
         // Get stations that are actually on this line (need at least 3 for accuracy tests)
-        const stationsOnLine = await db
-            .select({ stationId: lineStations.stationId })
-            .from(lineStations)
-            .where(eq(lineStations.lineId, testLineId))
-            .limit(10)
+        allStationIds = await pickStationIdsOnLine(testLineId, 10)
+    })
 
-        allStationIds = stationsOnLine.map((s) => s.stationId)
+    afterAll(() => {
+        if (previousReportPassword === undefined) {
+            delete process.env.REPORT_PASSWORD
+        } else {
+            process.env.REPORT_PASSWORD = previousReportPassword
+        }
     })
 
     beforeEach(async () => {
@@ -370,6 +377,12 @@ describe('Predicted reports', () => {
     })
 })
 
+/* The threshold curve models a day in the city, so it is read on the network's clock. These tests
+   are about that curve, which makes their times Berlin times rather than UTC ones. The instant is
+   handed back in UTC because the API only accepts `Z` suffixed timestamps. */
+const berlinTime = (year: number, month: number, day: number, hour: number, minute = 0): DateTime =>
+    DateTime.fromObject({ year, month, day, hour, minute }, { zone: 'Europe/Berlin' }).toUTC()
+
 describe('Predicted reports threshold', () => {
     let testStations: string[]
 
@@ -395,16 +408,8 @@ describe('Predicted reports threshold', () => {
     beforeAll(async () => {
         await seedBaseData(db)
 
-        const [line] = await db.select({ id: lines.id }).from(lines).limit(1)
-        testLineId = line.id
-
-        const stationsOnLine = await db
-            .select({ stationId: lineStations.stationId })
-            .from(lineStations)
-            .where(eq(lineStations.lineId, testLineId))
-            .limit(10)
-
-        testStations = stationsOnLine.map((s) => s.stationId)
+        testLineId = await pickLineId()
+        testStations = await pickStationIdsOnLine(testLineId, 10)
     })
 
     beforeEach(async () => {
@@ -421,7 +426,7 @@ describe('Predicted reports threshold', () => {
 
     it('returns more predicted reports during peak hours than night hours', async () => {
         // Test peak hours - Monday at 15:00 (threshold should be 7)
-        const mondayAfternoon = DateTime.utc(2024, 1, 15, 15, 0)
+        const mondayAfternoon = berlinTime(2024, 1, 15, 15, 0)
         Settings.now = () => mondayAfternoon.toMillis()
 
         const fromPeak = mondayAfternoon.minus({ hours: 1 })
@@ -436,7 +441,7 @@ describe('Predicted reports threshold', () => {
         const peakTotal = peakBody.length
 
         // Test night hours - Tuesday at 2:00 AM (threshold should be 1)
-        const tuesdayNight = DateTime.utc(2024, 1, 16, 2, 0)
+        const tuesdayNight = berlinTime(2024, 1, 16, 2, 0)
         Settings.now = () => tuesdayNight.toMillis()
 
         const fromNight = tuesdayNight.minus({ hours: 1 })
@@ -459,8 +464,8 @@ describe('Predicted reports threshold', () => {
     it('respects threshold limits across different times of day', async () => {
         // Test multiple times to verify threshold is respected
         const times = [
-            { time: DateTime.utc(2024, 1, 15, 2, 0), minExpected: 1, maxExpected: 2 }, // 2am night
-            { time: DateTime.utc(2024, 1, 15, 12, 0), minExpected: 2, maxExpected: 7 }, // noon peak
+            { time: berlinTime(2024, 1, 15, 2, 0), minExpected: 1, maxExpected: 2 }, // 2am night
+            { time: berlinTime(2024, 1, 15, 12, 0), minExpected: 2, maxExpected: 7 }, // noon peak
         ]
 
         for (const { time, minExpected, maxExpected } of times) {
@@ -485,7 +490,7 @@ describe('Predicted reports threshold', () => {
 
     it('increases threshold from early morning to peak hours', async () => {
         // Test at 7:00 AM (start of increase period)
-        const morning7 = DateTime.utc(2024, 1, 15, 7, 0) // Monday
+        const morning7 = berlinTime(2024, 1, 15, 7, 0) // Monday
         Settings.now = () => morning7.toMillis()
 
         const from7 = morning7.minus({ hours: 1 })
@@ -499,7 +504,7 @@ describe('Predicted reports threshold', () => {
         const total7 = body7.length
 
         // Test at 12:00 PM (peak hours)
-        const noon = DateTime.utc(2024, 1, 15, 12, 0) // Monday
+        const noon = berlinTime(2024, 1, 15, 12, 0) // Monday
         Settings.now = () => noon.toMillis()
 
         const fromNoon = noon.minus({ hours: 1 })
@@ -521,7 +526,7 @@ describe('Predicted reports threshold', () => {
         // At 20:30 on a weekday (near the end of the 18:00–21:00 ramp), the threshold
         // should still be above the minimum of 1. With incorrect slope (e.g. 9/180 instead
         // of 6/180), the base would already be negative here and clamped to 1.
-        const weekdayLateEvening = DateTime.utc(2024, 1, 15, 20, 30) // Monday 20:30
+        const weekdayLateEvening = berlinTime(2024, 1, 15, 20, 30) // Monday 20:30
         Settings.now = () => weekdayLateEvening.toMillis()
 
         const fromLate = weekdayLateEvening.minus({ hours: 1 })
@@ -536,7 +541,7 @@ describe('Predicted reports threshold', () => {
         const latePredicted = lateBody.filter((r) => r.isPredicted).length
 
         // At 23:00 (flat minimum period, threshold = 1)
-        const weekdayNight = DateTime.utc(2024, 1, 15, 23, 0) // Monday 23:00
+        const weekdayNight = berlinTime(2024, 1, 15, 23, 0) // Monday 23:00
         Settings.now = () => weekdayNight.toMillis()
 
         const fromNight = weekdayNight.minus({ hours: 1 })
@@ -557,7 +562,7 @@ describe('Predicted reports threshold', () => {
 
     it('prioritizes placing predicted report timestamps early in the time range to appear old', async () => {
         // Mock time to Monday at 12:00
-        const mondayNoon = DateTime.utc(2024, 1, 15, 12, 0)
+        const mondayNoon = berlinTime(2024, 1, 15, 12, 0)
         Settings.now = () => mondayNoon.toMillis()
 
         // Query for a 2-hour window
@@ -620,12 +625,11 @@ describe('Reports by station route', () => {
     beforeAll(async () => {
         await seedBaseData(db)
 
-        const [line] = await db.select({ id: lines.id }).from(lines).limit(1)
-        lineId = line.id
+        lineId = await pickLineId()
 
-        const stationRows = await db.select({ id: stations.id }).from(stations).limit(2)
-        stationOneId = stationRows[0].id
-        stationTwoId = stationRows[1].id
+        const stationIds = await pickStationIds(2)
+        stationOneId = stationIds[0]!
+        stationTwoId = stationIds[1]!
     })
 
     beforeEach(async () => {

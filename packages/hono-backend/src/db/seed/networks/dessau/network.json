@@ -1,0 +1,22 @@
+{
+    "id": "dessau",
+    "name": "Dessau",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.831,
+        "longitude": 12.2431
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.753785,
+            "longitude": 12.109623
+        },
+        "northEast": {
+            "latitude": 51.884696,
+            "longitude": 12.315373
+        }
+    }
+}

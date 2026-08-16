@@ -1,0 +1,22 @@
+{
+    "id": "gera",
+    "name": "Gera",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.8766,
+        "longitude": 12.0833
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.794412,
+            "longitude": 11.9799
+        },
+        "northEast": {
+            "latitude": 50.94962,
+            "longitude": 12.170885
+        }
+    }
+}

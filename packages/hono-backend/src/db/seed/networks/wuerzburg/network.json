@@ -1,0 +1,22 @@
+{
+    "id": "wuerzburg",
+    "name": "Würzburg",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 49.7934,
+        "longitude": 9.931
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.677269,
+            "longitude": 9.822954
+        },
+        "northEast": {
+            "latitude": 49.846926,
+            "longitude": 10.036759
+        }
+    }
+}

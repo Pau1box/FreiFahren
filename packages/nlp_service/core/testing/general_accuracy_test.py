@@ -6,7 +6,11 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from nlp_service.core.processor import extract_ticket_inspector_info
+from nlp_service.core.testing.seed_networks import load_seed_network
 from nlp_service.core.testing.test_cases import test_cases
+
+# The cases are Berlin messages, so they are scored against the Berlin network.
+NETWORK_ID = 'berlin'
 
 red = '\033[91m'
 reset = '\033[0m'
@@ -35,6 +39,15 @@ class TestFindStationAndLineFunction(unittest.TestCase):
     total_mismatches = 0
     station_as_direction_count = 0
     direction_as_station_count = 0
+    network_data = None
+
+    @classmethod
+    def setUpClass(cls):
+        cls.network_data = load_seed_network(NETWORK_ID)
+        if cls.network_data is None:
+            raise unittest.SkipTest(
+                f'Seed data for {NETWORK_ID} is not available in this checkout'
+            )
 
     @classmethod
     def analyze_failures(cls, failures_dict):
@@ -95,7 +108,7 @@ class TestFindStationAndLineFunction(unittest.TestCase):
     def test_find_station_and_line(self):
         for text, expected_station, expected_line, expected_direction in test_cases:
             with self.subTest(text=text):
-                result = extract_ticket_inspector_info(text)
+                result = extract_ticket_inspector_info(text, self.network_data)
                 if result is None:
                     print(f'Error processing text: {text}')
                     continue

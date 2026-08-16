@@ -46,9 +46,10 @@ export const reportSchema = z
     }))
 
 export type Report = z.infer<typeof reportSchema>
-const getReports = async (start: DateTime, end: DateTime): Promise<Report[]> => {
+const getReports = async (network: string, start: DateTime, end: DateTime): Promise<Report[]> => {
     const { data } = await client.get('/v0/basics/inspectors', {
         params: {
+            network,
             start: start.toISO(),
             end: end.toISO(),
         },
@@ -57,11 +58,11 @@ const getReports = async (start: DateTime, end: DateTime): Promise<Report[]> => 
     return reportSchema.array().parse(data)
 }
 
-const getRecentReports = async (): Promise<Report[]> => {
+const getRecentReports = async (network: string): Promise<Report[]> => {
     const now = DateTime.utc()
     const oneHourAgo = now.minus({ hours: 1 })
 
-    return getReports(oneHourAgo, now)
+    return getReports(network, oneHourAgo, now)
 }
 
 type PostReport = {
@@ -71,39 +72,89 @@ type PostReport = {
     message?: string
 }
 
-const postReport = async (report: PostReport) => {
-    const { data } = await client.post('/v0/basics/inspectors', {
-        ...report,
-        directionId: report.directionId ?? '',
-    })
+const postReport = async (network: string, report: PostReport) => {
+    const { data } = await client.post(
+        '/v0/basics/inspectors',
+        {
+            ...report,
+            directionId: report.directionId ?? '',
+        },
+        { params: { network } }
+    )
 
     return reportSchema.parse(data)
 }
 
 const riskSchema = z
     .object({
-        last_modified: z.string().transform((value) => new Date(value)),
-        segment_colors: z.record(z.string()),
+        segments_risk: z.record(z.object({ color: z.string(), risk: z.number() })),
     })
-    .transform(({ last_modified, segment_colors }) => ({
-        lastModified: last_modified,
-        segmentColors: segment_colors,
+    .transform(({ segments_risk }) => ({
+        segmentColors: Object.fromEntries(Object.entries(segments_risk).map(([sid, { color }]) => [sid, color])),
     }))
 
 export type RiskData = z.infer<typeof riskSchema>
 
-export const getRiskData = async (): Promise<RiskData> => {
-    const { data } = await client.get('/v0/risk-prediction/segment-colors')
+export const getRiskData = async (network: string): Promise<RiskData> => {
+    const { data } = await client.get('/v1/risk-prediction/segment-colors', { params: { network } })
 
     return riskSchema.parse(data)
 }
 
+const coordinatesSchema = z.object({
+    latitude: z.number(),
+    longitude: z.number(),
+})
+
+export type Coordinates = z.infer<typeof coordinatesSchema>
+
+export const networkSchema = z.object({
+    id: z.string(),
+    name: z.string(),
+    countryCode: z.string(),
+    timezone: z.string(),
+    center: coordinatesSchema,
+    bounds: z.object({
+        southWest: coordinatesSchema,
+        northEast: coordinatesSchema,
+    }),
+    status: z.enum(['active', 'beta']),
+    /* The other cities this network reaches, for example Dortmund and Essen for the Rhine-Ruhr
+       network that is filed under Düsseldorf. Defaulted rather than required so an older
+       deployment, which does not send it, still parses. */
+    serves: z.array(z.string()).default([]),
+})
+
+export type Network = z.infer<typeof networkSchema>
+
+export const getNetworks = async (): Promise<Network[]> => {
+    const { data } = await client.get('/v0/networks')
+
+    return networkSchema.array().parse(data)
+}
+
+export const lineMetadataSchema = z.object({
+    color: z.string(),
+    /** A mode this client does not know is not worth losing every line colour over. */
+    mode: z.enum(['subway', 'light_rail', 'tram', 'train', 'unknown']).catch('unknown'),
+    /** Always present per the contract. Defaulted so an older deployment does not fail the parse. */
+    isCircular: z.boolean().default(false),
+})
+
+export type LineMode = z.infer<typeof lineMetadataSchema>['mode']
+
+export const linesMetadataSchema = z.record(lineMetadataSchema)
+export type LinesMetadata = z.infer<typeof linesMetadataSchema>
+
+export const getLinesMetadata = async (network: string): Promise<LinesMetadata> => {
+    const { data } = await client.get('/v0/lines/metadata', { params: { network } })
+
+    return linesMetadataSchema.parse(data)
+}
+
 export const stationSchema = z.object({
     name: z.string(),
-    coordinates: z.object({
-        latitude: z.number(),
-        longitude: z.number(),
-    }),
+    coordinates: coordinatesSchema,
     lines: z.array(z.string()),
 })
 
@@ -112,8 +163,8 @@ export type Station = z.infer<typeof stationSchema>
 export const stationsSchema = z.record(stationSchema.optional())
 export type Stations = z.infer<typeof stationsSchema>
 
-export const getStations = async (): Promise<Stations> => {
-    const { data } = await client.get('/v0/stations')
+export const getStations = async (network: string): Promise<Stations> => {
+    const { data } = await client.get('/v0/stations', { params: { network } })
 
     return stationsSchema.parse(data)
 }
@@ -121,8 +172,8 @@ export const getStations = async (): Promise<Stations> => {
 export const linesSchema = z.record(z.array(z.string()))
 export type Lines = z.infer<typeof linesSchema>
 
-export const getLines = async (): Promise<Record<string, string[]>> => {
-    const { data } = await client.get('/v0/lines')
+export const getLines = async (network: string): Promise<Record<string, string[]>> => {
+    const { data } = await client.get('/v0/lines', { params: { network } })
 
     return linesSchema.parse(data)
 }
@@ -147,8 +198,8 @@ export const featureCollectionSchema = z.object({
 
 export type FeatureCollection = z.infer<typeof featureCollectionSchema>
 
-export const getSegments = async (): Promise<FeatureCollection> => {
-    const { data } = await client.get('/v0/lines/segments')
+export const getSegments = async (network: string): Promise<FeatureCollection> => {
+    const { data } = await client.get('/v0/lines/segments', { params: { network } })
 
     return featureCollectionSchema.parse(data)
 }
@@ -159,8 +210,11 @@ export const stationStatisticsSchema = z.object({
 
 export type StationStatistics = z.infer<typeof stationStatisticsSchema>
 
-export const getStationStatistics = async (stationId: string) => {
-    const { data } = await client.get(`/v0/stations/${stationId}/statistics`)
+export const getStationStatistics = async (network: string, stationId: string) => {
+    // Station ids carry spaces, semicolons and umlauts, none of which survive a raw path segment.
+    const { data } = await client.get(`/v0/stations/${encodeURIComponent(stationId)}/statistics`, {
+        params: { network },
+    })
 
     return stationStatisticsSchema.parse(data)
 }
@@ -218,8 +272,10 @@ export type NavigationResponse = z.infer<typeof navigationResponseSchema>
 export type Leg = z.infer<typeof legSchema>
 export type Node = z.infer<typeof nodeSchema>
 
-export const getItineraries = async (start: string, end: string) => {
-    const { data } = await client.get(`/v0/transit/itineraries?startStation=${start}&endStation=${end}`)
+export const getItineraries = async (network: string, start: string, end: string) => {
+    const { data } = await client.get('/v0/transit/itineraries', {
+        params: { network, startStation: start, endStation: end },
+    })
     const result = navigationResponseSchema.safeParse(data)
 
     if (!result.success) {
@@ -230,7 +286,9 @@ export const getItineraries = async (start: string, end: string) => {
 }
 
 export const api = {
+    getNetworks,
     getLines,
+    getLinesMetadata,
     getStations,
     getReports,
     getRecentReports,

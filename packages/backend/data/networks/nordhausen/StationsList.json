@@ -1,0 +1,235 @@
+{
+    "n268037249": {
+        "coordinates": {
+            "latitude": 51.5145716,
+            "longitude": 10.7809018
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Nordhausen Ricarda-Huch-Straße"
+    },
+    "n268037315": {
+        "coordinates": {
+            "latitude": 51.5281843,
+            "longitude": 10.7741967
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Nordhausen-Krimderode"
+    },
+    "n270938419": {
+        "coordinates": {
+            "latitude": 51.5077637,
+            "longitude": 10.7786905
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Nordhausen Altentor"
+    },
+    "n270938509": {
+        "coordinates": {
+            "latitude": 51.511582,
+            "longitude": 10.7856401
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Parkallee"
+    },
+    "n270938566": {
+        "coordinates": {
+            "latitude": 51.5069028,
+            "longitude": 10.7856079
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Landratsamt/Badehaus"
+    },
+    "n270938574": {
+        "coordinates": {
+            "latitude": 51.5044823,
+            "longitude": 10.7856141
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Wiedigsburghalle"
+    },
+    "n270938578": {
+        "coordinates": {
+            "latitude": 51.502083600000006,
+            "longitude": 10.786992300000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Grimmel"
+    },
+    "n270938581": {
+        "coordinates": {
+            "latitude": 51.4986072,
+            "longitude": 10.78889
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Auf dem Sand"
+    },
+    "n270938640": {
+        "coordinates": {
+            "latitude": 51.5139585,
+            "longitude": 10.8018875
+        },
+        "lines": [
+            "1",
+            "10"
+        ],
+        "name": "Dr.-Robert-Koch-Straße"
+    },
+    "n270938650": {
+        "coordinates": {
+            "latitude": 51.51535065,
+            "longitude": 10.79861985
+        },
+        "lines": [
+            "1",
+            "10"
+        ],
+        "name": "Südharzklinikum"
+    },
+    "n282249881": {
+        "coordinates": {
+            "latitude": 51.5422654,
+            "longitude": 10.7686369
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Niedersachswerfen Herkulesmarkt"
+    },
+    "n282269940": {
+        "coordinates": {
+            "latitude": 51.5606294,
+            "longitude": 10.7699526
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Niedersachswerfen Ilfelder Straße"
+    },
+    "n293133089": {
+        "coordinates": {
+            "latitude": 51.49457015,
+            "longitude": 10.789673875
+        },
+        "lines": [
+            "1",
+            "10"
+        ],
+        "name": "Atrium-Passage"
+    },
+    "n600560178": {
+        "coordinates": {
+            "latitude": 51.5227878,
+            "longitude": 10.7759643
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Nordhausen Schurzfell"
+    },
+    "n600560179": {
+        "coordinates": {
+            "latitude": 51.5027293,
+            "longitude": 10.7771645
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Nordhausen Hesseröder Straße"
+    },
+    "n631602781": {
+        "coordinates": {
+            "latitude": 51.50381975,
+            "longitude": 10.81492485
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Am Förstemannpark"
+    },
+    "n631602801": {
+        "coordinates": {
+            "latitude": 51.50321185,
+            "longitude": 10.819764150000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Nordhausen Ost"
+    },
+    "n876385603": {
+        "coordinates": {
+            "latitude": 51.573193399999994,
+            "longitude": 10.78674235
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Ilfeld Schreiberwiese"
+    },
+    "n881214349": {
+        "coordinates": {
+            "latitude": 51.579006066666665,
+            "longitude": 10.789874766666665
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Ilfeld"
+    },
+    "n1412514683": {
+        "coordinates": {
+            "latitude": 51.503107299999996,
+            "longitude": 10.8020776
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "August-Bebel-Platz"
+    },
+    "n1614361749": {
+        "coordinates": {
+            "latitude": 51.58466,
+            "longitude": 10.7878891
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Ilfeld Neanderklinik"
+    },
+    "n1614376460": {
+        "coordinates": {
+            "latitude": 51.549737750000006,
+            "longitude": 10.76885635
+        },
+        "lines": [
+            "10"
+        ],
+        "name": "Niedersachswerfen Ost"
+    },
+    "n9549039513": {
+        "coordinates": {
+            "latitude": 51.5042622,
+            "longitude": 10.8068843
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Rückertstraße"
+    }
+}

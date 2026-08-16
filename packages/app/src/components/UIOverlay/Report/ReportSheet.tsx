@@ -1,4 +1,4 @@
-import { Octicons } from '@expo/vector-icons'
+import { MaterialCommunityIcons, Octicons } from '@expo/vector-icons'
 import { BottomSheetModalMethods } from '@gorhom/bottom-sheet/lib/typescript/types'
 import { useTheme } from '@shopify/restyle'
 import { forwardRef, PropsWithChildren, Ref, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react'
@@ -7,8 +7,11 @@ import { LayoutAnimation } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 
 import { useSubmitReport } from '../../../api'
+import { LineMode } from '../../../api/client'
 import { useLines, useStations } from '../../../api/queries'
 import { useAppStore } from '../../../app.store'
+import { compareLineNames, useAvailableModes, useIsRingLine, useLineMode } from '../../../lines'
+import { useActiveNetwork } from '../../../networks'
 import { Theme } from '../../../theme'
 import { track } from '../../../tracking'
 import { FFButton, FFText, FFView } from '../../common/base'
@@ -20,19 +23,25 @@ import { SbahnIcon } from './SbahnIcon'
 import { TramIcon } from './TramIcon'
 import { UbahnIcon } from './UbahnIcon'
 
-const lineTypes = ['u' as const, 's' as const, 'm' as const]
-
-type LineType = (typeof lineTypes)[number]
-
 export type ReportSheetMethods = {
     open: () => void
     close: () => void
 }
 
-const getLineType = (line: string) => {
-    if (line.startsWith('S')) return 's'
-    if (line.startsWith('U')) return 'u'
-    return 'm'
+// The three brand marks only exist for the modes they belong to, so the rest fall back to a generic icon.
+const ModeIcon = ({ mode }: { mode: LineMode }) => {
+    switch (mode) {
+        case 'subway':
+            return <UbahnIcon />
+        case 'light_rail':
+            return <SbahnIcon />
+        case 'tram':
+            return <TramIcon />
+        case 'train':
+            return <MaterialCommunityIcons name="train" size={36} color="white" />
+        default:
+            return <MaterialCommunityIcons name="help-circle-outline" size={36} color="white" />
+    }
 }
 
 export const ReportSheet = forwardRef((_props: PropsWithChildren<{}>, ref: Ref<ReportSheetMethods>) => {
@@ -44,6 +53,7 @@ export const ReportSheet = forwardRef((_props: PropsWithChildren<{}>, ref: Ref<R
     const sheetRef = useRef<BottomSheetModalMethods>(null)
     const theme = useTheme<Theme>()
     const updateAppStore = useAppStore((state) => state.update)
+    const network = useActiveNetwork()
 
     const openedAt = useRef<number | null>(null)
 
@@ -59,14 +69,29 @@ export const ReportSheet = forwardRef((_props: PropsWithChildren<{}>, ref: Ref<R
         },
     }))
 
-    const [lineType, setLineType] = useState<LineType>('u')
+    const [selectedMode, setSelectedMode] = useState<LineMode | null>(null)
     const [selectedLine, setSelectedLine] = useState<string | null>(null)
     const [selectedDirection, setSelectedDirection] = useState<string | null>(null)
     const [selectedStation, setSelectedStation] = useState<string | null>(null)
 
+    const availableModes = useAvailableModes()
+    const lineMode = useLineMode()
+    const isRingLine = useIsRingLine()
+
+    // Which modes exist depends on the city, so the first one the network has stands in until the
+    // user picks another.
+    const mode: LineMode | null = selectedMode ?? (availableModes.length > 0 ? availableModes[0] : null)
+
     const isValid = selectedLine !== null && selectedStation !== null
 
-    useEffect(() => setSelectedLine(null), [lineType])
+    // Line and station ids only mean something inside their network, so a switch discards the
+    // selection instead of submitting one city's station under another city's name.
+    useEffect(() => {
+        setSelectedMode(null)
+        setSelectedLine(null)
+    }, [network?.id])
+
+    useEffect(() => setSelectedLine(null), [mode])
     useEffect(() => {
         if (selectedLine !== null) {
             sheetRef.current?.expand()
@@ -77,25 +102,29 @@ export const ReportSheet = forwardRef((_props: PropsWithChildren<{}>, ref: Ref<R
     useEffect(() => setSelectedStation(null), [selectedLine])
 
     const lineOptions = useMemo(
-        () => Object.keys(lines ?? {}).filter((line) => getLineType(line) === lineType),
-        [lineType, lines]
+        () =>
+            Object.keys(lines ?? {})
+                .filter((line) => lineMode(line) === mode)
+                .sort(compareLineNames),
+        [mode, lineMode, lines]
     )
 
     if (lines === undefined || stations === undefined) return null
 
-    const directionOptions =
-        selectedLine === null ? [] : [lines[selectedLine][0], lines[selectedLine][lines[selectedLine].length - 1]]
+    // A line selected before a network switch is gone from `lines` until the reset effect runs.
+    const stationOptions = (selectedLine === null ? undefined : lines[selectedLine]) ?? []
 
-    const stationOptions = selectedLine === null ? [] : lines[selectedLine]
+    const directionOptions =
+        stationOptions.length === 0 ? [] : [stationOptions[0], stationOptions[stationOptions.length - 1]]
 
     const isDisabled = !isValid || isPending
 
-    const shouldShowDirection = !(['S41', 'S42'] as (typeof selectedLine)[]).includes(selectedLine)
+    const shouldShowDirection = selectedLine !== null && !isRingLine(selectedLine)
 
     const close = () => {
         sheetRef.current?.close()
 
-        setLineType('u')
+        setSelectedMode(null)
         setSelectedLine(null)
     }
 
@@ -130,11 +159,11 @@ export const ReportSheet = forwardRef((_props: PropsWithChildren<{}>, ref: Ref<R
                     {tReport('title')}
                 </FFText>
                 <FFCarousellSelect
-                    options={lineTypes}
-                    selectedOption={lineType}
-                    onSelect={(option: LineType) => setLineType(option)}
+                    options={availableModes}
+                    selectedOption={mode}
+                    onSelect={setSelectedMode}
                     containerProps={{ py: 's', flex: 1 }}
-                    renderOption={(option) => ({ u: <UbahnIcon />, s: <SbahnIcon />, m: <TramIcon /> })[option]}
+                    renderOption={(option) => <ModeIcon mode={option} />}
                 />
                 <FFText variant="header2" fontWeight="bold" color="fg" mt="xs" mb="xxs">
                     {tCommon('line')}

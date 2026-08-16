@@ -1,0 +1,22 @@
+{
+    "id": "frankfurt-oder",
+    "name": "Frankfurt (Oder)",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 52.3412,
+        "longitude": 14.5495
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.248767,
+            "longitude": 14.395711
+        },
+        "northEast": {
+            "latitude": 52.407973,
+            "longitude": 14.62939
+        }
+    }
+}

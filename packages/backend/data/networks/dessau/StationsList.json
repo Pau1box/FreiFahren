@@ -1,0 +1,246 @@
+{
+    "n26511049": {
+        "coordinates": {
+            "latitude": 51.83097297142857,
+            "longitude": 12.242133357142858
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Museum Nord"
+    },
+    "n26511055": {
+        "coordinates": {
+            "latitude": 51.83419993333334,
+            "longitude": 12.242710733333332
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Bauhausmuseum"
+    },
+    "n27664726": {
+        "coordinates": {
+            "latitude": 51.8061642,
+            "longitude": 12.24099275
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Damaschkestraße"
+    },
+    "n27664730": {
+        "coordinates": {
+            "latitude": 51.809364450000004,
+            "longitude": 12.241157099999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Dessauer Verkehrs GmbH"
+    },
+    "n31208563": {
+        "coordinates": {
+            "latitude": 51.7987004,
+            "longitude": 12.23983275
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Tempelhofer Straße"
+    },
+    "n276234609": {
+        "coordinates": {
+            "latitude": 51.816774699999996,
+            "longitude": 12.1822845
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Junkerspark"
+    },
+    "n276684539": {
+        "coordinates": {
+            "latitude": 51.81732675,
+            "longitude": 12.195829975
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Städtisches Klinikum"
+    },
+    "n276684684": {
+        "coordinates": {
+            "latitude": 51.81685910000001,
+            "longitude": 12.189277266666666
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Zoberberg Mitte"
+    },
+    "n277768159": {
+        "coordinates": {
+            "latitude": 51.81807775,
+            "longitude": 12.20100475
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Medizinisches Versorgungszentrum (MVZ)"
+    },
+    "n277768160": {
+        "coordinates": {
+            "latitude": 51.820724850000005,
+            "longitude": 12.20342665
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Lindenstraße"
+    },
+    "n277768161": {
+        "coordinates": {
+            "latitude": 51.82200885,
+            "longitude": 12.210104475
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Kleine Schaftrift"
+    },
+    "n279817749": {
+        "coordinates": {
+            "latitude": 51.822987,
+            "longitude": 12.242091349999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Am alten Wasserturm"
+    },
+    "n321729981": {
+        "coordinates": {
+            "latitude": 51.836876075,
+            "longitude": 12.237719475
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Theater"
+    },
+    "n355984369": {
+        "coordinates": {
+            "latitude": 51.82673765,
+            "longitude": 12.21805295
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Robert-Bosch-Straße"
+    },
+    "n355986778": {
+        "coordinates": {
+            "latitude": 51.82642905,
+            "longitude": 12.212831999999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "BSZ Haupteingang"
+    },
+    "n355986782": {
+        "coordinates": {
+            "latitude": 51.8249405,
+            "longitude": 12.209237550000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "BSZ Sporthalle"
+    },
+    "n358031406": {
+        "coordinates": {
+            "latitude": 51.82779955,
+            "longitude": 12.224752800000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altener Straße"
+    },
+    "n441181609": {
+        "coordinates": {
+            "latitude": 51.82950915,
+            "longitude": 12.234767399999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Amalienstraße"
+    },
+    "n485086870": {
+        "coordinates": {
+            "latitude": 51.82615355,
+            "longitude": 12.2422375
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Friedhofstraße"
+    },
+    "n505205261": {
+        "coordinates": {
+            "latitude": 51.81860905,
+            "longitude": 12.24180385
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Wasserwerkstraße"
+    },
+    "n505205262": {
+        "coordinates": {
+            "latitude": 51.81579115,
+            "longitude": 12.241710699999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Klughardtstraße"
+    },
+    "n1992008801": {
+        "coordinates": {
+            "latitude": 51.8028291,
+            "longitude": 12.24079915
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Peterholzstraße"
+    },
+    "n1992066453": {
+        "coordinates": {
+            "latitude": 51.812843900000004,
+            "longitude": 12.2414837
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Friedhof III"
+    },
+    "n2481561397": {
+        "coordinates": {
+            "latitude": 51.83978075,
+            "longitude": 12.2367805
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Hauptbahnhof"
+    }
+}

@@ -50,3 +50,7 @@ yarn-error.log*
 
 # Sentry Config File
 .sentryclirc
+
+# build output
+/dist
+tsconfig.tsbuildinfo

@@ -1,0 +1,466 @@
+{
+    "n27489163": {
+        "coordinates": {
+            "latitude": 49.780357233333326,
+            "longitude": 9.9359386
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Ehehaltenhaus"
+    },
+    "n28807356": {
+        "coordinates": {
+            "latitude": 49.78685026666667,
+            "longitude": 9.932082916666667
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "54"
+        ],
+        "name": "Sanderring"
+    },
+    "n29014071": {
+        "coordinates": {
+            "latitude": 49.7973684923077,
+            "longitude": 9.93173849230769
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "54"
+        ],
+        "name": "Juliuspromenade E"
+    },
+    "n36720585": {
+        "coordinates": {
+            "latitude": 49.75968956666667,
+            "longitude": 9.943081716666667
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Heriedenweg"
+    },
+    "n238143936": {
+        "coordinates": {
+            "latitude": 49.7792218,
+            "longitude": 9.926540750000001
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Judenbühlweg"
+    },
+    "n238144019": {
+        "coordinates": {
+            "latitude": 49.774747225,
+            "longitude": 9.92858635
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Steinbachtal"
+    },
+    "n238144295": {
+        "coordinates": {
+            "latitude": 49.76895465,
+            "longitude": 9.937492725
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Dallenbergbad"
+    },
+    "n246685560": {
+        "coordinates": {
+            "latitude": 49.7980454,
+            "longitude": 9.925252066666667
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Congress Centrum"
+    },
+    "n246786790": {
+        "coordinates": {
+            "latitude": 49.794923633333326,
+            "longitude": 9.892486266666667
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Bürgerbräu"
+    },
+    "n247215937": {
+        "coordinates": {
+            "latitude": 49.80047585,
+            "longitude": 9.935622833333333
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5"
+        ],
+        "name": "Hauptbahnhof Ost"
+    },
+    "n247215943": {
+        "coordinates": {
+            "latitude": 49.7994314,
+            "longitude": 9.941680333333332
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Berliner Platz"
+    },
+    "n247479344": {
+        "coordinates": {
+            "latitude": 49.794290733333334,
+            "longitude": 9.898170566666666
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Sieboldmuseum"
+    },
+    "n247479345": {
+        "coordinates": {
+            "latitude": 49.7943317,
+            "longitude": 9.903993499999999
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "DJK Sportzentrum"
+    },
+    "n247716730": {
+        "coordinates": {
+            "latitude": 49.80194835,
+            "longitude": 9.945567983333333
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Wagnerplatz"
+    },
+    "n248216666": {
+        "coordinates": {
+            "latitude": 49.792105175,
+            "longitude": 9.928814825
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "54"
+        ],
+        "name": "Rathaus"
+    },
+    "n249788418": {
+        "coordinates": {
+            "latitude": 49.7974403,
+            "longitude": 9.919286399999999
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Nautiland"
+    },
+    "n249788420": {
+        "coordinates": {
+            "latitude": 49.794329357142864,
+            "longitude": 9.916338257142856
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Wörthstraße"
+    },
+    "n259698199": {
+        "coordinates": {
+            "latitude": 49.746182625,
+            "longitude": 9.958044475
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Straßburger Ring"
+    },
+    "n265532841": {
+        "coordinates": {
+            "latitude": 49.801726099999996,
+            "longitude": 9.94986215
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Felix-Fechenbach-Haus"
+    },
+    "n265532843": {
+        "coordinates": {
+            "latitude": 49.802010700000004,
+            "longitude": 9.95335115
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Uni-Klinikum Bereich D"
+    },
+    "n268851352": {
+        "coordinates": {
+            "latitude": 49.76588235,
+            "longitude": 9.946646750000001
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Reuterstraße"
+    },
+    "n281253270": {
+        "coordinates": {
+            "latitude": 49.767431,
+            "longitude": 9.941393699999999
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Andreas-Grieser-Straße"
+    },
+    "n281253271": {
+        "coordinates": {
+            "latitude": 49.76240945,
+            "longitude": 9.94453405
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Klingenstraße"
+    },
+    "n285979159": {
+        "coordinates": {
+            "latitude": 49.797671625,
+            "longitude": 9.921499675
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Talavera"
+    },
+    "n288260185": {
+        "coordinates": {
+            "latitude": 49.79665083333333,
+            "longitude": 9.928411966666667
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Ulmer Hof"
+    },
+    "n290791779": {
+        "coordinates": {
+            "latitude": 49.7942619,
+            "longitude": 9.910720066666666
+        },
+        "lines": [
+            "4",
+            "54"
+        ],
+        "name": "Hartmannstraße"
+    },
+    "n290882821": {
+        "coordinates": {
+            "latitude": 49.7370242,
+            "longitude": 9.957485
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Athener Ring"
+    },
+    "n315019817": {
+        "coordinates": {
+            "latitude": 49.78290265,
+            "longitude": 9.9253662
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Ruderzentrum"
+    },
+    "n321266328": {
+        "coordinates": {
+            "latitude": 49.72393400000001,
+            "longitude": 9.967226633333333
+        },
+        "lines": [
+            "5",
+            "54"
+        ],
+        "name": "Brombergweg"
+    },
+    "n697071869": {
+        "coordinates": {
+            "latitude": 49.7221845,
+            "longitude": 9.96526935
+        },
+        "lines": [
+            "5",
+            "54"
+        ],
+        "name": "Rottenbauer"
+    },
+    "n697071882": {
+        "coordinates": {
+            "latitude": 49.7312918,
+            "longitude": 9.966103799999999
+        },
+        "lines": [
+            "5",
+            "54"
+        ],
+        "name": "Delpstraße"
+    },
+    "n811062557": {
+        "coordinates": {
+            "latitude": 49.74740135,
+            "longitude": 9.954388725
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Berner Straße"
+    },
+    "n811780721": {
+        "coordinates": {
+            "latitude": 49.7419383,
+            "longitude": 9.9610714
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Wiener Ring"
+    },
+    "n1725040098": {
+        "coordinates": {
+            "latitude": 49.738905433333336,
+            "longitude": 9.960560433333333
+        },
+        "lines": [
+            "3",
+            "5",
+            "54"
+        ],
+        "name": "Madrider Ring"
+    },
+    "n1844022149": {
+        "coordinates": {
+            "latitude": 49.77506468,
+            "longitude": 9.93874808
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Königsberger Straße"
+    },
+    "n1979806769": {
+        "coordinates": {
+            "latitude": 49.7841314,
+            "longitude": 9.933479275
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Eichendorffstraße"
+    },
+    "n1979806816": {
+        "coordinates": {
+            "latitude": 49.77677045,
+            "longitude": 9.93824055
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Fechenbachstraße"
+    },
+    "n1981557097": {
+        "coordinates": {
+            "latitude": 49.7941627,
+            "longitude": 9.93096345
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "54"
+        ],
+        "name": "Dom"
+    },
+    "n2001921460": {
+        "coordinates": {
+            "latitude": 49.79014455,
+            "longitude": 9.929469950000001
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "54"
+        ],
+        "name": "Neubaustraße"
+    },
+    "n9050782280": {
+        "coordinates": {
+            "latitude": 49.78594645,
+            "longitude": 9.925041400000001
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Löwenbrücke"
+    }
+}

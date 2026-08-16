@@ -28,10 +28,10 @@ func TestGetStationDistance(t *testing.T) {
 			expectedStops:      8,
 		},
 		{
-			name:               "Invalid Station ID",
+			name:               "Station of another network",
 			inspectorStationId: "sss",
 			userStationId:      "abc",
-			expectedStatus:     http.StatusBadRequest,
+			expectedStatus:     http.StatusUnprocessableEntity,
 			expectedStops:      -1,
 		},
 		{
@@ -60,8 +60,15 @@ func TestGetStationDistance(t *testing.T) {
 			rec := httptest.NewRecorder()
 			c := e.NewContext(req, rec)
 
-			// Call the function and check the status code
-			if assert.NoError(t, distance.GetStationDistance(c)) {
+			// A station that does not belong to the network is answered with an echo error
+			// rather than by writing to the recorder, so the status is read off the error.
+			err := distance.GetStationDistance(c)
+			if httpError, ok := err.(*echo.HTTPError); ok {
+				assert.Equal(t, tt.expectedStatus, httpError.Code)
+				return
+			}
+
+			if assert.NoError(t, err) {
 				assert.Equal(t, tt.expectedStatus, rec.Code)
 
 				// Check the response body

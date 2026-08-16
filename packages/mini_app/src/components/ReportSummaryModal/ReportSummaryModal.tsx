@@ -40,7 +40,7 @@ const ReportSummaryModal: React.FC<ReportSummaryModalProps> = ({
                     <h1>{animatedCount}</h1>
                 </span>
                 <p>Menschen schätzen deine Hilfe!</p>
-                <span className="disclaimer">Deine Meldung wird mit @FreiFahren_BE synchronisiert.</span>
+                <span className="disclaimer">Deine Meldung wird mit der Telegram-Gruppe synchronisiert.</span>
                 <button className="action" onClick={handleCloseModal} type="button">
                     Weiter
                 </button>

@@ -18,11 +18,13 @@ import { UtilButton } from '../../components/Buttons/UtilButton/UtilButton'
 import { ReportForm } from '../../components/Form/ReportForm'
 import { FreifahrenMap } from '../../components/Map/Map'
 import { Backdrop } from '../../components/Miscellaneous/Backdrop/Backdrop'
+import { NetworkBetaNotice } from '../../components/Miscellaneous/NetworkBetaNotice/NetworkBetaNotice'
 import { SearchBar } from '../../components/Miscellaneous/SearchBar/SearchBar'
 import { StatsPopUp } from '../../components/Miscellaneous/StatsPopUp/StatsPopUp'
 import { InfoModal } from '../../components/Modals/InfoModal/InfoModal'
 import { LegalDisclaimer } from '../../components/Modals/LegalDisclaimer'
 import { UtilModal } from '../../components/Modals/UtilModal/UtilModal'
+import { useNetworkId } from '../../contexts/NetworkContext'
 import { ViewedReportsProvider } from '../../contexts/ViewedReportsContext'
 import { sendAnalyticsEvent, sendSavedEvents } from '../../hooks/useAnalytics'
 import { useModalAnimation } from '../../hooks/UseModalAnimation'
@@ -261,6 +263,33 @@ const App = () => {
     const [savedRoute, setSavedRoute] = useState<Itinerary | null>(null)
     const [showSavedRoute, setShowSavedRoute] = useState(false)
 
+    /*
+     Everything the user has picked is a set of station ids, and those are only meaningful inside the
+     network they came from. Switching networks therefore discards them instead of carrying a Berlin
+     route or a half filled Berlin report form into Hamburg.
+    */
+    const networkId = useNetworkId()
+    const previousNetworkIdRef = useRef(networkId)
+
+    useEffect(() => {
+        if (previousNetworkIdRef.current === networkId) return
+
+        const hadNetwork = previousNetworkIdRef.current !== null
+
+        previousNetworkIdRef.current = networkId
+
+        // The first network is not a switch: there is nothing chosen yet to discard.
+        if (!hadNetwork) return
+
+        setSelectedStation(null)
+        closeInfoModal()
+        setNavigationEndStation(null)
+        setIsNavigationModalOpen(false)
+        setSavedRoute(null)
+        setShowSavedRoute(false)
+        setAppUIState((prevState) => ({ ...prevState, isReportFormOpen: false, isListModalOpen: false }))
+    }, [networkId, closeInfoModal])
+
     const onStationSelect = useCallback(
         (station: StationProperty) => {
             setSelectedStation(station)
@@ -406,6 +435,7 @@ const App = () => {
                     handleStationClick={onStationSelect}
                 />
                 <LayerSwitcher changeLayer={changeLayer} isRiskLayerOpen={appUIState.isRiskLayerOpen} />
+                <NetworkBetaNotice />
                 {appUIState.isListModalOpen ? (
                     <>
                         <ReportsModal className="open center-animation" handleCloseModal={onRiskGridItemClick} />

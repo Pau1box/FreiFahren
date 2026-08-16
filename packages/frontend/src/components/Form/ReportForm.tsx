@@ -1,12 +1,13 @@
 import { FormEvent, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useLines, useStations, useSubmitReport } from 'src/api/queries'
+import { useLineMetadata, useLines, useStations, useSubmitReport } from 'src/api/queries'
 import { useLocation } from 'src/contexts/LocationContext'
 import { getClosestStations } from 'src/hooks/getClosestStations'
 import { sendAnalyticsEvent } from 'src/hooks/useAnalytics'
 import { useStationSearch } from 'src/hooks/useStationSearch'
+import { isRingLine, modesInNetwork } from 'src/utils/lineModes'
 import { validateReport, ValidationError } from 'src/utils/reportValidation'
-import { Report, Station } from 'src/utils/types'
+import { LineMode, Report, Station } from 'src/utils/types'
 
 import searchIcon from '../../../public/icons/search.svg'
 import FeedbackButton from '../Buttons/FeedbackButton/FeedbackButton'
@@ -20,13 +21,6 @@ import { TextAreaWithPrivacy, TextAreaWithPrivacyRef } from './TextAreaWithPriva
 
 interface ReportFormProps {
     onReportFormSubmit: (reportedData: Report) => void
-}
-
-enum Entity {
-    U = 'U',
-    S = 'S',
-    T = 'T',
-    ALL = '',
 }
 
 export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
@@ -51,28 +45,26 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
     const [textareaContent, setTextareaContent] = useState<string>('')
     const [isPrivacyChecked, setIsPrivacyChecked] = useState<boolean>(false)
 
-    const [currentEntity, setCurrentEntity] = useState<Entity>(Entity.ALL)
+    const [currentMode, setCurrentMode] = useState<LineMode | null>(null)
     const [currentLine, setCurrentLine] = useState<string | null>(null)
     const [currentDirection, setCurrentDirection] = useState<Station | null>(null)
     const [currentStation, setCurrentStation] = useState<Station | null>(null)
 
     const { data: linesData } = useLines()
+    const { data: lineMetadata } = useLineMetadata()
+    // Only the modes this network actually runs: a city without an underground offers no such filter.
+    const availableModes = useMemo(() => modesInNetwork(lineMetadata ?? {}), [lineMetadata])
     const allLines = linesData?.map(([line]) => line) ?? []
     const possibleLines = (() => {
         if (currentStation) {
             return allLines.filter((line) => currentStation.lines.includes(line))
         }
 
-        if (currentEntity === Entity.ALL) {
+        if (currentMode === null) {
             return allLines
         }
 
-        if (currentEntity === Entity.T) {
-            // exception because T stands for tram but we want Metro trams and regular trams
-            return allLines.filter((line) => line.startsWith('M') || /^\d+$/.test(line))
-        }
-
-        return allLines.filter((line) => line.startsWith(currentEntity))
+        return allLines.filter((line) => lineMetadata?.[line]?.mode === currentMode)
     })()
 
     const { data: stationsData } = useStations()
@@ -93,6 +85,9 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
 
     const possibleDirections = useMemo(() => {
         if (!currentLine || !allStations.length || !linesData) return []
+
+        // A ring has no terminus, so its first and last stop are no direction anyone could choose.
+        if (isRingLine(lineMetadata ?? {}, currentLine)) return []
 
         // Find the line data for the current line
         const lineData = linesData.find(([lineName]) => lineName === currentLine)
@@ -119,7 +114,7 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
         if (lastStation && lastStation.id !== firstStation?.id) directions.push(lastStation)
 
         return directions
-    }, [currentLine, allStations, linesData])
+    }, [currentLine, allStations, linesData, lineMetadata])
 
     const possibleStations = (() => {
         if (currentStation) {
@@ -168,7 +163,7 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
     const { mutateAsync: submitReport } = useSubmitReport({
         duration: (Date.now() - startTime.current) / 1000,
         meta: {
-            entity: currentEntity,
+            mode: currentMode,
             message: textareaWithPrivacyRef.current?.value ?? '',
             searchUsed: searchUsed.current,
             stationRecommendationUsed: stationRecommendationUsed.current,
@@ -230,28 +225,39 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
                     <h1>{t('ReportForm.title')}</h1>
                     <FeedbackButton handleButtonClick={() => setShowFeedback(!showFeedback)} />
                 </section>
-                <section
-                    className={`mb-2 flex-shrink-0 transition-all duration-300 ${
-                        isSearchFocused ? 'hidden md:block' : ''
-                    }`}
-                >
-                    <SelectField
-                        containerClassName="flex items-center justify-between mx-auto w-full h-10 gap-2"
-                        fieldClassName="flex justify-center items-center"
-                        onSelect={(selectedValue) => setCurrentEntity(selectedValue as Entity)}
-                        value={currentEntity}
+                {availableModes.length > 1 ? (
+                    <section
+                        className={`mb-2 flex-shrink-0 transition-all duration-300 ${
+                            isSearchFocused ? 'hidden md:block' : ''
+                        }`}
                     >
-                        <button type="button" className="flex min-w-0 flex-1 items-center justify-center">
-                            <Line line="U" />
-                        </button>
-                        <button type="button" className="flex min-w-0 flex-1 items-center justify-center">
-                            <Line line="S" />
-                        </button>
-                        <button type="button" className="flex min-w-0 flex-1 items-center justify-center">
-                            <Line line="T" />
-                        </button>
-                    </SelectField>
-                </section>
+                        <SelectField
+                            containerClassName="flex items-center justify-between mx-auto w-full h-10 gap-2"
+                            fieldClassName="flex justify-center items-center"
+                            onSelect={(selectedValue) => setCurrentMode(selectedValue as LineMode | null)}
+                            value={currentMode}
+                        >
+                            {availableModes.map((mode) => (
+                                <button
+                                    key={mode}
+                                    type="button"
+                                    data-select-value={mode}
+                                    /*
+                                     Berlin shows five modes where the form used to show three, and
+                                     a two word label like "Light rail" wrapped to a second line on
+                                     a narrow phone. The smaller type from the fourth mode on keeps
+                                     every label on one line without shrinking the common case.
+                                    */
+                                    className={`flex min-w-0 flex-1 items-center justify-center whitespace-nowrap font-semibold ${
+                                        availableModes.length > 3 ? 'text-xs' : 'text-sm'
+                                    }`}
+                                >
+                                    {t(`ReportForm.modes.${mode}`)}
+                                </button>
+                            ))}
+                        </SelectField>
+                    </section>
+                ) : null}
                 <section
                     className={`mb-2 flex-shrink-0 transition-all duration-300 ${
                         isSearchFocused ? 'hidden md:block' : ''
@@ -260,7 +266,11 @@ export const ReportForm = ({ onReportFormSubmit }: ReportFormProps) => {
                     <h2>{t('ReportForm.line')}</h2>
                     <SelectField
                         containerClassName="flex items-center justify-between mx-auto w-full overflow-x-visible overflow-y-hidden gap-2"
-                        onSelect={(selectedValue) => setCurrentLine(selectedValue ?? '')}
+                        onSelect={(selectedValue) => {
+                            setCurrentLine(selectedValue ?? '')
+                            // The old direction is a terminus of the old line, so it cannot survive.
+                            setCurrentDirection(null)
+                        }}
                         value={currentLine}
                     >
                         {possibleLines.map((line) => (

@@ -1,0 +1,38 @@
+# Halle (Saale), the HAVAG tram network including the line out to Bad Dürrenberg.
+#
+# Added by hand after the first build of Leipzig, for the same reason Gotha was split off Erfurt:
+# the discovery put both into one network, but they are separate systems 30 km apart, and both
+# number their lines from 1. Built together, five Leipzig lines jumped straight to Halle mid route.
+
+id: halle
+name: Halle (Saale)
+countryCode: DE
+timezone: Europe/Berlin
+# Every generated network starts in beta. It shows only reports people actually made, never
+# predicted ones, because there is no history to reason from yet.
+status: beta
+
+center:
+    latitude: 51.4818
+    longitude: 11.9698
+# Derived from the generated stations, so the map fits the network that was actually built.
+bounds: auto
+
+source:
+    # A box rather than a city boundary: line 5 runs south to Bad Dürrenberg, well outside Halle.
+    boundingBox:
+        southWest:
+            latitude: 51.25
+            longitude: 11.82
+        northEast:
+            latitude: 51.57
+            longitude: 12.13
+    modes:
+        tram: auto
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # No plain `ref` fallback: `ref` is only unique per operator, so trusting it risks colliding with
+    # another network's station id. DS100 codes are unique across Germany and node ids by construction.
+    idSources: [ref:ds100, railway:ref]

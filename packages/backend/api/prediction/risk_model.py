@@ -352,8 +352,11 @@ def main():
         # Read JSON input from stdin
         input_data = json.load(sys.stdin)
 
-        # Load segments from segments.json file
-        segments_path = Path("data/segments.json")
+        # Load segments from the network's segments.json file. The caller passes
+        # the path because segment geometry is per network.
+        if len(sys.argv) < 2:
+            raise SystemExit("usage: risk_model.py <path to segments.json>")
+        segments_path = Path(sys.argv[1])
         with segments_path.open("r") as f:
             segments_data = json.load(f)
             segments = []

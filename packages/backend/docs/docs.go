@@ -40,6 +40,18 @@ const docTemplate = `{
                         "description": "End timestamp (RFC3339 format)",
                         "name": "end",
                         "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Station ID to filter inspectors for a specific station",
+                        "name": "station",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -52,10 +64,31 @@ const docTemplate = `{
                             }
                         }
                     },
+                    "304": {
+                        "description": "Not Modified: The data has not changed since the If-Modified-Since header."
+                    },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
                             "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: The station does not belong to the network.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
                         }
                     },
                     "500": {
@@ -67,7 +100,7 @@ const docTemplate = `{
                 }
             },
             "post": {
-                "description": "Accepts a JSON payload with details about a ticket inspector's current location.\nThis endpoint validates the provided data, processes necessary computations for linking stations and lines,\ninserts the data into the database, and triggers an update to the risk model used in operational analysis.\nIf the 'timestamp' field is not provided in the request, the current UTC time truncated to the nearest minute is used automatically.\nThe endpoint also includes a rate limit to prevent abuse. The rate limit is based on the IP address of the request.",
+                "description": "Accepts a JSON payload with details about a ticket inspector's current location.\nThis endpoint validates the provided data, processes necessary computations for linking stations and lines,\ninserts the data into the database, and triggers an update to the risk model used in operational analysis.\nIf the 'timestamp' field of the body is not provided, the current UTC time truncated to the nearest minute is used automatically.\nThe endpoint is rate limited per IP address, and reports classified as spam are rejected with 403.",
                 "consumes": [
                     "application/json"
                 ],
@@ -80,7 +113,7 @@ const docTemplate = `{
                 "summary": "Submit ticket inspector data",
                 "parameters": [
                     {
-                        "description": "Data about the inspector's location and activity",
+                        "description": "Data about the inspector's location and activity, including an optional 'timestamp' in RFC3339 format",
                         "name": "inspectorData",
                         "in": "body",
                         "required": true,
@@ -90,8 +123,8 @@ const docTemplate = `{
                     },
                     {
                         "type": "string",
-                        "description": "Timestamp of the report in ISO 8601 format (e.g., 2006-01-02T15:04:05Z); if not provided, the current time is used",
-                        "name": "timestamp",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
                         "in": "query"
                     }
                 ],
@@ -104,6 +137,33 @@ const docTemplate = `{
                     },
                     "400": {
                         "description": "Bad Request: Missing or incorrect parameters provided."
+                    },
+                    "403": {
+                        "description": "Forbidden: The report was classified as spam.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: The report names a station, direction or line the network does not contain.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "429": {
                         "description": "Too Many Requests: The request has been rate limited."
@@ -170,6 +230,14 @@ const docTemplate = `{
                     "lines"
                 ],
                 "summary": "Get all lines",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successfully retrieved all lines data.",
@@ -183,8 +251,63 @@ const docTemplate = `{
                             }
                         }
                     },
+                    "304": {
+                        "description": "Not Modified: The ETag matches the If-None-Match header."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
                     "500": {
                         "description": "Internal Server Error: Error retrieving lines data."
+                    }
+                }
+            }
+        },
+        "/lines/metadata": {
+            "get": {
+                "description": "Retrieves the colour and mode of every line in the network.\nClients use this instead of deriving either from the line name, which is a per city convention rather than a fact.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "lines"
+                ],
+                "summary": "Get the metadata of all lines",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved the line metadata.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/utils.LineMetadataEntry"
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": "Not Modified: The ETag matches the If-None-Match header."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
                     }
                 }
             }
@@ -199,6 +322,14 @@ const docTemplate = `{
                     "lines"
                 ],
                 "summary": "Get all segments",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "GeoJSON segments data",
@@ -208,6 +339,15 @@ const docTemplate = `{
                     },
                     "304": {
                         "description": "Not Modified"
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "500": {
                         "description": "Internal Server Error: Error retrieving segments data.",
@@ -252,6 +392,12 @@ const docTemplate = `{
                         "description": "End time for the statistics (format: RFC3339)",
                         "name": "end",
                         "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -264,6 +410,24 @@ const docTemplate = `{
                     "400": {
                         "description": "Bad Request: Invalid time format.",
                         "schema": {}
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: The station or line does not belong to the network.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "500": {
                         "description": "Internal Server Error: Failed to get number of reports.",
@@ -289,6 +453,12 @@ const docTemplate = `{
                         "name": "lineName",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -316,6 +486,29 @@ const docTemplate = `{
                 }
             }
         },
+        "/networks": {
+            "get": {
+                "description": "Retrieves every transit network this deployment serves, including the geography a client needs to position its map.\nThis is the entry point: a client calls it before anything else and scopes every following request to one of the returned ids.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "networks"
+                ],
+                "summary": "Get all networks",
+                "responses": {
+                    "200": {
+                        "description": "Successfully retrieved the available networks.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/utils.Network"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/stations": {
             "get": {
                 "description": "Retrieves information about all available stations.\nThis endpoint returns a list of all stations and their details.",
@@ -326,6 +519,14 @@ const docTemplate = `{
                     "stations"
                 ],
                 "summary": "Get all stations",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -333,6 +534,18 @@ const docTemplate = `{
                             "type": "object",
                             "additionalProperties": {
                                 "$ref": "#/definitions/utils.Station"
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": "Not Modified: The ETag matches the If-None-Match header."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
                             }
                         }
                     },
@@ -344,7 +557,7 @@ const docTemplate = `{
         },
         "/stations/search": {
             "get": {
-                "description": "Searches for a station using the provided name and returns the matching station information.\nThis endpoint is case and whitespace insensitive and returns the first exact match found.",
+                "description": "Searches for a station using the provided name and returns the matching station information.\nThis endpoint is case and whitespace insensitive. Station names are not unique, so when several stations carry the name the one with the lowest id is returned.",
                 "produces": [
                     "application/json"
                 ],
@@ -359,6 +572,12 @@ const docTemplate = `{
                         "name": "name",
                         "in": "query",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -409,6 +628,12 @@ const docTemplate = `{
                         "name": "stationId",
                         "in": "path",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -432,7 +657,7 @@ const docTemplate = `{
         },
         "/stations/{stationId}/statistics": {
             "get": {
-                "description": "Retrieves statistics for a specific station.\nThis endpoint returns the number of reports for the specified station within the given time range.",
+                "description": "Retrieves statistics for a specific station.\nThis endpoint returns the number of reports for the specified station within the given time range.\nThe count covers every line at the station, use /lines/{lineId}/{stationId}/statistics for a single line.",
                 "produces": [
                     "application/json"
                 ],
@@ -450,12 +675,6 @@ const docTemplate = `{
                     },
                     {
                         "type": "string",
-                        "description": "ID of the line (optional)",
-                        "name": "lineId",
-                        "in": "query"
-                    },
-                    {
-                        "type": "string",
                         "description": "Start time for the statistics (format: RFC3339)",
                         "name": "start",
                         "in": "query"
@@ -464,6 +683,12 @@ const docTemplate = `{
                         "type": "string",
                         "description": "End time for the statistics (format: RFC3339)",
                         "name": "end",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
                         "in": "query"
                     }
                 ],
@@ -477,6 +702,24 @@ const docTemplate = `{
                     "400": {
                         "description": "Bad Request: Invalid time format.",
                         "schema": {}
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: The station does not belong to the network.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
                     },
                     "500": {
                         "description": "Internal Server Error: Failed to get number of reports.",
@@ -512,6 +755,12 @@ const docTemplate = `{
                         "name": "userStationId",
                         "in": "query",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -519,6 +768,33 @@ const docTemplate = `{
                         "description": "The shortest distance in terms of the number of station stops between the inspector's station and the user's location.",
                         "schema": {
                             "type": "int"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request: One of the station id parameters is missing.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: One of the stations does not belong to the network.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
                         }
                     },
                     "500": {
@@ -537,11 +813,28 @@ const docTemplate = `{
                     "prediction"
                 ],
                 "summary": "Get risk segments",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successfully retrieved risk segments data",
                         "schema": {
                             "$ref": "#/definitions/v0.v0RiskData"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
                         }
                     },
                     "500": {
@@ -577,6 +870,12 @@ const docTemplate = `{
                         "name": "endStation",
                         "in": "query",
                         "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -587,7 +886,25 @@ const docTemplate = `{
                         }
                     },
                     "400": {
-                        "description": "Bad Request: Missing or invalid station IDs",
+                        "description": "Bad Request: Missing station IDs, or a station the routing engine does not serve",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity: One of the stations does not belong to the network.",
                         "schema": {
                             "type": "object",
                             "additionalProperties": {
@@ -626,11 +943,28 @@ const docTemplate = `{
                     "prediction"
                 ],
                 "summary": "Get risk segments",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "ID of the network (defaults to berlin)",
+                        "name": "network",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successfully retrieved risk segments data",
                         "schema": {
                             "$ref": "#/definitions/prediction.RiskData"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found: The specified network does not exist.",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
                         }
                     },
                     "500": {
@@ -706,6 +1040,7 @@ const docTemplate = `{
                     "type": "number"
                 },
                 "duration": {
+                    "description": "in seconds",
                     "type": "integer"
                 },
                 "endTime": {
@@ -729,6 +1064,7 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "duration": {
+                    "description": "in seconds",
                     "type": "integer"
                 },
                 "endTime": {
@@ -883,6 +1219,74 @@ const docTemplate = `{
                 }
             }
         },
+        "utils.LineMetadataEntry": {
+            "type": "object",
+            "properties": {
+                "color": {
+                    "type": "string"
+                },
+                "isCircular": {
+                    "type": "boolean"
+                },
+                "mode": {
+                    "type": "string"
+                }
+            }
+        },
+        "utils.Network": {
+            "type": "object",
+            "properties": {
+                "bounds": {
+                    "$ref": "#/definitions/utils.NetworkBounds"
+                },
+                "center": {
+                    "$ref": "#/definitions/utils.Coordinates"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "serves": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "status": {
+                    "$ref": "#/definitions/utils.NetworkStatus"
+                },
+                "timezone": {
+                    "type": "string"
+                }
+            }
+        },
+        "utils.NetworkBounds": {
+            "type": "object",
+            "properties": {
+                "northEast": {
+                    "$ref": "#/definitions/utils.Coordinates"
+                },
+                "southWest": {
+                    "$ref": "#/definitions/utils.Coordinates"
+                }
+            }
+        },
+        "utils.NetworkStatus": {
+            "type": "string",
+            "enum": [
+                "active",
+                "beta"
+            ],
+            "x-enum-varnames": [
+                "NetworkStatusActive",
+                "NetworkStatusBeta"
+            ]
+        },
         "utils.ResponseData": {
             "type": "object",
             "properties": {
@@ -928,7 +1332,8 @@ const docTemplate = `{
                     "items": {
                         "type": "array",
                         "items": {
-                            "type": "number"
+                            "type": "number",
+                            "format": "float64"
                         }
                     }
                 },
@@ -940,9 +1345,6 @@ const docTemplate = `{
         "utils.SegmentProperties": {
             "type": "object",
             "properties": {
-                "line": {
-                    "type": "string"
-                },
                 "line_color": {
                     "type": "string"
                 },

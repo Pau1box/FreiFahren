@@ -1,0 +1,881 @@
+{
+    "Abzweig nach Reick": [],
+    "Achtbeeteweg": [],
+    "Alaunplatz": [
+        "Alaun",
+        "Alaunplz"
+    ],
+    "Albert-Wolf-Platz": [
+        "Albert-Wolf-",
+        "Albert-Wolf-plz"
+    ],
+    "Alberthafen": [],
+    "Albertplatz (Erich-Kästner-Museum)": [
+        "Albertplatz"
+    ],
+    "Albertplatz (Süd)": [
+        "Albertplatz"
+    ],
+    "Alexander-Puschkin-Platz": [
+        "Alexander-Puschkin-",
+        "Alexander-Puschkin-plz"
+    ],
+    "Altcotta": [],
+    "Alter Schlachthof": [
+        "Alter"
+    ],
+    "Altleuben": [],
+    "Altmarkt": [],
+    "Altnossener Straße": [
+        "Altnossener",
+        "Altnossener Str.",
+        "Altnossener Strasse"
+    ],
+    "Altpieschen": [],
+    "Altreick": [],
+    "Alttolkewitz": [],
+    "Alttrachau": [],
+    "Am Hellerrand (Deutsche Werkstätten)": [],
+    "Am Weißen Adler": [],
+    "Am Zwingerteich": [
+        "Zwingerteich"
+    ],
+    "Amalie-Dietrich-Platz": [
+        "Amalie-Dietrich-",
+        "Amalie-Dietrich-plz"
+    ],
+    "An der Flutrinne": [],
+    "Antonstraße / Leipziger Straße": [
+        "Antonstraße / Leipziger",
+        "Antonstraße / Leipziger Str.",
+        "Antonstraße / Leipziger Strasse"
+    ],
+    "Arkonastraße": [
+        "Arkona",
+        "Arkonastr.",
+        "Arkonastrasse"
+    ],
+    "Augsburger Straße (Universitätsklinikum)": [],
+    "Bahnhof Mitte / Könneritzstraße": [
+        "Bahnhof Mitte / Könneritz",
+        "Bahnhof Mitte / Könneritzstr.",
+        "Bahnhof Mitte / Könneritzstrasse"
+    ],
+    "Bahnhof Neustadt": [
+        "Bahnhof"
+    ],
+    "Bahnhof Neustadt (Hansastraße)": [],
+    "Bautzner Straße / Rothenburger Straße": [
+        "Bautzner Straße / Rothenburger",
+        "Bautzner Straße / Rothenburger Str.",
+        "Bautzner Straße / Rothenburger Strasse"
+    ],
+    "Bergmannstraße": [
+        "Bergmann",
+        "Bergmannstr.",
+        "Bergmannstrasse"
+    ],
+    "Berthold-Haupt-Straße": [
+        "Berthold-Haupt-",
+        "Berthold-Haupt-str.",
+        "Berthold-Haupt-strasse"
+    ],
+    "Betriebshof Waltherstraße": [
+        "Betriebshof Walther",
+        "Betriebshof Waltherstr.",
+        "Betriebshof Waltherstrasse"
+    ],
+    "Birkenhainer Straße": [
+        "Birkenhainer",
+        "Birkenhainer Str.",
+        "Birkenhainer Strasse"
+    ],
+    "Bischofsweg": [],
+    "Blasewitz, Schillerplatz": [
+        "Blasewitz, Schiller",
+        "Blasewitz, Schillerplz"
+    ],
+    "Breitscheidstraße": [
+        "Breitscheid",
+        "Breitscheidstr.",
+        "Breitscheidstrasse"
+    ],
+    "Brockwitzer Straße": [
+        "Brockwitzer",
+        "Brockwitzer Str.",
+        "Brockwitzer Strasse"
+    ],
+    "Brunnenweg": [],
+    "Budapester Straße": [
+        "Budapester",
+        "Budapester Str.",
+        "Budapester Strasse"
+    ],
+    "Burgkstraße": [
+        "Burgk",
+        "Burgkstr.",
+        "Burgkstrasse"
+    ],
+    "Bühlau, Ullersdorfer Platz": [
+        "Bühlau, Ullersdorfer",
+        "Bühlau, Ullersdorferplz"
+    ],
+    "Bünaustraße": [
+        "Bünau",
+        "Bünaustr.",
+        "Bünaustrasse"
+    ],
+    "Bürgerstraße": [
+        "Bürger",
+        "Bürgerstr.",
+        "Bürgerstrasse"
+    ],
+    "Carolaplatz (Regierungsviertel)": [
+        "Carolaplatz"
+    ],
+    "Chamissostraße": [
+        "Chamisso",
+        "Chamissostr.",
+        "Chamissostrasse"
+    ],
+    "Comeniusplatz": [
+        "Comenius",
+        "Comeniusplz"
+    ],
+    "Conertplatz": [
+        "Conert",
+        "Conertplz"
+    ],
+    "Coschütz": [],
+    "Coswig, Auerstraße": [
+        "Coswig, Auer",
+        "Coswig, Auerstr.",
+        "Coswig, Auerstrasse"
+    ],
+    "Coswig, Radebeuler Straße": [
+        "Coswig, Radebeuler",
+        "Coswig, Radebeuler Str.",
+        "Coswig, Radebeuler Strasse"
+    ],
+    "Coswig, Rathaus": [
+        "Coswig,"
+    ],
+    "Coswig, Salzstraße": [
+        "Coswig, Salz",
+        "Coswig, Salzstr.",
+        "Coswig, Salzstrasse"
+    ],
+    "Coswig, Steinbacher Weg": [],
+    "Cotta, Gottfried-Keller-Straße": [
+        "Cotta, Gottfried-Keller-",
+        "Cotta, Gottfried-Keller-str.",
+        "Cotta, Gottfried-Keller-strasse"
+    ],
+    "Cottaer Straße": [
+        "Cottaer",
+        "Cottaer Str.",
+        "Cottaer Strasse"
+    ],
+    "Coventrystraße": [
+        "Coventry",
+        "Coventrystr.",
+        "Coventrystrasse"
+    ],
+    "Cäcilienstraße": [
+        "Cäcilien",
+        "Cäcilienstr.",
+        "Cäcilienstrasse"
+    ],
+    "Cämmerswalder Straße": [
+        "Cämmerswalder",
+        "Cämmerswalder Str.",
+        "Cämmerswalder Strasse"
+    ],
+    "Deutsches Hygiene-Museum": [
+        "Deutsches"
+    ],
+    "Diakonissenkrankenhaus": [],
+    "Dorothea-Erxleben-Straße": [
+        "Dorothea-Erxleben-",
+        "Dorothea-Erxleben-str.",
+        "Dorothea-Erxleben-strasse"
+    ],
+    "Dresden, Angelikastraße": [
+        "Dresden, Angelika",
+        "Dresden, Angelikastr.",
+        "Dresden, Angelikastrasse"
+    ],
+    "Dresden, Blasewitzer Straße/Fetscherstraße": [
+        "Dresden, Blasewitzer Straße/Fetscher",
+        "Dresden, Blasewitzer Straße/Fetscherstr.",
+        "Dresden, Blasewitzer Straße/Fetscherstrasse"
+    ],
+    "Dresden, Walpurgisstraße": [
+        "Dresden, Walpurgis",
+        "Dresden, Walpurgisstr.",
+        "Dresden, Walpurgisstrasse"
+    ],
+    "Dürerstraße (Evangelische Hochschule)": [],
+    "Elbepark": [],
+    "Elbschlösser": [],
+    "Eugen-Bracht-Straße": [
+        "Eugen-Bracht-",
+        "Eugen-Bracht-str.",
+        "Eugen-Bracht-strasse"
+    ],
+    "Festspielhaus Hellerau": [
+        "Festspielhaus"
+    ],
+    "Fetscherplatz": [
+        "Fetscher",
+        "Fetscherplz"
+    ],
+    "Florastraße": [
+        "Flora",
+        "Florastr.",
+        "Florastrasse"
+    ],
+    "Friedensstraße": [
+        "Friedens",
+        "Friedensstr.",
+        "Friedensstrasse"
+    ],
+    "Fuchsberg": [],
+    "Gabelsbergerstraße": [
+        "Gabelsberger",
+        "Gabelsbergerstr.",
+        "Gabelsbergerstrasse"
+    ],
+    "Georg-Arnhold-Bad (Deutsches Hygiene-Museum)": [],
+    "Georg-Palitzsch-Straße": [
+        "Georg-Palitzsch-",
+        "Georg-Palitzsch-str.",
+        "Georg-Palitzsch-strasse"
+    ],
+    "Gompitz, Gompitzer Höhe": [],
+    "Gorbitz, Betriebshof": [
+        "Gorbitz,"
+    ],
+    "Gottleubaer Straße": [
+        "Gottleubaer",
+        "Gottleubaer Str.",
+        "Gottleubaer Strasse"
+    ],
+    "Gret-Palucca-Straße": [
+        "Gret-Palucca-",
+        "Gret-Palucca-str.",
+        "Gret-Palucca-strasse"
+    ],
+    "Großenhainer Platz": [
+        "Großenhainer",
+        "Großenhainerplz"
+    ],
+    "Großglocknerstraße": [
+        "Großglockner",
+        "Großglocknerstr.",
+        "Großglocknerstrasse"
+    ],
+    "Grundstraße": [
+        "Grund",
+        "Grundstr.",
+        "Grundstrasse"
+    ],
+    "Guerickestraße": [
+        "Guericke",
+        "Guerickestr.",
+        "Guerickestrasse"
+    ],
+    "Gustav-Freytag-Straße": [
+        "Gustav-Freytag-",
+        "Gustav-Freytag-str.",
+        "Gustav-Freytag-strasse"
+    ],
+    "Görlitzer Straße (Nordbad)": [],
+    "Haltepunkt Weixdorf Bad": [],
+    "Hauptbahnhof": [],
+    "Hebbelplatz": [
+        "Hebbel",
+        "Hebbelplz"
+    ],
+    "Heckenweg": [],
+    "Heeresbäckerei (Stadtarchiv)": [
+        "Heeresbäckerei"
+    ],
+    "Hegereiterstraße": [
+        "Hegereiter",
+        "Hegereiterstr.",
+        "Hegereiterstrasse"
+    ],
+    "Heinrich-Schütz-Straße": [
+        "Heinrich-Schütz-",
+        "Heinrich-Schütz-str.",
+        "Heinrich-Schütz-strasse"
+    ],
+    "Heinrich-Tessenow-Weg": [],
+    "Hellerau, Kiefernweg": [
+        "Hellerau,"
+    ],
+    "Hellersiedlung": [],
+    "Hermann-Seidel-Straße": [
+        "Hermann-Seidel-",
+        "Hermann-Seidel-str.",
+        "Hermann-Seidel-strasse"
+    ],
+    "Hubertusplatz": [
+        "Hubertus",
+        "Hubertusplz"
+    ],
+    "Hugo-Bürkner-Straße": [
+        "Hugo-Bürkner-",
+        "Hugo-Bürkner-str.",
+        "Hugo-Bürkner-strasse"
+    ],
+    "Hülßestraße": [
+        "Hülße",
+        "Hülßestr.",
+        "Hülßestrasse"
+    ],
+    "Industriepark Klotzsche": [
+        "Industriepark"
+    ],
+    "Infineon Nord": [
+        "Infineon"
+    ],
+    "Infineon Süd (Abzweig nach Hellerau)": [],
+    "Jacob-Winter-Platz (Prohlis-Zentrum)": [
+        "Jacob-Winter-Platz"
+    ],
+    "Johannisfriedhof": [],
+    "Julius-Vahlteich-Straße": [
+        "Julius-Vahlteich-",
+        "Julius-Vahlteich-str.",
+        "Julius-Vahlteich-strasse"
+    ],
+    "Jüngststraße": [
+        "Jüngst",
+        "Jüngststr.",
+        "Jüngststrasse"
+    ],
+    "Kaditz, Riegelplatz": [
+        "Kaditz, Riegel",
+        "Kaditz, Riegelplz"
+    ],
+    "Karcherallee": [
+        "Karcher"
+    ],
+    "Karl-Marx-Straße": [
+        "Karl-Marx-",
+        "Karl-Marx-str.",
+        "Karl-Marx-strasse"
+    ],
+    "Kirschenstraße": [
+        "Kirschen",
+        "Kirschenstr.",
+        "Kirschenstrasse"
+    ],
+    "Kleestraße": [
+        "Klee",
+        "Kleestr.",
+        "Kleestrasse"
+    ],
+    "Kleinzschachwitz, Freystraße": [
+        "Kleinzschachwitz, Frey",
+        "Kleinzschachwitz, Freystr.",
+        "Kleinzschachwitz, Freystrasse"
+    ],
+    "Koblenzer Straße": [
+        "Koblenzer",
+        "Koblenzer Str.",
+        "Koblenzer Strasse"
+    ],
+    "Kongresszentrum (Haus der Presse)": [],
+    "Koreanischer Platz": [
+        "Koreanischer",
+        "Koreanischerplz"
+    ],
+    "Kotteweg": [],
+    "Krankenhaus Friedrichstadt (Sportpark Ostra)": [],
+    "Krankenhaus St. Joseph-Stift": [],
+    "Käthe-Kollwitz-Platz": [
+        "Käthe-Kollwitz-",
+        "Käthe-Kollwitz-plz"
+    ],
+    "Königsheimplatz": [
+        "Königsheim",
+        "Königsheimplz"
+    ],
+    "Laibacher Straße": [
+        "Laibacher",
+        "Laibacher Str.",
+        "Laibacher Strasse"
+    ],
+    "Lassallestraße": [
+        "Lassalle",
+        "Lassallestr.",
+        "Lassallestrasse"
+    ],
+    "Laubegast, Kronstädter Platz": [
+        "Laubegast, Kronstädter",
+        "Laubegast, Kronstädterplz"
+    ],
+    "Lene-Glatzer-Straße": [
+        "Lene-Glatzer-",
+        "Lene-Glatzer-str.",
+        "Lene-Glatzer-strasse"
+    ],
+    "Lennéplatz": [
+        "Lenné",
+        "Lennéplz"
+    ],
+    "Leubener Straße": [
+        "Leubener",
+        "Leubener Str.",
+        "Leubener Strasse"
+    ],
+    "Leutewitz": [],
+    "Liebstädter Straße": [
+        "Liebstädter",
+        "Liebstädter Str.",
+        "Liebstädter Strasse"
+    ],
+    "Lipsiusstraße": [
+        "Lipsius",
+        "Lipsiusstr.",
+        "Lipsiusstrasse"
+    ],
+    "Liststraße": [
+        "List",
+        "Liststr.",
+        "Liststrasse"
+    ],
+    "Lohrmannstraße": [
+        "Lohrmann",
+        "Lohrmannstr.",
+        "Lohrmannstrasse"
+    ],
+    "Louisenstraße": [
+        "Louisen",
+        "Louisenstr.",
+        "Louisenstrasse"
+    ],
+    "Löbtau, Tharandter Straße": [
+        "Löbtau, Tharandter",
+        "Löbtau, Tharandter Str.",
+        "Löbtau, Tharandter Strasse"
+    ],
+    "Lößnitzstraße": [
+        "Lößnitz",
+        "Lößnitzstr.",
+        "Lößnitzstrasse"
+    ],
+    "Malterstraße": [
+        "Malter",
+        "Malterstr.",
+        "Malterstrasse"
+    ],
+    "Manitiusstraße": [
+        "Manitius",
+        "Manitiusstr.",
+        "Manitiusstrasse"
+    ],
+    "Marienberger Straße": [
+        "Marienberger",
+        "Marienberger Str.",
+        "Marienberger Strasse"
+    ],
+    "Merianplatz": [
+        "Merian",
+        "Merianplz"
+    ],
+    "Messe Dresden": [
+        "Messe"
+    ],
+    "Messe, Gleisschleife": [
+        "Messe,"
+    ],
+    "Messering (Halle 1)": [],
+    "Meußlitzer Straße": [
+        "Meußlitzer",
+        "Meußlitzer Str.",
+        "Meußlitzer Strasse"
+    ],
+    "Mickten": [],
+    "Mockritzer Straße": [
+        "Mockritzer",
+        "Mockritzer Str.",
+        "Mockritzer Strasse"
+    ],
+    "Mordgrundbrücke": [],
+    "Moritzburger Weg": [
+        "Moritzburger"
+    ],
+    "Mosenstraße": [
+        "Mosen",
+        "Mosenstr.",
+        "Mosenstrasse"
+    ],
+    "Münchner Platz (Gedenkstätte)": [],
+    "Neustädter Markt (Goldener Reiter)": [],
+    "Nordstraße": [
+        "Nord",
+        "Nordstr.",
+        "Nordstrasse"
+    ],
+    "Nürnberger Platz": [
+        "Nürnberger",
+        "Nürnbergerplz"
+    ],
+    "Ockerwitzer Straße": [
+        "Ockerwitzer",
+        "Ockerwitzer Str.",
+        "Ockerwitzer Strasse"
+    ],
+    "Oschatzer Straße": [
+        "Oschatzer",
+        "Oschatzer Str.",
+        "Oschatzer Strasse"
+    ],
+    "Otto-Dix-Ring": [],
+    "Palaisplatz (Japanisches Palais)": [],
+    "Pennrich, Gleisschleife": [
+        "Pennrich,"
+    ],
+    "Pennricher Straße": [
+        "Pennricher",
+        "Pennricher Str.",
+        "Pennricher Strasse"
+    ],
+    "Permoserstraße": [
+        "Permoser",
+        "Permoserstr.",
+        "Permoserstrasse"
+    ],
+    "Pirnaischer Platz": [
+        "Pirnaischer",
+        "Pirnaischerplz"
+    ],
+    "Plattleite": [],
+    "Plauen, Nöthnitzer Straße": [
+        "Plauen, Nöthnitzer",
+        "Plauen, Nöthnitzer Str.",
+        "Plauen, Nöthnitzer Strasse"
+    ],
+    "Pohlandplatz (Technische Sammlungen)": [],
+    "Postplatz (Ausstieg)": [
+        "Postplatz"
+    ],
+    "Prager Straße": [
+        "Prager",
+        "Prager Str.",
+        "Prager Strasse"
+    ],
+    "Prellerstraße": [
+        "Preller",
+        "Prellerstr.",
+        "Prellerstrasse"
+    ],
+    "Prof.-Ricker-Straße": [
+        "Prof.-Ricker-",
+        "Prof.-Ricker-str.",
+        "Prof.-Ricker-strasse"
+    ],
+    "Prohlis, Gleisschleife": [
+        "Prohlis,"
+    ],
+    "Pulsnitzer Straße": [
+        "Pulsnitzer",
+        "Pulsnitzer Str.",
+        "Pulsnitzer Strasse"
+    ],
+    "Querallee": [
+        "Quer"
+    ],
+    "Radebeul Ost, Schillerstraße": [
+        "Radebeul Ost, Schiller",
+        "Radebeul Ost, Schillerstr.",
+        "Radebeul Ost, Schillerstrasse"
+    ],
+    "Radebeul West, Flemmingstraße": [
+        "Radebeul West, Flemming",
+        "Radebeul West, Flemmingstr.",
+        "Radebeul West, Flemmingstrasse"
+    ],
+    "Radebeul, Borstraße": [
+        "Radebeul, Bor",
+        "Radebeul, Borstr.",
+        "Radebeul, Borstrasse"
+    ],
+    "Radebeul, Dr.-Külz-Straße": [
+        "Radebeul, Dr.-Külz-",
+        "Radebeul, Dr.-Külz-str.",
+        "Radebeul, Dr.-Külz-strasse"
+    ],
+    "Radebeul, Eisenbahnbrücke": [
+        "Radebeul,"
+    ],
+    "Radebeul, Forststraße": [
+        "Radebeul, Forst",
+        "Radebeul, Forststr.",
+        "Radebeul, Forststrasse"
+    ],
+    "Radebeul, Gerhart-Hauptmann-Straße": [
+        "Radebeul, Gerhart-Hauptmann-",
+        "Radebeul, Gerhart-Hauptmann-str.",
+        "Radebeul, Gerhart-Hauptmann-strasse"
+    ],
+    "Radebeul, Gradsteg": [
+        "Radebeul,"
+    ],
+    "Radebeul, Hauptstraße": [
+        "Radebeul, Haupt",
+        "Radebeul, Hauptstr.",
+        "Radebeul, Hauptstrasse"
+    ],
+    "Radebeul, Johannisbergstraße": [
+        "Radebeul, Johannisberg",
+        "Radebeul, Johannisbergstr.",
+        "Radebeul, Johannisbergstrasse"
+    ],
+    "Radebeul, Landesbühnen Sachsen": [],
+    "Radebeul, Moritzburger Straße": [
+        "Radebeul, Moritzburger",
+        "Radebeul, Moritzburger Str.",
+        "Radebeul, Moritzburger Strasse"
+    ],
+    "Radebeul, Schildenstraße": [
+        "Radebeul, Schilden",
+        "Radebeul, Schildenstr.",
+        "Radebeul, Schildenstrasse"
+    ],
+    "Radebeul, Schloss Wackerbarth": [],
+    "Radebeul, Wasastraße": [
+        "Radebeul, Wasa",
+        "Radebeul, Wasastr.",
+        "Radebeul, Wasastrasse"
+    ],
+    "Radebeul, Zillerstraße (Elblandklinikum)": [],
+    "Radebeul, Zinzendorfstraße": [
+        "Radebeul, Zinzendorf",
+        "Radebeul, Zinzendorfstr.",
+        "Radebeul, Zinzendorfstrasse"
+    ],
+    "Radebeuler Straße": [
+        "Radebeuler",
+        "Radebeuler Str.",
+        "Radebeuler Strasse"
+    ],
+    "Rankestraße": [
+        "Ranke",
+        "Rankestr.",
+        "Rankestrasse"
+    ],
+    "Rathaus Pieschen": [
+        "Rathaus"
+    ],
+    "Rauensteinstraße": [
+        "Rauenstein",
+        "Rauensteinstr.",
+        "Rauensteinstrasse"
+    ],
+    "Reichenbachstraße (Studentenwerk)": [
+        "Reichenbachstraße"
+    ],
+    "Rennplatzstraße": [
+        "Rennplatz",
+        "Rennplatzstr.",
+        "Rennplatzstrasse"
+    ],
+    "Rosa-Luxemburg-Platz": [
+        "Rosa-Luxemburg-",
+        "Rosa-Luxemburg-plz"
+    ],
+    "Rottwerndorfer Straße": [
+        "Rottwerndorfer",
+        "Rottwerndorfer Str.",
+        "Rottwerndorfer Strasse"
+    ],
+    "Rudolf-Walther-Straße": [
+        "Rudolf-Walther-",
+        "Rudolf-Walther-str.",
+        "Rudolf-Walther-strasse"
+    ],
+    "Räcknitzhöhe": [],
+    "S-Bahnhof Bischofsplatz": [
+        "S-Bahnhof Bischofs",
+        "S-Bahnhof Bischofsplz"
+    ],
+    "S-Bahnhof Dobritz": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Freiberger Straße": [
+        "S-Bahnhof Freiberger",
+        "S-Bahnhof Freiberger Str.",
+        "S-Bahnhof Freiberger Strasse"
+    ],
+    "S-Bahnhof Industriegelände": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Niedersedlitz": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Strehlen": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Trachau West": [],
+    "Saarstraße": [
+        "Saar",
+        "Saarstr.",
+        "Saarstrasse"
+    ],
+    "Sachsenallee": [
+        "Sachsen"
+    ],
+    "Sankt-Benno-Gymnasium": [],
+    "Schlehenstraße": [
+        "Schlehen",
+        "Schlehenstr.",
+        "Schlehenstrasse"
+    ],
+    "Schweriner Straße (Hochschule für Musik)": [],
+    "Schwimmhalle Bühlau": [
+        "Schwimmhalle"
+    ],
+    "Schwimmhalle Freiberger Platz": [
+        "Schwimmhalle Freiberger",
+        "Schwimmhalle Freibergerplz"
+    ],
+    "Semmelweisstraße": [
+        "Semmelweis",
+        "Semmelweisstr.",
+        "Semmelweisstrasse"
+    ],
+    "Spenerstraße": [
+        "Spener",
+        "Spenerstr.",
+        "Spenerstrasse"
+    ],
+    "Stauffenbergallee (Militärhistorisches Museum)": [],
+    "Straßburger Platz (Gläserne Manufaktur)": [],
+    "Straße des 17. Juni": [],
+    "Strehlener Platz": [
+        "Strehlener",
+        "Strehlenerplz"
+    ],
+    "Striesen, Emanuel-Goldberg-Platz": [
+        "Striesen, Emanuel-Goldberg-",
+        "Striesen, Emanuel-Goldberg-plz"
+    ],
+    "Sörnewitzer Straße": [
+        "Sörnewitzer",
+        "Sörnewitzer Str.",
+        "Sörnewitzer Strasse"
+    ],
+    "Südvorstadt": [],
+    "Tannenstraße (Goethe-Institut)": [
+        "Tannenstraße"
+    ],
+    "Theaterplatz": [
+        "Theater",
+        "Theaterplz"
+    ],
+    "Tolkewitz Schulcampus": [
+        "Tolkewitz"
+    ],
+    "Trachauer Straße": [
+        "Trachauer",
+        "Trachauer Str.",
+        "Trachauer Strasse"
+    ],
+    "Trachenberger Platz": [
+        "Trachenberger",
+        "Trachenbergerplz"
+    ],
+    "Trattendorfer Straße": [
+        "Trattendorfer",
+        "Trattendorfer Str.",
+        "Trattendorfer Strasse"
+    ],
+    "Trinitatisplatz": [
+        "Trinitatis",
+        "Trinitatisplz"
+    ],
+    "Waldschlößchen": [],
+    "Waltherstraße": [
+        "Walther",
+        "Waltherstr.",
+        "Waltherstrasse"
+    ],
+    "Wasaplatz": [
+        "Wasa",
+        "Wasaplz"
+    ],
+    "Washingtonstraße": [
+        "Washington",
+        "Washingtonstr.",
+        "Washingtonstrasse"
+    ],
+    "Wasserwerk Tolkewitz": [
+        "Wasserwerk"
+    ],
+    "Weinböhla (Rathausstraße)": [
+        "Weinböhla"
+    ],
+    "Weinböhla, Gellertstraße": [
+        "Weinböhla, Gellert",
+        "Weinböhla, Gellertstr.",
+        "Weinböhla, Gellertstrasse"
+    ],
+    "Weinböhla, Köhlerstraße": [
+        "Weinböhla, Köhler",
+        "Weinböhla, Köhlerstr.",
+        "Weinböhla, Köhlerstrasse"
+    ],
+    "Weixdorf, Rathenaustraße": [
+        "Weixdorf, Rathenau",
+        "Weixdorf, Rathenaustr.",
+        "Weixdorf, Rathenaustrasse"
+    ],
+    "Weißeritzstraße": [
+        "Weißeritz",
+        "Weißeritzstr.",
+        "Weißeritzstrasse"
+    ],
+    "Wernerstraße": [
+        "Werner",
+        "Wernerstr.",
+        "Wernerstrasse"
+    ],
+    "Wieckestraße": [
+        "Wiecke",
+        "Wieckestr.",
+        "Wieckestrasse"
+    ],
+    "Wilder Mann": [
+        "Wilder"
+    ],
+    "Wilhelminenstraße": [
+        "Wilhelminen",
+        "Wilhelminenstr.",
+        "Wilhelminenstrasse"
+    ],
+    "Zeithainer Straße": [
+        "Zeithainer",
+        "Zeithainer Str.",
+        "Zeithainer Strasse"
+    ],
+    "Zellescher Weg": [
+        "Zellescher"
+    ],
+    "Zoo": [],
+    "Zschertnitz, Münzmeisterstraße": [
+        "Zschertnitz, Münzmeister",
+        "Zschertnitz, Münzmeisterstr.",
+        "Zschertnitz, Münzmeisterstrasse"
+    ],
+    "Zur Neuen Brücke": [],
+    "Zwinglistraße": [
+        "Zwingli",
+        "Zwinglistr.",
+        "Zwinglistrasse"
+    ]
+}

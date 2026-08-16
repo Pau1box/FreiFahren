@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"slices"
-	"strings"
 
 	"github.com/FreiFahren/backend/data"
 	"github.com/FreiFahren/backend/database"
@@ -15,11 +14,11 @@ import (
 	structs "github.com/FreiFahren/backend/utils"
 )
 
-func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *structs.InsertPointers) error {
+func PostProcessInspectorData(networkID string, dataToInsert *structs.ResponseData, pointers *structs.InsertPointers) error {
 	logger.Log.Debug().Msg("Filling missing columns using provided data")
 
-	var stations = data.GetStationsList()
-	var lines = data.GetLinesList()
+	stations, _ := data.GetStationsList(networkID)
+	lines, _ := data.GetLinesList(networkID)
 
 	// check if the message is hate speech
 	if dataToInsert.Message != "" {
@@ -46,7 +45,7 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 	// guess the station if the station is not provided but the line is
 	if dataToInsert.Station.Id == "" && dataToInsert.Line != "" {
 		stationsOnLine := lines[dataToInsert.Line]
-		if err := guessStation(dataToInsert, pointers, stationsOnLine); err != nil {
+		if err := guessStation(networkID, dataToInsert, pointers, stationsOnLine); err != nil {
 			logger.Log.Error().Err(err).Msg("Error guessing station Id in postInspector")
 			return err
 		}
@@ -54,7 +53,7 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 
 	// guess the direction if the direction is not provided but the line and station are
 	if dataToInsert.Direction.Id == "" && dataToInsert.Line != "" && dataToInsert.Station.Id != "" {
-		if err := DetermineDirectionIfImplied(dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
+		if err := DetermineDirectionIfImplied(networkID, dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
 			logger.Log.Error().Err(err).Msg("Error determining direction if implied in postInspector")
 			return err
 		}
@@ -68,7 +67,7 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 		if dataToInsert.Line != "" {
 			// in case the direction was the same as the station, but the line was provided, we can determine the correct direction
 			// e.g. Line: U6, Station: Alt-Mariendorf, Direction: Alt-Mariendorf it should be removed and reset to Kurt-Schumacher-Platz
-			if err := DetermineDirectionIfImplied(dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
+			if err := DetermineDirectionIfImplied(networkID, dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
 				logger.Log.Error().Err(err).Msg("Error determining direction if implied in postInspector")
 				return err
 			}
@@ -89,7 +88,7 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 		}
 		// try to determine the direction if the line was found
 		if dataToInsert.Line != "" {
-			if err := DetermineDirectionIfImplied(dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
+			if err := DetermineDirectionIfImplied(networkID, dataToInsert, pointers, lines[dataToInsert.Line], dataToInsert.Station.Id, stations); err != nil {
 				logger.Log.Error().Err(err).Msg("Error determining direction if implied in postInspector")
 				return err
 			}
@@ -110,7 +109,7 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 	if dataToInsert.Direction.Id != "" && dataToInsert.Station.Id != "" && dataToInsert.Line != "" {
 		lineStations := lines[dataToInsert.Line]
 		if len(lineStations) > 0 && (lineStations[0] != dataToInsert.Direction.Id && lineStations[len(lineStations)-1] != dataToInsert.Direction.Id) {
-			correctDirection(dataToInsert, pointers, lineStations)
+			correctDirection(dataToInsert, pointers, lineStations, stations)
 		}
 	}
 
@@ -129,11 +128,11 @@ func PostProcessInspectorData(dataToInsert *structs.ResponseData, pointers *stru
 //
 // This function queries the database to find the most common station on the line and assigns it to the dataToInsert.
 // This is being done to avoid storing useless data, as we would otherwise serve historic data to the users, which is not very accurate.
-func guessStation(dataToInsert *structs.ResponseData, pointers *structs.InsertPointers, stationsOnLine []string) error {
+func guessStation(networkID string, dataToInsert *structs.ResponseData, pointers *structs.InsertPointers, stationsOnLine []string) error {
 	logger.Log.Debug().Msg("Guessing station Id based on line")
 
 	// Query the database to find the most common station on this line
-	mostCommonStation, err := database.GetMostCommonStationId(stationsOnLine)
+	mostCommonStation, err := database.GetMostCommonStationId(networkID, stationsOnLine)
 	if err != nil {
 		logger.Log.Error().Err(err).Str("line", dataToInsert.Line).Msg("Error querying for most common station")
 		return err
@@ -144,7 +143,7 @@ func guessStation(dataToInsert *structs.ResponseData, pointers *structs.InsertPo
 		pointers.StationIdPtr = &mostCommonStation
 
 		// Get the station name from the stations list
-		stations := data.GetStationsList()
+		stations, _ := data.GetStationsList(networkID)
 		if station, found := stations[mostCommonStation]; found {
 			dataToInsert.Station.Name = station.Name
 		}
@@ -181,6 +180,7 @@ func AssignLineIfSingleOption(dataToInsert *structs.ResponseData, pointers *stru
 // If by the combination of line and station the direction can be determined, set it.
 // Example: Line: U3, Station: Krumme Lanke, the only possible direction is Warschauer Straße
 func DetermineDirectionIfImplied(
+	networkID string,
 	dataToInsert *structs.ResponseData,
 	pointers *structs.InsertPointers,
 	line []string,
@@ -189,7 +189,11 @@ func DetermineDirectionIfImplied(
 ) error {
 	logger.Log.Debug().Msg("Determining direction if implied")
 
-	isStationUniqueToOneLine := CheckIfStationIsUniqueToOneLineOfType(stations[stationId], dataToInsert.Line)
+	if len(line) == 0 {
+		return nil
+	}
+
+	isStationUniqueToOneLine := CheckIfStationIsUniqueToOneLineOfType(networkID, stations[stationId], dataToInsert.Line)
 
 	lastStationId := line[len(line)-1]
 	firstStationId := line[0]
@@ -208,16 +212,29 @@ func DetermineDirectionIfImplied(
 	return nil
 }
 
-// checks if a station is uniquely served by one line of the specified type (e.g., 'S' or 'U').
-func CheckIfStationIsUniqueToOneLineOfType(station structs.StationListEntry, line string) bool {
+// Checks if a station is served by exactly one line of the same mode as the given line.
+//
+// The mode comes from the line metadata and never from the line name: an "S" is light rail in
+// Berlin but a train in Munich, and a Munich tram is called "12" or "N17".
+func CheckIfStationIsUniqueToOneLineOfType(networkID string, station structs.StationListEntry, line string) bool {
 	logger.Log.Debug().Msg("Checking if station is unique to one line of the specified type")
 
-	// The first character of the line determines if it is a sbahn or ubahn
-	linePrefix := line[0]
+	lineMetadata, ok := data.GetLineMetadata(networkID)
+	if !ok {
+		logger.Log.Warn().Str("network", networkID).Msg("No line metadata, cannot determine the mode of a line")
+		return false
+	}
+
+	metadata, found := lineMetadata[line]
+	if !found || metadata.Mode == structs.LineModeUnknown {
+		// Without a known mode there is no type to be unique within, so the direction
+		// is left unset instead of being guessed from a mode we do not have.
+		return false
+	}
 
 	count := 0
-	for _, line := range station.Lines {
-		if strings.HasPrefix(line, string(linePrefix)) {
+	for _, stationLine := range station.Lines {
+		if stationMetadata, found := lineMetadata[stationLine]; found && stationMetadata.Mode == metadata.Mode {
 			count++
 		}
 	}
@@ -232,16 +249,16 @@ func setDirection(dataToInsert *structs.ResponseData, pointers *structs.InsertPo
 	pointers.DirectionIdPtr = &stationId
 }
 
-func correctDirection(dataToInsert *structs.ResponseData, pointers *structs.InsertPointers, line []string) {
+func correctDirection(dataToInsert *structs.ResponseData, pointers *structs.InsertPointers, line []string, stations map[string]structs.StationListEntry) {
 	stationIndexOnLine := slices.Index(line, dataToInsert.Station.Id)
 	directionIndexOnLine := slices.Index(line, dataToInsert.Direction.Id)
 
 	if stationIndexOnLine > directionIndexOnLine {
 		logger.Log.Debug().Msg("Set the first station as direction")
-		setDirection(dataToInsert, pointers, line[0], data.GetStationsList()[line[0]])
+		setDirection(dataToInsert, pointers, line[0], stations[line[0]])
 	} else {
 		logger.Log.Debug().Msg("Set the last station as direction")
-		setDirection(dataToInsert, pointers, line[len(line)-1], data.GetStationsList()[line[len(line)-1]])
+		setDirection(dataToInsert, pointers, line[len(line)-1], stations[line[len(line)-1]])
 	}
 }
 

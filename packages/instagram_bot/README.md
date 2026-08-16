@@ -41,7 +41,12 @@ This project is an automated bot that fetches inspector data, creates an image w
     SHORT_LIVED_ACCESS_TOKEN=your_initial_short_lived_token
     API_URL=https://api.freifahren.org
     APP_URL=https://your-app-url.com
+    NETWORK=berlin
     ```
+
+    `NETWORK` is the id of the network this account posts for, one of the ids from
+    `GET /v0/networks`. It defaults to `berlin`. Line colours are read from that network's
+    `GET /v0/lines/metadata`, so a colour change needs no release here.
 
     You can get your `SHORT_LIVED_ACCESS_TOKEN` by using the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/)
 
@@ -57,12 +62,12 @@ bun start
 
 The bot will run on port 8000 and perform the following actions:
 
--   Run a hourly job to fetch inspector data, create an image, and post it to Instagram. (It will not post during quiet hours (20:00-04:00 UTC))
+-   Run a hourly job to fetch inspector data, create an image, and post it to Instagram. (It will not post during quiet hours, 22:00-06:00 in the time zone of `NETWORK`, read from `GET /v0/networks`)
 -   Run a daily job to clean up old image files
 
 ## How It Works
 
-1. **Fetching Data**: The bot fetches inspector data from the specified API endpoint.
+1. **Fetching Data**: The bot fetches inspector data and the line colours of its network from the specified API endpoint.
 
 2. **Image Creation**: Using the fetched data, it generates an image with inspector information.
 

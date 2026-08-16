@@ -1,0 +1,1621 @@
+{
+    "S-n8084473": {
+        "coordinates": {
+            "latitude": 53.4730032,
+            "longitude": 9.877481566666667
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Neuwiedenthal"
+    },
+    "S-n10691210": {
+        "coordinates": {
+            "latitude": 53.52162896666667,
+            "longitude": 10.013347433333335
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Veddel (Ballin Stadt)"
+    },
+    "S-n11206066": {
+        "coordinates": {
+            "latitude": 53.54665873333334,
+            "longitude": 10.0236124
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Hammerbrook"
+    },
+    "S-n21545097": {
+        "coordinates": {
+            "latitude": 53.5638684125,
+            "longitude": 9.8146114875
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "S Blankenese"
+    },
+    "U-n21760607": {
+        "coordinates": {
+            "latitude": 53.57448176666667,
+            "longitude": 10.0373138
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Hamburger Straße"
+    },
+    "U-n21760614": {
+        "coordinates": {
+            "latitude": 53.578938,
+            "longitude": 10.040814999999998
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Dehnhaide"
+    },
+    "SU-n24764341": {
+        "coordinates": {
+            "latitude": 53.55304084545455,
+            "longitude": 10.024243027272728
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S5",
+            "S7",
+            "U2",
+            "U3",
+            "U4"
+        ],
+        "name": "Berliner Tor"
+    },
+    "U-n25293894": {
+        "coordinates": {
+            "latitude": 53.675011833333336,
+            "longitude": 10.016133333333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Kiwittsmoor"
+    },
+    "U-n25295907": {
+        "coordinates": {
+            "latitude": 53.638645133333334,
+            "longitude": 10.155932333333332
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Meiendorfer Weg"
+    },
+    "U-n25295960": {
+        "coordinates": {
+            "latitude": 53.59230096,
+            "longitude": 10.07423228
+        },
+        "lines": [
+            "U1",
+            "U3"
+        ],
+        "name": "Wandsbek-Gartenstadt"
+    },
+    "S-n25909256": {
+        "coordinates": {
+            "latitude": 53.57657903333334,
+            "longitude": 10.057403033333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Friedrichsberg"
+    },
+    "S-AHSB": {
+        "coordinates": {
+            "latitude": 53.5646689,
+            "longitude": 10.0556724
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Hasselbrook"
+    },
+    "S-ABAF": {
+        "coordinates": {
+            "latitude": 53.5600484,
+            "longitude": 9.9110511
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Bahrenfeld"
+    },
+    "S-AOH": {
+        "coordinates": {
+            "latitude": 53.5591585,
+            "longitude": 9.885384166666666
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Othmarschen"
+    },
+    "S-n26600623": {
+        "coordinates": {
+            "latitude": 53.55819773333334,
+            "longitude": 9.8612228
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Klein Flottbek (Botanischer Garten)"
+    },
+    "S-n26600629": {
+        "coordinates": {
+            "latitude": 53.561651899999994,
+            "longitude": 9.841542866666666
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Hochkamp"
+    },
+    "S-n26600948": {
+        "coordinates": {
+            "latitude": 53.4654595,
+            "longitude": 9.9630273
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Heimfeld (TU Hamburg)"
+    },
+    "U-n26678614": {
+        "coordinates": {
+            "latitude": 53.564485733333335,
+            "longitude": 10.026884866666668
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Uhlandstraße"
+    },
+    "SU-n28842391": {
+        "coordinates": {
+            "latitude": 53.587298425,
+            "longitude": 10.0444416125
+        },
+        "lines": [
+            "S1",
+            "U3"
+        ],
+        "name": "Barmbek"
+    },
+    "S-AHOG": {
+        "coordinates": {
+            "latitude": 53.50829796666667,
+            "longitude": 9.5768785
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Horneburg"
+    },
+    "S-AST": {
+        "coordinates": {
+            "latitude": 53.5959309,
+            "longitude": 9.4781382
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Stade"
+    },
+    "S-AHRS": {
+        "coordinates": {
+            "latitude": 53.4569544,
+            "longitude": 9.9913357
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Harburg"
+    },
+    "S-n29361459": {
+        "coordinates": {
+            "latitude": 53.49847363333333,
+            "longitude": 10.0068542
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Wilhelmsburg"
+    },
+    "S-ANL": {
+        "coordinates": {
+            "latitude": 53.481167,
+            "longitude": 9.6399331
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Neukloster"
+    },
+    "S-n30771048": {
+        "coordinates": {
+            "latitude": 53.60585903333333,
+            "longitude": 10.0331372
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Rübenkamp (City Nord)"
+    },
+    "S-n31475937": {
+        "coordinates": {
+            "latitude": 53.579668133333335,
+            "longitude": 9.9308389
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Langenfelde"
+    },
+    "SU-ALAS": {
+        "coordinates": {
+            "latitude": 53.54605048333334,
+            "longitude": 9.9712061
+        },
+        "lines": [
+            "S1",
+            "S3",
+            "S7",
+            "U3"
+        ],
+        "name": "Landungsbrücken"
+    },
+    "U-n52144750": {
+        "coordinates": {
+            "latitude": 53.54421263333333,
+            "longitude": 9.9816304
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Baumwall (Elbphilharmonie)"
+    },
+    "SU-n60270009": {
+        "coordinates": {
+            "latitude": 53.54897172,
+            "longitude": 9.98573526
+        },
+        "lines": [
+            "S1",
+            "S3",
+            "S7",
+            "U3"
+        ],
+        "name": "Rödingsmarkt"
+    },
+    "S-n68628693": {
+        "coordinates": {
+            "latitude": 53.58215156666666,
+            "longitude": 9.705411766666666
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Wedel"
+    },
+    "S-n68628767": {
+        "coordinates": {
+            "latitude": 53.58315056666667,
+            "longitude": 9.757614233333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Rissen"
+    },
+    "S-AIS": {
+        "coordinates": {
+            "latitude": 53.576550850000004,
+            "longitude": 9.8143648
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Iserbrook"
+    },
+    "U-n89210257": {
+        "coordinates": {
+            "latitude": 53.60434193333333,
+            "longitude": 9.945364566666667
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Hagendeel"
+    },
+    "U-n104131041": {
+        "coordinates": {
+            "latitude": 53.66285246666666,
+            "longitude": 10.286896633333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Großhansdorf"
+    },
+    "U-n106009948": {
+        "coordinates": {
+            "latitude": 53.5925182,
+            "longitude": 9.9440662
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Hagenbecks Tierpark"
+    },
+    "U-n156779345": {
+        "coordinates": {
+            "latitude": 53.5425487,
+            "longitude": 10.10697818
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Billstedt"
+    },
+    "S-AFIB": {
+        "coordinates": {
+            "latitude": 53.4747742,
+            "longitude": 9.8194417
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Fischbek"
+    },
+    "S-n158721846": {
+        "coordinates": {
+            "latitude": 53.473027933333334,
+            "longitude": 9.788175766666667
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Neu Wulmstorf"
+    },
+    "U-n170615932": {
+        "coordinates": {
+            "latitude": 53.55951914,
+            "longitude": 10.02823714
+        },
+        "lines": [
+            "U1",
+            "U3"
+        ],
+        "name": "Lübecker Straße"
+    },
+    "U-n206226410": {
+        "coordinates": {
+            "latitude": 53.66436613333334,
+            "longitude": 10.155738
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Buckhorn"
+    },
+    "U-n206226420": {
+        "coordinates": {
+            "latitude": 53.677757500000006,
+            "longitude": 10.147812433333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Hoisbüttel"
+    },
+    "S-n207028382": {
+        "coordinates": {
+            "latitude": 53.630408100000004,
+            "longitude": 9.839097733333334
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Halstenbek"
+    },
+    "U-n244004764": {
+        "coordinates": {
+            "latitude": 53.5473609,
+            "longitude": 10.095548233333334
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Legienstraße"
+    },
+    "U-n244032354": {
+        "coordinates": {
+            "latitude": 53.55579746666666,
+            "longitude": 10.042005933333334
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Burgstraße"
+    },
+    "U-n244033784": {
+        "coordinates": {
+            "latitude": 53.55421393333334,
+            "longitude": 10.0660702
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Rauhes Haus"
+    },
+    "U-n244401596": {
+        "coordinates": {
+            "latitude": 53.56780354,
+            "longitude": 9.96993228
+        },
+        "lines": [
+            "U2",
+            "U3"
+        ],
+        "name": "Schlump"
+    },
+    "U-n244401625": {
+        "coordinates": {
+            "latitude": 53.58377753333334,
+            "longitude": 9.985273366666666
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Eppendorfer Baum"
+    },
+    "U-n244402134": {
+        "coordinates": {
+            "latitude": 53.590385833333336,
+            "longitude": 10.001042266666667
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Sierichstraße"
+    },
+    "U-n244402798": {
+        "coordinates": {
+            "latitude": 53.59076223333333,
+            "longitude": 10.014560833333332
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Borgweg (Stadtpark)"
+    },
+    "U-n247639972": {
+        "coordinates": {
+            "latitude": 53.67808196666667,
+            "longitude": 10.001813266666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Ochsenzoll"
+    },
+    "U-n247743598": {
+        "coordinates": {
+            "latitude": 53.52810496666666,
+            "longitude": 10.150023966666668
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Mümmelmannsberg"
+    },
+    "U-n247743974": {
+        "coordinates": {
+            "latitude": 53.53864736666666,
+            "longitude": 10.124971033333333
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Merkenstraße"
+    },
+    "U-n247743978": {
+        "coordinates": {
+            "latitude": 53.541039033333334,
+            "longitude": 10.139215766666666
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Steinfurther Allee"
+    },
+    "S-ATK": {
+        "coordinates": {
+            "latitude": 53.53128403333333,
+            "longitude": 10.065502666666667
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Tiefstack"
+    },
+    "S-n248846609": {
+        "coordinates": {
+            "latitude": 53.58980210000001,
+            "longitude": 9.918273533333334
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Stellingen"
+    },
+    "S-n248847413": {
+        "coordinates": {
+            "latitude": 53.595687266666665,
+            "longitude": 9.907349733333334
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Eidelstedt"
+    },
+    "U-n249322826": {
+        "coordinates": {
+            "latitude": 53.59362066666667,
+            "longitude": 10.052519533333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Habichtstraße"
+    },
+    "U-n249675195": {
+        "coordinates": {
+            "latitude": 53.57749043333333,
+            "longitude": 9.976102933333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Hoheluftbrücke"
+    },
+    "U-n250976987": {
+        "coordinates": {
+            "latitude": 53.707886300000006,
+            "longitude": 9.9923692
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Norderstedt Mitte"
+    },
+    "SU-n251292685": {
+        "coordinates": {
+            "latitude": 53.564109816666665,
+            "longitude": 9.968526866666666
+        },
+        "lines": [
+            "S2",
+            "S5",
+            "S7",
+            "U3"
+        ],
+        "name": "Sternschanze (Messe)"
+    },
+    "U-n251332112": {
+        "coordinates": {
+            "latitude": 53.58161809999999,
+            "longitude": 9.988267
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Klosterstern"
+    },
+    "U-n253260920": {
+        "coordinates": {
+            "latitude": 53.56956036363636,
+            "longitude": 10.026976263636364
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Mundsburg"
+    },
+    "S-n254406618": {
+        "coordinates": {
+            "latitude": 53.515949,
+            "longitude": 10.096279633333333
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Billwerder-Moorfleet"
+    },
+    "S-AROP": {
+        "coordinates": {
+            "latitude": 53.538378533333336,
+            "longitude": 10.044237833333334
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Rothenburgsort"
+    },
+    "U-n257803540": {
+        "coordinates": {
+            "latitude": 53.58199246666666,
+            "longitude": 9.9476213
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Lutterothstraße"
+    },
+    "U-n257805922": {
+        "coordinates": {
+            "latitude": 53.569550033333336,
+            "longitude": 9.962324833333334
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Christuskirche"
+    },
+    "U-n258192805": {
+        "coordinates": {
+            "latitude": 53.57616303333333,
+            "longitude": 9.951662633333333
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Osterstraße"
+    },
+    "U-n258193279": {
+        "coordinates": {
+            "latitude": 53.57166446666667,
+            "longitude": 9.952596033333334
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Emilienstraße"
+    },
+    "U-n258193999": {
+        "coordinates": {
+            "latitude": 53.5580589,
+            "longitude": 9.976737833333333
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Messehallen"
+    },
+    "U-n258194871": {
+        "coordinates": {
+            "latitude": 53.555658,
+            "longitude": 9.9860417
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Gänsemarkt (Oper)"
+    },
+    "U-n258201148": {
+        "coordinates": {
+            "latitude": 53.55079046666666,
+            "longitude": 9.970081533333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "St. Pauli"
+    },
+    "U-n258202562": {
+        "coordinates": {
+            "latitude": 53.556917533333326,
+            "longitude": 9.968663099999999
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Feldstraße (Heiligengeistfeld)"
+    },
+    "SU-n258576519": {
+        "coordinates": {
+            "latitude": 53.55227351,
+            "longitude": 10.00870989
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S5",
+            "S7",
+            "U1",
+            "U3"
+        ],
+        "name": "Hauptbahnhof Süd"
+    },
+    "S-AML": {
+        "coordinates": {
+            "latitude": 53.498148333333326,
+            "longitude": 10.1310624
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Mittlerer Landweg"
+    },
+    "S-n260550426": {
+        "coordinates": {
+            "latitude": 53.4897913,
+            "longitude": 10.206025633333333
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Bergedorf"
+    },
+    "U-n260718733": {
+        "coordinates": {
+            "latitude": 53.5564851,
+            "longitude": 10.018761099999999
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Lohmühlenstraße"
+    },
+    "U-n260719522": {
+        "coordinates": {
+            "latitude": 53.56465996666666,
+            "longitude": 10.0354262
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Wartenau"
+    },
+    "U-n260719528": {
+        "coordinates": {
+            "latitude": 53.56765796666667,
+            "longitude": 10.0466894
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Ritterstraße"
+    },
+    "U-n260720119": {
+        "coordinates": {
+            "latitude": 53.581979933333336,
+            "longitude": 10.067905166666668
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Straßburger Straße"
+    },
+    "U-n260720436": {
+        "coordinates": {
+            "latitude": 53.58619493333333,
+            "longitude": 10.064931999999999
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Alter Teichweg"
+    },
+    "S-n263027133": {
+        "coordinates": {
+            "latitude": 53.5084532,
+            "longitude": 10.2535311
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Reinbek"
+    },
+    "U-n265088027": {
+        "coordinates": {
+            "latitude": 53.5512745,
+            "longitude": 10.001905733333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Mönckebergstraße"
+    },
+    "U-n271784863": {
+        "coordinates": {
+            "latitude": 53.58772305,
+            "longitude": 10.0332757875
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "U Saarlandstraße (Süd)"
+    },
+    "S-n281587240": {
+        "coordinates": {
+            "latitude": 53.470552633333334,
+            "longitude": 9.687778433333333
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Buxtehude"
+    },
+    "U-n287453694": {
+        "coordinates": {
+            "latitude": 53.606829999999995,
+            "longitude": 10.011849527272728
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "U Alsterdorf"
+    },
+    "U-n287822823": {
+        "coordinates": {
+            "latitude": 53.589069425,
+            "longitude": 10.032387025
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "U Saarlandstraße"
+    },
+    "S-n289398646": {
+        "coordinates": {
+            "latitude": 53.4606885,
+            "longitude": 9.980420666666667
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Harburg Rathaus"
+    },
+    "S-n292221034": {
+        "coordinates": {
+            "latitude": 53.652068,
+            "longitude": 10.09400655
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Poppenbüttel"
+    },
+    "S-n292222977": {
+        "coordinates": {
+            "latitude": 53.64122053333333,
+            "longitude": 10.082682933333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Wellingsbüttel"
+    },
+    "S-n292224638": {
+        "coordinates": {
+            "latitude": 53.635504033333326,
+            "longitude": 10.0677108
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Hoheneichen"
+    },
+    "S-n292225159": {
+        "coordinates": {
+            "latitude": 53.6324318,
+            "longitude": 10.0541191
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Kornweg (Klein Borstel)"
+    },
+    "SU-n292227059": {
+        "coordinates": {
+            "latitude": 53.62060086666667,
+            "longitude": 10.031560050000001
+        },
+        "lines": [
+            "S1",
+            "U1"
+        ],
+        "name": "Ohlsdorf"
+    },
+    "S-n292334216": {
+        "coordinates": {
+            "latitude": 53.56116840000001,
+            "longitude": 10.037878633333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Landwehr"
+    },
+    "S-AKRS": {
+        "coordinates": {
+            "latitude": 53.6157607,
+            "longitude": 9.8677207
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Krupunder"
+    },
+    "S-n294498374": {
+        "coordinates": {
+            "latitude": 53.6326202,
+            "longitude": 10.006685133333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Hamburg Airport (Flughafen)"
+    },
+    "U-n294514901": {
+        "coordinates": {
+            "latitude": 53.609512099999996,
+            "longitude": 10.021871266666667
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Sengelmannstraße (City Nord)"
+    },
+    "U-n294524253": {
+        "coordinates": {
+            "latitude": 53.59479076666667,
+            "longitude": 9.9960205
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Hudtwalckerstraße"
+    },
+    "S-AEGS": {
+        "coordinates": {
+            "latitude": 53.6026831,
+            "longitude": 9.8934003
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Elbgaustraße"
+    },
+    "U-n297561877": {
+        "coordinates": {
+            "latitude": 53.6608556,
+            "longitude": 10.017513633333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Langenhorn Nord"
+    },
+    "U-n297565051": {
+        "coordinates": {
+            "latitude": 53.64891276666666,
+            "longitude": 10.017218733333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Langenhorn Markt"
+    },
+    "U-n297565642": {
+        "coordinates": {
+            "latitude": 53.63923973333333,
+            "longitude": 10.016679166666668
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Fuhlsbüttel Nord"
+    },
+    "U-n297567426": {
+        "coordinates": {
+            "latitude": 53.632401933333334,
+            "longitude": 10.026884033333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Fuhlsbüttel"
+    },
+    "U-n297568903": {
+        "coordinates": {
+            "latitude": 53.62809286666666,
+            "longitude": 10.033238433333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Klein Borstel"
+    },
+    "S-n300240508": {
+        "coordinates": {
+            "latitude": 53.56177603333333,
+            "longitude": 9.949684466666666
+        },
+        "lines": [
+            "S2",
+            "S5",
+            "S7"
+        ],
+        "name": "Holstenstraße"
+    },
+    "S-n300809500": {
+        "coordinates": {
+            "latitude": 53.551926359999996,
+            "longitude": 9.93466894
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S7"
+        ],
+        "name": "Hamburg-Altona"
+    },
+    "S-n300811113": {
+        "coordinates": {
+            "latitude": 53.54783163333334,
+            "longitude": 9.9441555
+        },
+        "lines": [
+            "S1",
+            "S3",
+            "S7"
+        ],
+        "name": "Königstraße"
+    },
+    "S-n300814266": {
+        "coordinates": {
+            "latitude": 53.54961793333333,
+            "longitude": 9.957742366666666
+        },
+        "lines": [
+            "S1",
+            "S3",
+            "S7"
+        ],
+        "name": "Reeperbahn"
+    },
+    "U-n301359593": {
+        "coordinates": {
+            "latitude": 53.5476478,
+            "longitude": 10.000897766666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Meßberg"
+    },
+    "SU-n301639322": {
+        "coordinates": {
+            "latitude": 53.55157085555555,
+            "longitude": 9.993898433333333
+        },
+        "lines": [
+            "S1",
+            "S3",
+            "S7",
+            "U1",
+            "U2",
+            "U3",
+            "U4"
+        ],
+        "name": "Rathaus"
+    },
+    "U-n301641689": {
+        "coordinates": {
+            "latitude": 53.549225299999996,
+            "longitude": 10.006231566666667
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Steinstraße"
+    },
+    "S-n305430846": {
+        "coordinates": {
+            "latitude": 53.474050275,
+            "longitude": 9.852346075
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Neugraben"
+    },
+    "S-ADR": {
+        "coordinates": {
+            "latitude": 53.5453571,
+            "longitude": 9.5580969
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Dollern"
+    },
+    "S-AABG": {
+        "coordinates": {
+            "latitude": 53.5643497,
+            "longitude": 9.530711966666667
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Agathenburg"
+    },
+    "U-n312586262": {
+        "coordinates": {
+            "latitude": 53.54041229999999,
+            "longitude": 9.998360266666667
+        },
+        "lines": [
+            "U4"
+        ],
+        "name": "Überseequartier"
+    },
+    "U-n312586268": {
+        "coordinates": {
+            "latitude": 53.54055496666666,
+            "longitude": 10.007863200000001
+        },
+        "lines": [
+            "U4"
+        ],
+        "name": "HafenCity Universität"
+    },
+    "U-n429211497": {
+        "coordinates": {
+            "latitude": 53.558744100000006,
+            "longitude": 9.989303633333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Stephansplatz (Oper/CCH)"
+    },
+    "U-n490567618": {
+        "coordinates": {
+            "latitude": 53.573091,
+            "longitude": 9.989039533333333
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Hallerstraße"
+    },
+    "U-n496848764": {
+        "coordinates": {
+            "latitude": 53.664640999999996,
+            "longitude": 10.2193974
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Ahrensburg West"
+    },
+    "U-n504929032": {
+        "coordinates": {
+            "latitude": 53.65338716666667,
+            "longitude": 10.260183666666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Schmalenbeck"
+    },
+    "U-n504966244": {
+        "coordinates": {
+            "latitude": 53.65294515,
+            "longitude": 10.2802248
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Kiekut"
+    },
+    "U-n538032518": {
+        "coordinates": {
+            "latitude": 53.65295666666666,
+            "longitude": 10.185063566666665
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Buchenkamp"
+    },
+    "U-n541009458": {
+        "coordinates": {
+            "latitude": 53.607208533333335,
+            "longitude": 10.117785466666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Farmsen"
+    },
+    "U-n617825071": {
+        "coordinates": {
+            "latitude": 53.57168086666667,
+            "longitude": 10.066784766666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Wandsbek Markt"
+    },
+    "SU-n957053704": {
+        "coordinates": {
+            "latitude": 53.569743116666665,
+            "longitude": 10.058833583333334
+        },
+        "lines": [
+            "S1",
+            "U1"
+        ],
+        "name": "Wandsbeker Chaussee"
+    },
+    "S-AP": {
+        "coordinates": {
+            "latitude": 53.65483443333333,
+            "longitude": 9.798298
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Pinneberg"
+    },
+    "U-n1012630783": {
+        "coordinates": {
+            "latitude": 53.599772566666665,
+            "longitude": 9.994637666666668
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Lattenkamp (Sporthalle)"
+    },
+    "U-n1119184647": {
+        "coordinates": {
+            "latitude": 53.69426425,
+            "longitude": 10.13711915
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Ohlstedt"
+    },
+    "U-n1143048428": {
+        "coordinates": {
+            "latitude": 53.55412333333334,
+            "longitude": 10.006163866666666
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Hauptbahnhof Nord"
+    },
+    "S-n1242061223": {
+        "coordinates": {
+            "latitude": 53.52999964999999,
+            "longitude": 10.3144834
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Aumühle"
+    },
+    "S-n1359198027": {
+        "coordinates": {
+            "latitude": 53.59794780000001,
+            "longitude": 10.0353981
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Alte Wöhr (Stadtpark)"
+    },
+    "U-n1374832831": {
+        "coordinates": {
+            "latitude": 53.5984311,
+            "longitude": 10.102874133333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Trabrennbahn"
+    },
+    "U-n1374832836": {
+        "coordinates": {
+            "latitude": 53.62705063333333,
+            "longitude": 10.139932433333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Berne"
+    },
+    "U-n1374832849": {
+        "coordinates": {
+            "latitude": 53.65064385,
+            "longitude": 10.163182299999999
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Volksdorf"
+    },
+    "U-n1374832864": {
+        "coordinates": {
+            "latitude": 53.661334249999996,
+            "longitude": 10.2422647
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Ahrensburg Ost"
+    },
+    "U-n1374832877": {
+        "coordinates": {
+            "latitude": 53.69565906666667,
+            "longitude": 9.989661466666666
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Richtweg"
+    },
+    "S-ADST": {
+        "coordinates": {
+            "latitude": 53.5611136,
+            "longitude": 9.9894307
+        },
+        "lines": [
+            "S2",
+            "S5",
+            "S7"
+        ],
+        "name": "Hamburg Dammtor"
+    },
+    "S-ATHS": {
+        "coordinates": {
+            "latitude": 53.643983066666664,
+            "longitude": 9.814436833333334
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Thesdorf"
+    },
+    "U-n1669874334": {
+        "coordinates": {
+            "latitude": 53.68447656666667,
+            "longitude": 9.986038833333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Garstedt"
+    },
+    "S-AWLF": {
+        "coordinates": {
+            "latitude": 53.52068403333333,
+            "longitude": 10.278110933333332
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Wohltorf"
+    },
+    "U-n1944623930": {
+        "coordinates": {
+            "latitude": 53.620218200000004,
+            "longitude": 9.9517384
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Niendorf Markt"
+    },
+    "U-n1944655596": {
+        "coordinates": {
+            "latitude": 53.628198766666664,
+            "longitude": 9.950307033333333
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Joachim-Mähl-Straße"
+    },
+    "U-SW": {
+        "coordinates": {
+            "latitude": 53.6353107,
+            "longitude": 9.952500566666666
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Schippelsweg"
+    },
+    "U-n2624289940": {
+        "coordinates": {
+            "latitude": 53.553247775,
+            "longitude": 9.994703425
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Jungfernstieg"
+    },
+    "U-n3020817678": {
+        "coordinates": {
+            "latitude": 53.555561133333335,
+            "longitude": 10.056057633333333
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Hammer Kirche"
+    },
+    "U-n3020817679": {
+        "coordinates": {
+            "latitude": 53.5537458,
+            "longitude": 10.084204999999999
+        },
+        "lines": [
+            "U2",
+            "U4"
+        ],
+        "name": "Horner Rennbahn"
+    },
+    "S-AALH": {
+        "coordinates": {
+            "latitude": 53.490339866666666,
+            "longitude": 10.159090433333333
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Allermöhe"
+    },
+    "S-ADT": {
+        "coordinates": {
+            "latitude": 53.568799033333335,
+            "longitude": 9.9342665
+        },
+        "lines": [
+            "S2",
+            "S3",
+            "S5"
+        ],
+        "name": "Diebsteich"
+    },
+    "S-ASDF": {
+        "coordinates": {
+            "latitude": 53.58112739999999,
+            "longitude": 9.797364466666666
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Sülldorf"
+    },
+    "S-ANTB": {
+        "coordinates": {
+            "latitude": 53.4879678,
+            "longitude": 10.181035933333334
+        },
+        "lines": [
+            "S2",
+            "S7"
+        ],
+        "name": "Nettelnburg"
+    },
+    "SU-n3391154047": {
+        "coordinates": {
+            "latitude": 53.535070059999995,
+            "longitude": 10.0243459
+        },
+        "lines": [
+            "S3",
+            "S5",
+            "U4"
+        ],
+        "name": "Elbbrücken"
+    },
+    "U-n6079838039": {
+        "coordinates": {
+            "latitude": 53.64112073333333,
+            "longitude": 9.949970466666665
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Niendorf Nord"
+    },
+    "U-n7044904112": {
+        "coordinates": {
+            "latitude": 53.617698966666666,
+            "longitude": 10.1290022
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Oldenfelde"
+    },
+    "U-n7252932358": {
+        "coordinates": {
+            "latitude": 53.588749875,
+            "longitude": 9.990754599999999
+        },
+        "lines": [
+            "U1",
+            "U3"
+        ],
+        "name": "Kellinghusenstraße"
+    },
+    "S-n10942031669": {
+        "coordinates": {
+            "latitude": 53.559587099999995,
+            "longitude": 9.926574066666667
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Ottensen"
+    }
+}

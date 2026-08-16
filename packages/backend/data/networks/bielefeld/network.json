@@ -1,0 +1,22 @@
+{
+    "id": "bielefeld",
+    "name": "Bielefeld",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 52.0191,
+        "longitude": 8.531
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.942383,
+            "longitude": 8.412426
+        },
+        "northEast": {
+            "latitude": 52.102459,
+            "longitude": 8.699857
+        }
+    }
+}

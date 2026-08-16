@@ -6,6 +6,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/FreiFahren/backend/api/networks"
 	"github.com/FreiFahren/backend/caching"
 	"github.com/FreiFahren/backend/data"
 	"github.com/FreiFahren/backend/database"
@@ -28,16 +29,25 @@ import (
 // @Param start query string false "Start timestamp (RFC3339 format)"
 // @Param end query string false "End timestamp (RFC3339 format)"
 // @Param station query string false "Station ID to filter inspectors for a specific station"
+// @Param network query string false "ID of the network (defaults to berlin)"
 //
 // @Success 200 {object} []utils.TicketInspectorResponse
+// @Success 304 "Not Modified: The data has not changed since the If-Modified-Since header."
 // @Failure 400 {string} string "Bad Request"
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
+// @Failure 422 {object} map[string]string "Unprocessable Entity: The station does not belong to the network."
 // @Failure 500 {string} string "Internal Server Error"
 //
 // @Router /basics/inspectors [get]
 func GetTicketInspectorsInfo(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/basics/inspectors' UserAgent: " + c.Request().UserAgent())
 
-	databaseLastModified, err := database.GetLatestUpdateTime()
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
+	databaseLastModified, err := database.GetLatestUpdateTime(networkID)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Error getting latest update time")
 		return c.NoContent(http.StatusInternalServerError)
@@ -61,6 +71,13 @@ func GetTicketInspectorsInfo(c echo.Context) error {
 	end := c.QueryParam("end")
 	stationId := c.QueryParam("station")
 
+	// A station of another network is checked before the historic path runs, which would
+	// otherwise invent a report for it: the filter matches nothing, so the threshold is
+	// missed and a historic entry is built from the id alone, at coordinates 0,0.
+	if unknown := networks.UnknownStations(networkID, map[string]string{"station": stationId}); len(unknown) > 0 {
+		return networks.UnknownReference(networkID, unknown...)
+	}
+
 	startTime, endTime := utils.GetTimeRange(start, end, time.Hour)
 
 	// Validate that endTime is after startTime
@@ -69,26 +86,30 @@ func GetTicketInspectorsInfo(c echo.Context) error {
 		return c.String(http.StatusBadRequest, "End time must be after start time")
 	}
 
-	ticketInfoList, err := database.GetLatestTicketInspectors(startTime, endTime, stationId)
+	ticketInfoList, err := database.GetLatestTicketInspectors(networkID, startTime, endTime, stationId)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Error getting ticket inspectors")
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
-	currentHistoricDataThreshold := calculateHistoricDataThreshold()
+	// A beta network has no history to reason from, so filling the map from it
+	// would invent inspectors that were never reported.
+	if networks.ServesPredictions(networkID) {
+		currentHistoricDataThreshold := calculateHistoricDataThreshold(networkID)
 
-	if len(ticketInfoList) < currentHistoricDataThreshold {
-		numberOfHistoricDataToFetch := currentHistoricDataThreshold - len(ticketInfoList)
-		ticketInfoList, err = FetchAndAddHistoricData(ticketInfoList, numberOfHistoricDataToFetch, startTime, stationId)
-		if err != nil {
-			logger.Log.Error().Err(err).Msg("Error fetching and adding historic data")
-			return c.NoContent(http.StatusInternalServerError)
+		if len(ticketInfoList) < currentHistoricDataThreshold {
+			numberOfHistoricDataToFetch := currentHistoricDataThreshold - len(ticketInfoList)
+			ticketInfoList, err = FetchAndAddHistoricData(networkID, ticketInfoList, numberOfHistoricDataToFetch, startTime, stationId)
+			if err != nil {
+				logger.Log.Error().Err(err).Msg("Error fetching and adding historic data")
+				return c.NoContent(http.StatusInternalServerError)
+			}
 		}
 	}
 
 	ticketInspectorList := []utils.TicketInspectorResponse{}
 	for _, ticketInfo := range ticketInfoList {
-		ticketInspector, err := constructTicketInspectorInfo(ticketInfo, startTime, endTime)
+		ticketInspector, err := constructTicketInspectorInfo(networkID, ticketInfo, startTime, endTime)
 		if err != nil {
 			logger.Log.Error().Err(err).Msg("Error constructing ticket inspector info")
 			return c.NoContent(http.StatusInternalServerError)
@@ -130,7 +151,7 @@ func removeDuplicateStations(ticketInspectorList []utils.TicketInspectorResponse
 	return filteredTicketInspectorList
 }
 
-func constructTicketInspectorInfo(ticketInfo utils.TicketInspector, startTime time.Time, endTime time.Time) (utils.TicketInspectorResponse, error) {
+func constructTicketInspectorInfo(networkID string, ticketInfo utils.TicketInspector, startTime time.Time, endTime time.Time) (utils.TicketInspectorResponse, error) {
 	cleanedStationId := strings.TrimSpace(ticketInfo.StationId)
 
 	var cleanedDirectionId, cleanedLine, cleanedMessage string
@@ -144,8 +165,8 @@ func constructTicketInspectorInfo(ticketInfo utils.TicketInspector, startTime ti
 		cleanedMessage = strings.TrimSpace(ticketInfo.Message.String)
 	}
 
-	station := getStationEntry(cleanedStationId, "Station")
-	direction := getStationEntry(cleanedDirectionId, "Direction")
+	station := getStationEntry(networkID, cleanedStationId, "Station")
+	direction := getStationEntry(networkID, cleanedDirectionId, "Direction")
 
 	if ticketInfo.IsHistoric {
 		// As the historic data is not a real entry it has no timestamp, so we need to calculate one
@@ -171,7 +192,7 @@ func constructTicketInspectorInfo(ticketInfo utils.TicketInspector, startTime ti
 }
 
 // Helper function to get station or direction data
-func getStationEntry(id string, entryType string) utils.StationListEntry {
+func getStationEntry(networkID string, id string, entryType string) utils.StationListEntry {
 	defaultEntry := utils.StationListEntry{
 		Name:        "",
 		Coordinates: utils.CoordinatesEntry{Latitude: 0, Longitude: 0},
@@ -181,7 +202,7 @@ func getStationEntry(id string, entryType string) utils.StationListEntry {
 		return defaultEntry
 	}
 
-	stations := data.GetStationsList()
+	stations, _ := data.GetStationsList(networkID)
 	if foundEntry, ok := stations[id]; ok {
 		return foundEntry
 	}

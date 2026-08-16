@@ -1,48 +1,74 @@
+"""
+Build `StationsList.json` for one network from OpenStreetMap.
+
+Run it through the pipeline rather than directly:
+
+    python3 scripts/build_network.py --network hamburg
+
+Everything city specific comes from `networks/<id>.yaml`. See `networks/README.md`.
+"""
+
+from __future__ import annotations
+
+import argparse
 import json
-import math
 import re
 import sys
 from collections import defaultdict
-from typing import Dict, List, Set
+from typing import Dict, List, Optional, Set, Tuple
 
-import requests
-from config import CITY, ADMIN_LEVEL, LINES
 from geo import haversine
+from network_config import (
+    MAX_LINE_ID_LENGTH,
+    Coordinates,
+    NetworkConfig,
+    load_network_centers,
+    load_network_config,
+    nearest_network_id,
+)
+from overpass import query as overpass_query
 
-# Regex that exactly matches any of the wanted refs, e.g.: ^(S1|S2|U1)$
-line_regex = "^(" + "|".join(map(re.escape, LINES)) + ")$"
 
-QUERY = rf"""
+def build_query(config: NetworkConfig) -> str:
+    """
+    Overpass query for every station node of the network's lines.
+
+    When the network lists its lines explicitly we filter on them inside Overpass, which keeps the
+    response small. When it discovers them (`lines: auto`) we take every route of the configured
+    modes and filter afterwards, except where a mode carries a line pattern of its own: that one is
+    filtered on the server too, because a mode like `train` otherwise returns the whole country.
+    """
+    if config.source.include_lines is None:
+        line_filter = ""
+    else:
+        refs = "|".join(re.escape(line) for line in config.source.include_lines)
+        line_filter = f'["ref"~"^({refs})$"]'
+
+    return rf"""
 [out:json][timeout:1200];
 
-// 2.1  {CITY} administrative area
-area["name"="{CITY}"]["boundary"="administrative"]["admin_level"~"{ADMIN_LEVEL}"]->.a;
+// The administrative area to search in
+{config.source.area_preamble()}
 
-// 2.2  Route relations for the lines we want
-relation
-  ["type"="route"]
-  ["route"~"^(train|subway|tram|light_rail)$"]
-  ["ref"~"{line_regex}"]
-  (area.a)
-  ->.routes;
+// Route relations for the modes we want, one block per mode so a mode's own line rule applies
+{config.source.route_union(config.source.scope(), line_filter)}->.routes;
 
-// 2.3  All member nodes (platforms, stop_positions, etc.)
+// All member nodes (platforms, stop_positions, etc.)
 (.routes; >>;)->.routeNodes;
 
-// 2.4  stop_area relations that contain any of those nodes
+// stop_area relations that contain any of those nodes
 rel
   ["public_transport"="stop_area"]
   (bn.routeNodes)
   ->.stopAreas;
 
-// 2.5  All nodes inside those stop_areas (incl. station nodes)
+// All nodes inside those stop_areas (incl. station nodes)
 (.stopAreas; >>;)->.stopNodes;
 
-// 2.6  For completeness, also pull any station node referenced directly
+// For completeness, also pull any station node referenced directly
 node.routeNodes["railway"="station"]->.directStations;
 node.routeNodes["public_transport"="station"]->.directStationsPT;
 
-// 2.7  Union everything we need and output
 (
   .routes;
   .stopAreas;
@@ -55,56 +81,90 @@ out body;
 """
 
 
-def fetch_elements() -> List[dict]:
-    """
-    Fetch the elements from the Overpass API.
-    """
-    print("[INFO] Fetching from Overpass …", file=sys.stderr, flush=True)
-    OVERPASS_URL = "https://overpass-api.de/api/interpreter"
-    r = requests.post(OVERPASS_URL, data={"data": QUERY}, timeout=180)
-    r.raise_for_status()
-    print(f"[INFO] Received {len(r.content)//1024} kB", file=sys.stderr)
-    return r.json()["elements"]
+def fetch_elements(config: NetworkConfig) -> List[dict]:
+    print(f"[INFO] Fetching {config.name} from Overpass ...", file=sys.stderr, flush=True)
+    elements = overpass_query(build_query(config))
+    print(f"[INFO] Received {len(elements)} elements", file=sys.stderr)
+    return elements
 
 
-def build_dataset(elements: List[dict]) -> Dict[str, dict]:
+def station_code(tags: Dict[str, str], node_id: int, config: NetworkConfig) -> str:
     """
-    Build a dataset of stations from the elements fetched from the Overpass API.
-    This will return a dictionary with station IDs as keys and station information as values.
-    Something like this:
-    {
-        "SUM-n30731497": {
-            "coordinates": {
-                "latitude": 52.52158155454545,
-                "longitude": 13.413028718181819
-        },
-        "lines": [
-            "M2",
-            "M4",
-            "M5",
-            "M6",
-            "S3",
-            "S5",
-            "S7",
-            "S9",
-            "U2",
-            "U5",
-            "U8"
-        ],
-            "name": "Alexanderplatz"
-        },
-    }
-    """
-    stations: Dict[int, dict] = {}  # node id -> station meta
-    node_to_lines: Dict[int, Set[str]] = defaultdict(set)  # node id -> {line}
-    station_to_members: Dict[int, Set[int]] = defaultdict(
-        set
-    )  # station node id -> {member node ids}
+    The id a station is known by, from the first configured tag that is present.
 
-    # Iterate once, gather info
-    for el in elements:
-        if el["type"] == "node":
-            tags = el.get("tags", {})
+    The fallback is the OSM node id, which is unique across the whole planet. Which tags a network
+    trusts before that is a per network decision, because not every `ref` is unique outside its own
+    operator. See the note in `networks/hamburg.yaml`.
+    """
+    for source in config.stations.id_sources:
+        value = tags.get(source)
+        if value:
+            return value
+    return f"n{node_id}"
+
+
+def owns_route(
+    config: NetworkConfig,
+    relation: dict,
+    stations: Dict[int, dict],
+    centers: Dict[str, Coordinates],
+) -> bool:
+    """
+    Whether this network, rather than a neighbouring one, should carry the route.
+
+    A `boundingBox` is a rectangle drawn around a system that is not rectangular, so neighbouring
+    boxes overlap. Duesseldorf's reaches into Cologne's and Cologne's back into Duesseldorf's, and
+    without this both would download the other's trams. The same station would then exist in two
+    networks, which the station id is required to be unique across, and the seed would fail.
+
+    The route goes to whichever network centre its stops sit closest to, which is the rule that
+    separated the two systems in the first place. Networks defined by an administrative boundary
+    skip this: their area already answers the question exactly.
+    """
+    if not centers:
+        return True
+
+    points = [
+        Coordinates(**stations[member["ref"]]["coordinates"])
+        for member in relation.get("members", [])
+        if member["type"] == "node" and member["ref"] in stations
+    ]
+    if not points:
+        # Nothing to judge by. Keeping it is the safer error: a route with no known stop contributes
+        # no stations anyway.
+        return True
+
+    middle = Coordinates(
+        latitude=sum(point.latitude for point in points) / len(points),
+        longitude=sum(point.longitude for point in points) / len(points),
+    )
+    return nearest_network_id(middle, centers) == config.id
+
+
+def build_dataset(elements: List[dict], config: NetworkConfig) -> Tuple[Dict[str, dict], List[dict]]:
+    """
+    Turn raw Overpass elements into `{stationId: {coordinates, lines, name}}`.
+
+    Stations that end up serving none of the network's lines are dropped: they are stops that
+    happened to sit inside the queried area.
+
+    The tags of the route relations this network accepted come back alongside, because the later
+    steps need the same relations and must not ask Overpass for them a second time. See
+    `route_cache_path` for why.
+    """
+    # Only needed by networks that search a box, see `owns_route`.
+    centers = load_network_centers() if config.source.osm_area is None else {}
+
+    stations: Dict[int, dict] = {}
+    node_to_lines: Dict[int, Set[str]] = defaultdict(set)
+    station_to_members: Dict[int, Set[int]] = defaultdict(set)
+    discovered_lines: Set[str] = set()
+    accepted_routes: List[dict] = []
+    overlong_refs: Set[str] = set()
+
+    for element in elements:
+        if element["type"] == "node":
+            tags = element.get("tags", {})
 
             is_station = tags.get("railway") in (
                 "station",
@@ -119,153 +179,183 @@ def build_dataset(elements: List[dict]) -> Dict[str, dict]:
             if not is_station:
                 continue
 
-            code = (
-                tags.get("ref:ds100")
-                or tags.get("railway:ref")
-                or tags.get("ref")
-                or f"n{el['id']}"  # fallback
-            )
-            stations[el["id"]] = {
-                "code": code,
+            stations[element["id"]] = {
+                "code": station_code(tags, element["id"], config),
                 "name": tags.get("name", ""),
-                "coordinates": {"latitude": el["lat"], "longitude": el["lon"]},
+                "coordinates": {"latitude": element["lat"], "longitude": element["lon"]},
             }
 
-        elif el["type"] == "relation":
-            t = el.get("tags", {})
-            if t.get("public_transport") == "stop_area":
-                member_nodes = [m["ref"] for m in el["members"] if m["type"] == "node"]
+        elif element["type"] == "relation":
+            tags = element.get("tags", {})
+            if tags.get("public_transport") == "stop_area":
+                member_nodes = [m["ref"] for m in element["members"] if m["type"] == "node"]
                 station_nodes = [
                     m["ref"]
-                    for m in el["members"]
-                    if m["type"] == "node"
-                    and m.get("role") in ("station", "")
-                    and m["ref"] in stations
+                    for m in element["members"]
+                    if m["type"] == "node" and m.get("role") in ("station", "") and m["ref"] in stations
                 ]
-                if not station_nodes:  # fallback
-                    station_nodes = [mid for mid in member_nodes if mid in stations]
-                for st in station_nodes:
-                    station_to_members[st].update(member_nodes)
+                if not station_nodes:
+                    station_nodes = [node_id for node_id in member_nodes if node_id in stations]
+                for station in station_nodes:
+                    station_to_members[station].update(member_nodes)
 
-            elif t.get("type") == "route":
-                ref = t.get("ref") or t.get("name")
-                if ref not in LINES:  # keep only whitelisted lines
+            elif tags.get("type") == "route":
+                if not config.source.accepts_route(tags):
                     continue
-                for m in el.get("members", []):
-                    if m["type"] == "node":
-                        node_to_lines[m["ref"]].add(ref)
+                ref = tags.get("ref") or tags.get("name")
+                # A relation with no `ref` falls back to its name, and a name this long is a
+                # description rather than a designation: Karlsruhe tags its depot runs as
+                # "E Einsatzwagen Betriebshof West <> Rheinhafen". No line a passenger can board is
+                # named that, and the id would not fit the database column either.
+                if len(ref) > MAX_LINE_ID_LENGTH:
+                    overlong_refs.add(ref)
+                    continue
+                if not owns_route(config, element, stations, centers):
+                    continue
+                discovered_lines.add(ref)
+                # Id and tags, not tags alone: the segment step fetches a relation's geometry by id,
+                # so dropping it here would send that step back to Overpass for the same relations.
+                accepted_routes.append({"id": element["id"], "tags": tags})
+                for member in element.get("members", []):
+                    if member["type"] == "node":
+                        node_to_lines[member["ref"]].add(ref)
 
-    # Aggregate lines per station
+    if overlong_refs:
+        print(
+            f"[WARN] Dropped {len(overlong_refs)} route(s) whose only designation is longer than "
+            f"{MAX_LINE_ID_LENGTH} characters: {sorted(overlong_refs)}",
+            file=sys.stderr,
+        )
+
+    accepted_lines = set(config.source.include_lines or discovered_lines) - set(config.source.exclude_lines)
+
     dataset: Dict[str, dict] = {}
-    for st_id, s in stations.items():
-        lines: Set[str] = set(node_to_lines.get(st_id, []))
-        for n in station_to_members.get(st_id, []):
-            lines.update(node_to_lines.get(n, []))
-        lines &= set(LINES)  # enforce whitelist
+    for station_id, station in stations.items():
+        lines: Set[str] = set(node_to_lines.get(station_id, []))
+        for member in station_to_members.get(station_id, []):
+            lines.update(node_to_lines.get(member, []))
+        lines &= accepted_lines
         if not lines:
-            print(f"[INFO] Dropping station {s['code']} without relevant lines")
-            continue  # drop stations without relevant lines
-        dataset[s["code"]] = {
-            "coordinates": s["coordinates"],
+            continue
+        dataset[station["code"]] = {
+            "coordinates": station["coordinates"],
             "lines": sorted(lines),
-            "name": s["name"],
+            "name": station["name"],
         }
 
+    print(f"[STAT] Lines: {len(accepted_lines)} {sorted(accepted_lines)}", file=sys.stderr)
     print(f"[STAT] Stations kept: {len(dataset)}", file=sys.stderr)
-    return dataset
+    return dataset, [
+        route
+        for route in accepted_routes
+        if (route["tags"].get("ref") or route["tags"].get("name")) in accepted_lines
+    ]
 
 
-def merge_proximate(data: Dict[str, dict], threshold: float = 250.0) -> Dict[str, dict]:
+def merge_proximate(data: Dict[str, dict], threshold: float) -> Dict[str, dict]:
     """
-    OSM will sometimes have multiple stations that are in reality the same station.
-    For example the Berlin Hauptbahnhof is devided into three stations (trams, S-Bahn,
-    and Ubahn).
-    This function merges stations that are close to each other. As Inspectors could just
-    walk between the platforms, eg. from the Tram to the Ubahn, we merge them to reflect this.
+    Merge stations that are close enough for an inspector to walk between.
+
+    OpenStreetMap models Berlin Hauptbahnhof as three separate stations (tram, S-Bahn, U-Bahn).
+    For our purpose they are one place, because being checked on one platform tells you something
+    about the others.
     """
     merged: Dict[str, dict] = {}
     used: Set[str] = set()
     ids = list(data.keys())
 
-    for i, sid in enumerate(ids):
-        if sid in used:
+    for index, station_id in enumerate(ids):
+        if station_id in used:
             continue
-        group = [sid]
-        for oid in ids[i + 1 :]:
-            if oid in used:
+        group = [station_id]
+        for other_id in ids[index + 1 :]:
+            if other_id in used:
                 continue
-            if (
-                haversine(data[sid]["coordinates"], data[oid]["coordinates"])
-                <= threshold
-            ):
-                group.append(oid)
+            if haversine(data[station_id]["coordinates"], data[other_id]["coordinates"]) <= threshold:
+                group.append(other_id)
         used.update(group)
-        # representative
-        rep = group[0]
-        merged[rep] = {
+        # A named member represents the group, because the name is what a user reports and searches
+        # by. OpenStreetMap leaves plenty of platform nodes unnamed next to the named stop they
+        # belong to, and taking the first member regardless would throw that name away.
+        representative = next((member for member in group if data[member]["name"]), group[0])
+        merged[representative] = {
             "coordinates": {
-                "latitude": sum(data[g]["coordinates"]["latitude"] for g in group)
-                / len(group),
-                "longitude": sum(data[g]["coordinates"]["longitude"] for g in group)
-                / len(group),
+                "latitude": sum(data[member]["coordinates"]["latitude"] for member in group) / len(group),
+                "longitude": sum(data[member]["coordinates"]["longitude"] for member in group) / len(group),
             },
-            "lines": sorted({ln for g in group for ln in data[g]["lines"]}),
-            "name": data[rep]["name"],
+            "lines": sorted({line for member in group for line in data[member]["lines"]}),
+            "name": data[representative]["name"],
         }
-    print(
-        f"[STAT] After merge (<{threshold}\u00a0m): {len(merged)} stations",
-        file=sys.stderr,
-    )
+
+    print(f"[STAT] After merge (<{threshold} m): {len(merged)} stations", file=sys.stderr)
     return merged
 
 
-def prefix_station_ids(data: Dict[str, dict]) -> Dict[str, dict]:
+def drop_unnamed(data: Dict[str, dict]) -> Dict[str, dict]:
     """
-    Add ID prefix based on lines served.
-    This will make it easier to construct subgraphs for each transport mode.
-    And also makes lookups more efficient as it would allow configuring index
-    lookups for each transport mode.
+    Remove stations that carry no name, after the merge had its chance to supply one.
+
+    A station without a name cannot be reported, searched or labelled on the map, so it is of no use
+    to anyone downstream, and the validator rejects it. Chemnitz has eight such stops, mostly service
+    platforms of the tram train that never got a name in OpenStreetMap.
     """
-    prefixed: Dict[str, dict] = {}
-    for station_id, station_info in data.items():
-        lines = station_info["lines"]
-        has_s: bool = any(l.startswith("S") for l in lines)
-        has_u: bool = any(l.startswith("U") for l in lines)
-        has_m: bool = any(l.startswith("M") or l.isdigit() for l in lines)
-        if has_s and has_u and has_m:
-            prefix = "SUM-"
-        elif has_s and has_u:
-            prefix = "SU-"
-        elif has_s and has_m:
-            prefix = "SM-"
-        elif has_u and has_m:
-            prefix = "UM-"
-        elif has_s:
-            prefix = "S-"
-        elif has_u:
-            prefix = "U-"
-        elif has_m:
-            prefix = "M-"
-        else:
-            prefix = ""
-        prefixed[f"{prefix}{station_id}"] = station_info
-    return prefixed
+    named = {station_id: info for station_id, info in data.items() if info["name"]}
+    dropped = len(data) - len(named)
+    if dropped:
+        print(f"[STAT] Dropped {dropped} station(s) without a name", file=sys.stderr)
+    return named
+
+
+def prefix_station_ids(data: Dict[str, dict], config: NetworkConfig) -> Dict[str, dict]:
+    """Add the per network mode prefix, e.g. `SU-` for a station served by S-Bahn and U-Bahn."""
+    return {
+        f"{config.stations.prefix_for(info['lines'])}{station_id}": info for station_id, info in data.items()
+    }
+
+
+def create_stations_list(
+    config: NetworkConfig, elements: Optional[List[dict]] = None
+) -> Tuple[Dict[str, dict], List[dict]]:
+    data, routes = build_dataset(elements if elements is not None else fetch_elements(config), config)
+    data = merge_proximate(data, config.stations.merge_radius_meters)
+    data = drop_unnamed(data)
+    return prefix_station_ids(data, config), routes
+
+
+def write_route_cache(config: NetworkConfig, routes: List[dict]) -> None:
+    """
+    Hand the route relations to the later steps of the build, as `{"id", "tags"}` each.
+
+    The public Overpass mirrors do not all serve the same snapshot, and the difference is not
+    academic: asking twice for every tram route around Mannheim returned 49 relations once and 51 a
+    few minutes later, without lines 5A and 8 the first time. The line list came from one answer and
+    the line metadata from the other, so both lines shipped with no mode at all.
+
+    Querying once and passing the answer on removes the disagreement by construction, and halves
+    the load we put on a service that is donated rather than bought.
+    """
+    path = config.route_cache_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as handle:
+        json.dump(routes, handle, ensure_ascii=False, indent=4)
+    print(f"[DONE] {path} written for {len(routes)} route relations", file=sys.stderr)
 
 
 def main() -> None:
-    """
-    This script fetches the stations from the Overpass API and builds a list of stations.
-    It then merges stations that are close to each other and adds a prefix to the station IDs
-    based on the lines served. This is the first step to set up FreiFahren.
-    """
-    elements = fetch_elements()
-    data = build_dataset(elements)
-    data = merge_proximate(data)
-    data = prefix_station_ids(data)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--network", required=True, help="Network id, i.e. the name of a file in networks/")
+    args = parser.parse_args()
 
-    with open("StationsList.json", "w") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-    print("[DONE] StationsList.json written", file=sys.stderr)
+    config = load_network_config(args.network)
+    data, routes = create_stations_list(config)
+
+    output_path = config.backend_seed_dir / "StationsList.json"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=4)
+    print(f"[DONE] {output_path} written", file=sys.stderr)
+
+    write_route_cache(config, routes)
 
 
 if __name__ == "__main__":

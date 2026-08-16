@@ -1,0 +1,320 @@
+{
+    "Agathenburg": [],
+    "Ahrensburg Ost": [
+        "Ahrensburg"
+    ],
+    "Ahrensburg West": [
+        "Ahrensburg"
+    ],
+    "Allermöhe": [],
+    "Alte Wöhr (Stadtpark)": [],
+    "Alter Teichweg": [
+        "Alter"
+    ],
+    "Aumühle": [],
+    "Bahrenfeld": [],
+    "Barmbek": [],
+    "Baumwall (Elbphilharmonie)": [
+        "Baumwall"
+    ],
+    "Bergedorf": [],
+    "Berliner Tor": [
+        "Berliner"
+    ],
+    "Berne": [],
+    "Billstedt": [],
+    "Billwerder-Moorfleet": [],
+    "Borgweg (Stadtpark)": [
+        "Borgweg"
+    ],
+    "Buchenkamp": [],
+    "Buckhorn": [],
+    "Burgstraße": [
+        "Burg",
+        "Burgstr.",
+        "Burgstrasse"
+    ],
+    "Buxtehude": [],
+    "Christuskirche": [],
+    "Dehnhaide": [],
+    "Diebsteich": [],
+    "Dollern": [],
+    "Eidelstedt": [],
+    "Elbbrücken": [],
+    "Elbgaustraße": [
+        "Elbgau",
+        "Elbgaustr.",
+        "Elbgaustrasse"
+    ],
+    "Emilienstraße": [
+        "Emilien",
+        "Emilienstr.",
+        "Emilienstrasse"
+    ],
+    "Eppendorfer Baum": [
+        "Eppendorfer"
+    ],
+    "Farmsen": [],
+    "Feldstraße (Heiligengeistfeld)": [
+        "Feldstraße"
+    ],
+    "Fischbek": [],
+    "Friedrichsberg": [],
+    "Fuhlsbüttel": [],
+    "Fuhlsbüttel Nord": [
+        "Fuhlsbüttel"
+    ],
+    "Garstedt": [],
+    "Großhansdorf": [],
+    "Gänsemarkt (Oper)": [
+        "Gänsemarkt"
+    ],
+    "Habichtstraße": [
+        "Habicht",
+        "Habichtstr.",
+        "Habichtstrasse"
+    ],
+    "HafenCity Universität": [
+        "HafenCity"
+    ],
+    "Hagenbecks Tierpark": [
+        "Hagenbecks"
+    ],
+    "Hagendeel": [],
+    "Hallerstraße": [
+        "Haller",
+        "Hallerstr.",
+        "Hallerstrasse"
+    ],
+    "Halstenbek": [],
+    "Hamburg Airport (Flughafen)": [],
+    "Hamburg Dammtor": [
+        "Hamburg"
+    ],
+    "Hamburg-Altona": [],
+    "Hamburger Straße": [
+        "Hamburger",
+        "Hamburger Str.",
+        "Hamburger Strasse"
+    ],
+    "Hammer Kirche": [
+        "Hammer"
+    ],
+    "Hammerbrook": [],
+    "Harburg": [],
+    "Harburg Rathaus": [
+        "Harburg"
+    ],
+    "Hasselbrook": [],
+    "Hauptbahnhof Nord": [
+        "Hauptbahnhof"
+    ],
+    "Hauptbahnhof Süd": [
+        "Hauptbahnhof"
+    ],
+    "Heimfeld (TU Hamburg)": [],
+    "Hochkamp": [],
+    "Hoheluftbrücke": [],
+    "Hoheneichen": [],
+    "Hoisbüttel": [],
+    "Holstenstraße": [
+        "Holsten",
+        "Holstenstr.",
+        "Holstenstrasse"
+    ],
+    "Horneburg": [],
+    "Horner Rennbahn": [
+        "Horner"
+    ],
+    "Hudtwalckerstraße": [
+        "Hudtwalcker",
+        "Hudtwalckerstr.",
+        "Hudtwalckerstrasse"
+    ],
+    "Iserbrook": [],
+    "Joachim-Mähl-Straße": [
+        "Joachim-Mähl-",
+        "Joachim-Mähl-str.",
+        "Joachim-Mähl-strasse"
+    ],
+    "Jungfernstieg": [],
+    "Kellinghusenstraße": [
+        "Kellinghusen",
+        "Kellinghusenstr.",
+        "Kellinghusenstrasse"
+    ],
+    "Kiekut": [],
+    "Kiwittsmoor": [],
+    "Klein Borstel": [
+        "Klein"
+    ],
+    "Klein Flottbek (Botanischer Garten)": [],
+    "Klosterstern": [],
+    "Kornweg (Klein Borstel)": [],
+    "Krupunder": [],
+    "Königstraße": [
+        "König",
+        "Königstr.",
+        "Königstrasse"
+    ],
+    "Landungsbrücken": [],
+    "Landwehr": [],
+    "Langenfelde": [],
+    "Langenhorn Markt": [
+        "Langenhorn"
+    ],
+    "Langenhorn Nord": [
+        "Langenhorn"
+    ],
+    "Lattenkamp (Sporthalle)": [
+        "Lattenkamp"
+    ],
+    "Legienstraße": [
+        "Legien",
+        "Legienstr.",
+        "Legienstrasse"
+    ],
+    "Lohmühlenstraße": [
+        "Lohmühlen",
+        "Lohmühlenstr.",
+        "Lohmühlenstrasse"
+    ],
+    "Lutterothstraße": [
+        "Lutteroth",
+        "Lutterothstr.",
+        "Lutterothstrasse"
+    ],
+    "Lübecker Straße": [
+        "Lübecker",
+        "Lübecker Str.",
+        "Lübecker Strasse"
+    ],
+    "Meiendorfer Weg": [
+        "Meiendorfer"
+    ],
+    "Merkenstraße": [
+        "Merken",
+        "Merkenstr.",
+        "Merkenstrasse"
+    ],
+    "Messehallen": [],
+    "Meßberg": [],
+    "Mittlerer Landweg": [
+        "Mittlerer"
+    ],
+    "Mundsburg": [],
+    "Mönckebergstraße": [
+        "Mönckeberg",
+        "Mönckebergstr.",
+        "Mönckebergstrasse"
+    ],
+    "Mümmelmannsberg": [],
+    "Nettelnburg": [],
+    "Neu Wulmstorf": [],
+    "Neugraben": [],
+    "Neukloster": [],
+    "Neuwiedenthal": [],
+    "Niendorf Markt": [
+        "Niendorf"
+    ],
+    "Niendorf Nord": [
+        "Niendorf"
+    ],
+    "Norderstedt Mitte": [
+        "Norderstedt"
+    ],
+    "Ochsenzoll": [],
+    "Ohlsdorf": [],
+    "Ohlstedt": [],
+    "Oldenfelde": [],
+    "Osterstraße": [
+        "Oster",
+        "Osterstr.",
+        "Osterstrasse"
+    ],
+    "Othmarschen": [],
+    "Ottensen": [],
+    "Pinneberg": [],
+    "Poppenbüttel": [],
+    "Rathaus": [],
+    "Rauhes Haus": [
+        "Rauhes"
+    ],
+    "Reeperbahn": [],
+    "Reinbek": [],
+    "Richtweg": [],
+    "Rissen": [],
+    "Ritterstraße": [
+        "Ritter",
+        "Ritterstr.",
+        "Ritterstrasse"
+    ],
+    "Rothenburgsort": [],
+    "Rödingsmarkt": [],
+    "Rübenkamp (City Nord)": [],
+    "S Blankenese": [],
+    "Schippelsweg": [],
+    "Schlump": [],
+    "Schmalenbeck": [],
+    "Sengelmannstraße (City Nord)": [],
+    "Sierichstraße": [
+        "Sierich",
+        "Sierichstr.",
+        "Sierichstrasse"
+    ],
+    "St. Pauli": [
+        "St."
+    ],
+    "Stade": [],
+    "Steinfurther Allee": [
+        "Steinfurther"
+    ],
+    "Steinstraße": [
+        "Stein",
+        "Steinstr.",
+        "Steinstrasse"
+    ],
+    "Stellingen": [],
+    "Stephansplatz (Oper/CCH)": [
+        "Stephansplatz"
+    ],
+    "Sternschanze (Messe)": [
+        "Sternschanze"
+    ],
+    "Straßburger Straße": [
+        "Straßburger",
+        "Straßburger Str.",
+        "Straßburger Strasse"
+    ],
+    "Sülldorf": [],
+    "Thesdorf": [],
+    "Tiefstack": [],
+    "Trabrennbahn": [],
+    "U Alsterdorf": [],
+    "U Saarlandstraße": [
+        "U Saarland",
+        "U Saarlandstr.",
+        "U Saarlandstrasse"
+    ],
+    "U Saarlandstraße (Süd)": [],
+    "Uhlandstraße": [
+        "Uhland",
+        "Uhlandstr.",
+        "Uhlandstrasse"
+    ],
+    "Veddel (Ballin Stadt)": [],
+    "Volksdorf": [],
+    "Wandsbek Markt": [
+        "Wandsbek"
+    ],
+    "Wandsbek-Gartenstadt": [],
+    "Wandsbeker Chaussee": [
+        "Wandsbeker"
+    ],
+    "Wartenau": [],
+    "Wedel": [],
+    "Wellingsbüttel": [],
+    "Wilhelmsburg": [],
+    "Wohltorf": [],
+    "Überseequartier": []
+}

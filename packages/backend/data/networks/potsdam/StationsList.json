@@ -1,0 +1,719 @@
+{
+    "n30563544": {
+        "coordinates": {
+            "latitude": 52.397854249999995,
+            "longitude": 13.07880565
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Humboldtring/Nuthestraße"
+    },
+    "n30566661": {
+        "coordinates": {
+            "latitude": 52.39595871666666,
+            "longitude": 13.0417937
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Feuerbachstraße"
+    },
+    "n30566668": {
+        "coordinates": {
+            "latitude": 52.3992062,
+            "longitude": 13.0533345
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Dortustraße"
+    },
+    "n30566730": {
+        "coordinates": {
+            "latitude": 52.40119030714286,
+            "longitude": 13.05797297142857
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "94",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Brandenburger Straße"
+    },
+    "n30621962": {
+        "coordinates": {
+            "latitude": 52.4188967,
+            "longitude": 13.0504241
+        },
+        "lines": [
+            "96"
+        ],
+        "name": "Volkspark"
+    },
+    "n30621974": {
+        "coordinates": {
+            "latitude": 52.41310358571429,
+            "longitude": 13.054714728571428
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Am Schragen"
+    },
+    "n30621983": {
+        "coordinates": {
+            "latitude": 52.413582271428574,
+            "longitude": 13.039106242857143
+        },
+        "lines": [
+            "92"
+        ],
+        "name": "Johan-Bouman-Platz"
+    },
+    "n30622103": {
+        "coordinates": {
+            "latitude": 52.37413375999999,
+            "longitude": 13.011217740000001
+        },
+        "lines": [
+            "91",
+            "94"
+        ],
+        "name": "Bahnhof Pirschheide"
+    },
+    "n30622121": {
+        "coordinates": {
+            "latitude": 52.41205716666667,
+            "longitude": 13.085395966666667
+        },
+        "lines": [
+            "93"
+        ],
+        "name": "Glienicker Brücke"
+    },
+    "n30622461": {
+        "coordinates": {
+            "latitude": 52.37819544,
+            "longitude": 13.0821057
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Waldstraße/Horstweg"
+    },
+    "n30622561": {
+        "coordinates": {
+            "latitude": 52.375395,
+            "longitude": 13.091240725
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Magnus-Zeller-Platz"
+    },
+    "n30622931": {
+        "coordinates": {
+            "latitude": 52.37470305,
+            "longitude": 13.123259749999999
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Turmstraße"
+    },
+    "n30622937": {
+        "coordinates": {
+            "latitude": 52.3756208125,
+            "longitude": 13.1292839125
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Johannes-Kepler-Platz"
+    },
+    "n30623689": {
+        "coordinates": {
+            "latitude": 52.3747987,
+            "longitude": 13.14189395
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Gaußstraße"
+    },
+    "n30623714": {
+        "coordinates": {
+            "latitude": 52.369681719999996,
+            "longitude": 13.140223639999999
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Hans-Albers-Straße"
+    },
+    "n30623716": {
+        "coordinates": {
+            "latitude": 52.3663593,
+            "longitude": 13.135721287500001
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Robert-Baberske-Straße"
+    },
+    "n252413764": {
+        "coordinates": {
+            "latitude": 52.358226333333334,
+            "longitude": 13.136996250000001
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98"
+        ],
+        "name": "Marie-Juchacz-Straße"
+    },
+    "n252448808": {
+        "coordinates": {
+            "latitude": 52.3619604,
+            "longitude": 13.1371137
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Am Hirtengraben"
+    },
+    "n252448809": {
+        "coordinates": {
+            "latitude": 52.375529619999995,
+            "longitude": 13.13742522
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Max-Born-Straße"
+    },
+    "n252492499": {
+        "coordinates": {
+            "latitude": 52.39328818,
+            "longitude": 13.109335300000001
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Fontanestraße"
+    },
+    "n252492572": {
+        "coordinates": {
+            "latitude": 52.38080948333334,
+            "longitude": 13.078235999999999
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Kunersdorfer Straße"
+    },
+    "n252492577": {
+        "coordinates": {
+            "latitude": 52.38260403333334,
+            "longitude": 13.07563765
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Sporthalle"
+    },
+    "n252492582": {
+        "coordinates": {
+            "latitude": 52.38592235,
+            "longitude": 13.071738400000001
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Friedhöfe"
+    },
+    "n252492586": {
+        "coordinates": {
+            "latitude": 52.39164241666666,
+            "longitude": 13.064996083333334
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "S Potsdam Hauptbahnhof"
+    },
+    "n252492600": {
+        "coordinates": {
+            "latitude": 52.39788858888889,
+            "longitude": 13.058853444444445
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "94",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Platz der Einheit/West"
+    },
+    "n252492603": {
+        "coordinates": {
+            "latitude": 52.404992119999996,
+            "longitude": 13.05814818
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Rathaus"
+    },
+    "n252492610": {
+        "coordinates": {
+            "latitude": 52.4085456,
+            "longitude": 13.0586028
+        },
+        "lines": [
+            "96"
+        ],
+        "name": "Reiterweg/Alleestraße"
+    },
+    "n252492615": {
+        "coordinates": {
+            "latitude": 52.41170275,
+            "longitude": 13.05906885
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Puschkinallee"
+    },
+    "n252492617": {
+        "coordinates": {
+            "latitude": 52.4140014375,
+            "longitude": 13.0502969625
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Campus Fachhochschule"
+    },
+    "n252492621": {
+        "coordinates": {
+            "latitude": 52.413829125,
+            "longitude": 13.0334112
+        },
+        "lines": [
+            "92"
+        ],
+        "name": "Kirschallee"
+    },
+    "n273507031": {
+        "coordinates": {
+            "latitude": 52.3932419,
+            "longitude": 13.0359346
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Bahnhof Charlottenhof"
+    },
+    "n273507034": {
+        "coordinates": {
+            "latitude": 52.391235800000004,
+            "longitude": 13.03292775
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Schillerplatz/Schafgraben"
+    },
+    "n276956591": {
+        "coordinates": {
+            "latitude": 52.39837785,
+            "longitude": 13.06498245
+        },
+        "lines": [
+            "93",
+            "94",
+            "99"
+        ],
+        "name": "Burgstraße/Klinikum"
+    },
+    "n276956598": {
+        "coordinates": {
+            "latitude": 52.39360875999999,
+            "longitude": 13.027390019999999
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Schloss Charlottenhof"
+    },
+    "n279382994": {
+        "coordinates": {
+            "latitude": 52.3885354,
+            "longitude": 13.027692225
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Kastanienallee/Zeppelinstraße"
+    },
+    "n282489549": {
+        "coordinates": {
+            "latitude": 52.39216774285715,
+            "longitude": 13.091716714285713
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Rathaus Babelsberg"
+    },
+    "n288588445": {
+        "coordinates": {
+            "latitude": 52.39268786,
+            "longitude": 13.10344272
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Plantagenstraße"
+    },
+    "n288588448": {
+        "coordinates": {
+            "latitude": 52.392063300000004,
+            "longitude": 13.099572
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Anhaltstraße"
+    },
+    "n294248940": {
+        "coordinates": {
+            "latitude": 52.401401050000004,
+            "longitude": 13.069843816666667
+        },
+        "lines": [
+            "93",
+            "94",
+            "99"
+        ],
+        "name": "Holzmarktstraße"
+    },
+    "n349113607": {
+        "coordinates": {
+            "latitude": 52.365333675,
+            "longitude": 13.093934725
+        },
+        "lines": [
+            "91",
+            "93",
+            "98"
+        ],
+        "name": "Friedrich-Wolf-Straße"
+    },
+    "n349113615": {
+        "coordinates": {
+            "latitude": 52.359823275,
+            "longitude": 13.097725025
+        },
+        "lines": [
+            "91",
+            "93",
+            "98"
+        ],
+        "name": "Bahnhof Rehbrücke"
+    },
+    "n404580864": {
+        "coordinates": {
+            "latitude": 52.40998856666667,
+            "longitude": 13.0799921
+        },
+        "lines": [
+            "93"
+        ],
+        "name": "Leonardo-da-Vinci-Straße"
+    },
+    "n404580866": {
+        "coordinates": {
+            "latitude": 52.4050155,
+            "longitude": 13.072650849999999
+        },
+        "lines": [
+            "93"
+        ],
+        "name": "Schiffbauergasse/Berliner Straße"
+    },
+    "n430866204": {
+        "coordinates": {
+            "latitude": 52.380952675,
+            "longitude": 13.017072575
+        },
+        "lines": [
+            "91",
+            "94"
+        ],
+        "name": "Luftschiffhafen"
+    },
+    "n445375755": {
+        "coordinates": {
+            "latitude": 52.398497940000006,
+            "longitude": 13.0475943
+        },
+        "lines": [
+            "91",
+            "94",
+            "98"
+        ],
+        "name": "Luisenplatz-Süd/Park Sanssouci"
+    },
+    "n473669862": {
+        "coordinates": {
+            "latitude": 52.372984725,
+            "longitude": 13.088356175000001
+        },
+        "lines": [
+            "91",
+            "93",
+            "98"
+        ],
+        "name": "Eduard-Claudius-Straße/Heinrich-Mann-Allee"
+    },
+    "n520665588": {
+        "coordinates": {
+            "latitude": 52.38447214,
+            "longitude": 13.022191119999999
+        },
+        "lines": [
+            "91",
+            "94"
+        ],
+        "name": "Im Bogen/Zeppelinstraße"
+    },
+    "n535697187": {
+        "coordinates": {
+            "latitude": 52.3932964,
+            "longitude": 13.0856728
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "Alt Nowawes"
+    },
+    "n617362138": {
+        "coordinates": {
+            "latitude": 52.3917197,
+            "longitude": 13.0954835
+        },
+        "lines": [
+            "94",
+            "99"
+        ],
+        "name": "S Babelsberg/Wattstraße"
+    },
+    "n650081742": {
+        "coordinates": {
+            "latitude": 52.37369085,
+            "longitude": 13.112236775
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Abzweig Betriebshof ViP"
+    },
+    "n1149196889": {
+        "coordinates": {
+            "latitude": 52.368414375,
+            "longitude": 13.091830925
+        },
+        "lines": [
+            "91",
+            "93",
+            "98"
+        ],
+        "name": "Zum Kahleberg"
+    },
+    "n1193433542": {
+        "coordinates": {
+            "latitude": 52.3733499,
+            "longitude": 13.101018499999999
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Bisamkiez"
+    },
+    "n1209764598": {
+        "coordinates": {
+            "latitude": 52.364371399999996,
+            "longitude": 13.1358961
+        },
+        "lines": [
+            "92",
+            "96"
+        ],
+        "name": "Priesterweg"
+    },
+    "n1456269467": {
+        "coordinates": {
+            "latitude": 52.408116375,
+            "longitude": 13.076035925
+        },
+        "lines": [
+            "93"
+        ],
+        "name": "Mangerstraße"
+    },
+    "n2255903955": {
+        "coordinates": {
+            "latitude": 52.36353046666667,
+            "longitude": 13.095224800000002
+        },
+        "lines": [
+            "91",
+            "93",
+            "98"
+        ],
+        "name": "Am Moosfenn"
+    },
+    "n2261350036": {
+        "coordinates": {
+            "latitude": 52.39496125,
+            "longitude": 13.0592464
+        },
+        "lines": [
+            "91",
+            "92",
+            "93",
+            "96",
+            "98",
+            "99"
+        ],
+        "name": "Alter Markt/Landtag"
+    },
+    "n3983904023": {
+        "coordinates": {
+            "latitude": 52.4130204,
+            "longitude": 13.0870632
+        },
+        "lines": [
+            "93"
+        ],
+        "name": "Glienicker Brücke"
+    },
+    "n5253863943": {
+        "coordinates": {
+            "latitude": 52.432177625,
+            "longitude": 13.0547666
+        },
+        "lines": [
+            "96"
+        ],
+        "name": "Campus Jungfernsee"
+    },
+    "n5253870119": {
+        "coordinates": {
+            "latitude": 52.424861825,
+            "longitude": 13.05341305
+        },
+        "lines": [
+            "96"
+        ],
+        "name": "Rote Kaserne"
+    },
+    "n5275063197": {
+        "coordinates": {
+            "latitude": 52.4225445,
+            "longitude": 13.05057145
+        },
+        "lines": [
+            "96"
+        ],
+        "name": "Erich-Arendt-Straße"
+    },
+    "n11836618700": {
+        "coordinates": {
+            "latitude": 52.414958799999994,
+            "longitude": 13.045902550000001
+        },
+        "lines": [
+            "92"
+        ],
+        "name": "Wiesenpark"
+    }
+}

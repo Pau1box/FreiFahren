@@ -1,0 +1,357 @@
+{
+    "n268487091": {
+        "coordinates": {
+            "latitude": 50.95015058,
+            "longitude": 10.69817076
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Bertha-von-Suttner-Platz"
+    },
+    "n269590021": {
+        "coordinates": {
+            "latitude": 50.946935925,
+            "longitude": 10.697686525
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Myconiusplatz"
+    },
+    "n300326481": {
+        "coordinates": {
+            "latitude": 50.8636675,
+            "longitude": 10.561941066666668
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Reinhardsbrunn Bahnhof"
+    },
+    "n300326543": {
+        "coordinates": {
+            "latitude": 50.8704745,
+            "longitude": 10.5622979
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Reinhardsbrunner Teiche"
+    },
+    "n307993479": {
+        "coordinates": {
+            "latitude": 50.88978796666667,
+            "longitude": 10.57781335
+        },
+        "lines": [
+            "4",
+            "6"
+        ],
+        "name": "Waltershausen, Gleisdreieck"
+    },
+    "n307993551": {
+        "coordinates": {
+            "latitude": 50.8991035,
+            "longitude": 10.5983119
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Waltershausen, Wahlwinkel"
+    },
+    "n307993630": {
+        "coordinates": {
+            "latitude": 50.9065732,
+            "longitude": 10.6305254
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Leina"
+    },
+    "n332212068": {
+        "coordinates": {
+            "latitude": 50.946904475,
+            "longitude": 10.7099188
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Orangerie"
+    },
+    "n332212075": {
+        "coordinates": {
+            "latitude": 50.95186021666667,
+            "longitude": 10.7079227
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Hersdorfplatz"
+    },
+    "n338638883": {
+        "coordinates": {
+            "latitude": 50.960380199999996,
+            "longitude": 10.71988748
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Ostbahnhof"
+    },
+    "n340360599": {
+        "coordinates": {
+            "latitude": 50.93978153,
+            "longitude": 10.711652130000001
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n352634867": {
+        "coordinates": {
+            "latitude": 50.94093955,
+            "longitude": 10.686598100000001
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Wagenhalle"
+    },
+    "n390342254": {
+        "coordinates": {
+            "latitude": 50.9115917,
+            "longitude": 10.65395015
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Boxberg"
+    },
+    "n390345074": {
+        "coordinates": {
+            "latitude": 50.9290061,
+            "longitude": 10.67856665
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Krankenhaus"
+    },
+    "n417006902": {
+        "coordinates": {
+            "latitude": 50.8840883,
+            "longitude": 10.576116200000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Waltershausen, Schnepfenthal"
+    },
+    "n417007799": {
+        "coordinates": {
+            "latitude": 50.86500095,
+            "longitude": 10.5411953
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Marienglashöhle"
+    },
+    "n417008455": {
+        "coordinates": {
+            "latitude": 50.87466516666666,
+            "longitude": 10.519471766666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Bad Tabarz"
+    },
+    "n497530601": {
+        "coordinates": {
+            "latitude": 50.8590765,
+            "longitude": 10.555395
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Friedrichroda (TWSB)"
+    },
+    "n708880843": {
+        "coordinates": {
+            "latitude": 50.9001581,
+            "longitude": 10.5626166
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Waltershausen Bahnhof"
+    },
+    "n855676317": {
+        "coordinates": {
+            "latitude": 50.8930446,
+            "longitude": 10.568531
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Ohrdrufer Straße"
+    },
+    "n1225757267": {
+        "coordinates": {
+            "latitude": 50.951148599999996,
+            "longitude": 10.703066775
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Gartenstraße"
+    },
+    "n1419349073": {
+        "coordinates": {
+            "latitude": 50.95109705,
+            "longitude": 10.708153150000001
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Huttenstraße"
+    },
+    "n1695138522": {
+        "coordinates": {
+            "latitude": 50.93923936666667,
+            "longitude": 10.681503533333334
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Schöne Aussicht"
+    },
+    "n1977587086": {
+        "coordinates": {
+            "latitude": 50.8950397,
+            "longitude": 10.5631973
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Goethestraße"
+    },
+    "n1977589010": {
+        "coordinates": {
+            "latitude": 50.8968793,
+            "longitude": 10.5604628
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Albrechtstraße"
+    },
+    "n1985739473": {
+        "coordinates": {
+            "latitude": 50.943885050000006,
+            "longitude": 10.7111918
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Bahnhofstraße"
+    },
+    "n1985777219": {
+        "coordinates": {
+            "latitude": 50.94239365,
+            "longitude": 10.6905089
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Ernststraße"
+    },
+    "n2192815509": {
+        "coordinates": {
+            "latitude": 50.93455605,
+            "longitude": 10.67567285
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Inselsbergstraße"
+    },
+    "n2306744593": {
+        "coordinates": {
+            "latitude": 50.9440831,
+            "longitude": 10.69520345
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "18.-März-Straße"
+    },
+    "n2309814778": {
+        "coordinates": {
+            "latitude": 50.957094850000004,
+            "longitude": 10.71723905
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Leinefelder Straße"
+    },
+    "n2309815639": {
+        "coordinates": {
+            "latitude": 50.955239500000005,
+            "longitude": 10.71339165
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Reuterstraße"
+    },
+    "n3612409592": {
+        "coordinates": {
+            "latitude": 50.9303902,
+            "longitude": 10.6735356
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Sundhausen"
+    }
+}

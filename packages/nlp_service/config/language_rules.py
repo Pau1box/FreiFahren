@@ -1,9 +1,9 @@
 from nlp_service.config.config import MINIMUM_MESSAGE_LENGTH
-from nlp_service.utils.logger import setup_logger 
+from nlp_service.utils.logger import setup_logger
 from nlp_service.core.extractors.station_extractor import (
     find_station,
+    find_stations_of_line,
 )
-from nlp_service.core.dataloader import lines
 
 import re
 
@@ -55,13 +55,13 @@ def get_words_after_line(text, line):
     after_line = text[line_index + len(line) :].strip()
     return after_line.split()
 
-def get_final_stations_of_line(line):
+def get_final_stations_of_line(line, network_data):
     logger.debug("getting final stations of line")
 
-    final_stations_of_line = []
-    final_stations_of_line.append(lines[line][0])
-    final_stations_of_line.append(lines[line][-1])
-    return final_stations_of_line
+    stations_of_line = find_stations_of_line(network_data, line)
+    if not stations_of_line:
+        return []
+    return [stations_of_line[0], stations_of_line[-1]]
 
 def remove_direction_and_keyword(text, direction_keyword, direction):
     logger.debug(
@@ -82,22 +82,26 @@ def remove_direction_and_keyword(text, direction_keyword, direction):
             text = text.replace(replace_keyword_only, "", 1).strip()
         return text
 
-def set_ringbahn_directionless(ticket_inspector):
-    logger.debug("setting ringbahn directionless")
+def set_ring_line_directionless(ticket_inspector, network_data):
+    """A ring line returns to where it started, so its terminus says nothing about direction.
 
-    if ticket_inspector.line == "S41" or ticket_inspector.line == "S42":
+    Which lines those are comes from the backend's line metadata, see dataloader.read_ring_lines.
+    """
+    logger.debug("setting ring line directionless")
+
+    if ticket_inspector.line in network_data.ring_lines:
         ticket_inspector.direction = None
 
     return ticket_inspector
 
-def check_if_station_is_actually_direction(text, ticket_inspector):
+def check_if_station_is_actually_direction(text, ticket_inspector, network_data):
     logger.debug("checking if station is actually direction")
 
     if ticket_inspector.direction is None or ticket_inspector.station is None:
         return ticket_inspector
 
     line = ticket_inspector.line
-    final_stations_of_line = get_final_stations_of_line(line)
+    final_stations_of_line = get_final_stations_of_line(line, network_data)
 
     line = line.lower()  # convert to lowercase because text is in lowercase
     after_line_words = get_words_after_line(text, line)
@@ -106,7 +110,9 @@ def check_if_station_is_actually_direction(text, ticket_inspector):
         return ticket_inspector
 
     # Get the word directly after the line
-    found_station_after_line = find_station(after_line_words[0], ticket_inspector)
+    found_station_after_line = find_station(
+        after_line_words[0], ticket_inspector, network_data
+    )
 
     if (
         not found_station_after_line
@@ -118,7 +124,7 @@ def check_if_station_is_actually_direction(text, ticket_inspector):
     text_without_direction = remove_direction_and_keyword(
         text, line, after_line_words[0]
     )
-    new_station = find_station(text_without_direction, ticket_inspector)
+    new_station = find_station(text_without_direction, ticket_inspector, network_data)
 
     if new_station is None:
         return ticket_inspector
@@ -128,10 +134,9 @@ def check_if_station_is_actually_direction(text, ticket_inspector):
 
     return ticket_inspector
 
-def handle_ringbahn(text):
-    logger.debug("handling ringbahn")
+def mentions_ring(text):
+    logger.debug("checking whether the text names a ring line")
 
-    ring_keywords = ["ring", "ringbahn"]
     # remove commas and dots from the text
     text = text.replace(",", "").replace(".", "")
     # split the text into individual words
@@ -148,32 +153,39 @@ def handle_ringbahn(text):
 Verifiers
 """
 
-def verify_direction(ticket_inspector, text):
+def verify_direction(ticket_inspector, text, network_data):
     logger.debug("verifying direction")
 
     if ticket_inspector.line is None:
         return ticket_inspector
 
-    # Set direction to None if the line is S41 or S42
-    set_ringbahn_directionless(ticket_inspector)
+    set_ring_line_directionless(ticket_inspector, network_data)
 
     # if station is mentioned directly after the line, it is the direction
     # example 'U8 Hermannstraße' is most likely 'U8 Richtung Hermannstraße'
-    check_if_station_is_actually_direction(text, ticket_inspector)
+    check_if_station_is_actually_direction(text, ticket_inspector, network_data)
 
     return ticket_inspector
 
-def verify_line(ticket_inspector, text):
+def verify_line(ticket_inspector, text, network_data):
     logger.debug("verifying line")
 
-    # If it the ring set to S41
-    if handle_ringbahn(text.lower()) and ticket_inspector.line is None:
-        ticket_inspector.line = "S41"
+    # Someone naming the ring without a line can only mean a ring the network actually has, so this
+    # stays quiet in a city without one and never invents a line from a German word alone.
+    if ticket_inspector.line is None and mentions_ring(text.lower()):
+        ticket_inspector.line = network_data.ring_line
     return ticket_inspector
 
 """
 Language rules
 """
+
+# German for a circular line. The words are language, not local knowledge: which line they refer to
+# comes from the network data.
+ring_keywords = [
+    "ring",
+    "ringbahn",
+]
 
 direction_keywords = [
     "nach",

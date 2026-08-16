@@ -1,43 +1,38 @@
 import sharp from 'sharp'
-import { type Inspector } from './models'
+import { type Inspector, type LineColors } from './models'
 
 function estimateTextWidth(text: string, fontSize: number): number {
     return text.length * fontSize * 0.6
 }
 
-function getLineColor(line: string): string {
-    const lineColors: Record<string, string> = {
-        S1: '#da6ba2',
-        S2: '#007734',
-        S3: '#0066ad',
-        S5: '#eb7405',
-        S7: '#816da6',
-        S8: '#66aa22',
-        S9: '#992746',
-        S41: '#ad5937',
-        S42: '#cb6418',
-        S45: '#cd9c53',
-        S46: '#cd9c53',
-        S47: '#cd9c53',
-        S25: '#007734',
-        S26: '#007734',
-        S75: '#816da6',
-        S85: '#66aa22',
-        U1: '#7DAD4C',
-        U2: '#DA421E',
-        U3: '#16683D',
-        U4: '#F0D722',
-        U5: '#7E5330',
-        U6: '#8C6DAB',
-        U7: '#528DBA',
-        U8: '#224F86',
-        U9: '#F3791D',
-    }
-    return lineColors[line] || '#ffffff'
+/*
+ The colours used to be a table of Berlin's lines in this file. They come from
+ `GET /v0/lines/metadata` of the network the bot posts for, so the same bot can post for any city
+ and a colour change in the data does not need a release here.
+*/
+// A neutral grey rather than white for a line the metadata does not carry: the label on top of the
+// badge is white, so a white badge made the line name invisible instead of merely uncoloured.
+const UNKNOWN_LINE_COLOR = '#4a4a4a'
+
+function getLineColor(line: string, lineColors: LineColors): string {
+    return lineColors[line]?.color ?? UNKNOWN_LINE_COLOR
 }
 
-function createInspectorSvg(inspector: Inspector, index: number): string {
+// Station and direction names go into an SVG document. They come from our own data, but an
+// ampersand or an angle bracket in a name would make the document unparsable and take the whole
+// story down with it.
+function escapeXml(text: string): string {
+    return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;')
+}
+
+function createInspectorSvg(inspector: Inspector, index: number, lineColors: LineColors): string {
     const yOffset = 275 + index * 100
+    const stationName = escapeXml(inspector.station.name)
     const stationWidth = estimateTextWidth(inspector.station.name, 40)
     let lineX = stationWidth + 120
     let directionX = lineX
@@ -45,11 +40,11 @@ function createInspectorSvg(inspector: Inspector, index: number): string {
     let svg = `
         <g transform="translate(0, ${yOffset})">
             <circle cx="70" cy="0" r="8" fill="white" />
-            <text x="100" y="10" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white">${inspector.station.name}</text>
+            <text x="100" y="10" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white">${stationName}</text>
     `
 
     if (inspector.line) {
-        const lineColor = getLineColor(inspector.line)
+        const lineColor = getLineColor(inspector.line, lineColors)
         const lineWidth = estimateTextWidth(inspector.line, 40)
         const lineBgWidth = lineWidth + 20
         const lineBgHeight = 50
@@ -58,14 +53,14 @@ function createInspectorSvg(inspector: Inspector, index: number): string {
             <text x="${
                 lineX + lineBgWidth / 2
             }" y="10" font-family="Raleway" font-size="40" font-weight="bold" fill="white" text-anchor="middle">${
-            inspector.line
+            escapeXml(inspector.line)
         }</text>
         `
         directionX = lineX + lineBgWidth + 40
     }
 
     if (inspector.direction && inspector.direction.name) {
-        svg += `<text x="${directionX}" y="10" font-family="Arial, sans-serif" font-size="40" fill="white">${inspector.direction.name}</text>`
+        svg += `<text x="${directionX}" y="10" font-family="Arial, sans-serif" font-size="40" fill="white">${escapeXml(inspector.direction.name)}</text>`
     }
 
     svg += `</g>`
@@ -85,11 +80,11 @@ function createSvgContent(width: number, height: number, inspectorSvgs: string):
     `
 }
 
-export async function createImage(inspectors: Inspector[]): Promise<Buffer> {
+export async function createImage(inspectors: Inspector[], lineColors: LineColors): Promise<Buffer> {
     const width = 1080
     const height = 1920
 
-    const inspectorSvgs = inspectors.map(createInspectorSvg).join('')
+    const inspectorSvgs = inspectors.map((inspector, index) => createInspectorSvg(inspector, index, lineColors)).join('')
 
     const svg = createSvgContent(width, height, inspectorSvgs)
 

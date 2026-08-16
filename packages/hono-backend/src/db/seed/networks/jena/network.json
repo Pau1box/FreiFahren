@@ -1,0 +1,22 @@
+{
+    "id": "jena",
+    "name": "Jena",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.9282,
+        "longitude": 11.5879
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.834629,
+            "longitude": 11.505399
+        },
+        "northEast": {
+            "latitude": 51.003965,
+            "longitude": 11.706072
+        }
+    }
+}

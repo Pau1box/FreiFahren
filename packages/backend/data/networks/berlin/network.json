@@ -1,0 +1,24 @@
+{
+    "id": "berlin",
+    "name": "Berlin",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "active",
+    "serves": [
+        "Potsdam"
+    ],
+    "center": {
+        "latitude": 52.5162,
+        "longitude": 13.388
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.23115511676795,
+            "longitude": 12.8364646484805
+        },
+        "northEast": {
+            "latitude": 52.77063424239867,
+            "longitude": 14.00044556529124
+        }
+    }
+}

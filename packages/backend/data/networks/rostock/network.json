@@ -1,0 +1,22 @@
+{
+    "id": "rostock",
+    "name": "Rostock",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 54.0887,
+        "longitude": 12.14
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 54.013029,
+            "longitude": 11.97303
+        },
+        "northEast": {
+            "latitude": 54.200223,
+            "longitude": 12.256503
+        }
+    }
+}

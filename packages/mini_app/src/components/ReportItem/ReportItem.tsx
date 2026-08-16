@@ -1,6 +1,6 @@
 import React from 'react'
 import { Report } from '../../utils/types'
-import { getLineColor } from '../../utils/getLineColor'
+import { useLineColor } from '../../hooks/useLineColors'
 import './ReportItem.css'
 
 interface ReportItemProps {
@@ -8,6 +8,8 @@ interface ReportItemProps {
 }
 
 export const ReportItem: React.FC<ReportItemProps> = ({ report }) => {
+    const lineColor = useLineColor()
+
     const formatTime = (timestamp: string) => {
         const date = new Date(timestamp)
         return date.toLocaleTimeString('de-DE', { 
@@ -25,7 +27,7 @@ export const ReportItem: React.FC<ReportItemProps> = ({ report }) => {
                 {report.line && (
                     <div 
                         className="report-item-line"
-                        style={{ backgroundColor: getLineColor(report.line) }}
+                        style={{ backgroundColor: lineColor(report.line) }}
                     >
                         {report.line}
                     </div>

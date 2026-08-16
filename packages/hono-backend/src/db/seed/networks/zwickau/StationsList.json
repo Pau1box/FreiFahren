@@ -1,0 +1,378 @@
+{
+    "n99443381": {
+        "coordinates": {
+            "latitude": 50.70283945,
+            "longitude": 12.490577049999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Reuterweg"
+    },
+    "n109479532": {
+        "coordinates": {
+            "latitude": 50.7286299,
+            "longitude": 12.4996021
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Talstraße"
+    },
+    "n111778451": {
+        "coordinates": {
+            "latitude": 50.721576766666665,
+            "longitude": 12.495783666666666
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Alter Steinweg"
+    },
+    "n111778457": {
+        "coordinates": {
+            "latitude": 50.718067866666665,
+            "longitude": 12.4976526
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Hauptmarkt"
+    },
+    "n188913122": {
+        "coordinates": {
+            "latitude": 50.70402733333333,
+            "longitude": 12.497946333333333
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Stadthalle"
+    },
+    "n188924038": {
+        "coordinates": {
+            "latitude": 50.72274575,
+            "longitude": 12.494903149999999
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Neumarkt"
+    },
+    "n219383502": {
+        "coordinates": {
+            "latitude": 50.6960814,
+            "longitude": 12.480106750000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Himmelfürststraße"
+    },
+    "n259486207": {
+        "coordinates": {
+            "latitude": 50.71556545,
+            "longitude": 12.4969562
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Zentrum"
+    },
+    "n267693078": {
+        "coordinates": {
+            "latitude": 50.7106158,
+            "longitude": 12.498209549999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Saarstraße"
+    },
+    "n312033349": {
+        "coordinates": {
+            "latitude": 50.69191718333334,
+            "longitude": 12.464812633333333
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Pestalozzistraße"
+    },
+    "n334369959": {
+        "coordinates": {
+            "latitude": 50.70636965,
+            "longitude": 12.49957975
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Glück-Auf-Center"
+    },
+    "n334373143": {
+        "coordinates": {
+            "latitude": 50.70001535,
+            "longitude": 12.484461083333334
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Geinitzstraße"
+    },
+    "n334377775": {
+        "coordinates": {
+            "latitude": 50.6987783,
+            "longitude": 12.4664234
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Erich-Mühsam-Straße"
+    },
+    "n334379665": {
+        "coordinates": {
+            "latitude": 50.696398099999996,
+            "longitude": 12.4618953
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Marchlewskistraße"
+    },
+    "n334379672": {
+        "coordinates": {
+            "latitude": 50.694099075,
+            "longitude": 12.463894325
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Hermann-Krasser-Straße"
+    },
+    "n334381469": {
+        "coordinates": {
+            "latitude": 50.6886313,
+            "longitude": 12.4626261
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Neuplanitz"
+    },
+    "n568268397": {
+        "coordinates": {
+            "latitude": 50.723704233333336,
+            "longitude": 12.434501633333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Zwickau, Klinikum"
+    },
+    "n590856278": {
+        "coordinates": {
+            "latitude": 50.7221276,
+            "longitude": 12.446083199999999
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Brander Weg"
+    },
+    "n590858977": {
+        "coordinates": {
+            "latitude": 50.7210583,
+            "longitude": 12.4378886
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Virchowplatz"
+    },
+    "n600675168": {
+        "coordinates": {
+            "latitude": 50.72505225,
+            "longitude": 12.5003673125
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Brauerei"
+    },
+    "n600675171": {
+        "coordinates": {
+            "latitude": 50.7321646,
+            "longitude": 12.506881383333335
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Westsächsische Hochschule"
+    },
+    "n600675174": {
+        "coordinates": {
+            "latitude": 50.73624922222222,
+            "longitude": 12.4897843
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Schlachthofstraße"
+    },
+    "n600675175": {
+        "coordinates": {
+            "latitude": 50.740195359999994,
+            "longitude": 12.48889312
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Neue Welt"
+    },
+    "n600675178": {
+        "coordinates": {
+            "latitude": 50.7291957,
+            "longitude": 12.5255323
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Eckersbach"
+    },
+    "n976502619": {
+        "coordinates": {
+            "latitude": 50.746937583333334,
+            "longitude": 12.4865609
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Zwickau, Pölbitz"
+    },
+    "n982313897": {
+        "coordinates": {
+            "latitude": 50.7186515,
+            "longitude": 12.4561409
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Paulusstraße"
+    },
+    "n982334258": {
+        "coordinates": {
+            "latitude": 50.73006083333333,
+            "longitude": 12.492407583333332
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Friedrich-Engels-Straße"
+    },
+    "n1111936644": {
+        "coordinates": {
+            "latitude": 50.732770450000004,
+            "longitude": 12.52017265
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Eckersbach Mitte"
+    },
+    "n1480007909": {
+        "coordinates": {
+            "latitude": 50.718644749999996,
+            "longitude": 12.45994405
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Fritscheplatz"
+    },
+    "n1482493794": {
+        "coordinates": {
+            "latitude": 50.7204512,
+            "longitude": 12.47515405
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kopernikusstraße"
+    },
+    "n1487224284": {
+        "coordinates": {
+            "latitude": 50.72031728333334,
+            "longitude": 12.482101866666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Brunnenstraße"
+    },
+    "n1487224294": {
+        "coordinates": {
+            "latitude": 50.719739633333326,
+            "longitude": 12.466247566666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Lindenhof"
+    },
+    "n1523289579": {
+        "coordinates": {
+            "latitude": 50.726489333333326,
+            "longitude": 12.493630916666667
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Lessingstraße"
+    },
+    "n1523289596": {
+        "coordinates": {
+            "latitude": 50.73322038333333,
+            "longitude": 12.491315683333333
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Kurt-Eisner-Straße"
+    },
+    "n1523763402": {
+        "coordinates": {
+            "latitude": 50.73219709999999,
+            "longitude": 12.512297499999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Astronomenweg"
+    },
+    "n1877409228": {
+        "coordinates": {
+            "latitude": 50.7436684,
+            "longitude": 12.4878023
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Gudrunstraße"
+    },
+    "n13353784305": {
+        "coordinates": {
+            "latitude": 50.720473475,
+            "longitude": 12.490005175
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Georgenplatz"
+    }
+}

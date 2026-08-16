@@ -1,6 +1,7 @@
 import Fuse from 'fuse.js'
 import { useMemo, useState } from 'react'
 import { useStations } from '../api/queries'
+import { stripModeMarker } from '../utils/lines'
 import { StationProperty } from '../utils/types'
 
 type SearchResult = {
@@ -19,8 +20,7 @@ export const useStationSearch = (initialSearchValue: string = '', limit?: number
     const [searchValue, setSearchValue] = useState(initialSearchValue)
     const { data: allStations } = useStations()
 
-    // Helper function to remove single S and U from station names for better search
-    const preprocessName = (name: string): string => name.replace(/^(S|U)\s+/i, ' ')
+    const preprocessName = stripModeMarker
 
     // Create fuzzy search instance
     const fuse = useMemo(() => {

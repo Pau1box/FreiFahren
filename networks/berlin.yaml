@@ -1,0 +1,111 @@
+# Berlin. See README.md in this directory for what each field means.
+#
+# This description documents the data set FreiFahren has been running on since the beginning. It is
+# not a from scratch rebuild: `stations.idSources` and `stations.modePrefixes` are written the way
+# they are so that regenerating Berlin keeps the station ids that are already in the database and in
+# every app install. A new city should follow hamburg.yaml instead.
+
+id: berlin
+name: Berlin
+countryCode: DE
+timezone: Europe/Berlin
+status: active
+
+center:
+    latitude: 52.5162
+    longitude: 13.388
+bounds:
+    southWest:
+        latitude: 52.23115511676795
+        longitude: 12.8364646484805
+    northEast:
+        latitude: 52.77063424239867
+        longitude: 14.00044556529124
+
+source:
+    # Name of the OpenStreetMap administrative area to search in.
+    osmArea: Berlin
+    adminLevel: '^[4-6]$'
+    # `train` is needed for the S-Bahn, which OSM tags inconsistently in Berlin. It also pulls in
+    # regional and long distance services, which is why this network lists its lines explicitly
+    # rather than discovering them.
+    modes: [subway, light_rail, tram, train]
+    lines:
+        include:
+            - S1
+            - S2
+            - S25
+            - S26
+            - S3
+            - S41
+            - S42
+            - S45
+            - S46
+            - S47
+            - S5
+            - S7
+            - S75
+            - S8
+            - S85
+            - S9
+            - U1
+            - U2
+            - U3
+            - U4
+            - U5
+            - U6
+            - U7
+            - U8
+            - U9
+            - M1
+            - M2
+            - M4
+            - M5
+            - M6
+            - M8
+            - M10
+            - M13
+            - M17
+            - '12'
+            - '16'
+            - '18'
+            - '21'
+            - '27'
+            - '37'
+            - '50'
+            - '60'
+            - '61'
+            - '62'
+            - '63'
+            - '67'
+            - '68'
+
+stations:
+    # Platforms within this distance are treated as one station, because an inspector can walk
+    # between them. Berlin Hauptbahnhof is three separate stations in OSM without this.
+    mergeRadiusMeters: 250
+    # OSM tags to take the station id from, first match wins, falling back to the OSM node id.
+    # `ref` is only trusted here for historical reasons, see the note at the top of this file.
+    idSources: [ref:ds100, railway:ref, ref]
+    # Station ids carry a letter per mode served, in this order, e.g. `SU-` or `SUM-`.
+    modePrefixes:
+        - match: '^S'
+          letter: S
+        - match: '^U'
+          letter: U
+        - match: '^(M|\d+$)'
+          letter: M
+    # Geocoder queries are built as `S+U Alexanderplatz (Berlin)`. Trams are left out of that hint,
+    # because no geocoder indexes a Berlin station as `M`.
+    geocodePrefixLetters: [S, U]
+
+# Colours used when drawing track geometry. Without an override the OpenStreetMap `colour` tag of the
+# route is used. Berlin overrides the two networks that are branded as a whole, and leaves the U-Bahn
+# to OSM because each of its lines has its own colour.
+lineColors:
+    default: '#000000'
+    overrides:
+        - match: '^S'
+          color: '#007734'
+        - match: '^(M|\d+$)'
+          color: '#be1414'

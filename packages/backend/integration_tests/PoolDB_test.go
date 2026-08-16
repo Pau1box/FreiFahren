@@ -71,22 +71,29 @@ func CreateTestPool() {
 }
 
 func setup() {
-	envPath, err := utils.FindEnvFile()
-	if err != nil {
-		log.Fatal("Error finding .env file: ", err)
+	// A .env is a convenience for running these locally, not a requirement. It fills in the
+	// connection variables when they are not already in the environment, which is how CI provides
+	// them, so its absence is not an error. Insisting on the file meant these tests could only ever
+	// run on a developer machine.
+	if envPath, err := utils.FindEnvFile(); err == nil {
+		if err := godotenv.Load(envPath); err != nil {
+			cwd, _ := os.Getwd()
+			log.Printf("Ignoring unreadable .env at %s (working directory %s): %v", envPath, cwd, err)
+		}
 	}
 
-	// Load the .env file from the constructed path
-	err = godotenv.Load(envPath)
-	if err != nil {
-		cwd, _ := os.Getwd()
-		log.Printf("Current working directory: %s", cwd)
-		log.Fatal("Error loading .env file from path: ", envPath)
+	if os.Getenv("DB_HOST") == "" {
+		log.Fatal("No database configured. Set DB_HOST, DB_PORT, DB_USER, DB_PASSWORD and DB_NAME, " +
+			"or put them in a .env file above packages/backend.")
 	}
 
 	CreateTestPool()
 	database.CreatePool()
 	CreatePoolTestTable()
+	// The tests below query `reports`, not the `pool_test` table above, so the schema the server
+	// creates on start has to exist here too. Without this the package passes on any machine that
+	// has run the server once and fails on a fresh database, which is every CI run.
+	database.CreateReportsTable()
 }
 
 func teardown() {
@@ -115,7 +122,7 @@ func TestGetLatestStationCoordinatesConcurrency(t *testing.T) {
 			// Call the function with the pool (on the real database)
 			startTime := time.Now().UTC().Add(-time.Hour)
 			endTime := time.Now().UTC()
-			_, err := database.GetLatestTicketInspectors(startTime, endTime, "")
+			_, err := database.GetLatestTicketInspectors("berlin", startTime, endTime, "")
 			if err != nil {
 				errs <- err
 			}
@@ -123,7 +130,7 @@ func TestGetLatestStationCoordinatesConcurrency(t *testing.T) {
 			remaining := 7
 			currentStationIds := []string{"U-PL", "SUM-A", "SU-S"}
 
-			_, err = database.GetHistoricStations(time.Now().UTC(), remaining, 24, currentStationIds)
+			_, err = database.GetHistoricStations("berlin", time.Now().UTC(), remaining, 24, currentStationIds)
 			if err != nil {
 				errs <- err
 			}

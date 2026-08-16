@@ -1,0 +1,26 @@
+{
+    "id": "frankfurt-am-main",
+    "name": "Frankfurt am Main",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Bad Homburg vor der Höhe",
+        "Darmstadt",
+        "Offenbach am Main"
+    ],
+    "center": {
+        "latitude": 50.1106,
+        "longitude": 8.6821
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.695596,
+            "longitude": 8.467939
+        },
+        "northEast": {
+            "latitude": 50.26397,
+            "longitude": 8.842054
+        }
+    }
+}

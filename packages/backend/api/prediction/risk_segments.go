@@ -28,36 +28,49 @@ type RiskInspector struct {
 	Timestamp string   `json:"timestamp"`
 }
 
+// RiskCache keeps one result per network, because a segment id is only
+// meaningful inside the network it was computed for.
 type RiskCache struct {
-	data  *RiskData
+	data  map[string]*RiskData
 	mutex sync.RWMutex
 }
 
-var Cache = &RiskCache{}
+var Cache = &RiskCache{data: make(map[string]*RiskData)}
 
-func (c *RiskCache) Get() (*RiskData, bool) {
+func (c *RiskCache) Get(networkID string) (*RiskData, bool) {
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
-	return c.data, c.data != nil
+	riskData, ok := c.data[networkID]
+	return riskData, ok && riskData != nil
 }
 
-func (c *RiskCache) set(data *RiskData) {
+func (c *RiskCache) set(networkID string, data *RiskData) {
 	c.mutex.Lock()
 	defer c.mutex.Unlock()
-	c.data = data
+	c.data[networkID] = data
 }
 
-func ExecuteRiskModel() (*RiskData, error) {
+func ExecuteRiskModel(networkID string) (*RiskData, error) {
+	// A network without segment geometry has nothing to colour, so the model is
+	// skipped rather than run against a missing file.
+	segments, ok := data.GetSegments(networkID)
+	if !ok || len(segments) == 0 {
+		logger.Log.Debug().Str("network", networkID).Msg("Skipping risk model, network has no segments")
+		emptyRiskData := &RiskData{SegmentsRisk: map[string]SegmentRisk{}}
+		Cache.set(networkID, emptyRiskData)
+		return emptyRiskData, nil
+	}
+
 	endTime := time.Now().UTC()
 	startTime := endTime.Add(-time.Hour)
-	ticketInfoList, err := database.GetLatestTicketInspectors(startTime, endTime, "")
+	ticketInfoList, err := database.GetLatestTicketInspectors(networkID, startTime, endTime, "")
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to get ticket inspectors")
 		return nil, err
 	}
 
 	// Get stations list for line lookup
-	stationsList := data.GetStationsList()
+	stationsList, _ := data.GetStationsList(networkID)
 
 	// Convert TicketInspector to RiskInspector
 	riskInspectors := make([]RiskInspector, 0, len(ticketInfoList))
@@ -98,7 +111,7 @@ func ExecuteRiskModel() (*RiskData, error) {
 	}
 
 	// Create command to run Python script
-	cmd := exec.Command("python3", "api/prediction/risk_model.py")
+	cmd := exec.Command("python3", "api/prediction/risk_model.py", data.SegmentsPath(networkID))
 	cmd.Dir = "."
 
 	var stdout, stderr bytes.Buffer
@@ -140,6 +153,6 @@ func ExecuteRiskModel() (*RiskData, error) {
 	logger.Log.Debug().Msgf("amount of segments generated: %d", len(riskData.SegmentsRisk))
 
 	// Update cache with new data
-	Cache.set(&riskData)
+	Cache.set(networkID, &riskData)
 	return &riskData, nil
 }

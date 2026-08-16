@@ -1,0 +1,328 @@
+{
+    "Alemannenstraße": [
+        "Alemannen",
+        "Alemannenstr.",
+        "Alemannenstrasse"
+    ],
+    "Am Rangierbahnhof": [
+        "Rangierbahnhof"
+    ],
+    "Am Wegfeld": [
+        "Wegfeld"
+    ],
+    "Arminiusstraße": [
+        "Arminius",
+        "Arminiusstr.",
+        "Arminiusstrasse"
+    ],
+    "Aufseßplatz": [
+        "Aufseß",
+        "Aufseßplz"
+    ],
+    "Balthasar-Neumann-Straße": [
+        "Balthasar-Neumann-",
+        "Balthasar-Neumann-str.",
+        "Balthasar-Neumann-strasse"
+    ],
+    "Bamberger Straße": [
+        "Bamberger",
+        "Bamberger Str.",
+        "Bamberger Strasse"
+    ],
+    "Bauernfeindstraße": [
+        "Bauernfeind",
+        "Bauernfeindstr.",
+        "Bauernfeindstrasse"
+    ],
+    "Brehmstraße": [
+        "Brehm",
+        "Brehmstr.",
+        "Brehmstrasse"
+    ],
+    "Bucher Straße/Nordring": [
+        "Bucher"
+    ],
+    "Business Tower": [
+        "Business"
+    ],
+    "Bärenschanze": [],
+    "Celtisplatz": [
+        "Celtis",
+        "Celtisplz"
+    ],
+    "Christuskirche": [],
+    "Cuxhavener Straße": [
+        "Cuxhavener",
+        "Cuxhavener Str.",
+        "Cuxhavener Strasse"
+    ],
+    "Deichslerstraße": [
+        "Deichsler",
+        "Deichslerstr.",
+        "Deichslerstrasse"
+    ],
+    "Dianaplatz": [
+        "Diana",
+        "Dianaplz"
+    ],
+    "Doku-Zentrum": [],
+    "Dutzendteich": [],
+    "Dürrenhof": [],
+    "Eberhardshof": [],
+    "Erlenstegen": [],
+    "Finkenbrunn": [],
+    "Flughafen": [],
+    "Frankenstraße": [
+        "Franken",
+        "Frankenstr.",
+        "Frankenstrasse"
+    ],
+    "Friedrich-Ebert-Platz": [
+        "Friedrich-Ebert-",
+        "Friedrich-Ebert-plz"
+    ],
+    "Fürth Hardhöhe": [
+        "Fürth"
+    ],
+    "Fürth Hauptbahnhof": [
+        "Fürth"
+    ],
+    "Fürth Jakobinenstraße": [
+        "Fürth Jakobinen",
+        "Fürth Jakobinenstr.",
+        "Fürth Jakobinenstrasse"
+    ],
+    "Fürth Klinikum": [
+        "Fürth"
+    ],
+    "Fürth Rathaus": [
+        "Fürth"
+    ],
+    "Fürth-Stadthalle": [],
+    "Gemeinschaftshaus": [],
+    "Gibitzenhof": [],
+    "Gostenhof": [],
+    "Großreuth bei Schweinau": [],
+    "Gustav-Adolf-Straße": [
+        "Gustav-Adolf-",
+        "Gustav-Adolf-str.",
+        "Gustav-Adolf-strasse"
+    ],
+    "Hallerstraße": [
+        "Haller",
+        "Hallerstr.",
+        "Hallerstrasse"
+    ],
+    "Hallertor": [],
+    "Harsdörfferplatz": [
+        "Harsdörffer",
+        "Harsdörfferplz"
+    ],
+    "Hasenbuck": [],
+    "Herrnhütte": [],
+    "Heynestraße": [
+        "Heyne",
+        "Heynestr.",
+        "Heynestrasse"
+    ],
+    "Hohe Marter": [
+        "Hohe"
+    ],
+    "Holzgartenstraße": [
+        "Holzgarten",
+        "Holzgartenstr.",
+        "Holzgartenstrasse"
+    ],
+    "Humboldtstraße": [
+        "Humboldt",
+        "Humboldtstr.",
+        "Humboldtstrasse"
+    ],
+    "Hummelsteiner Weg": [
+        "Hummelsteiner"
+    ],
+    "Immelmannstraße": [
+        "Immelmann",
+        "Immelmannstr.",
+        "Immelmannstrasse"
+    ],
+    "Julienstr.": [],
+    "Juvenellstraße": [
+        "Juvenell",
+        "Juvenellstr.",
+        "Juvenellstrasse"
+    ],
+    "Kaulbachplatz": [
+        "Kaulbach",
+        "Kaulbachplz"
+    ],
+    "Klinikum Nord": [
+        "Klinikum"
+    ],
+    "Kohlenhof": [],
+    "Landgrabenstraße": [
+        "Landgraben",
+        "Landgrabenstr.",
+        "Landgrabenstrasse"
+    ],
+    "Langwasser Mitte": [
+        "Langwasser"
+    ],
+    "Langwasser Nord": [
+        "Langwasser"
+    ],
+    "Langwasser Süd": [
+        "Langwasser"
+    ],
+    "Lechnerstraße": [
+        "Lechner",
+        "Lechnerstr.",
+        "Lechnerstrasse"
+    ],
+    "Lorenzkirche": [],
+    "Lothringer Straße": [
+        "Lothringer",
+        "Lothringer Str.",
+        "Lothringer Strasse"
+    ],
+    "Luitpoldhain": [],
+    "Maffeiplatz": [
+        "Maffei",
+        "Maffeiplz"
+    ],
+    "Marientor": [],
+    "Marientunnel": [],
+    "Marthastraße": [
+        "Martha",
+        "Marthastr.",
+        "Marthastrasse"
+    ],
+    "Maxfeld": [],
+    "Maximilianstraße": [
+        "Maximilian",
+        "Maximilianstr.",
+        "Maximilianstrasse"
+    ],
+    "Meistersingerhalle": [],
+    "Messe": [],
+    "Muggenhof": [],
+    "Mögeldorf": [],
+    "Nordostbahnhof": [],
+    "Nürnberg Hauptbahnhof": [
+        "Nürnberg"
+    ],
+    "Nürnberg Nordwestring": [
+        "Nürnberg"
+    ],
+    "Nürnberg-Steinbühl": [],
+    "Obere Turnstraße": [
+        "Obere Turn",
+        "Obere Turnstr.",
+        "Obere Turnstrasse"
+    ],
+    "Opernhaus": [],
+    "Ostbahnhof": [],
+    "Peterskirche": [],
+    "Platnersberg": [],
+    "Platz der Opfer des Faschismus": [],
+    "Plärrer": [],
+    "Rathenauplatz": [
+        "Rathenau",
+        "Rathenauplz"
+    ],
+    "Rennweg": [],
+    "Rothenburger Straße": [
+        "Rothenburger",
+        "Rothenburger Str.",
+        "Rothenburger Strasse"
+    ],
+    "Röthenbach": [],
+    "Saarbrückener Straße": [
+        "Saarbrückener",
+        "Saarbrückener Str.",
+        "Saarbrückener Strasse"
+    ],
+    "Scharfreiterring": [],
+    "Scharrerstraße": [
+        "Scharrer",
+        "Scharrerstr.",
+        "Scharrerstrasse"
+    ],
+    "Scheurlstraße": [
+        "Scheurl",
+        "Scheurlstr.",
+        "Scheurlstrasse"
+    ],
+    "Schleswiger Straße": [
+        "Schleswiger",
+        "Schleswiger Str.",
+        "Schleswiger Strasse"
+    ],
+    "Schoppershof": [],
+    "Schweiggerstraße": [
+        "Schweigger",
+        "Schweiggerstr.",
+        "Schweiggerstrasse"
+    ],
+    "Schweinau": [],
+    "Siedlerstraße": [
+        "Siedler",
+        "Siedlerstr.",
+        "Siedlerstrasse"
+    ],
+    "Siemensstraße": [
+        "Siemens",
+        "Siemensstr.",
+        "Siemensstrasse"
+    ],
+    "St. Johannisfriedhof": [
+        "St."
+    ],
+    "St. Leonhard": [
+        "St."
+    ],
+    "Stadtgrenze": [],
+    "Stresemannplatz": [
+        "Stresemann",
+        "Stresemannplz"
+    ],
+    "Südfriedhof": [],
+    "Sündersbühl": [],
+    "Tafelhalle": [],
+    "Tauroggenstraße": [
+        "Tauroggen",
+        "Tauroggenstr.",
+        "Tauroggenstrasse"
+    ],
+    "Thon": [],
+    "Thumenberger Weg": [
+        "Thumenberger"
+    ],
+    "Tiergarten": [],
+    "Tiergärtnertor": [],
+    "Trafowerk": [],
+    "Tristanstraße": [
+        "Tristan",
+        "Tristanstr.",
+        "Tristanstrasse"
+    ],
+    "Tullnaupark": [],
+    "Weißer Turm": [
+        "Weißer"
+    ],
+    "Westfriedhof": [],
+    "Wodanstraße": [
+        "Wodan",
+        "Wodanstr.",
+        "Wodanstrasse"
+    ],
+    "Worzeldorfer Straße": [
+        "Worzeldorfer",
+        "Worzeldorfer Str.",
+        "Worzeldorfer Strasse"
+    ],
+    "Wöhrder Wiese": [
+        "Wöhrder"
+    ],
+    "Ziegelstein": []
+}

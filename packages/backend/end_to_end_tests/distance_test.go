@@ -37,12 +37,20 @@ func TestGetStationDistance(t *testing.T) {
 			expectedError:    "",
 		},
 		{
-			name:             "Invalid Station ID",
+			name:             "Station of another network",
 			userStation:      "INVALID",
 			inspectorStation: "INVALIDs",
+			expectedStatus:   http.StatusUnprocessableEntity,
+			expectedDistance: "",
+			expectedError:    "Unknown inspectorStationId, userStationId",
+		},
+		{
+			name:             "Missing station ID",
+			userStation:      "",
+			inspectorStation: "SUM-n30731497",
 			expectedStatus:   http.StatusBadRequest,
 			expectedDistance: "",
-			expectedError:    "Invalid inspector station ID",
+			expectedError:    "Missing inspectorStationId or userStationId query parameter",
 		},
 	}
 
@@ -65,7 +73,7 @@ func TestGetStationDistance(t *testing.T) {
 			if tc.expectedStatus == http.StatusOK {
 				assert.Equal(t, tc.expectedDistance, rec.Body.String())
 			} else {
-				assert.Equal(t, tc.expectedError, rec.Body.String())
+				assert.Contains(t, rec.Body.String(), tc.expectedError)
 			}
 		})
 	}

@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { queryClient } from './api/queryClient'
 import { LocationProvider } from './contexts/LocationContext'
+import { NetworkProvider } from './contexts/NetworkContext'
 import { i18n } from './i18n'
 import { App } from './pages/App/App'
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy'
@@ -42,7 +43,9 @@ root.render(
                             path="/"
                             element={
                                 <LocationProvider>
-                                    <App />
+                                    <NetworkProvider>
+                                        <App />
+                                    </NetworkProvider>
                                 </LocationProvider>
                             }
                         />
@@ -50,7 +53,9 @@ root.render(
                             path="/station/:stationId"
                             element={
                                 <LocationProvider>
-                                    <App />
+                                    <NetworkProvider>
+                                        <App />
+                                    </NetworkProvider>
                                 </LocationProvider>
                             }
                         />

@@ -1,0 +1,739 @@
+{
+    "n281832454": {
+        "coordinates": {
+            "latitude": 54.081654657142856,
+            "longitude": 12.12792632857143
+        },
+        "lines": [
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Goetheplatz"
+    },
+    "n59769027": {
+        "coordinates": {
+            "latitude": 54.105257800000004,
+            "longitude": 12.15962685
+        },
+        "lines": [
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Lorenzstraße"
+    },
+    "n28903601": {
+        "coordinates": {
+            "latitude": 54.092894325,
+            "longitude": 12.107998550000001
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Maßmannstraße"
+    },
+    "n28903603": {
+        "coordinates": {
+            "latitude": 54.09278443333333,
+            "longitude": 12.099627500000002
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "S Holbeinplatz"
+    },
+    "n28903615": {
+        "coordinates": {
+            "latitude": 54.11060325,
+            "longitude": 12.08057385
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "S Marienehe"
+    },
+    "n28903623": {
+        "coordinates": {
+            "latitude": 54.11646375,
+            "longitude": 12.060993725
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Evershagen Süd"
+    },
+    "n28903631": {
+        "coordinates": {
+            "latitude": 54.12419513333333,
+            "longitude": 12.058154866666667
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Thomas-Morus-Straße"
+    },
+    "n241200225": {
+        "coordinates": {
+            "latitude": 54.087977076923075,
+            "longitude": 12.122297192307693
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "Doberaner Platz"
+    },
+    "n30251829": {
+        "coordinates": {
+            "latitude": 54.0898228,
+            "longitude": 12.129469583333332
+        },
+        "lines": [
+            "1",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Kröpeliner Tor"
+    },
+    "n30251831": {
+        "coordinates": {
+            "latitude": 54.08992463333333,
+            "longitude": 12.1342691
+        },
+        "lines": [
+            "1",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Lange Straße"
+    },
+    "n30252126": {
+        "coordinates": {
+            "latitude": 54.08514446666666,
+            "longitude": 12.115816733333332
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Saarplatz"
+    },
+    "n30264570": {
+        "coordinates": {
+            "latitude": 54.08372702222223,
+            "longitude": 12.108851822222222
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "S Parkstraße"
+    },
+    "n30729084": {
+        "coordinates": {
+            "latitude": 54.10881433333333,
+            "longitude": 12.135957833333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Hafenallee"
+    },
+    "n30729096": {
+        "coordinates": {
+            "latitude": 54.1113294,
+            "longitude": 12.137353399999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Graf-Stauffenberg-Straße"
+    },
+    "n30729155": {
+        "coordinates": {
+            "latitude": 54.103669533333324,
+            "longitude": 12.154241266666666
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Dierkower Kreuz"
+    },
+    "n30729197": {
+        "coordinates": {
+            "latitude": 54.09233523333333,
+            "longitude": 12.1553612
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Petridamm"
+    },
+    "n30729532": {
+        "coordinates": {
+            "latitude": 54.0914701,
+            "longitude": 12.151658533333332
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Stadthafen"
+    },
+    "n30729544": {
+        "coordinates": {
+            "latitude": 54.08622243076923,
+            "longitude": 12.1418397
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Steintor IHK"
+    },
+    "n30729569": {
+        "coordinates": {
+            "latitude": 54.078039239999995,
+            "longitude": 12.12713304
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "Stadthalle"
+    },
+    "n30731148": {
+        "coordinates": {
+            "latitude": 54.1452445,
+            "longitude": 12.050017350000001
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Rügener Straße"
+    },
+    "n51373121": {
+        "coordinates": {
+            "latitude": 54.14848550000001,
+            "longitude": 12.05784738
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Eutiner Straße"
+    },
+    "n59769017": {
+        "coordinates": {
+            "latitude": 54.100582550000006,
+            "longitude": 12.172644416666666
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Katerweg"
+    },
+    "n59769051": {
+        "coordinates": {
+            "latitude": 54.0894778,
+            "longitude": 12.140218275
+        },
+        "lines": [
+            "1",
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Neuer Markt"
+    },
+    "n104287719": {
+        "coordinates": {
+            "latitude": 54.091826299999994,
+            "longitude": 12.1126912
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Kabutzenhof"
+    },
+    "n250137229": {
+        "coordinates": {
+            "latitude": 54.07214333333334,
+            "longitude": 12.112019233333333
+        },
+        "lines": [
+            "4",
+            "6"
+        ],
+        "name": "Robert-Koch-Straße"
+    },
+    "n270996227": {
+        "coordinates": {
+            "latitude": 54.101632685714286,
+            "longitude": 12.078883428571428
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Reutershagen"
+    },
+    "n239118093": {
+        "coordinates": {
+            "latitude": 54.0883611,
+            "longitude": 12.14950115
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Gerberbruch"
+    },
+    "n240405130": {
+        "coordinates": {
+            "latitude": 54.0995801,
+            "longitude": 12.086810100000001
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Kunsthalle"
+    },
+    "n250670135": {
+        "coordinates": {
+            "latitude": 54.121666866666665,
+            "longitude": 12.058542600000001
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Ehm-Welk-Straße"
+    },
+    "n250137226": {
+        "coordinates": {
+            "latitude": 54.073841279999996,
+            "longitude": 12.10455702
+        },
+        "lines": [
+            "4",
+            "6"
+        ],
+        "name": "Campus Südstadt"
+    },
+    "n250137230": {
+        "coordinates": {
+            "latitude": 54.072150933333326,
+            "longitude": 12.117357149999998
+        },
+        "lines": [
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Südstadt-Center"
+    },
+    "n250137231": {
+        "coordinates": {
+            "latitude": 54.0751823875,
+            "longitude": 12.121576775
+        },
+        "lines": [
+            "4",
+            "5",
+            "6"
+        ],
+        "name": "Erich-Schlesinger-Straße"
+    },
+    "n250989993": {
+        "coordinates": {
+            "latitude": 54.07935705,
+            "longitude": 12.09489575
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Dr.-Lorenz-Weg"
+    },
+    "n250989997": {
+        "coordinates": {
+            "latitude": 54.07993696666667,
+            "longitude": 12.088094333333332
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Zoo"
+    },
+    "n250990011": {
+        "coordinates": {
+            "latitude": 54.073097075,
+            "longitude": 12.087036825
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Neuer Friedhof"
+    },
+    "n252965732": {
+        "coordinates": {
+            "latitude": 54.065118725,
+            "longitude": 12.117368475
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Lomonossowstraße"
+    },
+    "n252965736": {
+        "coordinates": {
+            "latitude": 54.057944625,
+            "longitude": 12.1166471
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Südblick"
+    },
+    "n252971150": {
+        "coordinates": {
+            "latitude": 54.1118379,
+            "longitude": 12.151013500000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Hölderlinweg"
+    },
+    "n264927058": {
+        "coordinates": {
+            "latitude": 54.107023600000005,
+            "longitude": 12.07889805
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Rahnstädter Weg"
+    },
+    "n281835006": {
+        "coordinates": {
+            "latitude": 54.087148660000004,
+            "longitude": 12.12636858
+        },
+        "lines": [
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Schröderplatz"
+    },
+    "n281842199": {
+        "coordinates": {
+            "latitude": 54.108388000000005,
+            "longitude": 12.164901625
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kurt-Schumacher-Ring"
+    },
+    "n281843883": {
+        "coordinates": {
+            "latitude": 54.069382759999996,
+            "longitude": 12.116445180000001
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Majakowskistraße"
+    },
+    "n281845677": {
+        "coordinates": {
+            "latitude": 54.061378075,
+            "longitude": 12.117288325
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Charles-Darwin-Ring"
+    },
+    "n282837133": {
+        "coordinates": {
+            "latitude": 54.090098866666665,
+            "longitude": 12.1181937
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Volkstheater"
+    },
+    "n282839270": {
+        "coordinates": {
+            "latitude": 54.129664999999996,
+            "longitude": 12.057363066666667
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Fischerdorf"
+    },
+    "n282839271": {
+        "coordinates": {
+            "latitude": 54.1323004,
+            "longitude": 12.0572189
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Helsinkier Straße"
+    },
+    "n282839274": {
+        "coordinates": {
+            "latitude": 54.13783527142857,
+            "longitude": 12.054979714285713
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Lütten-Klein Zentrum"
+    },
+    "n282841451": {
+        "coordinates": {
+            "latitude": 54.14209665,
+            "longitude": 12.04976935
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Turkuer Straße"
+    },
+    "n283292029": {
+        "coordinates": {
+            "latitude": 54.15117112,
+            "longitude": 12.058387640000001
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Elmenhorster Weg"
+    },
+    "n283292032": {
+        "coordinates": {
+            "latitude": 54.15530699999999,
+            "longitude": 12.05866254
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Mecklenburger Allee"
+    },
+    "n283292035": {
+        "coordinates": {
+            "latitude": 54.13926335,
+            "longitude": 12.049641050000002
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Warnowallee"
+    },
+    "n283472559": {
+        "coordinates": {
+            "latitude": 54.102169,
+            "longitude": 12.166658566666667
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Dierkow-Zentrum"
+    },
+    "n283472560": {
+        "coordinates": {
+            "latitude": 54.104262899999995,
+            "longitude": 12.179891900000001
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Dierkower Allee"
+    },
+    "n321021768": {
+        "coordinates": {
+            "latitude": 54.081115125,
+            "longitude": 12.104345325
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Thierfelderstraße"
+    },
+    "n1530754911": {
+        "coordinates": {
+            "latitude": 54.11923225,
+            "longitude": 12.058658033333332
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "Bertolt-Brecht-Straße"
+    },
+    "n1530754944": {
+        "coordinates": {
+            "latitude": 54.09736945,
+            "longitude": 12.15720355
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Dierkower Damm"
+    },
+    "n1530755056": {
+        "coordinates": {
+            "latitude": 54.11331495,
+            "longitude": 12.1444938
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Friedensforum"
+    },
+    "n1530755102": {
+        "coordinates": {
+            "latitude": 54.07841245,
+            "longitude": 12.130903199999999
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "Hauptbahnhof (U)"
+    },
+    "n1530755124": {
+        "coordinates": {
+            "latitude": 54.09494178,
+            "longitude": 12.093891639999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Heinrich-Schütz-Straße"
+    },
+    "n1530755188": {
+        "coordinates": {
+            "latitude": 54.0728161,
+            "longitude": 12.1079453
+        },
+        "lines": [
+            "4",
+            "6"
+        ],
+        "name": "Klinikum Süd"
+    },
+    "n1530755293": {
+        "coordinates": {
+            "latitude": 54.10924385,
+            "longitude": 12.154976399999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Martin-Niemöller-Straße"
+    },
+    "n1530770651": {
+        "coordinates": {
+            "latitude": 54.135708066666666,
+            "longitude": 12.0571214
+        },
+        "lines": [
+            "1",
+            "5"
+        ],
+        "name": "St. Petersburger Straße"
+    },
+    "n7783719913": {
+        "coordinates": {
+            "latitude": 54.082452775,
+            "longitude": 12.141042275
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "Paulstraße"
+    },
+    "n7909223672": {
+        "coordinates": {
+            "latitude": 54.080156200000005,
+            "longitude": 12.1364479
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "6"
+        ],
+        "name": "Rosa-Luxemburg-Straße"
+    }
+}

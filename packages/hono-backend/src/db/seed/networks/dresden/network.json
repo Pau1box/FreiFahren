@@ -1,0 +1,22 @@
+{
+    "id": "dresden",
+    "name": "Dresden",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.0493,
+        "longitude": 13.7381
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.954318,
+            "longitude": 13.494025
+        },
+        "northEast": {
+            "latitude": 51.205066,
+            "longitude": 13.926224
+        }
+    }
+}

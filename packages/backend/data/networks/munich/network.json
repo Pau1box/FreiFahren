@@ -1,0 +1,22 @@
+{
+    "id": "munich",
+    "name": "München",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 48.1372,
+        "longitude": 11.5755
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 47.839552,
+            "longitude": 10.970054
+        },
+        "northEast": {
+            "latitude": 48.458428,
+            "longitude": 12.037785
+        }
+    }
+}

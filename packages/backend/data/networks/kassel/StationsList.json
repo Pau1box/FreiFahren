@@ -1,0 +1,1647 @@
+{
+    "FKKPL": {
+        "coordinates": {
+            "latitude": 51.3156213,
+            "longitude": 9.4976449
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Königsplatz"
+    },
+    "FKRAT": {
+        "coordinates": {
+            "latitude": 51.3125965,
+            "longitude": 9.49195486
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "8",
+            "RT1",
+            "RT4",
+            "RT5"
+        ],
+        "name": "Rathaus"
+    },
+    "n32863462": {
+        "coordinates": {
+            "latitude": 51.321566000000004,
+            "longitude": 9.44997095
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Teichstraße"
+    },
+    "n32863702": {
+        "coordinates": {
+            "latitude": 51.31885225,
+            "longitude": 9.45620535
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Breitscheidstraße"
+    },
+    "n32863711": {
+        "coordinates": {
+            "latitude": 51.314430357142854,
+            "longitude": 9.489250214285715
+        },
+        "lines": [
+            "4",
+            "7",
+            "8",
+            "RT1",
+            "RT4",
+            "RT5"
+        ],
+        "name": "Ständeplatz"
+    },
+    "n33592338": {
+        "coordinates": {
+            "latitude": 51.31602246666667,
+            "longitude": 9.465047733333334
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Bebelplatz"
+    },
+    "n123518359": {
+        "coordinates": {
+            "latitude": 51.146210599999996,
+            "longitude": 9.561020733333333
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Melsungen-Schwarzenberg"
+    },
+    "n124393594": {
+        "coordinates": {
+            "latitude": 51.44763373333333,
+            "longitude": 9.420076333333334
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Grebenstein"
+    },
+    "n124393806": {
+        "coordinates": {
+            "latitude": 51.49917706666667,
+            "longitude": 9.395547166666667
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Hofgeismar"
+    },
+    "n204865379": {
+        "coordinates": {
+            "latitude": 51.229865600000004,
+            "longitude": 9.467307333333332
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Baunatal-Guntershausen"
+    },
+    "n206089745": {
+        "coordinates": {
+            "latitude": 51.2851419,
+            "longitude": 9.469136125
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Dennhäuser Straße"
+    },
+    "FKNZH": {
+        "coordinates": {
+            "latitude": 51.30374243999999,
+            "longitude": 9.48396364
+        },
+        "lines": [
+            "5",
+            "6",
+            "RT5"
+        ],
+        "name": "Heinrich-Heine-Straße/Universität"
+    },
+    "n206136496": {
+        "coordinates": {
+            "latitude": 51.2889446,
+            "longitude": 9.451569249999999
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Heinrich-Schütz-Allee"
+    },
+    "n206136507": {
+        "coordinates": {
+            "latitude": 51.2918412,
+            "longitude": 9.45380755
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Helleböhn"
+    },
+    "n206143050": {
+        "coordinates": {
+            "latitude": 51.309186350000004,
+            "longitude": 9.5177531
+        },
+        "lines": [
+            "4",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Sandershäuser Straße"
+    },
+    "FKBHG": {
+        "coordinates": {
+            "latitude": 51.3060572,
+            "longitude": 9.5266756
+        },
+        "lines": [
+            "4",
+            "8",
+            "RT1"
+        ],
+        "name": "Kirchgasse"
+    },
+    "n206143063": {
+        "coordinates": {
+            "latitude": 51.30342655,
+            "longitude": 9.531203399999999
+        },
+        "lines": [
+            "4",
+            "8",
+            "RT1"
+        ],
+        "name": "Leipziger Platz"
+    },
+    "FKBHI": {
+        "coordinates": {
+            "latitude": 51.29484526666667,
+            "longitude": 9.546524433333333
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Lindenberg"
+    },
+    "FKBHA": {
+        "coordinates": {
+            "latitude": 51.2944394,
+            "longitude": 9.5562598
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Am Kupferhammer"
+    },
+    "n206153515": {
+        "coordinates": {
+            "latitude": 51.2892061,
+            "longitude": 9.571522475
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Niederkaufungen Industriestraße"
+    },
+    "n206153522": {
+        "coordinates": {
+            "latitude": 51.283505700000006,
+            "longitude": 9.6003247
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Niederkaufungen Mitte"
+    },
+    "n206153531": {
+        "coordinates": {
+            "latitude": 51.28456705,
+            "longitude": 9.6144201
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Niederkaufungen Rieckswiesen"
+    },
+    "n206153536": {
+        "coordinates": {
+            "latitude": 51.2825589,
+            "longitude": 9.6196372
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Oberkaufungen Gesamtschule"
+    },
+    "n206153578": {
+        "coordinates": {
+            "latitude": 51.28365115,
+            "longitude": 9.639233449999999
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Oberkaufungen DRK-Klinik"
+    },
+    "n206358911": {
+        "coordinates": {
+            "latitude": 51.301172475,
+            "longitude": 9.41429085
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Druseltal"
+    },
+    "FK": {
+        "coordinates": {
+            "latitude": 51.318280800000004,
+            "longitude": 9.48882778
+        },
+        "lines": [
+            "7",
+            "RT1",
+            "RT4",
+            "RT5"
+        ],
+        "name": "Kassel Hauptbahnhof"
+    },
+    "FFNW": {
+        "coordinates": {
+            "latitude": 51.3804325,
+            "longitude": 9.360075
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Calden-Fürstenwald"
+    },
+    "n207119558": {
+        "coordinates": {
+            "latitude": 51.3282223875,
+            "longitude": 9.5302467
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Wolfsgraben"
+    },
+    "n207119566": {
+        "coordinates": {
+            "latitude": 51.3278188,
+            "longitude": 9.5412794
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Wolfsanger"
+    },
+    "n207314402": {
+        "coordinates": {
+            "latitude": 51.268715525000005,
+            "longitude": 9.4368731
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Mattenberg Siedlung"
+    },
+    "n207456422": {
+        "coordinates": {
+            "latitude": 51.279448,
+            "longitude": 9.45547995
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Keilsbergstraße"
+    },
+    "n243229039": {
+        "coordinates": {
+            "latitude": 51.25282193333334,
+            "longitude": 9.410824366666667
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Stadtmitte"
+    },
+    "n243359741": {
+        "coordinates": {
+            "latitude": 51.251853350000005,
+            "longitude": 9.402959849999998
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Albert-Einstein-Straße"
+    },
+    "n243362598": {
+        "coordinates": {
+            "latitude": 51.26298443333334,
+            "longitude": 9.425754433333333
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Baunsberg"
+    },
+    "n243362607": {
+        "coordinates": {
+            "latitude": 51.25479745,
+            "longitude": 9.420257249999999
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Kleingartenverein"
+    },
+    "n246150904": {
+        "coordinates": {
+            "latitude": 51.2809938,
+            "longitude": 9.445934040000001
+        },
+        "lines": [
+            "2",
+            "3",
+            "6",
+            "7"
+        ],
+        "name": "Heinrich-Plett-Straße"
+    },
+    "n248755979": {
+        "coordinates": {
+            "latitude": 51.311703,
+            "longitude": 9.433595533333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Christuskirche"
+    },
+    "n248755999": {
+        "coordinates": {
+            "latitude": 51.31132071666667,
+            "longitude": 9.441108066666667
+        },
+        "lines": [
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Walther-Schücking-Platz"
+    },
+    "FIM": {
+        "coordinates": {
+            "latitude": 51.427310733333336,
+            "longitude": 9.464296666666668
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Immenhausen"
+    },
+    "FKW": {
+        "coordinates": {
+            "latitude": 51.31274896666667,
+            "longitude": 9.447218133333333
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "7",
+            "RT5"
+        ],
+        "name": "Kassel-Wilhelmshöhe"
+    },
+    "n270017860": {
+        "coordinates": {
+            "latitude": 51.312313419999995,
+            "longitude": 9.4651581
+        },
+        "lines": [
+            "1",
+            "3",
+            "7"
+        ],
+        "name": "Kirchweg"
+    },
+    "n271054391": {
+        "coordinates": {
+            "latitude": 51.3148098,
+            "longitude": 9.483850749999998
+        },
+        "lines": [
+            "4",
+            "7",
+            "8"
+        ],
+        "name": "Karthäuserstraße"
+    },
+    "FPAPK": {
+        "coordinates": {
+            "latitude": 51.2906743,
+            "longitude": 9.5643719
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Kaufungen-Papierfabrik"
+    },
+    "FKMBS": {
+        "coordinates": {
+            "latitude": 51.327239080000005,
+            "longitude": 9.499869659999998
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Halitplatz"
+    },
+    "FKHPL": {
+        "coordinates": {
+            "latitude": 51.3205749,
+            "longitude": 9.502005650000001
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Holländischer Platz/Universität"
+    },
+    "FHSA": {
+        "coordinates": {
+            "latitude": 51.257970866666675,
+            "longitude": 9.682773366666666
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Helsa Bahnhof"
+    },
+    "n276088421": {
+        "coordinates": {
+            "latitude": 51.2265163,
+            "longitude": 9.67146825
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Helsa-Eschenstruth"
+    },
+    "n279109027": {
+        "coordinates": {
+            "latitude": 51.285917,
+            "longitude": 9.6300685
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Oberkaufungen Mitte"
+    },
+    "FOSN": {
+        "coordinates": {
+            "latitude": 51.37673125,
+            "longitude": 9.2517216
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Oberelsungen"
+    },
+    "FWFH": {
+        "coordinates": {
+            "latitude": 51.33136985,
+            "longitude": 9.179019799999999
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Wolfhagen"
+    },
+    "n303598242": {
+        "coordinates": {
+            "latitude": 51.343581650000004,
+            "longitude": 9.2259464
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Altenhasungen"
+    },
+    "n303598287": {
+        "coordinates": {
+            "latitude": 51.3675305,
+            "longitude": 9.291628249999999
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Zierenberg-Rosental"
+    },
+    "n304001091": {
+        "coordinates": {
+            "latitude": 51.283136299999995,
+            "longitude": 9.4441888
+        },
+        "lines": [
+            "2",
+            "3",
+            "6",
+            "7"
+        ],
+        "name": "Schulzentrum Brückenhof"
+    },
+    "n315767820": {
+        "coordinates": {
+            "latitude": 51.3256159,
+            "longitude": 9.425876
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Hessenschanze"
+    },
+    "n315767847": {
+        "coordinates": {
+            "latitude": 51.3252046,
+            "longitude": 9.4304503
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Prinzenquelle"
+    },
+    "n315767866": {
+        "coordinates": {
+            "latitude": 51.3247294,
+            "longitude": 9.434975
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Stahlbergstraße"
+    },
+    "n315767884": {
+        "coordinates": {
+            "latitude": 51.32286465,
+            "longitude": 9.44635105
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Kirche Kirchditmold"
+    },
+    "n320683908": {
+        "coordinates": {
+            "latitude": 51.328686766666664,
+            "longitude": 9.52353405
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Am Fasanenhof"
+    },
+    "n320683928": {
+        "coordinates": {
+            "latitude": 51.316165866666665,
+            "longitude": 9.468971699999999
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Friedenskirche"
+    },
+    "n322443473": {
+        "coordinates": {
+            "latitude": 51.2099284,
+            "longitude": 9.7093924
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hessisch Lichtenau Orthopädische Klinik"
+    },
+    "n325087079": {
+        "coordinates": {
+            "latitude": 51.30789255,
+            "longitude": 9.444702225
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Hasselweg"
+    },
+    "n325087098": {
+        "coordinates": {
+            "latitude": 51.318542699999995,
+            "longitude": 9.5083568
+        },
+        "lines": [
+            "3",
+            "6",
+            "7"
+        ],
+        "name": "Katzensprung"
+    },
+    "n325087099": {
+        "coordinates": {
+            "latitude": 51.323040666666664,
+            "longitude": 9.512753366666667
+        },
+        "lines": [
+            "3",
+            "6",
+            "7"
+        ],
+        "name": "Weserspitze"
+    },
+    "n325087101": {
+        "coordinates": {
+            "latitude": 51.32591575,
+            "longitude": 9.518316866666666
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Alte Stadtgrenze"
+    },
+    "n340365233": {
+        "coordinates": {
+            "latitude": 51.3116861,
+            "longitude": 9.4827075
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Weigelstraße"
+    },
+    "n345800626": {
+        "coordinates": {
+            "latitude": 51.2697836,
+            "longitude": 9.438306650000001
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Waldmannstraße"
+    },
+    "n345800629": {
+        "coordinates": {
+            "latitude": 51.272716125,
+            "longitude": 9.4415801
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "7"
+        ],
+        "name": "Mattenberg (SEV)"
+    },
+    "n349919734": {
+        "coordinates": {
+            "latitude": 51.28577,
+            "longitude": 9.4495804
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Korbacher Straße/Universität"
+    },
+    "n349919840": {
+        "coordinates": {
+            "latitude": 51.29557415,
+            "longitude": 9.45255855
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Rhönplatz"
+    },
+    "n349919866": {
+        "coordinates": {
+            "latitude": 51.2986434,
+            "longitude": 9.4499809
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Süsterfeld"
+    },
+    "n354425715": {
+        "coordinates": {
+            "latitude": 51.3048314,
+            "longitude": 9.4455483
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Marbachshöhe"
+    },
+    "FGX": {
+        "coordinates": {
+            "latitude": 51.2043239,
+            "longitude": 9.4820519
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Guxhagen"
+    },
+    "FRFH": {
+        "coordinates": {
+            "latitude": 51.1543666,
+            "longitude": 9.5481584
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Melsungen-Röhrenfurth"
+    },
+    "FKALR": {
+        "coordinates": {
+            "latitude": 51.3162317,
+            "longitude": 9.504740375
+        },
+        "lines": [
+            "3",
+            "4",
+            "6",
+            "7",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Altmarkt/Regierungspräsidium"
+    },
+    "FKLPL": {
+        "coordinates": {
+            "latitude": 51.318325625,
+            "longitude": 9.498946925
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Lutherplatz"
+    },
+    "n415099915": {
+        "coordinates": {
+            "latitude": 51.3163699,
+            "longitude": 9.4928119
+        },
+        "lines": [
+            "7",
+            "RT1",
+            "RT4",
+            "RT5"
+        ],
+        "name": "Scheidemannplatz"
+    },
+    "n415099919": {
+        "coordinates": {
+            "latitude": 51.296083325,
+            "longitude": 9.479078625
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Park Schönfeld"
+    },
+    "n415099921": {
+        "coordinates": {
+            "latitude": 51.293457325,
+            "longitude": 9.4762441
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Bahnhof Niederzwehren"
+    },
+    "n415099923": {
+        "coordinates": {
+            "latitude": 51.290056316666664,
+            "longitude": 9.472915500000001
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Leuschnerstraße"
+    },
+    "n418060298": {
+        "coordinates": {
+            "latitude": 51.3138097,
+            "longitude": 9.43989655
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kunoldstraße"
+    },
+    "FKOZ": {
+        "coordinates": {
+            "latitude": 51.27662806666667,
+            "longitude": 9.454091833333333
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Kassel-Oberzwehren"
+    },
+    "n430218453": {
+        "coordinates": {
+            "latitude": 51.31564805,
+            "longitude": 9.423411
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Wilhelmshöhe (Park)"
+    },
+    "n430226656": {
+        "coordinates": {
+            "latitude": 51.31014116666666,
+            "longitude": 9.428097433333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Wigandstraße"
+    },
+    "n436578798": {
+        "coordinates": {
+            "latitude": 51.31087047999999,
+            "longitude": 9.51283734
+        },
+        "lines": [
+            "4",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Platz der Deutschen Einheit"
+    },
+    "FKUNK": {
+        "coordinates": {
+            "latitude": 51.3134777,
+            "longitude": 9.509276100000001
+        },
+        "lines": [
+            "4",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Unterneustädter Kirchplatz"
+    },
+    "FKWST": {
+        "coordinates": {
+            "latitude": 51.33407833333333,
+            "longitude": 9.494688966666667
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Wiener Straße"
+    },
+    "FKHBS": {
+        "coordinates": {
+            "latitude": 51.3368355,
+            "longitude": 9.4905337
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Hegelsbergstraße"
+    },
+    "n443440560": {
+        "coordinates": {
+            "latitude": 51.33860380000001,
+            "longitude": 9.516483083333332
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Ihringshäuser Straße"
+    },
+    "n443440568": {
+        "coordinates": {
+            "latitude": 51.330903299999996,
+            "longitude": 9.5127147
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Simmershäuser Straße"
+    },
+    "n443440573": {
+        "coordinates": {
+            "latitude": 51.32642153076923,
+            "longitude": 9.510209784615386
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Klinikum Kassel"
+    },
+    "n443440589": {
+        "coordinates": {
+            "latitude": 51.33487675,
+            "longitude": 9.51353085
+        },
+        "lines": [
+            "3",
+            "6"
+        ],
+        "name": "Koboldstraße"
+    },
+    "n444367961": {
+        "coordinates": {
+            "latitude": 51.3012166,
+            "longitude": 9.534966
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Leipziger Straße"
+    },
+    "n444828371": {
+        "coordinates": {
+            "latitude": 51.30754568,
+            "longitude": 9.488263159999999
+        },
+        "lines": [
+            "5",
+            "6",
+            "RT5"
+        ],
+        "name": "Am Weinberg"
+    },
+    "n446290619": {
+        "coordinates": {
+            "latitude": 51.309489033333335,
+            "longitude": 9.422417433333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Brabanter Straße"
+    },
+    "FKHFH": {
+        "coordinates": {
+            "latitude": 51.330866549999996,
+            "longitude": 9.499045
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Hauptfriedhof"
+    },
+    "FREH": {
+        "coordinates": {
+            "latitude": 51.254895,
+            "longitude": 9.468651933333334
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Baunatal-Rengershausen"
+    },
+    "n491459711": {
+        "coordinates": {
+            "latitude": 51.21264969999999,
+            "longitude": 9.695562766666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hessisch Lichtenau Bahnhof Fürstenhagen"
+    },
+    "n534739753": {
+        "coordinates": {
+            "latitude": 51.324084,
+            "longitude": 9.43930935
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Riedwiesen"
+    },
+    "n559607110": {
+        "coordinates": {
+            "latitude": 51.28220515,
+            "longitude": 9.46492715
+        },
+        "lines": [
+            "5",
+            "6"
+        ],
+        "name": "Brüder-Grimm-Straße"
+    },
+    "FKBHF": {
+        "coordinates": {
+            "latitude": 51.2988513,
+            "longitude": 9.5378199
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Forstfeldstraße"
+    },
+    "n582804763": {
+        "coordinates": {
+            "latitude": 51.31425546666667,
+            "longitude": 9.431517516666666
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Hessischer Rundfunk"
+    },
+    "n603236437": {
+        "coordinates": {
+            "latitude": 51.12611046666667,
+            "longitude": 9.5462936
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Melsungen"
+    },
+    "n610928979": {
+        "coordinates": {
+            "latitude": 51.315167349999996,
+            "longitude": 9.4274065
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kurhessen-Therme"
+    },
+    "n648843440": {
+        "coordinates": {
+            "latitude": 51.36539045,
+            "longitude": 9.4693669
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Nordstraße"
+    },
+    "n648843451": {
+        "coordinates": {
+            "latitude": 51.3721641,
+            "longitude": 9.472284233333333
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Vellmar Nord"
+    },
+    "n671484219": {
+        "coordinates": {
+            "latitude": 51.361182819999996,
+            "longitude": 9.46926476
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Stadtmitte"
+    },
+    "n732024049": {
+        "coordinates": {
+            "latitude": 51.277511275,
+            "longitude": 9.448402175
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "6",
+            "7"
+        ],
+        "name": "Oberzwehren Mitte"
+    },
+    "n732024115": {
+        "coordinates": {
+            "latitude": 51.198664750000006,
+            "longitude": 9.72086495
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hessisch Lichtenau Stadtmitte"
+    },
+    "n732024150": {
+        "coordinates": {
+            "latitude": 51.1960145,
+            "longitude": 9.7167299
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hessisch Lichtenau Bürgerhaus"
+    },
+    "n732024167": {
+        "coordinates": {
+            "latitude": 51.274456900000004,
+            "longitude": 9.445170099999999
+        },
+        "lines": [
+            "2",
+            "3",
+            "5",
+            "7"
+        ],
+        "name": "Altenbaunaer Straße"
+    },
+    "n732024193": {
+        "coordinates": {
+            "latitude": 51.203824,
+            "longitude": 9.7208857
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hessisch Lichtenau Im Tal"
+    },
+    "n734778770": {
+        "coordinates": {
+            "latitude": 51.332617766666665,
+            "longitude": 9.452463833333333
+        },
+        "lines": [
+            "RT1",
+            "RT4"
+        ],
+        "name": "Kassel-Harleshausen"
+    },
+    "n737913515": {
+        "coordinates": {
+            "latitude": 51.31532395,
+            "longitude": 9.479186349999999
+        },
+        "lines": [
+            "4",
+            "7",
+            "8"
+        ],
+        "name": "Annastraße"
+    },
+    "FKASH": {
+        "coordinates": {
+            "latitude": 51.318008840000005,
+            "longitude": 9.50050648
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Am Stern"
+    },
+    "n1003118130": {
+        "coordinates": {
+            "latitude": 51.251902799999996,
+            "longitude": 9.391068279999999
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Großenritte Bahnhof"
+    },
+    "FOKN": {
+        "coordinates": {
+            "latitude": 51.2871982,
+            "longitude": 9.637340533333335
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Oberkaufungen Bahnhof"
+    },
+    "n1024767494": {
+        "coordinates": {
+            "latitude": 51.3908635,
+            "longitude": 9.45555375
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Espenau-Mönchehof"
+    },
+    "n1252287099": {
+        "coordinates": {
+            "latitude": 51.339966216666674,
+            "longitude": 9.481123133333332
+        },
+        "lines": [
+            "1",
+            "5",
+            "RT1",
+            "RT4"
+        ],
+        "name": "Holländische Straße"
+    },
+    "n1340738998": {
+        "coordinates": {
+            "latitude": 51.3484882,
+            "longitude": 9.4721933
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Triftstraße"
+    },
+    "n1340738999": {
+        "coordinates": {
+            "latitude": 51.344935750000005,
+            "longitude": 9.47618275
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Berliner Straße"
+    },
+    "FMBB": {
+        "coordinates": {
+            "latitude": 51.13238606666667,
+            "longitude": 9.548390033333334
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Melsungen-Bartenwetzerbrücke"
+    },
+    "n1377137670": {
+        "coordinates": {
+            "latitude": 51.35265763333334,
+            "longitude": 9.468455433333332
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Dörnbergstraße"
+    },
+    "n1377137672": {
+        "coordinates": {
+            "latitude": 51.3575918,
+            "longitude": 9.4676054
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Festplatz"
+    },
+    "FKNZA": {
+        "coordinates": {
+            "latitude": 51.299140566666665,
+            "longitude": 9.481715166666667
+        },
+        "lines": [
+            "5",
+            "6",
+            "RT5"
+        ],
+        "name": "Auestadion"
+    },
+    "n1476566552": {
+        "coordinates": {
+            "latitude": 51.368871600000006,
+            "longitude": 9.4708604
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Musikerviertel"
+    },
+    "n1697655402": {
+        "coordinates": {
+            "latitude": 51.315185475,
+            "longitude": 9.47316185
+        },
+        "lines": [
+            "4",
+            "7",
+            "8"
+        ],
+        "name": "Querallee"
+    },
+    "n1904857464": {
+        "coordinates": {
+            "latitude": 51.3171932,
+            "longitude": 9.46081455
+        },
+        "lines": [
+            "4",
+            "8"
+        ],
+        "name": "Kongress-Palais/Stadthalle"
+    },
+    "n1904857591": {
+        "coordinates": {
+            "latitude": 51.31597205,
+            "longitude": 9.455710100000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Wintershall"
+    },
+    "n1911918289": {
+        "coordinates": {
+            "latitude": 51.3131925,
+            "longitude": 9.4524726
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Rotes Kreuz"
+    },
+    "n1911952849": {
+        "coordinates": {
+            "latitude": 51.3121134,
+            "longitude": 9.474273799999999
+        },
+        "lines": [
+            "1",
+            "3"
+        ],
+        "name": "Murhardstraße/Universität"
+    },
+    "n1912207932": {
+        "coordinates": {
+            "latitude": 51.31292555,
+            "longitude": 9.457888449999999
+        },
+        "lines": [
+            "1",
+            "3",
+            "7"
+        ],
+        "name": "Berlepschstraße"
+    },
+    "n1965119736": {
+        "coordinates": {
+            "latitude": 51.2517183,
+            "longitude": 9.3966488
+        },
+        "lines": [
+            "2",
+            "5"
+        ],
+        "name": "Hünstein"
+    },
+    "n1965702169": {
+        "coordinates": {
+            "latitude": 51.3019769,
+            "longitude": 9.448070099999999
+        },
+        "lines": [
+            "3",
+            "7"
+        ],
+        "name": "Helleböhnweg"
+    },
+    "n1990182210": {
+        "coordinates": {
+            "latitude": 51.3040568,
+            "longitude": 9.415707000000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hugo-Preuß-Straße"
+    },
+    "n1990182319": {
+        "coordinates": {
+            "latitude": 51.30715845,
+            "longitude": 9.4167398
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Waldorfschule"
+    },
+    "n1992843814": {
+        "coordinates": {
+            "latitude": 51.234888749999996,
+            "longitude": 9.674012
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Helsa-Eschenstruth Waldhof"
+    },
+    "n2370519189": {
+        "coordinates": {
+            "latitude": 51.3268689,
+            "longitude": 9.5333702
+        },
+        "lines": [
+            "7"
+        ],
+        "name": "Kirche Wolfsanger"
+    },
+    "FKKD": {
+        "coordinates": {
+            "latitude": 51.324495500000005,
+            "longitude": 9.4522057
+        },
+        "lines": [
+            "RT1",
+            "RT4"
+        ],
+        "name": "Kassel-Kirchditmold"
+    },
+    "FKJK": {
+        "coordinates": {
+            "latitude": 51.339100300000005,
+            "longitude": 9.4633305
+        },
+        "lines": [
+            "RT1",
+            "RT4"
+        ],
+        "name": "Kassel-Jungfernkopf"
+    },
+    "FVOE": {
+        "coordinates": {
+            "latitude": 51.354223499999996,
+            "longitude": 9.460829233333333
+        },
+        "lines": [
+            "RT1",
+            "RT4"
+        ],
+        "name": "Vellmar-Osterberg/EKZ"
+    },
+    "FOV": {
+        "coordinates": {
+            "latitude": 51.359478225000004,
+            "longitude": 9.4526687
+        },
+        "lines": [
+            "RT1",
+            "RT4"
+        ],
+        "name": "Vellmar-Obervellmar"
+    },
+    "FZB": {
+        "coordinates": {
+            "latitude": 51.365033624999995,
+            "longitude": 9.30477975
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Zierenberg"
+    },
+    "FNG": {
+        "coordinates": {
+            "latitude": 51.2834378,
+            "longitude": 9.6091674
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Kaufungen-Niederkaufungen Bahnhof"
+    },
+    "FATC": {
+        "coordinates": {
+            "latitude": 51.36285483333334,
+            "longitude": 9.433914133333333
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Ahnatal-Casselbreite"
+    },
+    "FHEH": {
+        "coordinates": {
+            "latitude": 51.3629736,
+            "longitude": 9.422405833333334
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Ahnatal-Heckershausen"
+    },
+    "FWEI": {
+        "coordinates": {
+            "latitude": 51.363234000000006,
+            "longitude": 9.39205125
+        },
+        "lines": [
+            "RT4"
+        ],
+        "name": "Ahnatal-Weimar"
+    },
+    "FKRL": {
+        "coordinates": {
+            "latitude": 51.1716925,
+            "longitude": 9.512755533333333
+        },
+        "lines": [
+            "RT5"
+        ],
+        "name": "Körle"
+    },
+    "FHMM": {
+        "coordinates": {
+            "latitude": 51.5430478,
+            "longitude": 9.402204900000001
+        },
+        "lines": [
+            "RT1"
+        ],
+        "name": "Hofgeismar-Hümme"
+    }
+}

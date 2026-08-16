@@ -1,6 +1,7 @@
 import { Blocker } from '../Blocker'
 import { FFSafeAreaView, FFView } from '../common/base'
 import { Attribution } from './Attribution'
+import { BetaNetworkHint } from './BetaNetworkHint'
 import { LayerSwitcher } from './LayerSwitcher'
 import { NavigationButton } from './Navigation/NavigationButton'
 import { ReportButton } from './Report/ReportButton'
@@ -28,6 +29,7 @@ export const UIOverlay = () => (
                     <SettingsButton />
                     <LayerSwitcher />
                 </FFView>
+                <BetaNetworkHint />
             </FFView>
             <FFView>
                 <NavigationButton alignSelf="flex-end" marginBottom="xs" />

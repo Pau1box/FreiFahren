@@ -10,6 +10,8 @@ import (
 )
 
 func TestDetermineDirectionIfImplied(t *testing.T) {
+	data.EmbedJSONFiles()
+
 	// Mock data
 	stations := map[string]utils.Station{
 		"SU-WA": {
@@ -70,10 +72,10 @@ func TestDetermineDirectionIfImplied(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		stations := data.GetStationsList()
+		stations, _ := data.GetStationsList("berlin")
 
 		t.Run(tt.name, func(t *testing.T) {
-			err := inspectors.DetermineDirectionIfImplied(tt.dataToInsert, tt.pointers, tt.line, tt.stationId, stations)
+			err := inspectors.DetermineDirectionIfImplied("berlin", tt.dataToInsert, tt.pointers, tt.line, tt.stationId, stations)
 			assert.NoError(t, err)
 			assert.Equal(t, tt.expectedResult, tt.dataToInsert.Direction)
 		})

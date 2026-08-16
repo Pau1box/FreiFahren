@@ -1,0 +1,431 @@
+{
+    "Alfred-Schneider-Straße": [
+        "Alfred-Schneider-",
+        "Alfred-Schneider-str.",
+        "Alfred-Schneider-strasse"
+    ],
+    "Am Breiten Pfuhl": [],
+    "Am Grünen Feld": [],
+    "Am Haupttor": [
+        "Haupttor"
+    ],
+    "Am Leipziger Turm": [],
+    "Am Sommerbad": [
+        "Sommerbad"
+    ],
+    "Am Stadtpark": [
+        "Stadtpark"
+    ],
+    "Am Steintor": [
+        "Steintor"
+    ],
+    "Am Wasserturm": [
+        "Wasserturm"
+    ],
+    "An der Eselsmühle": [],
+    "An der Feuerwache": [],
+    "Anhalter Platz": [
+        "Anhalter",
+        "Anhalterplz"
+    ],
+    "Ankerstraße": [
+        "Anker",
+        "Ankerstr.",
+        "Ankerstrasse"
+    ],
+    "BG Klinikum Bergmannstrost Halle": [],
+    "Bad Dürrenberg, Bahnhof": [],
+    "Bad Dürrenberg, Markt": [],
+    "Beesen": [],
+    "Berliner Brücke": [
+        "Berliner"
+    ],
+    "Betriebshof Freiimfelder Straße": [
+        "Betriebshof Freiimfelder",
+        "Betriebshof Freiimfelder Str.",
+        "Betriebshof Freiimfelder Strasse"
+    ],
+    "Betriebshof Rosengarten": [
+        "Betriebshof"
+    ],
+    "Bitterfelder Straße": [
+        "Bitterfelder",
+        "Bitterfelder Str.",
+        "Bitterfelder Strasse"
+    ],
+    "Braunschweiger Bogen": [
+        "Braunschweiger"
+    ],
+    "Brühlstraße": [
+        "Brühl",
+        "Brühlstr.",
+        "Brühlstrasse"
+    ],
+    "Burg Giebichenstein": [
+        "Burg"
+    ],
+    "Böllberg": [],
+    "Büschdorf": [],
+    "Damaschkestraße": [
+        "Damaschke",
+        "Damaschkestr.",
+        "Damaschkestrasse"
+    ],
+    "Daspig": [],
+    "Diakoniewerk Halle": [
+        "Diakoniewerk"
+    ],
+    "Diesterwegstraße": [
+        "Diesterweg",
+        "Diesterwegstr.",
+        "Diesterwegstrasse"
+    ],
+    "Elsa-Brändström-Straße": [
+        "Elsa-Brändström-",
+        "Elsa-Brändström-str.",
+        "Elsa-Brändström-strasse"
+    ],
+    "Emil-Eichhorn-Straße": [
+        "Emil-Eichhorn-",
+        "Emil-Eichhorn-str.",
+        "Emil-Eichhorn-strasse"
+    ],
+    "Fiete-Schulze-Straße": [
+        "Fiete-Schulze-",
+        "Fiete-Schulze-str.",
+        "Fiete-Schulze-strasse"
+    ],
+    "Florian-Geyer-Platz": [
+        "Florian-Geyer-",
+        "Florian-Geyer-plz"
+    ],
+    "Franckeplatz": [
+        "Francke",
+        "Franckeplz"
+    ],
+    "Freiimfelder Straße": [
+        "Freiimfelder",
+        "Freiimfelder Str.",
+        "Freiimfelder Strasse"
+    ],
+    "Freyburger Straße": [
+        "Freyburger",
+        "Freyburger Str.",
+        "Freyburger Strasse"
+    ],
+    "Friesenstraße": [
+        "Friesen",
+        "Friesenstr.",
+        "Friesenstrasse"
+    ],
+    "Frohe Zukunft": [
+        "Frohe"
+    ],
+    "Gertraudenfriedhof": [],
+    "Gimritzer Damm": [
+        "Gimritzer"
+    ],
+    "Glauchaer Platz": [
+        "Glauchaer",
+        "Glauchaerplz"
+    ],
+    "Grenzstraße": [
+        "Grenz",
+        "Grenzstr.",
+        "Grenzstrasse"
+    ],
+    "Gustav-Staude-Straße": [
+        "Gustav-Staude-",
+        "Gustav-Staude-str.",
+        "Gustav-Staude-strasse"
+    ],
+    "Hauptbahnhof": [],
+    "Hegelstraße": [
+        "Hegel",
+        "Hegelstr.",
+        "Hegelstrasse"
+    ],
+    "Heide-Universitätsklinikum": [],
+    "Heinrich-Schütz-Straße": [
+        "Heinrich-Schütz-",
+        "Heinrich-Schütz-str.",
+        "Heinrich-Schütz-strasse"
+    ],
+    "Hermannstraße": [
+        "Hermann",
+        "Hermannstr.",
+        "Hermannstrasse"
+    ],
+    "Hohendorfer Marke": [
+        "Hohendorfer"
+    ],
+    "Huttenstraße": [
+        "Hutten",
+        "Huttenstr.",
+        "Huttenstrasse"
+    ],
+    "Hyazinthenstraße": [
+        "Hyazinthen",
+        "Hyazinthenstr.",
+        "Hyazinthenstrasse"
+    ],
+    "Industrietor": [],
+    "Joliot-Curie-Platz": [
+        "Joliot-Curie-",
+        "Joliot-Curie-plz"
+    ],
+    "Kantstraße": [
+        "Kant",
+        "Kantstr.",
+        "Kantstrasse"
+    ],
+    "Kirchfährendorf": [],
+    "Kollenbeyer Weg": [
+        "Kollenbeyer"
+    ],
+    "Korbethaer Straße": [
+        "Korbethaer",
+        "Korbethaer Str.",
+        "Korbethaer Strasse"
+    ],
+    "Kornblumenweg": [],
+    "Kröllwitz": [],
+    "Kurallee": [
+        "Kur"
+    ],
+    "Kurpark": [],
+    "Kurt-Tucholsky-Straße": [
+        "Kurt-Tucholsky-",
+        "Kurt-Tucholsky-str.",
+        "Kurt-Tucholsky-strasse"
+    ],
+    "Kurt-Wüsteneck-Straße": [
+        "Kurt-Wüsteneck-",
+        "Kurt-Wüsteneck-str.",
+        "Kurt-Wüsteneck-strasse"
+    ],
+    "Käthe-Kollwitz-Straße": [
+        "Käthe-Kollwitz-",
+        "Käthe-Kollwitz-str.",
+        "Käthe-Kollwitz-strasse"
+    ],
+    "Kötzschener Weg": [
+        "Kötzschener"
+    ],
+    "Landesmuseum für Vorgeschichte": [],
+    "Lessingstraße": [
+        "Lessing",
+        "Lessingstr.",
+        "Lessingstrasse"
+    ],
+    "Leuna, Krähenberg": [
+        "Leuna,"
+    ],
+    "Leuna-Kröllwitz": [],
+    "Leunatorstraße": [
+        "Leunator",
+        "Leunatorstr.",
+        "Leunatorstrasse"
+    ],
+    "Leunaweg": [],
+    "Lindenstraße": [
+        "Linden",
+        "Lindenstr.",
+        "Lindenstrasse"
+    ],
+    "Louise-Otto-Peters-Straße": [
+        "Louise-Otto-Peters-",
+        "Louise-Otto-Peters-str.",
+        "Louise-Otto-Peters-strasse"
+    ],
+    "Ludwig-Uhland-Straße": [
+        "Ludwig-Uhland-",
+        "Ludwig-Uhland-str.",
+        "Ludwig-Uhland-strasse"
+    ],
+    "Ludwigstraße": [
+        "Ludwig",
+        "Ludwigstr.",
+        "Ludwigstrasse"
+    ],
+    "Lutherstraße": [
+        "Luther",
+        "Lutherstr.",
+        "Lutherstrasse"
+    ],
+    "Magdeburger Straße": [
+        "Magdeburger",
+        "Magdeburger Str.",
+        "Magdeburger Strasse"
+    ],
+    "Mark-Twain-Straße": [
+        "Mark-Twain-",
+        "Mark-Twain-str.",
+        "Mark-Twain-strasse"
+    ],
+    "Melanchthonstraße": [
+        "Melanchthon",
+        "Melanchthonstr.",
+        "Melanchthonstrasse"
+    ],
+    "Merseburg Süd": [
+        "Merseburg"
+    ],
+    "Merseburg, Carl-von-Basedow-Klinikum": [
+        "Merseburg,"
+    ],
+    "Merseburg, Haeckelstraße": [
+        "Merseburg, Haeckel",
+        "Merseburg, Haeckelstr.",
+        "Merseburg, Haeckelstrasse"
+    ],
+    "Merseburg, Herweghstraße": [
+        "Merseburg, Herwegh",
+        "Merseburg, Herweghstr.",
+        "Merseburg, Herweghstrasse"
+    ],
+    "Merseburg/Zentrum": [],
+    "Moritzburgring": [],
+    "Moskauer Straße": [
+        "Moskauer",
+        "Moskauer Str.",
+        "Moskauer Strasse"
+    ],
+    "Mühlweg": [],
+    "Naumburger Straße": [
+        "Naumburger",
+        "Naumburger Str.",
+        "Naumburger Strasse"
+    ],
+    "Neues Theater": [
+        "Neues"
+    ],
+    "Passendorfer Weg": [
+        "Passendorfer"
+    ],
+    "Paul-Suhr-Straße": [
+        "Paul-Suhr-",
+        "Paul-Suhr-str.",
+        "Paul-Suhr-strasse"
+    ],
+    "Pfalzplatz": [
+        "Pfalz",
+        "Pfalzplz"
+    ],
+    "Pfarrstraße": [
+        "Pfarr",
+        "Pfarrstr.",
+        "Pfarrstrasse"
+    ],
+    "Pfännerhöhe": [],
+    "Platz der Freiheit": [],
+    "Rannischer Platz": [
+        "Rannischer",
+        "Rannischerplz"
+    ],
+    "Reileck": [],
+    "Rennbahnkreuz": [],
+    "Riebeckplatz": [
+        "Riebeck",
+        "Riebeckplz"
+    ],
+    "Riebeckplatz (Maritim)": [
+        "Riebeckplatz"
+    ],
+    "Robert-Koch-Straße": [
+        "Robert-Koch-",
+        "Robert-Koch-str.",
+        "Robert-Koch-strasse"
+    ],
+    "S-Bahnhof Rosengarten": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Silberhöhe": [
+        "S-Bahnhof"
+    ],
+    "S-Bahnhof Südstadt": [
+        "S-Bahnhof"
+    ],
+    "S-Bf. Neustadt": [
+        "S-Bf."
+    ],
+    "S-Bf. Steintorbrücke": [
+        "S-Bf."
+    ],
+    "S-Bhf. Dessauer Brücke": [],
+    "Sachsenplatz": [
+        "Sachsen",
+        "Sachsenplz"
+    ],
+    "Saline": [],
+    "Schkopau, Am Schloß": [],
+    "Schkopau/Bunawerke": [],
+    "Schwimmhalle": [],
+    "Schwuchtstraße": [
+        "Schwucht",
+        "Schwuchtstr.",
+        "Schwuchtstrasse"
+    ],
+    "Seebener Straße": [
+        "Seebener",
+        "Seebener Str.",
+        "Seebener Strasse"
+    ],
+    "Slawenweg": [],
+    "Soltauer Straße": [
+        "Soltauer",
+        "Soltauer Str.",
+        "Soltauer Strasse"
+    ],
+    "Spechtweg": [],
+    "Stadtstadion": [],
+    "Straßburger Weg": [
+        "Straßburger"
+    ],
+    "Südstadt, Veszpremer Straße": [
+        "Südstadt, Veszpremer",
+        "Südstadt, Veszpremer Str.",
+        "Südstadt, Veszpremer Strasse"
+    ],
+    "Talstraße": [
+        "Tal",
+        "Talstr.",
+        "Talstrasse"
+    ],
+    "Theodor-Neubauer-Straße": [
+        "Theodor-Neubauer-",
+        "Theodor-Neubauer-str.",
+        "Theodor-Neubauer-strasse"
+    ],
+    "Triftstraße": [
+        "Trift",
+        "Triftstr.",
+        "Triftstrasse"
+    ],
+    "Trotha": [],
+    "Vogelweide": [],
+    "Volkspark": [],
+    "Weinberg Campus": [
+        "Weinberg"
+    ],
+    "Wiener Straße": [
+        "Wiener",
+        "Wiener Str.",
+        "Wiener Strasse"
+    ],
+    "Willy-Lohmann-Straße": [
+        "Willy-Lohmann-",
+        "Willy-Lohmann-str.",
+        "Willy-Lohmann-strasse"
+    ],
+    "Wörmlitz": [],
+    "Zentrum Neustadt": [
+        "Zentrum"
+    ],
+    "Zoo": [],
+    "Äußere Hordorfer Straße": [
+        "Äußere Hordorfer",
+        "Äußere Hordorfer Str.",
+        "Äußere Hordorfer Strasse"
+    ]
+}

@@ -1,4 +1,4 @@
-import { type Inspector } from './models'
+import { type Inspector, type LineColors, type Network } from './models'
 import { createImage } from './image'
 import { createMediaContainer, publishMedia } from './instagram'
 import { getInstagramUserToken, getValidAccessToken } from './auth'
@@ -14,17 +14,54 @@ const app = new Hono()
 
 app.use('/images/*', serveStatic({ root: './' }))
 
-async function fetchInspectorData() {
-    const response = await fetch(`${process.env.API_URL}/v0/basics/inspectors`)
+// The network this bot posts for. One deployment serves one Instagram account, so the network is
+// configuration rather than something to pick per request. Berlin keeps the previous behaviour for
+// a deployment that does not set it.
+const NETWORK = process.env.NETWORK ?? 'berlin'
+
+async function fetchFromBackend<T>(path: string): Promise<T> {
+    const response = await fetch(`${process.env.API_URL}${path}?network=${encodeURIComponent(NETWORK)}`)
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
     }
-    return (await response.json()) as Inspector[]
+    return (await response.json()) as T
 }
 
-async function createAndPostStory(inspectors: Inspector[]) {
+const fetchInspectorData = () => fetchFromBackend<Inspector[]>('/v0/basics/inspectors')
+
+const fetchLineColors = () => fetchFromBackend<LineColors>('/v0/lines/metadata')
+
+/*
+ The quiet hours below are about when the followers of this account are asleep, so they are hours
+ in the network's own city rather than on the server's clock. The timezone comes from
+ `GET /v0/networks`, the same source the rest of the project reads it from, and falls back to UTC:
+ a window an hour off is a smaller failure than posting nothing at all.
+*/
+async function fetchNetworkTimezone(): Promise<string> {
     try {
-        const imgBuffer = await createImage(inspectors)
+        const networks = await fetchFromBackend<Network[]>('/v0/networks')
+        const timezone = networks.find((network) => network.id === NETWORK)?.timezone
+        if (!timezone) {
+            console.error(`No timezone for network ${NETWORK}, falling back to UTC`)
+            return 'UTC'
+        }
+        return timezone
+    } catch (error) {
+        console.error(`Could not read the timezone of network ${NETWORK}, falling back to UTC:`, error)
+        return 'UTC'
+    }
+}
+
+function hourIn(timezone: string): number {
+    // hourCycle h23 so that midnight is 0 rather than 24, which some locales report.
+    return Number(
+        new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hourCycle: 'h23', timeZone: timezone }).format(new Date())
+    )
+}
+
+async function createAndPostStory(inspectors: Inspector[], lineColors: LineColors) {
+    try {
+        const imgBuffer = await createImage(inspectors, lineColors)
 
         // Save the image to a file
         const folderPath = './images'
@@ -58,21 +95,28 @@ async function createAndPostStory(inspectors: Inspector[]) {
 
 // run once initially
 try {
-    const inspectors = await fetchInspectorData()
-    await createAndPostStory(inspectors)
+    const [inspectors, lineColors] = await Promise.all([fetchInspectorData(), fetchLineColors()])
+    await createAndPostStory(inspectors, lineColors)
 } catch (error) {
     console.error('Error in hourly cron job:', error)
 }
 
-// Hourly cron job to fetch data and post story, avoiding 20:00-04:00 UTC to not spam the followers
+// Hourly cron job to fetch data and post story, avoiding 22:00-06:00 in the network's own city to
+// not spam the followers
+const FIRST_POSTING_HOUR = 6
+const LAST_POSTING_HOUR = 22
+
 cron.schedule('0 * * * *', async () => {
     try {
-        const currentHour = new Date().getUTCHours()
-        if (currentHour >= 4 && currentHour < 20) {
-            const inspectors = await fetchInspectorData()
-            await createAndPostStory(inspectors)
+        const timezone = await fetchNetworkTimezone()
+        const currentHour = hourIn(timezone)
+        if (currentHour >= FIRST_POSTING_HOUR && currentHour < LAST_POSTING_HOUR) {
+            const [inspectors, lineColors] = await Promise.all([fetchInspectorData(), fetchLineColors()])
+            await createAndPostStory(inspectors, lineColors)
         } else {
-            console.log('Skipping story post during quiet hours (20:00-04:00 UTC)')
+            console.log(
+                `Skipping story post during quiet hours (${LAST_POSTING_HOUR}:00-${FIRST_POSTING_HOUR}:00 ${timezone})`
+            )
         }
     } catch (error) {
         console.error('Error in hourly cron job:', error)

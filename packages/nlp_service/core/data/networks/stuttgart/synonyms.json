@@ -1,0 +1,572 @@
+{
+    "Aldingen Brückenstraße": [
+        "Aldingen Brücken",
+        "Aldingen Brückenstr.",
+        "Aldingen Brückenstrasse"
+    ],
+    "Aldingen Hornbach": [
+        "Aldingen"
+    ],
+    "Aldingen Mühle": [
+        "Aldingen"
+    ],
+    "Antwerpener Straße": [
+        "Antwerpener",
+        "Antwerpener Str.",
+        "Antwerpener Strasse"
+    ],
+    "Arndt-/Spittastraße": [
+        "Arndt-/Spitta",
+        "Arndt-/Spittastr.",
+        "Arndt-/Spittastrasse"
+    ],
+    "Augsburger Platz": [
+        "Augsburger",
+        "Augsburgerplz"
+    ],
+    "Auwiesen": [],
+    "Bad Cannstatt Wilhelmsplatz": [
+        "Bad Cannstatt Wilhelms",
+        "Bad Cannstatt Wilhelmsplz"
+    ],
+    "Beethovenstraße": [
+        "Beethoven",
+        "Beethovenstr.",
+        "Beethovenstrasse"
+    ],
+    "Bergfriedhof": [],
+    "Bergheimer Hof": [
+        "Bergheimer"
+    ],
+    "Berliner Platz (Liederhalle)": [],
+    "Beskidenstraße": [
+        "Beskiden",
+        "Beskidenstr.",
+        "Beskidenstrasse"
+    ],
+    "Bihlplatz": [
+        "Bihl",
+        "Bihlplz"
+    ],
+    "Blick": [],
+    "Bockelstraße": [
+        "Bockel",
+        "Bockelstr.",
+        "Bockelstrasse"
+    ],
+    "Bopser": [],
+    "Borsigstraße": [
+        "Borsig",
+        "Borsigstr.",
+        "Borsigstrasse"
+    ],
+    "Botnang": [],
+    "Bottroper Straße": [
+        "Bottroper",
+        "Bottroper Str.",
+        "Bottroper Strasse"
+    ],
+    "Breitwiesen": [],
+    "Brendle (Großmarkt)": [
+        "Brendle"
+    ],
+    "Bubenbad": [],
+    "Budapester Platz": [
+        "Budapester",
+        "Budapesterplz"
+    ],
+    "Cannstatter Wasen": [
+        "Cannstatter"
+    ],
+    "Charlottenplatz": [
+        "Charlotten",
+        "Charlottenplz"
+    ],
+    "Daimlerplatz": [
+        "Daimler",
+        "Daimlerplz"
+    ],
+    "Degerloch": [],
+    "Degerloch Albstraße": [
+        "Degerloch Alb",
+        "Degerloch Albstr.",
+        "Degerloch Albstrasse"
+    ],
+    "Dobelstraße": [
+        "Dobel",
+        "Dobelstr.",
+        "Dobelstrasse"
+    ],
+    "Dürrlewang": [],
+    "Elbestraße": [
+        "Elbe",
+        "Elbestr.",
+        "Elbestrasse"
+    ],
+    "Eltinger Straße": [
+        "Eltinger",
+        "Eltinger Str.",
+        "Eltinger Strasse"
+    ],
+    "EnBW City": [
+        "EnBW"
+    ],
+    "Engelboldstraße": [
+        "Engelbold",
+        "Engelboldstr.",
+        "Engelboldstrasse"
+    ],
+    "Erwin-Schoettle-Platz": [
+        "Erwin-Schoettle-",
+        "Erwin-Schoettle-plz"
+    ],
+    "Esslinger Straße": [
+        "Esslinger",
+        "Esslinger Str.",
+        "Esslinger Strasse"
+    ],
+    "Eszet": [],
+    "Eugensplatz": [
+        "Eugens",
+        "Eugensplz"
+    ],
+    "Europaplatz": [
+        "Europa",
+        "Europaplz"
+    ],
+    "Fasanenhof (Bonhoefferkirche)": [
+        "Fasanenhof"
+    ],
+    "Fauststraße": [
+        "Faust",
+        "Fauststr.",
+        "Fauststrasse"
+    ],
+    "Fellbach Lutherkirche": [
+        "Fellbach"
+    ],
+    "Feuerbach Bahnhof": [
+        "Feuerbach"
+    ],
+    "Feuerbach Pfostenwäldle": [
+        "Feuerbach"
+    ],
+    "Flughafen/Messe": [],
+    "Freiberg": [],
+    "Freibergstraße": [
+        "Freiberg",
+        "Freibergstr.",
+        "Freibergstrasse"
+    ],
+    "Friedrichswahl": [],
+    "Föhrich": [],
+    "Fürfelder Straße": [
+        "Fürfelder",
+        "Fürfelder Str.",
+        "Fürfelder Strasse"
+    ],
+    "Gaisburg": [],
+    "Gerlingen": [],
+    "Gerlingen Siedlung": [
+        "Gerlingen"
+    ],
+    "Geroksruhe": [],
+    "Giebel": [],
+    "Glockenstraße (Mahle)": [
+        "Glockenstraße"
+    ],
+    "Gnesener Straße": [
+        "Gnesener",
+        "Gnesener Str.",
+        "Gnesener Strasse"
+    ],
+    "Haigst": [],
+    "Hallschlag": [],
+    "Hauptbahnhof (Arnulf-Klett-Platz)": [
+        "Hauptbahnhof"
+    ],
+    "Hauptfriedhof": [],
+    "Hedelfingen": [],
+    "Herderplatz": [
+        "Herder",
+        "Herderplz"
+    ],
+    "Heslach Vogelrain": [
+        "Heslach"
+    ],
+    "Heumaden": [],
+    "Heutingsheimer Straße": [
+        "Heutingsheimer",
+        "Heutingsheimer Str.",
+        "Heutingsheimer Strasse"
+    ],
+    "Himmelsleiter": [],
+    "Hofen": [],
+    "Hohensteinstraße": [
+        "Hohenstein",
+        "Hohensteinstr.",
+        "Hohensteinstrasse"
+    ],
+    "Höhenstraße": [
+        "Höhen",
+        "Höhenstr.",
+        "Höhenstrasse"
+    ],
+    "Hölderlinplatz": [
+        "Hölderlin",
+        "Hölderlinplz"
+    ],
+    "Im Degen": [],
+    "Inselstraße": [
+        "Insel",
+        "Inselstr.",
+        "Inselstrasse"
+    ],
+    "Jurastraße": [
+        "Jura",
+        "Jurastr.",
+        "Jurastrasse"
+    ],
+    "Kaltental": [],
+    "Karl-Olga-Krankenhaus": [],
+    "Kelterplatz": [
+        "Kelter",
+        "Kelterplz"
+    ],
+    "Kienbachstraße": [
+        "Kienbach",
+        "Kienbachstr.",
+        "Kienbachstrasse"
+    ],
+    "Killesberg": [],
+    "Kirchtalstraße": [
+        "Kirchtal",
+        "Kirchtalstr.",
+        "Kirchtalstrasse"
+    ],
+    "Korntaler Straße": [
+        "Korntaler",
+        "Korntaler Str.",
+        "Korntaler Strasse"
+    ],
+    "Kraftwerk Münster": [
+        "Kraftwerk"
+    ],
+    "Kursaal": [],
+    "Landauer Straße": [
+        "Landauer",
+        "Landauer Str.",
+        "Landauer Strasse"
+    ],
+    "Landhaus": [],
+    "Lapp Kabel": [
+        "Lapp"
+    ],
+    "Leinf. Unteraichen": [
+        "Leinf."
+    ],
+    "Leinfelden Bahnhof": [
+        "Leinfelden"
+    ],
+    "Leinfelden Frank": [
+        "Leinfelden"
+    ],
+    "Leinfelden Neuer Markt (EUCHNER)": [],
+    "Lindpaintnerstraße": [
+        "Lindpaintner",
+        "Lindpaintnerstr.",
+        "Lindpaintnerstrasse"
+    ],
+    "Löwen-Markt": [],
+    "Löwentor": [],
+    "Löwentorbrücke": [],
+    "Marienplatz": [
+        "Marien",
+        "Marienplz"
+    ],
+    "Max-Eyth-See": [],
+    "Maybachstraße": [
+        "Maybach",
+        "Maybachstr.",
+        "Maybachstrasse"
+    ],
+    "Mercedesstraße": [
+        "Mercedes",
+        "Mercedesstr.",
+        "Mercedesstrasse"
+    ],
+    "Messe West": [
+        "Messe"
+    ],
+    "Metzstraße": [
+        "Metz",
+        "Metzstr.",
+        "Metzstrasse"
+    ],
+    "Milchhof": [],
+    "Millöckerstraße": [
+        "Millöcker",
+        "Millöckerstr.",
+        "Millöckerstrasse"
+    ],
+    "Mineralbäder (Naturkundemuseum)": [
+        "Mineralbäder"
+    ],
+    "Mittnachtstraße": [
+        "Mittnacht",
+        "Mittnachtstr.",
+        "Mittnachtstrasse"
+    ],
+    "Möhringen Bahnhof": [
+        "Möhringen"
+    ],
+    "Möhringen Freibad": [
+        "Möhringen"
+    ],
+    "Mönchfeld": [],
+    "Mühlhausen": [],
+    "Mühlsteg": [],
+    "Münster Rathaus": [
+        "Münster"
+    ],
+    "Münster Viadukt": [
+        "Münster"
+    ],
+    "NeckarPark (Stadion)": [
+        "NeckarPark"
+    ],
+    "Neckartor": [],
+    "Nellingen Ostfildern": [
+        "Nellingen"
+    ],
+    "Nellingen Technische Akademie": [],
+    "Neugereut": [],
+    "Nordbahnhof": [],
+    "Nägelestraße": [
+        "Nägele",
+        "Nägelestr.",
+        "Nägelestrasse"
+    ],
+    "Nürnberger Straße": [
+        "Nürnberger",
+        "Nürnberger Str.",
+        "Nürnberger Strasse"
+    ],
+    "Obere Ziegelei": [
+        "Obere"
+    ],
+    "Olgaeck": [],
+    "Ostendplatz": [
+        "Ostend",
+        "Ostendplz"
+    ],
+    "Ostheim Leo-Vetter-Bad": [
+        "Ostheim"
+    ],
+    "Parksiedlung": [],
+    "Payerstraße": [
+        "Payer",
+        "Payerstr.",
+        "Payerstrasse"
+    ],
+    "Peregrinastraße": [
+        "Peregrina",
+        "Peregrinastr.",
+        "Peregrinastrasse"
+    ],
+    "Pfaffenweg": [],
+    "Plieningen": [],
+    "Plieninger Straße": [
+        "Plieninger",
+        "Plieninger Str.",
+        "Plieninger Strasse"
+    ],
+    "Pragfriedhof": [],
+    "Pragsattel": [],
+    "Raitelsberg": [],
+    "Rastatter Straße": [
+        "Rastatter",
+        "Rastatter Str.",
+        "Rastatter Strasse"
+    ],
+    "Rathaus": [],
+    "Remseck Neckargröningen": [
+        "Remseck"
+    ],
+    "Riedsee": [],
+    "Riethmüllerhaus": [],
+    "Rohrer Weg": [
+        "Rohrer"
+    ],
+    "Rosenberg-/Seidenstraße": [
+        "Rosenberg-/Seiden",
+        "Rosenberg-/Seidenstr.",
+        "Rosenberg-/Seidenstrasse"
+    ],
+    "Rosensteinbrücke": [],
+    "Rosensteinpark": [],
+    "Rotebühlplatz": [
+        "Rotebühl",
+        "Rotebühlplz"
+    ],
+    "Ruhbank (Fernsehturm)": [
+        "Ruhbank"
+    ],
+    "Ruit": [],
+    "Ruit Zinsholz": [
+        "Ruit"
+    ],
+    "Russische Kirche": [
+        "Russische"
+    ],
+    "SSB am Wallgraben": [],
+    "SSB-Zentrum": [],
+    "Salamanderweg": [],
+    "Salzwiesenstraße": [
+        "Salzwiesen",
+        "Salzwiesenstr.",
+        "Salzwiesenstrasse"
+    ],
+    "Salzäcker": [],
+    "Scharnhauser Park": [
+        "Scharnhauser"
+    ],
+    "Scharnhauser Park Kreuzbrunnen": [],
+    "Schelmenwasen": [],
+    "Schemppstraße": [
+        "Schempp",
+        "Schemppstr.",
+        "Schemppstrasse"
+    ],
+    "Schlachthof": [],
+    "Schloss-/Johannesstraße": [
+        "Schloss-/Johannes",
+        "Schloss-/Johannesstr.",
+        "Schloss-/Johannesstrasse"
+    ],
+    "Schlossplatz": [
+        "Schloss",
+        "Schlossplz"
+    ],
+    "Schlotterbeckstraße": [
+        "Schlotterbeck",
+        "Schlotterbeckstr.",
+        "Schlotterbeckstrasse"
+    ],
+    "Schozacher Straße": [
+        "Schozacher",
+        "Schozacher Str.",
+        "Schozacher Strasse"
+    ],
+    "Schwab-/Bebelstraße": [
+        "Schwab-/Bebel",
+        "Schwab-/Bebelstr.",
+        "Schwab-/Bebelstrasse"
+    ],
+    "Schwabenlandhalle": [],
+    "Sieglestraße": [
+        "Siegle",
+        "Sieglestr.",
+        "Sieglestrasse"
+    ],
+    "Sigmaringer Straße": [
+        "Sigmaringer",
+        "Sigmaringer Str.",
+        "Sigmaringer Strasse"
+    ],
+    "Silberwald": [],
+    "Sillenbuch": [],
+    "Sonnenberg": [],
+    "Sportpark Feuerbach": [
+        "Sportpark"
+    ],
+    "Staatsgalerie": [],
+    "Stadionstraße": [
+        "Stadion",
+        "Stadionstr.",
+        "Stadionstrasse"
+    ],
+    "Stadtbibliothek": [],
+    "Stadtwerke Stuttgart": [
+        "Stadtwerke"
+    ],
+    "Stafflenbergstraße": [
+        "Stafflenberg",
+        "Stafflenbergstr.",
+        "Stafflenbergstrasse"
+    ],
+    "Stammheim": [],
+    "Steinhaldenfeld": [],
+    "Stelle": [],
+    "Stöckach": [],
+    "Suttnerstraße": [
+        "Suttner",
+        "Suttnerstr.",
+        "Suttnerstrasse"
+    ],
+    "Südheimer Platz": [
+        "Südheimer",
+        "Südheimerplz"
+    ],
+    "Tapachstraße": [
+        "Tapach",
+        "Tapachstr.",
+        "Tapachstrasse"
+    ],
+    "Uff-Kirchhof": [],
+    "Untertürkheim Bf": [
+        "Untertürkheim"
+    ],
+    "Vaihingen": [],
+    "Vaihingen Schillerplatz": [
+        "Vaihingen Schiller",
+        "Vaihingen Schillerplz"
+    ],
+    "Vaihingen Viadukt": [
+        "Vaihingen"
+    ],
+    "Vaihinger Straße": [
+        "Vaihinger",
+        "Vaihinger Str.",
+        "Vaihinger Strasse"
+    ],
+    "Vogelsang": [],
+    "Wagrainäcker": [],
+    "Waldau": [],
+    "Waldeck": [],
+    "Wangen Marktplatz": [
+        "Wangen Markt",
+        "Wangen Marktplz"
+    ],
+    "Wangener-/Landhausstraße": [
+        "Wangener-/Landhaus",
+        "Wangener-/Landhausstr.",
+        "Wangener-/Landhausstrasse"
+    ],
+    "Wasenstraße": [
+        "Wasen",
+        "Wasenstr.",
+        "Wasenstrasse"
+    ],
+    "Wielandshöhe": [],
+    "Wilhelm-Geiger-Platz": [
+        "Wilhelm-Geiger-",
+        "Wilhelm-Geiger-plz"
+    ],
+    "Wilhelma": [],
+    "Wimpfener Straße": [
+        "Wimpfener",
+        "Wimpfener Str.",
+        "Wimpfener Strasse"
+    ],
+    "Wolfbusch": [],
+    "Züricher Straße": [
+        "Züricher",
+        "Züricher Str.",
+        "Züricher Strasse"
+    ],
+    "Österreichischer Platz": [
+        "Österreichischer",
+        "Österreichischerplz"
+    ]
+}

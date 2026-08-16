@@ -1,0 +1,22 @@
+{
+    "id": "freiburg-im-breisgau",
+    "name": "Freiburg im Breisgau",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 47.9961,
+        "longitude": 7.8494
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 47.920339,
+            "longitude": 7.720732
+        },
+        "northEast": {
+            "latitude": 48.079904,
+            "longitude": 7.960882
+        }
+    }
+}

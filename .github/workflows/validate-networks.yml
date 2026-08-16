@@ -1,0 +1,34 @@
+name: Validate networks
+
+# Runs on any change to a network description or to the data generated from one. This is the gate
+# that keeps a newly added city from breaking the ones that already work, in particular by claiming a
+# station id another network already uses. See networks/README.md.
+#
+# Both copies of the generated data are listed, because the validator compares them against each
+# other. Editing only the Go one has to be caught too, and that is exactly the change that would
+# otherwise slip through: it is the copy nothing generates by hand.
+on:
+    pull_request:
+        branches: [main]
+        paths:
+            - 'networks/**'
+            - 'scripts/**'
+            - 'packages/hono-backend/src/db/seed/networks/**'
+            - 'packages/backend/data/networks/**'
+
+jobs:
+    validate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: '3.11'
+            # Only PyYAML is needed to parse the descriptions and validate the generated files. The
+            # generator's other dependencies are not installed, because nothing here calls Overpass.
+            - name: Install dependencies
+              run: python -m pip install --upgrade pip PyYAML
+            - name: Validate every network
+              run: python3 scripts/validate_network.py

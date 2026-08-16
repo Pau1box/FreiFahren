@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import { ExpressionSpecification } from 'maplibre-gl'
+import React, { useEffect, useMemo } from 'react'
 import { Layer, MapRef, Source, useMap } from 'react-map-gl/maplibre'
 
 import { StationGeoJSON } from '../../../../utils/types'
@@ -8,7 +9,19 @@ const SBAHN_ICON = `/icons/sbahn.svg`
 
 interface StationLayerProps {
     stations: StationGeoJSON
+    /* The network's own lowest zoom, because the label steps below are offsets from it. */
+    minZoom: number
 }
+
+/*
+ Zoom offsets from the network's minimum zoom, at which more labels and icons appear. They were
+ tuned against Berlin, whose minimum zoom is the reference value 10, so the absolute levels that
+ used to stand here are these offsets applied to it. A small network starts at a much closer zoom,
+ where the absolute levels would have shown every label from the first frame.
+*/
+const LABEL_STEP = { secondary: 1.5, rest: 3 }
+// The deepest zoom a network allows is its minimum plus four, so a fade out beyond that never runs.
+const ICON_STEP = { secondary: 2, rest: 3, fadeOut: 4 }
 class IconFactory {
     constructor(private map: MapRef | undefined) {}
 
@@ -24,7 +37,25 @@ class IconFactory {
     }
 }
 
-const StationLayer: React.FC<StationLayerProps> = ({ stations }) => {
+const quantile = (sortedValues: number[], probability: number): number =>
+    sortedValues.length === 0 ? 0 : sortedValues[Math.floor(probability * (sortedValues.length - 1))]
+
+/**
+ * How many lines a station has to serve to be labelled early. A station's importance is in the data,
+ * not in its name: the more lines meet there, the more people change trains there, which is why the
+ * number of lines is the proxy. The thresholds come from the network's own distribution, so a small
+ * tram network still highlights its busiest stops instead of highlighting none.
+ */
+const labelThresholds = (stations: StationGeoJSON): { primary: number; secondary: number } => {
+    const lineCounts = stations.features.map((feature) => feature.properties.lineCount).sort((a, b) => a - b)
+
+    return {
+        primary: Math.max(2, quantile(lineCounts, 0.95)),
+        secondary: Math.max(2, quantile(lineCounts, 0.8)),
+    }
+}
+
+const StationLayer: React.FC<StationLayerProps> = ({ stations, minZoom }) => {
     const map = useMap()
 
     useEffect(() => {
@@ -42,50 +73,10 @@ const StationLayer: React.FC<StationLayerProps> = ({ stations }) => {
         }
     }, [map])
 
-    // priority is based on number of reports
-    const firstPriorityStations = [
-        'Hauptbahnhof',
-        'Gesundbrunnen',
-        'Jungfernheide',
-        'Ostkreuz',
-        'Südkreuz',
-        'Westkreuz',
-        'Potsdamer Platz',
-        'Friedrichstraße',
-        'Zoologischer Garten',
-        'Warschauer Straße',
-        'Alexanderplatz',
-        'Kottbusser Tor',
-        'Hermannplatz',
-        'Neukölln',
-        'Tempelhof',
-        'Hermannstraße',
-    ]
-    const secondPriorityStations = [
-        'Osloer Straße',
-        'Frankfurter Allee',
-        'Leopoldplatz',
-        'Weinmeisterstraße',
-        'Moritzplatz',
-        'Hallesches Tor',
-        'Rathaus Steglitz',
-        'Gleisdreieck',
-        'Prenzlauer Allee',
-        'Mehringdamm',
-        'Hansaplatz',
-        'Bernauerstraße',
-        'Landsberger Allee',
-        'Schönleinstraße',
-        'Voltastraße',
-        'WWittenbergplatz',
-        'Schönhauser Allee',
-        'Jannowitz Brücke',
-        'Bellevue',
-        'Schlesisches Tor',
-        'Nollendorfplatz',
-        'Westend',
-        'Schöneberg',
-    ]
+    const { primary, secondary } = useMemo(() => labelThresholds(stations), [stations])
+
+    const isPrimaryStation: ExpressionSpecification = ['case', ['>=', ['get', 'lineCount'], primary], 1, 0]
+    const isSecondaryStation: ExpressionSpecification = ['case', ['>=', ['get', 'lineCount'], secondary], 1, 0]
 
     return (
         <Source id="stationSource" type="geojson" data={stations}>
@@ -106,42 +97,21 @@ const StationLayer: React.FC<StationLayerProps> = ({ stations }) => {
                     'text-field': ['get', 'name'],
                     'text-size': 12,
                     'text-allow-overlap': true,
+                    /*
+                     The icon follows the station's mode rather than its line names. An empty string
+                     leaves a station without an icon, which is what a tram stop or an unclassified
+                     line should get instead of a borrowed one.
+                    */
                     'icon-image': [
-                        'case',
-                        [
-                            'any',
-                            ['in', 'S1', ['get', 'lines']],
-                            ['in', 'S2', ['get', 'lines']],
-                            ['in', 'S3', ['get', 'lines']],
-                            ['in', 'S5', ['get', 'lines']],
-                            ['in', 'S7', ['get', 'lines']],
-                            ['in', 'S8', ['get', 'lines']],
-                            ['in', 'S9', ['get', 'lines']],
-                            ['in', 'S25', ['get', 'lines']],
-                            ['in', 'S26', ['get', 'lines']],
-                            ['in', 'S41', ['get', 'lines']],
-                            ['in', 'S42', ['get', 'lines']],
-                            ['in', 'S45', ['get', 'lines']],
-                            ['in', 'S46', ['get', 'lines']],
-                            ['in', 'S47', ['get', 'lines']],
-                            ['in', 'S85', ['get', 'lines']],
-                        ],
-                        'sbahn-icon',
-                        [
-                            'any',
-                            ['in', 'U1', ['get', 'lines']],
-                            ['in', 'U2', ['get', 'lines']],
-                            ['in', 'U3', ['get', 'lines']],
-                            ['in', 'U4', ['get', 'lines']],
-                            ['in', 'U5', ['get', 'lines']],
-                            ['in', 'U6', ['get', 'lines']],
-                            ['in', 'U7', ['get', 'lines']],
-                            ['in', 'U8', ['get', 'lines']],
-                            ['in', 'U9', ['get', 'lines']],
-                        ],
+                        'match',
+                        ['get', 'mode'],
+                        'subway',
                         'ubahn-icon',
-
-                        'sbahn_icon',
+                        'light_rail',
+                        'sbahn-icon',
+                        'train',
+                        'sbahn-icon',
+                        '',
                     ],
                     'icon-anchor': 'bottom',
                     'text-offset': [0, 1],
@@ -153,43 +123,21 @@ const StationLayer: React.FC<StationLayerProps> = ({ stations }) => {
                     'text-opacity': [
                         'step',
                         ['zoom'],
-                        ['case', ['in', ['get', 'name'], ['literal', firstPriorityStations]], 1, 0],
-                        11,
-                        ['case', ['in', ['get', 'name'], ['literal', firstPriorityStations]], 1, 0],
-                        11.5,
-                        [
-                            'case',
-                            [
-                                'any',
-                                ['in', ['get', 'name'], ['literal', firstPriorityStations]],
-                                ['in', ['get', 'name'], ['literal', secondPriorityStations]],
-                            ],
-                            1,
-                            0,
-                        ],
-                        13,
-                        1,
-                        14,
+                        isPrimaryStation,
+                        minZoom + LABEL_STEP.secondary,
+                        isSecondaryStation,
+                        minZoom + LABEL_STEP.rest,
                         1,
                     ],
                     'icon-opacity': [
                         'step',
                         ['zoom'],
-                        ['case', ['in', ['get', 'name'], ['literal', firstPriorityStations]], 1, 0],
-                        12,
-                        [
-                            'case',
-                            [
-                                'any',
-                                ['in', ['get', 'name'], ['literal', firstPriorityStations]],
-                                ['in', ['get', 'name'], ['literal', secondPriorityStations]],
-                            ],
-                            1,
-                            0,
-                        ],
-                        13,
+                        isPrimaryStation,
+                        minZoom + ICON_STEP.secondary,
+                        isSecondaryStation,
+                        minZoom + ICON_STEP.rest,
                         1,
-                        15,
+                        minZoom + ICON_STEP.fadeOut,
                         0,
                     ],
                 }}

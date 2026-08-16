@@ -42,6 +42,7 @@ definitions:
       calculated_risk:
         type: number
       duration:
+        description: in seconds
         type: integer
       endTime:
         type: string
@@ -57,6 +58,7 @@ definitions:
   itineraries.ResponseLeg:
     properties:
       duration:
+        description: in seconds
         type: integer
       endTime:
         type: string
@@ -158,6 +160,51 @@ definitions:
       timestamp:
         type: string
     type: object
+  utils.LineMetadataEntry:
+    properties:
+      color:
+        type: string
+      isCircular:
+        type: boolean
+      mode:
+        type: string
+    type: object
+  utils.Network:
+    properties:
+      bounds:
+        $ref: '#/definitions/utils.NetworkBounds'
+      center:
+        $ref: '#/definitions/utils.Coordinates'
+      countryCode:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      serves:
+        items:
+          type: string
+        type: array
+      status:
+        $ref: '#/definitions/utils.NetworkStatus'
+      timezone:
+        type: string
+    type: object
+  utils.NetworkBounds:
+    properties:
+      northEast:
+        $ref: '#/definitions/utils.Coordinates'
+      southWest:
+        $ref: '#/definitions/utils.Coordinates'
+    type: object
+  utils.NetworkStatus:
+    enum:
+    - active
+    - beta
+    type: string
+    x-enum-varnames:
+    - NetworkStatusActive
+    - NetworkStatusBeta
   utils.ResponseData:
     properties:
       author:
@@ -187,6 +234,7 @@ definitions:
       coordinates:
         items:
           items:
+            format: float64
             type: number
           type: array
         type: array
@@ -195,8 +243,6 @@ definitions:
     type: object
   utils.SegmentProperties:
     properties:
-      line:
-        type: string
       line_color:
         type: string
       sid:
@@ -284,6 +330,14 @@ paths:
         in: query
         name: end
         type: string
+      - description: Station ID to filter inspectors for a specific station
+        in: query
+        name: station
+        type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -293,10 +347,25 @@ paths:
             items:
               $ref: '#/definitions/utils.TicketInspectorResponse'
             type: array
+        "304":
+          description: 'Not Modified: The data has not changed since the If-Modified-Since
+            header.'
         "400":
           description: Bad Request
           schema:
             type: string
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: The station does not belong to the network.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: Internal Server Error
           schema:
@@ -311,19 +380,19 @@ paths:
         Accepts a JSON payload with details about a ticket inspector's current location.
         This endpoint validates the provided data, processes necessary computations for linking stations and lines,
         inserts the data into the database, and triggers an update to the risk model used in operational analysis.
-        If the 'timestamp' field is not provided in the request, the current UTC time truncated to the nearest minute is used automatically.
-        The endpoint also includes a rate limit to prevent abuse. The rate limit is based on the IP address of the request.
+        If the 'timestamp' field of the body is not provided, the current UTC time truncated to the nearest minute is used automatically.
+        The endpoint is rate limited per IP address, and reports classified as spam are rejected with 403.
       parameters:
-      - description: Data about the inspector's location and activity
+      - description: Data about the inspector's location and activity, including an
+          optional 'timestamp' in RFC3339 format
         in: body
         name: inspectorData
         required: true
         schema:
           $ref: '#/definitions/utils.InspectorRequest'
-      - description: Timestamp of the report in ISO 8601 format (e.g., 2006-01-02T15:04:05Z);
-          if not provided, the current time is used
+      - description: ID of the network (defaults to berlin)
         in: query
-        name: timestamp
+        name: network
         type: string
       produces:
       - application/json
@@ -335,6 +404,25 @@ paths:
             $ref: '#/definitions/utils.ResponseData'
         "400":
           description: 'Bad Request: Missing or incorrect parameters provided.'
+        "403":
+          description: 'Forbidden: The report was classified as spam.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: The report names a station, direction
+            or line the network does not contain.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "429":
           description: 'Too Many Requests: The request has been rate limited.'
         "500":
@@ -380,6 +468,11 @@ paths:
       description: |-
         Retrieves information about all available transit lines.
         This endpoint returns a list of all transit lines and their associated stations.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -390,6 +483,14 @@ paths:
               items:
                 type: string
               type: array
+            type: object
+        "304":
+          description: 'Not Modified: The ETag matches the If-None-Match header.'
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
             type: object
         "500":
           description: 'Internal Server Error: Error retrieving lines data.'
@@ -420,6 +521,10 @@ paths:
         in: query
         name: end
         type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -430,6 +535,19 @@ paths:
         "400":
           description: 'Bad Request: Invalid time format.'
           schema: {}
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: The station or line does not belong
+            to the network.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: 'Internal Server Error: Failed to get number of reports.'
           schema: {}
@@ -446,6 +564,10 @@ paths:
         in: path
         name: lineName
         required: true
+        type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
         type: string
       produces:
       - application/json
@@ -467,11 +589,46 @@ paths:
       summary: Get a single line
       tags:
       - lines
+  /lines/metadata:
+    get:
+      description: |-
+        Retrieves the colour and mode of every line in the network.
+        Clients use this instead of deriving either from the line name, which is a per city convention rather than a fact.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successfully retrieved the line metadata.
+          schema:
+            additionalProperties:
+              $ref: '#/definitions/utils.LineMetadataEntry'
+            type: object
+        "304":
+          description: 'Not Modified: The ETag matches the If-None-Match header.'
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Get the metadata of all lines
+      tags:
+      - lines
   /lines/segments:
     get:
       description: |-
         Retrieves information about all available transit segments.
         A segment is the geojson lineString part of a line between two stations.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -481,17 +638,45 @@ paths:
             $ref: '#/definitions/utils.SegmentsCollection'
         "304":
           description: Not Modified
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: 'Internal Server Error: Error retrieving segments data.'
           schema: {}
       summary: Get all segments
       tags:
       - lines
+  /networks:
+    get:
+      description: |-
+        Retrieves every transit network this deployment serves, including the geography a client needs to position its map.
+        This is the entry point: a client calls it before anything else and scopes every following request to one of the returned ids.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successfully retrieved the available networks.
+          schema:
+            items:
+              $ref: '#/definitions/utils.Network'
+            type: array
+      summary: Get all networks
+      tags:
+      - networks
   /stations:
     get:
       description: |-
         Retrieves information about all available stations.
         This endpoint returns a list of all stations and their details.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -500,6 +685,14 @@ paths:
           schema:
             additionalProperties:
               $ref: '#/definitions/utils.Station'
+            type: object
+        "304":
+          description: 'Not Modified: The ETag matches the If-None-Match header.'
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
             type: object
         "500":
           description: 'Internal Server Error: Error retrieving stations data.'
@@ -516,6 +709,10 @@ paths:
         in: path
         name: stationId
         required: true
+        type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
         type: string
       produces:
       - application/json
@@ -538,15 +735,12 @@ paths:
       description: |-
         Retrieves statistics for a specific station.
         This endpoint returns the number of reports for the specified station within the given time range.
+        The count covers every line at the station, use /lines/{lineId}/{stationId}/statistics for a single line.
       parameters:
       - description: ID of the station
         in: path
         name: stationId
         required: true
-        type: string
-      - description: ID of the line (optional)
-        in: query
-        name: lineId
         type: string
       - description: 'Start time for the statistics (format: RFC3339)'
         in: query
@@ -555,6 +749,10 @@ paths:
       - description: 'End time for the statistics (format: RFC3339)'
         in: query
         name: end
+        type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
         type: string
       produces:
       - application/json
@@ -566,6 +764,18 @@ paths:
         "400":
           description: 'Bad Request: Invalid time format.'
           schema: {}
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: The station does not belong to the network.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: 'Internal Server Error: Failed to get number of reports.'
           schema: {}
@@ -576,12 +786,16 @@ paths:
     get:
       description: |-
         Searches for a station using the provided name and returns the matching station information.
-        This endpoint is case and whitespace insensitive and returns the first exact match found.
+        This endpoint is case and whitespace insensitive. Station names are not unique, so when several stations carry the name the one with the lowest id is returned.
       parameters:
       - description: Name of the station to search for
         in: query
         name: name
         required: true
+        type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
         type: string
       produces:
       - application/json
@@ -625,6 +839,10 @@ paths:
         name: userStationId
         required: true
         type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - text/plain
       responses:
@@ -633,6 +851,25 @@ paths:
             between the inspector's station and the user's location.
           schema:
             type: int
+        "400":
+          description: 'Bad Request: One of the station id parameters is missing.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: One of the stations does not belong
+            to the network.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: An error occurred in processing the request.
       summary: Calculate shortest distance to a station
@@ -643,6 +880,11 @@ paths:
       description: |-
         Retrieves risk predictions for transit segments.
         This endpoint returns color-coded risk levels for different segments of the transit network based on recent ticket inspector activity.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -650,6 +892,12 @@ paths:
           description: Successfully retrieved risk segments data
           schema:
             $ref: '#/definitions/v0.v0RiskData'
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: 'Internal Server Error: Failed to execute risk model'
       summary: Get risk segments
@@ -674,6 +922,10 @@ paths:
         name: endStation
         required: true
         type: string
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -682,7 +934,21 @@ paths:
           schema:
             $ref: '#/definitions/itineraries.ItinerariesResponse'
         "400":
-          description: 'Bad Request: Missing or invalid station IDs'
+          description: 'Bad Request: Missing station IDs, or a station the routing
+            engine does not serve'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "422":
+          description: 'Unprocessable Entity: One of the stations does not belong
+            to the network.'
           schema:
             additionalProperties:
               type: string
@@ -707,6 +973,11 @@ paths:
       description: |-
         Retrieves risk predictions for transit segments.
         This endpoint returns color-coded risk levels along with the risk value for different segments of the transit network based on recent ticket inspector activity.
+      parameters:
+      - description: ID of the network (defaults to berlin)
+        in: query
+        name: network
+        type: string
       produces:
       - application/json
       responses:
@@ -714,6 +985,12 @@ paths:
           description: Successfully retrieved risk segments data
           schema:
             $ref: '#/definitions/prediction.RiskData'
+        "404":
+          description: 'Not Found: The specified network does not exist.'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
         "500":
           description: 'Internal Server Error: Failed to execute risk model'
       summary: Get risk segments

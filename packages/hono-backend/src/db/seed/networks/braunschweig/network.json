@@ -1,0 +1,22 @@
+{
+    "id": "braunschweig",
+    "name": "Braunschweig",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 52.2647,
+        "longitude": 10.5236
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.159973,
+            "longitude": 10.397484
+        },
+        "northEast": {
+            "latitude": 52.370948,
+            "longitude": 10.656796
+        }
+    }
+}

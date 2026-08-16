@@ -3,6 +3,7 @@ package v0
 import (
 	"net/http"
 
+	"github.com/FreiFahren/backend/api/networks"
 	"github.com/FreiFahren/backend/api/prediction"
 	"github.com/FreiFahren/backend/logger"
 	"github.com/labstack/echo/v4"
@@ -34,7 +35,10 @@ func serializeToV0(data *prediction.RiskData) *v0RiskData {
 //
 // @Produce json
 //
+// @Param network query string false "ID of the network (defaults to berlin)"
+//
 // @Success 200 {object} v0RiskData "Successfully retrieved risk segments data"
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
 // @Failure 500 "Internal Server Error: Failed to execute risk model"
 //
 // @Router /v0/risk-prediction/segment-colors [get]
@@ -45,13 +49,18 @@ func GetRiskSegments(c echo.Context) error {
 	c.Response().Header().Set("Link", "</v1/risk-prediction/segment-colors>; rel=\"successor-version\"")
 	c.Response().Header().Set("Warning", "299 - \"This endpoint is deprecated. Please migrate to /v1/risk-prediction/segment-colors\"")
 
-	if cachedData, ok := prediction.Cache.Get(); ok {
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
+	if cachedData, ok := prediction.Cache.Get(networkID); ok {
 		logger.Log.Debug().Msg("cache hit")
 		return c.JSON(http.StatusOK, serializeToV0(cachedData))
 	}
 
 	// If cache is empty (first request), execute the model
-	riskData, err := prediction.ExecuteRiskModel()
+	riskData, err := prediction.ExecuteRiskModel(networkID)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to execute risk model")
 		return c.NoContent(http.StatusInternalServerError)

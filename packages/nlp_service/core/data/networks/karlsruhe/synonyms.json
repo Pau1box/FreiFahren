@@ -1,0 +1,862 @@
+{
+    "Achern": [],
+    "Adolf-Ehrmann-Bad": [],
+    "Affaltrach": [],
+    "Albert-Braun-Straße": [
+        "Albert-Braun-",
+        "Albert-Braun-str.",
+        "Albert-Braun-strasse"
+    ],
+    "Altrheinbrücke": [],
+    "Ankerstraße": [
+        "Anker",
+        "Ankerstr.",
+        "Ankerstrasse"
+    ],
+    "Arbeitsagentur": [],
+    "Au im Murgtal": [],
+    "Augartenstraße": [
+        "Augarten",
+        "Augartenstr.",
+        "Augartenstrasse"
+    ],
+    "August-Bebel-Straße": [
+        "August-Bebel-",
+        "August-Bebel-str.",
+        "August-Bebel-strasse"
+    ],
+    "Bad Herrenalb": [
+        "Bad"
+    ],
+    "Bad Herrenalb Kullenmühle": [],
+    "Bad Herrenalb Steinhäusle": [],
+    "Bad Rotenfels Bahnhof/Rotherma": [],
+    "Bad Rotenfels Schloss": [],
+    "Bad Rotenfels Weinbrennerstraße": [
+        "Bad Rotenfels Weinbrenner",
+        "Bad Rotenfels Weinbrennerstr.",
+        "Bad Rotenfels Weinbrennerstrasse"
+    ],
+    "Bad Wildbad Bahnhof": [],
+    "Bad Wildbad Kurpark": [],
+    "Bad Wildbad Nord": [],
+    "Bad Wildbad Uhlandplatz/Sommerbergbahn": [],
+    "Baden-Baden": [],
+    "Baden-Baden Haueneberstein": [
+        "Baden-Baden"
+    ],
+    "Badeniaplatz": [
+        "Badenia",
+        "Badeniaplz"
+    ],
+    "Bahnhofsvorplatz": [
+        "Bahnhofsvor",
+        "Bahnhofsvorplz"
+    ],
+    "Baiersbronn": [],
+    "Baiersbronn Schule": [
+        "Baiersbronn"
+    ],
+    "Bannwaldallee": [
+        "Bannwald"
+    ],
+    "Barbarossaplatz": [
+        "Barbarossa",
+        "Barbarossaplz"
+    ],
+    "Battstraße": [
+        "Batt",
+        "Battstr.",
+        "Battstrasse"
+    ],
+    "Bauerbach": [],
+    "Bellheim Am Mühlbuckel": [],
+    "Bellheim Bahnhof": [
+        "Bellheim"
+    ],
+    "Berghausen (Baden)": [
+        "Berghausen"
+    ],
+    "Berghausen Am Stadion": [],
+    "Berghausen Hummelberg": [
+        "Berghausen"
+    ],
+    "Berghausen Pfinzbrücke": [
+        "Berghausen"
+    ],
+    "Bietigheim": [],
+    "Bilfingen": [],
+    "Birkenfeld (Württ)": [
+        "Birkenfeld"
+    ],
+    "Bischweier (Baden)": [
+        "Bischweier"
+    ],
+    "Bittelbronn": [],
+    "Bitzfeld": [],
+    "Bondorf": [],
+    "Bretten Bahnhof": [
+        "Bretten"
+    ],
+    "Bretten Kupferhälde": [
+        "Bretten"
+    ],
+    "Bretten Rinklingen": [
+        "Bretten"
+    ],
+    "Bretten Schulzentrum": [
+        "Bretten"
+    ],
+    "Bretten Stadtmitte": [
+        "Bretten"
+    ],
+    "Bretten Wannenweg": [
+        "Bretten"
+    ],
+    "Bretzfeld": [],
+    "Brötzingen Mitte": [
+        "Brötzingen"
+    ],
+    "Brötzingen Sandweg": [
+        "Brötzingen"
+    ],
+    "Brötzingen Wohnlichstraße": [
+        "Brötzingen Wohnlich",
+        "Brötzingen Wohnlichstr.",
+        "Brötzingen Wohnlichstrasse"
+    ],
+    "Busenbach": [],
+    "Bärenweg": [],
+    "Böckingen Berufsschulzentrum": [
+        "Böckingen"
+    ],
+    "Böckingen Sonnenbrunnen": [
+        "Böckingen"
+    ],
+    "Böckingen West": [
+        "Böckingen"
+    ],
+    "Bühl (Baden)": [
+        "Bühl"
+    ],
+    "Calmbach": [],
+    "Calmbach Süd": [
+        "Calmbach"
+    ],
+    "Dammerstock": [],
+    "Dornröschenweg": [],
+    "Dornstetten": [],
+    "Dornstetten-Aach": [],
+    "Duale Hochschule": [
+        "Duale"
+    ],
+    "Dunantstraße": [
+        "Dunant",
+        "Dunantstr.",
+        "Dunantstrasse"
+    ],
+    "Durlacher Tor/KIT-Campus Süd (U)": [],
+    "Durmersheim": [],
+    "Durmersheim Nord": [
+        "Durmersheim"
+    ],
+    "Dürrenbüchig": [],
+    "Ebertstraße": [
+        "Ebert",
+        "Ebertstr.",
+        "Ebertstrasse"
+    ],
+    "Eckenerstraße": [
+        "Eckener",
+        "Eckenerstr.",
+        "Eckenerstrasse"
+    ],
+    "Eggenstein": [],
+    "Eggenstein Schweriner Straße": [
+        "Eggenstein Schweriner",
+        "Eggenstein Schweriner Str.",
+        "Eggenstein Schweriner Strasse"
+    ],
+    "Eggenstein Spöcker Weg": [],
+    "Eggenstein Süd": [
+        "Eggenstein"
+    ],
+    "Eggensteiner Straße": [
+        "Eggensteiner",
+        "Eggensteiner Str.",
+        "Eggensteiner Strasse"
+    ],
+    "Egon-Eiermann-Allee": [
+        "Egon-Eiermann-"
+    ],
+    "Ellhofen": [],
+    "Ellmendinger Straße": [
+        "Ellmendinger",
+        "Ellmendinger Str.",
+        "Ellmendinger Strasse"
+    ],
+    "Entenfang": [],
+    "Eppingen": [],
+    "Eppingen West": [
+        "Eppingen"
+    ],
+    "Ergenzingen": [],
+    "Ersingen": [],
+    "Ersingen West": [
+        "Ersingen"
+    ],
+    "Eschenau (b Heilbronn)": [],
+    "Essenweinstraße": [
+        "Essenwein",
+        "Essenweinstr.",
+        "Essenweinstrasse"
+    ],
+    "Ettlingen Albgaubad": [
+        "Ettlingen"
+    ],
+    "Ettlingen Erbprinz": [
+        "Ettlingen"
+    ],
+    "Ettlingen Neuwiesenreben": [
+        "Ettlingen"
+    ],
+    "Ettlingen Spinnerei": [
+        "Ettlingen"
+    ],
+    "Ettlingen Stadt": [
+        "Ettlingen"
+    ],
+    "Ettlingen Wasen": [
+        "Ettlingen"
+    ],
+    "Ettlinger Tor/Staatstheater (U)": [],
+    "Etzenrot": [],
+    "Europahalle/Europabad": [],
+    "Europaplatz (Karlstraße)": [
+        "Europaplatz"
+    ],
+    "Eutingen": [],
+    "Eutingen Nord": [
+        "Eutingen"
+    ],
+    "Feierabendweg": [],
+    "Finanzamt": [],
+    "Fischweier": [],
+    "Flehingen": [],
+    "Forbach (Schwarzwald)": [
+        "Forbach"
+    ],
+    "Forchheim": [],
+    "Forchheim Hallenbad": [
+        "Forchheim"
+    ],
+    "Forchheim Hauptstraße": [
+        "Forchheim Haupt",
+        "Forchheim Hauptstr.",
+        "Forchheim Hauptstrasse"
+    ],
+    "Forchheim Messe": [
+        "Forchheim"
+    ],
+    "Forchheim Oberfeldstraße": [
+        "Forchheim Oberfeld",
+        "Forchheim Oberfeldstr.",
+        "Forchheim Oberfeldstrasse"
+    ],
+    "Forststraße": [
+        "Forst",
+        "Forststr.",
+        "Forststrasse"
+    ],
+    "Frauenalb-Schielberg": [],
+    "Freudenstadt Hauptbahnhof": [
+        "Freudenstadt"
+    ],
+    "Freudenstadt Industriegebiet/Schmid": [
+        "Freudenstadt"
+    ],
+    "Freudenstadt Schulzentrum/Panoramabad": [
+        "Freudenstadt"
+    ],
+    "Freudenstadt Stadt": [
+        "Freudenstadt"
+    ],
+    "Friedensplatz": [
+        "Friedens",
+        "Friedensplz"
+    ],
+    "Friedrichschule": [],
+    "Friedrichstal (bei Freudenstadt)": [],
+    "Gaggenau": [],
+    "Gaggenau Mercedes-Benz-Werk": [
+        "Gaggenau"
+    ],
+    "Gausbach": [],
+    "Gemmingen": [],
+    "Gemmingen West": [
+        "Gemmingen"
+    ],
+    "Germersheim": [],
+    "Germersheim Mitte/Rhein": [
+        "Germersheim"
+    ],
+    "Germersheim Süd/Nolte": [
+        "Germersheim"
+    ],
+    "Gernsbach": [],
+    "Gernsbach Mitte": [
+        "Gernsbach"
+    ],
+    "Gottesauer Platz/BGV": [
+        "Gottesauer"
+    ],
+    "Gritznerstraße": [
+        "Gritzner",
+        "Gritznerstr.",
+        "Gritznerstrasse"
+    ],
+    "Grötzingen Bahnhof": [
+        "Grötzingen"
+    ],
+    "Grötzingen Krappmühlenweg": [
+        "Grötzingen"
+    ],
+    "Grötzingen Oberausstraße": [
+        "Grötzingen Oberaus",
+        "Grötzingen Oberausstr.",
+        "Grötzingen Oberausstrasse"
+    ],
+    "Grüntal-Wittlensweiler": [],
+    "Gölshausen": [],
+    "Gölshausen Industriegebiet": [
+        "Gölshausen"
+    ],
+    "Hammweg": [],
+    "Hardecksiedlung": [],
+    "Harmonie": [],
+    "Hauptbahnhof/Willy-Brandt-Platz": [
+        "Hauptbahnhof/Willy-Brandt-",
+        "Hauptbahnhof/Willy-Brandt-plz"
+    ],
+    "Hauptfriedhof": [],
+    "Haus Bethlehem": [
+        "Haus"
+    ],
+    "Heidehof": [],
+    "Hertzstraße": [
+        "Hertz",
+        "Hertzstr.",
+        "Hertzstrasse"
+    ],
+    "Herweghstraße": [
+        "Herwegh",
+        "Herweghstr.",
+        "Herweghstrasse"
+    ],
+    "Heselbach": [],
+    "Hilpertsau": [],
+    "Hirtenweg - Technologiepark": [],
+    "Hochdorf (bei Horb)": [],
+    "Hochstetten Altenheim": [
+        "Hochstetten"
+    ],
+    "Hochstetten Grenzstraße": [
+        "Hochstetten Grenz",
+        "Hochstetten Grenzstr.",
+        "Hochstetten Grenzstrasse"
+    ],
+    "Horb-Heiligenfeld": [],
+    "Hubstraße": [
+        "Hub",
+        "Hubstr.",
+        "Hubstrasse"
+    ],
+    "Huzenbach": [],
+    "Händelstraße": [
+        "Händel",
+        "Händelstr.",
+        "Händelstrasse"
+    ],
+    "Höfen (Enz)": [
+        "Höfen"
+    ],
+    "Höfen Nord": [
+        "Höfen"
+    ],
+    "Hörden": [],
+    "Hübschstraße": [
+        "Hübsch",
+        "Hübschstr.",
+        "Hübschstrasse"
+    ],
+    "Ispringen": [],
+    "Ittersbach": [],
+    "Ittersbach Industrie": [
+        "Ittersbach"
+    ],
+    "Ittersbach Rathaus": [
+        "Ittersbach"
+    ],
+    "Jockgrim Bahnhof": [
+        "Jockgrim"
+    ],
+    "Jöhlingen": [],
+    "Jöhlingen West": [
+        "Jöhlingen"
+    ],
+    "KIT-Campus Nord Bahnhof": [],
+    "Karl-Delisle-Straße": [
+        "Karl-Delisle-",
+        "Karl-Delisle-str.",
+        "Karl-Delisle-strasse"
+    ],
+    "Karl-Weysser-Straße": [
+        "Karl-Weysser-",
+        "Karl-Weysser-str.",
+        "Karl-Weysser-strasse"
+    ],
+    "Karl-Wilhelm-Platz": [
+        "Karl-Wilhelm-",
+        "Karl-Wilhelm-plz"
+    ],
+    "Karlsruhe West": [
+        "Karlsruhe"
+    ],
+    "Karlsruhe-Durlach": [],
+    "Karlsruhe-Knielingen": [],
+    "Karlsruhe-Mühlburg": [],
+    "Karlstor/Bundesgerichtshof": [],
+    "Killisfeldstraße": [
+        "Killisfeld",
+        "Killisfeldstr.",
+        "Killisfeldstrasse"
+    ],
+    "Kirschbaumwasen": [],
+    "Kleinsteinbach": [],
+    "Knielingen Nord": [
+        "Knielingen"
+    ],
+    "Knielinger Allee/Städtisches Klinikum": [],
+    "Kolpingplatz": [
+        "Kolping",
+        "Kolpingplz"
+    ],
+    "Kongresszentrum (U)": [
+        "Kongresszentrum"
+    ],
+    "Kronenplatz (U)": [
+        "Kronenplatz"
+    ],
+    "Kunstakademie / Hochschule Karlsruhe": [],
+    "Kuppenheim": [],
+    "Kurt-Schumacher-Straße": [
+        "Kurt-Schumacher-",
+        "Kurt-Schumacher-str.",
+        "Kurt-Schumacher-strasse"
+    ],
+    "Kußmaulstraße/Städtisches Klinikum": [
+        "Kußmaulstraße/Städtisches"
+    ],
+    "Königsbach (Baden)": [
+        "Königsbach"
+    ],
+    "Kühler Krug": [
+        "Kühler"
+    ],
+    "Lameyplatz": [
+        "Lamey",
+        "Lameyplz"
+    ],
+    "Landesbausparkasse": [],
+    "Langenbrand": [],
+    "Langensteinbach Bahnhof": [
+        "Langensteinbach"
+    ],
+    "Langensteinbach Schießhüttenäcker": [
+        "Langensteinbach"
+    ],
+    "Langensteinbach St. Barbara": [],
+    "Leingarten": [],
+    "Leingarten Mitte": [
+        "Leingarten"
+    ],
+    "Leingarten Ost": [
+        "Leingarten"
+    ],
+    "Leingarten West": [
+        "Leingarten"
+    ],
+    "Leopoldshafen Frankfurter Straße": [
+        "Leopoldshafen Frankfurter",
+        "Leopoldshafen Frankfurter Str.",
+        "Leopoldshafen Frankfurter Strasse"
+    ],
+    "Leopoldshafen Leopoldstraße": [
+        "Leopoldshafen Leopold",
+        "Leopoldshafen Leopoldstr.",
+        "Leopoldshafen Leopoldstrasse"
+    ],
+    "Leopoldshafen Viermorgen": [
+        "Leopoldshafen"
+    ],
+    "Lilienthalstraße": [
+        "Lilienthal",
+        "Lilienthalstr.",
+        "Lilienthalstrasse"
+    ],
+    "Linkenheim Friedrichstraße": [
+        "Linkenheim Friedrich",
+        "Linkenheim Friedrichstr.",
+        "Linkenheim Friedrichstrasse"
+    ],
+    "Linkenheim Rathaus": [
+        "Linkenheim"
+    ],
+    "Linkenheim Schulzentrum": [
+        "Linkenheim"
+    ],
+    "Linkenheim Süd": [
+        "Linkenheim"
+    ],
+    "Marktplatz (Pyramide U)": [],
+    "Marxzell": [],
+    "Mathystraße": [
+        "Mathy",
+        "Mathystr.",
+        "Mathystrasse"
+    ],
+    "Mauerweg": [],
+    "Maxau": [],
+    "Maximiliansau Eisenbahnstraße": [
+        "Maximiliansau Eisenbahn",
+        "Maximiliansau Eisenbahnstr.",
+        "Maximiliansau Eisenbahnstrasse"
+    ],
+    "Maximiliansau West": [
+        "Maximiliansau"
+    ],
+    "Moltkestraße/Städtisches Klinikum": [
+        "Moltkestraße/Städtisches"
+    ],
+    "Mörsch Am Hang": [],
+    "Mörsch Bach West": [],
+    "Mörsch Merkurstraße": [
+        "Mörsch Merkur",
+        "Mörsch Merkurstr.",
+        "Mörsch Merkurstrasse"
+    ],
+    "Mörsch Narzissenstraße": [
+        "Mörsch Narzissen",
+        "Mörsch Narzissenstr.",
+        "Mörsch Narzissenstrasse"
+    ],
+    "Mörsch Rheinaustraße": [
+        "Mörsch Rheinau",
+        "Mörsch Rheinaustr.",
+        "Mörsch Rheinaustrasse"
+    ],
+    "Mörsch Römerstraße": [
+        "Mörsch Römer",
+        "Mörsch Römerstr.",
+        "Mörsch Römerstrasse"
+    ],
+    "Mörsch Rösselsbrünnle": [
+        "Mörsch"
+    ],
+    "Mühlburg West": [
+        "Mühlburg"
+    ],
+    "Mühlburger Feld": [
+        "Mühlburger"
+    ],
+    "Mühlburger Tor": [
+        "Mühlburger"
+    ],
+    "Neckarturm am Kurt-Schumacher-Platz": [
+        "Neckarturm am Kurt-Schumacher-",
+        "Neckarturm am Kurt-Schumacher-plz"
+    ],
+    "Neuenbürg (Württ)": [
+        "Neuenbürg"
+    ],
+    "Neuenbürg (Württ.) Eyachbrücke": [],
+    "Neuenbürg (Württ.) Freibad": [],
+    "Neuenbürg Süd": [
+        "Neuenbürg"
+    ],
+    "Neureut Kirchfeld": [
+        "Neureut"
+    ],
+    "Neureut-Heide": [],
+    "Neureuter Straße": [
+        "Neureuter",
+        "Neureuter Str.",
+        "Neureuter Strasse"
+    ],
+    "Nussbaumweg": [],
+    "Oberderdingen-Flehingen": [],
+    "Oberreut Zentrum": [
+        "Oberreut"
+    ],
+    "Obertsrot": [],
+    "Ostendorfplatz": [
+        "Ostendorf",
+        "Ostendorfplz"
+    ],
+    "Ostendstraße": [
+        "Ostend",
+        "Ostendstr.",
+        "Ostendstrasse"
+    ],
+    "Ostmarkstraße": [
+        "Ostmark",
+        "Ostmarkstr.",
+        "Ostmarkstrasse"
+    ],
+    "Ottenau": [],
+    "Pforzheim Hauptbahnhof": [
+        "Pforzheim"
+    ],
+    "Pforzheim Maihälden": [
+        "Pforzheim"
+    ],
+    "Pfühlpark": [],
+    "Philippstraße": [
+        "Philipp",
+        "Philippstr.",
+        "Philippstrasse"
+    ],
+    "Pionierstraße": [
+        "Pionier",
+        "Pionierstr.",
+        "Pionierstrasse"
+    ],
+    "Poststraße": [
+        "Post",
+        "Poststr.",
+        "Poststrasse"
+    ],
+    "Rappenwört": [],
+    "Rastatt": [],
+    "Rastatt Beinle": [
+        "Rastatt"
+    ],
+    "Rathaus": [],
+    "Raumünzach": [],
+    "Reichenbach Bahnhof": [
+        "Reichenbach"
+    ],
+    "Reichenbach Kurpark": [
+        "Reichenbach"
+    ],
+    "Rheinhafen": [],
+    "Rheinhafenstraße": [
+        "Rheinhafen",
+        "Rheinhafenstr.",
+        "Rheinhafenstrasse"
+    ],
+    "Rheinzabern Alte Römerstraße": [
+        "Rheinzabern Alte Römer",
+        "Rheinzabern Alte Römerstr.",
+        "Rheinzabern Alte Römerstrasse"
+    ],
+    "Rheinzabern Bahnhof": [
+        "Rheinzabern"
+    ],
+    "Rheinzabern Rappengasse": [
+        "Rheinzabern"
+    ],
+    "Rintheim": [],
+    "Rotenbach (Enz)": [
+        "Rotenbach"
+    ],
+    "Röt": [],
+    "Rülzheim Bahnhof": [
+        "Rülzheim"
+    ],
+    "Rülzheim Freizeitzentrum": [
+        "Rülzheim"
+    ],
+    "Rüppurrer Tor": [
+        "Rüppurrer"
+    ],
+    "Scheppach": [],
+    "Schillerstraße": [
+        "Schiller",
+        "Schillerstr.",
+        "Schillerstrasse"
+    ],
+    "Schlesier Straße (West)": [],
+    "Schloss Gottesaue/Hochschule für Musik": [],
+    "Schloss Rüppurr": [
+        "Schloss"
+    ],
+    "Schopfloch (bei Freudenstadt)": [],
+    "Schwaigern (Württemberg)": [
+        "Schwaigern"
+    ],
+    "Schwaigern Ost": [
+        "Schwaigern"
+    ],
+    "Schwaigern West": [
+        "Schwaigern"
+    ],
+    "Schwarzenberg": [],
+    "Schönmünzach": [],
+    "Siemens": [],
+    "Siemensallee": [
+        "Siemens"
+    ],
+    "Sinzheim": [],
+    "Sinzheim Nord": [
+        "Sinzheim"
+    ],
+    "Sondernheim": [],
+    "Spielberg": [],
+    "Stadtwerke": [],
+    "Starckstraße": [
+        "Starck",
+        "Starckstr.",
+        "Starckstrasse"
+    ],
+    "Steiermärker Straße": [
+        "Steiermärker",
+        "Steiermärker Str.",
+        "Steiermärker Strasse"
+    ],
+    "Steinbach Rebland": [
+        "Steinbach"
+    ],
+    "Stetten am Heuchelberg": [],
+    "Sudetenstraße": [
+        "Sudeten",
+        "Sudetenstr.",
+        "Sudetenstrasse"
+    ],
+    "Sulzfeld (Baden)": [
+        "Sulzfeld"
+    ],
+    "Synagoge": [],
+    "Söllingen (Pfinztal)": [
+        "Söllingen"
+    ],
+    "Söllingen Kapellenstraße": [
+        "Söllingen Kapellen",
+        "Söllingen Kapellenstr.",
+        "Söllingen Kapellenstrasse"
+    ],
+    "Söllingen Reetzstraße": [
+        "Söllingen Reetz",
+        "Söllingen Reetzstr.",
+        "Söllingen Reetzstrasse"
+    ],
+    "Sülzbach": [],
+    "Sülzbach Schule": [
+        "Sülzbach"
+    ],
+    "Thomas-Mann-Straße": [
+        "Thomas-Mann-",
+        "Thomas-Mann-str.",
+        "Thomas-Mann-strasse"
+    ],
+    "Tivoli": [],
+    "Trappensee": [],
+    "Tullastraße/Alter Schlachthof": [
+        "Tullastraße/Alter"
+    ],
+    "Tulpenstraße": [
+        "Tulpen",
+        "Tulpenstr.",
+        "Tulpenstrasse"
+    ],
+    "Untermühlstraße": [
+        "Untermühl",
+        "Untermühlstr.",
+        "Untermühlstrasse"
+    ],
+    "Waidweg": [],
+    "Weinbrennerplatz": [
+        "Weinbrenner",
+        "Weinbrennerplz"
+    ],
+    "Weinsberg": [],
+    "Weinsberg West": [
+        "Weinsberg"
+    ],
+    "Weinsberg/Ellhofen Gewerbegebiet": [
+        "Weinsberg/Ellhofen"
+    ],
+    "Weinweg": [],
+    "Weisenbach": [],
+    "Welfenstraße": [
+        "Welfen",
+        "Welfenstr.",
+        "Welfenstrasse"
+    ],
+    "Welschneureuter Straße": [
+        "Welschneureuter",
+        "Welschneureuter Str.",
+        "Welschneureuter Strasse"
+    ],
+    "Werderstraße": [
+        "Werder",
+        "Werderstr.",
+        "Werderstrasse"
+    ],
+    "Wieslensdorf": [],
+    "Wilferdingen-Singen": [],
+    "Wilhelm-Leuschner-Straße": [
+        "Wilhelm-Leuschner-",
+        "Wilhelm-Leuschner-str.",
+        "Wilhelm-Leuschner-strasse"
+    ],
+    "Willsbach": [],
+    "Wolfartsweier Nord": [
+        "Wolfartsweier"
+    ],
+    "Wolfartsweierer Straße": [
+        "Wolfartsweierer",
+        "Wolfartsweierer Str.",
+        "Wolfartsweierer Strasse"
+    ],
+    "Wörth (Rhein)": [
+        "Wörth"
+    ],
+    "Wörth (Rhein) Alte Bahnmeisterei": [],
+    "Wörth (Rhein) Badallee": [
+        "Wörth (Rhein) Bad"
+    ],
+    "Wörth (Rhein) Badepark": [],
+    "Wörth (Rhein) Bienwaldhalle": [],
+    "Wörth (Rhein) Bürgerpark": [],
+    "Wörth Rathaus": [
+        "Wörth"
+    ],
+    "Wörth Zügelstraße": [
+        "Wörth Zügel",
+        "Wörth Zügelstr.",
+        "Wörth Zügelstrasse"
+    ],
+    "Wössingen Bahnhof": [
+        "Wössingen"
+    ],
+    "Wössingen Ost": [
+        "Wössingen"
+    ],
+    "Yorckstraße": [
+        "Yorck",
+        "Yorckstr.",
+        "Yorckstrasse"
+    ],
+    "ZKM": [],
+    "Zaisenhausen": [],
+    "Zündhütle": [],
+    "Öhringen Hauptbahnhof": [
+        "Öhringen"
+    ],
+    "Öhringen West": [
+        "Öhringen"
+    ],
+    "Öhringen-Cappel": [],
+    "Ötigheim": []
+}

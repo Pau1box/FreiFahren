@@ -1,0 +1,1101 @@
+{
+    "n20628739": {
+        "coordinates": {
+            "latitude": 50.797212775,
+            "longitude": 12.8967479875
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Robert-Siewert-Straße"
+    },
+    "n26418278": {
+        "coordinates": {
+            "latitude": 50.820141225,
+            "longitude": 12.934909025
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Gutenbergstraße"
+    },
+    "n26418285": {
+        "coordinates": {
+            "latitude": 50.8103874,
+            "longitude": 12.951060380000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Bernsdorf"
+    },
+    "n26418298": {
+        "coordinates": {
+            "latitude": 50.827678500000005,
+            "longitude": 12.959264749999999
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Arthur-Strobel-Straße"
+    },
+    "n26418303": {
+        "coordinates": {
+            "latitude": 50.83134018333333,
+            "longitude": 12.952911383333335
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Gablenzplatz"
+    },
+    "n26418305": {
+        "coordinates": {
+            "latitude": 50.831748275,
+            "longitude": 12.94964725
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Nürnberger Straße"
+    },
+    "n26418308": {
+        "coordinates": {
+            "latitude": 50.831382033333334,
+            "longitude": 12.943567416666667
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Reineckerstraße"
+    },
+    "n26418311": {
+        "coordinates": {
+            "latitude": 50.822891375,
+            "longitude": 12.9303082
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Lutherstraße"
+    },
+    "n26418313": {
+        "coordinates": {
+            "latitude": 50.824896475,
+            "longitude": 12.9270618125
+        },
+        "lines": [
+            "2",
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Bernsbachplatz"
+    },
+    "n26418316": {
+        "coordinates": {
+            "latitude": 50.82850361,
+            "longitude": 12.924205319999999
+        },
+        "lines": [
+            "2",
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Annenstraße"
+    },
+    "n26418320": {
+        "coordinates": {
+            "latitude": 50.83179578666667,
+            "longitude": 12.922503366666666
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "5",
+            "C11",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Zentralhaltestelle"
+    },
+    "n26418331": {
+        "coordinates": {
+            "latitude": 50.83905449090909,
+            "longitude": 12.929566554545454
+        },
+        "lines": [
+            "3",
+            "C11",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Hauptbahnhof, Bahnhofstraße"
+    },
+    "n26418337": {
+        "coordinates": {
+            "latitude": 50.82762107692308,
+            "longitude": 12.91394666923077
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Bahnhof Mitte/Niklasberg"
+    },
+    "n26418340": {
+        "coordinates": {
+            "latitude": 50.82353115,
+            "longitude": 12.9107191
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Parkstraße"
+    },
+    "n26418341": {
+        "coordinates": {
+            "latitude": 50.8212633,
+            "longitude": 12.906440700000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Goetheplatz"
+    },
+    "n26418342": {
+        "coordinates": {
+            "latitude": 50.8166737375,
+            "longitude": 12.9011434625
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Haydnstraße"
+    },
+    "n26418343": {
+        "coordinates": {
+            "latitude": 50.813652966666666,
+            "longitude": 12.8975976
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Irkutsker Straße"
+    },
+    "n26418344": {
+        "coordinates": {
+            "latitude": 50.8109376,
+            "longitude": 12.89485135
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Am Flughafen"
+    },
+    "n26418346": {
+        "coordinates": {
+            "latitude": 50.8088033,
+            "longitude": 12.892798525
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Ikarus"
+    },
+    "n26418348": {
+        "coordinates": {
+            "latitude": 50.8046368375,
+            "longitude": 12.8880306125
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Dr.-Salvador-Allende-Straße"
+    },
+    "n26418351": {
+        "coordinates": {
+            "latitude": 50.80080578333334,
+            "longitude": 12.884307683333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Heiterer Blick"
+    },
+    "n26418353": {
+        "coordinates": {
+            "latitude": 50.79229738,
+            "longitude": 12.879328019999999
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Johann-Richter-Straße"
+    },
+    "n26418356": {
+        "coordinates": {
+            "latitude": 50.7830810875,
+            "longitude": 12.87651485
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Hutholz"
+    },
+    "n26418358": {
+        "coordinates": {
+            "latitude": 50.794931475,
+            "longitude": 12.890384300000001
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "VITA-CENTER"
+    },
+    "n26418361": {
+        "coordinates": {
+            "latitude": 50.79738505,
+            "longitude": 12.90275505
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Dittersdorfer Straße"
+    },
+    "n26418363": {
+        "coordinates": {
+            "latitude": 50.79632732857143,
+            "longitude": 12.907867285714286
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Markersdorfer Straße"
+    },
+    "n26418365": {
+        "coordinates": {
+            "latitude": 50.79901348333333,
+            "longitude": 12.912934
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Schule Altchemnitz"
+    },
+    "n26418368": {
+        "coordinates": {
+            "latitude": 50.806042899999994,
+            "longitude": 12.911878349999999
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Uhlestraße"
+    },
+    "n26418369": {
+        "coordinates": {
+            "latitude": 50.8113078,
+            "longitude": 12.9119836
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Erdmannsdorfer Straße"
+    },
+    "n26418370": {
+        "coordinates": {
+            "latitude": 50.817439755555554,
+            "longitude": 12.914311844444445
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Rößlerstraße"
+    },
+    "n26418378": {
+        "coordinates": {
+            "latitude": 50.79617604999999,
+            "longitude": 12.918281333333333
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Alt Chemnitz Center"
+    },
+    "n26418379": {
+        "coordinates": {
+            "latitude": 50.79402473333334,
+            "longitude": 12.922427083333334
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Schneeberger Straße"
+    },
+    "n26418381": {
+        "coordinates": {
+            "latitude": 50.790803333333336,
+            "longitude": 12.926056466666665
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Altchemnitz"
+    },
+    "n26418384": {
+        "coordinates": {
+            "latitude": 50.82501505,
+            "longitude": 12.901385916666667
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Industriemuseum"
+    },
+    "n26418385": {
+        "coordinates": {
+            "latitude": 50.823439480000005,
+            "longitude": 12.896544119999998
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kappler Drehe"
+    },
+    "n26418386": {
+        "coordinates": {
+            "latitude": 50.82202781666666,
+            "longitude": 12.887983133333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Am Feldschlößchen"
+    },
+    "n26418387": {
+        "coordinates": {
+            "latitude": 50.82124192,
+            "longitude": 12.88254598
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Guerickestraße/Messe Chemnitz"
+    },
+    "n26418388": {
+        "coordinates": {
+            "latitude": 50.82072922857143,
+            "longitude": 12.87563427142857
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Schönau"
+    },
+    "n26418389": {
+        "coordinates": {
+            "latitude": 50.83079175,
+            "longitude": 12.937828683333334
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Tschaikowskistraße"
+    },
+    "n26418390": {
+        "coordinates": {
+            "latitude": 50.83189923333333,
+            "longitude": 12.931760366666666
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Zieschestraße"
+    },
+    "n26418391": {
+        "coordinates": {
+            "latitude": 50.833472633333336,
+            "longitude": 12.926308633333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "5"
+        ],
+        "name": "Bahnhofstr."
+    },
+    "n26418400": {
+        "coordinates": {
+            "latitude": 50.82145205,
+            "longitude": 12.9639542
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Pappelhain"
+    },
+    "n26418407": {
+        "coordinates": {
+            "latitude": 50.7859209,
+            "longitude": 12.879203700000001
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Ernst-Wabra-Straße"
+    },
+    "n26418413": {
+        "coordinates": {
+            "latitude": 50.82966265,
+            "longitude": 12.9199535
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Moritzhof"
+    },
+    "n28323474": {
+        "coordinates": {
+            "latitude": 50.7716749,
+            "longitude": 12.90223584
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Klaffenbach Haltepunkt"
+    },
+    "DNR": {
+        "coordinates": {
+            "latitude": 50.86260896666666,
+            "longitude": 13.022989733333333
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Niederwiesa"
+    },
+    "DCHP": {
+        "coordinates": {
+            "latitude": 50.8619492,
+            "longitude": 12.953767666666666
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Chemnitz-Hilbersdorf"
+    },
+    "n124380851": {
+        "coordinates": {
+            "latitude": 50.70938035,
+            "longitude": 12.773652850000001
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Stollberg (Sachs)"
+    },
+    "DSTOS": {
+        "coordinates": {
+            "latitude": 50.71434975,
+            "longitude": 12.778798049999999
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Stollberg Schlachthofstraße"
+    },
+    "n124381068": {
+        "coordinates": {
+            "latitude": 50.75010006666667,
+            "longitude": 12.823033366666666
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Pfaffenhain"
+    },
+    "n198053595": {
+        "coordinates": {
+            "latitude": 50.93475873333333,
+            "longitude": 12.953005233333334
+        },
+        "lines": [
+            "C14"
+        ],
+        "name": "Ottendorf"
+    },
+    "n248508980": {
+        "coordinates": {
+            "latitude": 50.85610075,
+            "longitude": 12.9069029
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Küchwald"
+    },
+    "n2208169074": {
+        "coordinates": {
+            "latitude": 50.785753625,
+            "longitude": 12.925639025
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Riemenschneiderstraße"
+    },
+    "DFKS": {
+        "coordinates": {
+            "latitude": 50.9027389,
+            "longitude": 13.0363212
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Frankenberg (Sachs) Süd"
+    },
+    "DFK": {
+        "coordinates": {
+            "latitude": 50.911261599999996,
+            "longitude": 13.043332933333334
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Frankenberg (Sachs)"
+    },
+    "n287905354": {
+        "coordinates": {
+            "latitude": 50.72300933333333,
+            "longitude": 12.888109366666667
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Meinersdorf (Erzgebirge)"
+    },
+    "DBUM": {
+        "coordinates": {
+            "latitude": 50.732907100000006,
+            "longitude": 12.9163322
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Burkhardtsdorf Mitte"
+    },
+    "DHA": {
+        "coordinates": {
+            "latitude": 50.9676589,
+            "longitude": 13.1189585
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Hainichen"
+    },
+    "DDIF": {
+        "coordinates": {
+            "latitude": 50.926557349999996,
+            "longitude": 13.0687411
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Dittersbach"
+    },
+    "DBDL": {
+        "coordinates": {
+            "latitude": 50.87971545,
+            "longitude": 13.01183735
+        },
+        "lines": [
+            "C15"
+        ],
+        "name": "Braunsdorf-Lichtenwalde"
+    },
+    "DLN": {
+        "coordinates": {
+            "latitude": 50.624826600000006,
+            "longitude": 12.749019650000001
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Lößnitz oberer Bahnhof"
+    },
+    "DLNU": {
+        "coordinates": {
+            "latitude": 50.610880699999996,
+            "longitude": 12.7242342
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Lößnitz unterer Bahnhof"
+    },
+    "DAUS": {
+        "coordinates": {
+            "latitude": 50.596739150000005,
+            "longitude": 12.70891005
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Aue (Sachsen) Erzgebirgsstadion"
+    },
+    "DNZW": {
+        "coordinates": {
+            "latitude": 50.64621615,
+            "longitude": 12.8218635
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Niederzwönitz"
+    },
+    "DDF": {
+        "coordinates": {
+            "latitude": 50.7516358,
+            "longitude": 12.9789279
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Dittersdorf"
+    },
+    "n308820913": {
+        "coordinates": {
+            "latitude": 50.968721200000005,
+            "longitude": 12.959655866666665
+        },
+        "lines": [
+            "C14"
+        ],
+        "name": "Altmittweida"
+    },
+    "n308961960": {
+        "coordinates": {
+            "latitude": 50.77103546666667,
+            "longitude": 12.8935709
+        },
+        "lines": [
+            "C11"
+        ],
+        "name": "Neukirchen-Klaffenbach"
+    },
+    "DDCH": {
+        "coordinates": {
+            "latitude": 50.66581535,
+            "longitude": 12.839843550000001
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Dorfchemnitz"
+    },
+    "n308991791": {
+        "coordinates": {
+            "latitude": 50.69661033333333,
+            "longitude": 12.849357966666666
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Thalheim (Erzgebirge)"
+    },
+    "DBUF": {
+        "coordinates": {
+            "latitude": 50.73327923333333,
+            "longitude": 12.932481700000002
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Burkhardtsdorf"
+    },
+    "DKAU": {
+        "coordinates": {
+            "latitude": 50.742902799999996,
+            "longitude": 12.9539998
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Kemtau"
+    },
+    "DED": {
+        "coordinates": {
+            "latitude": 50.77310955,
+            "longitude": 12.972547125
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Einsiedel"
+    },
+    "DCE": {
+        "coordinates": {
+            "latitude": 50.787629100000004,
+            "longitude": 12.950196850000001
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Chemnitz-Erfenschlag Mitte"
+    },
+    "DOBL": {
+        "coordinates": {
+            "latitude": 50.908066,
+            "longitude": 12.9591887
+        },
+        "lines": [
+            "C14"
+        ],
+        "name": "Oberlichtenau"
+    },
+    "n382973145": {
+        "coordinates": {
+            "latitude": 50.91576361666667,
+            "longitude": 12.81246585
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Burgstädt, Bahnhof"
+    },
+    "n387836531": {
+        "coordinates": {
+            "latitude": 50.87481996,
+            "longitude": 12.87028008
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Haltepunkt Wittgensdorf Mitte"
+    },
+    "n435717098": {
+        "coordinates": {
+            "latitude": 50.8254403125,
+            "longitude": 12.920624175
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Gustav-Freytag-Straße"
+    },
+    "n588596166": {
+        "coordinates": {
+            "latitude": 50.8200596,
+            "longitude": 12.964408220000001
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Gablenz"
+    },
+    "n588680870": {
+        "coordinates": {
+            "latitude": 50.81489726666667,
+            "longitude": 12.944551816666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Augsburger Straße"
+    },
+    "n597396855": {
+        "coordinates": {
+            "latitude": 50.81752658181818,
+            "longitude": 12.939767036363635
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Wartburgstraße"
+    },
+    "n609670277": {
+        "coordinates": {
+            "latitude": 50.837302125,
+            "longitude": 12.925839475
+        },
+        "lines": [
+            "3",
+            "C11",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Theaterplatz"
+    },
+    "n621505712": {
+        "coordinates": {
+            "latitude": 50.840654011764705,
+            "longitude": 12.926501323529411
+        },
+        "lines": [
+            "3",
+            "C11"
+        ],
+        "name": "Chemnitz, Omnibusbahnhof"
+    },
+    "n669189278": {
+        "coordinates": {
+            "latitude": 50.79503866666667,
+            "longitude": 12.8821769
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Morgenleite"
+    },
+    "n765658347": {
+        "coordinates": {
+            "latitude": 50.591828750000005,
+            "longitude": 12.698633300000001
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Aue (Sachsen)"
+    },
+    "n785870116": {
+        "coordinates": {
+            "latitude": 50.632151575,
+            "longitude": 12.797983775
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Zwönitz, Bahnhof"
+    },
+    "n884813015": {
+        "coordinates": {
+            "latitude": 50.820235266666664,
+            "longitude": 12.9163053
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Treffurthstraße"
+    },
+    "n1483307438": {
+        "coordinates": {
+            "latitude": 50.83438231666667,
+            "longitude": 12.9229638
+        },
+        "lines": [
+            "1",
+            "3",
+            "C11",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Roter Turm"
+    },
+    "n1483352452": {
+        "coordinates": {
+            "latitude": 50.80252496,
+            "longitude": 12.911601200000002
+        },
+        "lines": [
+            "5",
+            "C11"
+        ],
+        "name": "Scheffelstraße"
+    },
+    "n1517436456": {
+        "coordinates": {
+            "latitude": 50.82624453333333,
+            "longitude": 12.90602845
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Marianne-Brandt-Straße"
+    },
+    "n1845295804": {
+        "coordinates": {
+            "latitude": 50.85926038333333,
+            "longitude": 12.893371799999999
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Chemnitz-Borna Hp"
+    },
+    "n1845295868": {
+        "coordinates": {
+            "latitude": 50.88011204,
+            "longitude": 12.84322122
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Wittgensdorf ob Bf"
+    },
+    "n2179169532": {
+        "coordinates": {
+            "latitude": 50.79482296,
+            "longitude": 12.935849959999999
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Bahnhof Reichenhain"
+    },
+    "n4569637935": {
+        "coordinates": {
+            "latitude": 50.82094538333333,
+            "longitude": 12.927362816666665
+        },
+        "lines": [
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Stadlerplatz"
+    },
+    "DCKI": {
+        "coordinates": {
+            "latitude": 50.8842077,
+            "longitude": 12.95361
+        },
+        "lines": [
+            "C14"
+        ],
+        "name": "Chemnitz Kinderwaldstätte"
+    },
+    "n4825859876": {
+        "coordinates": {
+            "latitude": 50.9872331,
+            "longitude": 12.9599406
+        },
+        "lines": [
+            "C14"
+        ],
+        "name": "Mittweida"
+    },
+    "n4943479916": {
+        "coordinates": {
+            "latitude": 50.81104801666667,
+            "longitude": 12.92402115
+        },
+        "lines": [
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Technopark"
+    },
+    "n5239435218": {
+        "coordinates": {
+            "latitude": 50.813783566666665,
+            "longitude": 12.930790866666667
+        },
+        "lines": [
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "TU Campus"
+    },
+    "n5272770759": {
+        "coordinates": {
+            "latitude": 50.817806675,
+            "longitude": 12.92931705
+        },
+        "lines": [
+            "3",
+            "C13",
+            "C14",
+            "C15"
+        ],
+        "name": "Rosenbergstraße"
+    },
+    "n6121121454": {
+        "coordinates": {
+            "latitude": 50.8551707,
+            "longitude": 12.9120847
+        },
+        "lines": [
+            "C13"
+        ],
+        "name": "Chemnitz Küchwald"
+    },
+    "DEDH": {
+        "coordinates": {
+            "latitude": 50.7802147,
+            "longitude": 12.9715805
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Einsiedel Gymnasium"
+    },
+    "DCEO": {
+        "coordinates": {
+            "latitude": 50.7840049,
+            "longitude": 12.9645223
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Chemnitz-Erfenschlag Ost"
+    },
+    "DEDB": {
+        "coordinates": {
+            "latitude": 50.766278549999996,
+            "longitude": 12.97477345
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Einsiedel Brauerei"
+    },
+    "n7077934243": {
+        "coordinates": {
+            "latitude": 50.7675681,
+            "longitude": 12.9740805
+        },
+        "lines": [
+            "C13",
+            "C14"
+        ],
+        "name": "Einsiedel August-Bebel-Platz"
+    }
+}

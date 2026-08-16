@@ -1,0 +1,660 @@
+{
+    "n106274298": {
+        "coordinates": {
+            "latitude": 49.969714399999994,
+            "longitude": 8.2365178
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Wilhelm-Quetsch-Straße"
+    },
+    "n162791982": {
+        "coordinates": {
+            "latitude": 49.95911238,
+            "longitude": 8.268858900000001
+        },
+        "lines": [
+            "50",
+            "53"
+        ],
+        "name": "Dornsheimer Weg"
+    },
+    "n173417821": {
+        "coordinates": {
+            "latitude": 49.956947850000006,
+            "longitude": 8.27497425
+        },
+        "lines": [
+            "50",
+            "53"
+        ],
+        "name": "Bürgerhaus"
+    },
+    "n173439085": {
+        "coordinates": {
+            "latitude": 49.96324511666666,
+            "longitude": 8.269338716666667
+        },
+        "lines": [
+            "50",
+            "53"
+        ],
+        "name": "Carl-Zeiss-Straße"
+    },
+    "n173439092": {
+        "coordinates": {
+            "latitude": 49.966868525,
+            "longitude": 8.26984075
+        },
+        "lines": [
+            "50",
+            "53"
+        ],
+        "name": "Birkenstraße"
+    },
+    "n173439096": {
+        "coordinates": {
+            "latitude": 49.97129732,
+            "longitude": 8.271474379999999
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Jägerhaus"
+    },
+    "n219152789": {
+        "coordinates": {
+            "latitude": 49.97671525,
+            "longitude": 8.270365
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Kurmainz-Kaserne/Akademie der Wissenschaften"
+    },
+    "n243047932": {
+        "coordinates": {
+            "latitude": 49.9675129,
+            "longitude": 8.2752291
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Büdinger Straße"
+    },
+    "n245974635": {
+        "coordinates": {
+            "latitude": 49.98162685,
+            "longitude": 8.268851549999999
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Berliner Straße"
+    },
+    "n245975486": {
+        "coordinates": {
+            "latitude": 49.98616536666666,
+            "longitude": 8.266184266666667
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Pariser Tor"
+    },
+    "n247390026": {
+        "coordinates": {
+            "latitude": 49.989617111111116,
+            "longitude": 8.266041844444445
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "An der Philippsschanze"
+    },
+    "n249332117": {
+        "coordinates": {
+            "latitude": 50.00053025,
+            "longitude": 8.25955278888889
+        },
+        "lines": [
+            "50",
+            "51",
+            "52",
+            "53",
+            "59"
+        ],
+        "name": "Hauptbahnhof West / Mainzer Taubertsbergbad + Spa"
+    },
+    "n249332121": {
+        "coordinates": {
+            "latitude": 49.997257350000005,
+            "longitude": 8.255435333333333
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Agentur für Arbeit / Katholische Hochschule"
+    },
+    "n249332123": {
+        "coordinates": {
+            "latitude": 49.995164450000004,
+            "longitude": 8.252372950000002
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Hauptfriedhof/Blindenzentrum"
+    },
+    "n249332136": {
+        "coordinates": {
+            "latitude": 49.987036450000005,
+            "longitude": 8.25242265
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Zahlbach"
+    },
+    "n251672787": {
+        "coordinates": {
+            "latitude": 49.995507275,
+            "longitude": 8.175696125
+        },
+        "lines": [
+            "50"
+        ],
+        "name": "Römerquelle"
+    },
+    "n251673348": {
+        "coordinates": {
+            "latitude": 49.996354325,
+            "longitude": 8.18052325
+        },
+        "lines": [
+            "50"
+        ],
+        "name": "Jupiterweg"
+    },
+    "n255929785": {
+        "coordinates": {
+            "latitude": 50.01236337142858,
+            "longitude": 8.248845885714285
+        },
+        "lines": [
+            "50",
+            "51",
+            "59"
+        ],
+        "name": "Bismarckplatz"
+    },
+    "n258046999": {
+        "coordinates": {
+            "latitude": 49.9964063,
+            "longitude": 8.188346416666667
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Gemarkungsgrenze"
+    },
+    "n258922066": {
+        "coordinates": {
+            "latitude": 49.98903571428571,
+            "longitude": 8.178974842857142
+        },
+        "lines": [
+            "51"
+        ],
+        "name": "Poststraße"
+    },
+    "n259046061": {
+        "coordinates": {
+            "latitude": 49.99828688,
+            "longitude": 8.19370152
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Viermorgenweg"
+    },
+    "n259046068": {
+        "coordinates": {
+            "latitude": 50.00148951666667,
+            "longitude": 8.204579466666667
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Kapellenstraße/Gesundheitszentrum"
+    },
+    "n259281207": {
+        "coordinates": {
+            "latitude": 50.01537265,
+            "longitude": 8.243522125
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Schott AG"
+    },
+    "n261208508": {
+        "coordinates": {
+            "latitude": 50.01636271666666,
+            "longitude": 8.23932335
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Zwerchallee"
+    },
+    "n262215928": {
+        "coordinates": {
+            "latitude": 50.00609145,
+            "longitude": 8.2552765
+        },
+        "lines": [
+            "50",
+            "51",
+            "59"
+        ],
+        "name": "Lessingstraße"
+    },
+    "n262217173": {
+        "coordinates": {
+            "latitude": 50.00947265,
+            "longitude": 8.251361849999999
+        },
+        "lines": [
+            "50",
+            "51",
+            "59"
+        ],
+        "name": "Goethestraße"
+    },
+    "n264942299": {
+        "coordinates": {
+            "latitude": 49.98209355,
+            "longitude": 8.24608185
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Bahnstraße"
+    },
+    "n264942314": {
+        "coordinates": {
+            "latitude": 49.984363,
+            "longitude": 8.2524288
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Naturschaugarten Lindenmühle"
+    },
+    "n292363598": {
+        "coordinates": {
+            "latitude": 49.99873388333333,
+            "longitude": 8.266885466666666
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Schillerplatz"
+    },
+    "n307512249": {
+        "coordinates": {
+            "latitude": 49.9944008,
+            "longitude": 8.236143649999999
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Friedrich-von-Pfeiffer-Weg / Universität"
+    },
+    "n318679375": {
+        "coordinates": {
+            "latitude": 49.99207655,
+            "longitude": 8.2516711
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Römersteine"
+    },
+    "n321898733": {
+        "coordinates": {
+            "latitude": 49.9932562,
+            "longitude": 8.26655875
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Am Gautor"
+    },
+    "n352722376": {
+        "coordinates": {
+            "latitude": 50.014145255555555,
+            "longitude": 8.233333477777778
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Turmstraße"
+    },
+    "n358464814": {
+        "coordinates": {
+            "latitude": 49.9636618,
+            "longitude": 8.279815150000001
+        },
+        "lines": [
+            "52"
+        ],
+        "name": "Am Schinnergraben"
+    },
+    "n393479841": {
+        "coordinates": {
+            "latitude": 49.9728902375,
+            "longitude": 8.2385629625
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Südring"
+    },
+    "n410583320": {
+        "coordinates": {
+            "latitude": 49.9799044125,
+            "longitude": 8.2376271375
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Ludwig-Nauth-Straße"
+    },
+    "n414238263": {
+        "coordinates": {
+            "latitude": 49.99230905,
+            "longitude": 8.22635475
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Kisselberg"
+    },
+    "n416909044": {
+        "coordinates": {
+            "latitude": 50.00548226666666,
+            "longitude": 8.220964083333334
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Elbestraße"
+    },
+    "n416909050": {
+        "coordinates": {
+            "latitude": 50.006040825,
+            "longitude": 8.226313625
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Hugo-Eckener-Straße"
+    },
+    "n416909056": {
+        "coordinates": {
+            "latitude": 50.0053298,
+            "longitude": 8.23087535
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "An der Bruchspitze"
+    },
+    "n443789943": {
+        "coordinates": {
+            "latitude": 49.99671947142857,
+            "longitude": 8.247025342857143
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Universität / Haupteingang"
+    },
+    "n493560351": {
+        "coordinates": {
+            "latitude": 49.96333577142857,
+            "longitude": 8.229310242857142
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Im Borner Grund"
+    },
+    "n505746913": {
+        "coordinates": {
+            "latitude": 49.99212211666667,
+            "longitude": 8.180854866666666
+        },
+        "lines": [
+            "51"
+        ],
+        "name": "Königsborn"
+    },
+    "n1192963987": {
+        "coordinates": {
+            "latitude": 50.00214605714285,
+            "longitude": 8.259512371428572
+        },
+        "lines": [
+            "50",
+            "51",
+            "52",
+            "53",
+            "59"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n1416659548": {
+        "coordinates": {
+            "latitude": 50.00041734,
+            "longitude": 8.2631616
+        },
+        "lines": [
+            "50",
+            "52",
+            "53"
+        ],
+        "name": "Münsterplatz"
+    },
+    "n1506774491": {
+        "coordinates": {
+            "latitude": 50.00937775,
+            "longitude": 8.234649825
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Gonsbachgärten"
+    },
+    "n1542594971": {
+        "coordinates": {
+            "latitude": 50.0029838125,
+            "longitude": 8.210922125
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Nerotalstraße"
+    },
+    "n1542595042": {
+        "coordinates": {
+            "latitude": 50.003813575,
+            "longitude": 8.21384875
+        },
+        "lines": [
+            "50",
+            "51"
+        ],
+        "name": "Josef-Ludwig-Platz"
+    },
+    "n1668803555": {
+        "coordinates": {
+            "latitude": 50.01606219999999,
+            "longitude": 8.25214477777778
+        },
+        "lines": [
+            "59"
+        ],
+        "name": "Straßenbahnamt"
+    },
+    "n3432218419": {
+        "coordinates": {
+            "latitude": 49.98422035,
+            "longitude": 8.234098249999999
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Hildegard-von-Bingen-Straße"
+    },
+    "n4147217757": {
+        "coordinates": {
+            "latitude": 49.989349579999995,
+            "longitude": 8.223754719999999
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Jakob-Heinz-Straße/Arena"
+    },
+    "n4147246922": {
+        "coordinates": {
+            "latitude": 49.98745555,
+            "longitude": 8.22868435
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Hochschule Mainz"
+    },
+    "n4151794346": {
+        "coordinates": {
+            "latitude": 49.958346399999996,
+            "longitude": 8.19716485
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Hindemithstraße"
+    },
+    "n4151794348": {
+        "coordinates": {
+            "latitude": 49.9600619,
+            "longitude": 8.20253585
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "ZDF"
+    },
+    "n4151794352": {
+        "coordinates": {
+            "latitude": 49.95979565,
+            "longitude": 8.2107137
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "VRM"
+    },
+    "n4206359419": {
+        "coordinates": {
+            "latitude": 49.9983724,
+            "longitude": 8.24698395
+        },
+        "lines": [
+            "51",
+            "53",
+            "59"
+        ],
+        "name": "Universität / Haupteingang"
+    },
+    "n4370808977": {
+        "coordinates": {
+            "latitude": 49.976173375,
+            "longitude": 8.239236675
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Hans-Böckler-Straße/Die Johanniter"
+    },
+    "n4487341303": {
+        "coordinates": {
+            "latitude": 49.96128493333333,
+            "longitude": 8.222562733333334
+        },
+        "lines": [
+            "51",
+            "53"
+        ],
+        "name": "Marienborn/Bahnhof"
+    },
+    "n4853578573": {
+        "coordinates": {
+            "latitude": 50.0187777,
+            "longitude": 8.2539684
+        },
+        "lines": [
+            "59"
+        ],
+        "name": "Zollhafen/Inge-Reitz-Straße"
+    }
+}

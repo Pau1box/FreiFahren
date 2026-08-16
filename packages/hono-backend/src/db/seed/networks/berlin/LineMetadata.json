@@ -1,0 +1,237 @@
+{
+    "12": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "16": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "18": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "21": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "27": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "37": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "50": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "60": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "61": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "62": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "63": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "67": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "68": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M1": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M10": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M13": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M17": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M2": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M4": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M5": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M6": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "M8": {
+        "color": "#be1414",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "S1": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S2": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S25": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S26": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S3": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S41": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": true
+    },
+    "S42": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": true
+    },
+    "S45": {
+        "color": "#007734",
+        "mode": "unknown",
+        "isCircular": false
+    },
+    "S46": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S47": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S5": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S7": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S75": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S8": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S85": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S9": {
+        "color": "#007734",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "U1": {
+        "color": "#7dad4c",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U2": {
+        "color": "#da421e",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U3": {
+        "color": "#16683d",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U4": {
+        "color": "#f0d722",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U5": {
+        "color": "#7e5330",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U6": {
+        "color": "#8c6dab",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U7": {
+        "color": "#528dba",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U8": {
+        "color": "#224f86",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U9": {
+        "color": "#f3791d",
+        "mode": "subway",
+        "isCircular": false
+    }
+}

@@ -60,6 +60,7 @@ type Event = BaseEvent &
         | { name: 'Layer Selected'; layer: 'risk' | 'lines' }
         | { name: 'Report Sheet Opened' }
         | { name: 'Language Switched'; language: string }
+        | { name: 'Network Switched'; network: string }
         | { name: 'Privacy Policy Viewed'; from: string }
         | { name: 'Support Page Viewed'; from: string }
         | { name: 'Settings Opened' }

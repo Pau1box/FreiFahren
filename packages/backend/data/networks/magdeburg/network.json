@@ -1,0 +1,22 @@
+{
+    "id": "magdeburg",
+    "name": "Magdeburg",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 52.1315,
+        "longitude": 11.6401
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.01143,
+            "longitude": 11.495524
+        },
+        "northEast": {
+            "latitude": 52.254143,
+            "longitude": 11.752688
+        }
+    }
+}

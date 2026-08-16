@@ -1,0 +1,22 @@
+{
+    "id": "saarbruecken",
+    "name": "Saarbrücken",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 49.2344,
+        "longitude": 6.9964
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.062274,
+            "longitude": 6.823015
+        },
+        "northEast": {
+            "latitude": 49.453247,
+            "longitude": 7.137085
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { Feather, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
 import { BottomSheetModalMethods } from '@gorhom/bottom-sheet/lib/typescript/types'
+import { useTheme } from '@shopify/restyle'
 import { format } from 'date-fns'
 import Fuse from 'fuse.js'
 import { isNil } from 'lodash'
@@ -8,8 +9,10 @@ import { useTranslation } from 'react-i18next'
 import { ActivityIndicator, LayoutAnimation, StyleSheet, TouchableOpacity } from 'react-native'
 
 import { Itinerary } from '../../../api/client'
-import { useItineraries, useLines, useStations } from '../../../api/queries'
+import { useItineraries, useStations } from '../../../api/queries'
+import { useLineColor } from '../../../lines'
 import { Theme } from '../../../theme'
+import { stripModeMarker } from '../../../utils'
 import { FFText, FFTextInput, FFView } from '../../common/base'
 import { FFLineTag } from '../../common/FFLineTag'
 import { FFScrollSheet } from '../../common/FFSheet'
@@ -29,9 +32,6 @@ const fadeAnimation = {
         property: LayoutAnimation.Properties.opacity,
     },
 }
-
-// Helper function to get line color from theme (similar to FFLineTag)
-const getLineColor = (line: string) => (line.startsWith('M') ? 'lines.tram' : `lines.${line}`) as keyof Theme['colors']
 
 // Keep only the styles that can't be easily expressed with restyle props
 const styles = StyleSheet.create({
@@ -248,7 +248,7 @@ const ItineraryListView = ({
 
         const stationList = Object.entries(stations).map(([id, station]) => ({
             id,
-            name: (station as { name: string }).name.replace(/^(S|U)\s+/i, ' '),
+            name: stripModeMarker((station as { name: string }).name),
         }))
 
         return new Fuse(stationList, {
@@ -559,7 +559,8 @@ interface ItineraryDetailsViewProps {
 // Itinerary Details View Component
 const ItineraryDetailsView = ({ itinerary, isSafest = false, onBack }: ItineraryDetailsViewProps) => {
     const { t } = useTranslation('navigation')
-    const { data: lines } = useLines()
+    const lineColor = useLineColor()
+    const theme = useTheme<Theme>()
 
     return (
         <FFView flex={1}>
@@ -651,12 +652,7 @@ const ItineraryDetailsView = ({ itinerary, isSafest = false, onBack }: Itinerary
                 const isWalking = leg.mode === 'WALK'
                 const isFirstLeg = index === 0
 
-                // Get the theme color for transit lines
-                const colorKey = isWalking
-                    ? 'darkText'
-                    : !isNil(leg.routeShortName) && !isNil(lines) && leg.routeShortName in lines
-                      ? getLineColor(leg.routeShortName)
-                      : 'danger'
+                const legColor = isWalking ? theme.colors.darkText : lineColor(leg.routeShortName)
 
                 return (
                     <FFView
@@ -672,8 +668,7 @@ const ItineraryDetailsView = ({ itinerary, isSafest = false, onBack }: Itinerary
                             left={0}
                             top={0}
                             bottom={0}
-                            style={{ width: 6, borderRadius: 3 }}
-                            bg={colorKey}
+                            style={{ width: 6, borderRadius: 3, backgroundColor: legColor }}
                         />
 
                         {/* Leg mode and line number */}

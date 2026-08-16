@@ -1,0 +1,22 @@
+{
+    "id": "bremen",
+    "name": "Bremen",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 53.0758,
+        "longitude": 8.8072
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.983383,
+            "longitude": 8.667686
+        },
+        "northEast": {
+            "latitude": 53.203215,
+            "longitude": 9.038637
+        }
+    }
+}

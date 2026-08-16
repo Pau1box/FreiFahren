@@ -1,0 +1,45 @@
+# Zwickau, the tram network of the Städtischer Verkehrsbetrieb Zwickau.
+#
+# Added by hand after the first build of Chemnitz, the third case of the same kind after Gotha and
+# Halle: two separate systems 30 km apart, both numbering their lines from 1, and the larger one's
+# search box reaching over the smaller one. Chemnitz's lines 3 and 4 jumped 28 and 29 km mid route
+# into Eckersbach and Pölbitz, which are Zwickau's.
+#
+# The Vogtlandbahn tram-train shares the tracks between Zwickau Zentrum and the main station. It is
+# tagged `train` in OpenStreetMap and therefore out of scope here, the same way Chemnitz's own
+# regional lines are.
+
+id: zwickau
+name: Zwickau
+countryCode: DE
+timezone: Europe/Berlin
+# Every generated network starts in beta. It shows only reports people actually made, never
+# predicted ones, because there is no history to reason from yet.
+status: beta
+
+center:
+    latitude: 50.7189
+    longitude: 12.4961
+# Derived from the generated stations, so the map fits the network that was actually built.
+bounds: auto
+
+source:
+    # A box rather than a city boundary: the northern branch ends in Zwickau-Pölbitz and the eastern
+    # one in Eckersbach, both within the city, but the box has room for the depot tracks and stops
+    # east of the arena that sit just outside the administrative boundary.
+    boundingBox:
+        southWest:
+            latitude: 50.65
+            longitude: 12.40
+        northEast:
+            latitude: 50.80
+            longitude: 12.60
+    modes:
+        tram: auto
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # No plain `ref` fallback: `ref` is only unique per operator, so trusting it risks colliding with
+    # another network's station id. DS100 codes are unique across Germany and node ids by construction.
+    idSources: [ref:ds100, railway:ref]

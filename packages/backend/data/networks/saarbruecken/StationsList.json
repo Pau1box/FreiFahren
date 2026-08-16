@@ -1,0 +1,432 @@
+{
+    "n258775516": {
+        "coordinates": {
+            "latitude": 49.29432355,
+            "longitude": 6.95330362
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Riegelsberg Süd"
+    },
+    "n262628515": {
+        "coordinates": {
+            "latitude": 49.227016985714286,
+            "longitude": 7.021123528571429
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Römerkastell"
+    },
+    "n262667846": {
+        "coordinates": {
+            "latitude": 49.233364640000005,
+            "longitude": 7.00112168
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Landwehrplatz"
+    },
+    "n262881719": {
+        "coordinates": {
+            "latitude": 49.2410907,
+            "longitude": 6.9787662
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Ludwigstraße"
+    },
+    "n289735867": {
+        "coordinates": {
+            "latitude": 49.30184988,
+            "longitude": 6.94376455
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Riegelsberg Rathaus"
+    },
+    "n270165789": {
+        "coordinates": {
+            "latitude": 49.3084771375,
+            "longitude": 6.9394243625
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Riegelsberghalle"
+    },
+    "n275923746": {
+        "coordinates": {
+            "latitude": 49.250548525,
+            "longitude": 6.96336375
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Rastpfuhl"
+    },
+    "n275943675": {
+        "coordinates": {
+            "latitude": 49.21662103333333,
+            "longitude": 7.028786433333333
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Saarbrücken-Brebach"
+    },
+    "n276173257": {
+        "coordinates": {
+            "latitude": 49.240423883333335,
+            "longitude": 6.985562933333333
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Trierer Straße"
+    },
+    "n278999743": {
+        "coordinates": {
+            "latitude": 49.237310525,
+            "longitude": 6.99543965
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Kaiserstraße"
+    },
+    "n289735877": {
+        "coordinates": {
+            "latitude": 49.29696535,
+            "longitude": 6.948316883333334
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Wolfskaulstraße"
+    },
+    "n289742444": {
+        "coordinates": {
+            "latitude": 49.25578633333333,
+            "longitude": 6.9604535
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Siedlerheim"
+    },
+    "n292265301": {
+        "coordinates": {
+            "latitude": 49.11873785,
+            "longitude": 7.05003185
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Hanweiler - Bad Rilchingen"
+    },
+    "n315894071": {
+        "coordinates": {
+            "latitude": 49.40729279999999,
+            "longitude": 6.8918341000000005
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Lebach-Jabach"
+    },
+    "n354581958": {
+        "coordinates": {
+            "latitude": 49.235706699999994,
+            "longitude": 6.9965584
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Johanneskirche"
+    },
+    "n391068247": {
+        "coordinates": {
+            "latitude": 49.107189950000006,
+            "longitude": 7.0682658
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Sarreguemines"
+    },
+    "n440863667": {
+        "coordinates": {
+            "latitude": 49.246777933333334,
+            "longitude": 6.968036255555556
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Pariser Platz/St.Paulus"
+    },
+    "n440863671": {
+        "coordinates": {
+            "latitude": 49.242912025,
+            "longitude": 6.9724718249999995
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Cottbuser Platz"
+    },
+    "n476918524": {
+        "coordinates": {
+            "latitude": 49.31105295,
+            "longitude": 6.9375728625
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Güchenbach"
+    },
+    "n476918552": {
+        "coordinates": {
+            "latitude": 49.307484466666665,
+            "longitude": 6.944650433333333
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Riegelsberg Kirchstraße"
+    },
+    "n476918594": {
+        "coordinates": {
+            "latitude": 49.31441085,
+            "longitude": 6.93262675
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Gisorsstraße"
+    },
+    "n476918608": {
+        "coordinates": {
+            "latitude": 49.317850066666665,
+            "longitude": 6.9145444000000005
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Walpershofen/Etzenhofen"
+    },
+    "n507394092": {
+        "coordinates": {
+            "latitude": 49.2312534,
+            "longitude": 7.0069502
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Uhlandstraße"
+    },
+    "SAM": {
+        "coordinates": {
+            "latitude": 49.14327923333334,
+            "longitude": 7.044789866666666
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Auersmacher"
+    },
+    "n602842285": {
+        "coordinates": {
+            "latitude": 49.3871555,
+            "longitude": 6.928926
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Landsweiler Süd"
+    },
+    "n667519289": {
+        "coordinates": {
+            "latitude": 49.2291758,
+            "longitude": 7.011388533333334
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Hellwigstraße"
+    },
+    "n693084885": {
+        "coordinates": {
+            "latitude": 49.326573,
+            "longitude": 6.9222142
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Walpershofen Mühlenstraße"
+    },
+    "n693084906": {
+        "coordinates": {
+            "latitude": 49.33298313333333,
+            "longitude": 6.924853033333332
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Heusweiler Schulzentrum"
+    },
+    "n693219331": {
+        "coordinates": {
+            "latitude": 49.3448952,
+            "longitude": 6.9372409
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "In der Hommersbach"
+    },
+    "n1423973919": {
+        "coordinates": {
+            "latitude": 49.2745757,
+            "longitude": 6.96125185
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Heinrichshaus"
+    },
+    "n1509069720": {
+        "coordinates": {
+            "latitude": 49.321889799999994,
+            "longitude": 6.91899892
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Walpershofen Mitte"
+    },
+    "n1509120248": {
+        "coordinates": {
+            "latitude": 49.3370625,
+            "longitude": 6.9301644
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Heusweiler Markt"
+    },
+    "n1558270564": {
+        "coordinates": {
+            "latitude": 49.36233670000001,
+            "longitude": 6.933364
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Eiweiler Nord"
+    },
+    "n1558270566": {
+        "coordinates": {
+            "latitude": 49.3565032,
+            "longitude": 6.9348402
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Eiweiler"
+    },
+    "n1558270623": {
+        "coordinates": {
+            "latitude": 49.3497542,
+            "longitude": 6.9364149
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Kirschhof"
+    },
+    "n1558299685": {
+        "coordinates": {
+            "latitude": 49.39149546666667,
+            "longitude": 6.926579766666667
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Landsweiler Nord"
+    },
+    "n1558300733": {
+        "coordinates": {
+            "latitude": 49.4025337,
+            "longitude": 6.919127
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Lebach Süd"
+    },
+    "n1565379956": {
+        "coordinates": {
+            "latitude": 49.4083317,
+            "longitude": 6.906873733333334
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Lebach"
+    },
+    "n2924561671": {
+        "coordinates": {
+            "latitude": 49.2282309,
+            "longitude": 7.0175196
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Kieselhumes"
+    },
+    "n3453756483": {
+        "coordinates": {
+            "latitude": 49.240143225,
+            "longitude": 6.9901394625
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "SBN": {
+        "coordinates": {
+            "latitude": 49.179636933333335,
+            "longitude": 7.034853299999999
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Saarbrücken - Bübingen"
+    },
+    "SKB": {
+        "coordinates": {
+            "latitude": 49.15785605,
+            "longitude": 7.033465775
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Kleinblittersdorf"
+    },
+    "SGD": {
+        "coordinates": {
+            "latitude": 49.197750299999996,
+            "longitude": 7.0308168
+        },
+        "lines": [
+            "S 1"
+        ],
+        "name": "Saarbrücken-Güdingen"
+    }
+}

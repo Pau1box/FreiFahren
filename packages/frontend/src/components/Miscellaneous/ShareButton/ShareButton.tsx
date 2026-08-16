@@ -5,6 +5,7 @@ import './ShareButton.css'
 import i18next, { TFunction } from 'i18next'
 import React, { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NETWORK_URL_PARAM, useNetwork } from 'src/contexts/NetworkContext'
 import { sendAnalyticsEvent } from 'src/hooks/useAnalytics'
 import { Report } from 'src/utils/types'
 
@@ -57,8 +58,26 @@ const formatTime = (timestamp: string, isHistoric: boolean, t: TFunction): strin
     })
 }
 
+/**
+ * The station id in the path is only unique inside its network, so a link without the network opens
+ * nothing for a recipient whose city is another one. Links that already exist stay valid: the
+ * parameter is additive and its absence keeps the previous behaviour.
+ */
+const shareUrl = (networkId: string | null): string => {
+    const url = new URL(window.location.href)
+
+    if (networkId !== null) {
+        url.searchParams.set(NETWORK_URL_PARAM, networkId)
+    }
+
+    return url.toString()
+}
+
 const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
     const { t } = useTranslation()
+    const { network } = useNetwork()
+    const networkName = network?.name ?? ''
+    const networkId = network?.id ?? null
 
     const handleShare = useCallback(
         async (event: React.MouseEvent) => {
@@ -69,7 +88,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
                     try {
                         await navigator.share({
                             title: t('Share.title'),
-                            url: window.location.href,
+                            url: shareUrl(networkId),
                         })
                         await sendAnalyticsEvent('Page Shared', {})
                     } catch (error) {
@@ -80,6 +99,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
                 }
 
                 const shareText = t('Share.text', {
+                    network: networkName,
                     station: report.station.name,
 
                     direction:
@@ -96,7 +116,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
                     await navigator.share({
                         title: t('Share.title'),
                         text: shareText,
-                        url: window.location.href,
+                        url: shareUrl(networkId),
                     })
                     await sendAnalyticsEvent('Marker Shared', {
                         meta: {
@@ -106,7 +126,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
                         },
                     })
                 } else {
-                    await navigator.clipboard.writeText(`${shareText} ${window.location.href}`)
+                    await navigator.clipboard.writeText(`${shareText} ${shareUrl(networkId)}`)
                     // eslint-disable-next-line no-alert
                     alert(t('Share.copied'))
                 }
@@ -115,7 +135,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ report }) => {
                 console.error('Error sharing:', error)
             }
         },
-        [t, report]
+        [t, report, networkName, networkId]
     )
 
     return (

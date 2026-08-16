@@ -44,6 +44,12 @@
       "lines": "Lines"
     }
   },
+  "networks": {
+    "title": "Network",
+    "betaBadge": "Beta",
+    "betaExplanation": "{{network}} has just joined. It shows only reports people actually made and no predicted ones yet, so the map is emptier than usual.",
+    "alsoServes": "Also serves: {{cities}}"
+  },
   "settings": {
     "title": "Settings",
     "language": "Language",
@@ -56,7 +62,7 @@
     "bullet1": {
       "title": "1. The displayed data may be inaccurate",
       "text1": "Currently, all reports come from the community. This data also forms the basis of the risk model. We cannot guarantee the completeness or accuracy of the displayed data.",
-      "text2": "In the near future, we will also include official BVG APIs to facilitate route planning based on official and reliable data."
+      "text2": "In the near future, we will also include the official APIs of the transit operators to facilitate route planning based on official and reliable data."
     },
     "bullet2": {
       "title": "2. Your privacy is important to us",

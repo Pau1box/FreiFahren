@@ -1,0 +1,28 @@
+.network-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--margin-s);
+}
+
+.network-selector label {
+    font-size: var(--font-xs);
+    font-weight: bold;
+}
+
+.network-selector select {
+    padding: var(--padding-xxs) var(--padding-xs);
+    border: var(--border-default);
+    border-radius: var(--borderRadius-small);
+    font-size: var(--font-xs);
+    background: transparent;
+    color: inherit;
+}
+
+.network-selector .network-serves-hint,
+.network-selector .network-beta-hint {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: var(--font-xxs);
+    color: #666;
+}

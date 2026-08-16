@@ -1,4 +1,9 @@
-from nlp_service.config.config import NLP_BOT_TOKEN, MINI_APP_SERVER_URL
+from nlp_service.config.config import (
+    NLP_BOT_TOKEN,
+    MINI_APP_SERVER_URL,
+    is_known_chat,
+    network_for_chat,
+)
 from nlp_service.utils.logger import setup_logger
 from nlp_service.core.processor import process_new_message
 
@@ -11,9 +16,8 @@ from telebot.types import (
 )
 
 import pytz
-from datetime import datetime, timedelta
+from datetime import datetime
 import traceback
-import os
 
 logger = setup_logger()
 
@@ -21,6 +25,27 @@ nlp_bot = TeleBot(NLP_BOT_TOKEN)
 
 # Rate limiting state
 last_telegram_notification = None
+
+# Chats that are not configured, remembered so that a bot added to a busy group does not fill the
+# log with the same line for every message. Capped because the set grows with whoever adds the bot
+# somewhere: past the cap it is cleared and those chats are logged once more, which is a repeated
+# log line every few thousand strange chats rather than a set that only ever grows.
+reported_unknown_chats = set()
+MAX_REPORTED_UNKNOWN_CHATS = 1000
+
+
+def note_unknown_chat(chat_id) -> None:
+    """Log a chat that is not mapped to a network, once per chat."""
+    if chat_id in reported_unknown_chats:
+        return
+
+    if len(reported_unknown_chats) >= MAX_REPORTED_UNKNOWN_CHATS:
+        reported_unknown_chats.clear()
+
+    reported_unknown_chats.add(chat_id)
+    logger.warning(
+        "Ignoring messages from chat %s: it is not mapped to a network", chat_id
+    )
 
 
 def bot_error_handler(exception):
@@ -83,7 +108,17 @@ def send_webapp_button(
 # Handler for the /start command
 @nlp_bot.message_handler(commands=["start"])
 def handle_start_command(message):
-    """Handle the /start command by sending a welcome message with the Mini App button."""
+    """Handle the /start command by sending a welcome message with the Mini App button.
+
+    In a group this follows the same rule as any other message: a group that is not mapped to a
+    network gets no answer, so the bot stays silent where it was never meant to run. A private chat
+    is different, because that is where a user opens the bot to report through the Mini App, and it
+    is never part of the group configuration.
+    """
+    if message.chat.type != "private" and not is_known_chat(message.chat.id):
+        note_unknown_chat(message.chat.id)
+        return
+
     logger.info(f"Start command received from chat id: {message.chat.id}")
 
     # Send welcome message with Mini App button
@@ -104,6 +139,13 @@ def get_info(message):
     logger.info("------------------------")
     logger.info("MESSAGE RECEIVED")
 
+    # One group per network. A message from anywhere else cannot be attributed to a network, and
+    # guessing one would file the report into the wrong city.
+    network_id = network_for_chat(message.chat.id)
+    if network_id is None:
+        note_unknown_chat(message.chat.id)
+        return
+
     utc = pytz.UTC
     timestamp = datetime.fromtimestamp(message.date, utc).replace(
         second=0, microsecond=0
@@ -115,4 +157,4 @@ def get_info(message):
         else (message.caption or "Image without description")
     )
 
-    process_new_message(timestamp, text)
+    process_new_message(timestamp, text, network_id)

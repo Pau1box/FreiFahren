@@ -1,12 +1,14 @@
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'bun:test'
 import { Hono } from 'hono'
+import { DateTime } from 'luxon'
 
 import { Stations } from '../src/modules/transit/types'
 import { TransitNetworkDataService } from '../src/modules/transit/transit-network-data-service'
 import { db, lineStations, reports, stations } from '../src/db'
 import { seedBaseData } from '../src/db/seed/seed'
 import { and, desc, eq } from 'drizzle-orm'
-import { sendReportRequest } from './test-utils'
+import { DEFAULT_NETWORK_ID } from '../src/modules/networks/constants'
+import { pickLineId, pickStationIds, pickStationIdsOnLine, sendReportRequest } from './test-utils'
 
 let fakeNlpServer: ReturnType<typeof Bun.serve> | null = null
 let fakeSecurityServer: ReturnType<typeof Bun.serve> | null = null
@@ -73,10 +75,10 @@ describe('Telegram notification', () => {
     })
 
     it('sends a Telegram notification when source is not telegram and returns 200', async () => {
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
+        const [stationId] = await pickStationIds(1)
 
         const response = await sendReportRequest({
-            stationId: station.id,
+            stationId: stationId!,
             source: 'web_app',
         })
 
@@ -92,17 +94,17 @@ describe('Telegram notification', () => {
             stationId: string
         }
 
-        expect(body.stationId).toBe(station.id)
+        expect(body.stationId).toBe(stationId!)
         expect(typeof body.station).toBe('string')
     })
 
     it('returns 200 and a failure header when Telegram notification fails', async () => {
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
+        const [stationId] = await pickStationIds(1)
 
         shouldFail = true
 
         const response = await sendReportRequest({
-            stationId: station.id,
+            stationId: stationId!,
             source: 'web_app',
         })
 
@@ -113,24 +115,26 @@ describe('Telegram notification', () => {
         expect(capturedRequests.length).toBe(1)
     })
 
-    it('does not send a Telegram notification if database insertion fails', async () => {
+    it('does not send a Telegram notification if the report is rejected', async () => {
         const response = await sendReportRequest({
-            stationId: 'invalid_id', // Triggers FK violation
+            stationId: 'invalid_id', // No such station in the network
             source: 'web_app',
         })
 
-        expect(response.status).toBe(500)
+        // Used to be a 500 from a foreign key violation. The station is now checked against the
+        // network before the insert, which turns a user mistake into a 422 instead of a server error.
+        expect(response.status).toBe(422)
         expect(capturedRequests.length).toBe(0)
     })
 })
 
 describe('Security Verification', () => {
     it('bypasses security check when the correct X-Password is provided', async () => {
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
+        const [stationId] = await pickStationIds(1)
         securityValidResponse = false // Even if security would have blocked it
 
         const response = await sendReportRequest({
-            stationId: station.id,
+            stationId: stationId!,
         })
 
         // Should succeed because password bypasses security service call
@@ -159,10 +163,10 @@ describe('Report API contract', () => {
     })
 
     it('returns only the created report', async () => {
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
+        const [stationId] = await pickStationIds(1)
 
         const response = await sendReportRequest({
-            stationId: station.id,
+            stationId: stationId!,
             source: 'web_app',
         })
 
@@ -184,7 +188,7 @@ describe('Report API contract', () => {
         }
 
         expect(typeof createdReport.reportId).toBe('number')
-        expect(createdReport.stationId).toBe(station.id)
+        expect(createdReport.stationId).toBe(stationId!)
         expect(createdReport).not.toHaveProperty('source')
         expect(createdReport.timestamp).toBeTruthy()
     })
@@ -193,31 +197,56 @@ describe('Report API contract', () => {
         // Ensure deterministic history for this test
         await db.delete(reports)
 
-        const [entry] = await db
-            .select({
-                stationId: lineStations.stationId,
-                lineId: lineStations.lineId,
-            })
-            .from(lineStations)
-            .limit(1)
-
-        const stationsOnLine = await db
-            .select({ stationId: lineStations.stationId })
-            .from(lineStations)
-            .where(eq(lineStations.lineId, entry.lineId))
-            .limit(3)
+        const entry = { lineId: await pickLineId() }
+        const stationsOnLine = (await pickStationIdsOnLine(entry.lineId, 3)).map((id) => ({ stationId: id }))
 
         const mostCommonStationId = stationsOnLine[0]!.stationId
         const lessCommonStationId = stationsOnLine[1]?.stationId ?? stationsOnLine[0]!.stationId
 
         await db.insert(reports).values([
             // Make one station clearly the most common for this line at the current time window
-            { stationId: mostCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: mostCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: mostCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: mostCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: mostCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: lessCommonStationId, lineId: entry.lineId, directionId: null, source: 'web_app' },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: mostCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: mostCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: mostCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: mostCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: mostCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: lessCommonStationId,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
         ])
 
         const response = await sendReportRequest({
@@ -244,7 +273,13 @@ describe('Report API contract', () => {
         const stationIsOnLine = await db
             .select({ stationId: lineStations.stationId })
             .from(lineStations)
-            .where(and(eq(lineStations.lineId, entry.lineId), eq(lineStations.stationId, body.stationId)))
+            .where(
+                and(
+                    eq(lineStations.networkId, DEFAULT_NETWORK_ID),
+                    eq(lineStations.lineId, entry.lineId),
+                    eq(lineStations.stationId, body.stationId)
+                )
+            )
             .limit(1)
 
         expect(stationIsOnLine.length).toBe(1)
@@ -254,19 +289,8 @@ describe('Report API contract', () => {
         // Ensure deterministic history
         await db.delete(reports)
 
-        const [entry] = await db
-            .select({
-                stationId: lineStations.stationId,
-                lineId: lineStations.lineId,
-            })
-            .from(lineStations)
-            .limit(1)
-
-        const stationsOnLine = await db
-            .select({ stationId: lineStations.stationId })
-            .from(lineStations)
-            .where(eq(lineStations.lineId, entry.lineId))
-            .limit(2)
+        const entry = { lineId: await pickLineId() }
+        const stationsOnLine = (await pickStationIdsOnLine(entry.lineId, 2)).map((id) => ({ stationId: id }))
 
         if (stationsOnLine.length < 2) return
 
@@ -277,8 +301,20 @@ describe('Report API contract', () => {
 
         // Insert equal number of reports for both stations to create a tie
         await db.insert(reports).values([
-            { stationId: station1, lineId: entry.lineId, directionId: null, source: 'web_app' },
-            { stationId: station2, lineId: entry.lineId, directionId: null, source: 'web_app' },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: station1,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
+            {
+                networkId: DEFAULT_NETWORK_ID,
+                stationId: station2,
+                lineId: entry.lineId,
+                directionId: null,
+                source: 'web_app',
+            },
         ])
 
         const response = await sendReportRequest({
@@ -295,10 +331,10 @@ describe('Report API contract', () => {
     })
 
     it('defaults to telegram source when source is missing in request', async () => {
-        const [station] = await db.select({ id: stations.id }).from(stations).limit(1)
+        const [stationId] = await pickStationIds(1)
 
         const response = await sendReportRequest({
-            stationId: station.id,
+            stationId: stationId!,
             // source is omitted
         })
 
@@ -315,13 +351,8 @@ describe('Report API contract', () => {
 
     it('can submit a report with a direction', async () => {
         // Find a valid line and station connection
-        const [entry] = await db
-            .select({
-                stationId: lineStations.stationId,
-                lineId: lineStations.lineId,
-            })
-            .from(lineStations)
-            .limit(1)
+        const lineId = await pickLineId()
+        const entry = { lineId, stationId: (await pickStationIdsOnLine(lineId, 1))[0]! }
 
         // Find the final station (direction) for this line
         const [finalStation] = await db
@@ -331,7 +362,7 @@ describe('Report API contract', () => {
             })
             .from(lineStations)
             .innerJoin(stations, eq(lineStations.stationId, stations.id))
-            .where(eq(lineStations.lineId, entry.lineId))
+            .where(and(eq(lineStations.networkId, DEFAULT_NETWORK_ID), eq(lineStations.lineId, entry.lineId)))
             .orderBy(desc(lineStations.order))
             .limit(1)
 
@@ -397,6 +428,7 @@ describe('Report Post Processing', () => {
     let stationWithMultipleLinesId: string
     let directionWithOneLineId: string
     let lineIdForStationWithOneLine: string
+    let lineIdForDirectionWithOneLine: string
     let stationNotOnLineId: string
     let stationOnSameLineAsStationWithOneLineId: string
     let stationWithMultipleLinesAndDirectionSharingSingleLine: string
@@ -412,9 +444,9 @@ describe('Report Post Processing', () => {
     beforeAll(async () => {
         await seedBaseData(db)
         const transitService = new TransitNetworkDataService(db)
-        stationsMap = await transitService.getStations()
+        stationsMap = await transitService.getStations(DEFAULT_NETWORK_ID)
         linesMap = Object.fromEntries(
-            Object.entries(await transitService.getLines()).map(([key, value]) => [key, value ?? []])
+            Object.entries(await transitService.getLines(DEFAULT_NETWORK_ID)).map(([key, value]) => [key, value ?? []])
         )
 
         const stationEntries = Object.entries(stationsMap)
@@ -424,16 +456,38 @@ describe('Report Post Processing', () => {
         stationWithOneLineId = stationWithOneLineEntry[0]
         lineIdForStationWithOneLine = stationWithOneLineEntry[1].lines[0]!
 
-        const stationWithMultipleLinesEntry = stationEntries.find(([, s]) => s.lines.length > 1)
-        if (!stationWithMultipleLinesEntry) throw new Error('No station with >1 lines found')
-        stationWithMultipleLinesId = stationWithMultipleLinesEntry[0]
+        /*
+         * The direction used below has to serve exactly one line, so that a report naming only a
+         * direction has one line to infer, and that line has to be one the multi line station also
+         * serves, so that "take the line from the direction" has something to take. Picking the two
+         * independently makes the tests pass or fail depending on which stations the seed happens to
+         * return first.
+         */
+        const stationAndDirectionPair = stationEntries
+            .filter(([, station]) => station.lines.length > 1)
+            .flatMap(([multiLineId, multiLineStation]) =>
+                stationEntries
+                    .filter(
+                        ([singleLineId, singleLineStation]) =>
+                            singleLineStation.lines.length === 1 &&
+                            singleLineId !== multiLineId &&
+                            multiLineStation.lines.includes(singleLineStation.lines[0]!)
+                    )
+                    .map(([singleLineId, singleLineStation]) => ({
+                        multiLineId,
+                        singleLineId,
+                        lineId: singleLineStation.lines[0]!,
+                    }))
+            )
+            .at(0)
 
-        // Find a different station for direction that has 1 line
-        const directionWithOneLineEntry = stationEntries.find(
-            ([id, s]) => s.lines.length === 1 && id !== stationWithOneLineId
-        )
-        // If we can't find a different one, reuse the first one (it's fine for testing direction logic usually)
-        directionWithOneLineId = directionWithOneLineEntry ? directionWithOneLineEntry[0] : stationWithOneLineId
+        if (!stationAndDirectionPair) {
+            throw new Error('No multi line station found that shares its line with a single line station')
+        }
+
+        stationWithMultipleLinesId = stationAndDirectionPair.multiLineId
+        directionWithOneLineId = stationAndDirectionPair.singleLineId
+        lineIdForDirectionWithOneLine = stationAndDirectionPair.lineId
 
         const stationNotOnLineEntry = stationEntries.find(([, s]) => !s.lines.includes(lineIdForStationWithOneLine))
         if (!stationNotOnLineEntry) throw new Error('No station found that is not on the selected line')
@@ -495,6 +549,35 @@ describe('Report Post Processing', () => {
         stationAfterMiddleId = lineWithMiddleStation[1][2]!
     })
 
+    /*
+     * A report that names only a direction has its station guessed from what was reported on that
+     * line before, so these cases need history for the line they use. They used to get it by
+     * accident, from reports that earlier tests in this file had left behind, which made them depend
+     * on both the order of the tests and on which station the fixture lookup happened to return.
+     */
+    beforeEach(async () => {
+        await db.delete(reports)
+
+        /* Dated well into the past on purpose. `guessStation` widens its window to the whole week,
+           so age does not affect the guess, but it keeps this history out of assertions that read
+           back the most recent report. */
+        const historicTimestamp = DateTime.utc().minus({ days: 3 }).toJSDate()
+
+        await db.insert(reports).values(
+            [
+                { stationId: stationWithOneLineId, lineId: lineIdForStationWithOneLine },
+                { stationId: directionWithOneLineId, lineId: lineIdForDirectionWithOneLine },
+            ].map(({ stationId, lineId }) => ({
+                networkId: DEFAULT_NETWORK_ID,
+                stationId,
+                lineId,
+                directionId: null,
+                timestamp: historicTimestamp,
+                source: 'web_app' as const,
+            }))
+        )
+    })
+
     it('rejects direction only payload when no line can be inferred', async () => {
         const response = await sendReportRequest({
             source: 'web_app',
@@ -518,7 +601,8 @@ describe('Report Post Processing', () => {
             .orderBy(desc(reports.timestamp))
             .limit(1)
 
-        expect(report.lineId).toBe(lineIdForStationWithOneLine)
+        // The inferred line is the direction's own, since that is the only one it can come from.
+        expect(report.lineId).toBe(lineIdForDirectionWithOneLine)
         expect(report.directionId).toBe(directionWithOneLineId)
     })
 
@@ -558,7 +642,11 @@ describe('Report Post Processing', () => {
             .orderBy(desc(reports.timestamp))
             .limit(1)
 
-        expect(report.directionId).toBe(stationOnSameLineAsStationWithOneLineId)
+        /* A mid route direction is normalised to the terminus it implies, so the assertion is that
+           the direction survived on the same line, not that it came back unchanged. Asserting the
+           exact id only held while the fixture happened to pick a terminus. */
+        expect(report.directionId).not.toBeNull()
+        expect(linesMap[lineIdForStationWithOneLine]).toContain(report.directionId!)
     })
 
     it('if no line present and station the station has more than one line it will use the line of the direction', async () => {

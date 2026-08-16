@@ -11,9 +11,10 @@ import { track } from '../../tracking'
 import { FFButton, FFText, FFView } from '../common/base'
 import { FFScrollSheet } from '../common/FFSheet'
 import { LanguageSwitcher } from '../common/LanguageSwitcher'
+import { NetworkSwitcher } from '../common/NetworkSwitcher'
 
 const SettingsSheet = forwardRef((_, ref: Ref<BottomSheetModalMethods>) => {
-    const { t } = useTranslation('settings')
+    const { t } = useTranslation(['settings', 'networks'])
 
     const openPrivacyPolicy = () => {
         track({ name: 'Privacy Policy Viewed', from: 'settings' })
@@ -28,18 +29,22 @@ const SettingsSheet = forwardRef((_, ref: Ref<BottomSheetModalMethods>) => {
     return (
         <FFScrollSheet ref={ref}>
             <FFText variant="header1" color="fg">
-                {t('title')}
+                {t('settings:title')}
             </FFText>
             <FFText variant="header2" mt="xs" mb="xxs">
-                {t('language')}
+                {t('networks:title')}
+            </FFText>
+            <NetworkSwitcher />
+            <FFText variant="header2" mt="xs" mb="xxs">
+                {t('settings:language')}
             </FFText>
             <LanguageSwitcher />
             <FFView flexDirection="row" gap="xs" mt="s">
                 <FFText variant="body" color="darkText" textDecorationLine="underline" onPress={openPrivacyPolicy}>
-                    {t('privacyPolicy')}
+                    {t('settings:privacyPolicy')}
                 </FFText>
                 <FFText variant="body" color="darkText" textDecorationLine="underline" onPress={openSupportPage}>
-                    {t('support')}
+                    {t('settings:support')}
                 </FFText>
             </FFView>
             <FFText variant="small" color="darkText" textAlign="center" mt="xs">

@@ -29,23 +29,38 @@
         "title": "Kontaktiere uns",
         "about-us": "Über uns",
         "about-us-text": "FreiFahren ist ein nicht-kommerzielles Open-Source-Projekt, das sich zum Ziel gesetzt hat, den Zugang zum öffentlichen Nahverkehr zu erleichtern. Wir sind stets offen für neue Mithelfende auf unserem",
-        "telegram-group-info": "Ein Großteil der Meldungen stammt aus der FreiFahren_BE Telegram-Gruppe. Vielen Dank an die Admins, dass wir mit unserem Telegram Bot die relevanten Informationen extrahieren dürfen."
+        "telegram-group-info": "Ein Großteil der Meldungen stammt aus den FreiFahren Telegram-Gruppen, für Berlin aus FreiFahren_BE. Vielen Dank an die Admins, dass wir mit unserem Telegram Bot die relevanten Informationen extrahieren dürfen."
     },
     "LayerSwitcher": {
         "risk": "Risiko",
         "lines": "Linien",
         "mode": "Modus"
     },
+    "Network": {
+        "title": "Netz",
+        "beta": "Beta",
+        "betaDescription": "{{network}} ist neu dabei. Du siehst hier nur echte Meldungen und keine vorhergesagten, deshalb ist die Karte leerer.",
+        "filterPlaceholder": "Stadt suchen",
+        "noMatch": "Kein Netz passt zu \"{{query}}\".",
+        "alsoServes": "Deckt außerdem ab: {{cities}}"
+    },
     "ReportForm": {
         "title": "Neue Meldung",
         "line": "Linie",
+        "modes": {
+            "subway": "U-Bahn",
+            "light_rail": "S-Bahn",
+            "tram": "Tram",
+            "train": "Zug",
+            "unknown": "Sonstige"
+        },
         "searchPlaceholder": "Suche nach einer Station",
         "station": "Station",
         "direction": "Richtung",
         "description": "Beschreibung",
         "descriptionPlaceholder": "Beschreibe die Situation...",
         "report": "Melden",
-        "syncText": "Meldung wird mit @FreiFahren_BE synchronisiert",
+        "syncText": "Meldung wird mit der Telegram-Gruppe synchronisiert",
         "validation": {
             "tooFarFromStation": "Du bist zu weit von der Station entfernt.",
             "waitBeforeNextReport": "Warte noch, bevor du eine neue Meldung erstellst."
@@ -77,19 +92,19 @@
         "fromYou": " entfernt",
         "direction": "Richtung",
         "inviteText": "Daten vielleicht ungenau.",
-        "syncText": "Meldungen mit @FreiFahren_BE synchronisert"
+        "syncText": "Meldungen werden mit der Telegram-Gruppe synchronisiert"
     },
     "Share": {
         "title": "Schau dir mal diese App an.",
-        "text": "Siehe, wo Kontrolleure in Berlin sind!\n\nHier ist eine Meldung:\nStation: {{station}}\nRichtung: {{direction}}\nLinie: {{line}}\nZeit: {{time}}",
+        "text": "Siehe, wo Kontrolleure in {{network}} sind!\n\nHier ist eine Meldung:\nStation: {{station}}\nRichtung: {{direction}}\nLinie: {{line}}\nZeit: {{time}}",
         "button": "App Teilen",
         "copied": "Link kopiert!"
     },
     "StatsPopUp": {
         "reports": "Meldungen",
-        "todayInBerlin": "heute in Berlin",
+        "todayInNetwork": "heute in {{network}}",
         "over": "Über",
-        "inBerlin": "in Berlin",
+        "inNetwork": "in {{network}}",
         "reporters": "Meldende"
     },
     "ReportsModal": {
@@ -117,7 +132,7 @@
         "sections": {
             "preamble": {
                 "title": "1. Präambel",
-                "content": "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten in der mobilen Anwendung \"Freifahren\" (im Folgenden \"App\"). Die App ermöglicht es Nutzern, Vorfälle im öffentlichen Nahverkehr zu melden und diese Informationen anderen Nutzern zur Verfügung zu stellen. Zudem werden Meldungen durch das nicht deterministische und anonymisierte Auswerten der Nachrichten der Freifahren_BE Telegram-Gruppe generiert."
+                "content": "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten in der mobilen Anwendung \"Freifahren\" (im Folgenden \"App\"). Die App ermöglicht es Nutzern, Vorfälle im öffentlichen Nahverkehr zu melden und diese Informationen anderen Nutzern zur Verfügung zu stellen. Zudem werden Meldungen durch das nicht deterministische und anonymisierte Auswerten der Nachrichten der FreiFahren Telegram-Gruppe des jeweiligen Netzes generiert."
             },
             "responsible": {
                 "title": "2. Verantwortliche Stelle",
@@ -142,7 +157,7 @@
                     "Beschreibungstext (optional)",
                     "IP-Adresse des Nutzers"
                 ],
-                "reportPurpose": "Die gemeldeten Daten werden anderen Nutzern der App temporär zur Verfügung gestellt, um ihnen die Möglichkeit zu geben, sich über die aktuelle Situation in den öffentlichen Verkehrsmitteln zu informieren. Des Weiteren werden die Meldungen in die Freifahren_BE Telegram-Gruppe weitergeleitet. Diese Datenübermittlung dient dem Austausch und der Information über Vorfälle innerhalb der Community.",
+                "reportPurpose": "Die gemeldeten Daten werden anderen Nutzern der App temporär zur Verfügung gestellt, um ihnen die Möglichkeit zu geben, sich über die aktuelle Situation in den öffentlichen Verkehrsmitteln zu informieren. Des Weiteren werden die Meldungen in die FreiFahren Telegram-Gruppe des jeweiligen Netzes weitergeleitet. Diese Datenübermittlung dient dem Austausch und der Information über Vorfälle innerhalb der Community.",
                 "ipAddressInfo": "Die IP-Adresse wird verwendet, um Spam und Missbrauchsmeldungen zu erkennen, um sicherzustellen, dass die Meldungen von echten Nutzern und nicht von Bots oder anderen automatischen Quellen stammen. IP-Adressen werden in stark verschlüsselter Form für maximal {{ minutes }} Minuten gespeichert und dann gelöscht. Sie sind nicht mit anderen Daten verknüpft und können nicht auf den Nutzer zurückverfolgt werden.",
                 "feedbackFormTitle": "Bei der Übermittlung von Feedback:",
                 "feedbackDataPoints": [
@@ -177,7 +192,7 @@
             },
             "telegramMessages": {
                 "title": "11. Verarbeitung von Telegram-Nachrichten",
-                "content": "Durch den Freifahren Telegram Bot werden Nachrichten aus der Freifahren_BE-Gruppe mit Zustimmung der Administratoren ausgewertet. Die Nachrichten werden nicht gespeichert und nur für die Echtzeit-Auswertung verwendet. Es werden lediglich die nicht deterministisch extrahierten Informationen (Richtung, Linie und Station) aus den Nachrichten gespeichert. Die Uhrzeit wird abgerundet, um die Anonymität zu gewährleisten."
+                "content": "Durch den Freifahren Telegram Bot werden Nachrichten aus den FreiFahren Gruppen mit Zustimmung der jeweiligen Administratoren ausgewertet. Die Nachrichten werden nicht gespeichert und nur für die Echtzeit-Auswertung verwendet. Es werden lediglich die nicht deterministisch extrahierten Informationen (Richtung, Linie und Station) aus den Nachrichten gespeichert. Die Uhrzeit wird abgerundet, um die Anonymität zu gewährleisten."
             },
             "analytics": {
                 "title": "12. Einsatz von Analysetools",
@@ -205,7 +220,7 @@
         "title": "Danke für deine Meldung!",
         "description": "Menschen schätzen deine Hilfe!",
         "button": "Weiter",
-        "syncText": "Die Meldung wird mit @FreiFahren_BE synchronisiert"
+        "syncText": "Die Meldung wird mit der Telegram-Gruppe synchronisiert"
     },
     "FeedbackButton": {
         "text": "Feedback?"

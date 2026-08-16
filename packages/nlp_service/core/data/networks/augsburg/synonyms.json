@@ -1,0 +1,246 @@
+{
+    "Afrabrücke": [],
+    "Alpenhof": [],
+    "Am Eiskanal": [
+        "Eiskanal"
+    ],
+    "Augsburg West P+R": [],
+    "Augsburg-Oberhausen": [],
+    "BBW/Inst. für Physik": [],
+    "Beim Dürren Ast": [],
+    "Bergstraße": [
+        "Berg",
+        "Bergstr.",
+        "Bergstrasse"
+    ],
+    "Bergstraße Bahnsteig D": [],
+    "Berliner Allee": [
+        "Berliner"
+    ],
+    "Berufsschule": [],
+    "Brahmsstraße": [
+        "Brahms",
+        "Brahmsstr.",
+        "Brahmsstrasse"
+    ],
+    "Bukowina-Institut / PCI": [],
+    "Burgfrieden": [],
+    "Bärenwirt/DRvS": [],
+    "Bürgermeister-Bohl-Straße": [
+        "Bürgermeister-Bohl-",
+        "Bürgermeister-Bohl-str.",
+        "Bürgermeister-Bohl-strasse"
+    ],
+    "Curt-Frenzel-Stadion": [],
+    "Curtiusstraße": [
+        "Curtius",
+        "Curtiusstr.",
+        "Curtiusstrasse"
+    ],
+    "Dom/Stadtwerke": [],
+    "Drentwettstraße": [
+        "Drentwett",
+        "Drentwettstr.",
+        "Drentwettstrasse"
+    ],
+    "Eberlestraße": [
+        "Eberle",
+        "Eberlestr.",
+        "Eberlestrasse"
+    ],
+    "Eschenhof": [],
+    "Fachoberschule": [],
+    "Fischertor": [],
+    "Friedberg West P+R (A)": [],
+    "Frohsinnstraße": [
+        "Frohsinn",
+        "Frohsinnstr.",
+        "Frohsinnstrasse"
+    ],
+    "Fujitsu/Bischofsackerweg": [],
+    "Fußball-Arena": [],
+    "Gärtnerstraße": [
+        "Gärtner",
+        "Gärtnerstr.",
+        "Gärtnerstrasse"
+    ],
+    "Göggingen": [],
+    "Göggingen Rathaus": [
+        "Göggingen"
+    ],
+    "Haunstetten Nord": [
+        "Haunstetten"
+    ],
+    "Haunstetten Südwest": [
+        "Haunstetten"
+    ],
+    "Haunstetter Straße Bf": [],
+    "Hauptbahnhof (B)": [
+        "Hauptbahnhof"
+    ],
+    "Heimgarten": [],
+    "Herz-Jesu-Kirche": [],
+    "Hessing-Kliniken": [],
+    "Hessing-Kliniken Ersatzhaltestelle": [
+        "Hessing-Kliniken"
+    ],
+    "Hochzoll Mitte": [
+        "Hochzoll"
+    ],
+    "Hofackerstraße": [
+        "Hofacker",
+        "Hofackerstr.",
+        "Hofackerstrasse"
+    ],
+    "Hötzelstraße": [
+        "Hötzel",
+        "Hötzelstr.",
+        "Hötzelstrasse"
+    ],
+    "Inninger Straße P+R": [],
+    "Innovationspark/LfU": [],
+    "Jakobertor": [],
+    "KUKA/ Partnachweg": [
+        "KUKA/"
+    ],
+    "Klausenberg": [],
+    "Klinkertor": [],
+    "Kongress am Park": [],
+    "Kopernikusstraße": [
+        "Kopernikus",
+        "Kopernikusstr.",
+        "Kopernikusstrasse"
+    ],
+    "Kriegshaber": [],
+    "Kulturstraße": [
+        "Kultur",
+        "Kulturstr.",
+        "Kulturstrasse"
+    ],
+    "Königsbrunn Augsburger Straße": [
+        "Königsbrunn Augsburger",
+        "Königsbrunn Augsburger Str.",
+        "Königsbrunn Augsburger Strasse"
+    ],
+    "Königsbrunn Bereitschaftspolizei": [
+        "Königsbrunn"
+    ],
+    "Königsbrunn Guldenstraße": [
+        "Königsbrunn Gulden",
+        "Königsbrunn Guldenstr.",
+        "Königsbrunn Guldenstrasse"
+    ],
+    "Königsbrunn Mindelheimer Straße": [
+        "Königsbrunn Mindelheimer",
+        "Königsbrunn Mindelheimer Str.",
+        "Königsbrunn Mindelheimer Strasse"
+    ],
+    "Königsbrunn Zentrum": [
+        "Königsbrunn"
+    ],
+    "Königsplatz": [
+        "Königs",
+        "Königsplz"
+    ],
+    "Lechhausen Neuer Ostfriedhof": [],
+    "Lechhausen Schlößle": [
+        "Lechhausen"
+    ],
+    "Luitpoldbrücke": [],
+    "Maria Stern": [
+        "Maria"
+    ],
+    "Maria-Alber": [],
+    "Messezentrum": [],
+    "Moritzplatz": [
+        "Moritz",
+        "Moritzplz"
+    ],
+    "Mozarthaus/Kolping": [],
+    "Neusässer Straße": [
+        "Neusässer",
+        "Neusässer Str.",
+        "Neusässer Strasse"
+    ],
+    "Oberhausen Nord P+R": [],
+    "Pfersee": [],
+    "Pilgerhausstraße": [
+        "Pilgerhaus",
+        "Pilgerhausstr.",
+        "Pilgerhausstrasse"
+    ],
+    "Plärrer P+R": [
+        "Plärrer"
+    ],
+    "Polizeipräsidium": [],
+    "Rosenaustraße": [
+        "Rosenau",
+        "Rosenaustr.",
+        "Rosenaustrasse"
+    ],
+    "Rotes Tor": [
+        "Rotes"
+    ],
+    "Rudolf-Diesel-Gymnasium": [],
+    "Schertlinstraße": [
+        "Schertlin",
+        "Schertlinstr.",
+        "Schertlinstrasse"
+    ],
+    "Schleiermacherstraße": [
+        "Schleiermacher",
+        "Schleiermacherstr.",
+        "Schleiermacherstrasse"
+    ],
+    "Schwaben Center": [
+        "Schwaben"
+    ],
+    "Schärtlstraße": [
+        "Schärtl",
+        "Schärtlstr.",
+        "Schärtlstrasse"
+    ],
+    "Senkelbach": [],
+    "Sportanlage Süd P+R (Ersatz-/Nachtbus)": [],
+    "St. Thaddäus": [
+        "St."
+    ],
+    "Staatstheater": [],
+    "Stadtbergen (D)": [
+        "Stadtbergen"
+    ],
+    "Stadtberger Hof": [
+        "Stadtberger"
+    ],
+    "Stenglinstraße": [
+        "Stenglin",
+        "Stenglinstr.",
+        "Stenglinstrasse"
+    ],
+    "Technische Hochschule Augsburg": [],
+    "Textilmuseum": [],
+    "Theodor-Heuss-Platz / IHK": [],
+    "Ulrichsbrücke": [],
+    "Uniklinik BKH": [
+        "Uniklinik"
+    ],
+    "Universität": [],
+    "Volkssiedlung": [],
+    "Von-Parseval-Straße": [
+        "Von-Parseval-",
+        "Von-Parseval-str.",
+        "Von-Parseval-strasse"
+    ],
+    "Wertachbrücke": [],
+    "Westfriedhof": [],
+    "Wilhelm-Hauff-Straße": [
+        "Wilhelm-Hauff-",
+        "Wilhelm-Hauff-str.",
+        "Wilhelm-Hauff-strasse"
+    ],
+    "Zollernstraße": [
+        "Zollern",
+        "Zollernstr.",
+        "Zollernstrasse"
+    ]
+}

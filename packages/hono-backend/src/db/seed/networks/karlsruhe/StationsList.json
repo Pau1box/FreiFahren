@@ -1,0 +1,3805 @@
+{
+    "n15002995": {
+        "coordinates": {
+            "latitude": 48.73478826,
+            "longitude": 8.14570042
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Steinbach Rebland"
+    },
+    "n17329746": {
+        "coordinates": {
+            "latitude": 49.11964033333334,
+            "longitude": 8.409417933333332
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Linkenheim Friedrichstraße"
+    },
+    "RDUN": {
+        "coordinates": {
+            "latitude": 48.9374325,
+            "longitude": 8.2801126
+        },
+        "lines": [
+            "S7",
+            "S8"
+        ],
+        "name": "Durmersheim Nord"
+    },
+    "RDRM": {
+        "coordinates": {
+            "latitude": 48.929004,
+            "longitude": 8.2728204
+        },
+        "lines": [
+            "S7",
+            "S8"
+        ],
+        "name": "Durmersheim"
+    },
+    "RBIE": {
+        "coordinates": {
+            "latitude": 48.9105044,
+            "longitude": 8.2580097
+        },
+        "lines": [
+            "S7",
+            "S8"
+        ],
+        "name": "Bietigheim"
+    },
+    "ROH": {
+        "coordinates": {
+            "latitude": 48.8885902,
+            "longitude": 8.2405018
+        },
+        "lines": [
+            "S7",
+            "S8"
+        ],
+        "name": "Ötigheim"
+    },
+    "RRAB": {
+        "coordinates": {
+            "latitude": 48.8521619,
+            "longitude": 8.2250752
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Rastatt Beinle"
+    },
+    "RKU": {
+        "coordinates": {
+            "latitude": 48.8340378,
+            "longitude": 8.2563705
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Kuppenheim"
+    },
+    "RGG": {
+        "coordinates": {
+            "latitude": 48.8055136,
+            "longitude": 8.3202802
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Gaggenau"
+    },
+    "RDAI": {
+        "coordinates": {
+            "latitude": 48.7980444,
+            "longitude": 8.3274417
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Gaggenau Mercedes-Benz-Werk"
+    },
+    "ROTU": {
+        "coordinates": {
+            "latitude": 48.7928699,
+            "longitude": 8.3383585
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Ottenau"
+    },
+    "RGS": {
+        "coordinates": {
+            "latitude": 48.7685903,
+            "longitude": 8.3368619
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Gernsbach"
+    },
+    "RBSN": {
+        "coordinates": {
+            "latitude": 48.5036168,
+            "longitude": 8.37202925
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Baiersbronn"
+    },
+    "RRT": {
+        "coordinates": {
+            "latitude": 48.5557083,
+            "longitude": 8.3974067
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Röt"
+    },
+    "RHUB": {
+        "coordinates": {
+            "latitude": 48.582591050000005,
+            "longitude": 8.39123595
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Huzenbach"
+    },
+    "RSW": {
+        "coordinates": {
+            "latitude": 48.598837200000006,
+            "longitude": 8.3836708
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Schwarzenberg"
+    },
+    "ROT": {
+        "coordinates": {
+            "latitude": 48.7459862,
+            "longitude": 8.3474758
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Obertsrot"
+    },
+    "RWSA": {
+        "coordinates": {
+            "latitude": 48.7189278,
+            "longitude": 8.3622873
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Au im Murgtal"
+    },
+    "n19115753": {
+        "coordinates": {
+            "latitude": 48.99493193333333,
+            "longitude": 8.389639133333333
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Barbarossaplatz"
+    },
+    "RRA": {
+        "coordinates": {
+            "latitude": 48.8607543,
+            "longitude": 8.2160354
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Rastatt"
+    },
+    "RSZM": {
+        "coordinates": {
+            "latitude": 48.759779,
+            "longitude": 8.1584224
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Sinzheim"
+    },
+    "RBUE": {
+        "coordinates": {
+            "latitude": 48.6965497,
+            "longitude": 8.1293225
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Bühl (Baden)"
+    },
+    "n21586012": {
+        "coordinates": {
+            "latitude": 48.9839007,
+            "longitude": 8.549653800000002
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Söllingen Kapellenstraße"
+    },
+    "n21596341": {
+        "coordinates": {
+            "latitude": 49.004422039999994,
+            "longitude": 8.44143236
+        },
+        "lines": [
+            "1",
+            "5",
+            "E",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Weinweg"
+    },
+    "n21596346": {
+        "coordinates": {
+            "latitude": 49.00649692857143,
+            "longitude": 8.4320415
+        },
+        "lines": [
+            "1",
+            "5",
+            "E",
+            "NL1",
+            "NL2",
+            "S12",
+            "S2",
+            "S4",
+            "S5",
+            "S51",
+            "S7",
+            "S8"
+        ],
+        "name": "Tullastraße/Alter Schlachthof"
+    },
+    "n21618138": {
+        "coordinates": {
+            "latitude": 49.00747604,
+            "longitude": 8.424957840000001
+        },
+        "lines": [
+            "1",
+            "NL1",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51",
+            "S7",
+            "S8"
+        ],
+        "name": "Gottesauer Platz/BGV"
+    },
+    "n23703985": {
+        "coordinates": {
+            "latitude": 48.98102026666667,
+            "longitude": 8.4038126
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Schloss Rüppurr"
+    },
+    "n23707296": {
+        "coordinates": {
+            "latitude": 48.9844656,
+            "longitude": 8.403627
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Dammerstock"
+    },
+    "n25033878": {
+        "coordinates": {
+            "latitude": 48.9939845875,
+            "longitude": 8.3956683
+        },
+        "lines": [
+            "3",
+            "6",
+            "NL2",
+            "S1",
+            "S11",
+            "S12",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Ebertstraße"
+    },
+    "RKW": {
+        "coordinates": {
+            "latitude": 49.00227115,
+            "longitude": 8.36292305
+        },
+        "lines": [
+            "S52"
+        ],
+        "name": "Karlsruhe West"
+    },
+    "n25345182": {
+        "coordinates": {
+            "latitude": 49.015362616666664,
+            "longitude": 8.374838866666666
+        },
+        "lines": [
+            "2",
+            "E",
+            "S1",
+            "S11"
+        ],
+        "name": "Moltkestraße/Städtisches Klinikum"
+    },
+    "n25345184": {
+        "coordinates": {
+            "latitude": 49.02399773333334,
+            "longitude": 8.375743866666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "August-Bebel-Straße"
+    },
+    "n25345200": {
+        "coordinates": {
+            "latitude": 49.044664399999995,
+            "longitude": 8.373947066666666
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Welschneureuter Straße"
+    },
+    "n25346135": {
+        "coordinates": {
+            "latitude": 49.018852966666664,
+            "longitude": 8.375358066666665
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Knielinger Allee/Städtisches Klinikum"
+    },
+    "n25346136": {
+        "coordinates": {
+            "latitude": 49.030145833333336,
+            "longitude": 8.376281833333334
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Kurt-Schumacher-Straße"
+    },
+    "n25346140": {
+        "coordinates": {
+            "latitude": 49.050662933333335,
+            "longitude": 8.384907433333334
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Adolf-Ehrmann-Bad"
+    },
+    "n25346776": {
+        "coordinates": {
+            "latitude": 49.036312333333335,
+            "longitude": 8.388074966666666
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Neureut-Heide"
+    },
+    "n25420900": {
+        "coordinates": {
+            "latitude": 49.01564486666666,
+            "longitude": 8.443269833333334
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Rintheim"
+    },
+    "n25449100": {
+        "coordinates": {
+            "latitude": 49.1197746,
+            "longitude": 8.274232533333334
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Rheinzabern Bahnhof"
+    },
+    "RDBG": {
+        "coordinates": {
+            "latitude": 49.02393515,
+            "longitude": 8.64804335
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Dürrenbüchig"
+    },
+    "n25479595": {
+        "coordinates": {
+            "latitude": 49.01574906666667,
+            "longitude": 8.609802466666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Wössingen Ost"
+    },
+    "RWSN": {
+        "coordinates": {
+            "latitude": 49.01553716666666,
+            "longitude": 8.604569333333332
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Wössingen Bahnhof"
+    },
+    "RGE": {
+        "coordinates": {
+            "latitude": 49.225881475,
+            "longitude": 8.364650825
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Germersheim"
+    },
+    "n25623273": {
+        "coordinates": {
+            "latitude": 48.99610943333334,
+            "longitude": 8.3381787
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Karl-Delisle-Straße"
+    },
+    "n25623447": {
+        "coordinates": {
+            "latitude": 48.99282843333333,
+            "longitude": 8.335323266666668
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Dornröschenweg"
+    },
+    "n25812907": {
+        "coordinates": {
+            "latitude": 48.623047799999995,
+            "longitude": 8.3557364
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Kirschbaumwasen"
+    },
+    "RRMZ": {
+        "coordinates": {
+            "latitude": 48.644702124999995,
+            "longitude": 8.3513478
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Raumünzach"
+    },
+    "RFCH": {
+        "coordinates": {
+            "latitude": 48.680346,
+            "longitude": 8.3614868
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Forbach (Schwarzwald)"
+    },
+    "n25813042": {
+        "coordinates": {
+            "latitude": 48.68663645,
+            "longitude": 8.3624333
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Gausbach"
+    },
+    "RWSB": {
+        "coordinates": {
+            "latitude": 48.72727,
+            "longitude": 8.3552946
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Weisenbach"
+    },
+    "RHOR": {
+        "coordinates": {
+            "latitude": 48.7814781,
+            "longitude": 8.3451792
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Hörden"
+    },
+    "RFRT": {
+        "coordinates": {
+            "latitude": 48.48166635,
+            "longitude": 8.3768466
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Friedrichstal (bei Freudenstadt)"
+    },
+    "TFS": {
+        "coordinates": {
+            "latitude": 48.4602757,
+            "longitude": 8.4285551
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Freudenstadt Hauptbahnhof"
+    },
+    "TFSZ": {
+        "coordinates": {
+            "latitude": 48.467419899999996,
+            "longitude": 8.421243650000001
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Freudenstadt Schulzentrum/Panoramabad"
+    },
+    "TFSS": {
+        "coordinates": {
+            "latitude": 48.4675737,
+            "longitude": 8.41095455
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Freudenstadt Stadt"
+    },
+    "RBSS": {
+        "coordinates": {
+            "latitude": 48.510650049999995,
+            "longitude": 8.375913449999999
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Baiersbronn Schule"
+    },
+    "RHLT": {
+        "coordinates": {
+            "latitude": 48.7399894,
+            "longitude": 8.3486793
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Hilpertsau"
+    },
+    "RBIS": {
+        "coordinates": {
+            "latitude": 48.8321778,
+            "longitude": 8.2775255
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bischweier (Baden)"
+    },
+    "RRO": {
+        "coordinates": {
+            "latitude": 48.8157542,
+            "longitude": 8.303228
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bad Rotenfels Bahnhof/Rotherma"
+    },
+    "RROW": {
+        "coordinates": {
+            "latitude": 48.8112453,
+            "longitude": 8.3124966
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bad Rotenfels Weinbrennerstraße"
+    },
+    "TPH": {
+        "coordinates": {
+            "latitude": 48.8940734,
+            "longitude": 8.7031295
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Pforzheim Hauptbahnhof"
+    },
+    "n26001492": {
+        "coordinates": {
+            "latitude": 49.07580003333334,
+            "longitude": 8.398001166666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Eggenstein"
+    },
+    "n26009088": {
+        "coordinates": {
+            "latitude": 49.100935433333326,
+            "longitude": 8.403873466666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Leopoldshafen Frankfurter Straße"
+    },
+    "n26022709": {
+        "coordinates": {
+            "latitude": 49.1168562,
+            "longitude": 8.4115655
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Linkenheim Süd"
+    },
+    "n26022733": {
+        "coordinates": {
+            "latitude": 49.12759375,
+            "longitude": 8.4135655
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Linkenheim Schulzentrum"
+    },
+    "n26022737": {
+        "coordinates": {
+            "latitude": 49.1295533,
+            "longitude": 8.415716133333333
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Hochstetten Grenzstraße"
+    },
+    "n26022745": {
+        "coordinates": {
+            "latitude": 49.1329811,
+            "longitude": 8.41720602
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Hochstetten Altenheim"
+    },
+    "n26041856": {
+        "coordinates": {
+            "latitude": 49.01427386666666,
+            "longitude": 8.385688033333333
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Kunstakademie / Hochschule Karlsruhe"
+    },
+    "n26043046": {
+        "coordinates": {
+            "latitude": 48.99917083333333,
+            "longitude": 8.385986099999998
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "ZKM"
+    },
+    "n26043058": {
+        "coordinates": {
+            "latitude": 49.00572945714286,
+            "longitude": 8.377536571428573
+        },
+        "lines": [
+            "2",
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Weinbrennerplatz"
+    },
+    "n26460212": {
+        "coordinates": {
+            "latitude": 48.99873286666667,
+            "longitude": 8.376315166666666
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Europahalle/Europabad"
+    },
+    "n26468371": {
+        "coordinates": {
+            "latitude": 49.01065778571428,
+            "longitude": 8.358935071428572
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Entenfang"
+    },
+    "n26468446": {
+        "coordinates": {
+            "latitude": 49.006015133333335,
+            "longitude": 8.350817233333332
+        },
+        "lines": [
+            "3",
+            "E",
+            "S2"
+        ],
+        "name": "Eckenerstraße"
+    },
+    "n26468475": {
+        "coordinates": {
+            "latitude": 49.00776216666666,
+            "longitude": 8.339249433333334
+        },
+        "lines": [
+            "3",
+            "E"
+        ],
+        "name": "Mauerweg"
+    },
+    "TWL": {
+        "coordinates": {
+            "latitude": 48.95374193333333,
+            "longitude": 8.5728584
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Wilferdingen-Singen"
+    },
+    "n26594767": {
+        "coordinates": {
+            "latitude": 48.482396249999994,
+            "longitude": 8.723825
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Hochdorf (bei Horb)"
+    },
+    "TPHM": {
+        "coordinates": {
+            "latitude": 48.8933799,
+            "longitude": 8.6782873
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Pforzheim Maihälden"
+    },
+    "n26609267": {
+        "coordinates": {
+            "latitude": 48.95307766666667,
+            "longitude": 8.400592000000001
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Ettlingen Neuwiesenreben"
+    },
+    "TPBW": {
+        "coordinates": {
+            "latitude": 48.8820194,
+            "longitude": 8.6538912
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Brötzingen Wohnlichstraße"
+    },
+    "TBIR": {
+        "coordinates": {
+            "latitude": 48.8737296,
+            "longitude": 8.645259
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Birkenfeld (Württ)"
+    },
+    "TNE": {
+        "coordinates": {
+            "latitude": 48.84914345,
+            "longitude": 8.6009575
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Neuenbürg (Württ)"
+    },
+    "TNES": {
+        "coordinates": {
+            "latitude": 48.8445744,
+            "longitude": 8.5989195
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Neuenbürg Süd"
+    },
+    "TNEB": {
+        "coordinates": {
+            "latitude": 48.8369523,
+            "longitude": 8.5904817
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Neuenbürg (Württ.) Freibad"
+    },
+    "TRY": {
+        "coordinates": {
+            "latitude": 48.8301792,
+            "longitude": 8.5788663
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Rotenbach (Enz)"
+    },
+    "TNEE": {
+        "coordinates": {
+            "latitude": 48.8172354,
+            "longitude": 8.5779048
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Neuenbürg (Württ.) Eyachbrücke"
+    },
+    "n26619506": {
+        "coordinates": {
+            "latitude": 48.8089625,
+            "longitude": 8.44403125
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Bad Herrenalb Kullenmühle"
+    },
+    "n26619518": {
+        "coordinates": {
+            "latitude": 48.8201112,
+            "longitude": 8.4451149
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Bad Herrenalb Steinhäusle"
+    },
+    "n26619565": {
+        "coordinates": {
+            "latitude": 48.8633158,
+            "longitude": 8.447321
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Marxzell"
+    },
+    "n26619612": {
+        "coordinates": {
+            "latitude": 48.9140167,
+            "longitude": 8.457575633333333
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Etzenrot"
+    },
+    "n26619627": {
+        "coordinates": {
+            "latitude": 48.92930286666666,
+            "longitude": 8.450580166666667
+        },
+        "lines": [
+            "S1",
+            "S11",
+            "S12"
+        ],
+        "name": "Busenbach"
+    },
+    "n26619634": {
+        "coordinates": {
+            "latitude": 48.934642733333334,
+            "longitude": 8.4419697
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Ettlingen Spinnerei"
+    },
+    "n26619655": {
+        "coordinates": {
+            "latitude": 48.93851777142857,
+            "longitude": 8.409163128571429
+        },
+        "lines": [
+            "S1",
+            "S11",
+            "S12"
+        ],
+        "name": "Ettlingen Stadt"
+    },
+    "n26619659": {
+        "coordinates": {
+            "latitude": 48.940956166666666,
+            "longitude": 8.404140233333335
+        },
+        "lines": [
+            "S1",
+            "S11",
+            "S12"
+        ],
+        "name": "Ettlingen Erbprinz"
+    },
+    "n26619686": {
+        "coordinates": {
+            "latitude": 48.96517923333334,
+            "longitude": 8.4048192
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Battstraße"
+    },
+    "n26619688": {
+        "coordinates": {
+            "latitude": 48.971054466666665,
+            "longitude": 8.4040233
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Tulpenstraße"
+    },
+    "n26619701": {
+        "coordinates": {
+            "latitude": 48.97579343333333,
+            "longitude": 8.406611733333333
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Ostendorfplatz"
+    },
+    "n27335243": {
+        "coordinates": {
+            "latitude": 48.96743652,
+            "longitude": 8.3046993
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Rösselsbrünnle"
+    },
+    "n27347990": {
+        "coordinates": {
+            "latitude": 48.96140225,
+            "longitude": 8.2974155
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Römerstraße"
+    },
+    "n27347995": {
+        "coordinates": {
+            "latitude": 48.95846543333334,
+            "longitude": 8.294299466666667
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Rheinaustraße"
+    },
+    "n28782022": {
+        "coordinates": {
+            "latitude": 49.01121543333333,
+            "longitude": 8.369395733333334
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Händelstraße"
+    },
+    "n28783859": {
+        "coordinates": {
+            "latitude": 49.02027666666667,
+            "longitude": 8.350753
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Mühlburg West"
+    },
+    "n29020046": {
+        "coordinates": {
+            "latitude": 49.0252921,
+            "longitude": 8.346248166666667
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Siemens"
+    },
+    "n29422243": {
+        "coordinates": {
+            "latitude": 48.945249000000004,
+            "longitude": 8.39873995
+        },
+        "lines": [
+            "S1",
+            "S11",
+            "S12"
+        ],
+        "name": "Ettlingen Wasen"
+    },
+    "n29461580": {
+        "coordinates": {
+            "latitude": 48.9368682,
+            "longitude": 8.415129166666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Ettlingen Albgaubad"
+    },
+    "n29932625": {
+        "coordinates": {
+            "latitude": 49.034224083333335,
+            "longitude": 8.337412666666667
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Eggensteiner Straße"
+    },
+    "n29947691": {
+        "coordinates": {
+            "latitude": 49.01720983333333,
+            "longitude": 8.438913733333335
+        },
+        "lines": [
+            "4",
+            "NL1"
+        ],
+        "name": "Hirtenweg - Technologiepark"
+    },
+    "n30030050": {
+        "coordinates": {
+            "latitude": 49.01094116666667,
+            "longitude": 8.375632383333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E",
+            "S1",
+            "S11",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Yorckstraße"
+    },
+    "n31097729": {
+        "coordinates": {
+            "latitude": 48.91519566666667,
+            "longitude": 8.503108733333333
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Langensteinbach Bahnhof"
+    },
+    "RITI": {
+        "coordinates": {
+            "latitude": 48.88480083333334,
+            "longitude": 8.508690333333334
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Ittersbach Industrie"
+    },
+    "n31098595": {
+        "coordinates": {
+            "latitude": 48.86916600000001,
+            "longitude": 8.511066233333333
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Ittersbach"
+    },
+    "n31099476": {
+        "coordinates": {
+            "latitude": 49.00198542,
+            "longitude": 8.455425479999999
+        },
+        "lines": [
+            "1",
+            "5",
+            "E",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Untermühlstraße"
+    },
+    "n31100886": {
+        "coordinates": {
+            "latitude": 48.999233177777775,
+            "longitude": 8.476359388888888
+        },
+        "lines": [
+            "1",
+            "2",
+            "8",
+            "E",
+            "NL2"
+        ],
+        "name": "Karl-Weysser-Straße"
+    },
+    "n31235625": {
+        "coordinates": {
+            "latitude": 48.995263333333334,
+            "longitude": 8.3853499
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Welfenstraße"
+    },
+    "n31235991": {
+        "coordinates": {
+            "latitude": 49.007655066666665,
+            "longitude": 8.364213999999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Mühlburger Feld"
+    },
+    "n31263712": {
+        "coordinates": {
+            "latitude": 49.0113126,
+            "longitude": 8.423197933333334
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Karl-Wilhelm-Platz"
+    },
+    "n31410939": {
+        "coordinates": {
+            "latitude": 49.02772566666667,
+            "longitude": 8.350018766666667
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Siemensallee"
+    },
+    "n31411605": {
+        "coordinates": {
+            "latitude": 49.019940633333334,
+            "longitude": 8.364313866666667
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Hertzstraße"
+    },
+    "n31925686": {
+        "coordinates": {
+            "latitude": 48.88592095,
+            "longitude": 8.66261425
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Brötzingen Sandweg"
+    },
+    "n31991824": {
+        "coordinates": {
+            "latitude": 49.011407866666666,
+            "longitude": 8.364663233333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Philippstraße"
+    },
+    "n31992592": {
+        "coordinates": {
+            "latitude": 49.013180675,
+            "longitude": 8.3546321
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E",
+            "S5",
+            "S51"
+        ],
+        "name": "Lameyplatz"
+    },
+    "n31992841": {
+        "coordinates": {
+            "latitude": 49.01679253333333,
+            "longitude": 8.352863833333332
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Starckstraße"
+    },
+    "n31993486": {
+        "coordinates": {
+            "latitude": 49.0304242,
+            "longitude": 8.341200166666667
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Herweghstraße"
+    },
+    "RGSD": {
+        "coordinates": {
+            "latitude": 48.7631026,
+            "longitude": 8.3390336
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Gernsbach Mitte"
+    },
+    "TOE": {
+        "coordinates": {
+            "latitude": 49.20332426666667,
+            "longitude": 9.502234033333332
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Öhringen Hauptbahnhof"
+    },
+    "TESU": {
+        "coordinates": {
+            "latitude": 49.143809499999996,
+            "longitude": 9.4028129
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Eschenau (b Heilbronn)"
+    },
+    "TAF": {
+        "coordinates": {
+            "latitude": 49.13783633333333,
+            "longitude": 9.379184866666668
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Affaltrach"
+    },
+    "RHUM": {
+        "coordinates": {
+            "latitude": 49.0097402,
+            "longitude": 8.526606
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Berghausen Hummelberg"
+    },
+    "n51486295": {
+        "coordinates": {
+            "latitude": 48.998255,
+            "longitude": 8.296708299999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Rappenwört"
+    },
+    "n60379915": {
+        "coordinates": {
+            "latitude": 49.0903229,
+            "longitude": 8.40087615
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Leopoldshafen Viermorgen"
+    },
+    "n60380133": {
+        "coordinates": {
+            "latitude": 49.0857476,
+            "longitude": 8.402156333333332
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Eggenstein Schweriner Straße"
+    },
+    "n60611619": {
+        "coordinates": {
+            "latitude": 49.14057341666666,
+            "longitude": 9.234753533333334
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Finanzamt"
+    },
+    "n72740466": {
+        "coordinates": {
+            "latitude": 49.123192,
+            "longitude": 8.408231749999999
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Linkenheim Rathaus"
+    },
+    "RFM": {
+        "coordinates": {
+            "latitude": 48.9647395,
+            "longitude": 8.3387263
+        },
+        "lines": [
+            "S7",
+            "S8"
+        ],
+        "name": "Forchheim"
+    },
+    "n89358539": {
+        "coordinates": {
+            "latitude": 49.016857466666664,
+            "longitude": 8.3693552
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Kußmaulstraße/Städtisches Klinikum"
+    },
+    "n89358546": {
+        "coordinates": {
+            "latitude": 49.0219995,
+            "longitude": 8.360502466666667
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Feierabendweg"
+    },
+    "n89358554": {
+        "coordinates": {
+            "latitude": 49.02365286666666,
+            "longitude": 8.357437433333333
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Neureuter Straße"
+    },
+    "RWRT": {
+        "coordinates": {
+            "latitude": 49.0458529,
+            "longitude": 8.272894
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Wörth (Rhein)"
+    },
+    "n122305871": {
+        "coordinates": {
+            "latitude": 49.140314866666664,
+            "longitude": 9.252676933333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Trappensee"
+    },
+    "TH R": {
+        "coordinates": {
+            "latitude": 49.142011833333335,
+            "longitude": 9.218581166666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Rathaus"
+    },
+    "TH P": {
+        "coordinates": {
+            "latitude": 49.14264273333333,
+            "longitude": 9.213861833333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Neckarturm am Kurt-Schumacher-Platz"
+    },
+    "TH B": {
+        "coordinates": {
+            "latitude": 49.142603400000006,
+            "longitude": 9.208414033333334
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Hauptbahnhof/Willy-Brandt-Platz"
+    },
+    "n136052947": {
+        "coordinates": {
+            "latitude": 49.0839558,
+            "longitude": 8.77500435
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Oberderdingen-Flehingen"
+    },
+    "TGEW": {
+        "coordinates": {
+            "latitude": 49.154619100000005,
+            "longitude": 8.977257000000002
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Gemmingen West"
+    },
+    "TGEM": {
+        "coordinates": {
+            "latitude": 49.15141416666666,
+            "longitude": 8.9843009
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Gemmingen"
+    },
+    "TSHG": {
+        "coordinates": {
+            "latitude": 49.136865066666665,
+            "longitude": 9.014774833333332
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Stetten am Heuchelberg"
+    },
+    "TSWW": {
+        "coordinates": {
+            "latitude": 49.13895225,
+            "longitude": 9.04260095
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Schwaigern West"
+    },
+    "TSWG": {
+        "coordinates": {
+            "latitude": 49.13835,
+            "longitude": 9.0568824
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Schwaigern (Württemberg)"
+    },
+    "TSWO": {
+        "coordinates": {
+            "latitude": 49.140621100000004,
+            "longitude": 9.06940755
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Schwaigern Ost"
+    },
+    "TLGW": {
+        "coordinates": {
+            "latitude": 49.14599306666667,
+            "longitude": 9.105972066666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Leingarten West"
+    },
+    "n136054540": {
+        "coordinates": {
+            "latitude": 49.145062800000005,
+            "longitude": 9.1217768
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Leingarten"
+    },
+    "TLGO": {
+        "coordinates": {
+            "latitude": 49.14421263333333,
+            "longitude": 9.1309051
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Leingarten Ost"
+    },
+    "n246205130": {
+        "coordinates": {
+            "latitude": 49.04977663333333,
+            "longitude": 8.260887166666667
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth (Rhein) Bienwaldhalle"
+    },
+    "n246210324": {
+        "coordinates": {
+            "latitude": 49.05084626666667,
+            "longitude": 8.2543068
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth (Rhein) Bürgerpark"
+    },
+    "RWRTR": {
+        "coordinates": {
+            "latitude": 49.0522659,
+            "longitude": 8.2497959
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth Rathaus"
+    },
+    "RSL;RSLV": {
+        "coordinates": {
+            "latitude": 48.988021366666665,
+            "longitude": 8.5433069
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Söllingen (Pfinztal)"
+    },
+    "RWRTK": {
+        "coordinates": {
+            "latitude": 49.0585898,
+            "longitude": 8.2440148
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth (Rhein) Badepark"
+    },
+    "n247419530": {
+        "coordinates": {
+            "latitude": 49.048581999999996,
+            "longitude": 8.26652155
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth (Rhein) Alte Bahnmeisterei"
+    },
+    "RMAL": {
+        "coordinates": {
+            "latitude": 49.037164999999995,
+            "longitude": 8.298692133333333
+        },
+        "lines": [
+            "S5",
+            "S51",
+            "S52"
+        ],
+        "name": "Maximiliansau Eisenbahnstraße"
+    },
+    "TBIT": {
+        "coordinates": {
+            "latitude": 48.4443946,
+            "longitude": 8.5890945
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bittelbronn"
+    },
+    "n248153455": {
+        "coordinates": {
+            "latitude": 49.132677666666666,
+            "longitude": 8.9047636
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Eppingen West"
+    },
+    "RSFD": {
+        "coordinates": {
+            "latitude": 49.108231233333335,
+            "longitude": 8.852392233333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Sulzfeld (Baden)"
+    },
+    "THON": {
+        "coordinates": {
+            "latitude": 48.8078344,
+            "longitude": 8.5818209
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Höfen Nord"
+    },
+    "THOE": {
+        "coordinates": {
+            "latitude": 48.7988242,
+            "longitude": 8.5812747
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Höfen (Enz)"
+    },
+    "TCAS": {
+        "coordinates": {
+            "latitude": 48.7733862,
+            "longitude": 8.5664237
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Calmbach Süd"
+    },
+    "TWBN": {
+        "coordinates": {
+            "latitude": 48.7638569,
+            "longitude": 8.5549507
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Bad Wildbad Nord"
+    },
+    "TWB": {
+        "coordinates": {
+            "latitude": 48.7555568,
+            "longitude": 8.551101
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Bad Wildbad Bahnhof"
+    },
+    "TWBU": {
+        "coordinates": {
+            "latitude": 48.7508058,
+            "longitude": 8.5494192
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Bad Wildbad Uhlandplatz/Sommerbergbahn"
+    },
+    "TWBK": {
+        "coordinates": {
+            "latitude": 48.7486482,
+            "longitude": 8.5505095
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Bad Wildbad Kurpark"
+    },
+    "TELI": {
+        "coordinates": {
+            "latitude": 49.1487554,
+            "longitude": 9.3054401
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Weinsberg/Ellhofen Gewerbegebiet"
+    },
+    "TELL": {
+        "coordinates": {
+            "latitude": 49.1499673,
+            "longitude": 9.3160291
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Ellhofen"
+    },
+    "TSUE": {
+        "coordinates": {
+            "latitude": 49.148401400000004,
+            "longitude": 9.340577666666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Sülzbach"
+    },
+    "TET": {
+        "coordinates": {
+            "latitude": 48.479798,
+            "longitude": 8.78223135
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Eutingen"
+    },
+    "n256569382": {
+        "coordinates": {
+            "latitude": 49.0177725,
+            "longitude": 8.384908833333334
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Synagoge"
+    },
+    "n256569383": {
+        "coordinates": {
+            "latitude": 49.02252413333333,
+            "longitude": 8.385180066666667
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Lilienthalstraße"
+    },
+    "n256569384": {
+        "coordinates": {
+            "latitude": 49.02690326666667,
+            "longitude": 8.386102433333333
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Duale Hochschule"
+    },
+    "n256570023": {
+        "coordinates": {
+            "latitude": 49.015570875,
+            "longitude": 8.347419775
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "E"
+        ],
+        "name": "Rheinhafen"
+    },
+    "n256570284": {
+        "coordinates": {
+            "latitude": 49.00154333333333,
+            "longitude": 8.345076066666666
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Rheinhafenstraße"
+    },
+    "n256570339": {
+        "coordinates": {
+            "latitude": 48.99913323333333,
+            "longitude": 8.3414684
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Thomas-Mann-Straße"
+    },
+    "n256570552": {
+        "coordinates": {
+            "latitude": 48.97861853333333,
+            "longitude": 8.317323466666666
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Forchheim Hallenbad"
+    },
+    "n256570700": {
+        "coordinates": {
+            "latitude": 48.974818666666664,
+            "longitude": 8.312239833333335
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Forchheim Hauptstraße"
+    },
+    "n256570724": {
+        "coordinates": {
+            "latitude": 48.97026026666666,
+            "longitude": 8.3078339
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Forchheim Oberfeldstraße"
+    },
+    "n256570806": {
+        "coordinates": {
+            "latitude": 49.00715616666667,
+            "longitude": 8.343577466666666
+        },
+        "lines": [
+            "3",
+            "E"
+        ],
+        "name": "Stadtwerke"
+    },
+    "n262468138": {
+        "coordinates": {
+            "latitude": 48.45370296666667,
+            "longitude": 8.547932766666667
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Schopfloch (bei Freudenstadt)"
+    },
+    "TCP": {
+        "coordinates": {
+            "latitude": 49.2019811,
+            "longitude": 9.52709785
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Öhringen-Cappel"
+    },
+    "TOEW": {
+        "coordinates": {
+            "latitude": 49.20021863333333,
+            "longitude": 9.485706366666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Öhringen West"
+    },
+    "n268059009": {
+        "coordinates": {
+            "latitude": 48.467690250000004,
+            "longitude": 8.660189725
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Horb-Heiligenfeld"
+    },
+    "RBTW": {
+        "coordinates": {
+            "latitude": 49.03047345,
+            "longitude": 8.7091401
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Wannenweg"
+    },
+    "RBLN": {
+        "coordinates": {
+            "latitude": 49.19255886666667,
+            "longitude": 8.297612733333333
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Bellheim Am Mühlbuckel"
+    },
+    "RKIN": {
+        "coordinates": {
+            "latitude": 49.0264813,
+            "longitude": 8.34144
+        },
+        "lines": [
+            "S52"
+        ],
+        "name": "Karlsruhe-Knielingen"
+    },
+    "n270154663": {
+        "coordinates": {
+            "latitude": 49.19523183333333,
+            "longitude": 8.360308733333333
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Sondernheim"
+    },
+    "n270416851": {
+        "coordinates": {
+            "latitude": 48.81183076666667,
+            "longitude": 8.209015233333334
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Baden-Baden Haueneberstein"
+    },
+    "TSEP": {
+        "coordinates": {
+            "latitude": 49.16169403333333,
+            "longitude": 9.434267366666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Scheppach"
+    },
+    "RBGB": {
+        "coordinates": {
+            "latitude": 49.0058834,
+            "longitude": 8.5300578
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Berghausen (Baden)"
+    },
+    "RZA": {
+        "coordinates": {
+            "latitude": 49.1049789,
+            "longitude": 8.817059
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Zaisenhausen"
+    },
+    "RSZN": {
+        "coordinates": {
+            "latitude": 48.7706184,
+            "longitude": 8.169696
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Sinzheim Nord"
+    },
+    "TFSI": {
+        "coordinates": {
+            "latitude": 48.464559050000005,
+            "longitude": 8.43516765
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Freudenstadt Industriegebiet/Schmid"
+    },
+    "TPB": {
+        "coordinates": {
+            "latitude": 48.8895446,
+            "longitude": 8.6670818
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Brötzingen Mitte"
+    },
+    "TERS": {
+        "coordinates": {
+            "latitude": 48.93052303333334,
+            "longitude": 8.638906833333332
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Ersingen"
+    },
+    "n315050053": {
+        "coordinates": {
+            "latitude": 48.958945650000004,
+            "longitude": 8.283999000000001
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Bach West"
+    },
+    "n315050071": {
+        "coordinates": {
+            "latitude": 48.956542033333335,
+            "longitude": 8.285488666666666
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Am Hang"
+    },
+    "n315050083": {
+        "coordinates": {
+            "latitude": 48.953142333333325,
+            "longitude": 8.291269766666668
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Merkurstraße"
+    },
+    "TH H": {
+        "coordinates": {
+            "latitude": 49.141577266666665,
+            "longitude": 9.223282066666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Harmonie"
+    },
+    "TWID": {
+        "coordinates": {
+            "latitude": 49.14979876666666,
+            "longitude": 9.422310933333334
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Wieslensdorf"
+    },
+    "TWLB": {
+        "coordinates": {
+            "latitude": 49.14265116666667,
+            "longitude": 9.357826366666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Willsbach"
+    },
+    "TBZ": {
+        "coordinates": {
+            "latitude": 49.17295793333333,
+            "longitude": 9.440566766666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretzfeld"
+    },
+    "TBIF": {
+        "coordinates": {
+            "latitude": 49.187249400000006,
+            "longitude": 9.453290466666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bitzfeld"
+    },
+    "n402533399": {
+        "coordinates": {
+            "latitude": 48.996815225,
+            "longitude": 8.410600200000001
+        },
+        "lines": [
+            "3",
+            "6",
+            "S4"
+        ],
+        "name": "Tivoli"
+    },
+    "n402621777": {
+        "coordinates": {
+            "latitude": 49.00902325454546,
+            "longitude": 8.417747209090908
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "NL1",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51",
+            "S7",
+            "S8"
+        ],
+        "name": "Durlacher Tor/KIT-Campus Süd (U)"
+    },
+    "n413929211": {
+        "coordinates": {
+            "latitude": 49.00176462,
+            "longitude": 8.46289256
+        },
+        "lines": [
+            "1",
+            "5",
+            "E",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Karlsruhe-Durlach"
+    },
+    "n428117786": {
+        "coordinates": {
+            "latitude": 49.04708933333333,
+            "longitude": 8.378680333333334
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Bärenweg"
+    },
+    "n507935833": {
+        "coordinates": {
+            "latitude": 49.07974203333333,
+            "longitude": 8.3996536
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Eggenstein Spöcker Weg"
+    },
+    "n610904547": {
+        "coordinates": {
+            "latitude": 48.4697048,
+            "longitude": 8.5029696
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Dornstetten"
+    },
+    "n635945392": {
+        "coordinates": {
+            "latitude": 48.983528275,
+            "longitude": 8.36487415
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Wilhelm-Leuschner-Straße"
+    },
+    "n655291802": {
+        "coordinates": {
+            "latitude": 48.99438584999999,
+            "longitude": 8.399659766666668
+        },
+        "lines": [
+            "3",
+            "6",
+            "NL2",
+            "S1",
+            "S11",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Bahnhofsvorplatz"
+    },
+    "n660690887": {
+        "coordinates": {
+            "latitude": 49.00556136,
+            "longitude": 8.37255854
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Hübschstraße"
+    },
+    "TBCB": {
+        "coordinates": {
+            "latitude": 49.1403681,
+            "longitude": 9.1812243
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Böckingen Berufsschulzentrum"
+    },
+    "TH F": {
+        "coordinates": {
+            "latitude": 49.141291,
+            "longitude": 9.2288876
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Friedensplatz"
+    },
+    "TLGM": {
+        "coordinates": {
+            "latitude": 49.14564363333333,
+            "longitude": 9.1127403
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Leingarten Mitte"
+    },
+    "TWR": {
+        "coordinates": {
+            "latitude": 49.148214599999996,
+            "longitude": 9.286219733333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Weinsberg"
+    },
+    "n1069933417": {
+        "coordinates": {
+            "latitude": 49.10947143333333,
+            "longitude": 8.2730214
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Rheinzabern Alte Römerstraße"
+    },
+    "n1069933418": {
+        "coordinates": {
+            "latitude": 49.11442066666667,
+            "longitude": 8.273240200000002
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Rheinzabern Rappengasse"
+    },
+    "n1124168178": {
+        "coordinates": {
+            "latitude": 49.00985841,
+            "longitude": 8.39445846
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "NL1",
+            "NL2",
+            "S1",
+            "S11",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Europaplatz (Karlstraße)"
+    },
+    "RBTR": {
+        "coordinates": {
+            "latitude": 49.0366902,
+            "longitude": 8.6736897
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Rinklingen"
+    },
+    "n1126996184": {
+        "coordinates": {
+            "latitude": 49.0033611,
+            "longitude": 8.38641325
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Arbeitsagentur"
+    },
+    "n1139869236": {
+        "coordinates": {
+            "latitude": 48.9995854,
+            "longitude": 8.463960199999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "8",
+            "E",
+            "NL2",
+            "S2"
+        ],
+        "name": "Gritznerstraße"
+    },
+    "n1143095809": {
+        "coordinates": {
+            "latitude": 49.01146275,
+            "longitude": 8.4360761
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Dunantstraße"
+    },
+    "n1163749987": {
+        "coordinates": {
+            "latitude": 49.09709296666667,
+            "longitude": 8.430328566666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "KIT-Campus Nord Bahnhof"
+    },
+    "RROG": {
+        "coordinates": {
+            "latitude": 48.8199892,
+            "longitude": 8.2970666
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bad Rotenfels Schloss"
+    },
+    "REP": {
+        "coordinates": {
+            "latitude": 49.1360336,
+            "longitude": 8.914845
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Eppingen"
+    },
+    "n1310895033": {
+        "coordinates": {
+            "latitude": 48.9144261,
+            "longitude": 8.67219055
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Ispringen"
+    },
+    "n1310966254": {
+        "coordinates": {
+            "latitude": 48.9626124,
+            "longitude": 8.608752200000001
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Königsbach (Baden)"
+    },
+    "n1310987567": {
+        "coordinates": {
+            "latitude": 48.96682723333333,
+            "longitude": 8.5548176
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Kleinsteinbach"
+    },
+    "RBT": {
+        "coordinates": {
+            "latitude": 49.03711496666667,
+            "longitude": 8.692644066666666
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Bahnhof"
+    },
+    "RBBC": {
+        "coordinates": {
+            "latitude": 49.0739073,
+            "longitude": 8.748192933333334
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bauerbach"
+    },
+    "n1312803627": {
+        "coordinates": {
+            "latitude": 49.05183916666667,
+            "longitude": 8.739878966666668
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Gölshausen Industriegebiet"
+    },
+    "n1315244919": {
+        "coordinates": {
+            "latitude": 48.90967766666666,
+            "longitude": 8.4994114
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Langensteinbach St. Barbara"
+    },
+    "n1330171769": {
+        "coordinates": {
+            "latitude": 49.05276226666667,
+            "longitude": 8.261990466666667
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Wörth Zügelstraße"
+    },
+    "n1367774719": {
+        "coordinates": {
+            "latitude": 48.887989366666666,
+            "longitude": 8.451349133333332
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Fischweier"
+    },
+    "n1375690570": {
+        "coordinates": {
+            "latitude": 49.188501,
+            "longitude": 8.294536633333333
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Bellheim Bahnhof"
+    },
+    "n1375690682": {
+        "coordinates": {
+            "latitude": 49.2205275,
+            "longitude": 8.379142
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Germersheim Mitte/Rhein"
+    },
+    "n1398973051": {
+        "coordinates": {
+            "latitude": 49.14067193333333,
+            "longitude": 9.191171033333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Böckingen Sonnenbrunnen"
+    },
+    "RBTS": {
+        "coordinates": {
+            "latitude": 49.031864999999996,
+            "longitude": 8.718434250000001
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Schulzentrum"
+    },
+    "RGOE": {
+        "coordinates": {
+            "latitude": 49.04488130000001,
+            "longitude": 8.724747299999999
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Gölshausen"
+    },
+    "n1454717837": {
+        "coordinates": {
+            "latitude": 49.00523933333333,
+            "longitude": 8.503791466666668
+        },
+        "lines": [
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Grötzingen Oberausstraße"
+    },
+    "n1454717983": {
+        "coordinates": {
+            "latitude": 49.0058757,
+            "longitude": 8.512445033333334
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Grötzingen Krappmühlenweg"
+    },
+    "RBGBS": {
+        "coordinates": {
+            "latitude": 49.0025216,
+            "longitude": 8.5360801
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Berghausen Am Stadion"
+    },
+    "n1478081777": {
+        "coordinates": {
+            "latitude": 49.2186924,
+            "longitude": 8.3798493
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Germersheim Mitte/Rhein"
+    },
+    "n1478909513": {
+        "coordinates": {
+            "latitude": 49.013994999999994,
+            "longitude": 8.44205015
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Forststraße"
+    },
+    "n1480007541": {
+        "coordinates": {
+            "latitude": 49.01362752,
+            "longitude": 8.430326019999999
+        },
+        "lines": [
+            "3",
+            "4",
+            "NL1"
+        ],
+        "name": "Hauptfriedhof"
+    },
+    "n1516245033": {
+        "coordinates": {
+            "latitude": 48.989121600000004,
+            "longitude": 8.363543266666667
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Albert-Braun-Straße"
+    },
+    "n1516245035": {
+        "coordinates": {
+            "latitude": 48.98209026666666,
+            "longitude": 8.368300566666667
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Badeniaplatz"
+    },
+    "n1516245037": {
+        "coordinates": {
+            "latitude": 48.9926599,
+            "longitude": 8.3688196
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Hardecksiedlung"
+    },
+    "n1516245040": {
+        "coordinates": {
+            "latitude": 48.985703975,
+            "longitude": 8.3623063
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Oberreut Zentrum"
+    },
+    "n1520783015": {
+        "coordinates": {
+            "latitude": 48.92004883333333,
+            "longitude": 8.499494266666666
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Langensteinbach Schießhüttenäcker"
+    },
+    "n1557617756": {
+        "coordinates": {
+            "latitude": 49.00603746666667,
+            "longitude": 8.366923233333333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kühler Krug"
+    },
+    "TBCW": {
+        "coordinates": {
+            "latitude": 49.1393045,
+            "longitude": 9.165428333333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Böckingen West"
+    },
+    "n1587601550": {
+        "coordinates": {
+            "latitude": 49.0019735,
+            "longitude": 8.394279866666666
+        },
+        "lines": [
+            "3",
+            "NL2",
+            "S12"
+        ],
+        "name": "Mathystraße"
+    },
+    "n1600680321": {
+        "coordinates": {
+            "latitude": 48.997568566666665,
+            "longitude": 8.3937625
+        },
+        "lines": [
+            "3",
+            "NL2",
+            "S12"
+        ],
+        "name": "Kolpingplatz"
+    },
+    "n1633042846": {
+        "coordinates": {
+            "latitude": 48.995149766666664,
+            "longitude": 8.4035505
+        },
+        "lines": [
+            "3",
+            "6",
+            "NL2",
+            "S1",
+            "S11",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Poststraße"
+    },
+    "n1633043184": {
+        "coordinates": {
+            "latitude": 49.000462133333336,
+            "longitude": 8.4106176
+        },
+        "lines": [
+            "3",
+            "S4"
+        ],
+        "name": "Werderstraße"
+    },
+    "n1637996711": {
+        "coordinates": {
+            "latitude": 49.0108007125,
+            "longitude": 8.3833995125
+        },
+        "lines": [
+            "1",
+            "3",
+            "4",
+            "E",
+            "NL1",
+            "NL2",
+            "S1",
+            "S11",
+            "S2",
+            "S5",
+            "S51"
+        ],
+        "name": "Mühlburger Tor"
+    },
+    "n1637997527": {
+        "coordinates": {
+            "latitude": 49.00912568,
+            "longitude": 8.37953418
+        },
+        "lines": [
+            "2",
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Schillerstraße"
+    },
+    "n1658883742": {
+        "coordinates": {
+            "latitude": 48.979153249999996,
+            "longitude": 8.4588012
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Wolfartsweier Nord"
+    },
+    "n1658897459": {
+        "coordinates": {
+            "latitude": 48.982599066666666,
+            "longitude": 8.4605411
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Zündhütle"
+    },
+    "n1659034010": {
+        "coordinates": {
+            "latitude": 48.98581936666667,
+            "longitude": 8.455979466666667
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Steiermärker Straße"
+    },
+    "n1659131662": {
+        "coordinates": {
+            "latitude": 48.988577633333335,
+            "longitude": 8.452210266666667
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Schlesier Straße (West)"
+    },
+    "n1660586111": {
+        "coordinates": {
+            "latitude": 48.991599900000004,
+            "longitude": 8.452773533333334
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Ostmarkstraße"
+    },
+    "n1661045722": {
+        "coordinates": {
+            "latitude": 49.00618226666666,
+            "longitude": 8.492568833333335
+        },
+        "lines": [
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Grötzingen Bahnhof"
+    },
+    "RBGBP": {
+        "coordinates": {
+            "latitude": 49.0065076,
+            "longitude": 8.5209675
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Berghausen Pfinzbrücke"
+    },
+    "n1662315280": {
+        "coordinates": {
+            "latitude": 48.9941805,
+            "longitude": 8.4587088
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Ellmendinger Straße"
+    },
+    "n1662353796": {
+        "coordinates": {
+            "latitude": 48.997351933333334,
+            "longitude": 8.461994133333333
+        },
+        "lines": [
+            "2",
+            "8",
+            "E",
+            "S2"
+        ],
+        "name": "Killisfeldstraße"
+    },
+    "n1686053351": {
+        "coordinates": {
+            "latitude": 49.0072078,
+            "longitude": 8.472423666666666
+        },
+        "lines": [
+            "S4",
+            "S5",
+            "S51"
+        ],
+        "name": "Hubstraße"
+    },
+    "RMAX": {
+        "coordinates": {
+            "latitude": 49.03604696666667,
+            "longitude": 8.3070784
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Maxau"
+    },
+    "n1689236739": {
+        "coordinates": {
+            "latitude": 48.8023109,
+            "longitude": 8.438946
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Bad Herrenalb"
+    },
+    "n1697538980": {
+        "coordinates": {
+            "latitude": 49.001672000000006,
+            "longitude": 8.377569366666666
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Landesbausparkasse"
+    },
+    "n1701650458": {
+        "coordinates": {
+            "latitude": 48.91884050000001,
+            "longitude": 8.473017466666667
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Reichenbach Kurpark"
+    },
+    "n1708764910": {
+        "coordinates": {
+            "latitude": 49.05273536666667,
+            "longitude": 8.3885371
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Neureut Kirchfeld"
+    },
+    "n1710232093": {
+        "coordinates": {
+            "latitude": 48.98923475,
+            "longitude": 8.333090250000001
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Nussbaumweg"
+    },
+    "n1710347030": {
+        "coordinates": {
+            "latitude": 48.98212263333334,
+            "longitude": 8.323414666666666
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Forchheim Messe"
+    },
+    "n1717702171": {
+        "coordinates": {
+            "latitude": 48.999296433333335,
+            "longitude": 8.4688339
+        },
+        "lines": [
+            "1",
+            "2",
+            "8",
+            "E",
+            "NL2"
+        ],
+        "name": "Friedrichschule"
+    },
+    "n1717771246": {
+        "coordinates": {
+            "latitude": 48.99519013333333,
+            "longitude": 8.372526433333334
+        },
+        "lines": [
+            "4",
+            "E",
+            "NL2"
+        ],
+        "name": "Bannwaldallee"
+    },
+    "n1733099349": {
+        "coordinates": {
+            "latitude": 49.033405200000004,
+            "longitude": 8.3766288
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Haus Bethlehem"
+    },
+    "n1734290309": {
+        "coordinates": {
+            "latitude": 49.031219566666664,
+            "longitude": 8.387010733333334
+        },
+        "lines": [
+            "1",
+            "E",
+            "NL1"
+        ],
+        "name": "Heidehof"
+    },
+    "n1744412154": {
+        "coordinates": {
+            "latitude": 49.014586699999995,
+            "longitude": 8.351094466666666
+        },
+        "lines": [
+            "S52"
+        ],
+        "name": "Karlsruhe-Mühlburg"
+    },
+    "n1747700862": {
+        "coordinates": {
+            "latitude": 49.00579612857143,
+            "longitude": 8.33328527142857
+        },
+        "lines": [
+            "3",
+            "E"
+        ],
+        "name": "Ankerstraße"
+    },
+    "n1747735513": {
+        "coordinates": {
+            "latitude": 49.00361976666667,
+            "longitude": 8.328094266666666
+        },
+        "lines": [
+            "3",
+            "E"
+        ],
+        "name": "Hammweg"
+    },
+    "n1747735607": {
+        "coordinates": {
+            "latitude": 49.004286433333334,
+            "longitude": 8.3228427
+        },
+        "lines": [
+            "3",
+            "E"
+        ],
+        "name": "Waidweg"
+    },
+    "n1747821679": {
+        "coordinates": {
+            "latitude": 49.000918266666666,
+            "longitude": 8.312093766666667
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Altrheinbrücke"
+    },
+    "n1780112346": {
+        "coordinates": {
+            "latitude": 48.897577266666666,
+            "longitude": 8.474639466666666
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Spielberg"
+    },
+    "TSUS": {
+        "coordinates": {
+            "latitude": 49.1449685,
+            "longitude": 9.3512084
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Sülzbach Schule"
+    },
+    "n1828938324": {
+        "coordinates": {
+            "latitude": 49.00363743333333,
+            "longitude": 8.4273927
+        },
+        "lines": [
+            "5",
+            "S12"
+        ],
+        "name": "Schloss Gottesaue/Hochschule für Musik"
+    },
+    "n1828944318": {
+        "coordinates": {
+            "latitude": 49.00503626666667,
+            "longitude": 8.416308466666665
+        },
+        "lines": [
+            "5",
+            "S12"
+        ],
+        "name": "Ostendstraße"
+    },
+    "n1828944339": {
+        "coordinates": {
+            "latitude": 49.003574375,
+            "longitude": 8.423087425
+        },
+        "lines": [
+            "5",
+            "S12"
+        ],
+        "name": "Wolfartsweierer Straße"
+    },
+    "RWRTA": {
+        "coordinates": {
+            "latitude": 49.055992599999996,
+            "longitude": 8.24984895
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wörth (Rhein) Badallee"
+    },
+    "n1897031159": {
+        "coordinates": {
+            "latitude": 49.02825046666667,
+            "longitude": 8.575107299999999
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Jöhlingen"
+    },
+    "n1897031168": {
+        "coordinates": {
+            "latitude": 49.03088553333333,
+            "longitude": 8.570036866666667
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Jöhlingen West"
+    },
+    "n1900264263": {
+        "coordinates": {
+            "latitude": 49.0389585,
+            "longitude": 8.2917293
+        },
+        "lines": [
+            "S5",
+            "S51",
+            "S52"
+        ],
+        "name": "Maximiliansau West"
+    },
+    "n1981232072": {
+        "coordinates": {
+            "latitude": 49.0711451,
+            "longitude": 8.396062266666666
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Eggenstein Süd"
+    },
+    "n2031809916": {
+        "coordinates": {
+            "latitude": 49.20835973333334,
+            "longitude": 8.3738078
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Germersheim Süd/Nolte"
+    },
+    "n2119060222": {
+        "coordinates": {
+            "latitude": 49.160789666666666,
+            "longitude": 8.290250633333335
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Rülzheim Bahnhof"
+    },
+    "n2120183058": {
+        "coordinates": {
+            "latitude": 49.09100585,
+            "longitude": 8.2721979
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Jockgrim Bahnhof"
+    },
+    "n2120183103": {
+        "coordinates": {
+            "latitude": 49.0933052,
+            "longitude": 8.2723437
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Jockgrim Bahnhof"
+    },
+    "n2365611247": {
+        "coordinates": {
+            "latitude": 49.15101455,
+            "longitude": 8.2792535
+        },
+        "lines": [
+            "S51",
+            "S52"
+        ],
+        "name": "Rülzheim Freizeitzentrum"
+    },
+    "n2365611248": {
+        "coordinates": {
+            "latitude": 49.152698,
+            "longitude": 8.2795488
+        },
+        "lines": [
+            "S51"
+        ],
+        "name": "Rülzheim Freizeitzentrum"
+    },
+    "RBB": {
+        "coordinates": {
+            "latitude": 48.7904421,
+            "longitude": 8.1910627
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Baden-Baden"
+    },
+    "RAH": {
+        "coordinates": {
+            "latitude": 48.6339021,
+            "longitude": 8.0653792
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Achern"
+    },
+    "n2461097915": {
+        "coordinates": {
+            "latitude": 49.140007,
+            "longitude": 9.240944933333333
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Pfühlpark"
+    },
+    "n2509332322": {
+        "coordinates": {
+            "latitude": 49.005520485714285,
+            "longitude": 8.409777671428571
+        },
+        "lines": [
+            "3",
+            "4",
+            "5",
+            "S12",
+            "S4",
+            "S51"
+        ],
+        "name": "Rüppurrer Tor"
+    },
+    "n2552588542": {
+        "coordinates": {
+            "latitude": 49.00519807142857,
+            "longitude": 8.395347185714286
+        },
+        "lines": [
+            "3",
+            "4",
+            "5",
+            "NL2",
+            "S12",
+            "S51"
+        ],
+        "name": "Karlstor/Bundesgerichtshof"
+    },
+    "TGRW": {
+        "coordinates": {
+            "latitude": 48.475362,
+            "longitude": 8.4602231
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Grüntal-Wittlensweiler"
+    },
+    "n2616646759": {
+        "coordinates": {
+            "latitude": 48.92048286666667,
+            "longitude": 8.479643466666667
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Reichenbach Bahnhof"
+    },
+    "RKMAP": {
+        "coordinates": {
+            "latitude": 49.0090433,
+            "longitude": 8.40329655
+        },
+        "lines": [
+            "1",
+            "NL1",
+            "S1",
+            "S11",
+            "S2",
+            "S4",
+            "S51",
+            "S7",
+            "S8"
+        ],
+        "name": "Marktplatz (Pyramide U)"
+    },
+    "n2896391056": {
+        "coordinates": {
+            "latitude": 49.15125093333334,
+            "longitude": 9.273887266666668
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Weinsberg West"
+    },
+    "n2912457523": {
+        "coordinates": {
+            "latitude": 49.0972303,
+            "longitude": 8.401135366666667
+        },
+        "lines": [
+            "S1",
+            "S11"
+        ],
+        "name": "Leopoldshafen Leopoldstraße"
+    },
+    "RFS": {
+        "coordinates": {
+            "latitude": 48.8372992,
+            "longitude": 8.440504766666665
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Frauenalb-Schielberg"
+    },
+    "RITBR": {
+        "coordinates": {
+            "latitude": 48.8660256,
+            "longitude": 8.5102641
+        },
+        "lines": [
+            "S11",
+            "S12"
+        ],
+        "name": "Ittersbach Rathaus"
+    },
+    "RLBD": {
+        "coordinates": {
+            "latitude": 48.7023847,
+            "longitude": 8.3556226
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Langenbrand"
+    },
+    "n3154068864": {
+        "coordinates": {
+            "latitude": 48.5367919,
+            "longitude": 8.39905585
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Heselbach"
+    },
+    "n3154068867": {
+        "coordinates": {
+            "latitude": 48.604940299999996,
+            "longitude": 8.36964405
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Schönmünzach"
+    },
+    "n3157639986": {
+        "coordinates": {
+            "latitude": 49.00547031111111,
+            "longitude": 8.403213044444444
+        },
+        "lines": [
+            "4",
+            "5",
+            "NL2",
+            "S1",
+            "S11",
+            "S12",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Ettlinger Tor/Staatstheater (U)"
+    },
+    "RKMK": {
+        "coordinates": {
+            "latitude": 49.002563499999994,
+            "longitude": 8.40316872
+        },
+        "lines": [
+            "NL2",
+            "S1",
+            "S11",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Kongresszentrum (U)"
+    },
+    "n3189815645": {
+        "coordinates": {
+            "latitude": 49.033822099999995,
+            "longitude": 8.7030174
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Stadtmitte"
+    },
+    "n3234308883": {
+        "coordinates": {
+            "latitude": 49.00932635,
+            "longitude": 8.410306275
+        },
+        "lines": [
+            "1",
+            "NL1",
+            "NL2",
+            "S2",
+            "S4",
+            "S5",
+            "S51",
+            "S7",
+            "S8"
+        ],
+        "name": "Kronenplatz (U)"
+    },
+    "n3244693533": {
+        "coordinates": {
+            "latitude": 48.94874795,
+            "longitude": 8.620434150000001
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Bilfingen"
+    },
+    "n3244693535": {
+        "coordinates": {
+            "latitude": 48.93143635,
+            "longitude": 8.63389755
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Ersingen West"
+    },
+    "RSLR": {
+        "coordinates": {
+            "latitude": 48.990893060000005,
+            "longitude": 8.54090846
+        },
+        "lines": [
+            "S5",
+            "S51"
+        ],
+        "name": "Söllingen Reetzstraße"
+    },
+    "n3250693685": {
+        "coordinates": {
+            "latitude": 49.0846613,
+            "longitude": 8.7832009
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Flehingen"
+    },
+    "n3251857992": {
+        "coordinates": {
+            "latitude": 49.036981,
+            "longitude": 8.7236958
+        },
+        "lines": [
+            "S4"
+        ],
+        "name": "Bretten Kupferhälde"
+    },
+    "n4065456718": {
+        "coordinates": {
+            "latitude": 48.9656583,
+            "longitude": 8.301764
+        },
+        "lines": [
+            "E",
+            "S2"
+        ],
+        "name": "Mörsch Narzissenstraße"
+    },
+    "TBD": {
+        "coordinates": {
+            "latitude": 48.52354395,
+            "longitude": 8.8278542
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Bondorf"
+    },
+    "n4986775568": {
+        "coordinates": {
+            "latitude": 49.00989305,
+            "longitude": 8.431898100000002
+        },
+        "lines": [
+            "NL1"
+        ],
+        "name": "Essenweinstraße"
+    },
+    "TCA": {
+        "coordinates": {
+            "latitude": 48.7766881,
+            "longitude": 8.5714536
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Calmbach"
+    },
+    "n6796824470": {
+        "coordinates": {
+            "latitude": 49.03581816666667,
+            "longitude": 8.350336166666667
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Egon-Eiermann-Allee"
+    },
+    "n6984779991": {
+        "coordinates": {
+            "latitude": 48.4847675,
+            "longitude": 8.7534104
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Eutingen Nord"
+    },
+    "n7255501117": {
+        "coordinates": {
+            "latitude": 48.4733177,
+            "longitude": 8.4825652
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Dornstetten-Aach"
+    },
+    "n7600180592": {
+        "coordinates": {
+            "latitude": 49.03784235,
+            "longitude": 8.3476638
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Knielingen Nord"
+    },
+    "n7683568908": {
+        "coordinates": {
+            "latitude": 48.998705799999996,
+            "longitude": 8.40364828
+        },
+        "lines": [
+            "NL2",
+            "S1",
+            "S11",
+            "S4",
+            "S5",
+            "S51",
+            "S52",
+            "S7",
+            "S8"
+        ],
+        "name": "Augartenstraße"
+    },
+    "n8176988996": {
+        "coordinates": {
+            "latitude": 49.03040373333334,
+            "longitude": 8.3453507
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Sudetenstraße"
+    },
+    "n8176988998": {
+        "coordinates": {
+            "latitude": 49.0333705,
+            "longitude": 8.347953233333334
+        },
+        "lines": [
+            "2",
+            "E"
+        ],
+        "name": "Pionierstraße"
+    },
+    "n8788343839": {
+        "coordinates": {
+            "latitude": 48.4893708,
+            "longitude": 8.809930000000001
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Ergenzingen"
+    }
+}

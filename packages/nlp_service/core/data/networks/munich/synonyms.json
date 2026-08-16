@@ -1,0 +1,1015 @@
+{
+    "Ackermannstraße": [
+        "Ackermann",
+        "Ackermannstr.",
+        "Ackermannstrasse"
+    ],
+    "Agnes-Bernauer-Platz": [
+        "Agnes-Bernauer-",
+        "Agnes-Bernauer-plz"
+    ],
+    "Agnes-Bernauer-Straße": [
+        "Agnes-Bernauer-",
+        "Agnes-Bernauer-str.",
+        "Agnes-Bernauer-strasse"
+    ],
+    "Aidenbachstraße": [
+        "Aidenbach",
+        "Aidenbachstr.",
+        "Aidenbachstrasse"
+    ],
+    "Aindorferstraße": [
+        "Aindorfer",
+        "Aindorferstr.",
+        "Aindorferstrasse"
+    ],
+    "Albrechtstraße": [
+        "Albrecht",
+        "Albrechtstr.",
+        "Albrechtstrasse"
+    ],
+    "Allach": [],
+    "Alte Heide": [
+        "Alte"
+    ],
+    "Altenerding": [],
+    "Altomünster": [],
+    "Am Gasteig": [
+        "Gasteig"
+    ],
+    "Am Hart": [
+        "Hart"
+    ],
+    "Am Knie": [
+        "Knie"
+    ],
+    "Am Lokschuppen": [
+        "Lokschuppen"
+    ],
+    "Am Münchner Tor": [],
+    "Amalienburgstraße": [
+        "Amalienburg",
+        "Amalienburgstr.",
+        "Amalienburgstrasse"
+    ],
+    "Ammerseestraße": [
+        "Ammersee",
+        "Ammerseestr.",
+        "Ammerseestrasse"
+    ],
+    "Ampfingstraße": [
+        "Ampfing",
+        "Ampfingstr.",
+        "Ampfingstrasse"
+    ],
+    "Anni-Albers-Straße": [
+        "Anni-Albers-",
+        "Anni-Albers-str.",
+        "Anni-Albers-strasse"
+    ],
+    "Arabellapark": [],
+    "Arabellastraße": [
+        "Arabella",
+        "Arabellastr.",
+        "Arabellastrasse"
+    ],
+    "Arnbach": [],
+    "Aubing": [],
+    "Aufhausen": [],
+    "Authariplatz": [
+        "Authari",
+        "Authariplz"
+    ],
+    "Aying": [],
+    "Bachern": [],
+    "Baierbrunn": [],
+    "Baldham": [],
+    "Barbarastraße": [
+        "Barbara",
+        "Barbarastr.",
+        "Barbarastrasse"
+    ],
+    "Barthstraße": [
+        "Barth",
+        "Barthstr.",
+        "Barthstrasse"
+    ],
+    "Basler Straße": [
+        "Basler",
+        "Basler Str.",
+        "Basler Strasse"
+    ],
+    "Baumkirchner Straße": [
+        "Baumkirchner",
+        "Baumkirchner Str.",
+        "Baumkirchner Strasse"
+    ],
+    "Berg am Laim": [],
+    "Bonner Platz": [
+        "Bonner",
+        "Bonnerplz"
+    ],
+    "Borstei": [],
+    "Botanischer Garten": [
+        "Botanischer"
+    ],
+    "Briefzentrum": [],
+    "Brudermühlstraße": [
+        "Brudermühl",
+        "Brudermühlstr.",
+        "Brudermühlstrasse"
+    ],
+    "Buchenau": [],
+    "Buchenhain": [],
+    "Bundesfinanzhof": [],
+    "Burghausener Straße": [
+        "Burghausener",
+        "Burghausener Str.",
+        "Burghausener Strasse"
+    ],
+    "Böhmerwaldplatz": [
+        "Böhmerwald",
+        "Böhmerwaldplz"
+    ],
+    "Candidplatz": [
+        "Candid",
+        "Candidplz"
+    ],
+    "Carl-Amery-Platz": [
+        "Carl-Amery-",
+        "Carl-Amery-plz"
+    ],
+    "Chiemgaustraße": [
+        "Chiemgau",
+        "Chiemgaustr.",
+        "Chiemgaustrasse"
+    ],
+    "Clemensstraße": [
+        "Clemens",
+        "Clemensstr.",
+        "Clemensstrasse"
+    ],
+    "Cosimabad": [],
+    "Dachau Bahnhof": [
+        "Dachau"
+    ],
+    "Dachau Stadt": [
+        "Dachau"
+    ],
+    "Daglfing": [],
+    "Deisenhofen": [],
+    "Deroystraße": [
+        "Deroy",
+        "Deroystr.",
+        "Deroystrasse"
+    ],
+    "Deutsches Museum": [
+        "Deutsches"
+    ],
+    "Dietlindenstraße": [
+        "Dietlinden",
+        "Dietlindenstr.",
+        "Dietlindenstrasse"
+    ],
+    "Domagkstraße": [
+        "Domagk",
+        "Domagkstr.",
+        "Domagkstrasse"
+    ],
+    "Donnersbergerbrücke": [],
+    "Donnersbergerstraße": [
+        "Donnersberger",
+        "Donnersbergerstr.",
+        "Donnersbergerstrasse"
+    ],
+    "Dülferstraße": [
+        "Dülfer",
+        "Dülferstr.",
+        "Dülferstrasse"
+    ],
+    "Dürrnhaar": [],
+    "Ebenhausen-Schäftlarn": [],
+    "Ebersberg": [],
+    "Eching": [],
+    "Eduard-Schmid-Straße": [
+        "Eduard-Schmid-",
+        "Eduard-Schmid-str.",
+        "Eduard-Schmid-strasse"
+    ],
+    "Effnerplatz": [
+        "Effner",
+        "Effnerplz"
+    ],
+    "Eglharting": [],
+    "Eichenau": [],
+    "Einsteinstraße": [
+        "Einstein",
+        "Einsteinstr.",
+        "Einsteinstrasse"
+    ],
+    "Elisabethplatz": [
+        "Elisabeth",
+        "Elisabethplz"
+    ],
+    "Englschalking": [],
+    "Erding": [],
+    "Erdweg": [],
+    "Esting": [],
+    "Fachnerstraße": [
+        "Fachner",
+        "Fachnerstr.",
+        "Fachnerstrasse"
+    ],
+    "Fasanenpark": [],
+    "Fasanerie": [],
+    "Fasaneriestraße": [
+        "Fasanerie",
+        "Fasaneriestr.",
+        "Fasaneriestrasse"
+    ],
+    "Fasangarten": [],
+    "Feldafing": [],
+    "Feldkirchen": [],
+    "Feldmoching": [],
+    "Flurstraße": [
+        "Flur",
+        "Flurstr.",
+        "Flurstrasse"
+    ],
+    "Forstenrieder Allee": [
+        "Forstenrieder"
+    ],
+    "Frankfurter Ring": [
+        "Frankfurter"
+    ],
+    "Fraunhoferstraße": [
+        "Fraunhofer",
+        "Fraunhoferstr.",
+        "Fraunhoferstrasse"
+    ],
+    "Freiham": [],
+    "Freimann": [],
+    "Freising": [],
+    "Friedenheimer Straße": [
+        "Friedenheimer",
+        "Friedenheimer Str.",
+        "Friedenheimer Strasse"
+    ],
+    "Friedensengel/Villa Stuck": [
+        "Friedensengel/Villa"
+    ],
+    "Fritz-Meyer-Weg": [],
+    "Fröttmaning": [],
+    "Furth": [],
+    "Fürstenfeldbruck": [],
+    "Fürstenried West": [
+        "Fürstenried"
+    ],
+    "Fürstenrieder Straße": [
+        "Fürstenrieder",
+        "Fürstenrieder Str.",
+        "Fürstenrieder Strasse"
+    ],
+    "Garching": [],
+    "Garching-Forschungszentrum": [],
+    "Garching-Hochbrück (U)": [
+        "Garching-Hochbrück"
+    ],
+    "Gartenstraße": [
+        "Garten",
+        "Gartenstr.",
+        "Gartenstrasse"
+    ],
+    "Gauting": [],
+    "Geisenbrunn": [],
+    "Geltendorf": [],
+    "Georg-Brauchle-Ring": [],
+    "Germering-Unterpfaffenhofen": [],
+    "Gern": [],
+    "Gernlinden": [],
+    "Giesing": [],
+    "Gilching-Argelsried": [],
+    "Giselastraße": [
+        "Gisela",
+        "Giselastr.",
+        "Giselastrasse"
+    ],
+    "Goetheplatz": [
+        "Goethe",
+        "Goetheplz"
+    ],
+    "Gondrellplatz": [
+        "Gondrell",
+        "Gondrellplz"
+    ],
+    "Grafing Bahnhof": [
+        "Grafing"
+    ],
+    "Grafing Stadt": [
+        "Grafing"
+    ],
+    "Grafrath": [],
+    "Grillparzerstraße": [
+        "Grillparzer",
+        "Grillparzerstr.",
+        "Grillparzerstrasse"
+    ],
+    "Gronsdorf": [],
+    "Großhadern": [],
+    "Großhelfendorf": [],
+    "Großhesselohe Isartalbahnhof": [
+        "Großhesselohe"
+    ],
+    "Großhesseloher Brücke": [
+        "Großhesseloher"
+    ],
+    "Grub": [],
+    "Gräfelfing": [],
+    "Gröbenzell": [],
+    "Grünwald, Bavariafilmplatz": [
+        "Grünwald, Bavariafilm",
+        "Grünwald, Bavariafilmplz"
+    ],
+    "Grünwald, Derbolfinger Platz": [
+        "Grünwald, Derbolfinger",
+        "Grünwald, Derbolfingerplz"
+    ],
+    "Grünwald, Ludwig-Thoma-Straße": [
+        "Grünwald, Ludwig-Thoma-",
+        "Grünwald, Ludwig-Thoma-str.",
+        "Grünwald, Ludwig-Thoma-strasse"
+    ],
+    "Grünwald, Parkplatz": [
+        "Grünwald, Park",
+        "Grünwald, Parkplz"
+    ],
+    "Haar": [],
+    "Hackerbrücke": [],
+    "Haderner Stern": [
+        "Haderner"
+    ],
+    "Haidenauplatz": [
+        "Haidenau",
+        "Haidenauplz"
+    ],
+    "Hallbergmoos": [],
+    "Hanauer Straße": [
+        "Hanauer",
+        "Hanauer Str.",
+        "Hanauer Strasse"
+    ],
+    "Hans-Thonauer-Straße": [
+        "Hans-Thonauer-",
+        "Hans-Thonauer-str.",
+        "Hans-Thonauer-strasse"
+    ],
+    "Harras": [],
+    "Harthaus": [],
+    "Harthof": [],
+    "Hasenbergl": [],
+    "Hauptbahnhof (tief)": [
+        "Hauptbahnhof"
+    ],
+    "Hebertshausen": [],
+    "Heideckstraße": [
+        "Heideck",
+        "Heideckstr.",
+        "Heideckstrasse"
+    ],
+    "Heimeranplatz": [
+        "Heimeran",
+        "Heimeranplz"
+    ],
+    "Heimstetten": [],
+    "Herkomerplatz": [
+        "Herkomer",
+        "Herkomerplz"
+    ],
+    "Hermann-Lingg-Straße": [
+        "Hermann-Lingg-",
+        "Hermann-Lingg-str.",
+        "Hermann-Lingg-strasse"
+    ],
+    "Herrsching": [],
+    "Herzogstraße": [
+        "Herzog",
+        "Herzogstr.",
+        "Herzogstrasse"
+    ],
+    "Hirschgarten": [],
+    "Hochschule München (Lothstraße)": [],
+    "Hohenbrunn": [],
+    "Hohenschäftlarn": [],
+    "Hohenzollernplatz": [
+        "Hohenzollern",
+        "Hohenzollernplz"
+    ],
+    "Holbeinstraße": [
+        "Holbein",
+        "Holbeinstr.",
+        "Holbeinstrasse"
+    ],
+    "Holzapfelkreuth": [],
+    "Holzapfelstraße": [
+        "Holzapfel",
+        "Holzapfelstr.",
+        "Holzapfelstrasse"
+    ],
+    "Holzkirchen": [],
+    "Holzkirchner Bahnhof": [
+        "Holzkirchner"
+    ],
+    "Hopfenstraße": [
+        "Hopfen",
+        "Hopfenstr.",
+        "Hopfenstrasse"
+    ],
+    "Hubertusstraße": [
+        "Hubertus",
+        "Hubertusstr.",
+        "Hubertusstrasse"
+    ],
+    "Hugo-Troendle-Straße": [
+        "Hugo-Troendle-",
+        "Hugo-Troendle-str.",
+        "Hugo-Troendle-strasse"
+    ],
+    "Höhenkirchen-Siegertsbrunn": [],
+    "Höllriegelskreuth": [],
+    "Icking": [],
+    "Implerstraße": [
+        "Impler",
+        "Implerstr.",
+        "Implerstrasse"
+    ],
+    "Infanteriestraße": [
+        "Infanterie",
+        "Infanteriestr.",
+        "Infanteriestrasse"
+    ],
+    "Innsbrucker Ring": [
+        "Innsbrucker"
+    ],
+    "Isartor": [],
+    "Ismaning": [],
+    "Johanneskirchen": [],
+    "Josephsburg": [],
+    "Josephsplatz": [
+        "Josephs",
+        "Josephsplz"
+    ],
+    "Kammerspiele": [],
+    "Karl-Preis-Platz": [
+        "Karl-Preis-",
+        "Karl-Preis-plz"
+    ],
+    "Karl-Theodor-Straße": [
+        "Karl-Theodor-",
+        "Karl-Theodor-str.",
+        "Karl-Theodor-strasse"
+    ],
+    "Karlsfeld": [],
+    "Karlsplatz (Stachus)": [
+        "Karlsplatz"
+    ],
+    "Karlstraße": [
+        "Karl",
+        "Karlstr.",
+        "Karlstrasse"
+    ],
+    "Kieferngarten": [],
+    "Kirchseeon": [],
+    "Kleinberghofen": [],
+    "Klinikum Großhadern": [
+        "Klinikum"
+    ],
+    "Klinikum Harlaching": [
+        "Klinikum"
+    ],
+    "Kolumbusplatz": [
+        "Kolumbus",
+        "Kolumbusplz"
+    ],
+    "Kreillerstraße": [
+        "Kreiller",
+        "Kreillerstr.",
+        "Kreillerstrasse"
+    ],
+    "Kreuzstraße": [
+        "Kreuz",
+        "Kreuzstr.",
+        "Kreuzstrasse"
+    ],
+    "Kriemhildenstraße": [
+        "Kriemhilden",
+        "Kriemhildenstr.",
+        "Kriemhildenstrasse"
+    ],
+    "Kurfürstenplatz": [
+        "Kurfürsten",
+        "Kurfürstenplz"
+    ],
+    "Kurzstraße": [
+        "Kurz",
+        "Kurzstr.",
+        "Kurzstrasse"
+    ],
+    "Kölner Platz": [
+        "Kölner",
+        "Kölnerplz"
+    ],
+    "Königsplatz": [
+        "Königs",
+        "Königsplz"
+    ],
+    "Laim": [],
+    "Laimer Platz": [
+        "Laimer",
+        "Laimerplz"
+    ],
+    "Langwied": [],
+    "Lautensackstraße": [
+        "Lautensack",
+        "Lautensackstr.",
+        "Lautensackstrasse"
+    ],
+    "Leienfelsstraße": [
+        "Leienfels",
+        "Leienfelsstr.",
+        "Leienfelsstrasse"
+    ],
+    "Lenbachplatz": [
+        "Lenbach",
+        "Lenbachplz"
+    ],
+    "Leonrodplatz": [
+        "Leonrod",
+        "Leonrodplz"
+    ],
+    "Leuchtenbergring": [],
+    "Lochham": [],
+    "Lochhausen": [],
+    "Lohensteinstraße": [
+        "Lohenstein",
+        "Lohensteinstr.",
+        "Lohensteinstrasse"
+    ],
+    "Lohhof": [],
+    "MVG Museum": [
+        "MVG"
+    ],
+    "Machtlfinger Straße": [
+        "Machtlfinger",
+        "Machtlfinger Str.",
+        "Machtlfinger Strasse"
+    ],
+    "Maillingerstraße": [
+        "Maillinger",
+        "Maillingerstr.",
+        "Maillingerstrasse"
+    ],
+    "Maisach": [],
+    "Malching (Oberbay)": [
+        "Malching"
+    ],
+    "Mammendorf": [],
+    "Mangfallplatz": [
+        "Mangfall",
+        "Mangfallplz"
+    ],
+    "Maria-Ward-Straße": [
+        "Maria-Ward-",
+        "Maria-Ward-str.",
+        "Maria-Ward-strasse"
+    ],
+    "Mariahilfplatz": [
+        "Mariahilf",
+        "Mariahilfplz"
+    ],
+    "Mariannenplatz": [
+        "Mariannen",
+        "Mariannenplz"
+    ],
+    "Marienplatz": [
+        "Marien",
+        "Marienplz"
+    ],
+    "Marienplatz (Theatinerstraße)": [
+        "Marienplatz"
+    ],
+    "Markt Indersdorf": [
+        "Markt"
+    ],
+    "Markt Schwaben": [
+        "Markt"
+    ],
+    "Marsstraße": [
+        "Mars",
+        "Marsstr.",
+        "Marsstrasse"
+    ],
+    "Mauerkircherstraße": [
+        "Mauerkircher",
+        "Mauerkircherstr.",
+        "Mauerkircherstrasse"
+    ],
+    "Max-Weber-Platz": [
+        "Max-Weber-",
+        "Max-Weber-plz"
+    ],
+    "Maxmonument": [],
+    "Menterschwaige": [],
+    "Messestadt Ost": [
+        "Messestadt"
+    ],
+    "Messestadt West": [
+        "Messestadt"
+    ],
+    "Michaelibad": [],
+    "Milbertshofen": [],
+    "Mittersendling": [],
+    "Moosach": [],
+    "Moosacher St.-Martins-Platz": [
+        "Moosacher St.-Martins-",
+        "Moosacher St.-Martins-plz"
+    ],
+    "Moosfeld": [],
+    "Mutschellestraße": [
+        "Mutschelle",
+        "Mutschellestr.",
+        "Mutschellestrasse"
+    ],
+    "Müllerstraße": [
+        "Müller",
+        "Müllerstr.",
+        "Müllerstrasse"
+    ],
+    "München Flughafen Besucherpark": [],
+    "München Flughafen Terminal": [],
+    "München Ost": [
+        "München"
+    ],
+    "München-Pasing": [],
+    "Münchner Freiheit": [
+        "Münchner"
+    ],
+    "Nationalmuseum/Haus der Kunst": [],
+    "Nationaltheater": [],
+    "Neuaubing": [],
+    "Neubiberg": [],
+    "Neufahrn (b Freising)": [],
+    "Neugilching": [],
+    "Neuhausen": [],
+    "Neuperlach Süd": [
+        "Neuperlach"
+    ],
+    "Neuperlach Zentrum": [
+        "Neuperlach"
+    ],
+    "Niederroth": [],
+    "Nordbad": [],
+    "Nordendstraße": [
+        "Nordend",
+        "Nordendstr.",
+        "Nordendstrasse"
+    ],
+    "Nordfriedhof": [],
+    "Obermenzing": [],
+    "Oberschleißheim": [],
+    "Obersendling": [],
+    "Oberwiesenfeld": [],
+    "Odeonsplatz": [
+        "Odeons",
+        "Odeonsplz"
+    ],
+    "Offenbachstraße": [
+        "Offenbach",
+        "Offenbachstr.",
+        "Offenbachstrasse"
+    ],
+    "Olching": [],
+    "Olympia-Einkaufszentrum": [],
+    "Olympiapark West": [
+        "Olympiapark"
+    ],
+    "Olympiazentrum": [],
+    "Ostfriedhof": [],
+    "Ottenhofen": [],
+    "Otterfing": [],
+    "Ottobrunn": [],
+    "Paradiesstraße": [
+        "Paradies",
+        "Paradiesstr.",
+        "Paradiesstrasse"
+    ],
+    "Partnachplatz": [
+        "Partnach",
+        "Partnachplz"
+    ],
+    "Peiß": [],
+    "Pelkovenstraße": [
+        "Pelkoven",
+        "Pelkovenstr.",
+        "Pelkovenstrasse"
+    ],
+    "Perlach": [],
+    "Petershausen (Oberbay)": [
+        "Petershausen"
+    ],
+    "Petuelring": [],
+    "Pinakotheken": [],
+    "Planegg": [],
+    "Poccistraße": [
+        "Pocci",
+        "Poccistr.",
+        "Poccistrasse"
+    ],
+    "Poing": [],
+    "Possenhofen": [],
+    "Potsdamer Straße": [
+        "Potsdamer",
+        "Potsdamer Str.",
+        "Potsdamer Strasse"
+    ],
+    "Prinz-Eugen-Park": [],
+    "Prinzregentenplatz": [
+        "Prinzregenten",
+        "Prinzregentenplz"
+    ],
+    "Puchheim": [],
+    "Pullach": [],
+    "Pulling (bei Freising)": [],
+    "Quiddestraße": [
+        "Quidde",
+        "Quiddestr.",
+        "Quiddestrasse"
+    ],
+    "Rathaus Pasing": [
+        "Rathaus"
+    ],
+    "Regerplatz": [
+        "Reger",
+        "Regerplz"
+    ],
+    "Regina-Ullmann-Straße": [
+        "Regina-Ullmann-",
+        "Regina-Ullmann-str.",
+        "Regina-Ullmann-strasse"
+    ],
+    "Reichenbachplatz": [
+        "Reichenbach",
+        "Reichenbachplz"
+    ],
+    "Renatastraße": [
+        "Renata",
+        "Renatastr.",
+        "Renatastrasse"
+    ],
+    "Richard-Strauss-Straße": [
+        "Richard-Strauss-",
+        "Richard-Strauss-str.",
+        "Richard-Strauss-strasse"
+    ],
+    "Riedenburger Straße": [
+        "Riedenburger",
+        "Riedenburger Str.",
+        "Riedenburger Strasse"
+    ],
+    "Riem": [],
+    "Robert-Koch-Straße": [
+        "Robert-Koch-",
+        "Robert-Koch-str.",
+        "Robert-Koch-strasse"
+    ],
+    "Romanplatz": [
+        "Roman",
+        "Romanplz"
+    ],
+    "Rosenheimer Platz": [
+        "Rosenheimer",
+        "Rosenheimerplz"
+    ],
+    "Rotkreuzplatz": [
+        "Rotkreuz",
+        "Rotkreuzplz"
+    ],
+    "Röhrmoos": [],
+    "Sandstraße": [
+        "Sand",
+        "Sandstr.",
+        "Sandstrasse"
+    ],
+    "Sankt-Martin-Straße": [
+        "Sankt-Martin-",
+        "Sankt-Martin-str.",
+        "Sankt-Martin-strasse"
+    ],
+    "Sankt-Quirin-Platz": [
+        "Sankt-Quirin-",
+        "Sankt-Quirin-plz"
+    ],
+    "Sauerlach": [],
+    "Scheidplatz": [
+        "Scheid",
+        "Scheidplz"
+    ],
+    "Schellingstraße": [
+        "Schelling",
+        "Schellingstr.",
+        "Schellingstrasse"
+    ],
+    "Schilcherweg": [],
+    "Schloss Nymphenburg": [
+        "Schloss"
+    ],
+    "Schlösselgarten": [],
+    "Schlüsselbergstraße": [
+        "Schlüsselberg",
+        "Schlüsselbergstr.",
+        "Schlüsselbergstrasse"
+    ],
+    "Schrenkstraße": [
+        "Schrenk",
+        "Schrenkstr.",
+        "Schrenkstrasse"
+    ],
+    "Schwabhausen": [],
+    "Schwabing Nord": [
+        "Schwabing"
+    ],
+    "Schwabinger Tor": [
+        "Schwabinger"
+    ],
+    "Schwanseestraße": [
+        "Schwansee",
+        "Schwanseestr.",
+        "Schwanseestrasse"
+    ],
+    "Schwanthalerhöhe": [],
+    "Schöngeising": [],
+    "Seefeld-Hechendorf": [],
+    "Sendlinger Tor": [
+        "Sendlinger"
+    ],
+    "Senftenauerstraße": [
+        "Senftenauer",
+        "Senftenauerstr.",
+        "Senftenauerstrasse"
+    ],
+    "Siemenswerke": [],
+    "Siglstraße": [
+        "Sigl",
+        "Siglstr.",
+        "Siglstrasse"
+    ],
+    "Silberhornstraße": [
+        "Silberhorn",
+        "Silberhornstr.",
+        "Silberhornstrasse"
+    ],
+    "Solln": [],
+    "St. Emmeram": [
+        "St."
+    ],
+    "St. Koloman": [
+        "St."
+    ],
+    "St.-Martins-Platz": [
+        "St.-Martins-",
+        "St.-Martins-plz"
+    ],
+    "St.-Veit-Straße": [
+        "St.-Veit-",
+        "St.-Veit-str.",
+        "St.-Veit-strasse"
+    ],
+    "Starnberg": [],
+    "Starnberg Nord": [
+        "Starnberg"
+    ],
+    "Stegener Weg": [
+        "Stegener"
+    ],
+    "Steinebach": [],
+    "Sternwartstraße": [
+        "Sternwart",
+        "Sternwartstr.",
+        "Sternwartstrasse"
+    ],
+    "Steubenplatz": [
+        "Steuben",
+        "Steubenplz"
+    ],
+    "Stiglmaierplatz": [
+        "Stiglmaier",
+        "Stiglmaierplz"
+    ],
+    "Stockdorf": [],
+    "Studentenstadt": [],
+    "Säulingstraße": [
+        "Säuling",
+        "Säulingstr.",
+        "Säulingstrasse"
+    ],
+    "Südtiroler Straße": [
+        "Südtiroler",
+        "Südtiroler Str.",
+        "Südtiroler Strasse"
+    ],
+    "Taimerhofstraße": [
+        "Taimerhof",
+        "Taimerhofstr.",
+        "Taimerhofstrasse"
+    ],
+    "Taufkirchen": [],
+    "Tegernseer Landstraße": [
+        "Tegernseer Land",
+        "Tegernseer Landstr.",
+        "Tegernseer Landstrasse"
+    ],
+    "Thalkirchen (Tierpark)": [
+        "Thalkirchen"
+    ],
+    "Theodolindenplatz": [
+        "Theodolinden",
+        "Theodolindenplz"
+    ],
+    "Therese-Giehse-Allee": [
+        "Therese-Giehse-"
+    ],
+    "Theresienstraße": [
+        "Theresien",
+        "Theresienstr.",
+        "Theresienstrasse"
+    ],
+    "Theresienwiese": [],
+    "Tiroler Platz": [
+        "Tiroler",
+        "Tirolerplz"
+    ],
+    "Tivolistraße": [
+        "Tivoli",
+        "Tivolistr.",
+        "Tivolistrasse"
+    ],
+    "Trappentreustraße": [
+        "Trappentreu",
+        "Trappentreustr.",
+        "Trappentreustrasse"
+    ],
+    "Trudering": [],
+    "Tutzing": [],
+    "Türkenfeld": [],
+    "Universität": [],
+    "Unterföhring": [],
+    "Unterhaching": [],
+    "Untermenzing": [],
+    "Untersbergstraße": [
+        "Untersberg",
+        "Untersbergstr.",
+        "Untersbergstrasse"
+    ],
+    "Unterschleißheim": [],
+    "Vaterstetten": [],
+    "Vierkirchen-Esterhofen": [],
+    "Vogelweideplatz": [
+        "Vogelweide",
+        "Vogelweideplz"
+    ],
+    "Werinherstraße": [
+        "Werinher",
+        "Werinherstr.",
+        "Werinherstrasse"
+    ],
+    "Westbad": [],
+    "Westendstraße": [
+        "Westend",
+        "Westendstr.",
+        "Westendstrasse"
+    ],
+    "Westfriedhof": [],
+    "Westkreuz": [],
+    "Westpark": [],
+    "Wettersteinplatz": [
+        "Wetterstein",
+        "Wettersteinplz"
+    ],
+    "Weßling": [],
+    "Wiener Platz": [
+        "Wiener",
+        "Wienerplz"
+    ],
+    "Willibaldplatz": [
+        "Willibald",
+        "Willibaldplz"
+    ],
+    "Wintrichring": [],
+    "Wolfratshausen": [],
+    "Wächterhof": [],
+    "Wörthstraße": [
+        "Wörth",
+        "Wörthstr.",
+        "Wörthstrasse"
+    ],
+    "Zorneding": []
+}

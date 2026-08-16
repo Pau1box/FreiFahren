@@ -1,0 +1,772 @@
+{
+    "n2104220": {
+        "coordinates": {
+            "latitude": 47.986817828571425,
+            "longitude": 7.837599571428571
+        },
+        "lines": [
+            "4",
+            "5"
+        ],
+        "name": "Reiterstraße"
+    },
+    "n21389326": {
+        "coordinates": {
+            "latitude": 47.97951435,
+            "longitude": 7.8478848
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Holbeinstraße"
+    },
+    "n21389332": {
+        "coordinates": {
+            "latitude": 47.9744596,
+            "longitude": 7.8475071
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Wonnhalde"
+    },
+    "n21389345": {
+        "coordinates": {
+            "latitude": 47.96525435,
+            "longitude": 7.856349116666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Klosterplatz"
+    },
+    "n21873443": {
+        "coordinates": {
+            "latitude": 48.00680255,
+            "longitude": 7.85522715
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Hauptstraße"
+    },
+    "n21965264": {
+        "coordinates": {
+            "latitude": 47.99143805,
+            "longitude": 7.84762555
+        },
+        "lines": [
+            "2",
+            "4",
+            "5"
+        ],
+        "name": "Holzmarkt"
+    },
+    "n25150325": {
+        "coordinates": {
+            "latitude": 47.98385978,
+            "longitude": 7.836376680000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Weddigenstraße"
+    },
+    "n26388996": {
+        "coordinates": {
+            "latitude": 47.996592774999996,
+            "longitude": 7.8403453
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n27797392": {
+        "coordinates": {
+            "latitude": 48.006914949999995,
+            "longitude": 7.818201350000001
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Am Bischofskreuz"
+    },
+    "n27797523": {
+        "coordinates": {
+            "latitude": 48.0107843,
+            "longitude": 7.81131875
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Betzenhauser Torplatz"
+    },
+    "n28804605": {
+        "coordinates": {
+            "latitude": 47.987087439999996,
+            "longitude": 7.87884474
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Emil-Gött-Straße"
+    },
+    "n29670387": {
+        "coordinates": {
+            "latitude": 47.98613255,
+            "longitude": 7.8887143
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Römerhof"
+    },
+    "n31405092": {
+        "coordinates": {
+            "latitude": 48.0075715,
+            "longitude": 7.845892575
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Hauptfriedhof"
+    },
+    "n31413757": {
+        "coordinates": {
+            "latitude": 48.0043903875,
+            "longitude": 7.8359324125
+        },
+        "lines": [
+            "2",
+            "4"
+        ],
+        "name": "Robert-Koch-Straße"
+    },
+    "n31446844": {
+        "coordinates": {
+            "latitude": 47.97421834,
+            "longitude": 7.8276309
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Paula-Modersohn-Platz"
+    },
+    "n31450259": {
+        "coordinates": {
+            "latitude": 48.002059275,
+            "longitude": 7.820131975
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Bissierstraße"
+    },
+    "n31457734": {
+        "coordinates": {
+            "latitude": 47.9938801,
+            "longitude": 7.85341035
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Oberlinden"
+    },
+    "n31683731": {
+        "coordinates": {
+            "latitude": 48.00020276666667,
+            "longitude": 7.83194665
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Rathaus im Stühlinger"
+    },
+    "n59764248": {
+        "coordinates": {
+            "latitude": 48.01387606111111,
+            "longitude": 7.807543233333334
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Paduaallee"
+    },
+    "n60225277": {
+        "coordinates": {
+            "latitude": 48.01829695,
+            "longitude": 7.81170975
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Moosgrund"
+    },
+    "n60227142": {
+        "coordinates": {
+            "latitude": 48.024048300000004,
+            "longitude": 7.81352445
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Diakoniekrankenhaus"
+    },
+    "n248594127": {
+        "coordinates": {
+            "latitude": 47.99558493333333,
+            "longitude": 7.84555345
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7"
+        ],
+        "name": "Stadttheater"
+    },
+    "n248609020": {
+        "coordinates": {
+            "latitude": 47.99065225,
+            "longitude": 7.85453935
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Schwabentorbrücke"
+    },
+    "n248609026": {
+        "coordinates": {
+            "latitude": 47.989356433333334,
+            "longitude": 7.858377733333334
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Brauerei Ganter"
+    },
+    "n250957536": {
+        "coordinates": {
+            "latitude": 47.98839405,
+            "longitude": 7.8647692
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Maria-Hilf-Kirche"
+    },
+    "n251576481": {
+        "coordinates": {
+            "latitude": 48.01555226000001,
+            "longitude": 7.854927739999999
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Hornusstraße"
+    },
+    "n251602570": {
+        "coordinates": {
+            "latitude": 48.01942063333333,
+            "longitude": 7.856932583333333
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Tullastraße"
+    },
+    "n251602572": {
+        "coordinates": {
+            "latitude": 48.0225123,
+            "longitude": 7.8583379
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Reutebachgasse"
+    },
+    "n264870408": {
+        "coordinates": {
+            "latitude": 47.9859577875,
+            "longitude": 7.8294538375
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Pressehaus"
+    },
+    "n264870414": {
+        "coordinates": {
+            "latitude": 47.98945,
+            "longitude": 7.8235034
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Haslach-Bad"
+    },
+    "n264870439": {
+        "coordinates": {
+            "latitude": 47.9929827,
+            "longitude": 7.8098548
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Krozinger Straße"
+    },
+    "n267673350": {
+        "coordinates": {
+            "latitude": 47.97533625,
+            "longitude": 7.8225275
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Vauban Mitte"
+    },
+    "n267786626": {
+        "coordinates": {
+            "latitude": 47.9974802,
+            "longitude": 7.7950059
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Geschwister-Scholl-Platz"
+    },
+    "n268953222": {
+        "coordinates": {
+            "latitude": 47.9765688,
+            "longitude": 7.817413928571428
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Innsbrucker Straße"
+    },
+    "n269149677": {
+        "coordinates": {
+            "latitude": 47.99924765,
+            "longitude": 7.791273033333333
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Maria-von-Rudloff-Platz"
+    },
+    "n295264499": {
+        "coordinates": {
+            "latitude": 47.9985741,
+            "longitude": 7.84719625
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Fahnenbergplatz"
+    },
+    "n297604124": {
+        "coordinates": {
+            "latitude": 47.984455700000005,
+            "longitude": 7.893756983333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Laßbergstraße"
+    },
+    "n298518321": {
+        "coordinates": {
+            "latitude": 47.9948024875,
+            "longitude": 7.84987916875
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Bertoldsbrunnen"
+    },
+    "n298524222": {
+        "coordinates": {
+            "latitude": 47.98850055,
+            "longitude": 7.8696374
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Alter Messplatz"
+    },
+    "n298527892": {
+        "coordinates": {
+            "latitude": 47.97877415000001,
+            "longitude": 7.83107465
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Peter-Thumb-Straße"
+    },
+    "n299619837": {
+        "coordinates": {
+            "latitude": 48.002946300000005,
+            "longitude": 7.854612250000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Tennenbacher Straße"
+    },
+    "n300039798": {
+        "coordinates": {
+            "latitude": 48.010608500000004,
+            "longitude": 7.8545392
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Okenstraße"
+    },
+    "n301849978": {
+        "coordinates": {
+            "latitude": 47.988068991304345,
+            "longitude": 7.795996069565217
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Munzinger Straße"
+    },
+    "n301850020": {
+        "coordinates": {
+            "latitude": 47.991892075,
+            "longitude": 7.7976696
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "VAG-Zentrum"
+    },
+    "n302873602": {
+        "coordinates": {
+            "latitude": 48.01893462727273,
+            "longitude": 7.839361527272728
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Messe Freiburg"
+    },
+    "n302873797": {
+        "coordinates": {
+            "latitude": 48.01220419,
+            "longitude": 7.83572822
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Technische Fakultät"
+    },
+    "n333797834": {
+        "coordinates": {
+            "latitude": 48.028752516666664,
+            "longitude": 7.80894425
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Moosweiher"
+    },
+    "n334363623": {
+        "coordinates": {
+            "latitude": 47.994641099999996,
+            "longitude": 7.802835075
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Am Lindenwäldle"
+    },
+    "n339131741": {
+        "coordinates": {
+            "latitude": 47.98796445,
+            "longitude": 7.8733068
+        },
+        "lines": [
+            "1",
+            "7"
+        ],
+        "name": "Musikhochschule"
+    },
+    "n432597707": {
+        "coordinates": {
+            "latitude": 47.99063951428571,
+            "longitude": 7.819862485714286
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Scherrerplatz"
+    },
+    "n432653724": {
+        "coordinates": {
+            "latitude": 48.003246275,
+            "longitude": 7.840920475
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Friedrich-Ebert-Platz"
+    },
+    "n441290782": {
+        "coordinates": {
+            "latitude": 47.98480370000001,
+            "longitude": 7.847643000000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Lorettostraße"
+    },
+    "n521425587": {
+        "coordinates": {
+            "latitude": 47.991111599999996,
+            "longitude": 7.8164805
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Dorfbrunnen"
+    },
+    "n611630462": {
+        "coordinates": {
+            "latitude": 48.00064545,
+            "longitude": 7.7878574
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Bollerstaudenstraße"
+    },
+    "n621214874": {
+        "coordinates": {
+            "latitude": 47.99747045,
+            "longitude": 7.807021000000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Bugginger Straße"
+    },
+    "n621214976": {
+        "coordinates": {
+            "latitude": 47.9994253,
+            "longitude": 7.81012195
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Rohrgraben"
+    },
+    "n653314193": {
+        "coordinates": {
+            "latitude": 47.998013549999996,
+            "longitude": 7.8365775
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "7"
+        ],
+        "name": "Eschholzstraße"
+    },
+    "n660196365": {
+        "coordinates": {
+            "latitude": 48.002134125,
+            "longitude": 7.825410975
+        },
+        "lines": [
+            "1",
+            "3",
+            "7"
+        ],
+        "name": "Runzmattenweg"
+    },
+    "n668862846": {
+        "coordinates": {
+            "latitude": 47.989268466666665,
+            "longitude": 7.847967566666667
+        },
+        "lines": [
+            "2",
+            "4"
+        ],
+        "name": "Johanneskirche"
+    },
+    "n698508904": {
+        "coordinates": {
+            "latitude": 47.98671745,
+            "longitude": 7.88399465
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Hasemannstraße"
+    },
+    "n733996970": {
+        "coordinates": {
+            "latitude": 48.00979515,
+            "longitude": 7.86002395
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Okenstraße"
+    },
+    "n1292384198": {
+        "coordinates": {
+            "latitude": 47.96695595,
+            "longitude": 7.852603
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Wiesenweg"
+    },
+    "n1842965635": {
+        "coordinates": {
+            "latitude": 48.03498888461539,
+            "longitude": 7.863206630769231
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Gundelfinger Straße"
+    },
+    "n1842971190": {
+        "coordinates": {
+            "latitude": 48.03025195,
+            "longitude": 7.862103749999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Glottertalstraße"
+    },
+    "n1842979230": {
+        "coordinates": {
+            "latitude": 48.026066875,
+            "longitude": 7.86032775
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Berggasse"
+    },
+    "n2513515806": {
+        "coordinates": {
+            "latitude": 47.997779630000004,
+            "longitude": 7.85225868
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Europaplatz"
+    },
+    "n3137144829": {
+        "coordinates": {
+            "latitude": 48.007460300000005,
+            "longitude": 7.829351900000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Berliner Allee"
+    },
+    "n3761546231": {
+        "coordinates": {
+            "latitude": 48.009597500000005,
+            "longitude": 7.831414083333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Elsässer Straße"
+    },
+    "n3771426628": {
+        "coordinates": {
+            "latitude": 47.9927108,
+            "longitude": 7.8453563
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Erbprinzenstraße"
+    },
+    "n4416288412": {
+        "coordinates": {
+            "latitude": 47.989523000000005,
+            "longitude": 7.843249200000001
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Mattenstraße"
+    },
+    "n6219181290": {
+        "coordinates": {
+            "latitude": 48.0148276,
+            "longitude": 7.8366377
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Europa-Park Stadion"
+    },
+    "n9732304790": {
+        "coordinates": {
+            "latitude": 48.012995440000005,
+            "longitude": 7.8524535
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Eugen-Martin-Straße"
+    },
+    "n10690232969": {
+        "coordinates": {
+            "latitude": 48.010453150000004,
+            "longitude": 7.84873915
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Zollhallenplatz"
+    }
+}

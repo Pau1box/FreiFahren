@@ -1,0 +1,22 @@
+{
+    "id": "goerlitz",
+    "name": "Görlitz",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 51.1563,
+        "longitude": 14.991
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 51.077644,
+            "longitude": 14.87024
+        },
+        "northEast": {
+            "latitude": 51.215247,
+            "longitude": 15.057776
+        }
+    }
+}

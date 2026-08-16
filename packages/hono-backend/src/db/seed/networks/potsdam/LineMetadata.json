@@ -1,0 +1,37 @@
+{
+    "91": {
+        "color": "#1f77b4",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "92": {
+        "color": "#19488e",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "93": {
+        "color": "#fe9800",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "94": {
+        "color": "#838a8f",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "96": {
+        "color": "#00a995",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "98": {
+        "color": "#0896dd",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "99": {
+        "color": "#59c133",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

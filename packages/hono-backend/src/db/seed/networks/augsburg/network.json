@@ -1,0 +1,22 @@
+{
+    "id": "augsburg",
+    "name": "Augsburg",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 48.369,
+        "longitude": 10.898
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 48.226275,
+            "longitude": 10.771004
+        },
+        "northEast": {
+            "latitude": 48.447018,
+            "longitude": 11.031044
+        }
+    }
+}

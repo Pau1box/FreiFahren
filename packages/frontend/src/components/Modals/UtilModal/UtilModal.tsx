@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { useAnalyticsOptOut } from '../../../hooks/useAnalyticsOptOut'
 import { Backdrop } from '../../Miscellaneous/Backdrop/Backdrop'
+import { NetworkSwitcher } from '../../Miscellaneous/NetworkSwitcher/NetworkSwitcher'
 import { ContactSection } from '../ContactSection/ContactSection'
 import { LegalDisclaimer } from '../LegalDisclaimer'
 
@@ -49,6 +50,7 @@ const UtilModal: React.FC<UtilModalProps> = ({ className, children }) => {
                             {t('UtilModal.terms')}
                         </button>
                     </div>
+                    <NetworkSwitcher />
                     <div className="separator" />
                     <div className="toggle-switch">
                         <span className="toggle-switch__label">

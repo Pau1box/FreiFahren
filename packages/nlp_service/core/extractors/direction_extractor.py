@@ -14,7 +14,9 @@ def format_text(text):
     logger.debug("formatting text")
 
     text = text.lower().replace(".", " ").replace(",", " ")
-    # Remove all isolated 's' and 'u' to reduce noise
+    # Remove all isolated 's' and 'u' to reduce noise. German speakers prefix a station with the
+    # mode it is served by, as in "S Tempelhof", so a lone letter is never part of the name. This is
+    # a spelling convention rather than knowledge about any particular city.
     text = re.sub(r"\b(s|u)\b", "", text)
     return text
 
@@ -22,7 +24,7 @@ def format_text(text):
 Extraction functions
 """
 
-def find_direction(text, ticket_inspector):
+def find_direction(text, ticket_inspector, network_data):
     logger.debug("finding the direction")
 
     words = text.split()
@@ -37,7 +39,9 @@ def find_direction(text, ticket_inspector):
                 words_after_keyword = after_keyword.split()
 
                 for word_after_keyword in words_after_keyword:
-                    found_direction = find_station(word_after_keyword, ticket_inspector)
+                    found_direction = find_station(
+                        word_after_keyword, ticket_inspector, network_data
+                    )
                     if found_direction:
                         text_without_direction = remove_direction_and_keyword(
                             text, found_direction_keyword, word_after_keyword
@@ -48,7 +52,9 @@ def find_direction(text, ticket_inspector):
                 index = words.index(found_direction_keyword)
                 if index > 0:
                     previous_word = words[index - 1]
-                    found_direction = find_station(previous_word, ticket_inspector)
+                    found_direction = find_station(
+                        previous_word, ticket_inspector, network_data
+                    )
                     if found_direction:
                         text_without_direction = remove_direction_and_keyword(
                             text, found_direction_keyword, word_after_keyword

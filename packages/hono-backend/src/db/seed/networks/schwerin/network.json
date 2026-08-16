@@ -1,0 +1,22 @@
+{
+    "id": "schwerin",
+    "name": "Schwerin",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 53.6288,
+        "longitude": 11.4148
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 53.520466,
+            "longitude": 11.286807
+        },
+        "northEast": {
+            "latitude": 53.697251,
+            "longitude": 11.546666
+        }
+    }
+}

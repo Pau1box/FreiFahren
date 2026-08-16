@@ -1,0 +1,4212 @@
+{
+    "UM-n398761": {
+        "coordinates": {
+            "latitude": 48.138391874999996,
+            "longitude": 11.588178375
+        },
+        "lines": [
+            "16",
+            "19",
+            "21",
+            "N19",
+            "U4",
+            "U5"
+        ],
+        "name": "Maxmonument"
+    },
+    "SM-MHAB": {
+        "coordinates": {
+            "latitude": 48.143237049999996,
+            "longitude": 11.5483453
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Hackerbrücke"
+    },
+    "S-MWKR": {
+        "coordinates": {
+            "latitude": 48.1488968,
+            "longitude": 11.4437634
+        },
+        "lines": [
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Westkreuz"
+    },
+    "S-MPL": {
+        "coordinates": {
+            "latitude": 48.1054555,
+            "longitude": 11.4137456
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Planegg"
+    },
+    "S-MLEF": {
+        "coordinates": {
+            "latitude": 48.1545345,
+            "longitude": 11.42858
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Leienfelsstraße"
+    },
+    "S-MMAU": {
+        "coordinates": {
+            "latitude": 48.1559713,
+            "longitude": 11.4131591
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Aubing"
+    },
+    "S-MTFD": {
+        "coordinates": {
+            "latitude": 48.1047184,
+            "longitude": 11.0775429
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Türkenfeld"
+    },
+    "S-MGF": {
+        "coordinates": {
+            "latitude": 48.1320277,
+            "longitude": 11.1530653
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Grafrath"
+    },
+    "S-MSNG": {
+        "coordinates": {
+            "latitude": 48.1469834,
+            "longitude": 11.1909945
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Schöngeising"
+    },
+    "S-MPU": {
+        "coordinates": {
+            "latitude": 48.3633523,
+            "longitude": 11.7071116
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Pulling (bei Freising)"
+    },
+    "S-MEC": {
+        "coordinates": {
+            "latitude": 48.3029797,
+            "longitude": 11.616758
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Eching"
+    },
+    "S-MLH": {
+        "coordinates": {
+            "latitude": 48.2882963,
+            "longitude": 11.5812839
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Lohhof"
+    },
+    "S-MUSM": {
+        "coordinates": {
+            "latitude": 48.2737062,
+            "longitude": 11.5685893
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Unterschleißheim"
+    },
+    "S-MFAS": {
+        "coordinates": {
+            "latitude": 48.1977752,
+            "longitude": 11.5258659
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Fasanerie"
+    },
+    "SUM-MMCH": {
+        "coordinates": {
+            "latitude": 48.180692666666666,
+            "longitude": 11.506945658333334
+        },
+        "lines": [
+            "20",
+            "N20",
+            "S1",
+            "U3"
+        ],
+        "name": "Moosach"
+    },
+    "SU-MFE": {
+        "coordinates": {
+            "latitude": 48.213805425,
+            "longitude": 11.541076375
+        },
+        "lines": [
+            "S1",
+            "U2"
+        ],
+        "name": "Feldmoching"
+    },
+    "S-MNF": {
+        "coordinates": {
+            "latitude": 48.3219375,
+            "longitude": 11.6616986
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Neufahrn (b Freising)"
+    },
+    "S-MMAL": {
+        "coordinates": {
+            "latitude": 48.1900336,
+            "longitude": 11.4681053
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Allach"
+    },
+    "S-MHR": {
+        "coordinates": {
+            "latitude": 48.1113153,
+            "longitude": 11.7309706
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Haar"
+    },
+    "SU-MMP": {
+        "coordinates": {
+            "latitude": 48.1377912,
+            "longitude": 11.575823475
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8",
+            "U3",
+            "U6"
+        ],
+        "name": "Marienplatz"
+    },
+    "S-n20979606": {
+        "coordinates": {
+            "latitude": 48.11838215,
+            "longitude": 11.69885395
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Gronsdorf"
+    },
+    "S-MMAR": {
+        "coordinates": {
+            "latitude": 48.1185584,
+            "longitude": 11.5957783
+        },
+        "lines": [
+            "S3",
+            "S5"
+        ],
+        "name": "Sankt-Martin-Straße"
+    },
+    "S-MFP": {
+        "coordinates": {
+            "latitude": 48.0795779,
+            "longitude": 11.6094665
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Fasanenpark"
+    },
+    "S-MFU": {
+        "coordinates": {
+            "latitude": 48.0359048,
+            "longitude": 11.5937406
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Furth"
+    },
+    "SM-n21642945": {
+        "coordinates": {
+            "latitude": 48.14227296,
+            "longitude": 11.55542996
+        },
+        "lines": [
+            "16",
+            "17",
+            "20",
+            "21",
+            "E20",
+            "N17",
+            "N20",
+            "S7"
+        ],
+        "name": "Hopfenstraße"
+    },
+    "S-n21676707": {
+        "coordinates": {
+            "latitude": 48.006233550000005,
+            "longitude": 11.347351549999999
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Starnberg Nord"
+    },
+    "S-MKHN": {
+        "coordinates": {
+            "latitude": 48.3539944,
+            "longitude": 11.2754518
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Kleinberghofen"
+    },
+    "S-MAMT": {
+        "coordinates": {
+            "latitude": 48.3849954,
+            "longitude": 11.2550326
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Altomünster"
+    },
+    "S-MDAS": {
+        "coordinates": {
+            "latitude": 48.2666185,
+            "longitude": 11.4397432
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Dachau Stadt"
+    },
+    "S-MSHH": {
+        "coordinates": {
+            "latitude": 48.3004297,
+            "longitude": 11.3647146
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Schwabhausen"
+    },
+    "S-MANB": {
+        "coordinates": {
+            "latitude": 48.3411949,
+            "longitude": 11.3437808
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Arnbach"
+    },
+    "SU-MHP": {
+        "coordinates": {
+            "latitude": 48.13331382,
+            "longitude": 11.5319088
+        },
+        "lines": [
+            "S20",
+            "S7",
+            "U4",
+            "U5"
+        ],
+        "name": "Heimeranplatz"
+    },
+    "M-n26043409": {
+        "coordinates": {
+            "latitude": 48.13992818,
+            "longitude": 11.534737920000001
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Trappentreustraße"
+    },
+    "S-MHHS": {
+        "coordinates": {
+            "latitude": 48.1334308,
+            "longitude": 11.3876765
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Harthaus"
+    },
+    "S-MNA": {
+        "coordinates": {
+            "latitude": 48.1416917,
+            "longitude": 11.4220845
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Neuaubing"
+    },
+    "S-MEGS": {
+        "coordinates": {
+            "latitude": 48.1567627,
+            "longitude": 11.6483507
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Englschalking"
+    },
+    "S-MUFG": {
+        "coordinates": {
+            "latitude": 48.1902438,
+            "longitude": 11.6468943
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Unterföhring"
+    },
+    "S-MGRS": {
+        "coordinates": {
+            "latitude": 48.0473345,
+            "longitude": 11.9628656
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Grafing Stadt"
+    },
+    "U-n27214338": {
+        "coordinates": {
+            "latitude": 48.118360233333334,
+            "longitude": 11.631799866666668
+        },
+        "lines": [
+            "U5",
+            "U7",
+            "U8"
+        ],
+        "name": "Michaelibad"
+    },
+    "S-MHMO": {
+        "coordinates": {
+            "latitude": 48.3093236,
+            "longitude": 11.7143818
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Hallbergmoos"
+    },
+    "S-MDFG": {
+        "coordinates": {
+            "latitude": 48.1496375,
+            "longitude": 11.6493051
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Daglfing"
+    },
+    "S-MHEM": {
+        "coordinates": {
+            "latitude": 48.1587089,
+            "longitude": 11.7594112
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Heimstetten"
+    },
+    "M-n27233509": {
+        "coordinates": {
+            "latitude": 48.0768859,
+            "longitude": 11.550271075000001
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Großhesseloher Brücke"
+    },
+    "M-n27233931": {
+        "coordinates": {
+            "latitude": 48.08003386666667,
+            "longitude": 11.551711466666667
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Menterschwaige"
+    },
+    "S-MPO": {
+        "coordinates": {
+            "latitude": 48.1713497,
+            "longitude": 11.8097694
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Poing"
+    },
+    "S-MONH": {
+        "coordinates": {
+            "latitude": 48.2181796,
+            "longitude": 11.8793821
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Ottenhofen"
+    },
+    "S-MANE": {
+        "coordinates": {
+            "latitude": 48.2936849,
+            "longitude": 11.9017773
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Altenerding"
+    },
+    "S-MOZ": {
+        "coordinates": {
+            "latitude": 48.1642173,
+            "longitude": 11.4780215
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Obermenzing"
+    },
+    "S-MMT": {
+        "coordinates": {
+            "latitude": 48.1077964,
+            "longitude": 11.536379
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Mittersendling"
+    },
+    "SU-MHAR": {
+        "coordinates": {
+            "latitude": 48.1172604,
+            "longitude": 11.5376205
+        },
+        "lines": [
+            "S7",
+            "U6"
+        ],
+        "name": "Harras"
+    },
+    "S-MFHT": {
+        "coordinates": {
+            "latitude": 48.3537694,
+            "longitude": 11.7861263
+        },
+        "lines": [
+            "S1",
+            "S8"
+        ],
+        "name": "München Flughafen Terminal"
+    },
+    "S-MSR": {
+        "coordinates": {
+            "latitude": 47.9739776,
+            "longitude": 11.6548565
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Sauerlach"
+    },
+    "S-MBHA": {
+        "coordinates": {
+            "latitude": 48.0312433,
+            "longitude": 11.4974794
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Buchenhain"
+    },
+    "S-MIC": {
+        "coordinates": {
+            "latitude": 47.9532071,
+            "longitude": 11.4366558
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Icking"
+    },
+    "S-MKO;MKO H": {
+        "coordinates": {
+            "latitude": 48.0709848,
+            "longitude": 11.8872843
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Kirchseeon"
+    },
+    "SU-MTR": {
+        "coordinates": {
+            "latitude": 48.125782125,
+            "longitude": 11.66258665
+        },
+        "lines": [
+            "S4",
+            "S6",
+            "U2"
+        ],
+        "name": "Trudering"
+    },
+    "S-MGHD": {
+        "coordinates": {
+            "latitude": 47.9460091,
+            "longitude": 11.7812559
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Großhelfendorf"
+    },
+    "S-MDHR": {
+        "coordinates": {
+            "latitude": 47.9938893,
+            "longitude": 11.7365949
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Dürrnhaar"
+    },
+    "S-MHSB": {
+        "coordinates": {
+            "latitude": 48.0186515,
+            "longitude": 11.7191892
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Höhenkirchen-Siegertsbrunn"
+    },
+    "S-MOBR": {
+        "coordinates": {
+            "latitude": 48.0633423,
+            "longitude": 11.6784057
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Ottobrunn"
+    },
+    "SU-n28179394": {
+        "coordinates": {
+            "latitude": 48.088884675,
+            "longitude": 11.645106774999999
+        },
+        "lines": [
+            "S5",
+            "U5"
+        ],
+        "name": "Neuperlach Süd"
+    },
+    "S-MAY": {
+        "coordinates": {
+            "latitude": 47.9689954,
+            "longitude": 11.7692669
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Aying"
+    },
+    "U-n28201702": {
+        "coordinates": {
+            "latitude": 48.1959261,
+            "longitude": 11.5718129
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Am Hart"
+    },
+    "U-n28201749": {
+        "coordinates": {
+            "latitude": 48.18681446666667,
+            "longitude": 11.572721166666668
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Frankfurter Ring"
+    },
+    "U-n28202314": {
+        "coordinates": {
+            "latitude": 48.180927700000005,
+            "longitude": 11.573149766666667
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Milbertshofen"
+    },
+    "U-n28205595": {
+        "coordinates": {
+            "latitude": 48.20426486666667,
+            "longitude": 11.569391266666665
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Harthof"
+    },
+    "U-n28205626": {
+        "coordinates": {
+            "latitude": 48.213431566666664,
+            "longitude": 11.554918966666667
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Hasenbergl"
+    },
+    "U-n28238954": {
+        "coordinates": {
+            "latitude": 48.17734153333333,
+            "longitude": 11.529062133333333
+        },
+        "lines": [
+            "U1",
+            "U7"
+        ],
+        "name": "Georg-Brauchle-Ring"
+    },
+    "M-n29013669": {
+        "coordinates": {
+            "latitude": 48.127419700000004,
+            "longitude": 11.51199485
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Säulingstraße"
+    },
+    "M-n29013675": {
+        "coordinates": {
+            "latitude": 48.125863300000006,
+            "longitude": 11.50828205
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Stegener Weg"
+    },
+    "UM-n29013800": {
+        "coordinates": {
+            "latitude": 48.134677775,
+            "longitude": 11.5221559625
+        },
+        "lines": [
+            "18",
+            "U4",
+            "U5"
+        ],
+        "name": "Westendstraße"
+    },
+    "S-MBDH": {
+        "coordinates": {
+            "latitude": 48.0992017,
+            "longitude": 11.7870376
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Baldham"
+    },
+    "S-MVS": {
+        "coordinates": {
+            "latitude": 48.1040934,
+            "longitude": 11.7645564
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Vaterstetten"
+    },
+    "S-MGIB": {
+        "coordinates": {
+            "latitude": 48.1091422,
+            "longitude": 11.3247978
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Geisenbrunn"
+    },
+    "UM-n29913714": {
+        "coordinates": {
+            "latitude": 48.133544,
+            "longitude": 11.566526318181818
+        },
+        "lines": [
+            "16",
+            "17",
+            "18",
+            "27",
+            "28",
+            "N17",
+            "N27",
+            "U1",
+            "U2",
+            "U3",
+            "U6",
+            "U7",
+            "U8"
+        ],
+        "name": "Sendlinger Tor"
+    },
+    "S-MNGH": {
+        "coordinates": {
+            "latitude": 48.0991526,
+            "longitude": 11.2889784
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Neugilching"
+    },
+    "S-MPER": {
+        "coordinates": {
+            "latitude": 48.0934102,
+            "longitude": 11.6315196
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Perlach"
+    },
+    "S-MGFL": {
+        "coordinates": {
+            "latitude": 48.119637,
+            "longitude": 11.4256195
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Gräfelfing"
+    },
+    "M-n34484152": {
+        "coordinates": {
+            "latitude": 48.1761341,
+            "longitude": 11.588298900000002
+        },
+        "lines": [
+            "12",
+            "23"
+        ],
+        "name": "Am Münchner Tor"
+    },
+    "M-n34506272": {
+        "coordinates": {
+            "latitude": 48.124588,
+            "longitude": 11.490161
+        },
+        "lines": [
+            "14",
+            "18"
+        ],
+        "name": "Gondrellplatz"
+    },
+    "S-MWAE": {
+        "coordinates": {
+            "latitude": 48.0341152,
+            "longitude": 11.7120963
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Wächterhof"
+    },
+    "S-MKZ": {
+        "coordinates": {
+            "latitude": 47.9171236,
+            "longitude": 11.7594933
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Kreuzstraße"
+    },
+    "S-MFG": {
+        "coordinates": {
+            "latitude": 48.0931675,
+            "longitude": 11.6058199
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Fasangarten"
+    },
+    "M-n37027401": {
+        "coordinates": {
+            "latitude": 48.179342125,
+            "longitude": 11.5894028
+        },
+        "lines": [
+            "12",
+            "23"
+        ],
+        "name": "Anni-Albers-Straße"
+    },
+    "S-MSH": {
+        "coordinates": {
+            "latitude": 48.0415719,
+            "longitude": 11.1988718
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Seefeld-Hechendorf"
+    },
+    "UM-n38215795": {
+        "coordinates": {
+            "latitude": 48.16176465,
+            "longitude": 11.568446016666668
+        },
+        "lines": [
+            "12",
+            "27",
+            "N27",
+            "U2",
+            "U8"
+        ],
+        "name": "Hohenzollernplatz"
+    },
+    "S-MKFS": {
+        "coordinates": {
+            "latitude": 48.2112619,
+            "longitude": 11.4595228
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Karlsfeld"
+    },
+    "S-MSW": {
+        "coordinates": {
+            "latitude": 48.0943067,
+            "longitude": 11.5327302
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Siemenswerke"
+    },
+    "S-MBAB": {
+        "coordinates": {
+            "latitude": 48.0186891,
+            "longitude": 11.4800232
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Baierbrunn"
+    },
+    "S-MHRK": {
+        "coordinates": {
+            "latitude": 48.0433039,
+            "longitude": 11.5096112
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Höllriegelskreuth"
+    },
+    "S-MSA": {
+        "coordinates": {
+            "latitude": 48.06096,
+            "longitude": 11.206516
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Steinebach"
+    },
+    "S-MWS": {
+        "coordinates": {
+            "latitude": 48.0774385,
+            "longitude": 11.2520169
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Weßling"
+    },
+    "S-n58810827": {
+        "coordinates": {
+            "latitude": 47.94696125,
+            "longitude": 11.29023685
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Feldafing"
+    },
+    "S-MST": {
+        "coordinates": {
+            "latitude": 47.99642873333334,
+            "longitude": 11.344301533333335
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Starnberg"
+    },
+    "S-MGT": {
+        "coordinates": {
+            "latitude": 48.07063565,
+            "longitude": 11.37612305
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Gauting"
+    },
+    "SM-MIT": {
+        "coordinates": {
+            "latitude": 48.13386808333333,
+            "longitude": 11.583238249999999
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Isartor"
+    },
+    "SM-MRP": {
+        "coordinates": {
+            "latitude": 48.128968975,
+            "longitude": 11.59384405
+        },
+        "lines": [
+            "25",
+            "E7",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Rosenheimer Platz"
+    },
+    "SM-MBAL": {
+        "coordinates": {
+            "latitude": 48.1355056,
+            "longitude": 11.63375764
+        },
+        "lines": [
+            "19",
+            "S2",
+            "S4",
+            "S6"
+        ],
+        "name": "Berg am Laim"
+    },
+    "S-MWO": {
+        "coordinates": {
+            "latitude": 47.9145344,
+            "longitude": 11.4271034
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Wolfratshausen"
+    },
+    "SUM-MGI": {
+        "coordinates": {
+            "latitude": 48.110810414285716,
+            "longitude": 11.595378157142857
+        },
+        "lines": [
+            "18",
+            "E7",
+            "S3",
+            "S5",
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Giesing"
+    },
+    "U-n60338757": {
+        "coordinates": {
+            "latitude": 48.11794136666666,
+            "longitude": 11.516551533333333
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Westpark"
+    },
+    "M-n60535737": {
+        "coordinates": {
+            "latitude": 48.042046633333335,
+            "longitude": 11.5237349
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Grünwald, Derbolfinger Platz"
+    },
+    "U-n67134965": {
+        "coordinates": {
+            "latitude": 48.094730133333336,
+            "longitude": 11.6427177
+        },
+        "lines": [
+            "U5"
+        ],
+        "name": "Therese-Giehse-Allee"
+    },
+    "U-n68655296": {
+        "coordinates": {
+            "latitude": 48.117881600000004,
+            "longitude": 11.608363333333335
+        },
+        "lines": [
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Karl-Preis-Platz"
+    },
+    "U-n73706462": {
+        "coordinates": {
+            "latitude": 48.09507603333333,
+            "longitude": 11.499332566666666
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Forstenrieder Allee"
+    },
+    "U-n73712339": {
+        "coordinates": {
+            "latitude": 48.0912712,
+            "longitude": 11.491172
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Basler Straße"
+    },
+    "U-n73745334": {
+        "coordinates": {
+            "latitude": 48.116951699999994,
+            "longitude": 11.526669733333334
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Partnachplatz"
+    },
+    "U-n73778052": {
+        "coordinates": {
+            "latitude": 48.112582366666665,
+            "longitude": 11.587544033333332
+        },
+        "lines": [
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Untersbergstraße"
+    },
+    "UM-n73783822": {
+        "coordinates": {
+            "latitude": 48.128869183333336,
+            "longitude": 11.574862666666666
+        },
+        "lines": [
+            "18",
+            "N27",
+            "U1",
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Fraunhoferstraße"
+    },
+    "U-n73793044": {
+        "coordinates": {
+            "latitude": 48.1130633,
+            "longitude": 11.5716423
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Candidplatz"
+    },
+    "U-n73800960": {
+        "coordinates": {
+            "latitude": 48.104427933333334,
+            "longitude": 11.5814016
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Sankt-Quirin-Platz"
+    },
+    "U-n73800962": {
+        "coordinates": {
+            "latitude": 48.0970735,
+            "longitude": 11.579206033333334
+        },
+        "lines": [
+            "U1"
+        ],
+        "name": "Mangfallplatz"
+    },
+    "S-MIS": {
+        "coordinates": {
+            "latitude": 48.2257986,
+            "longitude": 11.679452
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Ismaning"
+    },
+    "M-n82762920": {
+        "coordinates": {
+            "latitude": 48.1392311,
+            "longitude": 11.5471101
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Holzapfelstraße"
+    },
+    "SUM-n82762925": {
+        "coordinates": {
+            "latitude": 48.1393426,
+            "longitude": 11.565550275
+        },
+        "lines": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "27",
+            "28",
+            "E20",
+            "N17",
+            "N19",
+            "N20",
+            "N27",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8",
+            "U4",
+            "U5"
+        ],
+        "name": "Karlsplatz (Stachus)"
+    },
+    "U-n84322745": {
+        "coordinates": {
+            "latitude": 48.162883666666666,
+            "longitude": 11.529114966666667
+        },
+        "lines": [
+            "U1",
+            "U7"
+        ],
+        "name": "Gern"
+    },
+    "UM-n84322749": {
+        "coordinates": {
+            "latitude": 48.154016175,
+            "longitude": 11.533286425
+        },
+        "lines": [
+            "12",
+            "U1",
+            "U7"
+        ],
+        "name": "Rotkreuzplatz"
+    },
+    "U-n84322751": {
+        "coordinates": {
+            "latitude": 48.149989866666665,
+            "longitude": 11.545600066666665
+        },
+        "lines": [
+            "U1",
+            "U7"
+        ],
+        "name": "Maillingerstraße"
+    },
+    "UM-n84322752": {
+        "coordinates": {
+            "latitude": 48.14749191666667,
+            "longitude": 11.557882249999999
+        },
+        "lines": [
+            "20",
+            "21",
+            "E20",
+            "N20",
+            "U1",
+            "U7"
+        ],
+        "name": "Stiglmaierplatz"
+    },
+    "U-n96886958": {
+        "coordinates": {
+            "latitude": 48.21186316666667,
+            "longitude": 11.616698033333334
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Fröttmaning"
+    },
+    "U-n96886976": {
+        "coordinates": {
+            "latitude": 48.24735033333334,
+            "longitude": 11.631083766666668
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Garching-Hochbrück (U)"
+    },
+    "U-n98197992": {
+        "coordinates": {
+            "latitude": 48.2492857,
+            "longitude": 11.6525332
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Garching"
+    },
+    "UM-n99191054": {
+        "coordinates": {
+            "latitude": 48.115134383333334,
+            "longitude": 11.580131
+        },
+        "lines": [
+            "25",
+            "N27",
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Silberhornstraße"
+    },
+    "U-n99202259": {
+        "coordinates": {
+            "latitude": 48.1290979,
+            "longitude": 11.557488866666667
+        },
+        "lines": [
+            "U3",
+            "U6"
+        ],
+        "name": "Goetheplatz"
+    },
+    "U-n99202271": {
+        "coordinates": {
+            "latitude": 48.1201691,
+            "longitude": 11.548404025
+        },
+        "lines": [
+            "U3",
+            "U6"
+        ],
+        "name": "Implerstraße"
+    },
+    "S-MGB": {
+        "coordinates": {
+            "latitude": 48.0434247,
+            "longitude": 11.940171
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Grafing Bahnhof"
+    },
+    "U-n172983380": {
+        "coordinates": {
+            "latitude": 48.264722649999996,
+            "longitude": 11.6713488
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Garching-Forschungszentrum"
+    },
+    "S-MRI": {
+        "coordinates": {
+            "latitude": 48.1439688,
+            "longitude": 11.6777725
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Riem"
+    },
+    "S-MBAU": {
+        "coordinates": {
+            "latitude": 48.1603391,
+            "longitude": 11.2245736
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Buchenau"
+    },
+    "S-MGRB": {
+        "coordinates": {
+            "latitude": 48.1644857,
+            "longitude": 11.7824461
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Grub"
+    },
+    "M-n199132942": {
+        "coordinates": {
+            "latitude": 48.15566835,
+            "longitude": 11.5404527
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Albrechtstraße"
+    },
+    "M-n199132948": {
+        "coordinates": {
+            "latitude": 48.16144305,
+            "longitude": 11.553834475
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Infanteriestraße"
+    },
+    "UM-n199132961": {
+        "coordinates": {
+            "latitude": 48.1711254,
+            "longitude": 11.573282373333333
+        },
+        "lines": [
+            "12",
+            "28",
+            "U2",
+            "U3",
+            "U8"
+        ],
+        "name": "Scheidplatz"
+    },
+    "M-n201346354": {
+        "coordinates": {
+            "latitude": 48.141839866666665,
+            "longitude": 11.473990183333333
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Westbad"
+    },
+    "M-n201383952": {
+        "coordinates": {
+            "latitude": 48.132244175,
+            "longitude": 11.609762825
+        },
+        "lines": [
+            "21",
+            "E7",
+            "N19"
+        ],
+        "name": "Haidenauplatz"
+    },
+    "M-n201383963": {
+        "coordinates": {
+            "latitude": 48.129749366666665,
+            "longitude": 11.622836399999999
+        },
+        "lines": [
+            "21",
+            "N19"
+        ],
+        "name": "Schlüsselbergstraße"
+    },
+    "M-n201387894": {
+        "coordinates": {
+            "latitude": 48.12667476666667,
+            "longitude": 11.638254433333335
+        },
+        "lines": [
+            "21",
+            "N19"
+        ],
+        "name": "Mutschellestraße"
+    },
+    "UM-n201387899": {
+        "coordinates": {
+            "latitude": 48.12569371666667,
+            "longitude": 11.645630733333334
+        },
+        "lines": [
+            "21",
+            "N19",
+            "U2"
+        ],
+        "name": "Kreillerstraße"
+    },
+    "M-n201387909": {
+        "coordinates": {
+            "latitude": 48.12202155,
+            "longitude": 11.642306049999998
+        },
+        "lines": [
+            "21",
+            "N19"
+        ],
+        "name": "St.-Veit-Straße"
+    },
+    "M-n201678136": {
+        "coordinates": {
+            "latitude": 48.152041925,
+            "longitude": 11.61319045
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Effnerplatz"
+    },
+    "UM-n201741326": {
+        "coordinates": {
+            "latitude": 48.13556032631578,
+            "longitude": 11.59834384736842
+        },
+        "lines": [
+            "17",
+            "19",
+            "21",
+            "25",
+            "E7",
+            "N17",
+            "N19",
+            "U4",
+            "U5"
+        ],
+        "name": "Max-Weber-Platz"
+    },
+    "M-n202778016": {
+        "coordinates": {
+            "latitude": 48.09201016666666,
+            "longitude": 11.5625487
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Authariplatz"
+    },
+    "M-n202778019": {
+        "coordinates": {
+            "latitude": 48.096030459999994,
+            "longitude": 11.5636153
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Tiroler Platz"
+    },
+    "M-n202778024": {
+        "coordinates": {
+            "latitude": 48.10072196666667,
+            "longitude": 11.566619766666667
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Südtiroler Straße"
+    },
+    "M-n202832670": {
+        "coordinates": {
+            "latitude": 48.161511839999996,
+            "longitude": 11.56362828
+        },
+        "lines": [
+            "12",
+            "27",
+            "N27"
+        ],
+        "name": "Nordbad"
+    },
+    "M-n202879541": {
+        "coordinates": {
+            "latitude": 48.154653180000004,
+            "longitude": 11.55404038
+        },
+        "lines": [
+            "20",
+            "21",
+            "E20",
+            "N20"
+        ],
+        "name": "Hochschule München (Lothstraße)"
+    },
+    "M-n202879550": {
+        "coordinates": {
+            "latitude": 48.159601057142865,
+            "longitude": 11.547224242857142
+        },
+        "lines": [
+            "12",
+            "20",
+            "21",
+            "N20"
+        ],
+        "name": "Leonrodplatz"
+    },
+    "M-n202880062": {
+        "coordinates": {
+            "latitude": 48.16593951428571,
+            "longitude": 11.537503285714285
+        },
+        "lines": [
+            "20",
+            "21",
+            "N20"
+        ],
+        "name": "Olympiapark West"
+    },
+    "M-n202880079": {
+        "coordinates": {
+            "latitude": 48.169528333333325,
+            "longitude": 11.5329104
+        },
+        "lines": [
+            "20",
+            "21",
+            "N20"
+        ],
+        "name": "Borstei"
+    },
+    "M-n202880094": {
+        "coordinates": {
+            "latitude": 48.172257925,
+            "longitude": 11.528175425
+        },
+        "lines": [
+            "20",
+            "N20"
+        ],
+        "name": "Hanauer Straße"
+    },
+    "M-n202912613": {
+        "coordinates": {
+            "latitude": 48.10288433333333,
+            "longitude": 11.596614466666667
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Schwanseestraße"
+    },
+    "M-n206155331": {
+        "coordinates": {
+            "latitude": 48.090326633333326,
+            "longitude": 11.556953466666668
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Theodolindenplatz"
+    },
+    "U-n207588044": {
+        "coordinates": {
+            "latitude": 48.13378433333333,
+            "longitude": 11.541050366666667
+        },
+        "lines": [
+            "U4",
+            "U5"
+        ],
+        "name": "Schwanthalerhöhe"
+    },
+    "U-n207594090": {
+        "coordinates": {
+            "latitude": 48.13567173333333,
+            "longitude": 11.55223
+        },
+        "lines": [
+            "U4",
+            "U5"
+        ],
+        "name": "Theresienwiese"
+    },
+    "U-n207598530": {
+        "coordinates": {
+            "latitude": 48.143503466666665,
+            "longitude": 11.6155981
+        },
+        "lines": [
+            "U4"
+        ],
+        "name": "Böhmerwaldplatz"
+    },
+    "U-n207598531": {
+        "coordinates": {
+            "latitude": 48.14833183333334,
+            "longitude": 11.616600866666667
+        },
+        "lines": [
+            "U4"
+        ],
+        "name": "Richard-Strauss-Straße"
+    },
+    "U-n211557411": {
+        "coordinates": {
+            "latitude": 48.1515311,
+            "longitude": 11.5644682
+        },
+        "lines": [
+            "U2",
+            "U8"
+        ],
+        "name": "Theresienstraße"
+    },
+    "SUM-MOP": {
+        "coordinates": {
+            "latitude": 48.12829322857142,
+            "longitude": 11.603819042857143
+        },
+        "lines": [
+            "21",
+            "E7",
+            "N19",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8",
+            "U5"
+        ],
+        "name": "München Ost"
+    },
+    "SM-MP": {
+        "coordinates": {
+            "latitude": 48.149245378125,
+            "longitude": 11.460002653125
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19",
+            "S20",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "München-Pasing"
+    },
+    "SUM-MHT": {
+        "coordinates": {
+            "latitude": 48.140501708695645,
+            "longitude": 11.560270413043478
+        },
+        "lines": [
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "E20",
+            "N17",
+            "N19",
+            "N20",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8",
+            "U1",
+            "U2",
+            "U4",
+            "U5",
+            "U7",
+            "U8"
+        ],
+        "name": "Hauptbahnhof (tief)"
+    },
+    "S-MZO": {
+        "coordinates": {
+            "latitude": 48.0895421,
+            "longitude": 11.8324234
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Zorneding"
+    },
+    "UM-n246922487": {
+        "coordinates": {
+            "latitude": 48.1350983,
+            "longitude": 11.512431133333335
+        },
+        "lines": [
+            "18",
+            "U5"
+        ],
+        "name": "Friedenheimer Straße"
+    },
+    "UM-n246922490": {
+        "coordinates": {
+            "latitude": 48.1354415,
+            "longitude": 11.50237076
+        },
+        "lines": [
+            "14",
+            "U5"
+        ],
+        "name": "Laimer Platz"
+    },
+    "S-MNRO": {
+        "coordinates": {
+            "latitude": 48.3211861,
+            "longitude": 11.3901123
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Niederroth"
+    },
+    "U-n247674448": {
+        "coordinates": {
+            "latitude": 48.15571346666667,
+            "longitude": 11.567077333333332
+        },
+        "lines": [
+            "U2",
+            "U8"
+        ],
+        "name": "Josephsplatz"
+    },
+    "S-MKL": {
+        "coordinates": {
+            "latitude": 48.243601,
+            "longitude": 11.8829134
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "St. Koloman"
+    },
+    "S-MAFE": {
+        "coordinates": {
+            "latitude": 48.2741128,
+            "longitude": 11.8941508
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Aufhausen"
+    },
+    "U-n248795453": {
+        "coordinates": {
+            "latitude": 48.13926766666666,
+            "longitude": 11.607037133333334
+        },
+        "lines": [
+            "U4"
+        ],
+        "name": "Prinzregentenplatz"
+    },
+    "UM-n248796128": {
+        "coordinates": {
+            "latitude": 48.1536369625,
+            "longitude": 11.622378125000001
+        },
+        "lines": [
+            "16",
+            "17",
+            "U4"
+        ],
+        "name": "Arabellapark"
+    },
+    "M-n249245160": {
+        "coordinates": {
+            "latitude": 48.14166925,
+            "longitude": 11.481390725
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Lohensteinstraße"
+    },
+    "M-n252269137": {
+        "coordinates": {
+            "latitude": 48.159940399999996,
+            "longitude": 11.574380785714286
+        },
+        "lines": [
+            "12",
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Kurfürstenplatz"
+    },
+    "S-MTU": {
+        "coordinates": {
+            "latitude": 48.05187,
+            "longitude": 11.6094603
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Taufkirchen"
+    },
+    "S-MFR": {
+        "coordinates": {
+            "latitude": 48.3949884,
+            "longitude": 11.7445808
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Freising"
+    },
+    "U-n279106850": {
+        "coordinates": {
+            "latitude": 48.08835276666667,
+            "longitude": 11.480890633333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Fürstenried West"
+    },
+    "M-n282755659": {
+        "coordinates": {
+            "latitude": 48.139642800000004,
+            "longitude": 11.518634500000001
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Lautensackstraße"
+    },
+    "M-n283339665": {
+        "coordinates": {
+            "latitude": 48.150337300000004,
+            "longitude": 11.520288075
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Steubenplatz"
+    },
+    "M-n283339669": {
+        "coordinates": {
+            "latitude": 48.15221925,
+            "longitude": 11.515338400000001
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Kriemhildenstraße"
+    },
+    "M-n283339676": {
+        "coordinates": {
+            "latitude": 48.1597836625,
+            "longitude": 11.511447075
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Schloss Nymphenburg"
+    },
+    "M-n283340072": {
+        "coordinates": {
+            "latitude": 48.16412555714286,
+            "longitude": 11.505572
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Maria-Ward-Straße"
+    },
+    "M-n283340081": {
+        "coordinates": {
+            "latitude": 48.165597919999996,
+            "longitude": 11.494103560000001
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Amalienburgstraße"
+    },
+    "S-MPEI": {
+        "coordinates": {
+            "latitude": 47.9601997,
+            "longitude": 11.7765512
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Peiß"
+    },
+    "M-n290269350": {
+        "coordinates": {
+            "latitude": 48.146263233333336,
+            "longitude": 11.535881366666667
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Donnersbergerstraße"
+    },
+    "S-MOTF": {
+        "coordinates": {
+            "latitude": 47.9113421,
+            "longitude": 11.6821438
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Otterfing"
+    },
+    "M-n292919796": {
+        "coordinates": {
+            "latitude": 48.14028935,
+            "longitude": 11.53021125
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Barthstraße"
+    },
+    "M-n295532715": {
+        "coordinates": {
+            "latitude": 48.1552824,
+            "longitude": 11.51177014
+        },
+        "lines": [
+            "12",
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Romanplatz"
+    },
+    "M-n295537272": {
+        "coordinates": {
+            "latitude": 48.1472368,
+            "longitude": 11.529689300000001
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Burghausener Straße"
+    },
+    "M-n295537297": {
+        "coordinates": {
+            "latitude": 48.1490402,
+            "longitude": 11.5244344
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Briefzentrum"
+    },
+    "M-n295538135": {
+        "coordinates": {
+            "latitude": 48.1450269,
+            "longitude": 11.5419298
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Marsstraße"
+    },
+    "M-n295611403": {
+        "coordinates": {
+            "latitude": 48.1637852,
+            "longitude": 11.5642959
+        },
+        "lines": [
+            "27",
+            "N27"
+        ],
+        "name": "Herzogstraße"
+    },
+    "UM-n295613382": {
+        "coordinates": {
+            "latitude": 48.17539101666667,
+            "longitude": 11.566054783333334
+        },
+        "lines": [
+            "27",
+            "N27",
+            "U3",
+            "U8"
+        ],
+        "name": "Petuelring"
+    },
+    "M-n296000970": {
+        "coordinates": {
+            "latitude": 48.1756339,
+            "longitude": 11.52121255
+        },
+        "lines": [
+            "20",
+            "N20"
+        ],
+        "name": "Wintrichring"
+    },
+    "M-n296001285": {
+        "coordinates": {
+            "latitude": 48.179333,
+            "longitude": 11.5147497
+        },
+        "lines": [
+            "20",
+            "N20"
+        ],
+        "name": "Hugo-Troendle-Straße"
+    },
+    "M-n297066059": {
+        "coordinates": {
+            "latitude": 48.1726982,
+            "longitude": 11.636658525
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Fritz-Meyer-Weg"
+    },
+    "M-n297255728": {
+        "coordinates": {
+            "latitude": 48.1645324,
+            "longitude": 11.502217550000001
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Botanischer Garten"
+    },
+    "M-n302371739": {
+        "coordinates": {
+            "latitude": 48.12402543333334,
+            "longitude": 11.581341633333333
+        },
+        "lines": [
+            "18",
+            "N27"
+        ],
+        "name": "Mariahilfplatz"
+    },
+    "S-MEGL": {
+        "coordinates": {
+            "latitude": 48.0824675,
+            "longitude": 11.8639275
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Eglharting"
+    },
+    "M-n316327073": {
+        "coordinates": {
+            "latitude": 48.1628927,
+            "longitude": 11.5422057
+        },
+        "lines": [
+            "20",
+            "21",
+            "N20"
+        ],
+        "name": "Heideckstraße"
+    },
+    "S-MEIC": {
+        "coordinates": {
+            "latitude": 48.1793491,
+            "longitude": 11.3280973
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Eichenau"
+    },
+    "S-MMDN": {
+        "coordinates": {
+            "latitude": 48.1426694,
+            "longitude": 11.5365226
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8"
+        ],
+        "name": "Donnersbergerbrücke"
+    },
+    "M-n332591450": {
+        "coordinates": {
+            "latitude": 48.166844475,
+            "longitude": 11.63093395
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Taimerhofstraße"
+    },
+    "UM-n339439941": {
+        "coordinates": {
+            "latitude": 48.17016985,
+            "longitude": 11.5288461625
+        },
+        "lines": [
+            "20",
+            "21",
+            "N20",
+            "U1",
+            "U7"
+        ],
+        "name": "Westfriedhof"
+    },
+    "M-n347771459": {
+        "coordinates": {
+            "latitude": 48.106754966666664,
+            "longitude": 11.596298133333333
+        },
+        "lines": [
+            "18",
+            "E7"
+        ],
+        "name": "Chiemgaustraße"
+    },
+    "M-n353285669": {
+        "coordinates": {
+            "latitude": 48.15060595,
+            "longitude": 11.5581005
+        },
+        "lines": [
+            "20",
+            "21",
+            "E20",
+            "N20"
+        ],
+        "name": "Sandstraße"
+    },
+    "S-MBCN": {
+        "coordinates": {
+            "latitude": 48.2790501,
+            "longitude": 11.3817633
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Bachern"
+    },
+    "M-n372524717": {
+        "coordinates": {
+            "latitude": 48.112203550000004,
+            "longitude": 11.576143075000001
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Tegernseer Landstraße"
+    },
+    "M-n378259497": {
+        "coordinates": {
+            "latitude": 48.086974366666674,
+            "longitude": 11.555353599999998
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Klinikum Harlaching"
+    },
+    "S-MEWG": {
+        "coordinates": {
+            "latitude": 48.3331462,
+            "longitude": 11.3042715
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Erdweg"
+    },
+    "SM-MLEU": {
+        "coordinates": {
+            "latitude": 48.135328349999995,
+            "longitude": 11.615421600000001
+        },
+        "lines": [
+            "19",
+            "S1",
+            "S2",
+            "S4",
+            "S6",
+            "S8"
+        ],
+        "name": "Leuchtenbergring"
+    },
+    "M-n430532239": {
+        "coordinates": {
+            "latitude": 48.062704233333335,
+            "longitude": 11.545054633333331
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Robert-Koch-Straße"
+    },
+    "M-n430532240": {
+        "coordinates": {
+            "latitude": 48.055140200000004,
+            "longitude": 11.5406849
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Grünwald, Parkplatz"
+    },
+    "M-n430532241": {
+        "coordinates": {
+            "latitude": 48.04958009999999,
+            "longitude": 11.535575266666667
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Grünwald, Ludwig-Thoma-Straße"
+    },
+    "M-n447867414": {
+        "coordinates": {
+            "latitude": 48.1463080125,
+            "longitude": 11.465533924999999
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Offenbachstraße"
+    },
+    "S-MDA": {
+        "coordinates": {
+            "latitude": 48.2546558,
+            "longitude": 11.4442831
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Dachau Bahnhof"
+    },
+    "S-MRMS": {
+        "coordinates": {
+            "latitude": 48.3337435,
+            "longitude": 11.4446323
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Röhrmoos"
+    },
+    "S-MHSN": {
+        "coordinates": {
+            "latitude": 48.2909791,
+            "longitude": 11.4555114
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Hebertshausen"
+    },
+    "S-MMA": {
+        "coordinates": {
+            "latitude": 48.214243,
+            "longitude": 11.2556124
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Maisach"
+    },
+    "S-MNB": {
+        "coordinates": {
+            "latitude": 48.0758576,
+            "longitude": 11.6602147
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Neubiberg"
+    },
+    "S-MUH": {
+        "coordinates": {
+            "latitude": 48.0652223,
+            "longitude": 11.6123856
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Unterhaching"
+    },
+    "M-n527374214": {
+        "coordinates": {
+            "latitude": 48.181203275,
+            "longitude": 11.511738675
+        },
+        "lines": [
+            "20",
+            "N20"
+        ],
+        "name": "Pelkovenstraße"
+    },
+    "M-n538480080": {
+        "coordinates": {
+            "latitude": 48.117218,
+            "longitude": 11.588370633333334
+        },
+        "lines": [
+            "18",
+            "E7",
+            "N27"
+        ],
+        "name": "St.-Martins-Platz"
+    },
+    "M-n587888531": {
+        "coordinates": {
+            "latitude": 48.1872185,
+            "longitude": 11.59179964
+        },
+        "lines": [
+            "12",
+            "23"
+        ],
+        "name": "Schwabing Nord"
+    },
+    "M-n587913266": {
+        "coordinates": {
+            "latitude": 48.17183015,
+            "longitude": 11.58591425
+        },
+        "lines": [
+            "12",
+            "23"
+        ],
+        "name": "Schwabinger Tor"
+    },
+    "UM-n595311109": {
+        "coordinates": {
+            "latitude": 48.16195005,
+            "longitude": 11.58631967
+        },
+        "lines": [
+            "23",
+            "U3",
+            "U6"
+        ],
+        "name": "Münchner Freiheit"
+    },
+    "M-n595311116": {
+        "coordinates": {
+            "latitude": 48.167269759999996,
+            "longitude": 11.58644348
+        },
+        "lines": [
+            "23"
+        ],
+        "name": "Potsdamer Straße"
+    },
+    "S-MMAM": {
+        "coordinates": {
+            "latitude": 48.2168683,
+            "longitude": 11.1760965
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Mammendorf"
+    },
+    "S-MFB": {
+        "coordinates": {
+            "latitude": 48.1717763,
+            "longitude": 11.2622108
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Fürstenfeldbruck"
+    },
+    "S-MFHH": {
+        "coordinates": {
+            "latitude": 48.1400082,
+            "longitude": 11.4100699
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Freiham"
+    },
+    "S-MHI": {
+        "coordinates": {
+            "latitude": 47.9984622,
+            "longitude": 11.1703947
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Herrsching"
+    },
+    "S-MLCH": {
+        "coordinates": {
+            "latitude": 48.1282578,
+            "longitude": 11.4308924
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Lochham"
+    },
+    "S-MPH": {
+        "coordinates": {
+            "latitude": 47.9618619,
+            "longitude": 11.3063646
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Possenhofen"
+    },
+    "S-MTZ": {
+        "coordinates": {
+            "latitude": 47.9071073,
+            "longitude": 11.2728014
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Tutzing"
+    },
+    "S-MEG": {
+        "coordinates": {
+            "latitude": 48.0749112,
+            "longitude": 11.9704653
+        },
+        "lines": [
+            "S4",
+            "S6"
+        ],
+        "name": "Ebersberg"
+    },
+    "S-MJK": {
+        "coordinates": {
+            "latitude": 48.1676081,
+            "longitude": 11.6460093
+        },
+        "lines": [
+            "S8"
+        ],
+        "name": "Johanneskirchen"
+    },
+    "S-MGCH": {
+        "coordinates": {
+            "latitude": 48.1057939,
+            "longitude": 11.2998358
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Gilching-Argelsried"
+    },
+    "M-n705149467": {
+        "coordinates": {
+            "latitude": 48.134948525,
+            "longitude": 11.516116575
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Siglstraße"
+    },
+    "M-n708952236": {
+        "coordinates": {
+            "latitude": 48.13691086,
+            "longitude": 11.61432284
+        },
+        "lines": [
+            "19"
+        ],
+        "name": "Einsteinstraße"
+    },
+    "M-n708952913": {
+        "coordinates": {
+            "latitude": 48.13586837,
+            "longitude": 11.608524769999999
+        },
+        "lines": [
+            "19",
+            "E7"
+        ],
+        "name": "Grillparzerstraße"
+    },
+    "M-n735102750": {
+        "coordinates": {
+            "latitude": 48.149479625,
+            "longitude": 11.57209645
+        },
+        "lines": [
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Pinakotheken"
+    },
+    "M-n735102752": {
+        "coordinates": {
+            "latitude": 48.14068053333333,
+            "longitude": 11.6002839
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Friedensengel/Villa Stuck"
+    },
+    "M-n735102762": {
+        "coordinates": {
+            "latitude": 48.143077125000005,
+            "longitude": 11.5885719
+        },
+        "lines": [
+            "16"
+        ],
+        "name": "Nationalmuseum/Haus der Kunst"
+    },
+    "M-n735118964": {
+        "coordinates": {
+            "latitude": 48.145863183333326,
+            "longitude": 11.56995305
+        },
+        "lines": [
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Pinakotheken"
+    },
+    "S-MGOI": {
+        "coordinates": {
+            "latitude": 48.0711623,
+            "longitude": 11.5309003
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Großhesselohe Isartalbahnhof"
+    },
+    "S-MEBS": {
+        "coordinates": {
+            "latitude": 47.9787164,
+            "longitude": 11.4537042
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Ebenhausen-Schäftlarn"
+    },
+    "S-MHOB": {
+        "coordinates": {
+            "latitude": 48.0465741,
+            "longitude": 11.6987991
+        },
+        "lines": [
+            "S5"
+        ],
+        "name": "Hohenbrunn"
+    },
+    "M-n798706412": {
+        "coordinates": {
+            "latitude": 48.0713438,
+            "longitude": 11.547435900000002
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Schilcherweg"
+    },
+    "M-n846740604": {
+        "coordinates": {
+            "latitude": 48.14071978,
+            "longitude": 11.48880514
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Willibaldplatz"
+    },
+    "M-n846787365": {
+        "coordinates": {
+            "latitude": 48.1398542,
+            "longitude": 11.49604435
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Agnes-Bernauer-Platz"
+    },
+    "U-n894671538": {
+        "coordinates": {
+            "latitude": 48.10118333333333,
+            "longitude": 11.646177433333335
+        },
+        "lines": [
+            "U5",
+            "U7",
+            "U8"
+        ],
+        "name": "Neuperlach Zentrum"
+    },
+    "M-n898181990": {
+        "coordinates": {
+            "latitude": 48.12845596666667,
+            "longitude": 11.629940266666667
+        },
+        "lines": [
+            "21",
+            "N19"
+        ],
+        "name": "Baumkirchner Straße"
+    },
+    "S-MFHB": {
+        "coordinates": {
+            "latitude": 48.3520957,
+            "longitude": 11.7637381
+        },
+        "lines": [
+            "S1",
+            "S8"
+        ],
+        "name": "München Flughafen Besucherpark"
+    },
+    "U-n928661369": {
+        "coordinates": {
+            "latitude": 48.14307614999999,
+            "longitude": 11.57719575
+        },
+        "lines": [
+            "U3",
+            "U4",
+            "U5",
+            "U6"
+        ],
+        "name": "Odeonsplatz"
+    },
+    "M-n1038235773": {
+        "coordinates": {
+            "latitude": 48.17216635,
+            "longitude": 11.564922
+        },
+        "lines": [
+            "27",
+            "N27"
+        ],
+        "name": "Gartenstraße"
+    },
+    "M-n1039459598": {
+        "coordinates": {
+            "latitude": 48.1574191,
+            "longitude": 11.5750468
+        },
+        "lines": [
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Elisabethplatz"
+    },
+    "M-n1072765095": {
+        "coordinates": {
+            "latitude": 48.13184185,
+            "longitude": 11.586151000000001
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Deutsches Museum"
+    },
+    "M-n1077641221": {
+        "coordinates": {
+            "latitude": 48.16791103333333,
+            "longitude": 11.564925366666666
+        },
+        "lines": [
+            "27",
+            "N27"
+        ],
+        "name": "Ackermannstraße"
+    },
+    "M-n1099409071": {
+        "coordinates": {
+            "latitude": 48.125963875,
+            "longitude": 11.502378175
+        },
+        "lines": [
+            "14",
+            "18"
+        ],
+        "name": "Ammerseestraße"
+    },
+    "M-n1099427195": {
+        "coordinates": {
+            "latitude": 48.12568113333333,
+            "longitude": 11.497846299999999
+        },
+        "lines": [
+            "14",
+            "18"
+        ],
+        "name": "Senftenauerstraße"
+    },
+    "M-n1100959024": {
+        "coordinates": {
+            "latitude": 48.139300875,
+            "longitude": 11.5114066
+        },
+        "lines": [
+            "19",
+            "N19"
+        ],
+        "name": "Agnes-Bernauer-Straße"
+    },
+    "M-n1100959275": {
+        "coordinates": {
+            "latitude": 48.13958696666666,
+            "longitude": 11.503292533333331
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Fürstenrieder Straße"
+    },
+    "M-n1127688004": {
+        "coordinates": {
+            "latitude": 48.119094225,
+            "longitude": 11.583489025
+        },
+        "lines": [
+            "18",
+            "25",
+            "E7",
+            "N27"
+        ],
+        "name": "Ostfriedhof"
+    },
+    "M-n1187566618": {
+        "coordinates": {
+            "latitude": 48.1396149,
+            "longitude": 11.541221
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Schrenkstraße"
+    },
+    "M-n1187566620": {
+        "coordinates": {
+            "latitude": 48.140746575,
+            "longitude": 11.524036375
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Am Lokschuppen"
+    },
+    "S-MFK": {
+        "coordinates": {
+            "latitude": 48.151842,
+            "longitude": 11.7321017
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Feldkirchen"
+    },
+    "M-n1214219352": {
+        "coordinates": {
+            "latitude": 48.14664106666667,
+            "longitude": 11.46117195
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Rathaus Pasing"
+    },
+    "M-n1214219386": {
+        "coordinates": {
+            "latitude": 48.145470180000004,
+            "longitude": 11.47071028
+        },
+        "lines": [
+            "14",
+            "19",
+            "N19"
+        ],
+        "name": "Am Knie"
+    },
+    "M-n1239029830": {
+        "coordinates": {
+            "latitude": 48.13186086,
+            "longitude": 11.597776020000001
+        },
+        "lines": [
+            "21",
+            "25",
+            "E7",
+            "N19"
+        ],
+        "name": "Wörthstraße"
+    },
+    "M-n1239166849": {
+        "coordinates": {
+            "latitude": 48.13945735,
+            "longitude": 11.57607855
+        },
+        "lines": [
+            "19",
+            "21",
+            "N19"
+        ],
+        "name": "Marienplatz (Theatinerstraße)"
+    },
+    "M-n1239251640": {
+        "coordinates": {
+            "latitude": 48.13907330000001,
+            "longitude": 11.552694533333332
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Hermann-Lingg-Straße"
+    },
+    "M-n1239251713": {
+        "coordinates": {
+            "latitude": 48.139057375,
+            "longitude": 11.556420925
+        },
+        "lines": [
+            "18",
+            "19",
+            "N19"
+        ],
+        "name": "Holzkirchner Bahnhof"
+    },
+    "M-n1239854155": {
+        "coordinates": {
+            "latitude": 48.141455480000005,
+            "longitude": 11.56821398
+        },
+        "lines": [
+            "19",
+            "21",
+            "27",
+            "28",
+            "N19",
+            "N27"
+        ],
+        "name": "Lenbachplatz"
+    },
+    "M-n1239854160": {
+        "coordinates": {
+            "latitude": 48.13853203333333,
+            "longitude": 11.583036466666668
+        },
+        "lines": [
+            "19",
+            "21",
+            "N19"
+        ],
+        "name": "Kammerspiele"
+    },
+    "M-n1239887177": {
+        "coordinates": {
+            "latitude": 48.13095986666667,
+            "longitude": 11.6157215
+        },
+        "lines": [
+            "21",
+            "N19"
+        ],
+        "name": "Ampfingstraße"
+    },
+    "M-n1294816170": {
+        "coordinates": {
+            "latitude": 48.1243489,
+            "longitude": 11.588072866666666
+        },
+        "lines": [
+            "25",
+            "E7"
+        ],
+        "name": "Regerplatz"
+    },
+    "M-n1328633980": {
+        "coordinates": {
+            "latitude": 48.18379826666666,
+            "longitude": 11.590265433333334
+        },
+        "lines": [
+            "12",
+            "23"
+        ],
+        "name": "Domagkstraße"
+    },
+    "U-n1358742633": {
+        "coordinates": {
+            "latitude": 48.12043572,
+            "longitude": 11.618706
+        },
+        "lines": [
+            "U2",
+            "U5",
+            "U7",
+            "U8"
+        ],
+        "name": "Innsbrucker Ring"
+    },
+    "M-n1371832229": {
+        "coordinates": {
+            "latitude": 48.150862100000005,
+            "longitude": 11.608805566666668
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Herkomerplatz"
+    },
+    "M-n1449321542": {
+        "coordinates": {
+            "latitude": 48.1147901,
+            "longitude": 11.59247318
+        },
+        "lines": [
+            "18",
+            "E7"
+        ],
+        "name": "Werinherstraße"
+    },
+    "S-MMHG": {
+        "coordinates": {
+            "latitude": 48.143552,
+            "longitude": 11.5194685
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Hirschgarten"
+    },
+    "S-ML": {
+        "coordinates": {
+            "latitude": 48.1444973,
+            "longitude": 11.5029655
+        },
+        "lines": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S8"
+        ],
+        "name": "Laim"
+    },
+    "S-MOSM": {
+        "coordinates": {
+            "latitude": 48.2569695,
+            "longitude": 11.5575406
+        },
+        "lines": [
+            "S1"
+        ],
+        "name": "Oberschleißheim"
+    },
+    "S-MESH": {
+        "coordinates": {
+            "latitude": 48.3612929,
+            "longitude": 11.4451413
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Vierkirchen-Esterhofen"
+    },
+    "U-n1460229362": {
+        "coordinates": {
+            "latitude": 48.19197926666667,
+            "longitude": 11.614287466666667
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Freimann"
+    },
+    "S-MER": {
+        "coordinates": {
+            "latitude": 48.3033184,
+            "longitude": 11.9120362
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Erding"
+    },
+    "S-MSB": {
+        "coordinates": {
+            "latitude": 48.193382,
+            "longitude": 11.8619398
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Markt Schwaben"
+    },
+    "S-MAUG": {
+        "coordinates": {
+            "latitude": 48.1777125,
+            "longitude": 11.4726846
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Untermenzing"
+    },
+    "S-n1468100840": {
+        "coordinates": {
+            "latitude": 48.0194737,
+            "longitude": 11.583673133333333
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Deisenhofen"
+    },
+    "S-MESG": {
+        "coordinates": {
+            "latitude": 48.212204,
+            "longitude": 11.3169531
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Esting"
+    },
+    "S-MGLD": {
+        "coordinates": {
+            "latitude": 48.2127484,
+            "longitude": 11.3005062
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Gernlinden"
+    },
+    "S-MGRZ": {
+        "coordinates": {
+            "latitude": 48.1953548,
+            "longitude": 11.3732569
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Gröbenzell"
+    },
+    "S-MLW": {
+        "coordinates": {
+            "latitude": 48.1630442,
+            "longitude": 11.4324517
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Langwied"
+    },
+    "S-MLO": {
+        "coordinates": {
+            "latitude": 48.1760311,
+            "longitude": 11.4087172
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Lochhausen"
+    },
+    "S-MMAG": {
+        "coordinates": {
+            "latitude": 48.2154148,
+            "longitude": 11.2178473
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Malching (Oberbay)"
+    },
+    "S-MOL": {
+        "coordinates": {
+            "latitude": 48.2101264,
+            "longitude": 11.3355115
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Olching"
+    },
+    "S-MGE": {
+        "coordinates": {
+            "latitude": 48.1060414,
+            "longitude": 11.0373735
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Geltendorf"
+    },
+    "S-MPM": {
+        "coordinates": {
+            "latitude": 48.1719408,
+            "longitude": 11.3534979
+        },
+        "lines": [
+            "S20",
+            "S4"
+        ],
+        "name": "Puchheim"
+    },
+    "M-n1475056046": {
+        "coordinates": {
+            "latitude": 48.126246433333336,
+            "longitude": 11.578415699999999
+        },
+        "lines": [
+            "18",
+            "N27"
+        ],
+        "name": "Eduard-Schmid-Straße"
+    },
+    "M-n1493333396": {
+        "coordinates": {
+            "latitude": 48.10463026666667,
+            "longitude": 11.5698674
+        },
+        "lines": [
+            "25",
+            "N27"
+        ],
+        "name": "Kurzstraße"
+    },
+    "M-n1493475916": {
+        "coordinates": {
+            "latitude": 48.067577199999995,
+            "longitude": 11.546284033333334
+        },
+        "lines": [
+            "25"
+        ],
+        "name": "Grünwald, Bavariafilmplatz"
+    },
+    "UM-n1496660321": {
+        "coordinates": {
+            "latitude": 48.10874638333333,
+            "longitude": 11.575267016666666
+        },
+        "lines": [
+            "25",
+            "N27",
+            "U1"
+        ],
+        "name": "Wettersteinplatz"
+    },
+    "M-n1507407689": {
+        "coordinates": {
+            "latitude": 48.131325466666674,
+            "longitude": 11.5714515
+        },
+        "lines": [
+            "16",
+            "17",
+            "18",
+            "N17",
+            "N27"
+        ],
+        "name": "Müllerstraße"
+    },
+    "S-MIDR": {
+        "coordinates": {
+            "latitude": 48.3524761,
+            "longitude": 11.3787929
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Markt Indersdorf"
+    },
+    "M-n1519557022": {
+        "coordinates": {
+            "latitude": 48.157343525,
+            "longitude": 11.543518800000001
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Fasaneriestraße"
+    },
+    "M-n1540439852": {
+        "coordinates": {
+            "latitude": 48.1625985,
+            "longitude": 11.629200133333333
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Prinz-Eugen-Park"
+    },
+    "M-n1540439854": {
+        "coordinates": {
+            "latitude": 48.153537433333334,
+            "longitude": 11.628731433333334
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Cosimabad"
+    },
+    "M-n1540439869": {
+        "coordinates": {
+            "latitude": 48.1587183,
+            "longitude": 11.628989933333335
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Schlösselgarten"
+    },
+    "M-n1540439874": {
+        "coordinates": {
+            "latitude": 48.169923575,
+            "longitude": 11.63514585
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Regina-Ullmann-Straße"
+    },
+    "M-n1540439880": {
+        "coordinates": {
+            "latitude": 48.17636124285714,
+            "longitude": 11.631146885714285
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "St. Emmeram"
+    },
+    "M-n1540446506": {
+        "coordinates": {
+            "latitude": 48.15371136666666,
+            "longitude": 11.617405033333332
+        },
+        "lines": [
+            "16",
+            "17"
+        ],
+        "name": "Arabellastraße"
+    },
+    "U-n1544801370": {
+        "coordinates": {
+            "latitude": 48.108111900000004,
+            "longitude": 11.646658966666665
+        },
+        "lines": [
+            "U5",
+            "U7",
+            "U8"
+        ],
+        "name": "Quiddestraße"
+    },
+    "S-MUG": {
+        "coordinates": {
+            "latitude": 48.1288545,
+            "longitude": 11.3640209
+        },
+        "lines": [
+            "S5",
+            "S8"
+        ],
+        "name": "Germering-Unterpfaffenhofen"
+    },
+    "M-n1562831842": {
+        "coordinates": {
+            "latitude": 48.16676685,
+            "longitude": 11.574035550000001
+        },
+        "lines": [
+            "12",
+            "28"
+        ],
+        "name": "Karl-Theodor-Straße"
+    },
+    "M-n1570966873": {
+        "coordinates": {
+            "latitude": 48.1488348,
+            "longitude": 11.600818024999999
+        },
+        "lines": [
+            "16"
+        ],
+        "name": "Mauerkircherstraße"
+    },
+    "U-n1609070463": {
+        "coordinates": {
+            "latitude": 48.18349813333333,
+            "longitude": 11.6076407
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Studentenstadt"
+    },
+    "U-n1609995476": {
+        "coordinates": {
+            "latitude": 48.17861969999999,
+            "longitude": 11.602627399999998
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Alte Heide"
+    },
+    "U-n1615790329": {
+        "coordinates": {
+            "latitude": 48.17316533333334,
+            "longitude": 11.5969628
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Nordfriedhof"
+    },
+    "M-n1659974104": {
+        "coordinates": {
+            "latitude": 48.144269699999995,
+            "longitude": 11.545420499999999
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Deroystraße"
+    },
+    "M-n1672730740": {
+        "coordinates": {
+            "latitude": 48.15484385,
+            "longitude": 11.57541165
+        },
+        "lines": [
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Nordendstraße"
+    },
+    "M-n1672730758": {
+        "coordinates": {
+            "latitude": 48.15112665,
+            "longitude": 11.57332945
+        },
+        "lines": [
+            "27",
+            "28",
+            "N27"
+        ],
+        "name": "Schellingstraße"
+    },
+    "S-MSN": {
+        "coordinates": {
+            "latitude": 48.0799367,
+            "longitude": 11.5269373
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Solln"
+    },
+    "S-MHSL": {
+        "coordinates": {
+            "latitude": 47.9913952,
+            "longitude": 11.4575747
+        },
+        "lines": [
+            "S7"
+        ],
+        "name": "Hohenschäftlarn"
+    },
+    "M-n1688588813": {
+        "coordinates": {
+            "latitude": 48.1476417,
+            "longitude": 11.604891700000001
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Bundesfinanzhof"
+    },
+    "M-n1688588864": {
+        "coordinates": {
+            "latitude": 48.143171699999996,
+            "longitude": 11.60131185
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Holbeinstraße"
+    },
+    "M-n1688588910": {
+        "coordinates": {
+            "latitude": 48.1459675,
+            "longitude": 11.6030639
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Sternwartstraße"
+    },
+    "M-n1688813254": {
+        "coordinates": {
+            "latitude": 48.13284886666667,
+            "longitude": 11.591623333333333
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Am Gasteig"
+    },
+    "M-n1688813279": {
+        "coordinates": {
+            "latitude": 48.134084099999995,
+            "longitude": 11.5958143
+        },
+        "lines": [
+            "17",
+            "N17"
+        ],
+        "name": "Wiener Platz"
+    },
+    "M-n1689006765": {
+        "coordinates": {
+            "latitude": 48.1332916,
+            "longitude": 11.576651049999999
+        },
+        "lines": [
+            "16",
+            "17",
+            "N17"
+        ],
+        "name": "Reichenbachplatz"
+    },
+    "M-n1690131332": {
+        "coordinates": {
+            "latitude": 48.14634275,
+            "longitude": 11.592981
+        },
+        "lines": [
+            "16"
+        ],
+        "name": "Paradiesstraße"
+    },
+    "M-n1690677430": {
+        "coordinates": {
+            "latitude": 48.1298324,
+            "longitude": 11.516963950000001
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Fachnerstraße"
+    },
+    "M-n1690677436": {
+        "coordinates": {
+            "latitude": 48.1348146,
+            "longitude": 11.5177574
+        },
+        "lines": [
+            "18"
+        ],
+        "name": "Hans-Thonauer-Straße"
+    },
+    "M-n1690677448": {
+        "coordinates": {
+            "latitude": 48.135213533333335,
+            "longitude": 11.586760400000001
+        },
+        "lines": [
+            "16"
+        ],
+        "name": "Mariannenplatz"
+    },
+    "M-n1692237422": {
+        "coordinates": {
+            "latitude": 48.14496965,
+            "longitude": 11.559993425
+        },
+        "lines": [
+            "20",
+            "21",
+            "E20",
+            "N20"
+        ],
+        "name": "Karlstraße"
+    },
+    "U-n1692348402": {
+        "coordinates": {
+            "latitude": 48.12656933333333,
+            "longitude": 11.633794700000001
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Josephsburg"
+    },
+    "U-n1692348440": {
+        "coordinates": {
+            "latitude": 48.13337563333334,
+            "longitude": 11.703440899999999
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Messestadt Ost"
+    },
+    "U-n1692348451": {
+        "coordinates": {
+            "latitude": 48.13343366666667,
+            "longitude": 11.690686433333333
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Messestadt West"
+    },
+    "U-n1692348456": {
+        "coordinates": {
+            "latitude": 48.130762366666666,
+            "longitude": 11.6709713
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Moosfeld"
+    },
+    "M-n1698244766": {
+        "coordinates": {
+            "latitude": 48.16346393333333,
+            "longitude": 11.574560733333334
+        },
+        "lines": [
+            "12",
+            "28"
+        ],
+        "name": "Clemensstraße"
+    },
+    "M-n1698244811": {
+        "coordinates": {
+            "latitude": 48.15594915,
+            "longitude": 11.51990825
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Hubertusstraße"
+    },
+    "M-n1698244867": {
+        "coordinates": {
+            "latitude": 48.156309099999994,
+            "longitude": 11.531463
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Neuhausen"
+    },
+    "M-n1698244893": {
+        "coordinates": {
+            "latitude": 48.1566128,
+            "longitude": 11.5265396
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Renatastraße"
+    },
+    "S-MPUL": {
+        "coordinates": {
+            "latitude": 48.0589622,
+            "longitude": 11.5218408
+        },
+        "lines": [
+            "S20",
+            "S7"
+        ],
+        "name": "Pullach"
+    },
+    "S-MHO": {
+        "coordinates": {
+            "latitude": 47.8844678,
+            "longitude": 11.6973194
+        },
+        "lines": [
+            "S3"
+        ],
+        "name": "Holzkirchen"
+    },
+    "S-MSD": {
+        "coordinates": {
+            "latitude": 48.0933472,
+            "longitude": 11.4009591
+        },
+        "lines": [
+            "S6"
+        ],
+        "name": "Stockdorf"
+    },
+    "M-n1728378561": {
+        "coordinates": {
+            "latitude": 48.1356018,
+            "longitude": 11.60465325
+        },
+        "lines": [
+            "19",
+            "E7"
+        ],
+        "name": "Flurstraße"
+    },
+    "U-n1767294515": {
+        "coordinates": {
+            "latitude": 48.09788873333333,
+            "longitude": 11.525187933333333
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Aidenbachstraße"
+    },
+    "M-n1878624585": {
+        "coordinates": {
+            "latitude": 48.1500088,
+            "longitude": 11.596287875
+        },
+        "lines": [
+            "16"
+        ],
+        "name": "Tivolistraße"
+    },
+    "M-n1989334533": {
+        "coordinates": {
+            "latitude": 48.13932629999999,
+            "longitude": 11.5789312
+        },
+        "lines": [
+            "19",
+            "21",
+            "N19"
+        ],
+        "name": "Nationaltheater"
+    },
+    "U-n2056183985": {
+        "coordinates": {
+            "latitude": 48.2038621,
+            "longitude": 11.613202066666668
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Kieferngarten"
+    },
+    "S-MPE": {
+        "coordinates": {
+            "latitude": 48.4135125,
+            "longitude": 11.4700551
+        },
+        "lines": [
+            "S2"
+        ],
+        "name": "Petershausen (Oberbay)"
+    },
+    "U-n2524117388": {
+        "coordinates": {
+            "latitude": 48.119873275,
+            "longitude": 11.576627474999999
+        },
+        "lines": [
+            "U1",
+            "U2",
+            "U7",
+            "U8"
+        ],
+        "name": "Kolumbusplatz"
+    },
+    "U-n2541407104": {
+        "coordinates": {
+            "latitude": 48.18245673333333,
+            "longitude": 11.530603066666666
+        },
+        "lines": [
+            "U1",
+            "U3",
+            "U7"
+        ],
+        "name": "Olympia-Einkaufszentrum"
+    },
+    "U-n2622258741": {
+        "coordinates": {
+            "latitude": 48.212337166666664,
+            "longitude": 11.563507266666667
+        },
+        "lines": [
+            "U2"
+        ],
+        "name": "Dülferstraße"
+    },
+    "U-n2625875406": {
+        "coordinates": {
+            "latitude": 48.18185176666666,
+            "longitude": 11.518812966666667
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Moosacher St.-Martins-Platz"
+    },
+    "U-n2625984292": {
+        "coordinates": {
+            "latitude": 48.18600566666667,
+            "longitude": 11.54762
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Oberwiesenfeld"
+    },
+    "U-n2626046619": {
+        "coordinates": {
+            "latitude": 48.17927146666667,
+            "longitude": 11.556001133333334
+        },
+        "lines": [
+            "U3",
+            "U8"
+        ],
+        "name": "Olympiazentrum"
+    },
+    "U-n2631226221": {
+        "coordinates": {
+            "latitude": 48.16668380000001,
+            "longitude": 11.578261033333334
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Bonner Platz"
+    },
+    "U-n2633692407": {
+        "coordinates": {
+            "latitude": 48.1254951,
+            "longitude": 11.550255033333334
+        },
+        "lines": [
+            "U3",
+            "U6"
+        ],
+        "name": "Poccistraße"
+    },
+    "U-n2641009031": {
+        "coordinates": {
+            "latitude": 48.15656043333333,
+            "longitude": 11.5840326
+        },
+        "lines": [
+            "U3",
+            "U6"
+        ],
+        "name": "Giselastraße"
+    },
+    "U-n2641070375": {
+        "coordinates": {
+            "latitude": 48.15035313333333,
+            "longitude": 11.581143666666668
+        },
+        "lines": [
+            "U3",
+            "U6"
+        ],
+        "name": "Universität"
+    },
+    "U-n2643736033": {
+        "coordinates": {
+            "latitude": 48.1162996,
+            "longitude": 11.502124433333334
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Holzapfelkreuth"
+    },
+    "U-n2643890391": {
+        "coordinates": {
+            "latitude": 48.11838036666666,
+            "longitude": 11.4889493
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Haderner Stern"
+    },
+    "U-n2643974215": {
+        "coordinates": {
+            "latitude": 48.109070833333334,
+            "longitude": 11.473581333333334
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Klinikum Großhadern"
+    },
+    "U-n2643974272": {
+        "coordinates": {
+            "latitude": 48.11468623333334,
+            "longitude": 11.4770363
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Großhadern"
+    },
+    "U-n2644689591": {
+        "coordinates": {
+            "latitude": 48.16713216666667,
+            "longitude": 11.590856366666666
+        },
+        "lines": [
+            "U6"
+        ],
+        "name": "Dietlindenstraße"
+    },
+    "U-n2645995996": {
+        "coordinates": {
+            "latitude": 48.09823196666667,
+            "longitude": 11.535937433333332
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Obersendling"
+    },
+    "U-n2650093399": {
+        "coordinates": {
+            "latitude": 48.11254353333334,
+            "longitude": 11.548725933333335
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Brudermühlstraße"
+    },
+    "U-n2650093415": {
+        "coordinates": {
+            "latitude": 48.09736586666667,
+            "longitude": 11.514982366666667
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Machtlfinger Straße"
+    },
+    "U-n2650093573": {
+        "coordinates": {
+            "latitude": 48.1028368,
+            "longitude": 11.5459759
+        },
+        "lines": [
+            "U3"
+        ],
+        "name": "Thalkirchen (Tierpark)"
+    },
+    "M-n2709446950": {
+        "coordinates": {
+            "latitude": 48.17010825,
+            "longitude": 11.5773839
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Kölner Platz"
+    },
+    "M-n3033385191": {
+        "coordinates": {
+            "latitude": 48.1371819,
+            "longitude": 11.6202559
+        },
+        "lines": [
+            "19"
+        ],
+        "name": "Vogelweideplatz"
+    },
+    "M-n3033385213": {
+        "coordinates": {
+            "latitude": 48.135848100000004,
+            "longitude": 11.62397125
+        },
+        "lines": [
+            "19"
+        ],
+        "name": "Riedenburger Straße"
+    },
+    "U-n3114658668": {
+        "coordinates": {
+            "latitude": 48.1450192,
+            "longitude": 11.563217966666665
+        },
+        "lines": [
+            "U2",
+            "U8"
+        ],
+        "name": "Königsplatz"
+    },
+    "M-n3348494394": {
+        "coordinates": {
+            "latitude": 48.16142335,
+            "longitude": 11.5575491
+        },
+        "lines": [
+            "12"
+        ],
+        "name": "Barbarastraße"
+    },
+    "M-n6875392407": {
+        "coordinates": {
+            "latitude": 48.1212209,
+            "longitude": 11.585439525
+        },
+        "lines": [
+            "25",
+            "E7"
+        ],
+        "name": "Carl-Amery-Platz"
+    },
+    "M-n7556361798": {
+        "coordinates": {
+            "latitude": 48.13101125,
+            "longitude": 11.50284315
+        },
+        "lines": [
+            "14"
+        ],
+        "name": "Aindorferstraße"
+    },
+    "n9409856287": {
+        "coordinates": {
+            "latitude": 48.10333163333333,
+            "longitude": 11.602459533333333
+        },
+        "lines": [
+            "E7"
+        ],
+        "name": "MVG Museum"
+    }
+}

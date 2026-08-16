@@ -1,0 +1,47 @@
+{
+    "S1": {
+        "color": "#1a962b",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S2": {
+        "color": "#b51143",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S3": {
+        "color": "#622181",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S5": {
+        "color": "#0089bb",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S7": {
+        "color": "#cc7720",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "U1": {
+        "color": "#006ab3",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U2": {
+        "color": "#e2001a",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U3": {
+        "color": "#ffdd00",
+        "mode": "subway",
+        "isCircular": false
+    },
+    "U4": {
+        "color": "#256d7b",
+        "mode": "subway",
+        "isCircular": false
+    }
+}

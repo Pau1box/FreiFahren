@@ -1,22 +1,47 @@
 from flask import Flask, request, send_from_directory
 from nlp_service.config.config import (
-    FREIFAHREN_CHAT_ID,
-    RESTART_PASSWORD,
+    DEFAULT_NETWORK_ID,
     REPORT_PASSWORD,
+    chats_for_network,
+    is_known_chat,
 )
 from nlp_service.services.telegram_adapter import (
     send_message,
     send_webapp_button,
-    send_message,
 )
 from nlp_service.utils.logger import setup_logger
 from nlp_service.services.telegram_adapter import nlp_bot
-import json
-import os, sys
+import os
 
 logger = setup_logger()
 
 flask_app = Flask(__name__)
+
+
+def resolve_target_chats(payload):
+    """The groups a report is announced in, derived from the network the report belongs to.
+
+    A caller released before multi network support names no network, and per
+    docs/MultiNetworkContract.md that means the default one.
+    """
+    network_id = payload.get("network") or DEFAULT_NETWORK_ID
+    chat_ids = chats_for_network(network_id)
+    if not chat_ids:
+        logger.error("No Telegram chat is configured for network %s", network_id)
+    return chat_ids
+
+
+def announce_report(chat_ids, telegram_message, station_url) -> bool:
+    """Post one report in every group of its network.
+
+    Reports success as soon as one group has it: a second group that is misconfigured should not
+    make a report that reached its audience look failed to the backend.
+    """
+    delivered = [
+        send_message(chat_id, telegram_message, station_url, nlp_bot)
+        for chat_id in chat_ids
+    ]
+    return any(delivered)
 
 
 @flask_app.route("/report-inspector", methods=["POST"])
@@ -28,7 +53,7 @@ def report_inspector() -> tuple:
     # Check authentication
     provided_password = request.headers.get("X-Password")
     if provided_password != REPORT_PASSWORD:
-        logger.warning("Unauthorized report-inspector request - invalid password")
+        logger.warning("Unauthorized report-inspector request, invalid password")
         return {"status": "error", "message": "Unauthorized"}, 401
 
     line = request.json.get("line", None)
@@ -36,6 +61,10 @@ def report_inspector() -> tuple:
     direction = request.json.get("direction", None)
     message = request.json.get("message", None)
     stationId = request.json.get("stationId", None)
+
+    chat_ids = resolve_target_chats(request.json)
+    if not chat_ids:
+        return {"status": "error", "message": "Unknown network"}, 400
 
     logger.info(
         f"Received a report from an inspector: Line: {line}, Station: {station}, Direction: {direction}, Message: {message}"
@@ -54,9 +83,7 @@ def report_inspector() -> tuple:
 
     station_url = f"https://app.freifahren.org/station/{stationId}"  # allow telegram to automatically create a preview card
 
-    message_sent = send_message(
-        FREIFAHREN_CHAT_ID, telegram_message, station_url, nlp_bot
-    )
+    message_sent = announce_report(chat_ids, telegram_message, station_url)
 
     if message_sent:
         logger.info("Inspector report sent to Telegram")
@@ -83,7 +110,7 @@ def handle_mini_app_data():
         # Check authentication
         provided_password = request.headers.get("X-Password")
         if provided_password != REPORT_PASSWORD:
-            logger.warning("Unauthorized mini-app/report request - invalid password")
+            logger.warning("Unauthorized mini-app/report request, invalid password")
             return {"status": "error", "message": "Unauthorized"}, 401
 
         # Parse the submitted data
@@ -93,6 +120,10 @@ def handle_mini_app_data():
         direction = data.get("direction", "")
         message = data.get("message", "")
         stationId = data.get("stationId", "")
+
+        chat_ids = resolve_target_chats(data)
+        if not chat_ids:
+            return {"status": "error", "message": "Unknown network"}, 400
 
         logger.info(f"Received Mini App data: {data}")
 
@@ -107,32 +138,54 @@ def handle_mini_app_data():
             telegram_message += f"\n<b>Beschreibung</b>: hier einsehbar <a href='https://app.freifahren.org/station/{stationId}'>app.freifahren.org</a>"
         else:
             telegram_message += f"\nMehr Informationen auf <a href='https://app.freifahren.org/station/{stationId}'>app.freifahren.org</a>"
-        telegram_message += (
-            f"\n\nDas ist eine Meldung aus der <b>Telegram Mini App</b>. \n"
-        )
-        telegram_message += f'Um auch in Telegram zu melden: \nTippe auf mein Profilbild und dann auf "App öffnen"'
+        telegram_message += "\n\nDas ist eine Meldung aus der <b>Telegram Mini App</b>. \n"
+        telegram_message += 'Um auch in Telegram zu melden: \nTippe auf mein Profilbild und dann auf "App öffnen"'
 
-        # Send the message to the FreiFahren chat
+        # Send the message to the FreiFahren chats of the network
         station_url = f"https://app.freifahren.org/station/{stationId}"  # allow telegram to automatically create a preview card
-        send_message(FREIFAHREN_CHAT_ID, telegram_message, station_url, nlp_bot)
+        announce_report(chat_ids, telegram_message, station_url)
 
         return {"status": "success"}, 200
 
     except Exception as e:
+        # The detail stays in the log: the caller has no use for it and an error message can carry
+        # internals such as the backend URL.
         logger.error(f"Error handling Mini App data: {str(e)}")
-        return {"status": "error", "message": str(e)}, 500
+        return {"status": "error", "message": "Failed to handle Mini App data"}, 500
 
 
 @flask_app.route("/send-mini-app", methods=["POST"])
 def send_mini_app():
-    """Send a Mini App button to a user"""
+    """
+    Send a Mini App button to a chat.
+
+    Requires authentication via X-Password header.
+
+    This endpoint makes the official bot post a message with a button. Unauthenticated, it let
+    anyone who could reach the service post arbitrary text under the bot's name, with a button
+    pointing at an arbitrary URL, into any chat the bot is a member of. That is a ready made
+    phishing primitive, so it is authenticated like the two report endpoints, the button always
+    points at this service's own Mini App instead of at a caller supplied URL, and the target is
+    limited to the groups the service is configured for rather than every chat the bot can reach.
+    """
     try:
+        provided_password = request.headers.get("X-Password")
+        if provided_password != REPORT_PASSWORD:
+            logger.warning("Unauthorized send-mini-app request, invalid password")
+            return {"status": "error", "message": "Unauthorized"}, 401
+
         chat_id = request.json.get("chat_id")
         if not chat_id:
             return {"status": "error", "message": "chat_id is required"}, 400
 
-        # The URL where your Mini App is hosted
-        webapp_url = request.json.get("webapp_url", request.url_root + "mini-app")
+        if not is_known_chat(chat_id):
+            logger.warning(
+                "Refusing to send a Mini App button to chat %s: it is not mapped to a network",
+                chat_id,
+            )
+            return {"status": "error", "message": "Unknown chat"}, 400
+
+        webapp_url = request.url_root + "mini-app"
         button_text = request.json.get("button_text", "Open Mini App")
         message_text = request.json.get(
             "message_text", "Click the button below to report inspectors:"

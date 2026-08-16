@@ -1,0 +1,43 @@
+# Potsdam, the tram network of the Verkehrsbetrieb Potsdam.
+#
+# Added by hand because the discovery could not have found it. Potsdam's routes lie within the 25 km
+# that make one cluster, so they were grouped with Berlin's, and `berlin.yaml` is not a generated
+# description at all: it documents the data set FreiFahren has run on since the beginning, which is
+# the BVG network and nothing else. Potsdam therefore fell between the two.
+
+id: potsdam
+name: Potsdam
+countryCode: DE
+timezone: Europe/Berlin
+# Every generated network starts in beta. It shows only reports people actually made, never
+# predicted ones, because there is no history to reason from yet.
+status: beta
+
+center:
+    latitude: 52.3906
+    longitude: 13.0645
+# Derived from the generated stations, so the map fits the network that was actually built.
+bounds: auto
+
+source:
+    # A box rather than a city boundary: line 96 ends in Rehbrücke, which is Nuthetal rather than
+    # Potsdam. The eastern edge stops short of Berlin's tram network in Köpenick.
+    boundingBox:
+        southWest:
+            latitude: 52.32
+            longitude: 12.95
+        northEast:
+            latitude: 52.46
+            longitude: 13.16
+    modes:
+        tram: auto
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # Berlin's S-Bahn reaches Potsdam Hauptbahnhof and Babelsberg, and Berlin's data already claims
+    # those two station codes. It claims them as `S-BPDH` and `S-BBAB`, with its mode prefix, which
+    # is what keeps a bare `BPDH` here from colliding, and `validate_network.py` checks that across
+    # all networks on every build. Should it ever complain here, the answer is to drop this list
+    # rather than to widen it: the OSM node id works everywhere and belongs to nobody else.
+    idSources: [railway:ref]

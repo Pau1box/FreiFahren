@@ -1,0 +1,583 @@
+{
+    "STZ": {
+        "coordinates": {
+            "latitude": 52.00090144999999,
+            "longitude": 8.589133566666666
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Stieghorst"
+    },
+    "n35137744": {
+        "coordinates": {
+            "latitude": 52.00209976666667,
+            "longitude": 8.584679433333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Stieghorst Gesamtschule"
+    },
+    "n35138431": {
+        "coordinates": {
+            "latitude": 52.00740453333333,
+            "longitude": 8.570951266666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Roggenkamp"
+    },
+    "n35138440": {
+        "coordinates": {
+            "latitude": 52.00944056666666,
+            "longitude": 8.563117566666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Lutherkirche"
+    },
+    "SCO": {
+        "coordinates": {
+            "latitude": 52.04324965,
+            "longitude": 8.57712525
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Schüco"
+    },
+    "ZIS": {
+        "coordinates": {
+            "latitude": 52.03927195,
+            "longitude": 8.568980849999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Ziegelstraße"
+    },
+    "FKS": {
+        "coordinates": {
+            "latitude": 52.03801435,
+            "longitude": 8.5637112
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Finkenstraße"
+    },
+    "SCI": {
+        "coordinates": {
+            "latitude": 52.0369744,
+            "longitude": 8.5588333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Schillerstraße"
+    },
+    "SHS": {
+        "coordinates": {
+            "latitude": 52.0361096,
+            "longitude": 8.555171999999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Stadtheider Straße"
+    },
+    "n35495083": {
+        "coordinates": {
+            "latitude": 52.04989443333333,
+            "longitude": 8.596466900000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Baumheide (U)"
+    },
+    "n35495084": {
+        "coordinates": {
+            "latitude": 52.05296616666667,
+            "longitude": 8.602391866666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Schelpmilser Weg"
+    },
+    "BÜL": {
+        "coordinates": {
+            "latitude": 52.03588535,
+            "longitude": 8.504444450000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Bültmannshof"
+    },
+    "UNI": {
+        "coordinates": {
+            "latitude": 52.0391891,
+            "longitude": 8.497148200000002
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Universität"
+    },
+    "BHS": {
+        "coordinates": {
+            "latitude": 52.05374955,
+            "longitude": 8.519123283333334
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Babenhausen Süd"
+    },
+    "DEC": {
+        "coordinates": {
+            "latitude": 52.046234600000005,
+            "longitude": 8.5439692
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Deciusstraße"
+    },
+    "KAT": {
+        "coordinates": {
+            "latitude": 52.049748199999996,
+            "longitude": 8.544055
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kattenkamp"
+    },
+    "SUB": {
+        "coordinates": {
+            "latitude": 52.0363584,
+            "longitude": 8.539008599999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Sudbrackstraße"
+    },
+    "HDG": {
+        "coordinates": {
+            "latitude": 52.05245525,
+            "longitude": 8.545118299999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Heidegärten"
+    },
+    "ADH": {
+        "coordinates": {
+            "latitude": 52.04121375,
+            "longitude": 8.52302975
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Auf der Hufe"
+    },
+    "n213770965": {
+        "coordinates": {
+            "latitude": 52.04257836666667,
+            "longitude": 8.489785533333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Wellensiek"
+    },
+    "LOH": {
+        "coordinates": {
+            "latitude": 52.04512065,
+            "longitude": 8.4854172
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Lohmannshof"
+    },
+    "n243464067": {
+        "coordinates": {
+            "latitude": 52.01280176666666,
+            "longitude": 8.536281866666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "August-Bebel-Straße"
+    },
+    "RTH": {
+        "coordinates": {
+            "latitude": 52.02043405,
+            "longitude": 8.53455215
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Rathaus"
+    },
+    "n261041775": {
+        "coordinates": {
+            "latitude": 52.0142116,
+            "longitude": 8.551301766666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Oststraße"
+    },
+    "JPL": {
+        "coordinates": {
+            "latitude": 52.02409035,
+            "longitude": 8.534126
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Jahnplatz (U)"
+    },
+    "n261594220": {
+        "coordinates": {
+            "latitude": 52.03335426666666,
+            "longitude": 8.5431351
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Beckhausstraße (U)"
+    },
+    "APL": {
+        "coordinates": {
+            "latitude": 52.0172888,
+            "longitude": 8.5256442
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Adenauerplatz"
+    },
+    "n269542860": {
+        "coordinates": {
+            "latitude": 52.01329416666667,
+            "longitude": 8.521281733333332
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Bethel"
+    },
+    "FLS": {
+        "coordinates": {
+            "latitude": 52.0096999,
+            "longitude": 8.5170254
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Friedrich-List-Straße"
+    },
+    "SIE": {
+        "coordinates": {
+            "latitude": 52.00525615,
+            "longitude": 8.5580521
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Sieker"
+    },
+    "EGW": {
+        "coordinates": {
+            "latitude": 52.005759999999995,
+            "longitude": 8.51059175
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Eggeweg"
+    },
+    "JOH": {
+        "coordinates": {
+            "latitude": 52.04096125,
+            "longitude": 8.543358099999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Johannesstift"
+    },
+    "n280027830": {
+        "coordinates": {
+            "latitude": 52.02888143333333,
+            "longitude": 8.513589266666667
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Rudolf-Oetker-Halle (U)"
+    },
+    "SFP": {
+        "coordinates": {
+            "latitude": 52.02797505,
+            "longitude": 8.5222853
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Siegfriedplatz (U)"
+    },
+    "WIT": {
+        "coordinates": {
+            "latitude": 52.0323839,
+            "longitude": 8.52646045
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Wittekindstraße (U)"
+    },
+    "NOP": {
+        "coordinates": {
+            "latitude": 52.037290150000004,
+            "longitude": 8.523485950000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Nordpark (U)"
+    },
+    "n280275584": {
+        "coordinates": {
+            "latitude": 52.017579000000005,
+            "longitude": 8.533386766666666
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Landgericht"
+    },
+    "n280275603": {
+        "coordinates": {
+            "latitude": 52.00854089999999,
+            "longitude": 8.543206966666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Mozartstraße/Synagoge"
+    },
+    "LAS": {
+        "coordinates": {
+            "latitude": 52.0446824,
+            "longitude": 8.522647433333333
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Lange Straße"
+    },
+    "n280458827": {
+        "coordinates": {
+            "latitude": 52.049519233333335,
+            "longitude": 8.521643
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Koblenzer Straße"
+    },
+    "n290205570": {
+        "coordinates": {
+            "latitude": 52.02853472,
+            "longitude": 8.53474018
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Hauptbahnhof (U)"
+    },
+    "n1343884032": {
+        "coordinates": {
+            "latitude": 52.0480037,
+            "longitude": 8.590673266666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Seidenstickerstraße"
+    },
+    "n1345661494": {
+        "coordinates": {
+            "latitude": 52.004829400000006,
+            "longitude": 8.5772991
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Elpke"
+    },
+    "NMS": {
+        "coordinates": {
+            "latitude": 51.99136095,
+            "longitude": 8.5100309
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Normannenstraße"
+    },
+    "BRK": {
+        "coordinates": {
+            "latitude": 51.9872984,
+            "longitude": 8.51556355
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Brackwede Kirche"
+    },
+    "GAS": {
+        "coordinates": {
+            "latitude": 51.9938002,
+            "longitude": 8.50694215
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Gaswerkstraße"
+    },
+    "KRH": {
+        "coordinates": {
+            "latitude": 52.015634399999996,
+            "longitude": 8.54559325
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Krankenhaus Mitte"
+    },
+    "n1354043542": {
+        "coordinates": {
+            "latitude": 52.056687833333335,
+            "longitude": 8.617859933333333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Buschbachtal"
+    },
+    "MIL": {
+        "coordinates": {
+            "latitude": 52.057320849999996,
+            "longitude": 8.610565099999999
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Milse"
+    },
+    "n1650901390": {
+        "coordinates": {
+            "latitude": 52.006276333333325,
+            "longitude": 8.549103233333334
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Prießallee"
+    },
+    "SCH": {
+        "coordinates": {
+            "latitude": 52.0556257,
+            "longitude": 8.545461750000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Schildesche"
+    },
+    "BRB": {
+        "coordinates": {
+            "latitude": 51.9986055,
+            "longitude": 8.5024814
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Brackwede Bahnhof"
+    },
+    "TBS": {
+        "coordinates": {
+            "latitude": 52.01077039999999,
+            "longitude": 8.539436166666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Teutoburger Straße"
+    },
+    "n3889268257": {
+        "coordinates": {
+            "latitude": 52.057543333333335,
+            "longitude": 8.626865099999998
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Altenhagen"
+    },
+    "GVS": {
+        "coordinates": {
+            "latitude": 52.032987649999995,
+            "longitude": 8.50891445
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Graf-von-Stauffenberg-Straße"
+    },
+    "n6439287149": {
+        "coordinates": {
+            "latitude": 52.01932276,
+            "longitude": 8.54071372
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Dürkopp Tor 6"
+    },
+    "SIM": {
+        "coordinates": {
+            "latitude": 52.0129707,
+            "longitude": 8.5604663
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Sieker Mitte"
+    }
+}

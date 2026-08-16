@@ -1,32 +1,24 @@
 import MapLibreGL, { Camera, CameraRef, MapView, UserLocation, UserTrackingMode } from '@maplibre/maplibre-react-native'
-import Geolocation from '@react-native-community/geolocation'
-import { isNil, noop } from 'lodash'
-import { useEffect, useRef } from 'react'
-import { StyleSheet } from 'react-native'
+import { isNil } from 'lodash'
+import { useEffect, useMemo, useRef } from 'react'
+import { StyleSheet, useWindowDimensions } from 'react-native'
 import DeviceInfo from 'react-native-device-info'
 
 import { Report, useReports } from '../../api'
 import { useLines, useRiskData, useSegments, useStations } from '../../api/queries'
 import { useAppStore } from '../../app.store'
 import { config } from '../../config'
+import { useActiveNetwork } from '../../networks'
 import { track } from '../../tracking'
 import { FFView } from '../common/base'
 import { LinesLayer } from './LinesLayer'
+import { getMapRegion } from './mapRegion'
 import { ReportsLayer } from './ReportsLayer'
 import { RiskLayer } from './RiskLayer'
 import { StationLayer } from './StationLayer'
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 MapLibreGL.setAccessToken(null)
-
-const MAP_REGION = {
-    longitude: 13.40587,
-    latitude: 52.51346,
-    bounds: {
-        ne: [13.88044556529124, 52.77063424239867],
-        sw: [12.8364646484805, 52.23115511676795],
-    },
-}
 
 const styles = StyleSheet.create({
     map: {
@@ -51,12 +43,17 @@ const useLayersToRender = () => {
     const hasStations = stations !== undefined
     const hasReports = reports !== undefined
 
+    /*
+     Only what a layer actually draws may gate it. The risk layer is the sole consumer of the risk
+     query, so a failing risk model must not take the reports, the stations or the user marker down
+     with it. The ordering constraint is why every layer still waits for the ones drawn beneath it.
+    */
     return {
         lines: hasLines,
         risk: hasLines && hasSegments && hasRiskData,
         stations: hasLines && hasSegments && hasStations,
-        reports: hasLines && hasSegments && hasRiskData && hasStations && hasReports,
-        userLocation: hasLines && hasSegments && hasRiskData && hasStations && hasReports,
+        reports: hasLines && hasSegments && hasStations && hasReports,
+        userLocation: hasLines && hasSegments && hasStations && hasReports,
     }
 }
 
@@ -65,13 +62,29 @@ export const FFMapView = () => {
     const stations = useStations().data
     const { data: reports = [] } = useReports()
 
-    useEffect(() => {
-        Geolocation.requestAuthorization(noop, noop)
-    }, [])
+    const network = useActiveNetwork()
+    const viewport = useWindowDimensions()
+    const region = useMemo(
+        () => (network === undefined ? undefined : getMapRegion(network, viewport)),
+        [network, viewport]
+    )
 
     const { layer, reportToShow, update: updateAppState } = useAppStore()
 
     const layersToRender = useLayersToRender()
+
+    // Switching networks leaves the camera over the previous city, which the bounds alone do not fix.
+    useEffect(() => {
+        if (region === undefined) return
+
+        cameraRef.current?.setCamera({
+            centerCoordinate: region.center,
+            zoomLevel: region.defaultZoomLevel,
+            animationDuration: 700,
+            animationMode: 'easeTo',
+        })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [network?.id])
 
     useEffect(() => {
         if (!isNil(reportToShow) && stations !== undefined) {
@@ -106,6 +119,9 @@ export const FFMapView = () => {
         updateAppState({ reportToShow: report })
     }
 
+    // The camera takes its initial position once, at mount, so the map waits for the network.
+    if (region === undefined) return null
+
     return (
         <FFView width="100%" height="100%">
             <MapView
@@ -118,18 +134,18 @@ export const FFMapView = () => {
             >
                 <Camera
                     defaultSettings={{
-                        centerCoordinate: [MAP_REGION.longitude, MAP_REGION.latitude],
-                        zoomLevel: 10,
+                        centerCoordinate: region.center,
+                        zoomLevel: region.defaultZoomLevel,
                     }}
-                    maxBounds={MAP_REGION.bounds}
-                    minZoomLevel={9}
-                    maxZoomLevel={13}
+                    maxBounds={region.bounds}
+                    minZoomLevel={region.minZoomLevel}
+                    maxZoomLevel={region.maxZoomLevel}
                     followUserMode={UserTrackingMode.Follow}
                     ref={cameraRef}
                 />
                 {layersToRender.lines && <LinesLayer />}
                 {layersToRender.risk && <RiskLayer visible={layer === 'risk'} />}
-                {layersToRender.stations && <StationLayer />}
+                {layersToRender.stations && <StationLayer minZoom={region.minZoomLevel} />}
                 {layersToRender.reports && <ReportsLayer reports={reports} onPressReport={onPressReport} />}
                 {layersToRender.userLocation && <UserLocation visible animated />}
             </MapView>

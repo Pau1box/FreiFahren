@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useEffect,useMemo } from 'react'
+import { useNetworkId } from 'src/contexts/NetworkContext'
 import { Report } from 'src/utils/types'
 
 const STORAGE_KEY = 'viewedReports'
@@ -16,7 +17,13 @@ interface ViewedReportsContextType {
     readonly isRecentAndUnviewed: (report: Report) => boolean
 }
 
-const createReportId = (report: Report): string => `${report.station.id}-${report.timestamp}` // in order to avoid duplicates with same station
+/*
+ In order to avoid duplicates with same station. Station ids are only unique inside their network, so
+ the network belongs in the id as well: otherwise a report seen in one city could mark another city's
+ report as seen.
+*/
+const createReportId = (report: Report, networkId: string | null): string =>
+    `${networkId ?? 'unknown'}-${report.station.id}-${report.timestamp}`
 
 const isReportExpired = (report: ViewedReport): boolean => {
     const currentTime = new Date().getTime()
@@ -47,6 +54,7 @@ const ViewedReportsContext = createContext<ViewedReportsContextType | null>(null
 
 export const ViewedReportsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [reports, setReports] = React.useState<ViewedReport[]>(loadInitialReports)
+    const networkId = useNetworkId()
 
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(reports))
@@ -63,26 +71,29 @@ export const ViewedReportsProvider: React.FC<{ children: React.ReactNode }> = ({
         return () => clearInterval(interval)
     }, [])
 
-    const setLastViewed = useCallback((report: Report) => {
-        const newReport: ViewedReport = {
-            id: createReportId(report),
-            timestamp: new Date().toISOString(),
-        }
+    const setLastViewed = useCallback(
+        (report: Report) => {
+            const newReport: ViewedReport = {
+                id: createReportId(report, networkId),
+                timestamp: new Date().toISOString(),
+            }
 
-        setReports((prev) => {
-            const filtered = prev.filter((r) => r.id !== newReport.id)
+            setReports((prev) => {
+                const filtered = prev.filter((r) => r.id !== newReport.id)
 
-            return [newReport, ...filtered]
-        })
-    }, [])
+                return [newReport, ...filtered]
+            })
+        },
+        [networkId]
+    )
 
     const hasViewedReport = useCallback(
         (report: Report): boolean => {
-            const reportId = createReportId(report)
+            const reportId = createReportId(report, networkId)
 
             return reports.some((r) => r.id === reportId)
         },
-        [reports]
+        [reports, networkId]
     )
 
     const isRecentAndUnviewed = useCallback(

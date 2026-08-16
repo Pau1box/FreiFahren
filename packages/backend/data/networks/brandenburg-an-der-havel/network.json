@@ -1,0 +1,22 @@
+{
+    "id": "brandenburg-an-der-havel",
+    "name": "Brandenburg an der Havel",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 52.4108,
+        "longitude": 12.5498
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 52.356576,
+            "longitude": 12.394121
+        },
+        "northEast": {
+            "latitude": 52.482084,
+            "longitude": 12.641811
+        }
+    }
+}

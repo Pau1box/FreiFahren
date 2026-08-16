@@ -1,0 +1,97 @@
+{
+    "1": {
+        "color": "#fbba00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "10": {
+        "color": "#336633",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "12": {
+        "color": "#99cc00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "16": {
+        "color": "#af1867",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#ef7c00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3": {
+        "color": "#008bd2",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3E": {
+        "color": "#008bd2",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3E/16": {
+        "color": "#008bd2",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "4": {
+        "color": "#9b1006",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "5": {
+        "color": "#0f3f93",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "7": {
+        "color": "#ea5097",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "7E": {
+        "color": "#ea5097",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "8": {
+        "color": "#884b00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "8E": {
+        "color": "#884b00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "9": {
+        "color": "#adaf17",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "94": {
+        "color": "#6f1b14",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "95": {
+        "color": "#051541",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "E": {
+        "color": "#1f77b4",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "S": {
+        "color": "#d62728",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

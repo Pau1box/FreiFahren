@@ -1,0 +1,582 @@
+{
+    "Aegidientorplatz": [
+        "Aegidientor",
+        "Aegidientorplz"
+    ],
+    "Ahlem": [],
+    "Allerweg": [],
+    "Alte Heide": [
+        "Alte"
+    ],
+    "Altenbekener Damm": [
+        "Altenbekener"
+    ],
+    "Alter Flughafen": [
+        "Alter"
+    ],
+    "Altwarmbüchen": [],
+    "Altwarmbüchen / Zentrum": [],
+    "Altwarmbüchen/Ernst-Grote-Straße": [
+        "Altwarmbüchen/Ernst-Grote-",
+        "Altwarmbüchen/Ernst-Grote-str.",
+        "Altwarmbüchen/Ernst-Grote-strasse"
+    ],
+    "Altwarmbüchen/Opelstraße": [
+        "Altwarmbüchen/Opel",
+        "Altwarmbüchen/Opelstr.",
+        "Altwarmbüchen/Opelstrasse"
+    ],
+    "Am Brabrinke": [
+        "Brabrinke"
+    ],
+    "Am Forstkamp": [
+        "Forstkamp"
+    ],
+    "Am Küchengarten": [
+        "Küchengarten"
+    ],
+    "Am Lindener Hafen": [],
+    "Am Mittelfelde": [
+        "Mittelfelde"
+    ],
+    "Am Sauerwinkel": [
+        "Sauerwinkel"
+    ],
+    "Am Soltekampe": [
+        "Soltekampe"
+    ],
+    "An der Strangriede": [],
+    "Anderten": [],
+    "Annastift": [],
+    "Appelstraße": [
+        "Appel",
+        "Appelstr.",
+        "Appelstrasse"
+    ],
+    "Auf der Horst/Marshof": [],
+    "Auf der Horst/Skorpiongasse": [],
+    "Auf der Klappenburg": [],
+    "August-Madsack-Straße": [
+        "August-Madsack-",
+        "August-Madsack-str.",
+        "August-Madsack-strasse"
+    ],
+    "Bahnhof Karl-Wiechert-Allee": [
+        "Bahnhof Karl-Wiechert-"
+    ],
+    "Bahnhof Leinhausen": [
+        "Bahnhof"
+    ],
+    "Bahnhof Linden/Fischerhof": [
+        "Bahnhof"
+    ],
+    "Bahnhof Nordstadt": [
+        "Bahnhof"
+    ],
+    "Bahnstrift": [],
+    "Bartold-Knaust-Straße": [
+        "Bartold-Knaust-",
+        "Bartold-Knaust-str.",
+        "Bartold-Knaust-strasse"
+    ],
+    "Bauweg": [],
+    "Beekestraße": [
+        "Beeke",
+        "Beekestr.",
+        "Beekestrasse"
+    ],
+    "Beneckeallee": [
+        "Benecke"
+    ],
+    "Berliner Platz": [
+        "Berliner",
+        "Berlinerplz"
+    ],
+    "Bernhard-Caspar-Straße": [
+        "Bernhard-Caspar-",
+        "Bernhard-Caspar-str.",
+        "Bernhard-Caspar-strasse"
+    ],
+    "Betriebshof Fuhsestraße": [
+        "Betriebshof Fuhse",
+        "Betriebshof Fuhsestr.",
+        "Betriebshof Fuhsestrasse"
+    ],
+    "Bleekstraße": [
+        "Bleek",
+        "Bleekstr.",
+        "Bleekstrasse"
+    ],
+    "Bothfeld": [],
+    "Bothfelder Kirchweg": [
+        "Bothfelder"
+    ],
+    "Bothmerstraße": [
+        "Bothmer",
+        "Bothmerstr.",
+        "Bothmerstrasse"
+    ],
+    "Brabeckstraße": [
+        "Brabeck",
+        "Brabeckstr.",
+        "Brabeckstrasse"
+    ],
+    "Braunschweiger Platz": [
+        "Braunschweiger",
+        "Braunschweigerplz"
+    ],
+    "Brunnenstraße": [
+        "Brunnen",
+        "Brunnenstr.",
+        "Brunnenstrasse"
+    ],
+    "Bünteweg/Tierärztliche Hochschule": [
+        "Bünteweg/Tierärztliche"
+    ],
+    "Büttnerstraße": [
+        "Büttner",
+        "Büttnerstr.",
+        "Büttnerstrasse"
+    ],
+    "Christuskirche": [],
+    "Dragonerstraße": [
+        "Dragoner",
+        "Dragonerstr.",
+        "Dragonerstrasse"
+    ],
+    "Döhrener Turm": [
+        "Döhrener"
+    ],
+    "Empelde": [],
+    "Emslandstraße": [
+        "Emsland",
+        "Emslandstr.",
+        "Emslandstrasse"
+    ],
+    "Fasanenkrug": [],
+    "Feldbuschwende": [],
+    "Fenskestraße": [
+        "Fenske",
+        "Fenskestr.",
+        "Fenskestrasse"
+    ],
+    "Fiedelerstraße": [
+        "Fiedeler",
+        "Fiedelerstr.",
+        "Fiedelerstrasse"
+    ],
+    "Freudenthalstraße": [
+        "Freudenthal",
+        "Freudenthalstr.",
+        "Freudenthalstrasse"
+    ],
+    "Freundallee": [
+        "Freund"
+    ],
+    "Friedenauer Straße": [
+        "Friedenauer",
+        "Friedenauer Str.",
+        "Friedenauer Strasse"
+    ],
+    "Garbsen": [],
+    "Gedenkstätte Ahlem": [
+        "Gedenkstätte"
+    ],
+    "Geibelstraße": [
+        "Geibel",
+        "Geibelstr.",
+        "Geibelstrasse"
+    ],
+    "Gleidingen": [],
+    "Gleidingen/Am Leinkamp": [
+        "Gleidingen/Am"
+    ],
+    "Gleidingen/Thorstraße": [
+        "Gleidingen/Thor",
+        "Gleidingen/Thorstr.",
+        "Gleidingen/Thorstrasse"
+    ],
+    "Glocksee": [],
+    "Goetheplatz": [
+        "Goethe",
+        "Goetheplz"
+    ],
+    "Großer Hillen": [
+        "Großer"
+    ],
+    "Großer Kolonnenweg": [
+        "Großer"
+    ],
+    "Hainhölzer Markt": [
+        "Hainhölzer"
+    ],
+    "Haltenhoffstraße": [
+        "Haltenhoff",
+        "Haltenhoffstr.",
+        "Haltenhoffstrasse"
+    ],
+    "Hannover Congress Centrum": [],
+    "Harenberger Straße": [
+        "Harenberger",
+        "Harenberger Str.",
+        "Harenberger Strasse"
+    ],
+    "Hauptbahnhof": [],
+    "Hauptbahnhof/Rosenstraße": [
+        "Hauptbahnhof/Rosen",
+        "Hauptbahnhof/Rosenstr.",
+        "Hauptbahnhof/Rosenstrasse"
+    ],
+    "Heisede/Langer Kamp": [
+        "Heisede/Langer"
+    ],
+    "Heisede/Marienburger Straße": [
+        "Heisede/Marienburger",
+        "Heisede/Marienburger Str.",
+        "Heisede/Marienburger Strasse"
+    ],
+    "Hemmingen": [],
+    "Hemmingen/Berliner Straße": [
+        "Hemmingen/Berliner",
+        "Hemmingen/Berliner Str.",
+        "Hemmingen/Berliner Strasse"
+    ],
+    "Hemmingen/Saarstraße": [
+        "Hemmingen/Saar",
+        "Hemmingen/Saarstr.",
+        "Hemmingen/Saarstrasse"
+    ],
+    "Hemmingen/Zentrum": [],
+    "Hermann-Ehlers-Allee": [
+        "Hermann-Ehlers-"
+    ],
+    "Herrenhäuser Gärten": [
+        "Herrenhäuser"
+    ],
+    "Herrenhäuser Markt": [
+        "Herrenhäuser"
+    ],
+    "Humboldtstraße": [
+        "Humboldt",
+        "Humboldtstr.",
+        "Humboldtstrasse"
+    ],
+    "In den Sieben Stücken": [],
+    "Jädekamp": [],
+    "Kabelkamp": [],
+    "Kafkastraße": [
+        "Kafka",
+        "Kafkastr.",
+        "Kafkastrasse"
+    ],
+    "Kantplatz": [
+        "Kant",
+        "Kantplz"
+    ],
+    "Kerstingstraße": [
+        "Kersting",
+        "Kerstingstr.",
+        "Kerstingstrasse"
+    ],
+    "Kinderkrankenhaus auf der Bult": [],
+    "Klingerstraße": [
+        "Klinger",
+        "Klingerstr.",
+        "Klingerstrasse"
+    ],
+    "Kopernikusstraße": [
+        "Kopernikus",
+        "Kopernikusstr.",
+        "Kopernikusstrasse"
+    ],
+    "Krepenstraße": [
+        "Krepen",
+        "Krepenstr.",
+        "Krepenstrasse"
+    ],
+    "Kronsberg": [],
+    "Kröpcke": [],
+    "Krügerskamp": [],
+    "Kurze-Kamp-Straße": [
+        "Kurze-Kamp-",
+        "Kurze-Kamp-str.",
+        "Kurze-Kamp-strasse"
+    ],
+    "Königsberger Ring": [
+        "Königsberger"
+    ],
+    "Königsworther Platz": [
+        "Königsworther",
+        "Königswortherplz"
+    ],
+    "Körtingsdorfer Weg": [
+        "Körtingsdorfer"
+    ],
+    "Laatzen": [],
+    "Laatzen/Birkenstraße": [
+        "Laatzen/Birken",
+        "Laatzen/Birkenstr.",
+        "Laatzen/Birkenstrasse"
+    ],
+    "Laatzen/Eichstraße": [
+        "Laatzen/Eich",
+        "Laatzen/Eichstr.",
+        "Laatzen/Eichstrasse"
+    ],
+    "Laatzen/Ginsterweg": [],
+    "Laatzen/Krankenhaus": [],
+    "Laatzen/Neuer Schlag": [
+        "Laatzen/Neuer"
+    ],
+    "Laatzen/Park der Sinne": [],
+    "Laatzen/Rethener Winkel": [
+        "Laatzen/Rethener"
+    ],
+    "Laatzen/Zentrum": [],
+    "Laatzen/aquaLaatzium": [],
+    "Langenhagen": [],
+    "Langenhagen/Angerstraße": [
+        "Langenhagen/Anger",
+        "Langenhagen/Angerstr.",
+        "Langenhagen/Angerstrasse"
+    ],
+    "Langenhagen/Kurt-Schumacher-Allee": [
+        "Langenhagen/Kurt-Schumacher-"
+    ],
+    "Langenhagen/Langenforther Platz": [
+        "Langenhagen/Langenforther",
+        "Langenhagen/Langenfortherplz"
+    ],
+    "Langenhagen/Zentrum": [],
+    "Lauckerthof": [],
+    "Leibniz Universität": [
+        "Leibniz"
+    ],
+    "Leinaustraße": [
+        "Leinau",
+        "Leinaustr.",
+        "Leinaustrasse"
+    ],
+    "Lindener Marktplatz": [
+        "Lindener Markt",
+        "Lindener Marktplz"
+    ],
+    "Lister Platz": [
+        "Lister",
+        "Listerplz"
+    ],
+    "Lortzingstraße": [
+        "Lortzing",
+        "Lortzingstr.",
+        "Lortzingstrasse"
+    ],
+    "Marienstraße": [
+        "Marien",
+        "Marienstr.",
+        "Marienstrasse"
+    ],
+    "Markthalle/Landtag (U)": [
+        "Markthalle/Landtag"
+    ],
+    "Mecklenheidestraße": [
+        "Mecklenheide",
+        "Mecklenheidestr.",
+        "Mecklenheidestrasse"
+    ],
+    "Medizinische Hochschule": [
+        "Medizinische"
+    ],
+    "Messe / Nord": [],
+    "Messe/Ost (EXPO-Plaza)": [
+        "Messe/Ost"
+    ],
+    "Misburg": [],
+    "Misburger Straße": [
+        "Misburger",
+        "Misburger Str.",
+        "Misburger Strasse"
+    ],
+    "Mühlenberger Markt": [
+        "Mühlenberger"
+    ],
+    "Nackenberg": [],
+    "Niedersachsenring": [],
+    "Nieschlagstraße": [
+        "Nieschlag",
+        "Nieschlagstr.",
+        "Nieschlagstrasse"
+    ],
+    "Noltemeyerbrücke": [],
+    "Nordhafen": [],
+    "Oldenburger Allee": [
+        "Oldenburger"
+    ],
+    "Ostfeldstraße": [
+        "Ostfeld",
+        "Ostfeldstr.",
+        "Ostfeldstrasse"
+    ],
+    "Papenwinkel": [],
+    "Pappelwiese": [],
+    "Paracelsusweg": [],
+    "Pascalstraße": [
+        "Pascal",
+        "Pascalstr.",
+        "Pascalstrasse"
+    ],
+    "Peiner Straße": [
+        "Peiner",
+        "Peiner Str.",
+        "Peiner Strasse"
+    ],
+    "Pelikanstraße": [
+        "Pelikan",
+        "Pelikanstr.",
+        "Pelikanstrasse"
+    ],
+    "Reiterstadion": [],
+    "Rethen (Leine)": [
+        "Rethen"
+    ],
+    "Rethen/Galgenbergweg": [],
+    "Rethen/Pattenser Straße": [
+        "Rethen/Pattenser",
+        "Rethen/Pattenser Str.",
+        "Rethen/Pattenser Strasse"
+    ],
+    "Roderbruch": [],
+    "Roderbruchmarkt": [],
+    "Saarbrückener Straße": [
+        "Saarbrückener",
+        "Saarbrückener Str.",
+        "Saarbrückener Strasse"
+    ],
+    "Safariweg": [],
+    "Sarstedt": [],
+    "Sarstedt/Am Boksberg": [
+        "Sarstedt/Am"
+    ],
+    "Sarstedt/Röntgenstraße": [
+        "Sarstedt/Röntgen",
+        "Sarstedt/Röntgenstr.",
+        "Sarstedt/Röntgenstrasse"
+    ],
+    "Schaumburgstraße": [
+        "Schaumburg",
+        "Schaumburgstr.",
+        "Schaumburgstrasse"
+    ],
+    "Schierholzstraße": [
+        "Schierholz",
+        "Schierholzstr.",
+        "Schierholzstrasse"
+    ],
+    "Schlägerstraße": [
+        "Schläger",
+        "Schlägerstr.",
+        "Schlägerstrasse"
+    ],
+    "Schneiderberg / Wilhelm-Busch-Museum": [],
+    "Schwarzer Bär": [
+        "Schwarzer"
+    ],
+    "Schönebecker Allee": [
+        "Schönebecker"
+    ],
+    "Schünemannplatz": [
+        "Schünemann",
+        "Schünemannplz"
+    ],
+    "Sedanstraße/Lister Meile": [
+        "Sedanstraße/Lister"
+    ],
+    "Seelhorster Allee": [
+        "Seelhorster"
+    ],
+    "Spannhagengarten": [],
+    "Stadionbrücke": [],
+    "Stadtfriedhof Bothfeld": [
+        "Stadtfriedhof"
+    ],
+    "Stadtfriedhof Lahe": [
+        "Stadtfriedhof"
+    ],
+    "Stadtfriedhof Ricklingen": [
+        "Stadtfriedhof"
+    ],
+    "Stadtfriedhof Seelhorst": [
+        "Stadtfriedhof"
+    ],
+    "Stadtfriedhof Stöcken": [
+        "Stadtfriedhof"
+    ],
+    "Steintor": [],
+    "Stockholmer Allee": [
+        "Stockholmer"
+    ],
+    "Stöcken": [],
+    "Stöckener Markt": [
+        "Stöckener"
+    ],
+    "Tempelhofweg": [],
+    "Tiergarten": [],
+    "Tresckowstraße": [
+        "Tresckow",
+        "Tresckowstr.",
+        "Tresckowstrasse"
+    ],
+    "Uhlhornstraße": [
+        "Uhlhorn",
+        "Uhlhornstr.",
+        "Uhlhornstrasse"
+    ],
+    "Unter den Birken": [],
+    "Vahrenheider Markt": [
+        "Vahrenheider"
+    ],
+    "Vahrenwalder Platz": [
+        "Vahrenwalder",
+        "Vahrenwalderplz"
+    ],
+    "Vier Grenzen": [
+        "Vier"
+    ],
+    "Wallensteinstraße": [
+        "Wallenstein",
+        "Wallensteinstr.",
+        "Wallensteinstrasse"
+    ],
+    "Waterloo": [],
+    "Werderstraße": [
+        "Werder",
+        "Werderstr.",
+        "Werderstrasse"
+    ],
+    "Wettbergen": [],
+    "Wiehbergstraße": [
+        "Wiehberg",
+        "Wiehbergstr.",
+        "Wiehbergstrasse"
+    ],
+    "Wiesenau": [],
+    "Windausstraße": [
+        "Windaus",
+        "Windausstr.",
+        "Windausstrasse"
+    ],
+    "Wissenschaftspark Marienwerder": [
+        "Wissenschaftspark"
+    ],
+    "Wunstorfer Straße": [
+        "Wunstorfer",
+        "Wunstorfer Str.",
+        "Wunstorfer Strasse"
+    ],
+    "Zehlendorfweg": [],
+    "Zoo": [],
+    "Zuschlagstraße": [
+        "Zuschlag",
+        "Zuschlagstr.",
+        "Zuschlagstrasse"
+    ]
+}

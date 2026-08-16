@@ -1,0 +1,22 @@
+{
+    "id": "erfurt",
+    "name": "Erfurt",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.9778,
+        "longitude": 11.0287
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.900333,
+            "longitude": 10.884195
+        },
+        "northEast": {
+            "latitude": 51.065099,
+            "longitude": 11.164429
+        }
+    }
+}

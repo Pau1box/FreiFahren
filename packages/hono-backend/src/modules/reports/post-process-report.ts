@@ -38,7 +38,8 @@ const getMostCommonStationId = (
         dayOfWeek,
         hourWindow,
         dayWindow,
-    }: { hour: number; dayOfWeek: number; hourWindow: number; dayWindow: number }
+        zone,
+    }: { hour: number; dayOfWeek: number; hourWindow: number; dayWindow: number; zone: string }
 ): StationId | undefined => {
     if (!Number.isFinite(dayOfWeek) || dayOfWeek < 1 || dayOfWeek > 7) return undefined
     if (!Number.isInteger(hour) || hour < 0 || hour > 23) return undefined
@@ -46,7 +47,7 @@ const getMostCommonStationId = (
     const counts = new Map<StationId, number>()
 
     for (const row of rows) {
-        const dateTime = DateTime.fromJSDate(row.timestamp, { zone: 'utc' })
+        const dateTime = DateTime.fromJSDate(row.timestamp, { zone })
         const rowHour = dateTime.hour
         const rowDayOfWeek = dateTime.weekday // 1-7
 
@@ -77,8 +78,16 @@ const getMostCommonStationId = (
     return bestStationId
 }
 
+/**
+ * Guesses a station from history that was reported around the same time of day and day of week.
+ *
+ * `hour`/`dayOfWeek` and the candidate rows have to be read on the same clock, and that clock is the
+ * network's city, not the server's: "the busy station at 8 in the morning" is a statement about
+ * local rush hour. Reading both in UTC would be self consistent only as long as the offset never
+ * moves, which DST breaks twice a year.
+ */
 const guessStation =
-    (candidateRows: Array<{ stationId: StationId; timestamp: Date }>) =>
+    (candidateRows: Array<{ stationId: StationId; timestamp: Date }>, zone: string) =>
     (hour: number, dayOfWeek: number) =>
     <T extends { stationId?: StationId }>(reportData: T): T => {
         if (reportData.stationId !== undefined) return reportData
@@ -112,6 +121,7 @@ const guessStation =
                     dayOfWeek,
                     hourWindow,
                     dayWindow,
+                    zone,
                 })
                 if (stationId !== undefined) {
                     return { ...reportData, stationId }

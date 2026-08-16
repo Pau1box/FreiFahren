@@ -1,0 +1,24 @@
+{
+    "id": "nuernberg",
+    "name": "Nürnberg",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Fürth"
+    ],
+    "center": {
+        "latitude": 49.4539,
+        "longitude": 11.0773
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 49.35367,
+            "longitude": 10.888444
+        },
+        "northEast": {
+            "latitude": 49.538903,
+            "longitude": 11.20987
+        }
+    }
+}

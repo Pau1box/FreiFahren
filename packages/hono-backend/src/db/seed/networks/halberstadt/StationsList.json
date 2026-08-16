@@ -1,0 +1,209 @@
+{
+    "n266896603": {
+        "coordinates": {
+            "latitude": 51.8703891,
+            "longitude": 11.056167
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Klus"
+    },
+    "n266896639": {
+        "coordinates": {
+            "latitude": 51.8732735,
+            "longitude": 11.0516928
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kirschallee"
+    },
+    "n267043451": {
+        "coordinates": {
+            "latitude": 51.898842699999996,
+            "longitude": 11.0703583
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Hauptbahnhof Linie 1/2"
+    },
+    "n306682331": {
+        "coordinates": {
+            "latitude": 51.9009352,
+            "longitude": 11.0373164
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Sargstedter Weg"
+    },
+    "n317440587": {
+        "coordinates": {
+            "latitude": 51.89421016,
+            "longitude": 11.0544037
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Fischmarkt"
+    },
+    "n493968516": {
+        "coordinates": {
+            "latitude": 51.892347300000004,
+            "longitude": 11.05756654
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Erich-Weinert-Straße"
+    },
+    "n599204087": {
+        "coordinates": {
+            "latitude": 51.89680805,
+            "longitude": 11.06774675
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Richard-Wagner-Straße"
+    },
+    "n1858260163": {
+        "coordinates": {
+            "latitude": 51.8783104,
+            "longitude": 11.0541601
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Am FSZ"
+    },
+    "n1858260164": {
+        "coordinates": {
+            "latitude": 51.881009225,
+            "longitude": 11.0536712
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Herbingstraße"
+    },
+    "n1858260185": {
+        "coordinates": {
+            "latitude": 51.903573949999995,
+            "longitude": 11.04700475
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Zuckerfabrik"
+    },
+    "n1988799826": {
+        "coordinates": {
+            "latitude": 51.8841675,
+            "longitude": 11.056511066666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Klusstraße"
+    },
+    "n1989953780": {
+        "coordinates": {
+            "latitude": 51.88825535,
+            "longitude": 11.05735275
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Landratsamt"
+    },
+    "n1989954067": {
+        "coordinates": {
+            "latitude": 51.89404498333334,
+            "longitude": 11.060475199999999
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Heinrich-Heine-Platz"
+    },
+    "n1990099278": {
+        "coordinates": {
+            "latitude": 51.89450585,
+            "longitude": 11.04979945
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Holzmarkt"
+    },
+    "n1990099307": {
+        "coordinates": {
+            "latitude": 51.88368475,
+            "longitude": 11.051277800000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Westerhäuser Straße"
+    },
+    "n1990099576": {
+        "coordinates": {
+            "latitude": 51.8918606,
+            "longitude": 11.0488113
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Heinrich-Julius-Straße"
+    },
+    "n1990100160": {
+        "coordinates": {
+            "latitude": 51.89724495,
+            "longitude": 11.050426025
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Hoher Weg"
+    },
+    "n1990120359": {
+        "coordinates": {
+            "latitude": 51.898647875,
+            "longitude": 11.047351775
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Gröperstraße"
+    },
+    "n1990152158": {
+        "coordinates": {
+            "latitude": 51.899041966666665,
+            "longitude": 11.0426682
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Torteich"
+    },
+    "n8238250596": {
+        "coordinates": {
+            "latitude": 51.8880708,
+            "longitude": 11.04927685
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Spiegelstraße"
+    }
+}

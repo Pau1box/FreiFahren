@@ -1,0 +1,1778 @@
+{
+    "n20980464": {
+        "coordinates": {
+            "latitude": 53.10305714,
+            "longitude": 8.85740547
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Berufsbildungswerk"
+    },
+    "n21096105": {
+        "coordinates": {
+            "latitude": 53.065140275000005,
+            "longitude": 8.950021775
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Schweizer Eck"
+    },
+    "n21316732": {
+        "coordinates": {
+            "latitude": 53.02829875,
+            "longitude": 8.837782775
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Arsten"
+    },
+    "n21316758": {
+        "coordinates": {
+            "latitude": 53.07885566666667,
+            "longitude": 8.801401833333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "N1"
+        ],
+        "name": "Am Brill (Hutfilter-/Obernstraße)"
+    },
+    "n21316788": {
+        "coordinates": {
+            "latitude": 53.06133562,
+            "longitude": 8.785980259999999
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "BSAG-Zentrum"
+    },
+    "n21316797": {
+        "coordinates": {
+            "latitude": 53.0505537,
+            "longitude": 8.789790666666667
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Flughafen-Süd"
+    },
+    "n21316798": {
+        "coordinates": {
+            "latitude": 53.076218850000004,
+            "longitude": 8.80756405
+        },
+        "lines": [
+            "2",
+            "3",
+            "4",
+            "6",
+            "8",
+            "N4"
+        ],
+        "name": "Obernstraße"
+    },
+    "n21316807": {
+        "coordinates": {
+            "latitude": 53.06376855,
+            "longitude": 8.789485249999998
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Schleiermacherstraße"
+    },
+    "n21316819": {
+        "coordinates": {
+            "latitude": 53.0745810125,
+            "longitude": 8.8088501625
+        },
+        "lines": [
+            "2",
+            "3",
+            "4",
+            "6",
+            "8",
+            "N4"
+        ],
+        "name": "Domsheide"
+    },
+    "n21530451": {
+        "coordinates": {
+            "latitude": 53.105207575,
+            "longitude": 8.8507662375
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Universität-Süd"
+    },
+    "n25570928": {
+        "coordinates": {
+            "latitude": 53.08405255,
+            "longitude": 8.8172541875
+        },
+        "lines": [
+            "5",
+            "6",
+            "8"
+        ],
+        "name": "Hauptbahnhof-Nord/Messe"
+    },
+    "n25755490": {
+        "coordinates": {
+            "latitude": 53.081858360714286,
+            "longitude": 8.813484242857143
+        },
+        "lines": [
+            "1",
+            "10",
+            "4",
+            "5",
+            "6",
+            "8",
+            "N1",
+            "N10",
+            "N4"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n25905744": {
+        "coordinates": {
+            "latitude": 53.11042273333334,
+            "longitude": 8.769871466666666
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Altenescher Straße"
+    },
+    "n25905745": {
+        "coordinates": {
+            "latitude": 53.1082784,
+            "longitude": 8.77391325
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Waller Friedhof"
+    },
+    "n26048306": {
+        "coordinates": {
+            "latitude": 53.081011933333336,
+            "longitude": 8.796782566666666
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Radio Bremen"
+    },
+    "n26242919": {
+        "coordinates": {
+            "latitude": 53.08243625,
+            "longitude": 8.837361175
+        },
+        "lines": [
+            "1",
+            "4",
+            "N1",
+            "N4"
+        ],
+        "name": "St. Joseph-Stift"
+    },
+    "n26242947": {
+        "coordinates": {
+            "latitude": 53.091248410000006,
+            "longitude": 8.871347199999999
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Bürgermeister-Spitta-Allee"
+    },
+    "n26280993": {
+        "coordinates": {
+            "latitude": 53.07441013333334,
+            "longitude": 8.869276383333334
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Julius-Brecht-Allee"
+    },
+    "n26563145": {
+        "coordinates": {
+            "latitude": 53.1060969,
+            "longitude": 8.77880305
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Waller Straße"
+    },
+    "n26563208": {
+        "coordinates": {
+            "latitude": 53.09510255,
+            "longitude": 8.79041835
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Utbremer Straße"
+    },
+    "n26587115": {
+        "coordinates": {
+            "latitude": 53.0777993,
+            "longitude": 8.809826666666666
+        },
+        "lines": [
+            "4",
+            "6",
+            "8",
+            "N4"
+        ],
+        "name": "Schüsselkorb"
+    },
+    "n26666601": {
+        "coordinates": {
+            "latitude": 53.0786542,
+            "longitude": 8.9028572
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Dietrich-Bonhoeffer-Straße"
+    },
+    "n26666608": {
+        "coordinates": {
+            "latitude": 53.0784412,
+            "longitude": 8.91069
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Kurt-Huber-Straße"
+    },
+    "n26666610": {
+        "coordinates": {
+            "latitude": 53.07338435,
+            "longitude": 8.9305407
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Düsseldorfer Straße"
+    },
+    "n26666645": {
+        "coordinates": {
+            "latitude": 53.0790681,
+            "longitude": 8.8855453
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Wilhelm-Leuschner-Straße"
+    },
+    "n26814689": {
+        "coordinates": {
+            "latitude": 53.0373559,
+            "longitude": 8.8222333
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Klinikum Links der Weser"
+    },
+    "n29173905": {
+        "coordinates": {
+            "latitude": 53.08276196666666,
+            "longitude": 8.806913166666666
+        },
+        "lines": [
+            "10",
+            "5",
+            "N10"
+        ],
+        "name": "Falkenstraße"
+    },
+    "n29193485": {
+        "coordinates": {
+            "latitude": 53.059539436363636,
+            "longitude": 8.8976188
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Schloßparkstraße"
+    },
+    "n29194413": {
+        "coordinates": {
+            "latitude": 53.0742823,
+            "longitude": 8.7942571
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Westerstraße"
+    },
+    "n29857210": {
+        "coordinates": {
+            "latitude": 53.060429649999996,
+            "longitude": 8.765654099999999
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Bardenflethstraße"
+    },
+    "n29857216": {
+        "coordinates": {
+            "latitude": 53.06168783333334,
+            "longitude": 8.7733488
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Solinger Straße"
+    },
+    "n29857227": {
+        "coordinates": {
+            "latitude": 53.065914166666666,
+            "longitude": 8.780731666666666
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Neuenlander Straße"
+    },
+    "n29857233": {
+        "coordinates": {
+            "latitude": 53.06960962857143,
+            "longitude": 8.78741902857143
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Pappelstraße"
+    },
+    "n29857295": {
+        "coordinates": {
+            "latitude": 53.059194839999996,
+            "longitude": 8.76040086
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Norderländer Straße"
+    },
+    "HBSB": {
+        "coordinates": {
+            "latitude": 53.062088275,
+            "longitude": 8.887357375
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Bremen-Sebaldsbrück"
+    },
+    "n30343524": {
+        "coordinates": {
+            "latitude": 53.0847269,
+            "longitude": 8.801021233333334
+        },
+        "lines": [
+            "10",
+            "5",
+            "N10"
+        ],
+        "name": "Daniel-von-Büren-Straße"
+    },
+    "n30343545": {
+        "coordinates": {
+            "latitude": 53.08854826666666,
+            "longitude": 8.793076133333333
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Haferkamp"
+    },
+    "n30343604": {
+        "coordinates": {
+            "latitude": 53.09183124285715,
+            "longitude": 8.790802571428571
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Hansestraße"
+    },
+    "n30355995": {
+        "coordinates": {
+            "latitude": 53.118630175,
+            "longitude": 8.8972342
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Am Lehester Deich"
+    },
+    "n30356046": {
+        "coordinates": {
+            "latitude": 53.123756549999996,
+            "longitude": 8.900078650000001
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Daniel-Jacobs-Allee"
+    },
+    "n30356052": {
+        "coordinates": {
+            "latitude": 53.12701695,
+            "longitude": 8.898865
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Borgfeld"
+    },
+    "n31297430": {
+        "coordinates": {
+            "latitude": 53.0838422,
+            "longitude": 8.796382133333333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Doventor"
+    },
+    "n31297518": {
+        "coordinates": {
+            "latitude": 53.101749625,
+            "longitude": 8.7735233125
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Emder Straße"
+    },
+    "n31297745": {
+        "coordinates": {
+            "latitude": 53.11228271666667,
+            "longitude": 8.752713283333334
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Waterfront"
+    },
+    "n49289905": {
+        "coordinates": {
+            "latitude": 53.09821265555556,
+            "longitude": 8.839723466666666
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Kulenkampffallee"
+    },
+    "n49510051": {
+        "coordinates": {
+            "latitude": 53.063435150000004,
+            "longitude": 8.8677331
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Weserwehr"
+    },
+    "n244109185": {
+        "coordinates": {
+            "latitude": 53.086556959999996,
+            "longitude": 8.81812566
+        },
+        "lines": [
+            "5"
+        ],
+        "name": "Bürgerpark"
+    },
+    "n253746665": {
+        "coordinates": {
+            "latitude": 53.074073266666666,
+            "longitude": 8.936229083333332
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Osterholzer Landstraße"
+    },
+    "n254360377": {
+        "coordinates": {
+            "latitude": 53.088353875,
+            "longitude": 8.832821599999999
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Bulthauptstraße"
+    },
+    "n268412140": {
+        "coordinates": {
+            "latitude": 53.0842746,
+            "longitude": 8.82562209
+        },
+        "lines": [
+            "6",
+            "8"
+        ],
+        "name": "Am Stern"
+    },
+    "n269181048": {
+        "coordinates": {
+            "latitude": 53.066384983333336,
+            "longitude": 8.793727916666667
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Gastfeldstraße"
+    },
+    "n271525896": {
+        "coordinates": {
+            "latitude": 53.069593675,
+            "longitude": 8.799005675
+        },
+        "lines": [
+            "4",
+            "6",
+            "N4"
+        ],
+        "name": "Theater am Leibnizplatz"
+    },
+    "n281925150": {
+        "coordinates": {
+            "latitude": 53.07993435,
+            "longitude": 8.8279104
+        },
+        "lines": [
+            "1",
+            "4",
+            "N1",
+            "N4"
+        ],
+        "name": "Parkstraße"
+    },
+    "n287055067": {
+        "coordinates": {
+            "latitude": 53.07132696,
+            "longitude": 8.85064078
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Bei den Drei Pfählen"
+    },
+    "n287688041": {
+        "coordinates": {
+            "latitude": 53.042007133333335,
+            "longitude": 8.824295133333333
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Robert-Koch-Straße"
+    },
+    "n287688216": {
+        "coordinates": {
+            "latitude": 53.03233383333333,
+            "longitude": 8.838321966666667
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Heukämpendamm"
+    },
+    "n293216697": {
+        "coordinates": {
+            "latitude": 53.073033966666664,
+            "longitude": 8.8246738
+        },
+        "lines": [
+            "10",
+            "2",
+            "3",
+            "N10"
+        ],
+        "name": "Sielwall"
+    },
+    "n294761568": {
+        "coordinates": {
+            "latitude": 53.03518562307692,
+            "longitude": 8.826887223076923
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Kattenturm-Mitte"
+    },
+    "n299730710": {
+        "coordinates": {
+            "latitude": 53.088961016666666,
+            "longitude": 8.84219865
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "H.-H.-Meier-Allee"
+    },
+    "n299731075": {
+        "coordinates": {
+            "latitude": 53.0853603625,
+            "longitude": 8.849874475
+        },
+        "lines": [
+            "1",
+            "4",
+            "N1",
+            "N4"
+        ],
+        "name": "Kirchbachstraße-C"
+    },
+    "n302094600": {
+        "coordinates": {
+            "latitude": 53.079408550000004,
+            "longitude": 8.878049583333334
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Polizeipräsidium"
+    },
+    "n302523688": {
+        "coordinates": {
+            "latitude": 53.066751939999996,
+            "longitude": 8.86141094
+        },
+        "lines": [
+            "10",
+            "2",
+            "3",
+            "N10"
+        ],
+        "name": "Hohwisch"
+    },
+    "n320042277": {
+        "coordinates": {
+            "latitude": 53.0980786,
+            "longitude": 8.788747166666667
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Gustavstraße"
+    },
+    "n346670236": {
+        "coordinates": {
+            "latitude": 53.1130869,
+            "longitude": 8.8916921
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Peter-Henlein-Straße"
+    },
+    "HBWA": {
+        "coordinates": {
+            "latitude": 53.102694066666665,
+            "longitude": 8.785596433333334
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Bremen-Walle"
+    },
+    "n393381034": {
+        "coordinates": {
+            "latitude": 53.07934190833333,
+            "longitude": 8.895196799999999
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Berliner Freiheit"
+    },
+    "n410366591": {
+        "coordinates": {
+            "latitude": 53.0790206,
+            "longitude": 8.86073175
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Barbarossastraße"
+    },
+    "n417636717": {
+        "coordinates": {
+            "latitude": 53.05643455,
+            "longitude": 8.78403935
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Neuenlander Kämpe"
+    },
+    "n417636750": {
+        "coordinates": {
+            "latitude": 53.0721346,
+            "longitude": 8.8034271
+        },
+        "lines": [
+            "4",
+            "6",
+            "8",
+            "N4"
+        ],
+        "name": "Wilhelm-Kaisen-Brücke"
+    },
+    "n442298923": {
+        "coordinates": {
+            "latitude": 53.05941688,
+            "longitude": 8.9003299
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Sebaldsbrück"
+    },
+    "n445417350": {
+        "coordinates": {
+            "latitude": 53.11043541666667,
+            "longitude": 8.85480655
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Universität-Nord"
+    },
+    "n521080072": {
+        "coordinates": {
+            "latitude": 53.062338866666664,
+            "longitude": 8.8102342
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Kirchweg"
+    },
+    "n621892969": {
+        "coordinates": {
+            "latitude": 53.0752081,
+            "longitude": 8.822590866666667
+        },
+        "lines": [
+            "10",
+            "N10"
+        ],
+        "name": "Humboldtstraße"
+    },
+    "n669530241": {
+        "coordinates": {
+            "latitude": 53.070505600000004,
+            "longitude": 8.85614875
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Bennigsenstraße"
+    },
+    "n669530304": {
+        "coordinates": {
+            "latitude": 53.065400475000004,
+            "longitude": 8.8782235
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Föhrenstraße"
+    },
+    "n669554876": {
+        "coordinates": {
+            "latitude": 53.0723627,
+            "longitude": 8.842677550000001
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Am Hulsberg"
+    },
+    "n669674392": {
+        "coordinates": {
+            "latitude": 53.0859072,
+            "longitude": 8.79107235
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Lloydstraße"
+    },
+    "n670300910": {
+        "coordinates": {
+            "latitude": 53.11277976666667,
+            "longitude": 8.76531
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Moorstraße"
+    },
+    "n670300966": {
+        "coordinates": {
+            "latitude": 53.11608476666667,
+            "longitude": 8.7589798
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Lindenhofstraße"
+    },
+    "n676024124": {
+        "coordinates": {
+            "latitude": 53.080625080000004,
+            "longitude": 8.81883698
+        },
+        "lines": [
+            "1",
+            "10",
+            "4",
+            "N1",
+            "N10",
+            "N4"
+        ],
+        "name": "Rembertistraße"
+    },
+    "n677134285": {
+        "coordinates": {
+            "latitude": 53.10931192,
+            "longitude": 8.88712972
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Kopernikusstraße"
+    },
+    "n694684599": {
+        "coordinates": {
+            "latitude": 53.06994535,
+            "longitude": 8.83734735
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Weserstadion"
+    },
+    "n694825904": {
+        "coordinates": {
+            "latitude": 53.068825333333336,
+            "longitude": 8.843847466666666
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Nienburger Straße"
+    },
+    "n694825910": {
+        "coordinates": {
+            "latitude": 53.0679772,
+            "longitude": 8.848865833333333
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Stader Straße/Hamburger Straße"
+    },
+    "n694825921": {
+        "coordinates": {
+            "latitude": 53.0670206,
+            "longitude": 8.854558533333334
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Georg-Bitter-Straße"
+    },
+    "n766862401": {
+        "coordinates": {
+            "latitude": 53.103905,
+            "longitude": 8.8551925
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Lise-Meitner-Straße"
+    },
+    "n767994948": {
+        "coordinates": {
+            "latitude": 53.04869836666666,
+            "longitude": 8.820690766666667
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Sielhof"
+    },
+    "n768090752": {
+        "coordinates": {
+            "latitude": 53.09498575,
+            "longitude": 8.850473449999999
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Wätjenstraße"
+    },
+    "n768090767": {
+        "coordinates": {
+            "latitude": 53.09024825,
+            "longitude": 8.86290245
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Focke-Museum"
+    },
+    "n768090776": {
+        "coordinates": {
+            "latitude": 53.0833006,
+            "longitude": 8.84213905
+        },
+        "lines": [
+            "1",
+            "4",
+            "N1",
+            "N4"
+        ],
+        "name": "Metzer Straße"
+    },
+    "n768090793": {
+        "coordinates": {
+            "latitude": 53.101367350000004,
+            "longitude": 8.87455425
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Vorstraße"
+    },
+    "n768090820": {
+        "coordinates": {
+            "latitude": 53.0913862,
+            "longitude": 8.8457188
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Emmastraße"
+    },
+    "n768090824": {
+        "coordinates": {
+            "latitude": 53.08725285,
+            "longitude": 8.8367076
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Joseph-Haydn-Straße"
+    },
+    "n768090826": {
+        "coordinates": {
+            "latitude": 53.0888001,
+            "longitude": 8.856313
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Friedhofstraße"
+    },
+    "n768090829": {
+        "coordinates": {
+            "latitude": 53.09685696666667,
+            "longitude": 8.87047
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Horn"
+    },
+    "n768090891": {
+        "coordinates": {
+            "latitude": 53.0857795,
+            "longitude": 8.830896599999999
+        },
+        "lines": [
+            "6",
+            "8"
+        ],
+        "name": "Brahmsstraße"
+    },
+    "n768090897": {
+        "coordinates": {
+            "latitude": 53.0966917,
+            "longitude": 8.8537022
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Riensberg"
+    },
+    "n768827699": {
+        "coordinates": {
+            "latitude": 53.1154258,
+            "longitude": 8.8939655
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Höger Weg"
+    },
+    "n768827707": {
+        "coordinates": {
+            "latitude": 53.105327349999996,
+            "longitude": 8.8841399
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Werner-von-Siemens-Straße"
+    },
+    "n768878174": {
+        "coordinates": {
+            "latitude": 53.0749081,
+            "longitude": 8.92593065
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Mülheimer Straße"
+    },
+    "n768878190": {
+        "coordinates": {
+            "latitude": 53.07350375,
+            "longitude": 8.9461242
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Ellenerbrokstraße"
+    },
+    "n768878199": {
+        "coordinates": {
+            "latitude": 53.07132835,
+            "longitude": 8.94878225
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Graubündener Straße"
+    },
+    "n769037354": {
+        "coordinates": {
+            "latitude": 53.07793225,
+            "longitude": 8.920958200000001
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Erkelenzer Straße"
+    },
+    "n773207169": {
+        "coordinates": {
+            "latitude": 53.078485625,
+            "longitude": 8.8233098
+        },
+        "lines": [
+            "1",
+            "10",
+            "4",
+            "N1",
+            "N10",
+            "N4"
+        ],
+        "name": "Am Dobben"
+    },
+    "n773239096": {
+        "coordinates": {
+            "latitude": 53.09146545,
+            "longitude": 8.8351769375
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Crüsemannallee"
+    },
+    "n773239106": {
+        "coordinates": {
+            "latitude": 53.09498453333333,
+            "longitude": 8.837668666666668
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Busestraße"
+    },
+    "n773271743": {
+        "coordinates": {
+            "latitude": 53.05283335,
+            "longitude": 8.78637235
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Flughafen"
+    },
+    "n773832721": {
+        "coordinates": {
+            "latitude": 53.05180466666667,
+            "longitude": 8.819403666666666
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Huckelriede"
+    },
+    "n775573096": {
+        "coordinates": {
+            "latitude": 53.0946605,
+            "longitude": 8.77857645
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Elisabethstraße"
+    },
+    "n775573104": {
+        "coordinates": {
+            "latitude": 53.0912283,
+            "longitude": 8.7817796
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Grenzstraße"
+    },
+    "n775573115": {
+        "coordinates": {
+            "latitude": 53.11575605,
+            "longitude": 8.752591299999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Kap-Horn-Straße"
+    },
+    "n775573119": {
+        "coordinates": {
+            "latitude": 53.110535150000004,
+            "longitude": 8.756746
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Goosestraße"
+    },
+    "n775573120": {
+        "coordinates": {
+            "latitude": 53.0863411,
+            "longitude": 8.7816136375
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Konsul-Smidt-Straße"
+    },
+    "n775573131": {
+        "coordinates": {
+            "latitude": 53.0708477,
+            "longitude": 8.833058675
+        },
+        "lines": [
+            "10",
+            "2",
+            "3",
+            "N10"
+        ],
+        "name": "St.-Jürgen-Straße"
+    },
+    "n775573132": {
+        "coordinates": {
+            "latitude": 53.10868823333333,
+            "longitude": 8.763667333333332
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Grasberger Straße"
+    },
+    "n775573155": {
+        "coordinates": {
+            "latitude": 53.09871843333334,
+            "longitude": 8.776559216666667
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Waller Ring"
+    },
+    "n775573194": {
+        "coordinates": {
+            "latitude": 53.104189149999996,
+            "longitude": 8.769127000000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Jadestraße"
+    },
+    "n775590210": {
+        "coordinates": {
+            "latitude": 53.0888893,
+            "longitude": 8.7849548
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Hansator"
+    },
+    "n776070389": {
+        "coordinates": {
+            "latitude": 53.0603682,
+            "longitude": 8.892978750000001
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Trinidadstraße"
+    },
+    "n782224504": {
+        "coordinates": {
+            "latitude": 53.0830517,
+            "longitude": 8.787094
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Eduard-Schopf-Allee"
+    },
+    "n818850636": {
+        "coordinates": {
+            "latitude": 53.0671208,
+            "longitude": 8.871473850000001
+        },
+        "lines": [
+            "10",
+            "2",
+            "N10"
+        ],
+        "name": "Malerstraße"
+    },
+    "n818906415": {
+        "coordinates": {
+            "latitude": 53.0722667,
+            "longitude": 8.8286111
+        },
+        "lines": [
+            "10",
+            "2",
+            "3",
+            "N10"
+        ],
+        "name": "Brunnenstraße"
+    },
+    "n818906418": {
+        "coordinates": {
+            "latitude": 53.072525999999996,
+            "longitude": 8.81844655
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Ulrichsplatz"
+    },
+    "n1305261463": {
+        "coordinates": {
+            "latitude": 53.0676407,
+            "longitude": 8.80216505
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Rotes-Kreuz-Krankenhaus"
+    },
+    "n1328817505": {
+        "coordinates": {
+            "latitude": 53.065001099999996,
+            "longitude": 8.8065519
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Schwankhalle (Schnürschuh Theater)"
+    },
+    "n1328863589": {
+        "coordinates": {
+            "latitude": 53.05869906666667,
+            "longitude": 8.812901066666667
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Rosenpfad"
+    },
+    "n1328863676": {
+        "coordinates": {
+            "latitude": 53.055957899999996,
+            "longitude": 8.81519655
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Am Dammacker"
+    },
+    "n1676641427": {
+        "coordinates": {
+            "latitude": 53.05327885,
+            "longitude": 8.96211195
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Werner-Steenken-Straße"
+    },
+    "n1676641464": {
+        "coordinates": {
+            "latitude": 53.04629425,
+            "longitude": 8.957582649999999
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Weserpark-Süd"
+    },
+    "n1676656350": {
+        "coordinates": {
+            "latitude": 53.06643655,
+            "longitude": 8.9557141
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Engadiner Straße"
+    },
+    "HBM": {
+        "coordinates": {
+            "latitude": 53.0400471,
+            "longitude": 8.9444754
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Bremen-Mahndorf"
+    },
+    "n1835333967": {
+        "coordinates": {
+            "latitude": 53.057897,
+            "longitude": 8.96315065
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Teneverstraße"
+    },
+    "n2004616389": {
+        "coordinates": {
+            "latitude": 53.0849598,
+            "longitude": 8.7798507
+        },
+        "lines": [
+            "3",
+            "5"
+        ],
+        "name": "Europahafen"
+    },
+    "n2268946268": {
+        "coordinates": {
+            "latitude": 53.081337399999995,
+            "longitude": 8.83208505
+        },
+        "lines": [
+            "1",
+            "4",
+            "N1",
+            "N4"
+        ],
+        "name": "Hollerallee"
+    },
+    "n2287983217": {
+        "coordinates": {
+            "latitude": 53.15360125,
+            "longitude": 8.92215715
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Schoofmoor"
+    },
+    "n2287983252": {
+        "coordinates": {
+            "latitude": 53.143187850000004,
+            "longitude": 8.9088098
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Lilienthal-Mitte"
+    },
+    "n2349258323": {
+        "coordinates": {
+            "latitude": 53.1582997,
+            "longitude": 8.945044450000001
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Lilienthal"
+    },
+    "n2435197750": {
+        "coordinates": {
+            "latitude": 53.0438613,
+            "longitude": 8.950862
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Nußhorn"
+    },
+    "n2435198365": {
+        "coordinates": {
+            "latitude": 53.06670045,
+            "longitude": 8.9620004
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Neuwieder Straße"
+    },
+    "n2435198439": {
+        "coordinates": {
+            "latitude": 53.0611263,
+            "longitude": 8.96384205
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Tenever-Zentrum"
+    },
+    "n2435198445": {
+        "coordinates": {
+            "latitude": 53.04902235,
+            "longitude": 8.9606148
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Weserpark"
+    },
+    "n2573585069": {
+        "coordinates": {
+            "latitude": 53.080753,
+            "longitude": 8.804569
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Am Wall"
+    },
+    "n2573585073": {
+        "coordinates": {
+            "latitude": 53.0798944,
+            "longitude": 8.8104208
+        },
+        "lines": [
+            "4",
+            "6",
+            "8",
+            "N4"
+        ],
+        "name": "Herdentor"
+    },
+    "n2574881185": {
+        "coordinates": {
+            "latitude": 53.07282615,
+            "longitude": 8.79965565
+        },
+        "lines": [
+            "8"
+        ],
+        "name": "Am Neuen Markt"
+    },
+    "n2576185927": {
+        "coordinates": {
+            "latitude": 53.107725200000004,
+            "longitude": 8.852387499999999
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Universität/Zentralbereich"
+    },
+    "n2583933068": {
+        "coordinates": {
+            "latitude": 53.10149676666666,
+            "longitude": 8.880159366666668
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Horner Mühle"
+    },
+    "n2585410459": {
+        "coordinates": {
+            "latitude": 53.08198975,
+            "longitude": 8.854823849999999
+        },
+        "lines": [
+            "1",
+            "N1"
+        ],
+        "name": "Kurfürstenallee"
+    },
+    "n2908997303": {
+        "coordinates": {
+            "latitude": 53.154203800000005,
+            "longitude": 8.927489600000001
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Auf dem Kamp"
+    },
+    "n2908997304": {
+        "coordinates": {
+            "latitude": 53.135359449999996,
+            "longitude": 8.89859775
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Truperdeich"
+    },
+    "n2908997305": {
+        "coordinates": {
+            "latitude": 53.14735565,
+            "longitude": 8.91216535
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Moorhauser Landstraße"
+    },
+    "n2908997306": {
+        "coordinates": {
+            "latitude": 53.150387499999994,
+            "longitude": 8.9171963
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Timkenweg"
+    },
+    "n2908997312": {
+        "coordinates": {
+            "latitude": 53.137950399999994,
+            "longitude": 8.901273799999998
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Trupe"
+    },
+    "n2908997846": {
+        "coordinates": {
+            "latitude": 53.15392635,
+            "longitude": 8.9384277
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Kutscher Behrens"
+    },
+    "n2985887862": {
+        "coordinates": {
+            "latitude": 53.14009405,
+            "longitude": 8.905255499999999
+        },
+        "lines": [
+            "4",
+            "N4"
+        ],
+        "name": "Feldhäuser Straße"
+    },
+    "n4423791640": {
+        "coordinates": {
+            "latitude": 53.0723244,
+            "longitude": 8.7910368
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Hochschule Bremen"
+    },
+    "n9578370392": {
+        "coordinates": {
+            "latitude": 53.12094931428572,
+            "longitude": 8.752731714285714
+        },
+        "lines": [
+            "10",
+            "2",
+            "3",
+            "5",
+            "N10"
+        ],
+        "name": "Gröpelingen"
+    },
+    "n11368658812": {
+        "coordinates": {
+            "latitude": 53.048813233333334,
+            "longitude": 8.742481633333332
+        },
+        "lines": [
+            "1",
+            "8",
+            "N1"
+        ],
+        "name": "Roland-Center"
+    }
+}

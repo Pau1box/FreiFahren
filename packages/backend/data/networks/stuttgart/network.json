@@ -1,0 +1,22 @@
+{
+    "id": "stuttgart",
+    "name": "Stuttgart",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 48.7784,
+        "longitude": 9.18
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 48.645957,
+            "longitude": 8.995726
+        },
+        "northEast": {
+            "latitude": 48.918458,
+            "longitude": 9.364022
+        }
+    }
+}

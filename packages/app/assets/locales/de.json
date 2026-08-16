@@ -44,6 +44,12 @@
       "lines": "Linien"
     }
   },
+  "networks": {
+    "title": "Netz",
+    "betaBadge": "Beta",
+    "betaExplanation": "{{network}} ist neu dabei. Hier siehst du nur echte Meldungen und noch keine vorhergesagten, deshalb ist die Karte leerer als gewohnt.",
+    "alsoServes": "Deckt außerdem ab: {{cities}}"
+  },
   "settings": {
     "title": "Einstellungen",
     "language": "Sprache",
@@ -56,7 +62,7 @@
     "bullet1": {
       "title": "1. Angezeigte Daten können inakkurat sein",
       "text1": "Aktuell kommen sämtliche Meldungen aus der Community. Auf diesen Daten basiert auch das Risikomodell. Wir können weder die Vollständigkeit noch die Korrektheit der angezeigten Daten gewährleisten.",
-      "text2": "In naher Zukunft werden wir auch offizielle BVG-APIs mit einbeziehen, um Routenplanung basierend auf offiziellen und verlässlichen Daten zu erleichtern."
+      "text2": "In naher Zukunft werden wir auch offizielle APIs der Verkehrsbetriebe mit einbeziehen, um Routenplanung basierend auf offiziellen und verlässlichen Daten zu erleichtern."
     },
     "bullet2": {
       "title": "2. Deine Privatssphäre ist uns extrem wichtig",

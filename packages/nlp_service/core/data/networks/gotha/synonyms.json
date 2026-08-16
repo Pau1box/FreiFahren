@@ -1,0 +1,105 @@
+{
+    "18.-März-Straße": [
+        "18.-März-",
+        "18.-März-str.",
+        "18.-März-strasse"
+    ],
+    "Albrechtstraße": [
+        "Albrecht",
+        "Albrechtstr.",
+        "Albrechtstrasse"
+    ],
+    "Bad Tabarz": [
+        "Bad"
+    ],
+    "Bahnhofstraße": [
+        "Bahnhof",
+        "Bahnhofstr.",
+        "Bahnhofstrasse"
+    ],
+    "Bertha-von-Suttner-Platz": [
+        "Bertha-von-Suttner-",
+        "Bertha-von-Suttner-plz"
+    ],
+    "Boxberg": [],
+    "Ernststraße": [
+        "Ernst",
+        "Ernststr.",
+        "Ernststrasse"
+    ],
+    "Friedrichroda (TWSB)": [
+        "Friedrichroda"
+    ],
+    "Gartenstraße": [
+        "Garten",
+        "Gartenstr.",
+        "Gartenstrasse"
+    ],
+    "Goethestraße": [
+        "Goethe",
+        "Goethestr.",
+        "Goethestrasse"
+    ],
+    "Hauptbahnhof": [],
+    "Hersdorfplatz": [
+        "Hersdorf",
+        "Hersdorfplz"
+    ],
+    "Huttenstraße": [
+        "Hutten",
+        "Huttenstr.",
+        "Huttenstrasse"
+    ],
+    "Inselsbergstraße": [
+        "Inselsberg",
+        "Inselsbergstr.",
+        "Inselsbergstrasse"
+    ],
+    "Krankenhaus": [],
+    "Leina": [],
+    "Leinefelder Straße": [
+        "Leinefelder",
+        "Leinefelder Str.",
+        "Leinefelder Strasse"
+    ],
+    "Marienglashöhle": [],
+    "Myconiusplatz": [
+        "Myconius",
+        "Myconiusplz"
+    ],
+    "Ohrdrufer Straße": [
+        "Ohrdrufer",
+        "Ohrdrufer Str.",
+        "Ohrdrufer Strasse"
+    ],
+    "Orangerie": [],
+    "Ostbahnhof": [],
+    "Reinhardsbrunn Bahnhof": [
+        "Reinhardsbrunn"
+    ],
+    "Reinhardsbrunner Teiche": [
+        "Reinhardsbrunner"
+    ],
+    "Reuterstraße": [
+        "Reuter",
+        "Reuterstr.",
+        "Reuterstrasse"
+    ],
+    "Schöne Aussicht": [
+        "Schöne"
+    ],
+    "Sundhausen": [],
+    "Wagenhalle": [],
+    "Waltershausen Bahnhof": [
+        "Waltershausen"
+    ],
+    "Waltershausen, Gleisdreieck": [
+        "Waltershausen,"
+    ],
+    "Waltershausen, Schnepfenthal": [
+        "Waltershausen,"
+    ],
+    "Waltershausen, Wahlwinkel": [
+        "Waltershausen,"
+    ]
+}

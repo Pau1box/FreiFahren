@@ -1,0 +1,392 @@
+{
+    "n270573866": {
+        "coordinates": {
+            "latitude": 53.63347914285714,
+            "longitude": 11.402490442857143
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Platz der Freiheit"
+    },
+    "n277957310": {
+        "coordinates": {
+            "latitude": 53.628478333333334,
+            "longitude": 11.410875933333335
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Marienplatz"
+    },
+    "n286828941": {
+        "coordinates": {
+            "latitude": 53.645320025000004,
+            "longitude": 11.3818786
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Büdnerstraße"
+    },
+    "n286828958": {
+        "coordinates": {
+            "latitude": 53.647245999999996,
+            "longitude": 11.37681015
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Kieler Straße"
+    },
+    "n286846508": {
+        "coordinates": {
+            "latitude": 53.6293774,
+            "longitude": 11.4037379
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Wittenburger Straße"
+    },
+    "n292025843": {
+        "coordinates": {
+            "latitude": 53.600116675,
+            "longitude": 11.42664205
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Ludwigsluster Chaussee"
+    },
+    "n292025851": {
+        "coordinates": {
+            "latitude": 53.5954222,
+            "longitude": 11.4248748
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Haselholz"
+    },
+    "n292025873": {
+        "coordinates": {
+            "latitude": 53.583352,
+            "longitude": 11.400233833333333
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Wüstmark"
+    },
+    "n292025877": {
+        "coordinates": {
+            "latitude": 53.5755208,
+            "longitude": 11.3972393
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Heizkraftwerk"
+    },
+    "n292367706": {
+        "coordinates": {
+            "latitude": 53.60633795,
+            "longitude": 11.424699275
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Gartenstadt/M*Halle"
+    },
+    "n292367711": {
+        "coordinates": {
+            "latitude": 53.6136795,
+            "longitude": 11.41602245
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Ostorf"
+    },
+    "n292367732": {
+        "coordinates": {
+            "latitude": 53.63859105,
+            "longitude": 11.39482
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Robert-Beltz-Straße"
+    },
+    "n292367740": {
+        "coordinates": {
+            "latitude": 53.64146965,
+            "longitude": 11.3900565
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Friesensportplatz"
+    },
+    "n292367787": {
+        "coordinates": {
+            "latitude": 53.593903775,
+            "longitude": 11.4165391
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Waldfriedhof"
+    },
+    "n292367806": {
+        "coordinates": {
+            "latitude": 53.57074805,
+            "longitude": 11.3883243
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Rudolf-Diesel-Straße"
+    },
+    "n292367812": {
+        "coordinates": {
+            "latitude": 53.56538195,
+            "longitude": 11.38282475
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Neu Pampow"
+    },
+    "n292367818": {
+        "coordinates": {
+            "latitude": 53.5903007,
+            "longitude": 11.4041508
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Krebsförden"
+    },
+    "n292541010": {
+        "coordinates": {
+            "latitude": 53.652335475,
+            "longitude": 11.405632125
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Kliniken"
+    },
+    "n293280809": {
+        "coordinates": {
+            "latitude": 53.6033334,
+            "longitude": 11.426549266666667
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Stauffenbergstraße"
+    },
+    "n293280812": {
+        "coordinates": {
+            "latitude": 53.6033263,
+            "longitude": 11.43345245
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Dreescher Markt"
+    },
+    "n293280814": {
+        "coordinates": {
+            "latitude": 53.60199605,
+            "longitude": 11.44141305
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Zoo"
+    },
+    "n293280836": {
+        "coordinates": {
+            "latitude": 53.599612050000005,
+            "longitude": 11.44867065
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Berliner Platz"
+    },
+    "n293765977": {
+        "coordinates": {
+            "latitude": 53.5870881,
+            "longitude": 11.4709607
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Hegelstraße"
+    },
+    "n293765980": {
+        "coordinates": {
+            "latitude": 53.59549915,
+            "longitude": 11.4623036
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Leibnizstraße"
+    },
+    "n293765983": {
+        "coordinates": {
+            "latitude": 53.5972445,
+            "longitude": 11.456203899999998
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Neu Zippendorf"
+    },
+    "n293765987": {
+        "coordinates": {
+            "latitude": 53.5924963,
+            "longitude": 11.46734935
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Keplerstraße"
+    },
+    "n302046665": {
+        "coordinates": {
+            "latitude": 53.64887415,
+            "longitude": 11.3625128
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Lankow-Siedlung"
+    },
+    "n302046671": {
+        "coordinates": {
+            "latitude": 53.6507077,
+            "longitude": 11.3665993
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Rahlstedter Straße"
+    },
+    "n302046673": {
+        "coordinates": {
+            "latitude": 53.65041185,
+            "longitude": 11.37133915
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Eutiner Straße"
+    },
+    "n1156347045": {
+        "coordinates": {
+            "latitude": 53.6410619,
+            "longitude": 11.4087931
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Heinrich-Seidel-Straße"
+    },
+    "n5300163807": {
+        "coordinates": {
+            "latitude": 53.6483018,
+            "longitude": 11.4067376
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Kinderzentrum"
+    },
+    "n5300163810": {
+        "coordinates": {
+            "latitude": 53.63411115,
+            "longitude": 11.4091645
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n5300163814": {
+        "coordinates": {
+            "latitude": 53.6250483,
+            "longitude": 11.409366949999999
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Schlossblick / IHK"
+    },
+    "n5300163816": {
+        "coordinates": {
+            "latitude": 53.62150965,
+            "longitude": 11.408919699999998
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Platz der Jugend"
+    },
+    "n5300164608": {
+        "coordinates": {
+            "latitude": 53.645199149999996,
+            "longitude": 11.40799595
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Lewenberg"
+    }
+}

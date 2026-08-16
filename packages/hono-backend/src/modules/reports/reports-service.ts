@@ -5,8 +5,9 @@ import { z } from 'zod'
 import { AppError } from '../../common/errors'
 import { lookupStation } from '../../common/utils'
 import { DbConnection, InsertReport, reports } from '../../db/'
+import type { Network, NetworkId } from '../networks/types'
 import type { TransitNetworkDataService } from '../transit/transit-network-data-service'
-import type { StationId } from '../transit/types'
+import type { Lines, StationId, Stations } from '../transit/types'
 
 import {
     assignLineIfSingleOption,
@@ -28,6 +29,28 @@ type LuxonWeekday = 1 | 2 | 3 | 4 | 5 | 6 | 7
 const isWeekend = (weekday: LuxonWeekday): boolean => weekday === 6 || weekday === 7
 
 const clamp = (value: number, min: number, max: number): number => Math.min(max, Math.max(min, value))
+
+// Shared by the read and the write path so that both answer a cross network id the same way.
+const NETWORK_SCOPE_HINT =
+    'Every station, direction and line has to belong to the reported network. ' +
+    'Check the `network` query parameter against GET /v0/networks.'
+
+/**
+ * Reads an instant as a wall clock time in the network's city.
+ *
+ * Everything downstream reasons about the time of day (the threshold curve models a day in the
+ * city, and `guessStation` buckets history by hour), so the server's own timezone must never enter
+ * the calculation. `networks.timezone` exists for exactly this.
+ *
+ * A malformed zone would turn the DateTime invalid and poison every hour downstream with NaN, so we
+ * fall back to UTC rather than failing the request: showing the curve an hour off is a smaller
+ * failure than serving no reports at all.
+ */
+const inNetworkTime = (instant: DateTime, network: Network): DateTime => {
+    const localTime = instant.setZone(network.timezone)
+
+    return localTime.isValid ? localTime : instant.toUTC()
+}
 
 const calculateBasePredictedReportsThreshold = (currentTime: DateTime): number => {
     const minutesPastMidnight = currentTime.hour * 60 + currentTime.minute
@@ -70,6 +93,9 @@ type TelegramNotificationPayload = {
     direction: StationId | null
     message: string | null
     stationId: StationId
+    // Picks the Telegram group on the bot's side. Without it every report is announced in the
+    // group of the bot's default network, so a Hamburg report would land in the Berlin group.
+    network: NetworkId
 }
 
 type ReportSummary = Pick<typeof reports.$inferSelect, 'timestamp' | 'stationId' | 'directionId' | 'lineId'> & {
@@ -81,6 +107,28 @@ export class ReportsService {
         private db: DbConnection,
         private transitNetworkDataService: TransitNetworkDataService
     ) {}
+
+    /**
+     * Rejects a station id the requested network does not contain, before any report is read for it.
+     *
+     * The read path used to filter in SQL alone, so a station of another network simply matched
+     * nothing and the client got `200 []`. That is indistinguishable from "no inspectors reported
+     * here" and hides exactly the mistake it should surface, a client asking with the wrong network
+     * selected. The write path already answers such a request with a 422 that names the field, so
+     * the read path uses the same shape.
+     */
+    async assertStationExistsInNetwork(stationId: StationId, networkId: NetworkId): Promise<void> {
+        const stations = await this.transitNetworkDataService.getStations(networkId)
+
+        if (Object.prototype.hasOwnProperty.call(stations, stationId)) return
+
+        throw new AppError({
+            message: `Unknown stationId for network '${networkId}'`,
+            statusCode: 422,
+            internalCode: 'VALIDATION_FAILED',
+            description: NETWORK_SCOPE_HINT,
+        })
+    }
 
     async verifyRequest(headers: Record<string, string>): Promise<void> {
         const reportPassword = process.env.REPORT_PASSWORD
@@ -95,7 +143,6 @@ export class ReportsService {
         }
 
         const securityServiceUrl = process.env.SECURITY_MICROSERVICE_URL
-        console.log('securityServiceUrl', securityServiceUrl)
         if (securityServiceUrl === undefined || securityServiceUrl === '') {
             throw new Error('security service configuration error')
         }
@@ -125,11 +172,13 @@ export class ReportsService {
     }
 
     async getReports({
+        network,
         from,
         to,
         stationId,
         currentTime,
     }: {
+        network: Network
         from: DateTime
         to: DateTime
         stationId?: StationId
@@ -145,6 +194,7 @@ export class ReportsService {
             .from(reports)
             .where(
                 and(
+                    eq(reports.networkId, network.id),
                     gte(reports.timestamp, from.toJSDate()),
                     lte(reports.timestamp, to.toJSDate()),
                     stationId !== undefined ? eq(reports.stationId, stationId) : undefined
@@ -153,32 +203,69 @@ export class ReportsService {
 
         const result: ReportSummary[] = dbResults.map((r) => ({ ...r, isPredicted: false }))
 
-        // Predict reports if we don't have enough, so that users always see at least some data
-        const predictedReportsThreshold = this.calculatePredictedReportsThreshold(currentTime)
+        if (!this.mayPredictFor(network)) return result
+
+        /* Predict reports if we don't have enough, so that users always see at least some data.
+
+           The threshold curve models a day in the city (ramp up from 07:00, decline from 18:00), so
+           it is read off the network's local clock rather than the server's. */
+        const predictedReportsThreshold = this.calculatePredictedReportsThreshold(inNetworkTime(currentTime, network))
         if (result.length < predictedReportsThreshold) {
             const numberOfReportsToFetch = predictedReportsThreshold - result.length
             const reportedStationIds = new Set(result.map((r) => r.stationId as StationId))
-            const allowedStationIds = await this.resolveAllowedStationIds(stationId, reportedStationIds)
-            const historicReports = await this.predictReports(numberOfReportsToFetch, from, to, allowedStationIds)
+            const allowedStationIds = await this.resolveAllowedStationIds(network.id, stationId, reportedStationIds)
+            const historicReports = await this.predictReports(
+                network,
+                numberOfReportsToFetch,
+                from,
+                to,
+                allowedStationIds
+            )
             result.push(...historicReports)
         }
 
         return result
     }
 
-    // Determines which stations the prediction algorithm may emit reports for.
-    // When the query is scoped to a specific station, predictions are restricted to that station.
-    // When the query is unscoped, any station that hasn't already reported is a candidate.
+    /**
+     * Whether a network may show predicted reports at all.
+     *
+     * Predictions exist so that an established network never shows an empty map, on the assumption
+     * that history says something about the present. A network that has just been added has no such
+     * history, so predicting from it would not fill a gap, it would invent inspectors that were
+     * never reported. A newcomer opening the app in a new city is exactly the person who must not be
+     * misled.
+     *
+     * We key this off the network's declared status rather than a row count, because "is there
+     * enough coverage here to reason from" is an operational judgement, not something a magic
+     * number in the code should decide. A network is added as `beta`, shows only real reports, and
+     * is promoted to `active` once its coverage is real.
+     */
+    private mayPredictFor(network: Network): boolean {
+        return network.status === 'active'
+    }
+
+    /* Determines which stations the prediction algorithm may emit reports for.
+       Candidates never leave the requested network, otherwise a city with little traffic would be
+       filled up with invented reports from a busier one.
+       When the query is scoped to a specific station, predictions are restricted to that station.
+       When the query is unscoped, any station of the network that hasn't already reported is a
+       candidate. */
     private async resolveAllowedStationIds(
+        networkId: NetworkId,
         stationId: StationId | undefined,
         reportedStationIds: ReadonlySet<StationId>
     ): Promise<ReadonlySet<StationId>> {
+        const networkStations = await this.transitNetworkDataService.getStations(networkId)
+
         if (stationId !== undefined) {
-            return reportedStationIds.has(stationId) ? new Set() : new Set([stationId])
+            const isInNetwork = Object.prototype.hasOwnProperty.call(networkStations, stationId)
+            if (!isInNetwork || reportedStationIds.has(stationId)) return new Set()
+
+            return new Set([stationId])
         }
 
-        const allStations = await this.transitNetworkDataService.getStations()
-        return new Set((Object.keys(allStations) as StationId[]).filter((id) => !reportedStationIds.has(id)))
+        return new Set((Object.keys(networkStations) as StationId[]).filter((id) => !reportedStationIds.has(id)))
     }
 
     // Returns the integer threshold that controls how many predicted/historic reports we should show.
@@ -191,6 +278,7 @@ export class ReportsService {
     }
 
     private async predictReports(
+        network: Network,
         numberOfReportsToFetch: number,
         from: DateTime,
         to: DateTime,
@@ -220,6 +308,7 @@ export class ReportsService {
         const candidateRows = await this.db
             .select({ stationId: reports.stationId, timestamp: reports.timestamp })
             .from(reports)
+            .where(eq(reports.networkId, network.id))
             .orderBy(desc(reports.timestamp))
             .limit(1000)
 
@@ -241,10 +330,12 @@ export class ReportsService {
         for (const window of windows) {
             for (let attempts = 0; attempts < triesPerWindow && results.length < maxUniqueCount; attempts++) {
                 const timestamp = randomTimestampInWindow(window.start, window.end)
-                const guessTime = DateTime.fromJSDate(timestamp, { zone: 'utc' })
+                const guessTime = inNetworkTime(DateTime.fromJSDate(timestamp), network)
 
                 const guessInput: { stationId?: StationId } = {}
-                const guessed = guessStation(candidateRows)(guessTime.hour, guessTime.weekday)(guessInput)
+                const guessed = guessStation(candidateRows, guessTime.zone.name)(guessTime.hour, guessTime.weekday)(
+                    guessInput
+                )
 
                 const stationId = guessed.stationId
                 if (stationId === undefined) continue
@@ -318,7 +409,7 @@ export class ReportsService {
 
     // This is so stupid... we should really rewrite the Bot so that the endpoint is more sensible
     private async buildTelegramNotificationPayload(reportData: InsertReport): Promise<TelegramNotificationPayload> {
-        const stations = await this.transitNetworkDataService.getStations()
+        const stations = await this.transitNetworkDataService.getStations(reportData.networkId)
 
         const station = lookupStation(stations, reportData.stationId)
         const direction = lookupStation(stations, reportData.directionId)
@@ -329,14 +420,56 @@ export class ReportsService {
             direction: direction?.name ?? reportData.directionId ?? null,
             message: null,
             stationId: reportData.stationId,
+            network: reportData.networkId,
         }
     }
 
-    async postProcessReport(reportData: RawReport): Promise<InsertReport> {
-        const stations = await this.transitNetworkDataService.getStations()
-        const lines = await this.transitNetworkDataService.getLines()
+    /**
+     * Rejects a report that names something the requested network does not contain.
+     *
+     * Before multi network support an unknown id fell through to the insert and surfaced as a 500
+     * from a foreign key violation. That is now the common case rather than a typo: a client with
+     * the wrong network selected sends perfectly real ids that simply belong elsewhere. Answering
+     * with a 422 that names the offending fields lets the client correct its network instead of
+     * treating a user mistake as a server fault.
+     */
+    private assertReferencesExistInNetwork(reportData: RawReport, stations: Stations, lines: Lines): void {
+        const has = (record: object, key: string | null | undefined): boolean =>
+            key !== null && key !== undefined && Object.prototype.hasOwnProperty.call(record, key)
 
-        const now = DateTime.utc()
+        const unknownFields = [
+            reportData.stationId !== undefined && !has(stations, reportData.stationId) ? 'stationId' : null,
+            reportData.directionId !== null &&
+            reportData.directionId !== undefined &&
+            !has(stations, reportData.directionId)
+                ? 'directionId'
+                : null,
+            reportData.lineId !== null && reportData.lineId !== undefined && !has(lines, reportData.lineId)
+                ? 'lineId'
+                : null,
+        ].filter((field) => field !== null)
+
+        if (unknownFields.length === 0) return
+
+        throw new AppError({
+            message: `Unknown ${unknownFields.join(', ')} for network '${reportData.networkId}'`,
+            statusCode: 422,
+            internalCode: 'VALIDATION_FAILED',
+            description: NETWORK_SCOPE_HINT,
+        })
+    }
+
+    /* The network is passed alongside the report rather than looked up from `reportData.networkId`,
+       because the caller has already resolved and validated it. It carries the timezone the station
+       guess needs. */
+    async postProcessReport(reportData: RawReport, network: Network): Promise<InsertReport> {
+        const stations = await this.transitNetworkDataService.getStations(reportData.networkId)
+        const lines = await this.transitNetworkDataService.getLines(reportData.networkId)
+
+        this.assertReferencesExistInNetwork(reportData, stations, lines)
+
+        // Guessing from history compares times of day, so it runs on the network's clock.
+        const now = inNetworkTime(DateTime.utc(), network)
 
         const processed = await pipeAsync(
             reportData,
@@ -361,11 +494,13 @@ export class ReportsService {
                 const candidateRows = await this.db
                     .select({ stationId: reports.stationId, timestamp: reports.timestamp })
                     .from(reports)
-                    .where(eq(reports.lineId, currentReport.lineId))
+                    /* Scoping by network matters as much as scoping by line: without it, a report
+                       on Hamburg's S1 would be guessed onto whichever Berlin station is busiest. */
+                    .where(and(eq(reports.networkId, reportData.networkId), eq(reports.lineId, currentReport.lineId)))
                     .orderBy(desc(reports.timestamp))
                     .limit(1000)
 
-                return guessStation(candidateRows)(now.hour, now.weekday)(currentReport)
+                return guessStation(candidateRows, now.zone.name)(now.hour, now.weekday)(currentReport)
             },
             clearStationReferenceIfNotOnLine(stations, 'stationId'),
             clearStationReferenceIfNotOnLine(stations, 'directionId')
@@ -376,7 +511,10 @@ export class ReportsService {
                 message: 'Could not infer station from the provided information',
                 statusCode: 422,
                 internalCode: 'VALIDATION_FAILED',
-                description: `Input data: ${JSON.stringify(reportData)} Current report: ${JSON.stringify(processed)}`,
+                description: 'Provide a stationId, or a lineId the station can be inferred from.',
+                /* The payload and the pipeline's output are what we need to debug a failed
+                   inference, but they are ours, not the caller's. They go to the log only. */
+                internalDetails: { input: reportData, processed },
             })
         }
 

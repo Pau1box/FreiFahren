@@ -1,0 +1,466 @@
+{
+    "n27209353": {
+        "coordinates": {
+            "latitude": 51.75536015,
+            "longitude": 14.3282206
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Cottbus, Stadtmuseum"
+    },
+    "n307446519": {
+        "coordinates": {
+            "latitude": 51.75801322857143,
+            "longitude": 14.3306884
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Cottbus, Stadtpromenade"
+    },
+    "n313342203": {
+        "coordinates": {
+            "latitude": 51.72127814,
+            "longitude": 14.3468981
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Madlow Schleife"
+    },
+    "n313343136": {
+        "coordinates": {
+            "latitude": 51.72526810000001,
+            "longitude": 14.34310032
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Priorstraße"
+    },
+    "n822245615": {
+        "coordinates": {
+            "latitude": 51.7404521,
+            "longitude": 14.334174050000001
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Cottbus, Sportzentrum"
+    },
+    "n1324775128": {
+        "coordinates": {
+            "latitude": 51.74754045,
+            "longitude": 14.30727385
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Jessener Straße"
+    },
+    "n1325054614": {
+        "coordinates": {
+            "latitude": 51.748928660000004,
+            "longitude": 14.33222858
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Cottbus, Weinbergstraße"
+    },
+    "n1325442897": {
+        "coordinates": {
+            "latitude": 51.762306,
+            "longitude": 14.339686766666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Cottbus, Goethestraße"
+    },
+    "n1325492870": {
+        "coordinates": {
+            "latitude": 51.76147985,
+            "longitude": 14.330371333333334
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Stadthalle/Post"
+    },
+    "n1325707453": {
+        "coordinates": {
+            "latitude": 51.7537236,
+            "longitude": 14.333350699999999
+        },
+        "lines": [
+            "1",
+            "3",
+            "4"
+        ],
+        "name": "Cottbus, Marienstraße/Glad House"
+    },
+    "n1325796467": {
+        "coordinates": {
+            "latitude": 51.7409708,
+            "longitude": 14.3244565
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hufelandstraße"
+    },
+    "n1325885887": {
+        "coordinates": {
+            "latitude": 51.721188999999995,
+            "longitude": 14.326084900000001
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Sachsendorf"
+    },
+    "n1328047476": {
+        "coordinates": {
+            "latitude": 51.76761533333333,
+            "longitude": 14.334575833333332
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Cottbus, Bonnaskenplatz"
+    },
+    "n1328047478": {
+        "coordinates": {
+            "latitude": 51.78081105,
+            "longitude": 14.3458124
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Neue Straße"
+    },
+    "n1328047516": {
+        "coordinates": {
+            "latitude": 51.77501025,
+            "longitude": 14.34611765
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Gewerbegebiet TKC"
+    },
+    "n1328062787": {
+        "coordinates": {
+            "latitude": 51.7293389,
+            "longitude": 14.34070918
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Cottbus, Spreestraße"
+    },
+    "n1337496052": {
+        "coordinates": {
+            "latitude": 51.748169975,
+            "longitude": 14.31724995
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Friedrich-List-Straße"
+    },
+    "n1337496056": {
+        "coordinates": {
+            "latitude": 51.747488775,
+            "longitude": 14.312685075000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Vetschauer Straße/Leipziger Straße"
+    },
+    "n1405085761": {
+        "coordinates": {
+            "latitude": 51.73193002000001,
+            "longitude": 14.339207239999999
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Cottbus, Ringstraße"
+    },
+    "n1405085831": {
+        "coordinates": {
+            "latitude": 51.7371236,
+            "longitude": 14.3360722
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Cottbus, Südfriedhof"
+    },
+    "n1412169158": {
+        "coordinates": {
+            "latitude": 51.785625575,
+            "longitude": 14.343923725
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Neu Schmellwitz Zuschka"
+    },
+    "n1419252695": {
+        "coordinates": {
+            "latitude": 51.77101064,
+            "longitude": 14.335013040000002
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Cottbus, Beuchstraße"
+    },
+    "n1419252728": {
+        "coordinates": {
+            "latitude": 51.77392136666666,
+            "longitude": 14.335178766666667
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Nordfriedhof"
+    },
+    "n1419252732": {
+        "coordinates": {
+            "latitude": 51.771440199999994,
+            "longitude": 14.341265759999999
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Nordring/Am TKC"
+    },
+    "n1420812769": {
+        "coordinates": {
+            "latitude": 51.75522316666667,
+            "longitude": 14.304969933333332
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Ströbitz"
+    },
+    "n1420905579": {
+        "coordinates": {
+            "latitude": 51.75883495,
+            "longitude": 14.31483135
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Waisenstraße"
+    },
+    "n1424284083": {
+        "coordinates": {
+            "latitude": 51.7877053,
+            "longitude": 14.3433766
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Neu Schmellwitz"
+    },
+    "n1424311603": {
+        "coordinates": {
+            "latitude": 51.78253113333333,
+            "longitude": 14.3364756
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Schmellwitz Anger"
+    },
+    "n1425440997": {
+        "coordinates": {
+            "latitude": 51.7652109,
+            "longitude": 14.332757325
+        },
+        "lines": [
+            "1",
+            "4"
+        ],
+        "name": "Cottbus, Zimmerstraße"
+    },
+    "n1432307326": {
+        "coordinates": {
+            "latitude": 51.76264397999999,
+            "longitude": 14.34541542
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Am Doll"
+    },
+    "n1436323698": {
+        "coordinates": {
+            "latitude": 51.76084866666667,
+            "longitude": 14.3359321
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Cottbus, Altmarkt"
+    },
+    "n1439759933": {
+        "coordinates": {
+            "latitude": 51.759566799999995,
+            "longitude": 14.351026966666666
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Hermann-Hammerschmidt-Straße"
+    },
+    "n1439760169": {
+        "coordinates": {
+            "latitude": 51.75652505,
+            "longitude": 14.35336485
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Sandow"
+    },
+    "n1616681940": {
+        "coordinates": {
+            "latitude": 51.74388515,
+            "longitude": 14.3265675
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Thiemstraße/Klinikum"
+    },
+    "n1629123682": {
+        "coordinates": {
+            "latitude": 51.727951675,
+            "longitude": 14.326530224999999
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Gelsenkirchener Platz"
+    },
+    "n1629123683": {
+        "coordinates": {
+            "latitude": 51.7364629,
+            "longitude": 14.32441695
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Cottbus, Saarbrücker Straße"
+    },
+    "n1629123685": {
+        "coordinates": {
+            "latitude": 51.72422950000001,
+            "longitude": 14.32597225
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Schwarzheider Straße"
+    },
+    "n1629123686": {
+        "coordinates": {
+            "latitude": 51.731108,
+            "longitude": 14.3276289
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Thierbacher Straße"
+    },
+    "n1632037434": {
+        "coordinates": {
+            "latitude": 51.74484553333334,
+            "longitude": 14.331437266666667
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Cottbus, Ottilienstraße"
+    },
+    "n1648535329": {
+        "coordinates": {
+            "latitude": 51.7569833,
+            "longitude": 14.30989935
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Ewald-Müller-Straße"
+    },
+    "n1648541334": {
+        "coordinates": {
+            "latitude": 51.7603846,
+            "longitude": 14.31968005
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Ströbitzer Weg"
+    },
+    "n1648547095": {
+        "coordinates": {
+            "latitude": 51.761240166666674,
+            "longitude": 14.3250184
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Schillerstraße"
+    },
+    "n3910321052": {
+        "coordinates": {
+            "latitude": 51.7888514,
+            "longitude": 14.3316811
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Betriebshof Schmellwitz"
+    },
+    "n4097202154": {
+        "coordinates": {
+            "latitude": 51.77838265,
+            "longitude": 14.335377
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Am Nordrand"
+    },
+    "n6904008246": {
+        "coordinates": {
+            "latitude": 51.750106790909086,
+            "longitude": 14.326996336363637
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Cottbus, Hauptbahnhof"
+    }
+}

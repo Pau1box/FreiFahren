@@ -23,6 +23,13 @@ type Cache struct {
 // GlobalCacheManager is the singleton instance of CacheManager used across the application
 var GlobalCacheManager *CacheManager
 
+// NetworkKey scopes a cache name to one network. Without it a network would be
+// served the cached response, and the ETag, of whichever network filled the
+// cache first.
+func NetworkKey(name, networkID string) string {
+	return name + ":" + networkID
+}
+
 // CacheManager provides a centralized way to manage multiple named caches.
 // It ensures thread-safe access to cache instances and provides a simple API
 // for registering and retrieving caches.

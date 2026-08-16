@@ -1,0 +1,27 @@
+{
+    "1": {
+        "color": "#dc143c",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#dc143c",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3": {
+        "color": "#dc143c",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "4": {
+        "color": "#dc143c",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "5": {
+        "color": "#dc143c",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

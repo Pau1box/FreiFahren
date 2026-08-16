@@ -1,9 +1,12 @@
-import React, { FC, FormEvent, useCallback, useRef, useState } from 'react';
+import React, { FC, FormEvent, useCallback, useEffect, useRef, useState } from 'react';
 import './MiniAppReportForm.css';
-import { useStations, useLines, useSubmitReport } from '../../api/queries';
+import { useStations, useLines, useLineMetadata, useSubmitReport } from '../../api/queries';
+import { useNetworkId } from '../../network/NetworkContext';
 import { useStationSearch } from '../../hooks/useStationSearch';
-import { Report } from '../../utils/types';
-import { getLineColor } from '../../utils/getLineColor';
+import { useAvailableModes, useLineColor, useLineMode } from '../../hooks/useLineColors';
+import { LineMode, Report, StationProperty } from '../../utils/types';
+import { isRingLine, MODE_LABELS } from '../../utils/lines';
+import { NetworkSelector } from '../NetworkSelector/NetworkSelector';
 import { ReportSummaryModal } from '../ReportSummaryModal/ReportSummaryModal';
 
 interface Station {
@@ -13,9 +16,6 @@ interface Station {
         latitude: number;
         longitude: number;
     }
-}
-
-interface ReportFormProps {
 }
 
 const SelectField: FC<{
@@ -57,18 +57,31 @@ const SelectField: FC<{
 };
 
 const Line: FC<{ line: string }> = ({ line }) => {
+    const lineColor = useLineColor();
+
     return (
-        <div className="line" style={{ backgroundColor: getLineColor(line) }}>
+        <div className="line" style={{ backgroundColor: lineColor(line) }}>
             {line}
         </div>
     );
 };
 
-const ReportForm: FC<ReportFormProps> = () => {
+const ModeChip: FC<{ mode: LineMode; color: string }> = ({ mode, color }) => {
+    return (
+        <span className="line" style={{ backgroundColor: color }}>
+            <strong>{MODE_LABELS[mode]}</strong>
+        </span>
+    );
+};
+
+const ReportForm: FC = () => {
     const { data: stations, isLoading: isLoadingStations } = useStations();
     const { data: lines, isLoading: isLoadingLines } = useLines();
-    
-    const [currentEntity, setCurrentEntity] = useState<string | null>(null);
+    const { data: lineMetadata } = useLineMetadata();
+    const availableModes = useAvailableModes();
+    const lineMode = useLineMode();
+
+    const [currentMode, setCurrentMode] = useState<LineMode | null>(null);
     const [currentLine, setCurrentLine] = useState<string | null>(null);
     const [currentStation, setCurrentStation] = useState<string | null>(null);
     const [currentDirection, setCurrentDirection] = useState<string | null>(null);
@@ -89,19 +102,21 @@ const ReportForm: FC<ReportFormProps> = () => {
 
     const submitReport = useSubmitReport();
 
-    const possibleLines = React.useMemo(() => {
-        let filteredLines: [string, string[]][] = [];
+    // Line and station ids only mean something inside their network, so a switch discards the
+    // selection instead of submitting one city's station under another city's name.
+    const networkId = useNetworkId();
 
-        if (currentEntity === null) {
-            filteredLines = lines ?? [];
-        } else {
-            filteredLines = (lines ?? []).filter(([line]) => {
-                if (currentEntity === 'M') {
-                    return line.startsWith('M') || /^\d/.test(line);
-                }
-                return line.startsWith(currentEntity);
-            });
-        }
+    useEffect(() => {
+        setCurrentMode(null);
+        setCurrentLine(null);
+        setCurrentStation(null);
+        setCurrentDirection(null);
+        setStationSearch('');
+    }, [networkId, setStationSearch]);
+
+    const possibleLines = React.useMemo(() => {
+        let filteredLines: [string, string[]][] =
+            currentMode === null ? (lines ?? []) : (lines ?? []).filter(([line]) => lineMode(line) === currentMode);
 
         if (currentStation !== null && stations) {
             const stationData = stations[currentStation];
@@ -111,7 +126,7 @@ const ReportForm: FC<ReportFormProps> = () => {
         }
 
         return filteredLines;
-    }, [lines, currentEntity, currentStation, stations]);
+    }, [lines, currentMode, lineMode, currentStation, stations]);
 
     const possibleStations = React.useMemo(() => {
         if (!stations) return {};
@@ -123,19 +138,16 @@ const ReportForm: FC<ReportFormProps> = () => {
         } else if (currentLine !== null) {
             const stationsForLine = lines?.find(([key]) => key === currentLine)?.[1] ?? [];
             filteredStations = Object.fromEntries(
-                stationsForLine
-                    .map((stationKey) => [stationKey, stations[stationKey]])
-                    .filter(([, stationData]) => stationData !== undefined)
+                stationsForLine.flatMap((stationKey): [string, StationProperty][] => {
+                    const stationData = stations[stationKey];
+
+                    return stationData === undefined ? [] : [[stationKey, stationData]];
+                })
             );
-        } else if (currentEntity !== null) {
+        } else if (currentMode !== null) {
             filteredStations = Object.fromEntries(
-                Object.entries(stations).filter(([, stationData]) => 
-                    stationData.lines.some(line => {
-                        if (currentEntity === 'M') {
-                            return line.startsWith('M') || /^\d/.test(line);
-                        }
-                        return line.startsWith(currentEntity);
-                    })
+                Object.entries(stations).filter(([, stationData]) =>
+                    stationData.lines.some((line) => lineMode(line) === currentMode)
                 )
             );
         }
@@ -150,17 +162,18 @@ const ReportForm: FC<ReportFormProps> = () => {
         }
 
         return filteredStations;
-    }, [stations, currentEntity, currentLine, currentStation, stationSearch, fuzzyFilteredStations, lines]);
+    }, [stations, currentMode, lineMode, currentLine, currentStation, stationSearch, fuzzyFilteredStations, lines]);
 
     const getDirections = useCallback((): Station[] => {
         if (!currentLine || !currentStation || !stations || !lines) return [];
-        
-        if (currentLine === 'S41' || currentLine === 'S42') return [];
-        
+
         const lineStations = lines.find(([line]) => line === currentLine)?.[1] || [];
-        
+
         if (lineStations.length < 2) return [];
-        
+
+        // A ring has no two ends to head for, so offering a direction would be meaningless.
+        if (isRingLine(lineMetadata, currentLine)) return [];
+
         const firstStationId = lineStations[0];
         const lastStationId = lineStations[lineStations.length - 1];
         
@@ -181,34 +194,31 @@ const ReportForm: FC<ReportFormProps> = () => {
                 coordinates: lastStation.coordinates
             }
         ];
-    }, [currentLine, currentStation, stations, lines]);
+    }, [currentLine, currentStation, stations, lines, lineMetadata]);
 
     const possibleDirections = getDirections();
 
-    const handleEntitySelect = useCallback((entity: string | null) => {
-        setCurrentEntity(entity);
-        
-        if (currentLine !== null && entity !== null && !currentLine.startsWith(entity)) {
+    const handleModeSelect = useCallback((mode: string | null) => {
+        const selectedMode = mode as LineMode | null;
+        setCurrentMode(selectedMode);
+
+        if (currentLine !== null && selectedMode !== null && lineMode(currentLine) !== selectedMode) {
             setCurrentLine(null);
             setCurrentStation(null);
             setCurrentDirection(null);
         }
-        else if (currentStation !== null && entity !== null && stations) {
+        else if (currentStation !== null && selectedMode !== null && stations) {
             const stationData = stations[currentStation];
             if (stationData) {
-                const isValidStation = stationData.lines.some((line) => 
-                    entity === 'M' 
-                        ? (line.startsWith('M') || /^\d/.test(line))
-                        : line.startsWith(entity)
-                );
-                
+                const isValidStation = stationData.lines.some((line) => lineMode(line) === selectedMode);
+
                 if (!isValidStation) {
                     setCurrentStation(null);
                     setCurrentDirection(null);
                 }
             }
         }
-    }, [currentLine, currentStation, stations]);
+    }, [currentLine, currentStation, stations, lineMode]);
 
     const handleLineSelect = useCallback((line: string | null) => {
         setCurrentLine(line);
@@ -254,7 +264,7 @@ const ReportForm: FC<ReportFormProps> = () => {
         return true;
     }, [currentLine, currentStation, currentDirection, possibleDirections, isPrivacyChecked]);
 
-    const handleSubmit = async (event: FormEvent) => {
+    const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
         
         if (!isFormValid() || !stations || !currentStation) return;
@@ -285,8 +295,8 @@ const ReportForm: FC<ReportFormProps> = () => {
                 setReportedData(report);
                 setShowSummary(true);
             },
-            onError: (error: any) => {
-                if (error?.message?.includes('429')) {
+            onError: (error: Error) => {
+                if (error.message.includes('429')) {
                     alert('Bitte nicht so schnell! Warte 30 Minuten und versuche es erneut.');
                 } else {
                     alert('Fehler beim Senden der Meldung. Bitte versuche es erneut.');
@@ -299,12 +309,6 @@ const ReportForm: FC<ReportFormProps> = () => {
         setShowSummary(false);
     };
 
-    if (isLoadingStations || isLoadingLines) {
-        return <div>Loading form data...</div>;
-    }
-
-    const getLineValue = (child: React.ReactElement) => child.props.line;
-    
     if (showSummary && reportedData) {
         return (
             <ReportSummaryModal
@@ -316,6 +320,32 @@ const ReportForm: FC<ReportFormProps> = () => {
         );
     }
 
+    /*
+     Without data there is no form, but the network selector stays: a wrong city is the likeliest
+     reason someone is looking at nothing, and it is the only thing they can act on. A failed request
+     leaves the queries not loading and without data, which used to render an empty station list with
+     no explanation at all.
+    */
+    if (isLoadingStations || isLoadingLines || stations === undefined || lines === undefined) {
+        const isLoading = isLoadingStations || isLoadingLines;
+
+        return (
+            <div className="report-form container modal">
+                <div className="align-child-on-line">
+                    <h1>Neue Meldung</h1>
+                </div>
+                <NetworkSelector />
+                <p className="disclaimer">
+                    {isLoading
+                        ? 'Daten werden geladen...'
+                        : 'Die Daten für dieses Netz konnten nicht geladen werden. Bitte versuche es später erneut.'}
+                </p>
+            </div>
+        );
+    }
+
+    const getLineValue = (child: React.ReactElement) => (child.props as { line: string }).line;
+
     return (
         <div className="report-form container modal" ref={containerRef}>
             <form onSubmit={handleSubmit}>
@@ -324,42 +354,22 @@ const ReportForm: FC<ReportFormProps> = () => {
                         <div className="align-child-on-line">
                             <h1>Neue Meldung</h1>
                         </div>
+                        <NetworkSelector />
                         <section className="selector-container">
-                            <SelectField
-                                containerClassName="align-child-on-line large-selector"
-                                fieldClassName="entity-type-selector"
-                                onSelect={handleEntitySelect}
-                                value={currentEntity}
-                                getValue={() => "U"}
-                            >
-                                <span className="line" style={{ backgroundColor: getLineColor('U8') }}>
-                                    <strong>U</strong>
-                                </span>
-                            </SelectField>
-                            <SelectField
-                                containerClassName="align-child-on-line large-selector"
-                                fieldClassName="entity-type-selector"
-                                onSelect={handleEntitySelect}
-                                value={currentEntity}
-                                getValue={() => "S"}
-                            >
-                                <span className="line" style={{ backgroundColor: getLineColor('S2') }}>
-                                    <strong>S</strong>
-                                </span>
-                            </SelectField>
-                            <SelectField
-                                containerClassName="align-child-on-line large-selector"
-                                fieldClassName="entity-type-selector"
-                                onSelect={handleEntitySelect}
-                                value={currentEntity}
-                                getValue={() => "M"}
-                            >
-                                <span className="line" style={{ backgroundColor: getLineColor('M1') }}>
-                                    <strong>M</strong>
-                                </span>
-                            </SelectField>
+                            {availableModes.map(({ mode, color }) => (
+                                <SelectField
+                                    key={mode}
+                                    containerClassName="align-child-on-line large-selector"
+                                    fieldClassName="entity-type-selector"
+                                    onSelect={handleModeSelect}
+                                    value={currentMode}
+                                    getValue={(child) => (child.props as { mode: string }).mode}
+                                >
+                                    <ModeChip mode={mode} color={color} />
+                                </SelectField>
+                            ))}
                         </section>
-                        {currentEntity && possibleLines.length > 0 && (
+                        {currentMode && possibleLines.length > 0 && (
                             <section className="line-selector">
                                 <h2>Linie</h2>
                                 <SelectField
@@ -391,7 +401,7 @@ const ReportForm: FC<ReportFormProps> = () => {
                             <SelectField
                                 onSelect={handleStationSelect}
                                 value={currentStation}
-                                getValue={(child) => child.props.id}
+                                getValue={(child) => (child.props as { id: string }).id}
                             >
                                 {Object.entries(possibleStations).map(([stationId, stationData]) => (
                                     <div key={stationId} id={stationId}>
@@ -403,17 +413,14 @@ const ReportForm: FC<ReportFormProps> = () => {
                     </section>
                     
                     <div ref={bottomElementsRef}>
-                        {currentLine !== null &&
-                        currentLine !== 'S41' &&
-                        currentLine !== 'S42' &&
-                        currentStation !== null ? (
+                        {currentLine !== null && currentStation !== null && possibleDirections.length > 0 ? (
                             <section>
                                 <h3>Richtung</h3>
                                 <SelectField
                                     onSelect={handleDirectionSelect}
                                     value={currentDirection}
                                     containerClassName="align-child-on-line"
-                                    getValue={(child) => child.props.id}
+                                    getValue={(child) => (child.props as { id: string }).id}
                                 >
                                     {possibleDirections.map((direction) => (
                                         <div key={direction.id} id={direction.id}>
@@ -457,7 +464,7 @@ const ReportForm: FC<ReportFormProps> = () => {
                                 >
                                     Melden
                                 </button>
-                                <p className="disclaimer">Deine Meldung wird mit @FreiFahren_BE synchronisiert.</p>
+                                <p className="disclaimer">Deine Meldung wird mit der Telegram-Gruppe synchronisiert.</p>
                             </div>
                         </section>
                     </div>

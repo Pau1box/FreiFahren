@@ -8,6 +8,7 @@ import (
 	"sort"
 	"sync"
 
+	"github.com/FreiFahren/backend/api/networks"
 	"github.com/FreiFahren/backend/data"
 	_ "github.com/FreiFahren/backend/docs"
 	"github.com/FreiFahren/backend/logger"
@@ -21,9 +22,17 @@ type StationNode struct {
 	line     string
 }
 
-var stationsList map[string]utils.StationListEntry
-var stationIds []string
-var linesList map[string][]string
+// networkGraph is the station and line graph of one network, in the shape the
+// shortest path search needs it.
+//
+// It is passed through the search rather than held in package level variables.
+// With more than one network those variables were not just untidy: two requests
+// for different cities would overwrite each other's graph mid search.
+type networkGraph struct {
+	stations   map[string]utils.StationListEntry
+	stationIds []string
+	lines      map[string][]string
+}
 
 type DistanceCache struct {
 	cache map[string]int
@@ -36,27 +45,27 @@ var distanceCache = &DistanceCache{
 	order: make([]string, 0, 5000), // length of 5000 is enough as this will cover the most common cases of the 5800+ station combinations
 }
 
-func getCacheKey(stationId1, stationId2 string) string {
+func getCacheKey(networkID, stationId1, stationId2 string) string {
 	// compare the lexigraphically smaller string first to avoid duplicate entries in the cache
 	if stationId1 < stationId2 {
-		return stationId1 + ":" + stationId2
+		return networkID + "/" + stationId1 + ":" + stationId2
 	}
-	return stationId2 + ":" + stationId1
+	return networkID + "/" + stationId2 + ":" + stationId1
 }
 
-func (distanceCache *DistanceCache) getDistanceFromCache(inspectorStationId, userStationId string) (int, bool) {
+func (distanceCache *DistanceCache) getDistanceFromCache(networkID, inspectorStationId, userStationId string) (int, bool) {
 	distanceCache.mutex.RLock()
 	defer distanceCache.mutex.RUnlock()
-	distance, ok := distanceCache.cache[getCacheKey(inspectorStationId, userStationId)]
+	distance, ok := distanceCache.cache[getCacheKey(networkID, inspectorStationId, userStationId)]
 	return distance, ok
 }
 
-func (distanceCache *DistanceCache) setDistanceInCache(inspectorStationId, userStationId string, distance int) {
+func (distanceCache *DistanceCache) setDistanceInCache(networkID, inspectorStationId, userStationId string, distance int) {
 	logger.Log.Debug().Msg("Setting distance in cache")
 	distanceCache.mutex.Lock()
 	defer distanceCache.mutex.Unlock()
-	
-	key := getCacheKey(inspectorStationId, userStationId)
+
+	key := getCacheKey(networkID, inspectorStationId, userStationId)
 
 	if _, exists := distanceCache.cache[key]; !exists {
 		if len(distanceCache.order) == 250 {
@@ -81,88 +90,110 @@ func (distanceCache *DistanceCache) setDistanceInCache(inspectorStationId, userS
 //
 // @Param   inspectorStationId   query   string  true   "The station Id of the inspector's current location."
 // @Param   userStationId   query   string  true   "The station Id of the user's current location."
+// @Param   network   query   string  false   "ID of the network (defaults to berlin)"
 //
 // @Success 200 {int} int "The shortest distance in terms of the number of station stops between the inspector's station and the user's location."
+// @Failure 400 {object} map[string]string "Bad Request: One of the station id parameters is missing."
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
+// @Failure 422 {object} map[string]string "Unprocessable Entity: One of the stations does not belong to the network."
 // @Failure 500 "An error occurred in processing the request."
 //
 // @Router /transit/distance [get]
 func GetStationDistance(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/transit/distance' UserAgent: " + c.Request().UserAgent())
 
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
 	inspectorStationId := c.QueryParam("inspectorStationId")
 	userStationId := c.QueryParam("userStationId")
+
+	if inspectorStationId == "" || userStationId == "" {
+		return c.JSON(http.StatusBadRequest, map[string]string{
+			"error": "Missing inspectorStationId or userStationId query parameter",
+		})
+	}
+
+	// Both stations are checked before the shortcuts below, because two ids of another
+	// network are equal to each other just as readily and would be answered with a
+	// distance of 0 instead of with the mismatch that caused them.
+	if unknown := networks.UnknownStations(networkID, map[string]string{
+		"inspectorStationId": inspectorStationId,
+		"userStationId":      userStationId,
+	}); len(unknown) > 0 {
+		return networks.UnknownReference(networkID, unknown...)
+	}
+
 	if userStationId == inspectorStationId {
 		return c.String(http.StatusOK, "0")
 	}
 
 	// Check cache first
-	if cachedDistance, found := distanceCache.getDistanceFromCache(inspectorStationId, userStationId); found {
+	if cachedDistance, found := distanceCache.getDistanceFromCache(networkID, inspectorStationId, userStationId); found {
 		logger.Log.Info().Msg("Cache hit for distance calculation")
 		return c.String(http.StatusOK, fmt.Sprintf("%d", cachedDistance))
 	}
 
-	stationsList, stationIds, linesList = ReadAndCreateSortedStationsListAndLinesList()
-
-	inspectorStation, ok := stationsList[inspectorStationId]
+	graph, ok := loadNetworkGraph(networkID)
 	if !ok {
-		logger.Log.Error().Str("inspectorStationId", inspectorStationId).Msg("Inspector station not found in stations list")
-		return c.String(http.StatusBadRequest, "Invalid inspector station ID")
+		logger.Log.Error().Str("network", networkID).Msg("No transit data for network")
+		return c.String(http.StatusInternalServerError, "No transit data for this network")
 	}
 
-	userStation, ok := stationsList[userStationId]
-	if !ok {
-		logger.Log.Error().Str("userStationId", userStationId).Msg("User station not found in stations list")
-		return c.String(http.StatusBadRequest, "Invalid user station ID")
-	}
-
-	inspectorStationCoordinates := inspectorStation.Coordinates
-	userStationCoordinates := userStation.Coordinates
-	kmDistance := calculateDistance(inspectorStationCoordinates.Latitude, inspectorStationCoordinates.Longitude, userStationCoordinates.Latitude, userStationCoordinates.Longitude)
+	inspectorStationCoordinates := graph.stations[inspectorStationId].Coordinates
+	userStationCoordinates := graph.stations[userStationId].Coordinates
+	kmDistance := utils.DistanceKm(inspectorStationCoordinates.Latitude, inspectorStationCoordinates.Longitude, userStationCoordinates.Latitude, userStationCoordinates.Longitude)
 
 	// If the user is less than 1 km away from the station, we just return 1 station distance
 	if kmDistance < 1 {
 		return c.String(http.StatusOK, "1")
 	}
 
-	distances := FindShortestDistance(inspectorStationId, userStationId)
+	distances := findShortestDistance(graph, inspectorStationId, userStationId)
 
 	// Cache the result
-	distanceCache.setDistanceInCache(inspectorStationId, userStationId, distances)
+	distanceCache.setDistanceInCache(networkID, inspectorStationId, userStationId, distances)
 
 	return c.String(http.StatusOK, fmt.Sprintf("%d", distances))
 }
 
-func ReadAndCreateSortedStationsListAndLinesList() (map[string]utils.StationListEntry, []string, map[string][]string) {
-	logger.Log.Debug().Msg("Reading and creating sorted stations list and lines list")
+func loadNetworkGraph(networkID string) (*networkGraph, bool) {
+	logger.Log.Debug().Str("network", networkID).Msg("Reading and creating sorted stations list and lines list")
 
-	stationsList = data.GetStationsList()
+	stationsList, ok := data.GetStationsList(networkID)
+	if !ok {
+		return nil, false
+	}
 
-	// Create a slice of the station Ids
-	stationIds = make([]string, 0, len(stationsList))
+	linesList, ok := data.GetLinesList(networkID)
+	if !ok {
+		return nil, false
+	}
+
+	stationIds := make([]string, 0, len(stationsList))
 	for id := range stationsList {
 		stationIds = append(stationIds, id)
 	}
 
-	// Sort the slice of station ds, to get a more deterministic result
-	// because the order of the keys in a map is not guaranteed and golang kinda fucks up
+	// Sorted to get a deterministic result, because the iteration order of a map is not guaranteed
 	sort.Strings(stationIds)
 
-	linesList = data.GetLinesList()
-
-	return stationsList, stationIds, linesList
+	return &networkGraph{stations: stationsList, stationIds: stationIds, lines: linesList}, true
 }
 
 // ---- dijkstra
 
-func GetAdjacentStationsId(stationId string) []string {
+func GetAdjacentStationsId(graph *networkGraph, stationId string) []string {
 
-	stationLines := stationsList[stationId].Lines
+	stationLines := graph.stations[stationId].Lines
 
 	adjacentStations := make([]string, 0)
 
 	// Get the adjacent stations for each line the station is on
 	for _, line := range stationLines {
-		currentStationId, err := getIndexOfStationId(stationId, linesList[line])
+		currentStationId, err := getIndexOfStationId(stationId, graph.lines[line])
 
 		if currentStationId == -1 && err != nil {
 			logger.Log.Error().Err(err).Msg("Error getting the station Id")
@@ -170,11 +201,11 @@ func GetAdjacentStationsId(stationId string) []string {
 
 		// get the adjacent stations one station before and one station after the current station
 		if currentStationId > 0 {
-			adjacentStations = append(adjacentStations, linesList[line][currentStationId-1])
+			adjacentStations = append(adjacentStations, graph.lines[line][currentStationId-1])
 		}
 
-		if currentStationId < len(linesList[line])-1 {
-			adjacentStations = append(adjacentStations, linesList[line][currentStationId+1])
+		if currentStationId < len(graph.lines[line])-1 {
+			adjacentStations = append(adjacentStations, graph.lines[line][currentStationId+1])
 		}
 	}
 
@@ -184,7 +215,7 @@ func GetAdjacentStationsId(stationId string) []string {
 	return adjacentStations
 }
 
-func initializeQueue(startStation string) (*list.List, map[string]int, map[string]string) {
+func initializeQueue(graph *networkGraph, startStation string) (*list.List, map[string]int, map[string]string) {
 	logger.Log.Debug().Msg("Initializing queue")
 
 	queue := list.New()
@@ -192,8 +223,8 @@ func initializeQueue(startStation string) (*list.List, map[string]int, map[strin
 	lines := make(map[string]string)
 
 	// Initialize the distances and lines
-	for _, id := range stationIds {
-		station := stationsList[id]
+	for _, id := range graph.stationIds {
+		station := graph.stations[id]
 		// if the station is the starting station, we set the distance to 0, and the line to the first line the station is on
 		// otherwise, we set the distance to infinity for the rest of the stations
 		if id == startStation {
@@ -235,31 +266,41 @@ func removeStationFromQueue(queue *list.List, stationId string) {
 	}
 }
 
-func updateDistances(queue *list.List, currentStation StationNode, distances map[string]int, lines map[string]string) {
+func updateDistances(graph *networkGraph, queue *list.List, currentStation StationNode, distances map[string]int, lines map[string]string) {
 
-	for _, adjacentStationId := range GetAdjacentStationsId(currentStation.id) {
+	for _, adjacentStationId := range GetAdjacentStationsId(graph, currentStation.id) {
 		// each distance from one station to another is 1
 		newDistance := currentStation.distance + 1
 
 		if newDistance < distances[adjacentStationId] {
 
 			distances[adjacentStationId] = newDistance
-			lines[adjacentStationId] = stationsList[adjacentStationId].Lines[0]
-			queue.PushBack(StationNode{adjacentStationId, newDistance, stationsList[adjacentStationId].Lines[0]})
+			lines[adjacentStationId] = graph.stations[adjacentStationId].Lines[0]
+			queue.PushBack(StationNode{adjacentStationId, newDistance, graph.stations[adjacentStationId].Lines[0]})
 		}
 	}
 }
 
-func FindShortestDistance(startStation string, userStationId string) int {
-	logger.Log.Debug().Msg("Finding the shortest distance")
+// FindShortestDistance returns the number of stops between two stations of a
+// network, or -1 if the network is unknown or the stations are not connected.
+func FindShortestDistance(networkID string, startStation string, userStationId string) int {
+	graph, ok := loadNetworkGraph(networkID)
+	if !ok {
+		logger.Log.Error().Str("network", networkID).Msg("No transit data for network")
+		return -1
+	}
 
-	ReadAndCreateSortedStationsListAndLinesList()
+	return findShortestDistance(graph, startStation, userStationId)
+}
+
+func findShortestDistance(graph *networkGraph, startStation string, userStationId string) int {
+	logger.Log.Debug().Msg("Finding the shortest distance")
 
 	endStation := userStationId
 
 	// Initialize the queue, distances, lines and a map to keep track of visited stations
 	visited := make(map[string]bool)
-	queue, distances, lines := initializeQueue(startStation)
+	queue, distances, lines := initializeQueue(graph, startStation)
 
 	for queue.Len() > 0 {
 		// Find the station in the queue with the smallest distance
@@ -283,7 +324,7 @@ func FindShortestDistance(startStation string, userStationId string) int {
 		visited[currentStation.id] = true
 
 		// Update the distances to the adjacent stations
-		updateDistances(queue, currentStation, distances, lines)
+		updateDistances(graph, queue, currentStation, distances, lines)
 	}
 
 	if distances[endStation] == math.MaxInt32 {

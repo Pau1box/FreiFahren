@@ -1,0 +1,336 @@
+{
+    "n28189608": {
+        "coordinates": {
+            "latitude": 52.42726415,
+            "longitude": 12.531104975
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Hohenstücken Betriebshof"
+    },
+    "n286640003": {
+        "coordinates": {
+            "latitude": 52.4014918,
+            "longitude": 12.565679766666667
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Hauptbahnhof"
+    },
+    "n286640009": {
+        "coordinates": {
+            "latitude": 52.403641375,
+            "longitude": 12.56816415
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Geschwister-Scholl-Straße"
+    },
+    "n418832785": {
+        "coordinates": {
+            "latitude": 52.4271391,
+            "longitude": 12.5039695
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Bahnhof Görden"
+    },
+    "n428601261": {
+        "coordinates": {
+            "latitude": 52.427966,
+            "longitude": 12.497439066666667
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Waldcafé Görden"
+    },
+    "n428601263": {
+        "coordinates": {
+            "latitude": 52.42648468,
+            "longitude": 12.508653599999999
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Geranienweg"
+    },
+    "n428601266": {
+        "coordinates": {
+            "latitude": 52.42453436666667,
+            "longitude": 12.5267749
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Am Silokanal"
+    },
+    "n428601268": {
+        "coordinates": {
+            "latitude": 52.42466272,
+            "longitude": 12.521568160000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Rotdornweg"
+    },
+    "n435223571": {
+        "coordinates": {
+            "latitude": 52.40862358333334,
+            "longitude": 12.562925133333332
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Neustädtischer Markt"
+    },
+    "n469414765": {
+        "coordinates": {
+            "latitude": 52.406962899999996,
+            "longitude": 12.5668614
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Sankt-Annen-Straße"
+    },
+    "n469414780": {
+        "coordinates": {
+            "latitude": 52.4127244,
+            "longitude": 12.55358655
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Ritterstraße/Museum"
+    },
+    "n469414803": {
+        "coordinates": {
+            "latitude": 52.409313242857145,
+            "longitude": 12.549133921428572
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Luckenberger Straße"
+    },
+    "n469414830": {
+        "coordinates": {
+            "latitude": 52.402925925,
+            "longitude": 12.56148745
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Blumenstraße"
+    },
+    "n469414831": {
+        "coordinates": {
+            "latitude": 52.40486931428571,
+            "longitude": 12.55794512857143
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Große Gartenstraße"
+    },
+    "n469414838": {
+        "coordinates": {
+            "latitude": 52.40694765,
+            "longitude": 12.5600283
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Steinstraße/Kino"
+    },
+    "n469418652": {
+        "coordinates": {
+            "latitude": 52.41199576,
+            "longitude": 12.543864580000001
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Magdeburger Straße/OLG"
+    },
+    "n469441544": {
+        "coordinates": {
+            "latitude": 52.41466215,
+            "longitude": 12.537801550000001
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Karl-Marx-Straße"
+    },
+    "n469441588": {
+        "coordinates": {
+            "latitude": 52.418473325,
+            "longitude": 12.535956925
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Fontanestraße"
+    },
+    "n469441620": {
+        "coordinates": {
+            "latitude": 52.42241971666667,
+            "longitude": 12.532128166666666
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "August-Bebel-Straße"
+    },
+    "n469441717": {
+        "coordinates": {
+            "latitude": 52.43131635,
+            "longitude": 12.529548966666667
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Willibald-Alexis-Straße"
+    },
+    "n469441729": {
+        "coordinates": {
+            "latitude": 52.43146974,
+            "longitude": 12.52412221
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Rosa-Luxemburg-Allee"
+    },
+    "n469441744": {
+        "coordinates": {
+            "latitude": 52.43388386,
+            "longitude": 12.5216873
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Tschirchdamm"
+    },
+    "n469441774": {
+        "coordinates": {
+            "latitude": 52.437168325,
+            "longitude": 12.518783025000001
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Hohenstücken Nord"
+    },
+    "n469461774": {
+        "coordinates": {
+            "latitude": 52.42334463333333,
+            "longitude": 12.467767633333333
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Anton-Saefkow-Allee"
+    },
+    "n469461782": {
+        "coordinates": {
+            "latitude": 52.4249318,
+            "longitude": 12.473155366666667
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kaltenhausener Weg"
+    },
+    "n469461794": {
+        "coordinates": {
+            "latitude": 52.427220766666665,
+            "longitude": 12.480172933333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Asklepios Klinik"
+    },
+    "n469461827": {
+        "coordinates": {
+            "latitude": 52.425732725,
+            "longitude": 12.5138462
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Gördenallee"
+    },
+    "n3093165755": {
+        "coordinates": {
+            "latitude": 52.4070118,
+            "longitude": 12.5510067
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Kanalstraße"
+    },
+    "n3276806622": {
+        "coordinates": {
+            "latitude": 52.41117055,
+            "longitude": 12.54968635
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Nicolaiplatz"
+    },
+    "n3283896121": {
+        "coordinates": {
+            "latitude": 52.41225655714286,
+            "longitude": 12.5390436
+        },
+        "lines": [
+            "1",
+            "6"
+        ],
+        "name": "Technische Hochschule/THB"
+    },
+    "n4829017439": {
+        "coordinates": {
+            "latitude": 52.4105569,
+            "longitude": 12.5587139375
+        },
+        "lines": [
+            "6"
+        ],
+        "name": "Jahrtausendbrücke"
+    },
+    "n7875139941": {
+        "coordinates": {
+            "latitude": 52.405456525,
+            "longitude": 12.553753
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Bauhofstraße"
+    }
+}

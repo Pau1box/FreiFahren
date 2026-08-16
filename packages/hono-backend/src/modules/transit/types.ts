@@ -18,4 +18,18 @@ type Station = {
 type Stations = Record<StationId, Station>
 type Lines = Record<LineId, StationId[]>
 
-export type { Lines, Stations, StationId, LineId }
+/**
+ * How a client renders a line, without knowing anything about the city it belongs to.
+ *
+ * `isCircular` matters because direction of travel means something different on a ring: naming a
+ * terminus does not narrow down where a train is going.
+ */
+type LineMetadata = {
+    color: LineRow['color']
+    mode: LineRow['mode']
+    isCircular: LineRow['isCircular']
+}
+
+type LinesMetadata = Record<LineId, LineMetadata>
+
+export type { Lines, LineMetadata, LinesMetadata, Stations, StationId, LineId }

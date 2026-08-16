@@ -1,0 +1,44 @@
+# München. An example of a city whose S-Bahn is not tagged as its own mode.
+#
+# See README.md in this directory for what each field means, and hamburg.yaml for the simpler case
+# where naming the modes is enough.
+
+id: munich
+name: München
+countryCode: DE
+timezone: Europe/Berlin
+status: beta
+
+center:
+    latitude: 48.1372
+    longitude: 11.5755
+# Derived from the generated stations. The S-Bahn reaches far past the city limits, to Petershausen
+# in the north and Geltendorf in the west, so declaring the city boundary here would cut lines in
+# half the way hamburg.yaml first did.
+bounds: auto
+
+source:
+    osmArea: München
+    adminLevel: '^[4-6]$'
+    modes:
+        subway: auto
+        tram: auto
+        # S-Bahn is tagged route=train here, which also matches every ICE and EC passing through.
+        # Take it by ref instead of by mode, or the network grows to the size of Germany. `[0-9]`
+        # rather than `\d`, because Overpass matches POSIX extended regular expressions.
+        train: '^S[0-9]+$'
+    # With the rules above the modes describe the network exactly, so there is nothing left for an
+    # explicit line list to fix.
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # Deliberately without a plain `ref` fallback, see the note in hamburg.yaml.
+    idSources: [ref:ds100, railway:ref]
+    modePrefixes:
+        - match: '^S'
+          letter: S
+        - match: '^U'
+          letter: U
+        - match: '^\d+$'
+          letter: M

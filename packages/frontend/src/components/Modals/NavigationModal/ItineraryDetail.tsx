@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Line } from 'src/components/Miscellaneous/Line/Line'
-import { getLineColor } from 'src/hooks/getLineColor'
+import { useLineColor } from 'src/hooks/useLineColor'
 import { formatDuration, formatLocalTime } from 'src/utils/dateUtils'
 import { Itinerary, Leg } from 'src/utils/types'
 
@@ -23,6 +23,7 @@ const ItineraryDetail: React.FC<ItineraryDetailProps> = ({
     isSaved = false,
 }) => {
     const { t } = useTranslation()
+    const getLineColor = useLineColor()
     const durationMinutes = Math.round(itinerary.duration / 60)
     const durationText = `(${formatDuration(durationMinutes)})`
 

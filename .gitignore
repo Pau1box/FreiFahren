@@ -11,3 +11,5 @@ scripts/lines.json
 scripts/export.geojson
 scripts/Pipfile
 scripts/Pipfile.lock
+# What one build step downloads and the next one reads, see scripts/README.md
+scripts/.build-cache/

@@ -1,13 +1,33 @@
 import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { Itinerary, LinesList, Position, Report, RiskData, StationList } from 'src/utils/types'
+import { useNetworkId } from 'src/contexts/NetworkContext'
+import { compareLines } from 'src/utils/lineModes'
+import { Itinerary, LineMetadataList, LinesList, Position, Report, RiskData, StationList } from 'src/utils/types'
 
 import { useSkeleton } from '../components/Miscellaneous/LoadingPlaceholder/Skeleton'
 import { getClosestStations } from '../hooks/getClosestStations'
 import { sendAnalyticsEvent } from '../hooks/useAnalytics'
 import { CACHE_KEYS } from './queryClient'
 
+/**
+ * Builds an API url with the network the request is scoped to. New client code always sends the
+ * parameter explicitly, even for the default network, so that the server side default never becomes
+ * load bearing.
+ */
+const buildApiUrl = (endpoint: string, networkId: string, params: Record<string, string | undefined> = {}): string => {
+    const searchParams = new URLSearchParams({ network: networkId })
+
+    Object.entries(params).forEach(([key, value]) => {
+        if (value !== undefined && value.trim() !== '') {
+            searchParams.append(key, value)
+        }
+    })
+
+    return `${import.meta.env.VITE_API_URL}${endpoint}?${searchParams.toString()}`
+}
+
 const fetchNewReports = async (
+    networkId: string,
     startTime?: string,
     endTime?: string,
     stationId?: string,
@@ -17,26 +37,16 @@ const fetchNewReports = async (
         'Content-Type': 'application/json',
     }
 
-    let queryParams = ''
-
     if (lastKnownTimestamp !== undefined && lastKnownTimestamp.trim() !== '') {
         const date = new Date(lastKnownTimestamp)
+
         headers['If-Modified-Since'] = date.toUTCString()
     }
 
-    if (startTime !== undefined && startTime.trim() !== '') {
-        queryParams += `&start=${startTime}`
-    }
-
-    if (endTime !== undefined && endTime.trim() !== '') {
-        queryParams += `&end=${endTime}`
-    }
-
-    if (stationId !== undefined && stationId.trim() !== '') {
-        queryParams += `&station=${stationId}`
-    }
-
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/v0/basics/inspectors?${queryParams}`, { headers })
+    const response = await fetch(
+        buildApiUrl('/v0/basics/inspectors', networkId, { start: startTime, end: endTime, station: stationId }),
+        { headers }
+    )
 
     if (response.status === 304) {
         return null
@@ -49,11 +59,20 @@ const fetchNewReports = async (
     return response.json()
 }
 
-export const useReportsByStation = (stationId: string, startTime?: string, endTime?: string) =>
-    useQuery({
-        queryKey: [...CACHE_KEYS.reports, stationId, startTime, endTime],
-        queryFn: () => fetchNewReports(startTime, endTime, stationId),
+export const useReportsByStation = (stationId: string, startTime?: string, endTime?: string) => {
+    const networkId = useNetworkId()
+
+    return useQuery({
+        queryKey: [...CACHE_KEYS.reports(networkId), stationId, startTime, endTime],
+        queryFn: () => fetchNewReports(networkId!, startTime, endTime, stationId),
+        /*
+         Without a station the endpoint answers with the whole network, which the caller would show
+         as this station's reports. That is what an id from another network resolves to after a
+         switch, so it has to stay unasked.
+        */
+        enabled: networkId !== null && stationId.trim() !== '',
     })
+}
 
 interface SubmitReportOptions {
     duration?: number
@@ -65,9 +84,14 @@ interface SubmitReportOptions {
 
 export const useSubmitReport = (options?: SubmitReportOptions) => {
     const queryClient = useQueryClient()
+    const networkId = useNetworkId()
 
     return useMutation({
         mutationFn: async (report: Report) => {
+            if (networkId === null) {
+                throw new Error('Cannot submit a report before the network is known')
+            }
+
             const requestBody = {
                 timestamp: new Date(report.timestamp),
                 line: report.line ?? '',
@@ -76,7 +100,7 @@ export const useSubmitReport = (options?: SubmitReportOptions) => {
                 message: report.message ?? '',
             }
 
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/v0/basics/inspectors`, {
+            const response = await fetch(buildApiUrl('/v0/basics/inspectors', networkId), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -87,6 +111,7 @@ export const useSubmitReport = (options?: SubmitReportOptions) => {
             if (!response.ok) {
                 const errorData = await response.json().catch(() => ({}))
                 const error = new Error(errorData.message ?? `HTTP error! status: ${response.status}`)
+
                 error.name = response.status.toString()
                 throw error
             }
@@ -105,9 +130,7 @@ export const useSubmitReport = (options?: SubmitReportOptions) => {
                 duration: options?.duration,
             })
             // Invalidate relevant queries to refetch data
-            queryClient.invalidateQueries({ queryKey: CACHE_KEYS.reports })
-            queryClient.invalidateQueries({ queryKey: CACHE_KEYS.byTimeframe('24h') })
-            queryClient.invalidateQueries({ queryKey: CACHE_KEYS.byTimeframe('1h') })
+            queryClient.invalidateQueries({ queryKey: CACHE_KEYS.reports(networkId) })
         },
         onError: (error: Error) => {
             // as a quick solution until we have a proper error monitoring set up
@@ -139,23 +162,24 @@ export const useFeedback = () =>
 
 export const useCurrentReports = () => {
     const queryClient = useQueryClient()
+    const networkId = useNetworkId()
     const queryResult = useQuery<Report[], Error>({
-        queryKey: CACHE_KEYS.byTimeframe('1h'),
+        queryKey: CACHE_KEYS.byTimeframe(networkId, '1h'),
         queryFn: async (): Promise<Report[]> => {
             const endTime = new Date().toISOString()
             const startTime = new Date(new Date(endTime).getTime() - 60 * 60 * 1000).toISOString()
 
             // Get previous data from the queryClient instead of destructuring from outer scope.
-            const prevData = queryClient.getQueryData<Report[]>(CACHE_KEYS.byTimeframe('1h')) ?? []
+            const prevData = queryClient.getQueryData<Report[]>(CACHE_KEYS.byTimeframe(networkId, '1h')) ?? []
             const lastKnownTimestamp = prevData[0]?.timestamp
 
-            const result = await fetchNewReports(startTime, endTime, undefined, lastKnownTimestamp)
+            const result = await fetchNewReports(networkId!, startTime, endTime, undefined, lastKnownTimestamp)
             const newData = result === null ? prevData : result
 
             // If we got new data, invalidate the risk cache (temporary fix to avoid race condition)
             if (result !== null) {
                 setTimeout(() => {
-                    queryClient.invalidateQueries({ queryKey: CACHE_KEYS.risk })
+                    queryClient.invalidateQueries({ queryKey: CACHE_KEYS.risk(networkId) })
                 }, 2.5 * 1000)
             }
 
@@ -179,6 +203,7 @@ export const useCurrentReports = () => {
             */
             return [...sortedCurrentReports, ...sortedHistoricReports]
         },
+        enabled: networkId !== null,
         refetchInterval: 15 * 1000,
         staleTime: 2.5 * 60 * 1000,
         structuralSharing: true,
@@ -196,24 +221,27 @@ export const useCurrentReports = () => {
 export const useLast24HourReports = () => {
     const { data: lastHourReports = [] } = useCurrentReports()
     const queryClient = useQueryClient()
+    const networkId = useNetworkId()
 
     const queryResult = useQuery<Report[], Error>({
-        queryKey: CACHE_KEYS.byTimeframe('24h'),
+        queryKey: CACHE_KEYS.byTimeframe(networkId, '24h'),
         queryFn: async (): Promise<Report[]> => {
             const endTime = new Date().toISOString()
             const startTime = new Date(new Date(endTime).getTime() - 24 * 60 * 60 * 1000).toISOString()
 
             // Retrieve previous 24h reports via queryClient instead of outer scope.
-            const prevData = queryClient.getQueryData<Report[]>(CACHE_KEYS.byTimeframe('24h')) ?? []
+            const prevData = queryClient.getQueryData<Report[]>(CACHE_KEYS.byTimeframe(networkId, '24h')) ?? []
             const lastKnownTimestamp = prevData[0]?.timestamp
 
-            const result = await fetchNewReports(startTime, endTime, undefined, lastKnownTimestamp)
+            const result = await fetchNewReports(networkId!, startTime, endTime, undefined, lastKnownTimestamp)
             const newData = result === null ? prevData : result
 
             // Remove the most recent hour, as that is replaced by current reports.
             const oneHourAgo = Date.now() - 60 * 60 * 1000
+
             return newData.filter((report) => new Date(report.timestamp).getTime() < oneHourAgo)
         },
+        enabled: networkId !== null,
         refetchInterval: 2 * 60 * 1000,
         staleTime: 5 * 60 * 1000,
         structuralSharing: true,
@@ -225,6 +253,7 @@ export const useLast24HourReports = () => {
      this would cause the Last24HourReports to be misaligned with the current reports
     */
     const fullDayReports = useMemo(() => queryResult.data ?? [], [queryResult.data])
+
     fullDayReports.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
     const { isPlaceholderData } = queryResult
 
@@ -242,12 +271,19 @@ export const useLast24HourReports = () => {
 }
 
 export const useRiskData = () => {
+    const networkId = useNetworkId()
     const queryResult = useQuery<RiskData, Error>({
-        queryKey: CACHE_KEYS.risk,
+        queryKey: CACHE_KEYS.risk(networkId),
         queryFn: async (): Promise<RiskData> => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/v1/risk-prediction/segment-colors`)
+            const response = await fetch(buildApiUrl('/v1/risk-prediction/segment-colors', networkId!))
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`)
+            }
+
             return response.json()
         },
+        enabled: networkId !== null,
         refetchInterval: 30 * 1000,
         staleTime: 60 * 1000,
         structuralSharing: true,
@@ -261,25 +297,37 @@ export const useRiskData = () => {
     }
 }
 
-export const fetchWithETag = async <T>(endpoint: string, storageKeyPrefix: string): Promise<T> => {
-    const etagKey: string = `${storageKeyPrefix}ETag`
-    const dataKey: string = `${storageKeyPrefix}Data`
+/**
+ * The conditional request cache is stored per network: a station list keyed only by endpoint would
+ * answer Hamburg with Berlin's stations after a switch.
+ */
+export const fetchWithETag = async <T>(endpoint: string, storageKeyPrefix: string, networkId: string): Promise<T> => {
+    const etagKey = `${storageKeyPrefix}.${networkId}.ETag`
+    const dataKey = `${storageKeyPrefix}.${networkId}.Data`
     const cachedETag: string | null = localStorage.getItem(etagKey)
+    const cachedData: string | null = localStorage.getItem(dataKey)
 
     const headers: HeadersInit = {
         Accept: 'application/json',
     }
-    if (cachedETag !== null && cachedETag !== '') {
+    /*
+     An ETag is only worth sending while the body it stands for is still there. A 304 has no body, so
+     claiming a copy we no longer hold would answer nothing and leave the view empty for good.
+    */
+    if (cachedETag !== null && cachedETag !== '' && cachedData !== null) {
         headers['If-None-Match'] = cachedETag
     }
 
-    const response: Response = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`, { headers })
-    const newETag: string | null = response.headers.get('ETag')
+    const response: Response = await fetch(buildApiUrl(endpoint, networkId), { headers })
 
-    if (response.status === 304) {
-        const cachedData: string | null = localStorage.getItem(dataKey)
-        if (cachedData !== null) {
+    if (response.status === 304 && cachedData !== null) {
+        try {
             return JSON.parse(cachedData) as T
+        } catch {
+            // A body we cannot read is no body: drop the pair so the retry asks for a full response.
+            localStorage.removeItem(etagKey)
+            localStorage.removeItem(dataKey)
+            throw new Error(`Failed to read the cached response for ${endpoint}`)
         }
     }
 
@@ -287,63 +335,97 @@ export const fetchWithETag = async <T>(endpoint: string, storageKeyPrefix: strin
         throw new Error(`Failed to fetch data: ${response.status}`)
     }
 
-    if (newETag !== null) {
-        localStorage.setItem(etagKey, newETag)
+    const newData: T = await response.json()
+    const newETag: string | null = response.headers.get('ETag')
+
+    /*
+     Every network keeps its own copy, so the shared storage quota is reached far sooner than with a
+     single one. A full quota must not take the data we just fetched down with it, and the body is
+     written before the ETag so that an ETag never outlives it.
+    */
+    try {
+        localStorage.setItem(dataKey, JSON.stringify(newData))
+        if (newETag !== null) {
+            localStorage.setItem(etagKey, newETag)
+        }
+    } catch {
+        localStorage.removeItem(etagKey)
+        localStorage.removeItem(dataKey)
     }
 
-    const newData: T = await response.json()
-    localStorage.setItem(dataKey, JSON.stringify(newData))
     return newData
 }
 
-export const useSegments = () =>
-    useQuery<GeoJSON.FeatureCollection<GeoJSON.LineString>, Error>({
-        queryKey: ['segmentsETag'],
-        queryFn: () => fetchWithETag<GeoJSON.FeatureCollection<GeoJSON.LineString>>('/v0/lines/segments', 'segments'),
+export const useSegments = () => {
+    const networkId = useNetworkId()
+
+    return useQuery<GeoJSON.FeatureCollection<GeoJSON.LineString>, Error>({
+        queryKey: CACHE_KEYS.segments(networkId),
+        queryFn: () =>
+            fetchWithETag<GeoJSON.FeatureCollection<GeoJSON.LineString>>('/v0/lines/segments', 'segments', networkId!),
+        enabled: networkId !== null,
         staleTime: Infinity,
         gcTime: Infinity,
         refetchOnWindowFocus: false,
     })
+}
 
-export const useStations = () =>
-    useQuery<StationList, Error>({
-        queryKey: ['stationsETag'],
-        queryFn: () => fetchWithETag<StationList>('/v0/stations', 'stations'),
+export const useStations = () => {
+    const networkId = useNetworkId()
+
+    return useQuery<StationList, Error>({
+        queryKey: CACHE_KEYS.stations(networkId),
+        queryFn: () => fetchWithETag<StationList>('/v0/stations', 'stations', networkId!),
+        enabled: networkId !== null,
         staleTime: Infinity,
         gcTime: Infinity,
         refetchOnWindowFocus: false,
     })
+}
 
-export const useLines = () =>
-    useQuery<[string, string[]][], Error>({
-        queryKey: ['linesETag'],
-        queryFn: async (): Promise<[string, string[]][]> => {
-            const groupPriority = (key: string): number => {
-                if (key.includes('U')) return 0
-                if (key.includes('S')) return 1
-                if (key.includes('M')) return 2
-                if (/^\d+$/.test(key)) return 4 // Lowest priority (4) for numeric keys
-                return 3 // Default priority (3) for others
-            }
+/** Colour and mode of every line in the active network. Replaces the per city colour table. */
+export const useLineMetadata = () => {
+    const networkId = useNetworkId()
 
-            const data = await fetchWithETag<LinesList>('/v0/lines', 'lines')
-            const sortedEntries = Object.entries(data).sort((a, b) => {
-                const groupA = groupPriority(a[0])
-                const groupB = groupPriority(b[0])
-                if (groupA !== groupB) {
-                    return groupA - groupB
-                }
-                // Sort ascending within the same group (e.g., U1 before U9)
-                return a[0].localeCompare(b[0], undefined, { numeric: true })
-            })
+    return useQuery<LineMetadataList, Error>({
+        queryKey: CACHE_KEYS.lineMetadata(networkId),
+        queryFn: () => fetchWithETag<LineMetadataList>('/v0/lines/metadata', 'lineMetadata', networkId!),
+        enabled: networkId !== null,
+        staleTime: Infinity,
+        gcTime: Infinity,
+        refetchOnWindowFocus: false,
+    })
+}
 
-            return sortedEntries
-        },
+export const useLines = () => {
+    const networkId = useNetworkId()
+    const { data: lineMetadata } = useLineMetadata()
+
+    const queryResult = useQuery<LinesList, Error>({
+        queryKey: CACHE_KEYS.lines(networkId),
+        queryFn: () => fetchWithETag<LinesList>('/v0/lines', 'lines', networkId!),
+        enabled: networkId !== null,
         staleTime: Infinity,
         gcTime: Infinity,
         refetchOnWindowFocus: false,
         structuralSharing: true,
     })
+
+    const { data } = queryResult
+    const sortedEntries = useMemo(
+        () =>
+            data === undefined
+                ? undefined
+                : Object.entries(data).sort(([a], [b]) => compareLines(a, b, lineMetadata ?? {})),
+        [data, lineMetadata]
+    )
+
+    return {
+        data: sortedEntries,
+        error: queryResult.error,
+        isLoading: queryResult.isLoading,
+    }
+}
 
 export interface UseStationDistanceResult {
     distance: number | null
@@ -357,8 +439,16 @@ export const useStationDistance = (
     userLat?: number,
     userLng?: number
 ): UseStationDistanceResult => {
+    const networkId = useNetworkId()
     const { data: distance, isLoading } = useQuery<number | null>({
-        queryKey: ['stationDistance', stationId, userLat, userLng, allStations],
+        /*
+         The station list is an input of the lookup, not part of its identity: putting the whole
+         object in the key rebuilds it on every render and starts a fresh query for an unchanged
+         station. Which stations exist is decided by the network, and that is in the key. The query
+         only runs with both coordinates present, so the zeros are never used.
+        */
+        // eslint-disable-next-line @tanstack/query/exhaustive-deps
+        queryKey: CACHE_KEYS.stationDistance(networkId, stationId, userLat ?? 0, userLng ?? 0),
         queryFn: async () => {
             if (
                 userLat === undefined ||
@@ -375,15 +465,18 @@ export const useStationDistance = (
             }))
             const [userStation] = getClosestStations(1, stationsArray, { lat: userLat, lng: userLng })
             const response = await fetch(
-                `${import.meta.env.VITE_API_URL}/v0/transit/distance?inspectorStationId=${encodeURIComponent(
-                    stationId
-                )}&userStationId=${encodeURIComponent(userStation.id)}`
+                buildApiUrl('/v0/transit/distance', networkId!, {
+                    inspectorStationId: stationId,
+                    userStationId: userStation.id,
+                })
             )
             const data = await response.json()
+
             if (typeof data === 'number') return data
             return data.distance
         },
         enabled:
+            networkId !== null &&
             typeof userLat === 'number' &&
             !Number.isNaN(userLat) &&
             typeof userLng === 'number' &&
@@ -408,18 +501,26 @@ export const useStationDistance = (
     }
 }
 
-export const useStationReports = (stationId: string) =>
-    useQuery<number, Error>({
-        queryKey: CACHE_KEYS.stationReports(stationId),
+export const useStationReports = (stationId: string) => {
+    const networkId = useNetworkId()
+
+    return useQuery<number, Error>({
+        queryKey: CACHE_KEYS.stationReports(networkId, stationId),
         queryFn: async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/v0/stations/${stationId}/statistics`)
+            const response = await fetch(
+                buildApiUrl(`/v0/stations/${encodeURIComponent(stationId)}/statistics`, networkId!)
+            )
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`)
             }
             const data = await response.json()
+
             return data.numberOfReports as number
         },
+        enabled: networkId !== null,
     })
+}
 
 export type NavigationResponse = {
     requestParameters: Record<string, unknown>
@@ -431,24 +532,30 @@ export type NavigationResponse = {
     alternativeItineraries: Itinerary[]
 }
 
-export const useNavigation = (startStationId: string, endStationId: string, options?: { enabled?: boolean }) =>
-    useQuery<NavigationResponse, Error>({
-        queryKey: CACHE_KEYS.navigation(startStationId, endStationId),
+export const useNavigation = (startStationId: string, endStationId: string, options?: { enabled?: boolean }) => {
+    const networkId = useNetworkId()
+
+    return useQuery<NavigationResponse, Error>({
+        queryKey: CACHE_KEYS.navigation(networkId, startStationId, endStationId),
         queryFn: async () => {
             if (!startStationId || !endStationId) {
                 return null
             }
 
             const response = await fetch(
-                `${
-                    import.meta.env.VITE_API_URL
-                }/v0/transit/itineraries?startStation=${startStationId}&endStation=${endStationId}`
+                buildApiUrl('/v0/transit/itineraries', networkId!, {
+                    startStation: startStationId,
+                    endStation: endStationId,
+                })
             )
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`)
             }
             const data = await response.json()
+
             return data
         },
-        enabled: options?.enabled,
+        enabled: networkId !== null && options?.enabled !== false,
     })
+}

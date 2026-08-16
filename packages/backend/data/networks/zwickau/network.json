@@ -1,0 +1,22 @@
+{
+    "id": "zwickau",
+    "name": "Zwickau",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.7189,
+        "longitude": 12.4961
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.643716,
+            "longitude": 12.363561
+        },
+        "northEast": {
+            "latitude": 50.791853,
+            "longitude": 12.596473
+        }
+    }
+}

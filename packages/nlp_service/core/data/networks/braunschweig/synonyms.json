@@ -1,0 +1,237 @@
+{
+    "Ackerstraße": [
+        "Acker",
+        "Ackerstr.",
+        "Ackerstrasse"
+    ],
+    "Alsterplatz": [
+        "Alster",
+        "Alsterplz"
+    ],
+    "Alte Waage": [
+        "Alte"
+    ],
+    "Am Jödebrunnen": [
+        "Jödebrunnen"
+    ],
+    "Am Lehmanger": [
+        "Lehmanger"
+    ],
+    "Am Magnitor": [
+        "Magnitor"
+    ],
+    "Am Queckenberg": [
+        "Queckenberg"
+    ],
+    "An der Rothenburg": [],
+    "Anklamstraße": [
+        "Anklam",
+        "Anklamstr.",
+        "Anklamstrasse"
+    ],
+    "Bahnhof Gliesmarode": [
+        "Bahnhof"
+    ],
+    "Botanischer Garten": [
+        "Botanischer"
+    ],
+    "Burgundenplatz": [
+        "Burgunden",
+        "Burgundenplz"
+    ],
+    "Bürgerpark": [],
+    "Campestraße": [
+        "Campe",
+        "Campestr.",
+        "Campestrasse"
+    ],
+    "Carl-Miele-Straße": [
+        "Carl-Miele-",
+        "Carl-Miele-str.",
+        "Carl-Miele-strasse"
+    ],
+    "Cyriaksring": [],
+    "Donauknoten": [],
+    "Emsstraße": [
+        "Ems",
+        "Emsstr.",
+        "Emsstrasse"
+    ],
+    "Erfurtplatz": [
+        "Erfurt",
+        "Erfurtplz"
+    ],
+    "Europaplatz": [
+        "Europa",
+        "Europaplz"
+    ],
+    "Friedrich-Wilhelm-Platz": [
+        "Friedrich-Wilhelm-",
+        "Friedrich-Wilhelm-plz"
+    ],
+    "Geibelstraße": [
+        "Geibel",
+        "Geibelstr.",
+        "Geibelstrasse"
+    ],
+    "Gesundheitsamt (Wasserwelt)": [
+        "Gesundheitsamt"
+    ],
+    "Gliesmaroder Straße": [
+        "Gliesmaroder",
+        "Gliesmaroder Str.",
+        "Gliesmaroder Strasse"
+    ],
+    "Großes Weghaus": [
+        "Großes"
+    ],
+    "HEH-Kliniken": [],
+    "Hamburger Straße": [
+        "Hamburger",
+        "Hamburger Str.",
+        "Hamburger Strasse"
+    ],
+    "Hansestraße Ost": [
+        "Hansestraße"
+    ],
+    "Hauptbahnhof, Bahnsteig G": [],
+    "Hauptfriedhof": [],
+    "Heideblick": [],
+    "Heinrich-Büssing-Ring": [],
+    "Helmstedter Straße": [
+        "Helmstedter",
+        "Helmstedter Str.",
+        "Helmstedter Strasse"
+    ],
+    "Inselwall": [],
+    "Jahnplatz": [
+        "Jahn",
+        "Jahnplz"
+    ],
+    "John-F.-Kennedy-Platz": [
+        "John-F.-Kennedy-",
+        "John-F.-Kennedy-plz"
+    ],
+    "Kaiserstraße": [
+        "Kaiser",
+        "Kaiserstr.",
+        "Kaiserstrasse"
+    ],
+    "Kruckweg": [],
+    "Leisewitzstraße": [
+        "Leisewitz",
+        "Leisewitzstr.",
+        "Leisewitzstrasse"
+    ],
+    "Lincolnsiedlung": [],
+    "Ludwigstraße": [
+        "Ludwig",
+        "Ludwigstr.",
+        "Ludwigstrasse"
+    ],
+    "Luisenstraße": [
+        "Luisen",
+        "Luisenstr.",
+        "Luisenstrasse"
+    ],
+    "Marienstift": [],
+    "Messeweg": [],
+    "Militschstraße": [
+        "Militsch",
+        "Militschstr.",
+        "Militschstrasse"
+    ],
+    "Moorhüttenweg": [],
+    "Mozartstraße": [
+        "Mozart",
+        "Mozartstr.",
+        "Mozartstrasse"
+    ],
+    "Museumstraße": [
+        "Museum",
+        "Museumstr.",
+        "Museumstrasse"
+    ],
+    "Mühlenpfordtstraße": [
+        "Mühlenpfordt",
+        "Mühlenpfordtstr.",
+        "Mühlenpfordtstrasse"
+    ],
+    "Nibelungenplatz": [
+        "Nibelungen",
+        "Nibelungenplz"
+    ],
+    "Nordhoffstraße": [
+        "Nordhoff",
+        "Nordhoffstr.",
+        "Nordhoffstrasse"
+    ],
+    "Ottenroder Straße": [
+        "Ottenroder",
+        "Ottenroder Str.",
+        "Ottenroder Strasse"
+    ],
+    "Petzvalstraße": [
+        "Petzval",
+        "Petzvalstr.",
+        "Petzvalstrasse"
+    ],
+    "Querumer Straße": [
+        "Querumer",
+        "Querumer Str.",
+        "Querumer Strasse"
+    ],
+    "Rathaus": [],
+    "Rheinring": [],
+    "Richmondweg": [],
+    "Saalestraße": [
+        "Saale",
+        "Saalestr.",
+        "Saalestrasse"
+    ],
+    "Sachsendamm": [],
+    "Salzdahlumer Weg": [
+        "Salzdahlumer"
+    ],
+    "Schloss": [],
+    "Schmalbachstraße": [
+        "Schmalbach",
+        "Schmalbachstr.",
+        "Schmalbachstrasse"
+    ],
+    "Schützenplatz": [
+        "Schützen",
+        "Schützenplz"
+    ],
+    "Siegfriedstraße": [
+        "Siegfried",
+        "Siegfriedstr.",
+        "Siegfriedstrasse"
+    ],
+    "Siekgraben": [],
+    "St. Leonhard (Stadthalle)": [],
+    "Stadion (Schwarzer Berg)": [],
+    "Stöckheimer Markt": [
+        "Stöckheimer"
+    ],
+    "Theaterwall": [],
+    "Trakehnenstraße": [
+        "Trakehnen",
+        "Trakehnenstr.",
+        "Trakehnenstrasse"
+    ],
+    "Turmstraße": [
+        "Turm",
+        "Turmstr.",
+        "Turmstrasse"
+    ],
+    "Veltenhöfer Straße": [
+        "Veltenhöfer",
+        "Veltenhöfer Str.",
+        "Veltenhöfer Strasse"
+    ],
+    "Willy-Brandt-Platz": [
+        "Willy-Brandt-",
+        "Willy-Brandt-plz"
+    ]
+}

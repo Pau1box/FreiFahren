@@ -1,0 +1,47 @@
+{
+    "1": {
+        "color": "#1f77b4",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#d62728",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3": {
+        "color": "#2ca02c",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "4": {
+        "color": "#ff7f0e",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "5": {
+        "color": "#9467bd",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "C11": {
+        "color": "#8c564b",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "C13": {
+        "color": "#17becf",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "C14": {
+        "color": "#e377c2",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "C15": {
+        "color": "#7f7f7f",
+        "mode": "light_rail",
+        "isCircular": false
+    }
+}

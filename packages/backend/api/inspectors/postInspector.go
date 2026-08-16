@@ -2,13 +2,16 @@ package inspectors
 
 import (
 	"bytes"
+	"crypto/subtle"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"net/http"
 	"os"
+	"sync"
 	"time"
 
+	"github.com/FreiFahren/backend/api/networks"
 	"github.com/FreiFahren/backend/api/prediction"
 	"github.com/FreiFahren/backend/data"
 	"github.com/FreiFahren/backend/database"
@@ -19,7 +22,70 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-var lastMiniAppNotification time.Time
+// miniAppNotificationInterval is how long the mini app chat of one network is
+// left alone after a notification.
+const miniAppNotificationInterval = 5 * time.Minute
+
+// miniAppRateLimit keeps the last mini app notification per network. Every
+// network has its own Telegram chat, so a report in one city must not silence
+// the chat of another. The mutex is needed because the notification runs in a
+// goroutine and echo serves requests in parallel.
+type miniAppRateLimit struct {
+	mutex sync.Mutex
+	last  map[string]time.Time
+}
+
+var miniAppNotifications = &miniAppRateLimit{last: make(map[string]time.Time)}
+
+// reserve claims the network's next notification, or reports that it is too soon.
+//
+// Checking and claiming happen under one lock on purpose. Two reports for the same city arriving
+// together would otherwise both find the interval passed, because the claim only happened after the
+// HTTP call to the mini app, which takes long enough for that to be the normal case rather than a
+// rare one. The chat would then get both.
+//
+// The returned times are what `release` needs to undo the claim.
+func (r *miniAppRateLimit) reserve(networkID string) (previous, claimed time.Time, allowed bool) {
+	r.mutex.Lock()
+	defer r.mutex.Unlock()
+
+	previous = r.last[networkID]
+	if time.Since(previous) < miniAppNotificationInterval {
+		return time.Time{}, time.Time{}, false
+	}
+
+	claimed = time.Now()
+	r.last[networkID] = claimed
+	return previous, claimed, true
+}
+
+// release gives the claim back after a notification that did not go out, so a failing mini app does
+// not cost the network its next five minutes. It leaves a claim someone else has since made alone.
+func (r *miniAppRateLimit) release(networkID string, previous, claimed time.Time) {
+	r.mutex.Lock()
+	defer r.mutex.Unlock()
+
+	if r.last[networkID].Equal(claimed) {
+		r.last[networkID] = previous
+	}
+}
+
+// IsTrustedReporter reports whether the request carries the shared password our own bots
+// authenticate with, which lets them skip the spam check and the rate limit.
+//
+// An unset REPORT_PASSWORD authenticates nobody. Comparing the header against an empty
+// variable used to be true for every anonymous request, which turned a missing deployment
+// secret into an open door instead of a locked one. The comparison itself runs in constant
+// time so that the password cannot be guessed byte by byte from the response time.
+func IsTrustedReporter(c echo.Context) bool {
+	expected := os.Getenv("REPORT_PASSWORD")
+	if expected == "" {
+		return false
+	}
+
+	provided := c.Request().Header.Get("X-Password")
+	return subtle.ConstantTimeCompare([]byte(provided), []byte(expected)) == 1
+}
 
 func verifyRequest(c echo.Context) error {
 	securityServiceURL := os.Getenv("SECURITY_MICROSERVICE_URL")
@@ -86,19 +152,22 @@ func verifyRequest(c echo.Context) error {
 // @Description Accepts a JSON payload with details about a ticket inspector's current location.
 // @Description This endpoint validates the provided data, processes necessary computations for linking stations and lines,
 // @Description inserts the data into the database, and triggers an update to the risk model used in operational analysis.
-// @Description If the 'timestamp' field is not provided in the request, the current UTC time truncated to the nearest minute is used automatically.
-// @Description The endpoint also includes a rate limit to prevent abuse. The rate limit is based on the IP address of the request.
+// @Description If the 'timestamp' field of the body is not provided, the current UTC time truncated to the nearest minute is used automatically.
+// @Description The endpoint is rate limited per IP address, and reports classified as spam are rejected with 403.
 //
 // @Tags basics
 //
 // @Accept json
 // @Produce json
 //
-// @Param inspectorData body structs.InspectorRequest true "Data about the inspector's location and activity"
-// @Param timestamp query string false "Timestamp of the report in ISO 8601 format (e.g., 2006-01-02T15:04:05Z); if not provided, the current time is used"
+// @Param inspectorData body structs.InspectorRequest true "Data about the inspector's location and activity, including an optional 'timestamp' in RFC3339 format"
+// @Param network query string false "ID of the network (defaults to berlin)"
 //
 // @Success 200 {object} structs.ResponseData "Successfully processed and inserted the inspector data with computed linkages and risk model updates."
 // @Failure 400 "Bad Request: Missing or incorrect parameters provided."
+// @Failure 403 {object} map[string]string "Forbidden: The report was classified as spam."
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
+// @Failure 422 {object} map[string]string "Unprocessable Entity: The report names a station, direction or line the network does not contain."
 // @Failure 429 "Too Many Requests: The request has been rate limited."
 // @Failure 500 "Internal Server Error: Error during data processing or database insertion."
 //
@@ -107,8 +176,13 @@ func PostInspector(c echo.Context) error {
 	logger.Log.Info().
 		Msg("POST '/basics/Inspectors' UserAgent: " + c.Request().UserAgent())
 
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
 	// dont rate limit requests from the bot (password in header) or in dev mode
-	if c.Request().Header.Get("X-Password") != os.Getenv("REPORT_PASSWORD") && os.Getenv("STATUS") != "dev" {
+	if !IsTrustedReporter(c) && os.Getenv("STATUS") != "dev" {
 		// Check if the request is valid
 		if err := verifyRequest(c); err != nil {
 			if err.Error() == "spam report detected" {
@@ -147,7 +221,15 @@ func PostInspector(c echo.Context) error {
 		return c.NoContent(http.StatusBadRequest)
 	}
 
-	dataToInsert, pointers, err := processRequestData(req)
+	if unknownFields := unknownNetworkReferences(networkID, req); len(unknownFields) > 0 {
+		logger.Log.Warn().
+			Str("network", networkID).
+			Strs("unknownFields", unknownFields).
+			Msg("Report references data of another network")
+		return networks.UnknownReference(networkID, unknownFields...)
+	}
+
+	dataToInsert, pointers, err := processRequestData(networkID, req)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Error processing request data in postInspector")
 		// todo: return error as soon as new release is deployed
@@ -155,12 +237,13 @@ func PostInspector(c echo.Context) error {
 		return c.JSON(http.StatusOK, req)
 	}
 
-	if err := PostProcessInspectorData(dataToInsert, pointers); err != nil {
+	if err := PostProcessInspectorData(networkID, dataToInsert, pointers); err != nil {
 		logger.Log.Error().Err(err).Msg("Error filling missing columns in postInspector")
 		return c.NoContent(http.StatusInternalServerError)
 	}
 
 	if err := database.InsertTicketInfo(
+		networkID,
 		pointers.TimestampPtr,
 		pointers.AuthorPtr,
 		pointers.MessagePtr,
@@ -174,7 +257,7 @@ func PostInspector(c echo.Context) error {
 
 	// Update risk model after successful report submission
 	go func() {
-		if _, err := prediction.ExecuteRiskModel(); err != nil {
+		if _, err := prediction.ExecuteRiskModel(networkID); err != nil {
 			logger.Log.Error().Err(err).Msg("Failed to update risk model after new report")
 		}
 	}()
@@ -184,20 +267,23 @@ func PostInspector(c echo.Context) error {
 		if pointers.AuthorPtr == nil {
 			telegramEndpoint := os.Getenv("NLP_SERVICE_URL") + "/report-inspector"
 			reportPassword := os.Getenv("REPORT_PASSWORD")
-			if err := notifyOtherServiceAboutReport(telegramEndpoint, dataToInsert, "Telegram bot", reportPassword); err != nil {
+			if err := notifyOtherServiceAboutReport(networkID, telegramEndpoint, dataToInsert, "Telegram bot", reportPassword); err != nil {
 				logger.Log.Error().Err(err).Msg("Error notifying Telegram bot about report in postInspector")
 			}
 		} else if *pointers.AuthorPtr == 77105110105 {
-			if time.Since(lastMiniAppNotification) >= 5*time.Minute || os.Getenv("STATUS") == "dev" {
-				miniAppEndpoint := os.Getenv("NLP_SERVICE_URL") + "/mini-app/report"
-				reportPassword := os.Getenv("REPORT_PASSWORD")
-				if err := notifyOtherServiceAboutReport(miniAppEndpoint, dataToInsert, "Mini app", reportPassword); err != nil {
-					logger.Log.Error().Err(err).Msg("Error notifying Mini app about report in postInspector")
-				} else {
-					lastMiniAppNotification = time.Now()
+			previous, claimed, allowed := miniAppNotifications.reserve(networkID)
+			if !allowed && os.Getenv("STATUS") != "dev" {
+				logger.Log.Info().Str("network", networkID).Msg("Skipping Mini app notification, one went out recently")
+				return
+			}
+
+			miniAppEndpoint := os.Getenv("NLP_SERVICE_URL") + "/mini-app/report"
+			reportPassword := os.Getenv("REPORT_PASSWORD")
+			if err := notifyOtherServiceAboutReport(networkID, miniAppEndpoint, dataToInsert, "Mini app", reportPassword); err != nil {
+				logger.Log.Error().Err(err).Msg("Error notifying Mini app about report in postInspector")
+				if allowed {
+					miniAppNotifications.release(networkID, previous, claimed)
 				}
-			} else {
-				logger.Log.Info().Msg("Skipping Mini app notification - rate limit not exceeded")
 			}
 		}
 	}()
@@ -205,11 +291,27 @@ func PostInspector(c echo.Context) error {
 	return c.JSON(http.StatusOK, dataToInsert)
 }
 
-func processRequestData(req structs.InspectorRequest) (*structs.ResponseData, *structs.InsertPointers, error) {
+// unknownNetworkReferences names the fields of a report that the requested
+// network does not contain. With more than one network that is no longer a typo
+// but the normal consequence of a client having the wrong city selected, so it
+// is a client error rather than a server fault.
+func unknownNetworkReferences(networkID string, req structs.InspectorRequest) []string {
+	unknownFields := networks.UnknownStations(networkID, map[string]string{
+		"stationId":   req.StationId,
+		"directionId": req.DirectionId,
+	})
+	if req.Line != "" && !networks.HasLine(networkID, req.Line) {
+		unknownFields = append(unknownFields, "line")
+	}
+
+	return unknownFields
+}
+
+func processRequestData(networkID string, req structs.InspectorRequest) (*structs.ResponseData, *structs.InsertPointers, error) {
 	logger.Log.Debug().Msg("Processing ticket info for insertion")
 	logger.Log.Info().Interface("Request", req).Msg("Request data")
 
-	var stations = data.GetStationsList()
+	stations, _ := data.GetStationsList(networkID)
 
 	response := &structs.ResponseData{}
 	pointers := &structs.InsertPointers{}
@@ -268,15 +370,23 @@ func processRequestData(req structs.InspectorRequest) (*structs.ResponseData, *s
 	return response, pointers, nil
 }
 
-func notifyOtherServiceAboutReport(endpoint string, data *structs.ResponseData, serviceName string, password string) error {
-	logger.Log.Debug().Str("service", serviceName).Msg("Sending data")
+// notificationClient posts reports to the Telegram bot and the mini app. The default client
+// has no timeout, so a service that stops answering would keep the goroutine, and the report
+// it holds, alive for as long as the process runs.
+var notificationClient = &http.Client{Timeout: 10 * time.Second}
 
+func notifyOtherServiceAboutReport(networkID string, endpoint string, data *structs.ResponseData, serviceName string, password string) error {
+	logger.Log.Debug().Str("service", serviceName).Str("network", networkID).Msg("Sending data")
+
+	// The network picks the Telegram chat on the other side. Without it every report
+	// would be announced in the chat of the default network.
 	payload := map[string]string{
 		"line":      data.Line,
 		"station":   data.Station.Name,
 		"direction": data.Direction.Name,
 		"message":   data.Message,
 		"stationId": data.Station.Id,
+		"network":   networkID,
 	}
 
 	jsonData, err := json.Marshal(payload)
@@ -296,8 +406,7 @@ func notifyOtherServiceAboutReport(endpoint string, data *structs.ResponseData, 
 		req.Header.Set("X-Password", password)
 	}
 
-	client := &http.Client{}
-	resp, err := client.Do(req)
+	resp, err := notificationClient.Do(req)
 	if err != nil {
 		logger.Log.Error().Err(err).Str("service", serviceName).Msg("Error posting data")
 		return err

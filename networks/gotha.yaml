@@ -1,0 +1,41 @@
+# Gotha, the tram network and the Thüringerwaldbahn out to Bad Tabarz.
+#
+# Added by hand after the first build of Erfurt: the discovery clustered both into one network,
+# because the Waltershausen branch reaches to within the clustering radius of Erfurt. They are two
+# systems though, run by different operators and not connected to each other, and both call a line
+# "6". Built as one network, Erfurt's line 6 ran from the city centre to Waltershausen in a single
+# 32 km hop.
+
+id: gotha
+name: Gotha
+countryCode: DE
+timezone: Europe/Berlin
+# Every generated network starts in beta. It shows only reports people actually made, never
+# predicted ones, because there is no history to reason from yet.
+status: beta
+
+center:
+    latitude: 50.945
+    longitude: 10.7
+# Derived from the generated stations, so the map fits the network that was actually built.
+bounds: auto
+
+source:
+    # A box rather than a city boundary: the Thüringerwaldbahn leaves Gotha and runs through
+    # Waltershausen and Friedrichroda to Bad Tabarz, so no single administrative area contains it.
+    boundingBox:
+        southWest:
+            latitude: 50.82
+            longitude: 10.5
+        northEast:
+            latitude: 51.0
+            longitude: 10.78
+    modes:
+        tram: auto
+    lines: auto
+
+stations:
+    mergeRadiusMeters: 250
+    # No plain `ref` fallback: `ref` is only unique per operator, so trusting it risks colliding with
+    # another network's station id. DS100 codes are unique across Germany and node ids by construction.
+    idSources: [ref:ds100, railway:ref]

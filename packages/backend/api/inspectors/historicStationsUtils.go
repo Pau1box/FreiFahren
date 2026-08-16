@@ -4,22 +4,26 @@ import (
 	"math/rand"
 	"time"
 
+	"github.com/FreiFahren/backend/data"
 	"github.com/FreiFahren/backend/database"
 	"github.com/FreiFahren/backend/logger"
 	"github.com/FreiFahren/backend/utils"
 )
 
 // The threshold is calculated based on the current time of day and the day of the week.
+//
+// The curve models a day in the city, so it is read on the network's clock rather than on the
+// server's. See data.NetworkLocation.
 // The threshold is at 7 between 9:00 to 18:00,
 // linearly decreases to 1 between 18:00 to 21:00,
 // stays at 1 between 21:00 to 7:00 and
 // linearly increases to 7 between 7:00 to 9:00.
 // On Saturdays the threshold decreases from 18:00 to 24:00.
 // The threshold is reduced by 50% if it is a weekend.
-func calculateHistoricDataThreshold() int {
+func calculateHistoricDataThreshold(networkID string) int {
 	logger.Log.Debug().Msg("Calculating historic data threshold")
 
-	currentTime := time.Now().UTC()
+	currentTime := time.Now().In(data.NetworkLocation(networkID))
 	hour := currentTime.Hour()
 	minute := currentTime.Minute()
 
@@ -78,6 +82,7 @@ func calculateWeekendAdjustment(currentTime time.Time, threshold int) float64 {
 //
 // parameters:
 //
+//	networkID: the network the historic data is sampled from
 //	ticketInfoList: the list of ticket inspectors
 //	remaining: the number of historic data to fetch
 //	startTime: the time to start fetching historic data from
@@ -87,7 +92,7 @@ func calculateWeekendAdjustment(currentTime time.Time, threshold int) float64 {
 //
 //	the list of ticket inspectors with the historic data added
 //	an error if one occurred
-func FetchAndAddHistoricData(ticketInfoList []utils.TicketInspector, remaining int, startTime time.Time, stationId string) ([]utils.TicketInspector, error) {
+func FetchAndAddHistoricData(networkID string, ticketInfoList []utils.TicketInspector, remaining int, startTime time.Time, stationId string) ([]utils.TicketInspector, error) {
 	logger.Log.Debug().Msg("Fetching and adding historic data")
 
 	// If we're filtering by a specific station, we should only add historic data for that station
@@ -130,7 +135,7 @@ func FetchAndAddHistoricData(ticketInfoList []utils.TicketInspector, remaining i
 	}
 
 	excludedStationIds := utils.GetKeysFromMap(currentStationIds)
-	historicDataList, err := database.GetHistoricStations(startTime, remaining, 24, excludedStationIds)
+	historicDataList, err := database.GetHistoricStations(networkID, startTime, remaining, 24, excludedStationIds)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Error getting historic stations")
 		return nil, err

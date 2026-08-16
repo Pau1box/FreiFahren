@@ -13,6 +13,13 @@ div.report-form {
     align-items: flex-end;
     width: 100%;
     gap: var(--margin-s);
+    /* How many modes a city has is not fixed, so they wrap instead of being squeezed off screen. */
+    flex-wrap: wrap;
+}
+
+.selector-container > .large-selector {
+    width: auto;
+    flex: 1 1 auto;
 }
 .selector-container.select-field{
     display: flex;
@@ -108,6 +115,11 @@ div.report-form {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+/* Mode names are words rather than single letters, so they must not break mid label. */
+.entity-type-selector .line {
+    white-space: nowrap;
 }
 
 /* Line styles */

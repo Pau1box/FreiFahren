@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Bar, BarChart, ResponsiveContainer, Tooltip, TooltipProps, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, TooltipProps, XAxis, YAxis } from 'recharts'
 import { NameType, ValueType } from 'recharts/types/component/DefaultTooltipContent'
-import { getLineColor } from 'src/hooks/getLineColor'
+import { useLineColor } from 'src/hooks/useLineColor'
 
 interface LinesSectionProps {
     getChartData: { line: string; reports: number }[]
@@ -37,14 +37,9 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload, getChart
     )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CustomBarShape = ({ x, y, width, height, payload }: any) => {
-    const color = getLineColor(payload.line)
-    return <rect x={x} y={y} width={width} height={height} fill={color} rx={4} ry={4} />
-}
-
 const LinesSection: React.FC<LinesSectionProps> = ({ getChartData }) => {
     const { t } = useTranslation()
+    const getLineColor = useLineColor()
 
     return (
         <section className="list-modal">
@@ -68,14 +63,11 @@ const LinesSection: React.FC<LinesSectionProps> = ({ getChartData }) => {
                         }}
                     />
                     <Tooltip content={<CustomTooltip getChartData={getChartData} />} />
-                    <Bar
-                        dataKey="reports"
-                        barSize={24}
-                        radius={[4, 4, 4, 4]}
-                        fill="#7e5330"
-                        name="reports"
-                        shape={CustomBarShape}
-                    />
+                    <Bar dataKey="reports" barSize={24} radius={[4, 4, 4, 4]} name="reports">
+                        {getChartData.map((entry) => (
+                            <Cell key={entry.line} fill={getLineColor(entry.line)} />
+                        ))}
+                    </Bar>
                 </BarChart>
             </ResponsiveContainer>
         </section>

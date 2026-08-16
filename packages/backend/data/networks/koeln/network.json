@@ -1,0 +1,28 @@
+{
+    "id": "koeln",
+    "name": "Köln",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Bergisch Gladbach",
+        "Bonn",
+        "Frechen",
+        "Hürth",
+        "Sankt Augustin"
+    ],
+    "center": {
+        "latitude": 50.9384,
+        "longitude": 6.96
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.599289,
+            "longitude": 6.726105
+        },
+        "northEast": {
+            "latitude": 51.073109,
+            "longitude": 7.288085
+        }
+    }
+}

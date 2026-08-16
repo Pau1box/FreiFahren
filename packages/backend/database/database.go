@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/FreiFahren/backend/data"
 	"github.com/FreiFahren/backend/logger"
 	"github.com/FreiFahren/backend/utils"
 	"github.com/jackc/pgx/v5"
@@ -102,16 +103,28 @@ func BackupDatabase() {
 func CreateReportsTable() {
 	logger.Log.Debug().Msg("Creating table reports")
 
+	// The network_id default backfills deployments that predate multi network
+	// support, where every existing report was a Berlin one.
+	//
+	// The line column is 16 characters, not the 3 that Berlin's U8 and M10 needed.
+	// Other German networks have longer ids (RB33, RE11, S5X), and 16 is the limit
+	// that scripts/validate_network.py enforces and that the hono backend's schema
+	// already uses. The ALTER widens existing deployments; widening a varchar does
+	// not rewrite the table.
 	sql := `
 	CREATE TABLE IF NOT EXISTS reports (
 		id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
 		timestamp TIMESTAMP NOT NULL DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'UTC'),
 		message TEXT,
 		author BIGINT,
-		line VARCHAR(3),
+		line VARCHAR(16),
 		station_id VARCHAR(250),
-		direction_id VARCHAR(250)
+		direction_id VARCHAR(250),
+		network_id TEXT NOT NULL DEFAULT 'berlin'
 	);
+	ALTER TABLE reports ADD COLUMN IF NOT EXISTS network_id TEXT NOT NULL DEFAULT 'berlin';
+	ALTER TABLE reports ALTER COLUMN line TYPE VARCHAR(16);
+	CREATE INDEX IF NOT EXISTS reports_network_id_timestamp_idx ON reports (network_id, timestamp);
 	`
 
 	_, err := pool.Exec(context.Background(), sql)
@@ -139,16 +152,16 @@ func CreateFeedbackTable() {
 	logger.Log.Info().Msg("Created table feedback")
 }
 
-func InsertTicketInfo(timestamp *time.Time, author *int64, message, line, stationId, directionId *string) error {
+func InsertTicketInfo(networkId string, timestamp *time.Time, author *int64, message, line, stationId, directionId *string) error {
 	logger.Log.Debug().Msg("Inserting ticket info")
 
 	sql := `
-    INSERT INTO reports (timestamp, message, author, line, station_id, direction_id)
-    VALUES ($1, $2, $3, $4, $5, $6);
+    INSERT INTO reports (timestamp, message, author, line, station_id, direction_id, network_id)
+    VALUES ($1, $2, $3, $4, $5, $6, $7);
     `
 
 	// Convert *string and *int64 directly to interface{} for pgx
-	values := []interface{}{timestamp, message, author, line, stationId, directionId}
+	values := []interface{}{timestamp, message, author, line, stationId, directionId, networkId}
 
 	logger.Log.Info().Msg("Inserting ticket info into the database")
 	_, err := pool.Exec(context.Background(), sql, values...)
@@ -175,29 +188,42 @@ func InsertFeedback(feedback string) error {
 	return nil
 }
 
-func getLastNonHistoricTimestamp() (time.Time, error) {
+func getLastNonHistoricTimestamp(networkId string) (time.Time, error) {
 	logger.Log.Debug().Msg("Getting last non-historic timestamp")
 
 	sqlTimestamp := `
         SELECT MAX(timestamp)
-        FROM reports;
+        FROM reports
+        WHERE network_id = $1;
     `
-	row := pool.QueryRow(context.Background(), sqlTimestamp)
-	var lastNonHistoricTimestamp time.Time
+	row := pool.QueryRow(context.Background(), sqlTimestamp, networkId)
+	var lastNonHistoricTimestamp *time.Time
 	if err := row.Scan(&lastNonHistoricTimestamp); err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to get last non-historic timestamp")
 		return time.Time{}, err
 	}
-	return lastNonHistoricTimestamp, nil
+	if lastNonHistoricTimestamp == nil {
+		return time.Time{}, nil
+	}
+	return *lastNonHistoricTimestamp, nil
 }
 
-func executeGetHistoricStationsSQL(hour, weekday, remaining int, excludedStationIds []string, lastNonHistoricTimestamp time.Time) ([]utils.TicketInspector, error) {
+func executeGetHistoricStationsSQL(networkId string, timezone string, hour, weekday, remaining int, excludedStationIds []string, lastNonHistoricTimestamp time.Time) ([]utils.TicketInspector, error) {
 	logger.Log.Debug().Msg("Executing SQL query to get historic stations")
 
+	// The hour and the weekday are read on the network's clock, because "the busy station at 8 in
+	// the morning" is a statement about local rush hour. The caller derives its hour on the same
+	// clock, so both sides of the comparison mean the same thing.
+	//
+	// Both conversions are needed: the column is a timestamp without time zone holding UTC, so the
+	// first one turns it into an instant and the second reads that instant in the network's zone.
+	// A single conversion would read the stored value as if it were already local time.
 	sql := `
         SELECT (station_id)
         FROM reports
-        WHERE EXTRACT(HOUR FROM timestamp) = $1 AND EXTRACT(DOW FROM timestamp) = $2
+        WHERE network_id = $5
+        AND EXTRACT(HOUR FROM timestamp AT TIME ZONE 'UTC' AT TIME ZONE $6::text) = $1
+        AND EXTRACT(DOW FROM timestamp AT TIME ZONE 'UTC' AT TIME ZONE $6::text) = $2
         AND station_id IS NOT NULL
         AND NOT (station_id = ANY($4))
         GROUP BY station_id
@@ -214,7 +240,7 @@ func executeGetHistoricStationsSQL(hour, weekday, remaining int, excludedStation
 		}
 	}
 
-	rows, err := pool.Query(context.Background(), sql, hour, weekday, remaining, pq.Array(excludedStationIds))
+	rows, err := pool.Query(context.Background(), sql, hour, weekday, remaining, pq.Array(excludedStationIds), networkId, timezone)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to execute SQL query")
 		return nil, err
@@ -244,6 +270,7 @@ func executeGetHistoricStationsSQL(hour, weekday, remaining int, excludedStation
 }
 
 func GetHistoricStations(
+	networkId string,
 	startTime time.Time,
 	remaining int,
 	maxRecursiveCalls int,
@@ -255,16 +282,21 @@ func GetHistoricStations(
 		return nil, fmt.Errorf("maximum recursion depth exceeded")
 	}
 
-	lastNonHistoricTimestamp, err := getLastNonHistoricTimestamp()
+	lastNonHistoricTimestamp, err := getLastNonHistoricTimestamp(networkId)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to get last non-historic timestamp")
 		return nil, err
 	}
 
-	hour := startTime.Hour()
-	weekday := int(startTime.Weekday())
+	// Read the instant on the network's clock, not on the server's: the same instant is a
+	// different time of day in every city, and across the daylight saving change the same local
+	// hour maps to different UTC hours.
+	location := data.NetworkLocation(networkId)
+	localStartTime := startTime.In(location)
+	hour := localStartTime.Hour()
+	weekday := int(localStartTime.Weekday())
 
-	ticketInfoList, err := executeGetHistoricStationsSQL(hour, weekday, remaining, excludedStationIds, lastNonHistoricTimestamp)
+	ticketInfoList, err := executeGetHistoricStationsSQL(networkId, location.String(), hour, weekday, remaining, excludedStationIds, lastNonHistoricTimestamp)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to execute get historic stations SQL")
 		return nil, err
@@ -280,7 +312,7 @@ func GetHistoricStations(
 			excludedStationIds = append(excludedStationIds, ticketInfo.StationId)
 		}
 
-		moreTicketInfoList, err := GetHistoricStations(broaderTimestamp, remaining, maxRecursiveCalls-1, excludedStationIds)
+		moreTicketInfoList, err := GetHistoricStations(networkId, broaderTimestamp, remaining, maxRecursiveCalls-1, excludedStationIds)
 		if err != nil {
 			logger.Log.Error().Err(err).Msg("Failed to get more historic stations")
 			return nil, err
@@ -292,7 +324,7 @@ func GetHistoricStations(
 	return ticketInfoList, nil
 }
 
-func GetLatestTicketInspectors(start, end time.Time, stationId string) ([]utils.TicketInspector, error) {
+func GetLatestTicketInspectors(networkId string, start, end time.Time, stationId string) ([]utils.TicketInspector, error) {
 	logger.Log.Debug().Msg("Getting latest ticket inspectors")
 
 	var sql string
@@ -304,19 +336,21 @@ func GetLatestTicketInspectors(start, end time.Time, stationId string) ([]utils.
 		sql = `SELECT timestamp, station_id, direction_id, line,
                 CASE WHEN author IS NULL THEN message ELSE NULL END as message
                 FROM reports
-                WHERE timestamp >= $1 AND timestamp <= $2
+                WHERE network_id = $4
+                AND timestamp >= $1 AND timestamp <= $2
                 AND station_id IS NOT NULL
                 AND station_id = $3;`
 
-		rows, err = pool.Query(context.Background(), sql, start, end, stationId)
+		rows, err = pool.Query(context.Background(), sql, start, end, stationId, networkId)
 	} else {
 		sql = `SELECT timestamp, station_id, direction_id, line,
                 CASE WHEN author IS NULL THEN message ELSE NULL END as message
                 FROM reports
-                WHERE timestamp >= $1 AND timestamp <= $2
+                WHERE network_id = $3
+                AND timestamp >= $1 AND timestamp <= $2
                 AND station_id IS NOT NULL;`
 
-		rows, err = pool.Query(context.Background(), sql, start, end)
+		rows, err = pool.Query(context.Background(), sql, start, end, networkId)
 	}
 
 	if err != nil {
@@ -345,34 +379,24 @@ func GetLatestTicketInspectors(start, end time.Time, stationId string) ([]utils.
 	return ticketInfoList, nil
 }
 
-func GetLatestUpdateTime() (time.Time, error) {
+func GetLatestUpdateTime(networkId string) (time.Time, error) {
 	var lastUpdateTime time.Time
 
-	sql := `SELECT MAX(timestamp) FROM reports;`
+	sql := `SELECT MAX(timestamp) FROM reports WHERE network_id = $1;`
 
-	err := pool.QueryRow(context.Background(), sql).Scan(&lastUpdateTime)
+	// MAX is NULL for a network that has no reports yet, which is the normal
+	// state of a freshly added one rather than an error.
+	var latest *time.Time
+	err := pool.QueryRow(context.Background(), sql, networkId).Scan(&latest)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to get latest update time")
 		return time.Time{}, err
 	}
-
-	return lastUpdateTime, nil
-}
-
-func GetNumberOfSubmissionsInLast24Hours() (int, error) {
-	logger.Log.Debug().Msg("Getting number of submissions in last 24 hours")
-
-	var count int
-
-	sql := `SELECT COUNT(*) FROM reports WHERE timestamp >= NOW() AT TIME ZONE 'UTC' - INTERVAL '24 hours';`
-
-	err := pool.QueryRow(context.Background(), sql).Scan(&count)
-	if err != nil {
-		logger.Log.Error().Err(err).Msg("Failed to get number of submissions in last 24 hours")
-		return 0, err
+	if latest != nil {
+		lastUpdateTime = *latest
 	}
 
-	return count, nil
+	return lastUpdateTime, nil
 }
 
 func RoundOldTimestamp() {
@@ -389,24 +413,26 @@ func RoundOldTimestamp() {
 // Gets the the station id that is most common in the given list of stations.
 //
 // Parameters:
+//   - networkId: The network the reports are looked up in.
 //   - stations: A list of station Ids.
 //
 // Returns:
 //   - The most common station Id.
 //   - An error if something went wrong.
-func GetMostCommonStationId(stations []string) (string, error) {
+func GetMostCommonStationId(networkId string, stations []string) (string, error) {
 	logger.Log.Debug().Msg("Getting most common station Id")
 
 	sql := `
         SELECT station_id
         FROM reports
-        WHERE station_id = ANY($1)
+        WHERE network_id = $2
+        AND station_id = ANY($1)
         GROUP BY station_id
         ORDER BY COUNT(*) DESC
         LIMIT 1
     `
 
-	rows, err := pool.Query(context.Background(), sql, pq.Array(stations))
+	rows, err := pool.Query(context.Background(), sql, pq.Array(stations), networkId)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to get most common station Id")
 		return "", err
@@ -427,12 +453,12 @@ func GetMostCommonStationId(stations []string) (string, error) {
 // GetNumberOfReports gets the number of reports for a given station and line.
 //
 // Will filter by station and line if they are not empty. Returns 0 if no reports are found.
-func GetNumberOfReports(stationId, lineId string, startTime, endTime time.Time) (int, error) {
+func GetNumberOfReports(networkId, stationId, lineId string, startTime, endTime time.Time) (int, error) {
 	logger.Log.Debug().Msgf("Getting number of reports for station %s and line %s", stationId, lineId)
 
-	sql := `SELECT COUNT(*) FROM reports WHERE timestamp >= $1 AND timestamp <= $2`
-	params := []interface{}{startTime, endTime}
-	paramCount := 2
+	sql := `SELECT COUNT(*) FROM reports WHERE network_id = $1 AND timestamp >= $2 AND timestamp <= $3`
+	params := []interface{}{networkId, startTime, endTime}
+	paramCount := 3
 
 	if stationId != "" {
 		paramCount++

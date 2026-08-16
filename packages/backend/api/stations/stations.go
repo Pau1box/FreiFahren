@@ -4,6 +4,8 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/FreiFahren/backend/api/networks"
+	"github.com/FreiFahren/backend/caching"
 	"github.com/FreiFahren/backend/data"
 	_ "github.com/FreiFahren/backend/docs"
 	"github.com/FreiFahren/backend/logger"
@@ -20,23 +22,30 @@ import (
 //
 // @Produce json
 //
+// @Param network query string false "ID of the network (defaults to berlin)"
+//
 // @Success 200 {object} map[string]utils.Station
+// @Success 304 "Not Modified: The ETag matches the If-None-Match header."
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
 // @Failure 500 "Internal Server Error: Error retrieving stations data."
 //
 // @Router /stations [get]
 func GetAllStations(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/stations' UserAgent: " + c.Request().UserAgent())
 
-	/* Disable caching to fix issue with invalid cache in mobile app.
-	/* Todo: enable again
-	if cache, exists := caching.GlobalCacheManager.Get("stations"); exists {
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
+	if cache, exists := caching.GlobalCacheManager.Get(caching.NetworkKey("stations", networkID)); exists {
 		return cache.ETagMiddleware()(func(c echo.Context) error {
 			return nil
 		})(c)
 	}
-	*/
 
-	return c.JSON(http.StatusOK, data.GetStationsList())
+	stations, _ := data.GetStationsList(networkID)
+	return c.JSON(http.StatusOK, stations)
 }
 
 // @Summary Get a single station by ID
@@ -49,6 +58,7 @@ func GetAllStations(c echo.Context) error {
 // @Produce json
 //
 // @Param stationId path string true "ID of the station"
+// @Param network query string false "ID of the network (defaults to berlin)"
 //
 // @Success 200 {object} utils.StationListEntry "Successfully retrieved the specified station data."
 // @Failure 404 {object} map[string]string "Station not found: The specified station does not exist."
@@ -57,8 +67,13 @@ func GetAllStations(c echo.Context) error {
 func GetSingleStation(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/stations/:stationId' UserAgent: " + c.Request().UserAgent())
 
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
 	stationId := c.Param("stationId")
-	stations := data.GetStationsList()
+	stations, _ := data.GetStationsList(networkID)
 
 	if station, ok := stations[stationId]; ok {
 		return c.JSON(http.StatusOK, station)
@@ -70,13 +85,14 @@ func GetSingleStation(c echo.Context) error {
 // @Summary Search for a station by name
 //
 // @Description Searches for a station using the provided name and returns the matching station information.
-// @Description This endpoint is case and whitespace insensitive and returns the first exact match found.
+// @Description This endpoint is case and whitespace insensitive. Station names are not unique, so when several stations carry the name the one with the lowest id is returned.
 //
 // @Tags stations
 //
 // @Produce json
 //
 // @Param name query string true "Name of the station to search for"
+// @Param network query string false "ID of the network (defaults to berlin)"
 //
 // @Success 200 {object} map[string]utils.StationListEntry "Successfully found and retrieved the station data."
 // @Failure 400 {object} map[string]string "Bad Request: Missing station name parameter."
@@ -86,18 +102,35 @@ func GetSingleStation(c echo.Context) error {
 func SearchStation(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/stations/search' UserAgent: " + c.Request().UserAgent())
 
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
 	name := c.QueryParam("name")
 	if name == "" {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "Bad Request: Missing station name parameter."})
 	}
 
-	stations := data.GetStationsList()
+	stations, _ := data.GetStationsList(networkID)
 	normalizedName := strings.ToLower(strings.TrimSpace(name))
 
+	// A station name is not unique: 56 names are shared by more than one station across the
+	// networks, 33 of them in Duesseldorf alone. Returning the first match of a map iteration
+	// answered the same search with a different station on every request, so the lowest id
+	// wins instead, which is at least the same answer every time.
+	var matchedId string
 	for id, station := range stations {
-		if strings.ToLower(strings.TrimSpace(station.Name)) == normalizedName {
-			return c.JSON(http.StatusOK, map[string]utils.StationListEntry{id: station})
+		if strings.ToLower(strings.TrimSpace(station.Name)) != normalizedName {
+			continue
 		}
+		if matchedId == "" || id < matchedId {
+			matchedId = id
+		}
+	}
+
+	if matchedId != "" {
+		return c.JSON(http.StatusOK, map[string]utils.StationListEntry{matchedId: stations[matchedId]})
 	}
 
 	return c.JSON(http.StatusNotFound, map[string]string{"error": "Station not found: No station matches the provided name."})

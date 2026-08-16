@@ -1,0 +1,17 @@
+{
+    "1": {
+        "color": "#f78a21",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#fbba00",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3": {
+        "color": "#ef1c29",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

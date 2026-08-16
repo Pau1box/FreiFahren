@@ -1,0 +1,24 @@
+{
+    "id": "hamburg",
+    "name": "Hamburg",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [
+        "Norderstedt"
+    ],
+    "center": {
+        "latitude": 53.5511,
+        "longitude": 9.9937
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 53.4,
+            "longitude": 9.4
+        },
+        "northEast": {
+            "latitude": 53.78,
+            "longitude": 10.4
+        }
+    }
+}

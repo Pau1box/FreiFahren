@@ -1,9 +1,11 @@
 import './Line.css'
 
 import React from 'react'
-import { getLineColor } from 'src/hooks/getLineColor'
+import { useLineColor } from 'src/hooks/useLineColor'
 
 const Line: React.FC<{ line: string }> = ({ line }) => {
+    const getLineColor = useLineColor()
+
     if (line === '') {
         return null
     }

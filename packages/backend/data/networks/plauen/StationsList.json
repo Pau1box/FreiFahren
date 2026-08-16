@@ -1,0 +1,359 @@
+{
+    "n21524511": {
+        "coordinates": {
+            "latitude": 50.484565579999995,
+            "longitude": 12.14004538
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Bickelstraße"
+    },
+    "n256222238": {
+        "coordinates": {
+            "latitude": 50.494771533333335,
+            "longitude": 12.130544333333333
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Hans-Löwel-Platz"
+    },
+    "n264477200": {
+        "coordinates": {
+            "latitude": 50.49636621111111,
+            "longitude": 12.136041633333333
+        },
+        "lines": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "name": "Tunnel"
+    },
+    "n264478332": {
+        "coordinates": {
+            "latitude": 50.49270775714285,
+            "longitude": 12.1408677
+        },
+        "lines": [
+            "1",
+            "2",
+            "4"
+        ],
+        "name": "Neue Elsterbrücke"
+    },
+    "n266390460": {
+        "coordinates": {
+            "latitude": 50.5251831625,
+            "longitude": 12.110456225
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Plamag"
+    },
+    "n266395251": {
+        "coordinates": {
+            "latitude": 50.49472352,
+            "longitude": 12.1031771
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Neundorf"
+    },
+    "n267473626": {
+        "coordinates": {
+            "latitude": 50.50853185,
+            "longitude": 12.128397883333333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Seumestraße"
+    },
+    "n267477856": {
+        "coordinates": {
+            "latitude": 50.51192024,
+            "longitude": 12.12372416
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Morgenbergstraße"
+    },
+    "n267552678": {
+        "coordinates": {
+            "latitude": 50.50557282666667,
+            "longitude": 12.12924188
+        },
+        "lines": [
+            "2",
+            "3"
+        ],
+        "name": "Oberer Bahnhof, Pausaer Straße"
+    },
+    "n268818715": {
+        "coordinates": {
+            "latitude": 50.5050698,
+            "longitude": 12.139822966666665
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Martin-Luther-Straße"
+    },
+    "n294218479": {
+        "coordinates": {
+            "latitude": 50.50218057777778,
+            "longitude": 12.1708125
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Waldfrieden"
+    },
+    "n400902959": {
+        "coordinates": {
+            "latitude": 50.49124356666667,
+            "longitude": 12.180242333333332
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Reusa"
+    },
+    "n400902993": {
+        "coordinates": {
+            "latitude": 50.4915142,
+            "longitude": 12.167622175
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Suttenwiese"
+    },
+    "n400903548": {
+        "coordinates": {
+            "latitude": 50.497182066666674,
+            "longitude": 12.157721
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Carl-von-Ossietzky-Weg"
+    },
+    "n400903647": {
+        "coordinates": {
+            "latitude": 50.49789006666666,
+            "longitude": 12.1634665
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Anton-Kraus-Straße"
+    },
+    "n400903956": {
+        "coordinates": {
+            "latitude": 50.497919966666664,
+            "longitude": 12.1685836
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Dr.-Karl-Gelbke-Straße"
+    },
+    "n607976825": {
+        "coordinates": {
+            "latitude": 50.49264025714286,
+            "longitude": 12.148516178571429
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Bahnhof Mitte"
+    },
+    "n611064203": {
+        "coordinates": {
+            "latitude": 50.493032285714285,
+            "longitude": 12.153915042857141
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Vogtland-Klinikum"
+    },
+    "n612606441": {
+        "coordinates": {
+            "latitude": 50.48004386,
+            "longitude": 12.14113534
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Südvorstadt"
+    },
+    "n612606474": {
+        "coordinates": {
+            "latitude": 50.50960061818182,
+            "longitude": 12.1430524
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Schlachthofstraße"
+    },
+    "n612606519": {
+        "coordinates": {
+            "latitude": 50.51205088333333,
+            "longitude": 12.145417966666665
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Preißelpöhl"
+    },
+    "n919525336": {
+        "coordinates": {
+            "latitude": 50.491332799999995,
+            "longitude": 12.17233662
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Hauptfriedhof"
+    },
+    "n950497017": {
+        "coordinates": {
+            "latitude": 50.49601723333333,
+            "longitude": 12.118026133333332
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Seehaus"
+    },
+    "n960230740": {
+        "coordinates": {
+            "latitude": 50.49637334285715,
+            "longitude": 12.124984757142856
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Dittrichplatz"
+    },
+    "n969827111": {
+        "coordinates": {
+            "latitude": 50.51519090909091,
+            "longitude": 12.120233781818182
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Am Stadtwald"
+    },
+    "n1339586113": {
+        "coordinates": {
+            "latitude": 50.4875729,
+            "longitude": 12.139225733333333
+        },
+        "lines": [
+            "4"
+        ],
+        "name": "Hofer Straße"
+    },
+    "n1448377938": {
+        "coordinates": {
+            "latitude": 50.51944115,
+            "longitude": 12.1189149
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Am Vogtlandstadion"
+    },
+    "n1775116255": {
+        "coordinates": {
+            "latitude": 50.49151998333334,
+            "longitude": 12.160910450000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Schloß Reusa"
+    },
+    "n1975522842": {
+        "coordinates": {
+            "latitude": 50.49147516,
+            "longitude": 12.15578854
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Klinikum, Eingang"
+    },
+    "n1976694095": {
+        "coordinates": {
+            "latitude": 50.501343625000004,
+            "longitude": 12.13569630625
+        },
+        "lines": [
+            "1",
+            "2",
+            "3"
+        ],
+        "name": "Am Albertplatz"
+    },
+    "n2338158425": {
+        "coordinates": {
+            "latitude": 50.4958307,
+            "longitude": 12.11307436
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Westbahnhof"
+    },
+    "n2964063700": {
+        "coordinates": {
+            "latitude": 50.49318062,
+            "longitude": 12.1094618
+        },
+        "lines": [
+            "3",
+            "4"
+        ],
+        "name": "Westend"
+    },
+    "n3582626364": {
+        "coordinates": {
+            "latitude": 50.5061795,
+            "longitude": 12.127442299999998
+        },
+        "lines": [
+            "3"
+        ],
+        "name": "Oberer Bahnhof, Stadtpark"
+    },
+    "n9217774002": {
+        "coordinates": {
+            "latitude": 50.4911601,
+            "longitude": 12.1490625
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Knielohstraße"
+    }
+}

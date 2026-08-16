@@ -1,8 +1,23 @@
+"""
+Build `synonyms.json` for one network, the alternative station names the NLP service matches against.
+
+Run it through the pipeline rather than directly:
+
+    python3 scripts/build_network.py --network hamburg
+
+The rules below are specific to German station names (Straße, Platz, Allee) and would need extending
+for a network outside the German speaking area.
+"""
+
+from __future__ import annotations
+
+import argparse
 import json
-import os
-import re
 from collections import OrderedDict
-from typing import List, Dict, Any, Set, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Set, Tuple
+
+from network_config import load_network_config
 
 
 def _handle_strasse(
@@ -145,108 +160,84 @@ def generate_synonyms(station_name: str) -> List[str]:
     return sorted(list(final_synonyms))
 
 
-def main():
+def create_synonyms(stations: Dict[str, Dict[str, Any]]) -> "OrderedDict[str, List[str]]":
     """
-    Create synonyms for all stations in the StationsList.json file.
-    Note: this is highly specific to german station names and will not work for other languages.
+    Map every station name of the network to its synonyms.
+
+    Every station of the network is listed, only entries without a usable name are skipped. Keyed by
+    name rather than by id, because that is what the NLP service matches a chat message against.
+
+    This file is the gazetteer of the NLP service, not a list of nice to have spellings, so leaving a
+    station out makes it unreportable rather than just harder to match. There used to be a network
+    description option to restrict it to the stops of certain lines, and Berlin used it to keep its
+    numbered tram stops out and the fuzzy matching quiet. The cost was invisible: a message naming
+    one of 126 of Berlin's 619 stations was stored without a station. The option is gone rather than
+    unused, so that nothing offers that trade again.
     """
-    # Use __file__ if available, otherwise assume cwd is script dir
-    script_dir = (
-        os.path.dirname(os.path.abspath(__file__))
-        if "__file__" in globals()
-        else os.getcwd()
-    )
-
-    # Use script directory for input and output
-    stations_list_path = os.path.join(
-        script_dir, "StationsList.json"  # Read from script directory
-    )
-    synonyms_output_path = os.path.join(
-        script_dir, "synonyms.json"  # Write to script directory
-    )
-
-    print(f"Reading stations from: {stations_list_path}")
-    print(f"Writing generated synonyms to: {synonyms_output_path}")
-
-    try:
-        with open(stations_list_path, "r", encoding="utf-8") as f:
-            stations_data: Dict[str, Dict[str, Any]] = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Input file not found at {stations_list_path}")
-        exit(1)
-    except json.JSONDecodeError:
-        print(f"Error: Could not decode JSON from {stations_list_path}")
-        exit(1)
-    except Exception as e:
-        print(f"An unexpected error occurred while reading the input file: {e}")
-        exit(1)
-
     synonyms_map: Dict[str, List[str]] = {}
 
-    if isinstance(stations_data, dict):
-        for station_id, station_info in stations_data.items():
+    for station_id, station_info in stations.items():
+        if not isinstance(station_info, dict):
+            print(f"Warning: skipping invalid station entry for id '{station_id}'")
+            continue
 
-            # Skip stations that dont have metro lines (M, S, U) to avoid polluting the NLP with rarely used options
-            # TODO: Account for tram-only stations in the future
-            def has_metro_lines(station_info: Dict[str, Any]) -> bool:
-                """Check if station has any metro lines (M, S, U)."""
-                if not isinstance(station_info, dict) or "lines" not in station_info:
-                    return False
+        station_name = station_info.get("name")
+        if not station_name or not isinstance(station_name, str):
+            print(f"Warning: skipping station '{station_id}', it has no usable name")
+            continue
 
-                metro_prefixes = {"M", "S", "U"}
-                return any(
-                    line.startswith(prefix)
-                    for prefix in metro_prefixes
-                    for line in station_info["lines"]
-                )
+        # Stored even when empty, so the NLP service knows the station exists.
+        synonyms_map[station_name] = generate_synonyms(station_name)
 
-            if not has_metro_lines(station_info):
-                continue
+    return OrderedDict(sorted(synonyms_map.items()))
 
-            if isinstance(station_info, dict) and "name" in station_info:
-                station_name = station_info["name"]
-                if station_name and isinstance(
-                    station_name, str
-                ):  # Ensure name is a non-empty string
-                    synonyms_list = generate_synonyms(station_name)
-                    synonyms_map[station_name] = (
-                        synonyms_list  # Store even if list is empty
-                    )
-                else:
-                    print(
-                        f"Warning: Skipping station entry with ID '{station_id}' due to invalid or empty name."
-                    )
 
-            else:
-                print(
-                    f"Warning: Skipping invalid station entry format for ID: {station_id}"
-                )
-    else:
-        print(
-            f"Error: Expected a dictionary structure in {stations_list_path}, but found {type(stations_data)}"
-        )
-        exit(1)
+def keep_existing_synonyms(
+    generated: "OrderedDict[str, List[str]]", output_path: Path
+) -> "OrderedDict[str, List[str]]":
+    """Add the synonyms the file already has to the generated ones.
 
-    # Sort the final map by station name for consistent output
-    # Use OrderedDict to maintain sort order before dumping to JSON
-    sorted_synonyms_map = OrderedDict(sorted(synonyms_map.items()))
+    Berlin's file carries entries no rule can produce, "Alex" for Alexanderplatz and "HBF" for
+    Hauptbahnhof among them, added by hand over time. Writing the file from the rules alone drops
+    them, and nothing about the result looks wrong afterwards. Stations that the network no longer
+    has do disappear, because the generated names decide which entries exist.
+    """
+    if not output_path.is_file():
+        return generated
 
-    try:
-        # Ensure the output directory exists
-        os.makedirs(os.path.dirname(synonyms_output_path), exist_ok=True)
-        with open(synonyms_output_path, "w", encoding="utf-8") as f:
-            json.dump(sorted_synonyms_map, f, ensure_ascii=False, indent=4)
-        print(
-            f"Successfully generated synonym entries for {len(sorted_synonyms_map)} stations."
-        )
-        print(f"Output written to: {synonyms_output_path}")
+    with output_path.open(encoding="utf-8") as handle:
+        existing = json.load(handle)
+    if not isinstance(existing, dict):
+        raise SystemExit(f"{output_path} must contain an object keyed by station name")
 
-    except IOError as e:
-        print(f"Error writing to output file {synonyms_output_path}: {e}")
-        exit(1)
-    except Exception as e:
-        print(f"An unexpected error occurred while writing the output file: {e}")
-        exit(1)
+    return OrderedDict(
+        (name, sorted(set(synonyms) | set(existing.get(name, []))))
+        for name, synonyms in generated.items()
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--network", required=True, help="Network id, i.e. the name of a file in networks/")
+    args = parser.parse_args()
+
+    config = load_network_config(args.network)
+    stations_path = config.backend_seed_dir / "StationsList.json"
+    if not stations_path.is_file():
+        raise SystemExit(f"{stations_path} is missing. Run create_stations_list.py first.")
+
+    with stations_path.open(encoding="utf-8") as handle:
+        stations = json.load(handle)
+    if not isinstance(stations, dict):
+        raise SystemExit(f"{stations_path} must contain an object keyed by station id")
+
+    output_path = config.nlp_data_dir / "synonyms.json"
+    synonyms = keep_existing_synonyms(create_synonyms(stations), output_path)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as handle:
+        json.dump(synonyms, handle, ensure_ascii=False, indent=4)
+    print(f"[DONE] {output_path} written with {len(synonyms)} stations")
 
 
 if __name__ == "__main__":

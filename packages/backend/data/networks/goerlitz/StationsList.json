@@ -1,0 +1,220 @@
+{
+    "n25641213": {
+        "coordinates": {
+            "latitude": 51.14021318333334,
+            "longitude": 14.961930733333332
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Johann-Sebastian-Bach-Straße"
+    },
+    "n264297309": {
+        "coordinates": {
+            "latitude": 51.167606660000004,
+            "longitude": 14.980598559999999
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Alexander-Bolze-Hof"
+    },
+    "n269602655": {
+        "coordinates": {
+            "latitude": 51.13833284,
+            "longitude": 14.980595540000001
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Goethestraße"
+    },
+    "n273968243": {
+        "coordinates": {
+            "latitude": 51.17033165,
+            "longitude": 14.983762516666667
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Am Wiesengrund"
+    },
+    "n279305582": {
+        "coordinates": {
+            "latitude": 51.146473,
+            "longitude": 14.979353857142856
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Bahnhof"
+    },
+    "n279576443": {
+        "coordinates": {
+            "latitude": 51.16867155,
+            "longitude": 14.97712265
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Königshufen Mitte"
+    },
+    "n279576558": {
+        "coordinates": {
+            "latitude": 51.16754516666666,
+            "longitude": 14.972424683333335
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz NeißePark"
+    },
+    "n281906558": {
+        "coordinates": {
+            "latitude": 51.1581269125,
+            "longitude": 14.98378385
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Heiliges Grab"
+    },
+    "n459528268": {
+        "coordinates": {
+            "latitude": 51.1225599,
+            "longitude": 14.978883333333334
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Weinhübel"
+    },
+    "n459528270": {
+        "coordinates": {
+            "latitude": 51.1305727,
+            "longitude": 14.98414585
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Erich-Weinert-Straße"
+    },
+    "n459528275": {
+        "coordinates": {
+            "latitude": 51.13825823333334,
+            "longitude": 14.956840566666665
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Geschwister-Scholl-Straße"
+    },
+    "n661083656": {
+        "coordinates": {
+            "latitude": 51.16498385,
+            "longitude": 14.98142815
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Am Friedhof"
+    },
+    "n710445714": {
+        "coordinates": {
+            "latitude": 51.15268235,
+            "longitude": 14.9861783875
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Demianiplatz"
+    },
+    "n916767776": {
+        "coordinates": {
+            "latitude": 51.13252406666666,
+            "longitude": 14.941837900000001
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Biesnitz/Landeskrone"
+    },
+    "n1531414095": {
+        "coordinates": {
+            "latitude": 51.12762945,
+            "longitude": 14.9821841
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Weinhübel Mitte"
+    },
+    "n2102247429": {
+        "coordinates": {
+            "latitude": 51.14225906666667,
+            "longitude": 14.967156283333333
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Büchtemannstraße"
+    },
+    "n2102247431": {
+        "coordinates": {
+            "latitude": 51.136187783333334,
+            "longitude": 14.950441566666667
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Grundstraße"
+    },
+    "n2102247433": {
+        "coordinates": {
+            "latitude": 51.14353696,
+            "longitude": 14.973665020000002
+        },
+        "lines": [
+            "2"
+        ],
+        "name": "Görlitz Lutherstraße"
+    },
+    "n2502908686": {
+        "coordinates": {
+            "latitude": 51.14970825,
+            "longitude": 14.982159450000001
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Hospitalstraße"
+    },
+    "n2502908688": {
+        "coordinates": {
+            "latitude": 51.156158100000006,
+            "longitude": 14.985090014285715
+        },
+        "lines": [
+            "1",
+            "2"
+        ],
+        "name": "Görlitz Jägerkaserne"
+    },
+    "n2503124937": {
+        "coordinates": {
+            "latitude": 51.1420086,
+            "longitude": 14.978413
+        },
+        "lines": [
+            "1"
+        ],
+        "name": "Görlitz Tierpark"
+    }
+}

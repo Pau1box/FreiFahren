@@ -1,26 +1,18 @@
-import { isNil } from 'lodash'
 import { ComponentProps } from 'react'
 
-import { useLines } from '../../api/queries'
-import { Theme } from '../../theme'
+import { useLineColor } from '../../lines'
 import { FFText, FFView } from './base'
-
-const getLineColor = (line: string) =>
-    line.startsWith('S') || line.startsWith('U') ? (`lines.${line}` as keyof Theme['colors']) : `lines.tram`
 
 type LineTagProps = {
     line: string | null | undefined
-    fallbackColor?: keyof Theme['colors']
     textProps?: ComponentProps<typeof FFText>
 } & ComponentProps<typeof FFView>
 
-export const FFLineTag = ({ line, fallbackColor = 'danger', textProps, ...props }: LineTagProps) => {
-    const { data: lines } = useLines()
-    const isValidLine = !isNil(line) && lines !== undefined && line in lines
-    const bgColor = isValidLine ? getLineColor(line as string) : fallbackColor
+export const FFLineTag = ({ line, textProps, style, ...props }: LineTagProps) => {
+    const lineColor = useLineColor()
 
     return (
-        <FFView bg={bgColor} px="xxs" borderRadius="s" {...props}>
+        <FFView px="xxs" borderRadius="s" style={[{ backgroundColor: lineColor(line) }, style]} {...props}>
             <FFText color="fg" textAlign="center" variant="labelBold" {...textProps}>
                 {line ?? ' ? '}
             </FFText>

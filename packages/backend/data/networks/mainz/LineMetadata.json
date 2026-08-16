@@ -1,0 +1,27 @@
+{
+    "50": {
+        "color": "#1d1d1b",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "51": {
+        "color": "#4a4a49",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "52": {
+        "color": "#7c7c7b",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "53": {
+        "color": "#646363",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "59": {
+        "color": "#929292",
+        "mode": "tram",
+        "isCircular": false
+    }
+}

@@ -3,6 +3,7 @@ package v0
 import (
 	"net/http"
 
+	"github.com/FreiFahren/backend/api/networks"
 	"github.com/FreiFahren/backend/api/prediction"
 	"github.com/FreiFahren/backend/logger"
 	"github.com/labstack/echo/v4"
@@ -17,21 +18,29 @@ import (
 //
 // @Produce json
 //
+// @Param network query string false "ID of the network (defaults to berlin)"
+//
 // @Success 200 {object} prediction.RiskData "Successfully retrieved risk segments data"
+// @Failure 404 {object} map[string]string "Not Found: The specified network does not exist."
 // @Failure 500 "Internal Server Error: Failed to execute risk model"
 //
 // @Router /v1/risk-prediction/segment-colors [get]
 func GetRiskSegments(c echo.Context) error {
 	logger.Log.Info().Msg("GET '/v1/risk-prediction/segment-colors' UserAgent: " + c.Request().UserAgent())
 
+	networkID, err := networks.Resolve(c)
+	if err != nil {
+		return err
+	}
+
 	// Get from cache
-	if cachedData, ok := prediction.Cache.Get(); ok {
+	if cachedData, ok := prediction.Cache.Get(networkID); ok {
 		logger.Log.Debug().Msg("cache hit")
 		return c.JSON(http.StatusOK, cachedData)
 	}
 
 	// If cache is empty (first request), execute the model
-	riskData, err := prediction.ExecuteRiskModel()
+	riskData, err := prediction.ExecuteRiskModel(networkID)
 	if err != nil {
 		logger.Log.Error().Err(err).Msg("Failed to execute risk model")
 		return c.NoContent(http.StatusInternalServerError)

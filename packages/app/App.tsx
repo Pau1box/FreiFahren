@@ -23,6 +23,7 @@ import { FFView } from './src/components/common/base'
 import { ErrorBoundary } from './src/components/ErrorBoundary'
 import i18n from './src/i18n'
 import { Main } from './src/Main'
+import { NetworkProvider } from './src/networks'
 import { theme } from './src/theme'
 
 const useLoadFonts = () => {
@@ -71,17 +72,19 @@ const App = () => {
             <SafeAreaProvider>
                 <ThemeProvider theme={theme}>
                     <QueryClientProvider client={queryClient}>
-                        {/* eslint-disable-next-line react/style-prop-object */}
-                        <StatusBar style="light" backgroundColor="transparent" />
-                        <GestureHandlerRootView style={StyleSheet.absoluteFill}>
-                            <BottomSheetModalProvider>
-                                <ErrorBoundary>
-                                    <FFView flex={1} bg="bg">
-                                        <Main />
-                                    </FFView>
-                                </ErrorBoundary>
-                            </BottomSheetModalProvider>
-                        </GestureHandlerRootView>
+                        <NetworkProvider>
+                            {/* eslint-disable-next-line react/style-prop-object */}
+                            <StatusBar style="light" backgroundColor="transparent" />
+                            <GestureHandlerRootView style={StyleSheet.absoluteFill}>
+                                <BottomSheetModalProvider>
+                                    <ErrorBoundary>
+                                        <FFView flex={1} bg="bg">
+                                            <Main />
+                                        </FFView>
+                                    </ErrorBoundary>
+                                </BottomSheetModalProvider>
+                            </GestureHandlerRootView>
+                        </NetworkProvider>
                     </QueryClientProvider>
                 </ThemeProvider>
             </SafeAreaProvider>

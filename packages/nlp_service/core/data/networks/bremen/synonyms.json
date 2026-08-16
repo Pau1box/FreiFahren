@@ -1,0 +1,495 @@
+{
+    "Altenescher Straße": [
+        "Altenescher",
+        "Altenescher Str.",
+        "Altenescher Strasse"
+    ],
+    "Am Brill (Hutfilter-/Obernstraße)": [],
+    "Am Dammacker": [
+        "Dammacker"
+    ],
+    "Am Dobben": [
+        "Dobben"
+    ],
+    "Am Hulsberg": [
+        "Hulsberg"
+    ],
+    "Am Lehester Deich": [],
+    "Am Neuen Markt": [],
+    "Am Stern": [
+        "Stern"
+    ],
+    "Am Wall": [
+        "Wall"
+    ],
+    "Arsten": [],
+    "Auf dem Kamp": [],
+    "BSAG-Zentrum": [],
+    "Barbarossastraße": [
+        "Barbarossa",
+        "Barbarossastr.",
+        "Barbarossastrasse"
+    ],
+    "Bardenflethstraße": [
+        "Bardenfleth",
+        "Bardenflethstr.",
+        "Bardenflethstrasse"
+    ],
+    "Bei den Drei Pfählen": [],
+    "Bennigsenstraße": [
+        "Bennigsen",
+        "Bennigsenstr.",
+        "Bennigsenstrasse"
+    ],
+    "Berliner Freiheit": [
+        "Berliner"
+    ],
+    "Berufsbildungswerk": [],
+    "Borgfeld": [],
+    "Brahmsstraße": [
+        "Brahms",
+        "Brahmsstr.",
+        "Brahmsstrasse"
+    ],
+    "Bremen-Mahndorf": [],
+    "Bremen-Sebaldsbrück": [],
+    "Bremen-Walle": [],
+    "Brunnenstraße": [
+        "Brunnen",
+        "Brunnenstr.",
+        "Brunnenstrasse"
+    ],
+    "Bulthauptstraße": [
+        "Bulthaupt",
+        "Bulthauptstr.",
+        "Bulthauptstrasse"
+    ],
+    "Busestraße": [
+        "Buse",
+        "Busestr.",
+        "Busestrasse"
+    ],
+    "Bürgermeister-Spitta-Allee": [
+        "Bürgermeister-Spitta-"
+    ],
+    "Bürgerpark": [],
+    "Crüsemannallee": [
+        "Crüsemann"
+    ],
+    "Daniel-Jacobs-Allee": [
+        "Daniel-Jacobs-"
+    ],
+    "Daniel-von-Büren-Straße": [
+        "Daniel-von-Büren-",
+        "Daniel-von-Büren-str.",
+        "Daniel-von-Büren-strasse"
+    ],
+    "Dietrich-Bonhoeffer-Straße": [
+        "Dietrich-Bonhoeffer-",
+        "Dietrich-Bonhoeffer-str.",
+        "Dietrich-Bonhoeffer-strasse"
+    ],
+    "Domsheide": [],
+    "Doventor": [],
+    "Düsseldorfer Straße": [
+        "Düsseldorfer",
+        "Düsseldorfer Str.",
+        "Düsseldorfer Strasse"
+    ],
+    "Eduard-Schopf-Allee": [
+        "Eduard-Schopf-"
+    ],
+    "Elisabethstraße": [
+        "Elisabeth",
+        "Elisabethstr.",
+        "Elisabethstrasse"
+    ],
+    "Ellenerbrokstraße": [
+        "Ellenerbrok",
+        "Ellenerbrokstr.",
+        "Ellenerbrokstrasse"
+    ],
+    "Emder Straße": [
+        "Emder",
+        "Emder Str.",
+        "Emder Strasse"
+    ],
+    "Emmastraße": [
+        "Emma",
+        "Emmastr.",
+        "Emmastrasse"
+    ],
+    "Engadiner Straße": [
+        "Engadiner",
+        "Engadiner Str.",
+        "Engadiner Strasse"
+    ],
+    "Erkelenzer Straße": [
+        "Erkelenzer",
+        "Erkelenzer Str.",
+        "Erkelenzer Strasse"
+    ],
+    "Europahafen": [],
+    "Falkenstraße": [
+        "Falken",
+        "Falkenstr.",
+        "Falkenstrasse"
+    ],
+    "Feldhäuser Straße": [
+        "Feldhäuser",
+        "Feldhäuser Str.",
+        "Feldhäuser Strasse"
+    ],
+    "Flughafen": [],
+    "Flughafen-Süd": [],
+    "Focke-Museum": [],
+    "Friedhofstraße": [
+        "Friedhof",
+        "Friedhofstr.",
+        "Friedhofstrasse"
+    ],
+    "Föhrenstraße": [
+        "Föhren",
+        "Föhrenstr.",
+        "Föhrenstrasse"
+    ],
+    "Gastfeldstraße": [
+        "Gastfeld",
+        "Gastfeldstr.",
+        "Gastfeldstrasse"
+    ],
+    "Georg-Bitter-Straße": [
+        "Georg-Bitter-",
+        "Georg-Bitter-str.",
+        "Georg-Bitter-strasse"
+    ],
+    "Goosestraße": [
+        "Goose",
+        "Goosestr.",
+        "Goosestrasse"
+    ],
+    "Grasberger Straße": [
+        "Grasberger",
+        "Grasberger Str.",
+        "Grasberger Strasse"
+    ],
+    "Graubündener Straße": [
+        "Graubündener",
+        "Graubündener Str.",
+        "Graubündener Strasse"
+    ],
+    "Grenzstraße": [
+        "Grenz",
+        "Grenzstr.",
+        "Grenzstrasse"
+    ],
+    "Gröpelingen": [],
+    "Gustavstraße": [
+        "Gustav",
+        "Gustavstr.",
+        "Gustavstrasse"
+    ],
+    "H.-H.-Meier-Allee": [
+        "H.-H.-Meier-"
+    ],
+    "Haferkamp": [],
+    "Hansator": [],
+    "Hansestraße": [
+        "Hanse",
+        "Hansestr.",
+        "Hansestrasse"
+    ],
+    "Hauptbahnhof": [],
+    "Hauptbahnhof-Nord/Messe": [],
+    "Herdentor": [],
+    "Heukämpendamm": [],
+    "Hochschule Bremen": [
+        "Hochschule"
+    ],
+    "Hohwisch": [],
+    "Hollerallee": [
+        "Holler"
+    ],
+    "Horn": [],
+    "Horner Mühle": [
+        "Horner"
+    ],
+    "Huckelriede": [],
+    "Humboldtstraße": [
+        "Humboldt",
+        "Humboldtstr.",
+        "Humboldtstrasse"
+    ],
+    "Höger Weg": [
+        "Höger"
+    ],
+    "Jadestraße": [
+        "Jade",
+        "Jadestr.",
+        "Jadestrasse"
+    ],
+    "Joseph-Haydn-Straße": [
+        "Joseph-Haydn-",
+        "Joseph-Haydn-str.",
+        "Joseph-Haydn-strasse"
+    ],
+    "Julius-Brecht-Allee": [
+        "Julius-Brecht-"
+    ],
+    "Kap-Horn-Straße": [
+        "Kap-Horn-",
+        "Kap-Horn-str.",
+        "Kap-Horn-strasse"
+    ],
+    "Kattenturm-Mitte": [],
+    "Kirchbachstraße-C": [],
+    "Kirchweg": [],
+    "Klinikum Links der Weser": [],
+    "Konsul-Smidt-Straße": [
+        "Konsul-Smidt-",
+        "Konsul-Smidt-str.",
+        "Konsul-Smidt-strasse"
+    ],
+    "Kopernikusstraße": [
+        "Kopernikus",
+        "Kopernikusstr.",
+        "Kopernikusstrasse"
+    ],
+    "Kulenkampffallee": [
+        "Kulenkampff"
+    ],
+    "Kurfürstenallee": [
+        "Kurfürsten"
+    ],
+    "Kurt-Huber-Straße": [
+        "Kurt-Huber-",
+        "Kurt-Huber-str.",
+        "Kurt-Huber-strasse"
+    ],
+    "Kutscher Behrens": [
+        "Kutscher"
+    ],
+    "Lilienthal": [],
+    "Lilienthal-Mitte": [],
+    "Lindenhofstraße": [
+        "Lindenhof",
+        "Lindenhofstr.",
+        "Lindenhofstrasse"
+    ],
+    "Lise-Meitner-Straße": [
+        "Lise-Meitner-",
+        "Lise-Meitner-str.",
+        "Lise-Meitner-strasse"
+    ],
+    "Lloydstraße": [
+        "Lloyd",
+        "Lloydstr.",
+        "Lloydstrasse"
+    ],
+    "Malerstraße": [
+        "Maler",
+        "Malerstr.",
+        "Malerstrasse"
+    ],
+    "Metzer Straße": [
+        "Metzer",
+        "Metzer Str.",
+        "Metzer Strasse"
+    ],
+    "Moorhauser Landstraße": [
+        "Moorhauser Land",
+        "Moorhauser Landstr.",
+        "Moorhauser Landstrasse"
+    ],
+    "Moorstraße": [
+        "Moor",
+        "Moorstr.",
+        "Moorstrasse"
+    ],
+    "Mülheimer Straße": [
+        "Mülheimer",
+        "Mülheimer Str.",
+        "Mülheimer Strasse"
+    ],
+    "Neuenlander Kämpe": [
+        "Neuenlander"
+    ],
+    "Neuenlander Straße": [
+        "Neuenlander",
+        "Neuenlander Str.",
+        "Neuenlander Strasse"
+    ],
+    "Neuwieder Straße": [
+        "Neuwieder",
+        "Neuwieder Str.",
+        "Neuwieder Strasse"
+    ],
+    "Nienburger Straße": [
+        "Nienburger",
+        "Nienburger Str.",
+        "Nienburger Strasse"
+    ],
+    "Norderländer Straße": [
+        "Norderländer",
+        "Norderländer Str.",
+        "Norderländer Strasse"
+    ],
+    "Nußhorn": [],
+    "Obernstraße": [
+        "Obern",
+        "Obernstr.",
+        "Obernstrasse"
+    ],
+    "Osterholzer Landstraße": [
+        "Osterholzer Land",
+        "Osterholzer Landstr.",
+        "Osterholzer Landstrasse"
+    ],
+    "Pappelstraße": [
+        "Pappel",
+        "Pappelstr.",
+        "Pappelstrasse"
+    ],
+    "Parkstraße": [
+        "Park",
+        "Parkstr.",
+        "Parkstrasse"
+    ],
+    "Peter-Henlein-Straße": [
+        "Peter-Henlein-",
+        "Peter-Henlein-str.",
+        "Peter-Henlein-strasse"
+    ],
+    "Polizeipräsidium": [],
+    "Radio Bremen": [
+        "Radio"
+    ],
+    "Rembertistraße": [
+        "Remberti",
+        "Rembertistr.",
+        "Rembertistrasse"
+    ],
+    "Riensberg": [],
+    "Robert-Koch-Straße": [
+        "Robert-Koch-",
+        "Robert-Koch-str.",
+        "Robert-Koch-strasse"
+    ],
+    "Roland-Center": [],
+    "Rosenpfad": [],
+    "Rotes-Kreuz-Krankenhaus": [],
+    "Schleiermacherstraße": [
+        "Schleiermacher",
+        "Schleiermacherstr.",
+        "Schleiermacherstrasse"
+    ],
+    "Schloßparkstraße": [
+        "Schloßpark",
+        "Schloßparkstr.",
+        "Schloßparkstrasse"
+    ],
+    "Schoofmoor": [],
+    "Schwankhalle (Schnürschuh Theater)": [],
+    "Schweizer Eck": [
+        "Schweizer"
+    ],
+    "Schüsselkorb": [],
+    "Sebaldsbrück": [],
+    "Sielhof": [],
+    "Sielwall": [],
+    "Solinger Straße": [
+        "Solinger",
+        "Solinger Str.",
+        "Solinger Strasse"
+    ],
+    "St. Joseph-Stift": [
+        "St."
+    ],
+    "St.-Jürgen-Straße": [
+        "St.-Jürgen-",
+        "St.-Jürgen-str.",
+        "St.-Jürgen-strasse"
+    ],
+    "Stader Straße/Hamburger Straße": [
+        "Stader Straße/Hamburger",
+        "Stader Straße/Hamburger Str.",
+        "Stader Straße/Hamburger Strasse"
+    ],
+    "Tenever-Zentrum": [],
+    "Teneverstraße": [
+        "Tenever",
+        "Teneverstr.",
+        "Teneverstrasse"
+    ],
+    "Theater am Leibnizplatz": [
+        "Theater am Leibniz",
+        "Theater am Leibnizplz"
+    ],
+    "Timkenweg": [],
+    "Trinidadstraße": [
+        "Trinidad",
+        "Trinidadstr.",
+        "Trinidadstrasse"
+    ],
+    "Trupe": [],
+    "Truperdeich": [],
+    "Ulrichsplatz": [
+        "Ulrichs",
+        "Ulrichsplz"
+    ],
+    "Universität-Nord": [],
+    "Universität-Süd": [],
+    "Universität/Zentralbereich": [],
+    "Utbremer Straße": [
+        "Utbremer",
+        "Utbremer Str.",
+        "Utbremer Strasse"
+    ],
+    "Vorstraße": [
+        "Vor",
+        "Vorstr.",
+        "Vorstrasse"
+    ],
+    "Waller Friedhof": [
+        "Waller"
+    ],
+    "Waller Ring": [
+        "Waller"
+    ],
+    "Waller Straße": [
+        "Waller",
+        "Waller Str.",
+        "Waller Strasse"
+    ],
+    "Waterfront": [],
+    "Werner-Steenken-Straße": [
+        "Werner-Steenken-",
+        "Werner-Steenken-str.",
+        "Werner-Steenken-strasse"
+    ],
+    "Werner-von-Siemens-Straße": [
+        "Werner-von-Siemens-",
+        "Werner-von-Siemens-str.",
+        "Werner-von-Siemens-strasse"
+    ],
+    "Weserpark": [],
+    "Weserpark-Süd": [],
+    "Weserstadion": [],
+    "Weserwehr": [],
+    "Westerstraße": [
+        "Wester",
+        "Westerstr.",
+        "Westerstrasse"
+    ],
+    "Wilhelm-Kaisen-Brücke": [],
+    "Wilhelm-Leuschner-Straße": [
+        "Wilhelm-Leuschner-",
+        "Wilhelm-Leuschner-str.",
+        "Wilhelm-Leuschner-strasse"
+    ],
+    "Wätjenstraße": [
+        "Wätjen",
+        "Wätjenstr.",
+        "Wätjenstrasse"
+    ]
+}

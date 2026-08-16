@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { retrieveLaunchParams, useSignal, isMiniAppDark } from '@telegram-apps/sdk-react';
 import { AppRoot } from '@telegram-apps/telegram-ui';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { NetworkProvider } from '../network/NetworkContext';
 import ReportForm from './ReportForm/MiniAppReportForm';
 
 // Create a client
@@ -17,7 +18,9 @@ export function App() {
         appearance={isDark ? 'dark' : 'light'}
         platform={['macos', 'ios'].includes(lp.tgWebAppPlatform) ? 'ios' : 'base'}
       >
-        <ReportForm  />
+        <NetworkProvider>
+          <ReportForm  />
+        </NetworkProvider>
       </AppRoot>
     </QueryClientProvider>
   );

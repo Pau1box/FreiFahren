@@ -1,0 +1,22 @@
+{
+    "id": "chemnitz",
+    "name": "Chemnitz",
+    "countryCode": "DE",
+    "timezone": "Europe/Berlin",
+    "status": "beta",
+    "serves": [],
+    "center": {
+        "latitude": 50.8324,
+        "longitude": 12.9189
+    },
+    "bounds": {
+        "southWest": {
+            "latitude": 50.546913,
+            "longitude": 12.627584
+        },
+        "northEast": {
+            "latitude": 51.032149,
+            "longitude": 13.190008
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import { CircleLayer, ShapeSource, SymbolLayer } from '@maplibre/maplibre-react-native'
 import { useTheme } from '@shopify/restyle'
+import { useMemo } from 'react'
 import DeviceInfo from 'react-native-device-info'
 
 import { useStations } from '../../api/queries'
@@ -7,6 +8,10 @@ import { Theme } from '../../theme'
 import { track } from '../../tracking'
 import { filterNullish } from '../../utils'
 
+/**
+ * How many lines call at a station stands in for how important it is. Interchanges are what people
+ * orient themselves by, and unlike a list of famous names it holds in every city the backend serves.
+ */
 const useStationsAsGeoJSON = () => {
     const { data: stations } = useStations()
 
@@ -35,6 +40,7 @@ const useStationsAsGeoJSON = () => {
                     properties: {
                         name: station.name,
                         lines: station.lines,
+                        lineCount: station.lines.length,
                     },
                     geometry: {
                         type: 'Point',
@@ -46,52 +52,46 @@ const useStationsAsGeoJSON = () => {
     }
 }
 
-const firstPriorityStations = [
-    'Hauptbahnhof',
-    'Gesundbrunnen',
-    'Jungfernheide',
-    'Ostkreuz',
-    'Südkreuz',
-    'Westkreuz',
-    'Potsdamer Platz',
-    'Friedrichstraße',
-    'Zoologischer Garten',
-    'Warschauer Straße',
-    'Alexanderplatz',
-    'Kottbusser Tor',
-    'Hermannplatz',
-    'Neukölln',
-    'Tempelhof',
-    'Hermannstraße',
-]
-const secondPriorityStations = [
-    'Osloer Straße',
-    'Frankfurter Allee',
-    'Leopoldplatz',
-    'Weinmeisterstraße',
-    'Moritzplatz',
-    'Hallesches Tor',
-    'Rathaus Steglitz',
-    'Gleisdreieck',
-    'Prenzlauer Allee',
-    'Mehringdamm',
-    'Hansaplatz',
-    'Bernauerstraße',
-    'Landsberger Allee',
-    'Schönleinstraße',
-    'Voltastraße',
-    'WWittenbergplatz',
-    'Schönhauser Allee',
-    'Jannowitz Brücke',
-    'Bellevue',
-    'Schlesisches Tor',
-    'Nollendorfplatz',
-    'Westend',
-    'Schöneberg',
-]
+/**
+ * Two label tiers, taken as quantiles of how many lines the network's stations serve. A fixed count
+ * would show everything in a city where four lines meet everywhere and nothing in a city with two.
+ */
+const useLabelThresholds = () => {
+    const { data: stations } = useStations()
 
-export const StationLayer = () => {
+    return useMemo(() => {
+        const lineCounts = Object.values(stations ?? {})
+            .map((station) => station?.lines.length ?? 0)
+            .sort((a, b) => a - b)
+
+        if (lineCounts.length === 0) return { major: 2, secondary: 2 }
+
+        const quantile = (share: number) => lineCounts[Math.floor((lineCounts.length - 1) * share)]
+
+        /*
+         A network where almost every stop serves a single line has a quantile of 1, which would make
+         every station major and stack all labels on top of each other from the first frame. Below two
+         lines a station is not an interchange, so two is the floor.
+        */
+        return { major: Math.max(2, quantile(0.95)), secondary: Math.max(2, quantile(0.75)) }
+    }, [stations])
+}
+
+/*
+ Zoom offsets from the network's own lowest zoom, at which more labels appear. They were tuned
+ against Berlin, so the absolute levels that used to stand here are these offsets applied to it. A
+ small network starts at a much closer zoom, where the absolute levels showed every label at once.
+*/
+const LABEL_STEP = { secondary: 1.5, rest: 3 }
+
+type StationLayerProps = {
+    /** The network's own lowest zoom, because the label steps above are offsets from it. */
+    minZoom: number
+}
+
+export const StationLayer = ({ minZoom }: StationLayerProps) => {
     const stationsGeoJSON = useStationsAsGeoJSON()
+    const { major, secondary } = useLabelThresholds()
     const theme = useTheme<Theme>()
 
     if (!stationsGeoJSON) return null
@@ -120,23 +120,10 @@ export const StationLayer = () => {
                     textOpacity: [
                         'step',
                         ['zoom'],
-                        ['case', ['in', ['get', 'name'], ['literal', firstPriorityStations]], 1, 0],
-                        11,
-                        ['case', ['in', ['get', 'name'], ['literal', firstPriorityStations]], 1, 0],
-                        11.5,
-                        [
-                            'case',
-                            [
-                                'any',
-                                ['in', ['get', 'name'], ['literal', firstPriorityStations]],
-                                ['in', ['get', 'name'], ['literal', secondPriorityStations]],
-                            ],
-                            1,
-                            0,
-                        ],
-                        13,
-                        1,
-                        14,
+                        ['case', ['>=', ['get', 'lineCount'], major], 1, 0],
+                        minZoom + LABEL_STEP.secondary,
+                        ['case', ['>=', ['get', 'lineCount'], secondary], 1, 0],
+                        minZoom + LABEL_STEP.rest,
                         1,
                     ],
                 }}

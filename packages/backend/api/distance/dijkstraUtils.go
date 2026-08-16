@@ -2,32 +2,7 @@ package distance
 
 import (
 	"fmt"
-	"math"
 )
-
-func toRadians(deg float64) float64 {
-	return deg * math.Pi / 180
-}
-
-func calculateDistance(lat1, lon1, lat2, lon2 float64) float64 {
-
-	const R = 6371 // Radius of the earth in km
-
-	dLat := toRadians(lat2 - lat1)
-
-	dLon := toRadians(lon2 - lon1)
-
-	a := math.Sin(dLat/2)*math.Sin(dLat/2) +
-		math.Cos(toRadians(lat1))*
-			math.Cos(toRadians(lat2))*
-			math.Sin(dLon/2)*
-			math.Sin(dLon/2)
-
-	c := 2 * math.Atan2(math.Sqrt(a), math.Sqrt(1-a))
-
-	distance := R * c // Distance in km
-	return distance
-}
 
 func getIndexOfStationId(stationId string, linesOfStation []string) (int, error) {
 

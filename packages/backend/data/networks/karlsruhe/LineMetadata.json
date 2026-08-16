@@ -1,0 +1,107 @@
+{
+    "1": {
+        "color": "#ff0000",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "2": {
+        "color": "#0071bc",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "3": {
+        "color": "#947139",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "4": {
+        "color": "#ffcb04",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "5": {
+        "color": "#18a6d9",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "6": {
+        "color": "#c0c0c0",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "8": {
+        "color": "#ff9933",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "E": {
+        "color": "#000000",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "NL1": {
+        "color": "#ff0000",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "NL2": {
+        "color": "#0000ff",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "S1": {
+        "color": "#008000",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S11": {
+        "color": "#008000",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S12": {
+        "color": "#008000",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S2": {
+        "color": "#9313ba",
+        "mode": "tram",
+        "isCircular": false
+    },
+    "S4": {
+        "color": "#9f184c",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S5": {
+        "color": "#f49694",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S51": {
+        "color": "#f49694",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S52": {
+        "color": "#f49694",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S6": {
+        "color": "#3d2d7c",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S7": {
+        "color": "#fff90a",
+        "mode": "light_rail",
+        "isCircular": false
+    },
+    "S8": {
+        "color": "#6d682a",
+        "mode": "light_rail",
+        "isCircular": false
+    }
+}
