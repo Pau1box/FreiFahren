@@ -2,7 +2,7 @@ blinker==1.8.2
 certifi==2024.8.30
 charset-normalizer==3.3.2
 click==8.1.7
-filelock==3.16.1
+filelock==4.2.1
 fastapi==0.112.0
 fsspec==2024.9.0
 huggingface-hub==0.25.1
