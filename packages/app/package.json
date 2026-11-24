@@ -42,7 +42,7 @@
     "expo-splash-screen": "~0.26.5",
     "expo-status-bar": "~1.11.1",
     "fuse.js": "^2.7.4",
-    "i18next": "^23.12.1",
+    "i18next": "^27.2.6",
     "intl-pluralrules": "^2.0.1",
     "lodash": "^4.17.21",
     "luxon": "^3.5.0",
